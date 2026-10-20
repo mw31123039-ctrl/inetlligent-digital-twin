@@ -1,0 +1,17 @@
+import { chromium } from '@playwright/test'
+const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
+const page = await browser.newPage({ viewport: { width: 1586, height: 1080 }, deviceScaleFactor: 1 })
+const errors = []
+page.on('pageerror', e => errors.push(e.message))
+await page.goto('http://127.0.0.1:5173')
+await page.getByRole('button', { name: 'Scripted demo', exact: true }).click()
+await page.waitForSelector('.body-canvas canvas')
+await page.waitForTimeout(1200)
+await page.getByRole('button', { name: 'My eyes hurt', exact: true }).click()
+await page.getByRole('button', { name: 'Both eyes', exact: true }).waitFor()
+await page.screenshot({ path: 'test-results/desktop-preview.png', fullPage: true })
+await page.setViewportSize({ width: 390, height: 844 })
+await page.waitForTimeout(400)
+await page.screenshot({ path: 'test-results/mobile-preview.png', fullPage: true })
+console.log(JSON.stringify({ errors, overflow: await page.evaluate(() => document.documentElement.scrollWidth > innerWidth) }))
+await browser.close()

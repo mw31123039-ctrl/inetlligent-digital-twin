@@ -1,0 +1,360 @@
+{
+  "$defs": {
+    "Escalation": {
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "enum": [
+            "not_established",
+            "routine",
+            "soon",
+            "same_day",
+            "emergency"
+          ],
+          "title": "Level",
+          "type": "string"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Rule Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "level",
+        "reasons",
+        "rule_ids"
+      ],
+      "title": "Escalation",
+      "type": "object"
+    },
+    "Explanation": {
+      "additionalProperties": false,
+      "properties": {
+        "condition": {
+          "title": "Condition",
+          "type": "string"
+        },
+        "interpretation": {
+          "title": "Interpretation",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "reported_fact_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reported Fact Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "condition",
+        "interpretation",
+        "source_ids",
+        "reported_fact_ids"
+      ],
+      "title": "Explanation",
+      "type": "object"
+    },
+    "Fact": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "enum": [
+            "symptoms",
+            "warning_signs",
+            "location",
+            "onset",
+            "duration",
+            "severity",
+            "related_symptoms",
+            "medical_history",
+            "medications",
+            "allergies"
+          ],
+          "title": "Field",
+          "type": "string"
+        },
+        "value": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Value",
+          "type": "string"
+        },
+        "message_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Message Id",
+          "type": "string"
+        },
+        "quote": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "value",
+        "message_id",
+        "quote"
+      ],
+      "title": "Fact",
+      "type": "object"
+    },
+    "Question": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "enum": [
+            "symptoms",
+            "warning_signs",
+            "location",
+            "onset",
+            "duration",
+            "severity",
+            "related_symptoms",
+            "medical_history",
+            "medications",
+            "allergies"
+          ],
+          "title": "Field",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "options": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Options",
+          "type": "array"
+        }
+      },
+      "required": [
+        "field",
+        "text",
+        "options"
+      ],
+      "title": "Question",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "excerpt": {
+          "maxLength": 160,
+          "title": "Excerpt",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "url",
+        "retrieved_at",
+        "excerpt"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "selected_region": {
+      "enum": [
+        "eyes",
+        "head",
+        "chest",
+        "abdomen",
+        "arms",
+        "legs"
+      ],
+      "title": "Selected Region",
+      "type": "string"
+    },
+    "side": {
+      "enum": [
+        "unknown",
+        "left",
+        "right",
+        "both",
+        "center",
+        "not_applicable"
+      ],
+      "title": "Side",
+      "type": "string"
+    },
+    "reported_symptoms": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reported Symptoms",
+      "type": "array"
+    },
+    "facts": {
+      "items": {
+        "$ref": "#/$defs/Fact"
+      },
+      "title": "Facts",
+      "type": "array"
+    },
+    "unanswered_questions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unanswered Questions",
+      "type": "array"
+    },
+    "urgency": {
+      "$ref": "#/$defs/Escalation"
+    },
+    "possible_explanations": {
+      "items": {
+        "$ref": "#/$defs/Explanation"
+      },
+      "title": "Possible Explanations",
+      "type": "array"
+    },
+    "recommended_next_action": {
+      "title": "Recommended Next Action",
+      "type": "string"
+    },
+    "supporting_sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "title": "Supporting Sources",
+      "type": "array"
+    },
+    "next_question": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Question"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "clinician_summary": {
+      "title": "Clinician Summary",
+      "type": "string"
+    },
+    "phase": {
+      "enum": [
+        "collecting",
+        "summary",
+        "urgent",
+        "insufficient",
+        "unavailable"
+      ],
+      "title": "Phase",
+      "type": "string"
+    },
+    "provider_status": {
+      "enum": [
+        "ready",
+        "disabled",
+        "unavailable",
+        "invalid_response"
+      ],
+      "title": "Provider Status",
+      "type": "string"
+    },
+    "evidence_status": {
+      "enum": [
+        "retrieved",
+        "unavailable",
+        "not_requested",
+        "urgent_bypass"
+      ],
+      "title": "Evidence Status",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "triage_rules_version": {
+      "title": "Triage Rules Version",
+      "type": "string"
+    },
+    "clinical_review_required": {
+      "const": true,
+      "default": true,
+      "title": "Clinical Review Required",
+      "type": "boolean"
+    },
+    "disclaimer": {
+      "default": "AI symptom assistant. This does not replace a clinician\u2019s examination or diagnosis.",
+      "title": "Disclaimer",
+      "type": "string"
+    }
+  },
+  "required": [
+    "selected_region",
+    "side",
+    "reported_symptoms",
+    "facts",
+    "unanswered_questions",
+    "urgency",
+    "possible_explanations",
+    "recommended_next_action",
+    "supporting_sources",
+    "next_question",
+    "clinician_summary",
+    "phase",
+    "provider_status",
+    "evidence_status",
+    "limitations",
+    "triage_rules_version"
+  ],
+  "title": "Assessment",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

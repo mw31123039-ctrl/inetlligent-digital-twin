@@ -1,0 +1,6 @@
+<script setup lang="ts">
+import { Activity, ArrowDownToLine, ArrowLeft, ArrowRight, Bot, Check, CheckCircle2, ChevronDown, ChevronRight, CircleHelp, ClipboardList, Clock3, Download, Eye, Hand, Heart, History, Info, Layers3, Menu, MessageCircle, Minus, Mouse, Plus, RotateCcw, Send, Settings, ShieldCheck, Sparkles, Trash2, UserRound, X, Scan, Accessibility, LayoutDashboard, AlertCircle } from '@lucide/vue'
+defineProps<{ name: string; size?: number }>()
+const icons: Record<string, typeof Eye> = { activity: Activity, arrowDown: ArrowDownToLine, arrowLeft: ArrowLeft, arrowRight: ArrowRight, bot: Bot, check: Check, complete: CheckCircle2, chevronDown: ChevronDown, chevronRight: ChevronRight, help: CircleHelp, clipboard: ClipboardList, clock: Clock3, download: Download, eyes: Eye, head: Scan, chest: Heart, abdomen: Activity, arms: Hand, legs: Accessibility, history: History, info: Info, layers: Layers3, menu: Menu, chat: MessageCircle, minus: Minus, mouse: Mouse, plus: Plus, reset: RotateCcw, send: Send, settings: Settings, shield: ShieldCheck, sparkles: Sparkles, trash: Trash2, user: UserRound, x: X, body: Accessibility, overview: LayoutDashboard, error: AlertCircle }
+</script>
+<template><component :is="icons[name] || icons.body" :size="size ?? 20" :stroke-width="1.8" aria-hidden="true" /></template>

@@ -1,0 +1,6 @@
+<script setup lang="ts">
+import type { AiChatState } from '../types/ai'
+defineProps<{ state: AiChatState }>()
+defineEmits<{ open: [id: string]; remove: [id: string]; explore: []; refresh: [] }>()
+</script>
+<template><section class="panel ai-summary"><div class="ai-summary-heading"><h2>Saved AI conversations</h2><button class="button-secondary" @click="$emit('refresh')">Refresh saved conversations</button></div><p v-if="!state.user">Sign in from the body explorer to view your account’s saved conversations.</p><p v-else-if="!state.savedChats.length">No conversations saved. Saving health information always requires your consent.</p><div v-for="record in state.savedChats" :key="record.id" class="ai-history-record"><div><strong>{{ record.region }} conversation</strong><p>{{ new Date(record.created_at).toLocaleString() }}</p></div><button class="button-secondary" @click="$emit('open', record.id)">View saved summary</button><button class="ai-text-button" :aria-label="`Delete saved ${record.region} conversation`" @click="$emit('remove', record.id)">Delete</button></div><button class="button-primary" @click="$emit('explore')">Open body explorer</button><p v-if="state.error" role="alert">{{ state.error }}</p></section></template>

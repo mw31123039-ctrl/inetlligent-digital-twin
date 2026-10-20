@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "selected_region": "eyes",
+  "side": "unknown",
+  "reported_symptoms": [],
+  "facts": [],
+  "unanswered_questions": [
+    "In your own words, what is bothering you about your eyes?",
+    "Are you having sudden loss of sight, sudden severe eye pain, a painful red eye, or a change in vision?",
+    "Where exactly do you feel it, and which side is affected?",
+    "When did this first start, and did it start suddenly or gradually?",
+    "How long does each episode last, or has it been continuous?",
+    "How severe is it, and how is it affecting your usual activities?",
+    "What other symptoms have you noticed at the same time?"
+  ],
+  "urgency": {
+    "level": "not_established",
+    "reasons": [],
+    "rule_ids": []
+  },
+  "possible_explanations": [],
+  "recommended_next_action": "There is not enough information to establish urgency or a cause. Answer the next useful question or contact a clinician. Seek urgent help for severe, sudden or rapidly worsening symptoms.",
+  "supporting_sources": [],
+  "next_question": {
+    "field": "symptoms",
+    "text": "In your own words, what is bothering you about your eyes?",
+    "options": []
+  },
+  "clinician_summary": "USER-REPORTED INFORMATION — not verified examination findings\nBody region: eyes; side: unknown.\nMissing: symptoms, warning_signs, location, onset, duration, severity, related_symptoms\nADVISORY URGENCY: not_established. \nNEXT ACTION: There is not enough information to establish urgency or a cause. Answer the next useful question or contact a clinician. Seek urgent help for severe, sudden or rapidly worsening symptoms.\nNo confirmed diagnosis. Draft, unvalidated triage rules: draft-2026-10-20.1",
+  "phase": "unavailable",
+  "provider_status": "disabled",
+  "evidence_status": "not_requested",
+  "limitations": [
+    "AI is not configured. This is limited rule-based intake, not a working medical AI assessment. No AI explanations have been generated.",
+    "Information is still missing. An examination or further tests may be needed; no diagnosis has been established."
+  ],
+  "triage_rules_version": "draft-2026-10-20.1",
+  "clinical_review_required": true,
+  "disclaimer": "AI symptom assistant. This does not replace a clinician’s examination or diagnosis."
+}
