@@ -1,12 +1,15 @@
 import * as THREE from 'three'
 import type { RegionId } from '../types'
 import type { HumanModelConfig } from './humanViewerConfig'
+import type { PatientSide } from '../data/bodyParts'
 
 /** Fit bone-bound interaction zones to a real skinned GLTF, never a substitute body. */
 export function buildHumanRig(root: THREE.Group, clips: THREE.AnimationClip[], config: HumanModelConfig) {
   const bones = {} as Record<keyof HumanModelConfig['bones'], THREE.Bone>
   const skinned: THREE.SkinnedMesh[] = []
   const textures = new Set<THREE.Texture>()
+  const surfaceNormals = new Set<THREE.Texture>()
+  let headTextureWidth = 0
   root.traverse(object => {
     if (!(object instanceof THREE.Mesh)) return
     object.castShadow = true
@@ -17,6 +20,8 @@ export function buildHumanRig(root: THREE.Group, clips: THREE.AnimationClip[], c
     }
     for (const material of Array.isArray(object.material) ? object.material : [object.material]) {
       if (material instanceof THREE.MeshStandardMaterial && material.map) textures.add(material.map)
+      if (material instanceof THREE.MeshStandardMaterial && material.normalMap) surfaceNormals.add(material.normalMap)
+      if (material instanceof THREE.MeshStandardMaterial && material.name === 'm002_head') headTextureWidth = material.map?.image?.width ?? 0
     }
   })
   if (!skinned.length || !textures.size) throw new Error('Human model: a skinned human mesh with skin textures is required.')
@@ -53,6 +58,7 @@ export function buildHumanRig(root: THREE.Group, clips: THREE.AnimationClip[], c
     const mesh = new THREE.Mesh(geometry, material)
     mesh.name = `selection_${region}_${zones.length}`
     mesh.userData.region = region
+    mesh.userData.side = position.x >= 0 ? 'left' : 'right'
     mesh.position.copy(position)
     mesh.scale.copy(scale)
     mesh.quaternion.copy(rotation)
@@ -102,16 +108,16 @@ export function buildHumanRig(root: THREE.Group, clips: THREE.AnimationClip[], c
   }
 
   let selected: RegionId | null = null
-  function highlight(id: RegionId | null) {
+  function highlight(id: RegionId | null, side?: PatientSide) {
     selected = id
     for (const mesh of zones) {
-      const active = mesh.userData.region === id
+      const active = mesh.userData.region === id && (!side || !['eyes', 'arms', 'legs'].includes(id ?? '') || mesh.userData.side === side)
       mesh.material.colorWrite = active
-      mesh.material.opacity = active ? (id === 'eyes' ? .38 : .13) : 0
+      mesh.material.opacity = active ? (id === 'eyes' ? .10 : .08) : 0
     }
   }
-  function anchor(id: RegionId) {
-    const matching = zones.filter(mesh => mesh.userData.region === id)
+  function anchor(id: RegionId, side?: PatientSide) {
+    const matching = zones.filter(mesh => mesh.userData.region === id && (!side || mesh.userData.side === side))
     // Use one side for limbs, and the right eye for a readable small-area callout.
     const point = matching[0]!.getWorldPosition(new THREE.Vector3())
     if (id === 'head') point.y += .07 // Forehead, separate from the small eye targets.
@@ -147,7 +153,7 @@ export function buildHumanRig(root: THREE.Group, clips: THREE.AnimationClip[], c
     mesh.skeleton.update()
     const vertex = mesh.getVertexPosition(index, new THREE.Vector3()).applyMatrix4(mesh.matrixWorld)
     return {
-      skinnedMeshes: skinned.length, skinTextures: textures.size, bones: mesh.skeleton.bones.length,
+      skinnedMeshes: skinned.length, skinTextures: textures.size, skinNormalMaps: surfaceNormals.size, headTextureWidth, bones: mesh.skeleton.bones.length,
       clip: idle!.name, selected, deformedVertex: vertex.toArray(),
       chestTransform: bones.chest.matrixWorld.elements.slice(),
       eyeAnchor: anchor('eyes').toArray(),
@@ -167,5 +173,10 @@ export function buildHumanRig(root: THREE.Group, clips: THREE.AnimationClip[], c
       if (distance < nearestSample) { nearestSample = distance; animatedSample = { mesh, index } }
     }
   }
-  return { root, idle, highlight, anchor, pick, diagnostics }
+  function pickSide(raycaster: THREE.Raycaster, id: RegionId): PatientSide | undefined {
+    if (!['eyes', 'arms', 'legs'].includes(id)) return undefined
+    const hit = raycaster.intersectObjects(zones.filter(mesh => mesh.userData.region === id), false)[0]
+    return hit?.object.userData.side as PatientSide | undefined
+  }
+  return { root, idle, highlight, anchor, pick, pickSide, diagnostics }
 }

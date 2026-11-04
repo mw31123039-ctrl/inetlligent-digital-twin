@@ -1,5 +1,11 @@
 # Clinical and deployment review required
 
+The new [Patient twin research workspace](PATIENT_TWIN_RESEARCH.md) uses synthetic subject-bound observations and an unvalidated linear time-series model. Its personal reference, extrapolation interval and rolling-origin errors do not establish medical normality, physiological validity, clinical prediction accuracy or patient safety. It has no real device connection or server persistence; real patient use remains outside the prototype's intended scope.
+
+The [research benchmark and review](research/README.md) now measure browser-eye-engine agreement on draft synthetic multilingual fixtures, including unresolved language and temporal-context failures. Its author labels, translations, ablations and descriptive intervals are not an independent clinical reference standard or evidence of safety. It does not evaluate PHP replay, the Python assistant or an external AI model; all clinical-use restrictions below remain applicable.
+
+The new eye workspace has its own [implementation and review record](EYE_MODULE_REVIEW.md), draft content manifest and independent deterministic evaluator. It is limited to synthetic educational examples; live eye triage is disabled. Ophthalmology and native medical translation reviews remain outstanding.
+
 This is a development prototype. No clinician has reviewed or validated its rules, questions, evidence matching, urgency decisions or AI outputs. Software tests do not establish clinical safety or diagnostic accuracy. Use synthetic inputs until the intended use, clinical protocol and deployment are independently reviewed.
 
 ## Draft triage

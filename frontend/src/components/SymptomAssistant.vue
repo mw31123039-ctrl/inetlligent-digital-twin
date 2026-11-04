@@ -3,8 +3,10 @@ import { computed, nextTick, ref, watch } from 'vue'
 import type { Message, RegionId } from '../types'
 import { getRegion } from '../data/regions'
 import AppIcon from './AppIcon.vue'
-const props = defineProps<{ region: RegionId | null; messages: Message[]; options: string[]; pain: number; step: number; pending: boolean; error: string; canRetry: boolean; complete: boolean }>()
-const emit = defineEmits<{ send: [answer: string]; retry: []; clear: []; 'update:pain': [pain: number] }>()
+import { partLabel, type PatientSide } from '../data/bodyParts'
+import EyeChatCard from '../eye/EyeChatCard.vue'
+const props = defineProps<{ region: RegionId | null; side?: PatientSide; messages: Message[]; options: string[]; pain: number; step: number; pending: boolean; error: string; canRetry: boolean; complete: boolean }>()
+const emit = defineEmits<{ send: [answer: string]; retry: []; clear: []; 'update:pain': [pain: number]; 'eye-details': [] }>()
 const input = ref('')
 const transcript = ref<HTMLDivElement>()
 const painPercent = computed(() => (props.pain - 1) / 9 * 100)
@@ -14,9 +16,10 @@ watch(() => props.region, () => { input.value = '' })
 function submit() { if (!input.value.trim() || props.pending || props.canRetry) return; emit('send', input.value); input.value = '' }
 </script>
 <template>
-  <section class="panel assistant-panel" aria-labelledby="assistant-title">
+  <EyeChatCard v-if="region === 'eyes'" @details="emit('eye-details')"/>
+  <section v-else class="panel assistant-panel" aria-labelledby="assistant-title">
     <div class="assistant-header"><div><span class="assistant-heading-icon"><AppIcon name="chat" :size="23"/></span><h2 id="assistant-title">Symptom assistant</h2></div><span class="step-count">{{ region ? Math.min(step + 1, 5) : 0 }} of 5</span><div class="step-dots" aria-hidden="true"><i v-for="n in 5" :key="n" :class="{ filled: region && n <= step + 1 }"></i></div></div>
-    <div class="assistant-context"><span v-if="region" class="region-pill"><AppIcon :name="region" :size="19"/>{{ getRegion(region).label }}<button aria-label="Clear selected area and conversation" @click="$emit('clear')"><AppIcon name="x" :size="14"/></button></span><span class="scripted-label"><span></span> SCRIPTED DEMO</span></div>
+    <div class="assistant-context"><span v-if="region" class="region-pill"><AppIcon :name="region" :size="19"/>{{ side ? partLabel(region, side) : getRegion(region).label }}<button aria-label="Clear selected area and conversation" @click="$emit('clear')"><AppIcon name="x" :size="14"/></button></span><span class="scripted-label"><span></span> SCRIPTED DEMO</span></div>
     <div ref="transcript" class="conversation" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Symptom conversation" :aria-busy="pending">
       <div v-if="!region" class="conversation-empty"><span><AppIcon name="body" :size="36"/></span><h3>Let’s start with an area</h3><p>Select a body region on the model or use the area buttons. Your guided conversation will appear here.</p></div>
       <div v-for="message in messages" :key="message.id" class="message-row" :class="message.role"><span class="message-avatar"><AppIcon :name="message.role === 'assistant' ? 'bot' : 'user'" :size="20"/></span><div class="message-bubble">{{ message.text }}</div></div>

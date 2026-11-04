@@ -14,6 +14,9 @@ async function ready(page: Page) {
   await expect(page.getByText('Preparing your digital twin')).not.toBeVisible()
 }
 async function selectOnModel(page: Page, region: string, touch = false) {
+  // Return uses an eased camera move. Projecting the next target before that move
+  // finishes can yield an off-canvas point, outside the human's actual hit area.
+  await expect.poll(async () => { const c = (await snapshot(page)).camera; return Math.hypot(c[0]!, c[1]! - .92, c[2]!) }).toBeCloseTo(3.844, 2)
   const state = await snapshot(page)
   const point = state.regions[region]!
   const box = (await page.locator('.human-body-viewer').boundingBox())!
@@ -54,8 +57,10 @@ test('raycast all six animated areas and complete the eyes questionnaire', async
   for (const [region, symptom] of Object.entries(symptoms)) {
     await selectOnModel(page, region)
     await expect(page.locator('.region-selector button.selected')).toHaveText(new RegExp(region, 'i'))
-    await expect(page.locator('.human-region-label')).toHaveText(new RegExp(region, 'i'))
+    await expect(page.locator('.body-stage')).toHaveAttribute('data-phase', 'detail')
+    await expect(page.locator('.body-part-viewer')).toHaveAttribute('data-part', region)
     await expect(page.getByRole('button', { name: symptom, exact: true })).toBeVisible()
+    if (region !== 'eyes') await page.getByRole('button', { name: 'Back to full body', exact: true }).click()
   }
   await page.getByRole('button', { name: 'My eyes hurt', exact: true }).click()
   await page.getByRole('button', { name: 'Both eyes', exact: true }).click()
@@ -77,6 +82,8 @@ test('smooth side/front/back transitions, drag rotation, zoom and reset', async 
   // The invisible eye zones must not be selectable through the back of the head.
   await selectOnModel(page, 'head')
   await expect(page.locator('.region-selector button.selected')).toHaveText('Head')
+  await expect(page.locator('.body-stage')).toHaveAttribute('data-phase', 'detail')
+  await page.getByRole('button', { name: 'Back to full body', exact: true }).click()
   await page.getByRole('button', { name: 'Front', exact: true }).click()
   await expect.poll(async () => (await snapshot(page)).camera[2]).toBeGreaterThan(3)
   await page.locator('.human-body-viewer').focus()
@@ -141,8 +148,12 @@ test('mobile touch selection and rotation, responsive layout, reduced motion', a
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
     await selectOnModel(page, 'chest', true)
     await expect(page.getByRole('button', { name: 'Chest discomfort', exact: true })).toBeVisible()
+    await expect(page.locator('.body-stage')).toHaveAttribute('data-phase', 'detail')
+    await page.getByRole('button', { name: 'Back to full body', exact: true }).tap()
     await selectOnModel(page, 'eyes', true)
     await expect(page.getByRole('button', { name: 'My eyes hurt', exact: true })).toBeVisible()
+    await expect(page.locator('.body-stage')).toHaveAttribute('data-phase', 'detail')
+    await page.getByRole('button', { name: 'Back to full body', exact: true }).tap()
     await page.getByRole('button', { name: 'Left side', exact: true }).tap()
     expect(Math.abs((await snapshot(page)).camera[0]!)).toBeGreaterThan(2)
     await page.getByRole('button', { name: 'Reset', exact: true }).tap()

@@ -1,0 +1,341 @@
+{
+  "version": "eye-research-fixtures-2026-11-01.1",
+  "synthetic_only": true,
+  "label_status": "author_draft_not_clinically_adjudicated",
+  "translation_status": "draft_requires_native_medical_review",
+  "clinical_reviewed_at": null,
+  "provenance": "Hand-authored development scenarios informed by the existing draft policy. Not patients, an external validation cohort, or an independent clinical reference standard. Semantic overlap with existing software tests is expected.",
+  "locales": ["en", "ar-IQ", "ckb"],
+  "families": [
+    {
+      "id": "abrupt-visual-loss", "tags": ["narrative", "vision", "emergency"],
+      "intent": "Current sudden visual loss should activate the existing sudden-loss policy.",
+      "source_urls": ["https://www.nhs.uk/conditions/vision-loss/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.sudden-vision-loss"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "While reading I suddenly lost my sight in the right eye."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "صار عندي فقدان النظر فجأة بالعين اليمنى."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "لەدەستدانی بینین لەناکاو لە چاوی ڕاستم هەیە."}]}
+      ]
+    },
+    {
+      "id": "cleaner-exposure", "tags": ["narrative", "exposure", "emergency"],
+      "intent": "An explicit current chemical exposure should interrupt intake.",
+      "source_urls": ["https://www.nhs.uk/conditions/eye-injuries/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.chemical"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "An oven cleaner splashed into my eye while cleaning."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "كلور دخل بعيني وأنا أنظف."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "ماددەی کیمیایی پڕژایە ناو چاوم."}]}
+      ]
+    },
+    {
+      "id": "embedded-object", "tags": ["structured", "exposure", "emergency"],
+      "intent": "A structured penetrating-exposure answer is language independent.",
+      "source_urls": ["https://www.nhs.uk/conditions/eye-injuries/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.penetrating"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.exposure", "value": "penetrating"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.exposure", "value": "penetrating"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.exposure", "value": "penetrating"}]}
+      ]
+    },
+    {
+      "id": "lens-visual-history", "tags": ["multi_turn", "mixed_input", "vision", "emergency"],
+      "intent": "Lens context and a later painful visual change must combine across turns.",
+      "source_urls": ["https://www.nhs.uk/symptoms/red-eye/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.contact-vision"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.contact", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "Now my eye hurts and my vision is blurry."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.contact", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "عندي ألم وغشاوة بالعين."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.contact", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "ئازار و تەماوی لە چاوم هەیە."}]}
+      ]
+    },
+    {
+      "id": "lens-pain-history", "tags": ["multi_turn", "structured", "pain", "urgent"],
+      "intent": "Previously reported lenses and a moderate numeric pain score require the draft lens pathway.",
+      "source_urls": ["https://www.nhs.uk/symptoms/red-eye/"],
+      "expected": {"urgency": "urgent", "rule_ids": ["eye.rule.contact-red-pain"], "reported": {"pain": 4}},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.contact", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "4"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.contact", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "4"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.contact", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "4"}]}
+      ]
+    },
+    {
+      "id": "sudden-severe-history", "tags": ["multi_turn", "structured", "pain", "emergency"],
+      "intent": "Onset and pain severity reported separately must combine.",
+      "source_urls": ["https://www.nhs.uk/conditions/vision-loss/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.sudden-severe-pain"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.onset", "value": "sudden", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "8"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.onset", "value": "sudden", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "8"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.onset", "value": "sudden", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "8"}]}
+      ]
+    },
+    {
+      "id": "severe-unrated-onset", "tags": ["structured", "pain", "urgent"],
+      "intent": "Severe pain alone should activate the existing urgent pathway.",
+      "source_urls": ["https://www.nhs.uk/symptoms/eye-pain/"],
+      "expected": {"urgency": "urgent", "rule_ids": ["eye.rule.severe-eye-pain"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.pain", "value": "8"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.pain", "value": "8"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.pain", "value": "8"}]}
+      ]
+    },
+    {
+      "id": "postprocedure-visual-history", "tags": ["multi_turn", "structured", "vision", "emergency"],
+      "intent": "A visual change must use previously reported recent procedure context.",
+      "source_urls": ["https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/endophthalmitis"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.postoperative"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.surgery", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.vision", "value": "blurred"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.surgery", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.vision", "value": "blurred"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.surgery", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.vision", "value": "blurred"}]}
+      ]
+    },
+    {
+      "id": "infant-redness-history", "tags": ["multi_turn", "mixed_input", "paediatric", "urgent"],
+      "intent": "Age in days and a later red-eye report must combine without assuming every zero-year-old is neonatal.",
+      "source_urls": ["https://www.nhs.uk/symptoms/red-eye/"],
+      "expected": {"urgency": "urgent", "rule_ids": ["eye.rule.newborn-red-sticky"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.age", "value": "0", "expected_urgency": "unknown"}, {"question_id": "question.infant-age", "value": "12", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "The baby's eye looks red."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.age", "value": "0", "expected_urgency": "unknown"}, {"question_id": "question.infant-age", "value": "12", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "عين الطفل حمراء."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.age", "value": "0", "expected_urgency": "unknown"}, {"question_id": "question.infant-age", "value": "12", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "چاوی منداڵەکە سوورە."}]}
+      ]
+    },
+    {
+      "id": "vision-change-unknown-onset", "tags": ["structured", "vision", "urgent"],
+      "intent": "Visual loss without established onset still requires the existing unexplained-loss pathway.",
+      "source_urls": ["https://www.nhs.uk/conditions/vision-loss/"],
+      "expected": {"urgency": "urgent", "rule_ids": ["eye.rule.unexplained-vision-loss"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.vision", "value": "loss"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.vision", "value": "loss"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.vision", "value": "loss"}]}
+      ]
+    },
+    {
+      "id": "explicit-negative-answers", "tags": ["multi_turn", "structured", "negation", "unknown"],
+      "intent": "Explicit negative structured answers should not acquire symptoms from translated option labels.",
+      "source_urls": [],
+      "expected": {"urgency": "unknown", "rule_ids": [], "reported": {"vision": "unchanged", "exposure": "none", "pain": 0}},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.vision", "value": "unchanged", "expected_urgency": "unknown"}, {"question_id": "question.exposure", "value": "none", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "0"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.vision", "value": "unchanged", "expected_urgency": "unknown"}, {"question_id": "question.exposure", "value": "none", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "0"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.vision", "value": "unchanged", "expected_urgency": "unknown"}, {"question_id": "question.exposure", "value": "none", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "0"}]}
+      ]
+    },
+    {
+      "id": "unanswered-is-unknown", "tags": ["multi_turn", "structured", "missingness", "unknown"],
+      "intent": "Uncertainty must remain unknown rather than becoming a negative or a numeric zero.",
+      "source_urls": [],
+      "expected": {"urgency": "unknown", "rule_ids": [], "reported": {"vision": "unknown", "pain": "unknown"}},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.vision", "value": "unknown", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "unknown"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.vision", "value": "unknown", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "unknown"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.vision", "value": "unknown", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "unknown"}]}
+      ]
+    },
+    {
+      "id": "itching-only", "tags": ["narrative", "unknown"],
+      "intent": "Itching alone does not establish urgency in this draft policy; unknown does not mean safe.",
+      "source_urls": [],
+      "expected": {"urgency": "unknown", "rule_ids": []},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "My eyes are itchy after a long afternoon."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "عندي حكة بالعين."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "خوران لە چاوم هەیە."}]}
+      ]
+    },
+    {
+      "id": "education-keeps-facts-empty", "tags": ["education", "unknown"],
+      "intent": "An explicit educational request must not be interpreted as a patient symptom report.",
+      "source_urls": [],
+      "expected": {"urgency": "unknown", "rule_ids": [], "absent_reported_fields": ["vision", "pain", "onset"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "learn:eye.retina", "value": "Explain how the retina supports vision."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "learn:eye.retina", "value": "اشرح وظيفة الشبكية بالنظر."}]},
+        {"locale": "ckb", "turns": [{"question_id": "learn:eye.retina", "value": "کاری تۆڕینە لە بینین ڕوون بکەرەوە."}]}
+      ]
+    },
+    {
+      "id": "worded-severe-pain", "tags": ["narrative", "pain", "urgent"],
+      "intent": "A severe descriptor should escalate without silently manufacturing a confirmed numeric score.",
+      "source_urls": ["https://www.nhs.uk/symptoms/eye-pain/"],
+      "expected": {"urgency": "urgent", "rule_ids": ["eye.rule.severe-eye-pain"], "absent_reported_fields": ["pain"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "There is terrible eye pain."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "عندي ألم شديد بالعين."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "ئازاری توند لە چاوم هەیە."}]}
+      ]
+    },
+    {
+      "id": "escalation-after-warning", "tags": ["multi_turn", "mixed_input", "sticky_escalation", "emergency"],
+      "intent": "New concern text may raise an existing urgent lens warning to emergency.",
+      "source_urls": ["https://www.nhs.uk/symptoms/red-eye/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.contact-red-pain", "eye.rule.contact-vision"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.contact", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "3", "expected_urgency": "urgent"}, {"question_id": "question.concern", "value": "My vision is now blurry."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.contact", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "3", "expected_urgency": "urgent"}, {"question_id": "question.concern", "value": "صار عندي غشاوة."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.contact", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.pain", "value": "3", "expected_urgency": "urgent"}, {"question_id": "question.concern", "value": "ئێستا تەماوی هەیە."}]}
+      ]
+    },
+    {
+      "id": "warning-not-silently-retracted", "tags": ["multi_turn", "mixed_input", "sticky_escalation", "urgent"],
+      "intent": "A correction must not silently retract an already issued urgent warning within the session.",
+      "source_urls": ["https://www.nhs.uk/symptoms/eye-pain/"],
+      "expected": {"urgency": "urgent", "rule_ids": ["eye.rule.severe-eye-pain"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.pain", "value": "8", "expected_urgency": "urgent"}, {"question_id": "question.concern", "value": "Correction: I have no pain."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.pain", "value": "8", "expected_urgency": "urgent"}, {"question_id": "question.concern", "value": "تصحيح: بدون ألم."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.pain", "value": "8", "expected_urgency": "urgent"}, {"question_id": "question.concern", "value": "ڕاستکردنەوە: بێ ئازار."}]}
+      ]
+    },
+    {
+      "id": "cleaner-paraphrase-challenge", "tags": ["narrative", "paraphrase", "challenge", "emergency"],
+      "intent": "A cleaning-product paraphrase tests gaps beyond the policy's literal chemical keywords.",
+      "source_urls": ["https://www.nhs.uk/conditions/eye-injuries/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.chemical"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "A cleaning product splattered directly into my eye."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "دخل منظف الفرن بعيني."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "پاککەرەوە چووە ناو چاوم."}]}
+      ]
+    },
+    {
+      "id": "misspelled-exposure-challenge", "tags": ["narrative", "spelling", "challenge", "emergency"],
+      "intent": "Draft misspellings test bounded lexical recognition without being silently corrected by the evaluator.",
+      "source_urls": ["https://www.nhs.uk/conditions/eye-injuries/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.chemical"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "I got bleech in my eye just now."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "ماده كيمياويه دخلت بعيني."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "مادەی کیمیای پڕژایە چاوم."}]}
+      ]
+    },
+    {
+      "id": "historical-not-current-challenge", "tags": ["narrative", "temporal_context", "challenge", "unknown"],
+      "intent": "An explicitly historical symptom should not be treated as a newly reported acute event. Expected unknown does not certify current safety.",
+      "source_urls": [],
+      "expected": {"urgency": "unknown", "rule_ids": []},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "Years ago I had sudden vision loss. Today I only report itching."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "قبل سنوات صار عندي فقدان النظر فجأة. اليوم عندي حكة فقط."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "چەند ساڵ پێش ئێستا لەدەستدانی بینین لەناکاو هەبوو. ئەمڕۆ تەنها خوران هەیە."}]}
+      ]
+    },
+    {
+      "id": "narrative-denial-challenge", "tags": ["narrative", "negation", "challenge", "unknown"],
+      "intent": "Explicit denial tests language-dependent negation. No current warning is asserted by this fixture.",
+      "source_urls": [],
+      "expected": {"urgency": "unknown", "rule_ids": []},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "I do not have vision loss. My eyes itch."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "ما عندي فقدان النظر. عندي حكة فقط."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "لەدەستدانی بینین نییە. تەنها خوران هەیە."}]}
+      ]
+    },
+    {
+      "id": "unicode-exposure-challenge", "tags": ["narrative", "unicode", "challenge", "emergency"],
+      "intent": "Full-width Latin, Arabic diacritics and Kurdish presentation variants test normalization limits.",
+      "source_urls": ["https://www.nhs.uk/conditions/eye-injuries/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.chemical"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "Ｂｌｅａｃｈ splashed into my eye."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "كُلُور دخل بعيني."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "ماددەی كیمیایی پڕژایە ناو چاوم."}]}
+      ]
+    },
+    {
+      "id": "curtain-report", "tags": ["narrative", "vision", "emergency"],
+      "intent": "A current curtain or shadow report activates the curtain policy without waiting for ordinary questions.",
+      "source_urls": ["https://www.nhs.uk/symptoms/floaters-and-flashes-in-the-eyes/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.curtain"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "A curtain is covering part of what I can see."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "أشوف ستار بالنظر."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "پەردە لە بینین هەیە."}]}
+      ]
+    },
+    {
+      "id": "neurological-warning", "tags": ["structured", "emergency"],
+      "intent": "A positive structured neurological warning stops routine questioning.",
+      "source_urls": ["https://www.nhs.uk/conditions/vision-loss/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.neurological"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.neurological", "value": "yes"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.neurological", "value": "yes"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.neurological", "value": "yes"}]}
+      ]
+    },
+    {
+      "id": "flashes-report", "tags": ["narrative", "vision", "urgent"],
+      "intent": "A newly reported flash activates the draft flashes pathway.",
+      "source_urls": ["https://www.nhs.uk/symptoms/floaters-and-flashes-in-the-eyes/"],
+      "expected": {"urgency": "urgent", "rule_ids": ["eye.rule.new-flashes-floaters"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "I started seeing flashes this afternoon."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "بديت أشوف ومضات اليوم."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "ئەمڕۆ بروسکە دەبینم."}]}
+      ]
+    },
+    {
+      "id": "swelling-movement-history", "tags": ["multi_turn", "mixed_input", "emergency"],
+      "intent": "Movement pain and swelling reported on different turns activate the orbital warning.",
+      "source_urls": ["https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/preseptal-and-orbital-cellulitis"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.orbital"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.movement", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "The area around my eye is swollen."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.movement", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "عندي تورم حول العين."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.movement", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "ئاوسان لە دەوری چاوم هەیە."}]}
+      ]
+    },
+    {
+      "id": "pupil-neurological-history", "tags": ["multi_turn", "mixed_input", "emergency"],
+      "intent": "A pupil difference and a subsequent neurological warning activate both relevant policies.",
+      "source_urls": ["https://www.nhs.uk/symptoms/red-eye/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.pupil-neurology", "eye.rule.neurological"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "I noticed unequal pupils.", "expected_urgency": "unknown"}, {"question_id": "question.neurological", "value": "yes"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "ألاحظ اختلاف بحجم البؤبؤ.", "expected_urgency": "unknown"}, {"question_id": "question.neurological", "value": "yes"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "جیاوازی لە بیلبیلە هەیە.", "expected_urgency": "unknown"}, {"question_id": "question.neurological", "value": "yes"}]}
+      ]
+    },
+    {
+      "id": "red-headache-nausea-history", "tags": ["multi_turn", "mixed_input", "emergency"],
+      "intent": "Redness combines with separately reported severe headache and nausea.",
+      "source_urls": ["https://www.nhs.uk/symptoms/red-eye/"],
+      "expected": {"urgency": "emergency", "rule_ids": ["eye.rule.red-headache-nausea"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.headache", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.nausea", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "My eye looks red."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.headache", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.nausea", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "عندي احمرار بالعين."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.headache", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.nausea", "value": "yes", "expected_urgency": "unknown"}, {"question_id": "question.concern", "value": "سووربوون لە چاوم هەیە."}]}
+      ]
+    },
+    {
+      "id": "jaw-visual-history", "tags": ["multi_turn", "structured", "vision", "urgent"],
+      "intent": "A jaw/scalp warning combines with an earlier visual change.",
+      "source_urls": ["https://www.nhs.uk/conditions/temporal-arteritis/"],
+      "expected": {"urgency": "urgent", "rule_ids": ["eye.rule.vascular"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.vision", "value": "blurred", "expected_urgency": "unknown"}, {"question_id": "question.vascular", "value": "yes"}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.vision", "value": "blurred", "expected_urgency": "unknown"}, {"question_id": "question.vascular", "value": "yes"}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.vision", "value": "blurred", "expected_urgency": "unknown"}, {"question_id": "question.vascular", "value": "yes"}]}
+      ]
+    },
+    {
+      "id": "white-pupil-report", "tags": ["narrative", "paediatric", "urgent"],
+      "intent": "A white pupil reported by a parent activates the existing white-pupil pathway.",
+      "source_urls": ["https://www.nhs.uk/conditions/retinoblastoma/symptoms/"],
+      "expected": {"urgency": "urgent", "rule_ids": ["eye.rule.white-pupil"]},
+      "cases": [
+        {"locale": "en", "turns": [{"question_id": "question.concern", "value": "My daughter has a white reflection in her pupil in a photo."}]},
+        {"locale": "ar-IQ", "turns": [{"question_id": "question.concern", "value": "طفلتي عندها بؤبؤ أبيض بالصورة."}]},
+        {"locale": "ckb", "turns": [{"question_id": "question.concern", "value": "منداڵەکەم بیلبیلەی سپی لە وێنەدا هەیە."}]}
+      ]
+    }
+  ]
+}

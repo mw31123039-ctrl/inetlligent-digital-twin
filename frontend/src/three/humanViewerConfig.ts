@@ -14,7 +14,7 @@ export interface HumanModelConfig {
 }
 
 export const humanModelConfig: HumanModelConfig = {
-  url: `${import.meta.env.BASE_URL}models/human.glb`,
+  url: `${import.meta.env.BASE_URL}models/human-detailed.glb`,
   armRelaxation: .46,
   bones: {
     hips: 'Bip01_Pelvis', spine: 'Bip01_Spine', chest: 'Bip01_Spine2', neck: 'Bip01_Neck', head: 'Bip01_Head',

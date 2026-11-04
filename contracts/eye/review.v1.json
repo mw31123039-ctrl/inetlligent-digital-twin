@@ -1,0 +1,21 @@
+{
+  "version": "eye-draft-2026-10-30.2",
+  "clinical_review_status": "draft",
+  "clinical_reviewed_at": null,
+  "translation_review_status": {
+    "en": "draft",
+    "ar-IQ": "draft",
+    "ckb": "draft"
+  },
+  "source_checked_at": "2026-10-30",
+  "clinical_use_available": false,
+  "intended_use": "Synthetic educational exploration only",
+  "approved_for_live_triage": false,
+  "required_reviews": [
+    "Ophthalmologist: every anatomical relationship, condition, question and urgency pathway",
+    "Native Kurdish Sorani and Iraqi Arabic medical translators",
+    "Iraq clinical operations: local access pathways and emergency directions",
+    "Independent usability, clinical performance, privacy and deployment evaluation"
+  ],
+  "approval": null
+}

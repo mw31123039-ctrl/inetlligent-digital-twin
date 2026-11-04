@@ -1,0 +1,8 @@
+Z-Anatomy reference chest-organ surfaces.
+Lluís Vinent Juanico and contributors; based on Z-Anatomy by Gauthier Kervyn and BodyParts3D / DBCLS.
+Source revision: 6c7f9016bd5899ac8edafd31b9900c151df42ed6
+Source: https://raw.githubusercontent.com/LluisV/Z-Anatomy/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/VisceralSystem100.fbx
+Adapted model asset: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/
+Only meshes listed in chest-surface.manifest.json are included. Source FBX is not redistributed by this application.
+Changes: selected organ geometry, preserved transforms, vertex welding/smooth normals, illustrative materials, centering/scaling and GLB conversion.
+Keep this attribution and LICENSE-Z-Anatomy.txt when redistributing this derivative model under CC BY-SA 4.0.

@@ -1,0 +1,2307 @@
+{
+  "version": "eye-draft-2026-10-30.2",
+  "clinical_review_status": "draft",
+  "clinical_reviewed_at": null,
+  "translation_review_status": {
+    "en": "draft",
+    "ar-IQ": "draft",
+    "ckb": "draft"
+  },
+  "source_checked_at": "2026-10-30",
+  "clinical_use_available": false,
+  "groups": [
+    {
+      "id": "surface",
+      "label": {
+        "en": "Lids & surface",
+        "ar-IQ": "الجفون والسطح",
+        "ckb": "پلک و ڕووکار"
+      }
+    },
+    {
+      "id": "tears",
+      "label": {
+        "en": "Tear system",
+        "ar-IQ": "جهاز الدمع",
+        "ckb": "سیستەمی فرمێسک"
+      }
+    },
+    {
+      "id": "cornea",
+      "label": {
+        "en": "Cornea",
+        "ar-IQ": "القرنية",
+        "ckb": "قەرنیە"
+      }
+    },
+    {
+      "id": "coats",
+      "label": {
+        "en": "Eye wall",
+        "ar-IQ": "جدار العين",
+        "ckb": "دیواری چاو"
+      }
+    },
+    {
+      "id": "focus",
+      "label": {
+        "en": "Iris & lens",
+        "ar-IQ": "القزحية والعدسة",
+        "ckb": "قازحیە و عەدەسە"
+      }
+    },
+    {
+      "id": "fluid",
+      "label": {
+        "en": "Fluid & drainage",
+        "ar-IQ": "السائل وتصريفه",
+        "ckb": "شلە و دەرچوونی"
+      }
+    },
+    {
+      "id": "vitreous",
+      "label": {
+        "en": "Vitreous",
+        "ar-IQ": "الجسم الزجاجي",
+        "ckb": "جەستەی شووشەیی"
+      }
+    },
+    {
+      "id": "retina",
+      "label": {
+        "en": "Retina",
+        "ar-IQ": "الشبكية",
+        "ckb": "تۆڕینە"
+      }
+    },
+    {
+      "id": "nerve",
+      "label": {
+        "en": "Optic nerve",
+        "ar-IQ": "العصب البصري",
+        "ckb": "دەمارە بیناییەکە"
+      }
+    },
+    {
+      "id": "orbit",
+      "label": {
+        "en": "Orbit & movement",
+        "ar-IQ": "الحجاج والحركة",
+        "ckb": "کاسەی چاو و جووڵە"
+      }
+    }
+  ],
+  "structures": [
+    {
+      "id": "eye.upper-eyelid",
+      "group": "surface",
+      "label": {
+        "en": "Upper eyelid",
+        "ar-IQ": "الجفن العلوي",
+        "ckb": "پلکی سەرەوە"
+      },
+      "function": {
+        "en": "Protects the eye and spreads tears when blinking.",
+        "ar-IQ": "يحمي العين ويوزع الدمع أثناء الرمش.",
+        "ckb": "چاو دەپارێزێت و لە کاتی چەپڵەداندا فرمێسک بڵاودەکاتەوە."
+      },
+      "shape": "lid",
+      "position": [
+        0,
+        0.63,
+        0.79
+      ],
+      "scale": [
+        1.05,
+        0.25,
+        0.12
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.lower-eyelid",
+      "group": "surface",
+      "label": {
+        "en": "Lower eyelid",
+        "ar-IQ": "الجفن السفلي",
+        "ckb": "پلکی خوارەوە"
+      },
+      "function": {
+        "en": "Protects the lower surface and supports the tear meniscus.",
+        "ar-IQ": "يحمي الجزء السفلي من السطح ويساند حافة الدمع.",
+        "ckb": "بەشی خوارەوەی ڕووکار دەپارێزێت و پشتگیری لێواری فرمێسک دەکات."
+      },
+      "shape": "lid",
+      "position": [
+        0,
+        -0.59,
+        0.79
+      ],
+      "scale": [
+        1.05,
+        0.18,
+        0.12
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.eyelid-margin",
+      "group": "surface",
+      "label": {
+        "en": "Eyelid margins",
+        "ar-IQ": "حواف الجفون",
+        "ckb": "لێواری پلکەکان"
+      },
+      "function": {
+        "en": "The lid edges contain lash roots and meibomian gland openings.",
+        "ar-IQ": "حافة الجفن تحتوي جذور الرموش وفتحات غدد ميبوميان.",
+        "ckb": "لێواری پلک ڕەگی برژانگ و کونەکانی ڕژێنی میبۆمیانی تێدایە."
+      },
+      "shape": "ring",
+      "position": [
+        0,
+        0,
+        0.91
+      ],
+      "scale": [
+        1,
+        0.65,
+        0.04
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.eyelashes",
+      "group": "surface",
+      "label": {
+        "en": "Eyelashes",
+        "ar-IQ": "الرموش",
+        "ckb": "برژانگ"
+      },
+      "function": {
+        "en": "Help protect the ocular surface from particles.",
+        "ar-IQ": "تساعد على حماية سطح العين من الجزيئات.",
+        "ckb": "یارمەتی پاراستنی ڕووکاری چاو لە تەنۆلکەکان دەدات."
+      },
+      "shape": "lashes",
+      "position": [
+        0,
+        0.72,
+        0.96
+      ],
+      "scale": [
+        1,
+        0.2,
+        0.1
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.medial-canthus",
+      "group": "surface",
+      "label": {
+        "en": "Medial canthus",
+        "ar-IQ": "زاوية العين الداخلية",
+        "ckb": "گۆشەی ناوەوەی چاو"
+      },
+      "function": {
+        "en": "The eyelids meet on the nasal side near the tear drainage openings.",
+        "ar-IQ": "مكان التقاء الجفنين بجهة الأنف قرب فتحات تصريف الدمع.",
+        "ckb": "شوێنی یەکگرتنی پلکەکان لە لای لووتەوە نزیک کونەکانی دەرچوونی فرمێسکە."
+      },
+      "shape": "dot",
+      "position": [
+        1,
+        0.02,
+        0.84
+      ],
+      "scale": [
+        0.13,
+        0.13,
+        0.12
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.lateral-canthus",
+      "group": "surface",
+      "label": {
+        "en": "Lateral canthus",
+        "ar-IQ": "زاوية العين الخارجية",
+        "ckb": "گۆشەی دەرەوەی چاو"
+      },
+      "function": {
+        "en": "The eyelids meet on the temporal side.",
+        "ar-IQ": "مكان التقاء الجفنين بجهة الصدغ.",
+        "ckb": "شوێنی یەکگرتنی پلکەکان لە لای گۆنەوەیە."
+      },
+      "shape": "dot",
+      "position": [
+        -1,
+        0.02,
+        0.84
+      ],
+      "scale": [
+        0.1,
+        0.09,
+        0.08
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.lacrimal-caruncle",
+      "group": "surface",
+      "label": {
+        "en": "Lacrimal caruncle",
+        "ar-IQ": "اللحيمة الدمعية",
+        "ckb": "گۆشتۆکەی فرمێسکی"
+      },
+      "function": {
+        "en": "Small pink tissue at the inner corner of the eye.",
+        "ar-IQ": "نسيج وردي صغير بزاوية العين الداخلية.",
+        "ckb": "پارچەیەکی بچووکی پەمەییە لە گۆشەی ناوەوەی چاو."
+      },
+      "shape": "dot",
+      "position": [
+        0.91,
+        -0.04,
+        0.94
+      ],
+      "scale": [
+        0.1,
+        0.07,
+        0.06
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.meibomian-glands",
+      "group": "surface",
+      "label": {
+        "en": "Meibomian glands",
+        "ar-IQ": "غدد ميبوميان",
+        "ckb": "ڕژێنەکانی میبۆمیان"
+      },
+      "function": {
+        "en": "Glands inside the lids supply oil that limits tear evaporation.",
+        "ar-IQ": "غدد داخل الجفن تنتج دهناً يقلل تبخر الدمع.",
+        "ckb": "ڕژێنی ناو پلک چەوری بەرهەم دەهێنێت کە هەڵمبوونی فرمێسک کەم دەکاتەوە."
+      },
+      "shape": "glands",
+      "position": [
+        0,
+        0.78,
+        0.78
+      ],
+      "scale": [
+        0.8,
+        0.13,
+        0.06
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.bulbar-conjunctiva",
+      "group": "surface",
+      "label": {
+        "en": "Bulbar conjunctiva",
+        "ar-IQ": "ملتحمة مقلة العين",
+        "ckb": "پەردەی ڕووپۆشی گۆی چاو"
+      },
+      "function": {
+        "en": "A thin membrane covers the front sclera, stopping at the corneal edge.",
+        "ar-IQ": "غشاء رقيق يغطي الصلبة الأمامية وينتهي عند حافة القرنية.",
+        "ckb": "پەردەیەکی ناسک سکلێرای پێشەوە دادەپۆشێت و لە لێواری قەرنیە کۆتایی دێت."
+      },
+      "shape": "shell",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.014,
+        1.014,
+        1.014
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.palpebral-conjunctiva",
+      "group": "surface",
+      "label": {
+        "en": "Palpebral conjunctiva",
+        "ar-IQ": "ملتحمة الجفن",
+        "ckb": "پەردەی ناوەوەی پلک"
+      },
+      "function": {
+        "en": "Lines the inner eyelids.",
+        "ar-IQ": "تبطن السطح الداخلي للجفنين.",
+        "ckb": "ڕووکاری ناوەوەی پلکەکان دادەپۆشێت."
+      },
+      "shape": "lid",
+      "position": [
+        0,
+        0.57,
+        0.72
+      ],
+      "scale": [
+        0.95,
+        0.2,
+        0.04
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.conjunctival-fornices",
+      "group": "surface",
+      "label": {
+        "en": "Conjunctival fornices",
+        "ar-IQ": "جيوب الملتحمة",
+        "ckb": "قووڵاییەکانی پەردەی چاو"
+      },
+      "function": {
+        "en": "Folds join the lid lining to the globe covering and permit movement.",
+        "ar-IQ": "طيات تربط بطانة الجفن بغطاء المقلة وتسمح بالحركة.",
+        "ckb": "چەمەکان پەردەی ناو پلک بە ڕووپۆشی گۆی چاوەوە دەبەستن و ڕێگە بە جووڵە دەدەن."
+      },
+      "shape": "ring",
+      "position": [
+        0,
+        0,
+        0.62
+      ],
+      "scale": [
+        1.05,
+        0.82,
+        0.04
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.tear-film",
+      "group": "tears",
+      "label": {
+        "en": "Tear film",
+        "ar-IQ": "طبقة الدمع",
+        "ckb": "چینی فرمێسک"
+      },
+      "function": {
+        "en": "A thin surface film lubricates, protects and smooths the optical surface.",
+        "ar-IQ": "طبقة سطحية ترطب وتحمي وتنعّم السطح البصري.",
+        "ckb": "چینێکی ڕووکارییە کە ڕووکار تەڕ، پارێزراو و لووس ڕادەگرێت."
+      },
+      "shape": "cap",
+      "position": [
+        0,
+        0,
+        1.031
+      ],
+      "scale": [
+        0.62,
+        0.62,
+        0.12
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.lacrimal-gland",
+      "group": "tears",
+      "label": {
+        "en": "Lacrimal gland",
+        "ar-IQ": "الغدة الدمعية",
+        "ckb": "ڕژێنی فرمێسک"
+      },
+      "function": {
+        "en": "Produces aqueous tears in the upper temporal orbit.",
+        "ar-IQ": "تنتج الجزء المائي من الدمع بأعلى الحجاج من جهة الصدغ.",
+        "ckb": "بەشی ئاویی فرمێسک لە بەشی سەرەوەی کاسەی چاو لە لای گۆنەوە بەرهەم دەهێنێت."
+      },
+      "shape": "gland",
+      "position": [
+        -0.95,
+        0.86,
+        0.32
+      ],
+      "scale": [
+        0.31,
+        0.18,
+        0.16
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.upper-punctum",
+      "group": "tears",
+      "label": {
+        "en": "Upper lacrimal punctum",
+        "ar-IQ": "فتحة الدمع العلوية",
+        "ckb": "کونەی سەرەوەی فرمێسک"
+      },
+      "function": {
+        "en": "An opening near the nasal upper lid drains tears.",
+        "ar-IQ": "فتحة قرب الجفن العلوي من جهة الأنف لتصريف الدمع.",
+        "ckb": "کونێکە نزیک پلکی سەرەوە لە لای لووت بۆ دەرچوونی فرمێسک."
+      },
+      "shape": "dot",
+      "position": [
+        0.85,
+        0.2,
+        0.96
+      ],
+      "scale": [
+        0.045,
+        0.045,
+        0.04
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.lower-punctum",
+      "group": "tears",
+      "label": {
+        "en": "Lower lacrimal punctum",
+        "ar-IQ": "فتحة الدمع السفلية",
+        "ckb": "کونەی خوارەوەی فرمێسک"
+      },
+      "function": {
+        "en": "An opening near the nasal lower lid drains tears.",
+        "ar-IQ": "فتحة قرب الجفن السفلي من جهة الأنف لتصريف الدمع.",
+        "ckb": "کونێکە نزیک پلکی خوارەوە لە لای لووت بۆ دەرچوونی فرمێسک."
+      },
+      "shape": "dot",
+      "position": [
+        0.85,
+        -0.2,
+        0.96
+      ],
+      "scale": [
+        0.045,
+        0.045,
+        0.04
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.canaliculi",
+      "group": "tears",
+      "label": {
+        "en": "Lacrimal canaliculi",
+        "ar-IQ": "القنيّات الدمعية",
+        "ckb": "بۆرییە بچووکەکانی فرمێسک"
+      },
+      "function": {
+        "en": "Small channels connect the puncta to the lacrimal sac.",
+        "ar-IQ": "قنوات صغيرة تصل فتحات الدمع بكيس الدمع.",
+        "ckb": "بۆرییە بچووکەکان کونەکانی فرمێسک بە کیسی فرمێسکەوە دەبەستن."
+      },
+      "shape": "tube",
+      "position": [
+        1.02,
+        0,
+        0.85
+      ],
+      "scale": [
+        0.04,
+        0.24,
+        0.04
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.lacrimal-sac",
+      "group": "tears",
+      "label": {
+        "en": "Lacrimal sac",
+        "ar-IQ": "كيس الدمع",
+        "ckb": "کیسی فرمێسک"
+      },
+      "function": {
+        "en": "Collects tears on the nasal side before drainage to the nose.",
+        "ar-IQ": "يجمع الدمع بجهة الأنف قبل انتقاله للأنف.",
+        "ckb": "فرمێسک لە لای لووت کۆدەکاتەوە پێش ئەوەی بچێتە ناو لووت."
+      },
+      "shape": "gland",
+      "position": [
+        1.17,
+        -0.12,
+        0.67
+      ],
+      "scale": [
+        0.11,
+        0.23,
+        0.1
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.nasolacrimal-duct",
+      "group": "tears",
+      "label": {
+        "en": "Nasolacrimal duct",
+        "ar-IQ": "القناة الأنفية الدمعية",
+        "ckb": "بۆری لووت و فرمێسک"
+      },
+      "function": {
+        "en": "Carries tears from the sac toward the inferior nasal passage.",
+        "ar-IQ": "ينقل الدمع من الكيس إلى الممر الأنفي السفلي.",
+        "ckb": "فرمێسک لە کیسەکەوە بۆ ڕێڕەوی خوارەوەی لووت دەبات."
+      },
+      "shape": "tube",
+      "position": [
+        1.17,
+        -0.64,
+        0.58
+      ],
+      "scale": [
+        0.07,
+        0.4,
+        0.07
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.cornea",
+      "group": "cornea",
+      "label": {
+        "en": "Cornea",
+        "ar-IQ": "القرنية",
+        "ckb": "قەرنیە"
+      },
+      "function": {
+        "en": "The transparent front surface bends incoming light.",
+        "ar-IQ": "سطح العين الأمامي الشفاف يكسر الضوء الداخل.",
+        "ckb": "ڕووکاری شەفافی پێش چاو ڕووناکیی هاتوو دەشکێنێتەوە."
+      },
+      "shape": "cap",
+      "position": [
+        0,
+        0,
+        0.91
+      ],
+      "scale": [
+        0.63,
+        0.63,
+        0.28
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.limbus",
+      "group": "cornea",
+      "label": {
+        "en": "Limbus",
+        "ar-IQ": "حافة القرنية",
+        "ckb": "لێواری قەرنیە"
+      },
+      "function": {
+        "en": "Junction of the cornea and sclera.",
+        "ar-IQ": "موضع التقاء القرنية والصلبة.",
+        "ckb": "شوێنی یەکگرتنی قەرنیە و سکلێرایە."
+      },
+      "shape": "ring",
+      "position": [
+        0,
+        0,
+        0.87
+      ],
+      "scale": [
+        0.64,
+        0.64,
+        0.035
+      ],
+      "preferred_view": "external",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.corneal-epithelium",
+      "group": "cornea",
+      "label": {
+        "en": "Corneal epithelium",
+        "ar-IQ": "ظهارة القرنية",
+        "ckb": "ئەپیثیلیۆمی قەرنیە"
+      },
+      "function": {
+        "en": "The outer epithelial barrier protects the cornea.",
+        "ar-IQ": "الحاجز الخلوي الخارجي يحمي القرنية.",
+        "ckb": "بەربەستی خانەیی دەرەوە قەرنیە دەپارێزێت."
+      },
+      "shape": "micro",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "preferred_view": "corneal-detail",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.bowmans-layer",
+      "group": "cornea",
+      "label": {
+        "en": "Bowman’s layer",
+        "ar-IQ": "طبقة بومان",
+        "ckb": "چینی بۆمان"
+      },
+      "function": {
+        "en": "A collagenous layer beneath the corneal epithelium.",
+        "ar-IQ": "طبقة كولاجين تحت ظهارة القرنية.",
+        "ckb": "چینێکی کۆلاجینە لە ژێر ئەپیثیلیۆمی قەرنیە."
+      },
+      "shape": "micro",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "preferred_view": "corneal-detail",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.corneal-stroma",
+      "group": "cornea",
+      "label": {
+        "en": "Corneal stroma",
+        "ar-IQ": "سدى القرنية",
+        "ckb": "سترۆمای قەرنیە"
+      },
+      "function": {
+        "en": "Organized collagen provides most corneal thickness and clarity.",
+        "ar-IQ": "كولاجين منظم يشكل أغلب سماكة القرنية ويساعد شفافيتها.",
+        "ckb": "کۆلاجینی ڕێکخراو زۆربەی ئەستووری قەرنیە پێکدەهێنێت و شەفافیی دەپارێزێت."
+      },
+      "shape": "micro",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "preferred_view": "corneal-detail",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.descemets-membrane",
+      "group": "cornea",
+      "label": {
+        "en": "Descemet’s membrane",
+        "ar-IQ": "غشاء ديسميت",
+        "ckb": "پەردەی دێسمێت"
+      },
+      "function": {
+        "en": "The basement membrane supporting the corneal endothelium.",
+        "ar-IQ": "غشاء قاعدي يساند بطانة القرنية.",
+        "ckb": "پەردەیەکی بنچینەییە کە پشتگیری ئەندۆثیلیۆمی قەرنیە دەکات."
+      },
+      "shape": "micro",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "preferred_view": "corneal-detail",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.corneal-endothelium",
+      "group": "cornea",
+      "label": {
+        "en": "Corneal endothelium",
+        "ar-IQ": "بطانة القرنية",
+        "ckb": "ئەندۆثیلیۆمی قەرنیە"
+      },
+      "function": {
+        "en": "Cells regulate corneal hydration to preserve transparency.",
+        "ar-IQ": "خلايا تضبط سوائل القرنية للمحافظة على شفافيتها.",
+        "ckb": "خانەکان شلەی قەرنیە ڕێکدەخەن بۆ پاراستنی شەفافی."
+      },
+      "shape": "micro",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "preferred_view": "corneal-detail",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.episclera",
+      "group": "coats",
+      "label": {
+        "en": "Episclera",
+        "ar-IQ": "فوق الصلبة",
+        "ckb": "ڕووپۆشی سکلێرا"
+      },
+      "function": {
+        "en": "A vascular connective tissue layer lies over the sclera.",
+        "ar-IQ": "طبقة نسيج وعائي فوق الصلبة.",
+        "ckb": "چینێکی شانەی ڕەگدارە لە سەر سکلێرا."
+      },
+      "shape": "shell",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.005,
+        1.005,
+        1.005
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.sclera",
+      "group": "coats",
+      "label": {
+        "en": "Sclera",
+        "ar-IQ": "الصلبة",
+        "ckb": "سکلێرا"
+      },
+      "function": {
+        "en": "The tough outer coat supports and protects the globe.",
+        "ar-IQ": "غلاف خارجي قوي يدعم المقلة ويحميها.",
+        "ckb": "ڕووپۆشێکی دەرەکیی بەهێز گۆی چاو پشتگیری و پاراستن دەکات."
+      },
+      "shape": "shell",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.choroid",
+      "group": "coats",
+      "label": {
+        "en": "Choroid",
+        "ar-IQ": "المشيمية",
+        "ckb": "کۆرۆید"
+      },
+      "function": {
+        "en": "The vascular coat between sclera and retina nourishes the outer retina.",
+        "ar-IQ": "غلاف وعائي بين الصلبة والشبكية يغذي الشبكية الخارجية.",
+        "ckb": "چینێکی ڕەگدارە لە نێوان سکلێرا و تۆڕینە کە خۆراک بە بەشی دەرەوەی تۆڕینە دەگەیەنێت."
+      },
+      "shape": "shell",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.958,
+        0.958,
+        0.958
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.iris",
+      "group": "focus",
+      "label": {
+        "en": "Iris",
+        "ar-IQ": "القزحية",
+        "ckb": "قازحیە"
+      },
+      "function": {
+        "en": "A muscular diaphragm controls the size of its central opening, the pupil.",
+        "ar-IQ": "حجاب عضلي يضبط حجم الفتحة المركزية، وهي البؤبؤ.",
+        "ckb": "پەردەیەکی ماسولکەیی قەبارەی کونی ناوەڕاست، واتە بیلبیلە، ڕێکدەخات."
+      },
+      "shape": "iris",
+      "position": [
+        0,
+        0,
+        0.77
+      ],
+      "scale": [
+        0.58,
+        0.58,
+        0.035
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.pupil",
+      "group": "focus",
+      "label": {
+        "en": "Pupil opening",
+        "ar-IQ": "فتحة البؤبؤ",
+        "ckb": "کونی بیلبیلە"
+      },
+      "function": {
+        "en": "An opening in the iris, not a solid anatomical disc; light passes through it.",
+        "ar-IQ": "فتحة بالقزحية وليست قرصاً صلباً؛ يمر الضوء من خلالها.",
+        "ckb": "کونێکە لە قازحیە، نەک دیسکێکی ڕەق؛ ڕووناکی بە ناویدا تێدەپەڕێت."
+      },
+      "shape": "opening",
+      "position": [
+        0,
+        0,
+        0.78
+      ],
+      "scale": [
+        0.225,
+        0.225,
+        0.02
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.ciliary-body",
+      "group": "focus",
+      "label": {
+        "en": "Ciliary body",
+        "ar-IQ": "الجسم الهدبي",
+        "ckb": "جەستەی مژۆڵکەیی"
+      },
+      "function": {
+        "en": "Includes aqueous-producing processes and the focusing muscle.",
+        "ar-IQ": "يضم نواتئ تنتج الخلط المائي وعضلة التركيز.",
+        "ckb": "پڕۆسەی بەرهەمهێنانی شلەی ئاوی و ماسولکەی فۆکەسکردن لەخۆدەگرێت."
+      },
+      "shape": "ring",
+      "position": [
+        0,
+        0,
+        0.48
+      ],
+      "scale": [
+        0.78,
+        0.78,
+        0.12
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.ciliary-muscle",
+      "group": "focus",
+      "label": {
+        "en": "Ciliary muscle",
+        "ar-IQ": "العضلة الهدبية",
+        "ckb": "ماسولکەی مژۆڵکەیی"
+      },
+      "function": {
+        "en": "Changes zonular tension to alter lens shape for focusing.",
+        "ar-IQ": "تغير شد الألياف لتعديل شكل العدسة والتركيز.",
+        "ckb": "کێشانی ڕیشاڵەکان دەگۆڕێت بۆ گۆڕینی شێوەی عەدەسە و فۆکەس."
+      },
+      "shape": "ring",
+      "position": [
+        0,
+        0,
+        0.48
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.07
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.ciliary-processes",
+      "group": "focus",
+      "label": {
+        "en": "Ciliary processes",
+        "ar-IQ": "النواتئ الهدبية",
+        "ckb": "پڕۆسەکانی مژۆڵکەیی"
+      },
+      "function": {
+        "en": "Folded tissue produces aqueous humour.",
+        "ar-IQ": "نسيج مطوي ينتج الخلط المائي.",
+        "ckb": "شانەیەکی چەمکراوەیە کە شلەی ئاوی بەرهەم دەهێنێت."
+      },
+      "shape": "processes",
+      "position": [
+        0,
+        0,
+        0.5
+      ],
+      "scale": [
+        0.67,
+        0.67,
+        0.08
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.zonular-fibres",
+      "group": "focus",
+      "label": {
+        "en": "Zonular fibres",
+        "ar-IQ": "ألياف الزونول",
+        "ckb": "ڕیشاڵەکانی زۆنول"
+      },
+      "function": {
+        "en": "Suspend the lens between its capsule and the ciliary body.",
+        "ar-IQ": "تعلق العدسة بين محفظتها والجسم الهدبي.",
+        "ckb": "عەدەسە لە نێوان کەپسوولەکەی و جەستەی مژۆڵکەیی هەڵدەواسێت."
+      },
+      "shape": "spokes",
+      "position": [
+        0,
+        0,
+        0.47
+      ],
+      "scale": [
+        0.64,
+        0.64,
+        0.02
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.lens",
+      "group": "focus",
+      "label": {
+        "en": "Lens",
+        "ar-IQ": "العدسة",
+        "ckb": "عەدەسە"
+      },
+      "function": {
+        "en": "A transparent biconvex structure behind the iris focuses light onto the retina.",
+        "ar-IQ": "عدسة شفافة محدبة الوجهين خلف القزحية تركز الضوء على الشبكية.",
+        "ckb": "عەدەسەیەکی شەفافی دوولای قوپاوە لە پشت قازحیە ڕووناکی لەسەر تۆڕینە کۆدەکاتەوە."
+      },
+      "shape": "lens",
+      "position": [
+        0,
+        0,
+        0.41
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.19
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.lens-capsule",
+      "group": "focus",
+      "label": {
+        "en": "Lens capsule",
+        "ar-IQ": "محفظة العدسة",
+        "ckb": "کەپسوولی عەدەسە"
+      },
+      "function": {
+        "en": "An elastic envelope surrounds the lens.",
+        "ar-IQ": "غلاف مرن يحيط بالعدسة.",
+        "ckb": "پۆشێکی نەرم و کێشاو عەدەسە دادەپۆشێت."
+      },
+      "shape": "lens",
+      "position": [
+        0,
+        0,
+        0.41
+      ],
+      "scale": [
+        0.414,
+        0.414,
+        0.201
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.anterior-chamber",
+      "group": "fluid",
+      "label": {
+        "en": "Anterior chamber",
+        "ar-IQ": "الحجرة الأمامية",
+        "ckb": "ژووری پێشەوە"
+      },
+      "function": {
+        "en": "The aqueous-filled space between cornea and iris.",
+        "ar-IQ": "حيز مملوء بالخلط المائي بين القرنية والقزحية.",
+        "ckb": "بۆشاییەکی پڕ لە شلەی ئاوییە لە نێوان قەرنیە و قازحیە."
+      },
+      "shape": "cap",
+      "position": [
+        0,
+        0,
+        0.91
+      ],
+      "scale": [
+        0.54,
+        0.54,
+        0.11
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.posterior-chamber",
+      "group": "fluid",
+      "label": {
+        "en": "Posterior chamber",
+        "ar-IQ": "الحجرة الخلفية",
+        "ckb": "ژووری دواوە"
+      },
+      "function": {
+        "en": "A narrow aqueous-filled space behind the iris, in front of the lens and ciliary body; not the vitreous chamber.",
+        "ar-IQ": "حيز مائي ضيق خلف القزحية وأمام العدسة والجسم الهدبي؛ يختلف عن الحجرة الزجاجية.",
+        "ckb": "بۆشاییەکی تەسکی ئاوییە لە پشت قازحیە و پێش عەدەسە و جەستەی مژۆڵکەیی؛ جیاوازە لە ژووری شووشەیی."
+      },
+      "shape": "ring",
+      "position": [
+        0,
+        0,
+        0.64
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.035
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.aqueous-humour",
+      "group": "fluid",
+      "label": {
+        "en": "Aqueous humour",
+        "ar-IQ": "الخلط المائي",
+        "ckb": "شلەی ئاوی"
+      },
+      "function": {
+        "en": "Fluid produced by the ciliary processes flows through the pupil to the anterior chamber.",
+        "ar-IQ": "سائل تنتجه النواتئ الهدبية ويمر عبر البؤبؤ إلى الحجرة الأمامية.",
+        "ckb": "شلەیەکە پڕۆسە مژۆڵکەییەکان دروستی دەکەن و بە بیلبیلەدا بۆ ژووری پێشەوە دەڕوات."
+      },
+      "shape": "cap",
+      "position": [
+        0,
+        0,
+        0.87
+      ],
+      "scale": [
+        0.52,
+        0.52,
+        0.075
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.drainage-angle",
+      "group": "fluid",
+      "label": {
+        "en": "Drainage angle",
+        "ar-IQ": "زاوية التصريف",
+        "ckb": "گۆشەی دەرچوونی شلە"
+      },
+      "function": {
+        "en": "The angle where the peripheral cornea meets the iris contains drainage tissues.",
+        "ar-IQ": "زاوية التقاء محيط القرنية بالقزحية وتحتوي أنسجة التصريف.",
+        "ckb": "گۆشەی یەکگرتنی لێواری قەرنیە و قازحیەیە و شانەی دەرچوونی شلەی تێدایە."
+      },
+      "shape": "ring",
+      "position": [
+        0,
+        0,
+        0.77
+      ],
+      "scale": [
+        0.61,
+        0.61,
+        0.025
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.trabecular-meshwork",
+      "group": "fluid",
+      "label": {
+        "en": "Trabecular meshwork",
+        "ar-IQ": "الشبكة التربيقية",
+        "ckb": "تۆڕی ترابێکولار"
+      },
+      "function": {
+        "en": "Aqueous passes through this tissue at the drainage angle.",
+        "ar-IQ": "يمر الخلط المائي عبر هذا النسيج بزاوية التصريف.",
+        "ckb": "شلەی ئاوی بە ناو ئەم شانەیە لە گۆشەی دەرچوون تێدەپەڕێت."
+      },
+      "shape": "ring",
+      "position": [
+        0,
+        0,
+        0.78
+      ],
+      "scale": [
+        0.63,
+        0.63,
+        0.02
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.schlemms-canal",
+      "group": "fluid",
+      "label": {
+        "en": "Schlemm’s canal",
+        "ar-IQ": "قناة شليم",
+        "ckb": "کەناڵی شلێم"
+      },
+      "function": {
+        "en": "Collects aqueous draining through the trabecular meshwork.",
+        "ar-IQ": "يجمع السائل المار عبر الشبكة التربيقية.",
+        "ckb": "شلەی تێپەڕیو بە تۆڕی ترابێکولار کۆدەکاتەوە."
+      },
+      "shape": "ring",
+      "position": [
+        0,
+        0,
+        0.79
+      ],
+      "scale": [
+        0.66,
+        0.66,
+        0.018
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.vitreous-chamber",
+      "group": "vitreous",
+      "label": {
+        "en": "Vitreous chamber",
+        "ar-IQ": "الحجرة الزجاجية",
+        "ckb": "ژووری شووشەیی"
+      },
+      "function": {
+        "en": "The large cavity behind the lens and in front of the retina.",
+        "ar-IQ": "التجويف الكبير خلف العدسة وأمام الشبكية.",
+        "ckb": "بۆشاییە گەورەکەی پشت عەدەسە و پێش تۆڕینەیە."
+      },
+      "shape": "volume",
+      "position": [
+        0,
+        0,
+        -0.14
+      ],
+      "scale": [
+        0.86,
+        0.86,
+        0.71
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.vitreous-body",
+      "group": "vitreous",
+      "label": {
+        "en": "Vitreous body",
+        "ar-IQ": "الجسم الزجاجي",
+        "ckb": "جەستەی شووشەیی"
+      },
+      "function": {
+        "en": "A transparent gel fills most of the globe behind the lens.",
+        "ar-IQ": "هلام شفاف يملأ معظم المقلة خلف العدسة.",
+        "ckb": "جێلێکی شەفاف زۆربەی گۆی چاو لە پشت عەدەسە پڕ دەکاتەوە."
+      },
+      "shape": "volume",
+      "position": [
+        0,
+        0,
+        -0.14
+      ],
+      "scale": [
+        0.84,
+        0.84,
+        0.7
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.posterior-vitreous-interface",
+      "group": "vitreous",
+      "label": {
+        "en": "Posterior vitreous interface",
+        "ar-IQ": "السطح الزجاجي الخلفي",
+        "ckb": "ڕووپۆشی پشتی شووشەیی"
+      },
+      "function": {
+        "en": "The posterior vitreous cortex contacts the inner retina.",
+        "ar-IQ": "قشرة الزجاجي الخلفية تلامس السطح الداخلي للشبكية.",
+        "ckb": "ڕووپۆشی پشتی شووشەیی دەکەوێتە سەر ڕووکاری ناوەوەی تۆڕینە."
+      },
+      "shape": "shell",
+      "position": [
+        0,
+        0,
+        -0.08
+      ],
+      "scale": [
+        0.89,
+        0.89,
+        0.81
+      ],
+      "preferred_view": "section",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.retina",
+      "group": "retina",
+      "label": {
+        "en": "Retina",
+        "ar-IQ": "الشبكية",
+        "ckb": "تۆڕینە"
+      },
+      "function": {
+        "en": "Light-sensitive neural tissue lines the inner posterior globe.",
+        "ar-IQ": "نسيج عصبي حساس للضوء يبطن داخل الجزء الخلفي من المقلة.",
+        "ckb": "شانەیەکی دەمارەیی هەستیار بە ڕووناکی ناوەوەی پشتی گۆی چاو دادەپۆشێت."
+      },
+      "shape": "shell",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.93,
+        0.93,
+        0.93
+      ],
+      "preferred_view": "posterior",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.retinal-pigment-epithelium",
+      "group": "retina",
+      "label": {
+        "en": "Retinal pigment epithelium",
+        "ar-IQ": "الظهارة الصباغية للشبكية",
+        "ckb": "ئەپیثیلیۆمی ڕەنگداری تۆڕینە"
+      },
+      "function": {
+        "en": "A cell layer outside photoreceptors supports their function.",
+        "ar-IQ": "طبقة خلايا خارج المستقبلات الضوئية تدعم وظيفتها.",
+        "ckb": "چینێک خانە لە دەرەوەی وەرگرەکانی ڕووناکی پشتگیری کارەکانیان دەکات."
+      },
+      "shape": "micro",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "preferred_view": "retinal-detail",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.photoreceptors",
+      "group": "retina",
+      "label": {
+        "en": "Photoreceptor detail",
+        "ar-IQ": "المستقبلات الضوئية",
+        "ckb": "وەرگرەکانی ڕووناکی"
+      },
+      "function": {
+        "en": "Rods and cones convert light into signals; shown in a magnified educational view.",
+        "ar-IQ": "العصي والمخاريط تحول الضوء إلى إشارات؛ تظهر هنا بمنظر تعليمي مكبر.",
+        "ckb": "ڕۆد و کۆن ڕووناکی دەگۆڕن بۆ نیشانە؛ لێرە لە دیمەنێکی فێرکاریی گەورەکراودا پیشان دەدرێن."
+      },
+      "shape": "micro",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "preferred_view": "retinal-detail",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.peripheral-retina",
+      "group": "retina",
+      "label": {
+        "en": "Peripheral retina",
+        "ar-IQ": "الشبكية المحيطية",
+        "ckb": "دەوروبەری تۆڕینە"
+      },
+      "function": {
+        "en": "Retina outside the central macula supports peripheral vision.",
+        "ar-IQ": "الشبكية خارج البقعة المركزية تدعم النظر المحيطي.",
+        "ckb": "تۆڕینەی دەرەوەی ماکولای ناوەندی پشتگیری بینینی دەوروبەر دەکات."
+      },
+      "shape": "ring",
+      "position": [
+        0,
+        0,
+        -0.53
+      ],
+      "scale": [
+        0.72,
+        0.72,
+        0.035
+      ],
+      "preferred_view": "posterior",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.macula",
+      "group": "retina",
+      "label": {
+        "en": "Macula",
+        "ar-IQ": "البقعة الصفراء",
+        "ckb": "ماکولا"
+      },
+      "function": {
+        "en": "Central posterior retina, temporal to the optic disc, supports detailed vision.",
+        "ar-IQ": "منطقة بالشبكية الخلفية تقع بجهة الصدغ من القرص البصري وتدعم النظر الدقيق.",
+        "ckb": "ناوچەیەکی پشتی تۆڕینەیە لە لای گۆنەوەی دیسکی بینایی و پشتگیری بینینی ورد دەکات."
+      },
+      "shape": "patch",
+      "position": [
+        -0.32,
+        0,
+        -0.878
+      ],
+      "scale": [
+        0.19,
+        0.19,
+        0.022
+      ],
+      "preferred_view": "posterior",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.fovea",
+      "group": "retina",
+      "label": {
+        "en": "Fovea",
+        "ar-IQ": "النقرة المركزية",
+        "ckb": "فۆڤیا"
+      },
+      "function": {
+        "en": "A small central depression within the macula provides sharp central vision.",
+        "ar-IQ": "انخفاض صغير بوسط البقعة يوفر نظر مركزي دقيق.",
+        "ckb": "قووڵاییەکی بچووک لە ناوەڕاستی ماکولا بینینی ناوەندیی تیژ دابین دەکات."
+      },
+      "shape": "patch",
+      "position": [
+        -0.32,
+        0,
+        -0.905
+      ],
+      "scale": [
+        0.055,
+        0.055,
+        0.018
+      ],
+      "preferred_view": "posterior",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.retinal-vessels",
+      "group": "retina",
+      "label": {
+        "en": "Retinal blood vessels",
+        "ar-IQ": "الأوعية الدموية للشبكية",
+        "ckb": "ڕەگە خوێنییەکانی تۆڕینە"
+      },
+      "function": {
+        "en": "Branch from the optic disc across the inner retina.",
+        "ar-IQ": "تتفرع من القرص البصري فوق السطح الداخلي للشبكية.",
+        "ckb": "لە دیسکی بیناییەوە بەسەر ڕووکاری ناوەوەی تۆڕینەدا لق دەبنەوە."
+      },
+      "shape": "vessels",
+      "position": [
+        0.3,
+        0,
+        -0.88
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.03
+      ],
+      "preferred_view": "posterior",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.optic-disc",
+      "group": "nerve",
+      "label": {
+        "en": "Optic disc",
+        "ar-IQ": "القرص البصري",
+        "ckb": "دیسکی بینایی"
+      },
+      "function": {
+        "en": "Retinal nerve fibres leave the eye here, nasal to the macula; there are no photoreceptors at the disc.",
+        "ar-IQ": "تخرج ألياف الأعصاب من هنا بجهة الأنف من البقعة؛ لا توجد مستقبلات ضوئية في القرص.",
+        "ckb": "ڕیشاڵە دەمارەییەکان لێرە لە لای لووتی ماکولا دەردەچن؛ وەرگری ڕووناکی لە دیسکدا نییە."
+      },
+      "shape": "patch",
+      "position": [
+        0.3,
+        0,
+        -0.88
+      ],
+      "scale": [
+        0.105,
+        0.13,
+        0.025
+      ],
+      "preferred_view": "posterior",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.optic-nerve",
+      "group": "nerve",
+      "label": {
+        "en": "Optic nerve",
+        "ar-IQ": "العصب البصري",
+        "ckb": "دەمارە بیناییەکە"
+      },
+      "function": {
+        "en": "Carries retinal signals toward the brain, exiting posteriorly at the optic disc.",
+        "ar-IQ": "ينقل إشارات الشبكية نحو الدماغ ويخرج من خلف القرص البصري.",
+        "ckb": "نیشانەکانی تۆڕینە بەرەو مێشک دەبات و لە پشتی دیسکی بینایی دەردەچێت."
+      },
+      "shape": "nerve",
+      "position": [
+        0.38,
+        0,
+        -1.32
+      ],
+      "scale": [
+        0.14,
+        0.14,
+        0.43
+      ],
+      "preferred_view": "posterior",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.bony-orbit",
+      "group": "orbit",
+      "label": {
+        "en": "Bony orbit",
+        "ar-IQ": "الحجاج العظمي",
+        "ckb": "کاسەی ئێسکی چاو"
+      },
+      "function": {
+        "en": "The bony socket surrounds and protects orbital contents.",
+        "ar-IQ": "التجويف العظمي يحيط بمحتويات الحجاج ويحميها.",
+        "ckb": "کاسەی ئێسکی دەوری پێکهاتەکانی کاسەی چاو دەدات و دەیانپارێزێت."
+      },
+      "shape": "orbit",
+      "position": [
+        0,
+        0,
+        -0.2
+      ],
+      "scale": [
+        1.4,
+        1.3,
+        1.2
+      ],
+      "preferred_view": "transparent",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.orbital-fat",
+      "group": "orbit",
+      "label": {
+        "en": "Orbital fat",
+        "ar-IQ": "دهون الحجاج",
+        "ckb": "چەوری کاسەی چاو"
+      },
+      "function": {
+        "en": "Cushions the globe and occupies spaces around muscles and nerves.",
+        "ar-IQ": "يساند المقلة ويملأ الفراغات حول العضلات والأعصاب.",
+        "ckb": "گۆی چاو پشتگیری دەکات و بۆشایی دەوری ماسولکە و دەمارەکان پڕ دەکاتەوە."
+      },
+      "shape": "fat",
+      "position": [
+        0,
+        0,
+        -0.3
+      ],
+      "scale": [
+        1.18,
+        1.1,
+        0.95
+      ],
+      "preferred_view": "transparent",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.superior-rectus",
+      "group": "orbit",
+      "label": {
+        "en": "Superior rectus",
+        "ar-IQ": "المستقيمة العلوية",
+        "ckb": "ماسولکەی ڕاستی سەرەوە"
+      },
+      "function": {
+        "en": "Mainly elevates the eye; its action also depends on eye position.",
+        "ar-IQ": "ترفع العين بصورة رئيسية ويتغير فعلها حسب وضع العين.",
+        "ckb": "بە سەرەکی چاو بەرز دەکاتەوە و کاریگەرییەکەی بە دۆخی چاو دەگۆڕێت."
+      },
+      "shape": "muscle",
+      "position": [
+        0,
+        1,
+        -0.35
+      ],
+      "scale": [
+        0.16,
+        0.1,
+        0.65
+      ],
+      "preferred_view": "transparent",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.inferior-rectus",
+      "group": "orbit",
+      "label": {
+        "en": "Inferior rectus",
+        "ar-IQ": "المستقيمة السفلية",
+        "ckb": "ماسولکەی ڕاستی خوارەوە"
+      },
+      "function": {
+        "en": "Mainly depresses the eye.",
+        "ar-IQ": "تخفض العين بصورة رئيسية.",
+        "ckb": "بە سەرەکی چاو دادەبەزێنێت."
+      },
+      "shape": "muscle",
+      "position": [
+        0,
+        -1,
+        -0.35
+      ],
+      "scale": [
+        0.16,
+        0.1,
+        0.65
+      ],
+      "preferred_view": "transparent",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.medial-rectus",
+      "group": "orbit",
+      "label": {
+        "en": "Medial rectus",
+        "ar-IQ": "المستقيمة الإنسية",
+        "ckb": "ماسولکەی ڕاستی ناوەوە"
+      },
+      "function": {
+        "en": "Turns the eye toward the nose.",
+        "ar-IQ": "تحرك العين باتجاه الأنف.",
+        "ckb": "چاو بەرەو لووت دەجووڵێنێت."
+      },
+      "shape": "muscle",
+      "position": [
+        1,
+        0,
+        -0.35
+      ],
+      "scale": [
+        0.1,
+        0.16,
+        0.65
+      ],
+      "preferred_view": "transparent",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.lateral-rectus",
+      "group": "orbit",
+      "label": {
+        "en": "Lateral rectus",
+        "ar-IQ": "المستقيمة الوحشية",
+        "ckb": "ماسولکەی ڕاستی دەرەوە"
+      },
+      "function": {
+        "en": "Turns the eye toward the temple.",
+        "ar-IQ": "تحرك العين باتجاه الصدغ.",
+        "ckb": "چاو بەرەو گۆنە دەجووڵێنێت."
+      },
+      "shape": "muscle",
+      "position": [
+        -1,
+        0,
+        -0.35
+      ],
+      "scale": [
+        0.1,
+        0.16,
+        0.65
+      ],
+      "preferred_view": "transparent",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.superior-oblique",
+      "group": "orbit",
+      "label": {
+        "en": "Superior oblique",
+        "ar-IQ": "المائلة العلوية",
+        "ckb": "ماسولکەی لارەکی سەرەوە"
+      },
+      "function": {
+        "en": "Passes through the superonasal trochlea and helps rotate and depress the eye.",
+        "ar-IQ": "تمر عبر البكرة العلوية الإنسية وتساعد تدوير العين وخفضها.",
+        "ckb": "بە پۆڵی سەرەوەی ناوەوەدا تێدەپەڕێت و یارمەتی سووڕاندن و دابەزاندنی چاو دەدات."
+      },
+      "shape": "oblique",
+      "position": [
+        0.55,
+        0.92,
+        -0.24
+      ],
+      "scale": [
+        0.5,
+        0.08,
+        0.4
+      ],
+      "preferred_view": "transparent",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.inferior-oblique",
+      "group": "orbit",
+      "label": {
+        "en": "Inferior oblique",
+        "ar-IQ": "المائلة السفلية",
+        "ckb": "ماسولکەی لارەکی خوارەوە"
+      },
+      "function": {
+        "en": "Runs from the anterior medial orbital floor beneath the globe toward its temporal posterior surface.",
+        "ar-IQ": "تمتد من أرضية الحجاج الأمامية الإنسية تحت المقلة نحو سطحها الخلفي الصدغي.",
+        "ckb": "لە بنکەی پێشەوەی ناوەوەی کاسەی چاو لە ژێر گۆی چاو بۆ ڕووکاری پشتی لای گۆنە دەڕوات."
+      },
+      "shape": "oblique",
+      "position": [
+        -0.22,
+        -0.92,
+        -0.1
+      ],
+      "scale": [
+        0.7,
+        0.09,
+        0.2
+      ],
+      "preferred_view": "transparent",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    },
+    {
+      "id": "eye.levator-palpebrae",
+      "group": "orbit",
+      "label": {
+        "en": "Levator palpebrae superioris",
+        "ar-IQ": "رافعة الجفن العلوي",
+        "ckb": "بەرزکەرەوەی پلکی سەرەوە"
+      },
+      "function": {
+        "en": "Raises the upper eyelid above the superior rectus.",
+        "ar-IQ": "ترفع الجفن العلوي وتمتد فوق العضلة المستقيمة العلوية.",
+        "ckb": "پلکی سەرەوە بەرز دەکاتەوە و لە سەر ماسولکەی ڕاستی سەرەوە درێژ دەبێتەوە."
+      },
+      "shape": "muscle",
+      "position": [
+        0,
+        1.15,
+        -0.25
+      ],
+      "scale": [
+        0.24,
+        0.07,
+        0.7
+      ],
+      "preferred_view": "transparent",
+      "source_ids": [
+        "anatomy-msd",
+        "anatomy-aao"
+      ],
+      "clinical_review_status": "draft",
+      "translation_review_status": {
+        "ar-IQ": "draft-awaiting-medical-review",
+        "ckb": "draft-awaiting-medical-review"
+      }
+    }
+  ],
+  "anatomical_convention": "Positive model x is nasal before patient-side reflection. Anterior is +z; superior is +y. Macula is temporal to the optic disc. Camera movement never changes patient laterality.",
+  "model_limitations": [
+    "Procedural schematic; not a patient-specific reconstruction or surgical reference.",
+    "Fine layers are magnified and thicknesses are deliberately exaggerated.",
+    "Muscles show principal paths, not validated insertion geometry."
+  ]
+}

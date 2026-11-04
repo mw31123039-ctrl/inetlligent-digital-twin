@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { RegionId } from '../types'
+import type { PatientSide } from '../data/bodyParts'
 defineProps<{ selected: RegionId | null; back: boolean; zoom: number }>()
-const emit = defineEmits<{ select: [id: RegionId]; zoom: [delta: number] }>()
+const emit = defineEmits<{ select: [id: RegionId, side?: PatientSide]; zoom: [delta: number] }>()
 const pan = ref({ x: 0, y: 0 })
 let start: { x: number; y: number; px: number; py: number } | null = null
 function down(e: PointerEvent) { start = { x: e.clientX, y: e.clientY, px: pan.value.x, py: pan.value.y }; (e.currentTarget as SVGElement).setPointerCapture(e.pointerId) }
@@ -10,7 +11,11 @@ function move(e: PointerEvent) { if (start) pan.value = { x: Math.max(-100, Math
 function up(e: PointerEvent) {
   if (start && Math.hypot(e.clientX - start.x, e.clientY - start.y) < 5) {
     const target = document.elementFromPoint(e.clientX, e.clientY)?.closest('[data-region]')
-    if (target) emit('select', target.getAttribute('data-region') as RegionId)
+    if (target) {
+      const matrix = (target as SVGGraphicsElement).getScreenCTM()
+      const point = matrix ? new DOMPoint(e.clientX, e.clientY).matrixTransform(matrix.inverse()) : null
+      emit('select', target.getAttribute('data-region') as RegionId, point && point.x < 200 ? 'right' : 'left')
+    }
   }
   start = null
 }

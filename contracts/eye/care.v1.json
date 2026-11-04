@@ -1,0 +1,196 @@
+{
+  "version": "eye-care-draft-2026-10-30.1",
+  "clinical_review_status": "draft",
+  "clinical_reviewed_at": null,
+  "clinical_use_available": false,
+  "translation_review_status": {
+    "en": "draft",
+    "ar-IQ": "draft",
+    "ckb": "draft"
+  },
+  "source_checked_at": "2026-10-30",
+  "sources": {
+    "pain": "https://www.nhs.uk/symptoms/eye-pain/",
+    "injury": "https://www.nhs.uk/conditions/eye-injuries/",
+    "red": "https://www.nhs.uk/symptoms/red-eye/",
+    "dry": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/dry-eye"
+  },
+  "headings": {
+    "title": {
+      "en": "What to do now",
+      "ar-IQ": "شنو تسوي هسه",
+      "ckb": "ئێستا چی بکەیت"
+    },
+    "doctor": {
+      "en": "Which doctor or service?",
+      "ar-IQ": "أي طبيب أو خدمة؟",
+      "ckb": "کام پزیشک یان خزمەتگوزاری؟"
+    },
+    "handoff": {
+      "en": "Summary to share with the doctor",
+      "ar-IQ": "ملخص تشاركه ويا الطبيب",
+      "ckb": "پوختە بۆ پزیشک"
+    },
+    "copy": {
+      "en": "Copy doctor summary",
+      "ar-IQ": "نسخ ملخص الطبيب",
+      "ckb": "کۆپیکردنی پوختە بۆ پزیشک"
+    },
+    "download": {
+      "en": "Download doctor summary",
+      "ar-IQ": "تنزيل ملخص الطبيب",
+      "ckb": "داگرتنی پوختە بۆ پزیشک"
+    },
+    "questions": {
+      "en": "Questions to ask the doctor",
+      "ar-IQ": "أسئلة تسألها للطبيب",
+      "ckb": "پرسیارەکان بۆ پزیشک"
+    },
+    "limitation": {
+      "en": "The right treatment depends on an examination. These steps do not identify the cause or promise a cure.",
+      "ar-IQ": "العلاج المناسب يعتمد على الفحص. هالخطوات ما تحدد السبب ولا تضمن الشفاء.",
+      "ckb": "چارەسەری گونجاو بە پشکنینەوە پەیوەستە. ئەم هەنگاوانە هۆکار دیاری ناکەن و بەڵێنی چاکبوونەوە نادەن."
+    }
+  },
+  "routes": {
+    "emergency": {
+      "title": {
+        "en": "Emergency department or emergency eye service — now",
+        "ar-IQ": "طوارئ أو طوارئ عيون — هسه",
+        "ckb": "فریاکەوتن یان فریاکەوتنی چاو — ئێستا"
+      },
+      "description": {
+        "en": "Ask for urgent ophthalmology assessment. An ophthalmologist is a medical eye specialist. Do not wait for a routine appointment.",
+        "ar-IQ": "اطلب تقييم عيون طارئ. طبيب العيون مختص طبي بالعين. لا تنتظر موعد عادي.",
+        "ckb": "داوای هەڵسەنگاندنی پەلەیی پسپۆڕی چاو بکە. پسپۆڕی چاو پزیشکی تایبەتی چاوە. چاوەڕێی نۆرەی ئاسایی مەکە."
+      }
+    },
+    "urgent": {
+      "title": {
+        "en": "Urgent eye clinic / ophthalmologist — today",
+        "ar-IQ": "عيادة عيون عاجلة أو طبيب عيون — اليوم",
+        "ckb": "کلینیکی پەلەیی چاو یان پسپۆڕی چاو — ئەمڕۆ"
+      },
+      "description": {
+        "en": "Arrange same-day assessment. If an urgent eye service is unavailable, go to an emergency department.",
+        "ar-IQ": "رتب فحص بنفس اليوم. إذا ما متوفرة خدمة عيون عاجلة، راجع الطوارئ.",
+        "ckb": "پشکنینی هەمان ڕۆژ ڕێکبخە. ئەگەر خزمەتگوزاری پەلەیی چاو نییە، بڕۆ بۆ فریاکەوتن."
+      }
+    },
+    "paediatric": {
+      "title": {
+        "en": "Urgent paediatric eye specialist / ophthalmologist",
+        "ar-IQ": "طبيب عيون أطفال أو طبيب عيون بشكل عاجل",
+        "ckb": "پسپۆڕی چاوی منداڵان یان پسپۆڕی چاو بە پەلە"
+      },
+      "description": {
+        "en": "Arrange urgent assessment for a child’s white pupil/reflection or a newborn’s red/sticky eye. This finding does not establish a diagnosis.",
+        "ar-IQ": "رتب فحص عاجل لبياض بؤبؤ الطفل أو انعكاسه، أو احمرار وإفراز عين مولود جديد. هالعلامة مو تشخيص.",
+        "ckb": "بۆ بیلبیلە یان ڕەنگدانەوەی سپیی منداڵ، یان چاوی سوور و لەزجی تازەلەدایکبوو، پشکنینی پەلەیی ڕێکبخە. ئەم نیشانەیە دەستنیشانکردن نییە."
+      }
+    },
+    "assessment": {
+      "title": {
+        "en": "Eye professional — assessment needed",
+        "ar-IQ": "مختص عين — يحتاج فحص",
+        "ckb": "پسپۆڕی چاو — پشکنین پێویستە"
+      },
+      "description": {
+        "en": "Arrange an examination with an optometrist or ophthalmologist. A primary-care clinician can help arrange referral. Incomplete answers cannot establish how safe it is to wait.",
+        "ar-IQ": "رتب فحص عند مختص فحص نظر أو طبيب عيون. طبيب الرعاية الأولية يكدر يساعد بالإحالة. الأجوبة الناقصة ما تحدد أمان الانتظار.",
+        "ckb": "پشکنین لای ئۆپتۆمەتریست یان پسپۆڕی چاو ڕێکبخە. پزیشکی چاودێریی سەرەتایی دەتوانێت یارمەتی ڕەوانەکردن بدات. وەڵامی ناتەواو سەلامەتیی چاوەڕوانی دیاری ناکات."
+      }
+    }
+  },
+  "steps": {
+    "travel": {
+      "id": "safe-travel",
+      "text": {
+        "en": "Ask someone to take you. Do not drive if your vision is affected.",
+        "ar-IQ": "خلي شخص يوصلك. لا تسوق إذا نظرك متأثر.",
+        "ckb": "داوا لە کەسێک بکە بتبات. ئەگەر بینینت تێکچووە شۆفێری مەکە."
+      }
+    },
+    "protect": {
+      "id": "no-pressure",
+      "text": {
+        "en": "Do not rub, press or massage the eye.",
+        "ar-IQ": "لا تفرك أو تضغط أو تدلك العين.",
+        "ckb": "چاو مەخشێنە، فشار لێ مەکە و مەساژی مەدە."
+      }
+    },
+    "embedded": {
+      "id": "embedded-object",
+      "text": {
+        "en": "Do not remove an embedded object or try to treat a penetrating injury yourself.",
+        "ar-IQ": "لا تزيل جسم مغروس ولا تحاول تعالج الجرح النافذ بنفسك.",
+        "ckb": "تەنێکی چەسپاو دەر مەهێنە و خۆت هەوڵی چارەسەری برینداریی چوونەناو مەدە."
+      }
+    },
+    "lenses": {
+      "id": "stop-contact-lenses",
+      "text": {
+        "en": "Do not wear contact lenses while the eye is red, painful or irritated.",
+        "ar-IQ": "لا تلبس عدسات لاصقة إذا العين حمراء أو مؤلمة أو متهيجة.",
+        "ckb": "کاتێک چاو سوور، ئازاردار یان ورووژاوە لێنزی چەسپاو مەپۆشە."
+      }
+    },
+    "prepare": {
+      "id": "bring-information",
+      "text": {
+        "en": "Bring your medicine list and describe any injury, contact-lens use, recent surgery or injection. Do not delay leaving to collect paperwork.",
+        "ar-IQ": "خذ قائمة أدويتك واذكر أي إصابة أو عدسات أو عملية أو حقنة حديثة. لا تأخر الذهاب حتى تجمع أوراق.",
+        "ckb": "لیستی دەرمانەکانت بێنە و هەر برینداری، لێنز، نەشتەرگەری یان دەرزییەکی نوێ باس بکە. بۆ کۆکردنەوەی بەڵگە ڕۆیشتن دوا مەخە."
+      }
+    },
+    "screen": {
+      "id": "screen-breaks",
+      "text": {
+        "en": "For reported dryness or grittiness, take regular breaks from screens while arranging an eye assessment.",
+        "ar-IQ": "للجفاف أو إحساس الرمل المبلغ عنه، خذ استراحات منتظمة من الشاشة وأنت ترتب فحص العين.",
+        "ckb": "بۆ وشکی یان هەستی لمی ڕاگەیەنراو، لە کاتی ڕێکخستنی پشکنینی چاو پشووی بەردەوام لە شاشە وەربگرە."
+      }
+    },
+    "environment": {
+      "id": "avoid-irritants",
+      "text": {
+        "en": "Avoid smoke, direct wind and air-conditioning blowing towards the eyes.",
+        "ar-IQ": "ابتعد عن الدخان والهوا المباشر والتبريد الموجه للعين.",
+        "ckb": "لە دووکەڵ، بای ڕاستەوخۆ و هەوای ساردکەرەوە بەرەو چاو دووربکەوە."
+      }
+    },
+    "medicine": {
+      "id": "no-prescribing",
+      "text": {
+        "en": "Do not start borrowed, leftover or prescription eye drops based on this chat. Ask the examining clinician which treatment is appropriate.",
+        "ar-IQ": "لا تبدأ قطرات مستعارة أو قديمة أو بوصفة اعتماداً على المحادثة. اسأل الطبيب اللي يفحصك شنو العلاج المناسب.",
+        "ckb": "لەسەر بنەمای گفتوگۆ دڵۆپی خوازراو، ماوە یان ڕەچەتەدار دەست پێمەکە. لە پزیشکی پشکنەر بپرسە چ چارەسەرێک گونجاوە."
+      }
+    },
+    "worsening": {
+      "id": "worsening-warning",
+      "text": {
+        "en": "If sight suddenly worsens, pain becomes suddenly severe, or a chemical/injury is involved, seek emergency assessment immediately.",
+        "ar-IQ": "إذا النظر ساء فجأة أو الألم صار شديد فجأة أو أكو مادة كيميائية أو إصابة، راجع الطوارئ فوراً.",
+        "ckb": "ئەگەر بینین لەناکاو خراپتر بوو، ئازار لەناکاو توند بوو یان کیمیایی/برینداری هەبوو، دەستبەجێ بڕۆ بۆ فریاکەوتن."
+      }
+    }
+  },
+  "doctor_questions": [
+    {
+      "en": "What needs to be checked to establish the cause?",
+      "ar-IQ": "شنو الفحوص المطلوبة حتى نعرف السبب؟",
+      "ckb": "بۆ دیاریکردنی هۆکار چی بپشکنرێت؟"
+    },
+    {
+      "en": "Which treatment is safe for my situation and current medicines?",
+      "ar-IQ": "شنو العلاج الآمن لحالتي وأدويتي الحالية؟",
+      "ckb": "کام چارەسەر بۆ دۆخ و دەرمانەکانم سەلامەتە؟"
+    },
+    {
+      "en": "What changes mean I should return urgently?",
+      "ar-IQ": "شنو التغيرات اللي تستوجب أرجع بشكل عاجل؟",
+      "ckb": "کام گۆڕانانە پێویست دەکەن بە پەلە بگەڕێمەوە؟"
+    }
+  ]
+}

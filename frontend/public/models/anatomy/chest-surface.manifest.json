@@ -1,0 +1,42 @@
+{
+  "source": "Z-Anatomy / Lluís Vinent Juanico and contributors, based on Z-Anatomy by Gauthier Kervyn and BodyParts3D / DBCLS",
+  "source_url": "https://raw.githubusercontent.com/LluisV/Z-Anatomy/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/VisceralSystem100.fbx",
+  "revision": "6c7f9016bd5899ac8edafd31b9900c151df42ed6",
+  "source_sha256": "22b301c93327929c9a14ee582d1848b550a950376e221a6d1078c7256bb83d0e",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/LluisV/Z-Anatomy/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/VisceralSystem100.fbx",
+      "sha256": "22b301c93327929c9a14ee582d1848b550a950376e221a6d1078c7256bb83d0e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LluisV/Z-Anatomy/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/CardioVascular41.fbx",
+      "sha256": "ed7d049117cc944a8c47a416b16ade642cbd1392bbcce3c677450d3234dbf680"
+    }
+  ],
+  "output_sha256": "6ab84ad6b62fca7ba6b6f50848ab478d69d052ea56cf365559e2d83551b78ccf",
+  "bytes": 1651140,
+  "triangles": 89562,
+  "included_meshes": [
+    "Right_main_bronchus",
+    "Left_main_bronchus",
+    "Trachea",
+    "Inferior_lobe_of_left_lung",
+    "Superior_lobe_of_left_lung",
+    "Inferior_lobe_of_right_lung",
+    "Superior_lobe_of_right_lung",
+    "Middle_lobe_of_right_lung",
+    "Aortic_arch",
+    "Ascending_aorta",
+    "Pulmonary_trunk",
+    "Left_ventricle",
+    "Left_atrium",
+    "Right_atrium",
+    "Right_ventricle",
+    "Anterior_interventricular_artery",
+    "Circumflex_artery_of_heart",
+    "Superior_vena_cava"
+  ],
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "modifications": "Selected chest-organ meshes only; retained FBX world transforms; welded duplicates and recomputed smooth normals; illustrative materials; uniform centering/scaling; GLB conversion. No patient-specific reconstruction. The included list is the scope of this derivative."
+}

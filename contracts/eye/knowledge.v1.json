@@ -1,0 +1,5165 @@
+{
+  "version": "eye-draft-2026-10-30.2",
+  "clinical_review_status": "draft",
+  "clinical_use_available": false,
+  "topics": [
+    {
+      "id": "eye.upper-eyelid",
+      "kind": "anatomy",
+      "title": {
+        "en": "Upper eyelid",
+        "ar-IQ": "الجفن العلوي",
+        "ckb": "پلکی سەرەوە"
+      },
+      "aliases": [
+        "Upper eyelid",
+        "upper eyelid",
+        "الجفن العلوي",
+        "پلکی سەرەوە"
+      ],
+      "answer": {
+        "en": "Protects the eye and spreads tears when blinking.",
+        "ar-IQ": "يحمي العين ويوزع الدمع أثناء الرمش.",
+        "ckb": "چاو دەپارێزێت و لە کاتی چەپڵەداندا فرمێسک بڵاودەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.upper-eyelid"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.lower-eyelid",
+      "kind": "anatomy",
+      "title": {
+        "en": "Lower eyelid",
+        "ar-IQ": "الجفن السفلي",
+        "ckb": "پلکی خوارەوە"
+      },
+      "aliases": [
+        "Lower eyelid",
+        "lower eyelid",
+        "الجفن السفلي",
+        "پلکی خوارەوە"
+      ],
+      "answer": {
+        "en": "Protects the lower surface and supports the tear meniscus.",
+        "ar-IQ": "يحمي الجزء السفلي من السطح ويساند حافة الدمع.",
+        "ckb": "بەشی خوارەوەی ڕووکار دەپارێزێت و پشتگیری لێواری فرمێسک دەکات."
+      },
+      "anatomy_ids": [
+        "eye.lower-eyelid"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.eyelid-margin",
+      "kind": "anatomy",
+      "title": {
+        "en": "Eyelid margins",
+        "ar-IQ": "حواف الجفون",
+        "ckb": "لێواری پلکەکان"
+      },
+      "aliases": [
+        "Eyelid margins",
+        "eyelid margin",
+        "حواف الجفون",
+        "لێواری پلکەکان"
+      ],
+      "answer": {
+        "en": "The lid edges contain lash roots and meibomian gland openings.",
+        "ar-IQ": "حافة الجفن تحتوي جذور الرموش وفتحات غدد ميبوميان.",
+        "ckb": "لێواری پلک ڕەگی برژانگ و کونەکانی ڕژێنی میبۆمیانی تێدایە."
+      },
+      "anatomy_ids": [
+        "eye.eyelid-margin"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.eyelashes",
+      "kind": "anatomy",
+      "title": {
+        "en": "Eyelashes",
+        "ar-IQ": "الرموش",
+        "ckb": "برژانگ"
+      },
+      "aliases": [
+        "Eyelashes",
+        "eyelashes",
+        "الرموش",
+        "برژانگ"
+      ],
+      "answer": {
+        "en": "Help protect the ocular surface from particles.",
+        "ar-IQ": "تساعد على حماية سطح العين من الجزيئات.",
+        "ckb": "یارمەتی پاراستنی ڕووکاری چاو لە تەنۆلکەکان دەدات."
+      },
+      "anatomy_ids": [
+        "eye.eyelashes"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.medial-canthus",
+      "kind": "anatomy",
+      "title": {
+        "en": "Medial canthus",
+        "ar-IQ": "زاوية العين الداخلية",
+        "ckb": "گۆشەی ناوەوەی چاو"
+      },
+      "aliases": [
+        "Medial canthus",
+        "medial canthus",
+        "زاوية العين الداخلية",
+        "گۆشەی ناوەوەی چاو"
+      ],
+      "answer": {
+        "en": "The eyelids meet on the nasal side near the tear drainage openings.",
+        "ar-IQ": "مكان التقاء الجفنين بجهة الأنف قرب فتحات تصريف الدمع.",
+        "ckb": "شوێنی یەکگرتنی پلکەکان لە لای لووتەوە نزیک کونەکانی دەرچوونی فرمێسکە."
+      },
+      "anatomy_ids": [
+        "eye.medial-canthus"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.lateral-canthus",
+      "kind": "anatomy",
+      "title": {
+        "en": "Lateral canthus",
+        "ar-IQ": "زاوية العين الخارجية",
+        "ckb": "گۆشەی دەرەوەی چاو"
+      },
+      "aliases": [
+        "Lateral canthus",
+        "lateral canthus",
+        "زاوية العين الخارجية",
+        "گۆشەی دەرەوەی چاو"
+      ],
+      "answer": {
+        "en": "The eyelids meet on the temporal side.",
+        "ar-IQ": "مكان التقاء الجفنين بجهة الصدغ.",
+        "ckb": "شوێنی یەکگرتنی پلکەکان لە لای گۆنەوەیە."
+      },
+      "anatomy_ids": [
+        "eye.lateral-canthus"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.lacrimal-caruncle",
+      "kind": "anatomy",
+      "title": {
+        "en": "Lacrimal caruncle",
+        "ar-IQ": "اللحيمة الدمعية",
+        "ckb": "گۆشتۆکەی فرمێسکی"
+      },
+      "aliases": [
+        "Lacrimal caruncle",
+        "lacrimal caruncle",
+        "اللحيمة الدمعية",
+        "گۆشتۆکەی فرمێسکی"
+      ],
+      "answer": {
+        "en": "Small pink tissue at the inner corner of the eye.",
+        "ar-IQ": "نسيج وردي صغير بزاوية العين الداخلية.",
+        "ckb": "پارچەیەکی بچووکی پەمەییە لە گۆشەی ناوەوەی چاو."
+      },
+      "anatomy_ids": [
+        "eye.lacrimal-caruncle"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.meibomian-glands",
+      "kind": "anatomy",
+      "title": {
+        "en": "Meibomian glands",
+        "ar-IQ": "غدد ميبوميان",
+        "ckb": "ڕژێنەکانی میبۆمیان"
+      },
+      "aliases": [
+        "Meibomian glands",
+        "meibomian glands",
+        "غدد ميبوميان",
+        "ڕژێنەکانی میبۆمیان"
+      ],
+      "answer": {
+        "en": "Glands inside the lids supply oil that limits tear evaporation.",
+        "ar-IQ": "غدد داخل الجفن تنتج دهناً يقلل تبخر الدمع.",
+        "ckb": "ڕژێنی ناو پلک چەوری بەرهەم دەهێنێت کە هەڵمبوونی فرمێسک کەم دەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.meibomian-glands"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.bulbar-conjunctiva",
+      "kind": "anatomy",
+      "title": {
+        "en": "Bulbar conjunctiva",
+        "ar-IQ": "ملتحمة مقلة العين",
+        "ckb": "پەردەی ڕووپۆشی گۆی چاو"
+      },
+      "aliases": [
+        "Bulbar conjunctiva",
+        "bulbar conjunctiva",
+        "ملتحمة مقلة العين",
+        "پەردەی ڕووپۆشی گۆی چاو"
+      ],
+      "answer": {
+        "en": "A thin membrane covers the front sclera, stopping at the corneal edge.",
+        "ar-IQ": "غشاء رقيق يغطي الصلبة الأمامية وينتهي عند حافة القرنية.",
+        "ckb": "پەردەیەکی ناسک سکلێرای پێشەوە دادەپۆشێت و لە لێواری قەرنیە کۆتایی دێت."
+      },
+      "anatomy_ids": [
+        "eye.bulbar-conjunctiva"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.palpebral-conjunctiva",
+      "kind": "anatomy",
+      "title": {
+        "en": "Palpebral conjunctiva",
+        "ar-IQ": "ملتحمة الجفن",
+        "ckb": "پەردەی ناوەوەی پلک"
+      },
+      "aliases": [
+        "Palpebral conjunctiva",
+        "palpebral conjunctiva",
+        "ملتحمة الجفن",
+        "پەردەی ناوەوەی پلک"
+      ],
+      "answer": {
+        "en": "Lines the inner eyelids.",
+        "ar-IQ": "تبطن السطح الداخلي للجفنين.",
+        "ckb": "ڕووکاری ناوەوەی پلکەکان دادەپۆشێت."
+      },
+      "anatomy_ids": [
+        "eye.palpebral-conjunctiva"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.conjunctival-fornices",
+      "kind": "anatomy",
+      "title": {
+        "en": "Conjunctival fornices",
+        "ar-IQ": "جيوب الملتحمة",
+        "ckb": "قووڵاییەکانی پەردەی چاو"
+      },
+      "aliases": [
+        "Conjunctival fornices",
+        "conjunctival fornices",
+        "جيوب الملتحمة",
+        "قووڵاییەکانی پەردەی چاو"
+      ],
+      "answer": {
+        "en": "Folds join the lid lining to the globe covering and permit movement.",
+        "ar-IQ": "طيات تربط بطانة الجفن بغطاء المقلة وتسمح بالحركة.",
+        "ckb": "چەمەکان پەردەی ناو پلک بە ڕووپۆشی گۆی چاوەوە دەبەستن و ڕێگە بە جووڵە دەدەن."
+      },
+      "anatomy_ids": [
+        "eye.conjunctival-fornices"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.tear-film",
+      "kind": "anatomy",
+      "title": {
+        "en": "Tear film",
+        "ar-IQ": "طبقة الدمع",
+        "ckb": "چینی فرمێسک"
+      },
+      "aliases": [
+        "Tear film",
+        "tear film",
+        "طبقة الدمع",
+        "چینی فرمێسک"
+      ],
+      "answer": {
+        "en": "A thin surface film lubricates, protects and smooths the optical surface.",
+        "ar-IQ": "طبقة سطحية ترطب وتحمي وتنعّم السطح البصري.",
+        "ckb": "چینێکی ڕووکارییە کە ڕووکار تەڕ، پارێزراو و لووس ڕادەگرێت."
+      },
+      "anatomy_ids": [
+        "eye.tear-film"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.lacrimal-gland",
+      "kind": "anatomy",
+      "title": {
+        "en": "Lacrimal gland",
+        "ar-IQ": "الغدة الدمعية",
+        "ckb": "ڕژێنی فرمێسک"
+      },
+      "aliases": [
+        "Lacrimal gland",
+        "lacrimal gland",
+        "الغدة الدمعية",
+        "ڕژێنی فرمێسک"
+      ],
+      "answer": {
+        "en": "Produces aqueous tears in the upper temporal orbit.",
+        "ar-IQ": "تنتج الجزء المائي من الدمع بأعلى الحجاج من جهة الصدغ.",
+        "ckb": "بەشی ئاویی فرمێسک لە بەشی سەرەوەی کاسەی چاو لە لای گۆنەوە بەرهەم دەهێنێت."
+      },
+      "anatomy_ids": [
+        "eye.lacrimal-gland"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.upper-punctum",
+      "kind": "anatomy",
+      "title": {
+        "en": "Upper lacrimal punctum",
+        "ar-IQ": "فتحة الدمع العلوية",
+        "ckb": "کونەی سەرەوەی فرمێسک"
+      },
+      "aliases": [
+        "Upper lacrimal punctum",
+        "upper punctum",
+        "فتحة الدمع العلوية",
+        "کونەی سەرەوەی فرمێسک"
+      ],
+      "answer": {
+        "en": "An opening near the nasal upper lid drains tears.",
+        "ar-IQ": "فتحة قرب الجفن العلوي من جهة الأنف لتصريف الدمع.",
+        "ckb": "کونێکە نزیک پلکی سەرەوە لە لای لووت بۆ دەرچوونی فرمێسک."
+      },
+      "anatomy_ids": [
+        "eye.upper-punctum"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.lower-punctum",
+      "kind": "anatomy",
+      "title": {
+        "en": "Lower lacrimal punctum",
+        "ar-IQ": "فتحة الدمع السفلية",
+        "ckb": "کونەی خوارەوەی فرمێسک"
+      },
+      "aliases": [
+        "Lower lacrimal punctum",
+        "lower punctum",
+        "فتحة الدمع السفلية",
+        "کونەی خوارەوەی فرمێسک"
+      ],
+      "answer": {
+        "en": "An opening near the nasal lower lid drains tears.",
+        "ar-IQ": "فتحة قرب الجفن السفلي من جهة الأنف لتصريف الدمع.",
+        "ckb": "کونێکە نزیک پلکی خوارەوە لە لای لووت بۆ دەرچوونی فرمێسک."
+      },
+      "anatomy_ids": [
+        "eye.lower-punctum"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.canaliculi",
+      "kind": "anatomy",
+      "title": {
+        "en": "Lacrimal canaliculi",
+        "ar-IQ": "القنيّات الدمعية",
+        "ckb": "بۆرییە بچووکەکانی فرمێسک"
+      },
+      "aliases": [
+        "Lacrimal canaliculi",
+        "canaliculi",
+        "القنيّات الدمعية",
+        "بۆرییە بچووکەکانی فرمێسک"
+      ],
+      "answer": {
+        "en": "Small channels connect the puncta to the lacrimal sac.",
+        "ar-IQ": "قنوات صغيرة تصل فتحات الدمع بكيس الدمع.",
+        "ckb": "بۆرییە بچووکەکان کونەکانی فرمێسک بە کیسی فرمێسکەوە دەبەستن."
+      },
+      "anatomy_ids": [
+        "eye.canaliculi"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.lacrimal-sac",
+      "kind": "anatomy",
+      "title": {
+        "en": "Lacrimal sac",
+        "ar-IQ": "كيس الدمع",
+        "ckb": "کیسی فرمێسک"
+      },
+      "aliases": [
+        "Lacrimal sac",
+        "lacrimal sac",
+        "كيس الدمع",
+        "کیسی فرمێسک"
+      ],
+      "answer": {
+        "en": "Collects tears on the nasal side before drainage to the nose.",
+        "ar-IQ": "يجمع الدمع بجهة الأنف قبل انتقاله للأنف.",
+        "ckb": "فرمێسک لە لای لووت کۆدەکاتەوە پێش ئەوەی بچێتە ناو لووت."
+      },
+      "anatomy_ids": [
+        "eye.lacrimal-sac"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.nasolacrimal-duct",
+      "kind": "anatomy",
+      "title": {
+        "en": "Nasolacrimal duct",
+        "ar-IQ": "القناة الأنفية الدمعية",
+        "ckb": "بۆری لووت و فرمێسک"
+      },
+      "aliases": [
+        "Nasolacrimal duct",
+        "nasolacrimal duct",
+        "القناة الأنفية الدمعية",
+        "بۆری لووت و فرمێسک"
+      ],
+      "answer": {
+        "en": "Carries tears from the sac toward the inferior nasal passage.",
+        "ar-IQ": "ينقل الدمع من الكيس إلى الممر الأنفي السفلي.",
+        "ckb": "فرمێسک لە کیسەکەوە بۆ ڕێڕەوی خوارەوەی لووت دەبات."
+      },
+      "anatomy_ids": [
+        "eye.nasolacrimal-duct"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.cornea",
+      "kind": "anatomy",
+      "title": {
+        "en": "Cornea",
+        "ar-IQ": "القرنية",
+        "ckb": "قەرنیە"
+      },
+      "aliases": [
+        "Cornea",
+        "cornea",
+        "القرنية",
+        "قەرنیە"
+      ],
+      "answer": {
+        "en": "The transparent front surface bends incoming light.",
+        "ar-IQ": "سطح العين الأمامي الشفاف يكسر الضوء الداخل.",
+        "ckb": "ڕووکاری شەفافی پێش چاو ڕووناکیی هاتوو دەشکێنێتەوە."
+      },
+      "anatomy_ids": [
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.limbus",
+      "kind": "anatomy",
+      "title": {
+        "en": "Limbus",
+        "ar-IQ": "حافة القرنية",
+        "ckb": "لێواری قەرنیە"
+      },
+      "aliases": [
+        "Limbus",
+        "limbus",
+        "حافة القرنية",
+        "لێواری قەرنیە"
+      ],
+      "answer": {
+        "en": "Junction of the cornea and sclera.",
+        "ar-IQ": "موضع التقاء القرنية والصلبة.",
+        "ckb": "شوێنی یەکگرتنی قەرنیە و سکلێرایە."
+      },
+      "anatomy_ids": [
+        "eye.limbus"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.corneal-epithelium",
+      "kind": "anatomy",
+      "title": {
+        "en": "Corneal epithelium",
+        "ar-IQ": "ظهارة القرنية",
+        "ckb": "ئەپیثیلیۆمی قەرنیە"
+      },
+      "aliases": [
+        "Corneal epithelium",
+        "corneal epithelium",
+        "ظهارة القرنية",
+        "ئەپیثیلیۆمی قەرنیە"
+      ],
+      "answer": {
+        "en": "The outer epithelial barrier protects the cornea.",
+        "ar-IQ": "الحاجز الخلوي الخارجي يحمي القرنية.",
+        "ckb": "بەربەستی خانەیی دەرەوە قەرنیە دەپارێزێت."
+      },
+      "anatomy_ids": [
+        "eye.corneal-epithelium"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.bowmans-layer",
+      "kind": "anatomy",
+      "title": {
+        "en": "Bowman’s layer",
+        "ar-IQ": "طبقة بومان",
+        "ckb": "چینی بۆمان"
+      },
+      "aliases": [
+        "Bowman’s layer",
+        "bowmans layer",
+        "طبقة بومان",
+        "چینی بۆمان"
+      ],
+      "answer": {
+        "en": "A collagenous layer beneath the corneal epithelium.",
+        "ar-IQ": "طبقة كولاجين تحت ظهارة القرنية.",
+        "ckb": "چینێکی کۆلاجینە لە ژێر ئەپیثیلیۆمی قەرنیە."
+      },
+      "anatomy_ids": [
+        "eye.bowmans-layer"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.corneal-stroma",
+      "kind": "anatomy",
+      "title": {
+        "en": "Corneal stroma",
+        "ar-IQ": "سدى القرنية",
+        "ckb": "سترۆمای قەرنیە"
+      },
+      "aliases": [
+        "Corneal stroma",
+        "corneal stroma",
+        "سدى القرنية",
+        "سترۆمای قەرنیە"
+      ],
+      "answer": {
+        "en": "Organized collagen provides most corneal thickness and clarity.",
+        "ar-IQ": "كولاجين منظم يشكل أغلب سماكة القرنية ويساعد شفافيتها.",
+        "ckb": "کۆلاجینی ڕێکخراو زۆربەی ئەستووری قەرنیە پێکدەهێنێت و شەفافیی دەپارێزێت."
+      },
+      "anatomy_ids": [
+        "eye.corneal-stroma"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.descemets-membrane",
+      "kind": "anatomy",
+      "title": {
+        "en": "Descemet’s membrane",
+        "ar-IQ": "غشاء ديسميت",
+        "ckb": "پەردەی دێسمێت"
+      },
+      "aliases": [
+        "Descemet’s membrane",
+        "descemets membrane",
+        "غشاء ديسميت",
+        "پەردەی دێسمێت"
+      ],
+      "answer": {
+        "en": "The basement membrane supporting the corneal endothelium.",
+        "ar-IQ": "غشاء قاعدي يساند بطانة القرنية.",
+        "ckb": "پەردەیەکی بنچینەییە کە پشتگیری ئەندۆثیلیۆمی قەرنیە دەکات."
+      },
+      "anatomy_ids": [
+        "eye.descemets-membrane"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.corneal-endothelium",
+      "kind": "anatomy",
+      "title": {
+        "en": "Corneal endothelium",
+        "ar-IQ": "بطانة القرنية",
+        "ckb": "ئەندۆثیلیۆمی قەرنیە"
+      },
+      "aliases": [
+        "Corneal endothelium",
+        "corneal endothelium",
+        "بطانة القرنية",
+        "ئەندۆثیلیۆمی قەرنیە"
+      ],
+      "answer": {
+        "en": "Cells regulate corneal hydration to preserve transparency.",
+        "ar-IQ": "خلايا تضبط سوائل القرنية للمحافظة على شفافيتها.",
+        "ckb": "خانەکان شلەی قەرنیە ڕێکدەخەن بۆ پاراستنی شەفافی."
+      },
+      "anatomy_ids": [
+        "eye.corneal-endothelium"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.episclera",
+      "kind": "anatomy",
+      "title": {
+        "en": "Episclera",
+        "ar-IQ": "فوق الصلبة",
+        "ckb": "ڕووپۆشی سکلێرا"
+      },
+      "aliases": [
+        "Episclera",
+        "episclera",
+        "فوق الصلبة",
+        "ڕووپۆشی سکلێرا"
+      ],
+      "answer": {
+        "en": "A vascular connective tissue layer lies over the sclera.",
+        "ar-IQ": "طبقة نسيج وعائي فوق الصلبة.",
+        "ckb": "چینێکی شانەی ڕەگدارە لە سەر سکلێرا."
+      },
+      "anatomy_ids": [
+        "eye.episclera"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.sclera",
+      "kind": "anatomy",
+      "title": {
+        "en": "Sclera",
+        "ar-IQ": "الصلبة",
+        "ckb": "سکلێرا"
+      },
+      "aliases": [
+        "Sclera",
+        "sclera",
+        "الصلبة",
+        "سکلێرا"
+      ],
+      "answer": {
+        "en": "The tough outer coat supports and protects the globe.",
+        "ar-IQ": "غلاف خارجي قوي يدعم المقلة ويحميها.",
+        "ckb": "ڕووپۆشێکی دەرەکیی بەهێز گۆی چاو پشتگیری و پاراستن دەکات."
+      },
+      "anatomy_ids": [
+        "eye.sclera"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.choroid",
+      "kind": "anatomy",
+      "title": {
+        "en": "Choroid",
+        "ar-IQ": "المشيمية",
+        "ckb": "کۆرۆید"
+      },
+      "aliases": [
+        "Choroid",
+        "choroid",
+        "المشيمية",
+        "کۆرۆید"
+      ],
+      "answer": {
+        "en": "The vascular coat between sclera and retina nourishes the outer retina.",
+        "ar-IQ": "غلاف وعائي بين الصلبة والشبكية يغذي الشبكية الخارجية.",
+        "ckb": "چینێکی ڕەگدارە لە نێوان سکلێرا و تۆڕینە کە خۆراک بە بەشی دەرەوەی تۆڕینە دەگەیەنێت."
+      },
+      "anatomy_ids": [
+        "eye.choroid"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.iris",
+      "kind": "anatomy",
+      "title": {
+        "en": "Iris",
+        "ar-IQ": "القزحية",
+        "ckb": "قازحیە"
+      },
+      "aliases": [
+        "Iris",
+        "iris",
+        "القزحية",
+        "قازحیە"
+      ],
+      "answer": {
+        "en": "A muscular diaphragm controls the size of its central opening, the pupil.",
+        "ar-IQ": "حجاب عضلي يضبط حجم الفتحة المركزية، وهي البؤبؤ.",
+        "ckb": "پەردەیەکی ماسولکەیی قەبارەی کونی ناوەڕاست، واتە بیلبیلە، ڕێکدەخات."
+      },
+      "anatomy_ids": [
+        "eye.iris"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.pupil",
+      "kind": "anatomy",
+      "title": {
+        "en": "Pupil opening",
+        "ar-IQ": "فتحة البؤبؤ",
+        "ckb": "کونی بیلبیلە"
+      },
+      "aliases": [
+        "Pupil opening",
+        "pupil",
+        "فتحة البؤبؤ",
+        "کونی بیلبیلە"
+      ],
+      "answer": {
+        "en": "An opening in the iris, not a solid anatomical disc; light passes through it.",
+        "ar-IQ": "فتحة بالقزحية وليست قرصاً صلباً؛ يمر الضوء من خلالها.",
+        "ckb": "کونێکە لە قازحیە، نەک دیسکێکی ڕەق؛ ڕووناکی بە ناویدا تێدەپەڕێت."
+      },
+      "anatomy_ids": [
+        "eye.pupil"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.ciliary-body",
+      "kind": "anatomy",
+      "title": {
+        "en": "Ciliary body",
+        "ar-IQ": "الجسم الهدبي",
+        "ckb": "جەستەی مژۆڵکەیی"
+      },
+      "aliases": [
+        "Ciliary body",
+        "ciliary body",
+        "الجسم الهدبي",
+        "جەستەی مژۆڵکەیی"
+      ],
+      "answer": {
+        "en": "Includes aqueous-producing processes and the focusing muscle.",
+        "ar-IQ": "يضم نواتئ تنتج الخلط المائي وعضلة التركيز.",
+        "ckb": "پڕۆسەی بەرهەمهێنانی شلەی ئاوی و ماسولکەی فۆکەسکردن لەخۆدەگرێت."
+      },
+      "anatomy_ids": [
+        "eye.ciliary-body"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.ciliary-muscle",
+      "kind": "anatomy",
+      "title": {
+        "en": "Ciliary muscle",
+        "ar-IQ": "العضلة الهدبية",
+        "ckb": "ماسولکەی مژۆڵکەیی"
+      },
+      "aliases": [
+        "Ciliary muscle",
+        "ciliary muscle",
+        "العضلة الهدبية",
+        "ماسولکەی مژۆڵکەیی"
+      ],
+      "answer": {
+        "en": "Changes zonular tension to alter lens shape for focusing.",
+        "ar-IQ": "تغير شد الألياف لتعديل شكل العدسة والتركيز.",
+        "ckb": "کێشانی ڕیشاڵەکان دەگۆڕێت بۆ گۆڕینی شێوەی عەدەسە و فۆکەس."
+      },
+      "anatomy_ids": [
+        "eye.ciliary-muscle"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.ciliary-processes",
+      "kind": "anatomy",
+      "title": {
+        "en": "Ciliary processes",
+        "ar-IQ": "النواتئ الهدبية",
+        "ckb": "پڕۆسەکانی مژۆڵکەیی"
+      },
+      "aliases": [
+        "Ciliary processes",
+        "ciliary processes",
+        "النواتئ الهدبية",
+        "پڕۆسەکانی مژۆڵکەیی"
+      ],
+      "answer": {
+        "en": "Folded tissue produces aqueous humour.",
+        "ar-IQ": "نسيج مطوي ينتج الخلط المائي.",
+        "ckb": "شانەیەکی چەمکراوەیە کە شلەی ئاوی بەرهەم دەهێنێت."
+      },
+      "anatomy_ids": [
+        "eye.ciliary-processes"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.zonular-fibres",
+      "kind": "anatomy",
+      "title": {
+        "en": "Zonular fibres",
+        "ar-IQ": "ألياف الزونول",
+        "ckb": "ڕیشاڵەکانی زۆنول"
+      },
+      "aliases": [
+        "Zonular fibres",
+        "zonular fibres",
+        "ألياف الزونول",
+        "ڕیشاڵەکانی زۆنول"
+      ],
+      "answer": {
+        "en": "Suspend the lens between its capsule and the ciliary body.",
+        "ar-IQ": "تعلق العدسة بين محفظتها والجسم الهدبي.",
+        "ckb": "عەدەسە لە نێوان کەپسوولەکەی و جەستەی مژۆڵکەیی هەڵدەواسێت."
+      },
+      "anatomy_ids": [
+        "eye.zonular-fibres"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.lens",
+      "kind": "anatomy",
+      "title": {
+        "en": "Lens",
+        "ar-IQ": "العدسة",
+        "ckb": "عەدەسە"
+      },
+      "aliases": [
+        "Lens",
+        "lens",
+        "العدسة",
+        "عەدەسە"
+      ],
+      "answer": {
+        "en": "A transparent biconvex structure behind the iris focuses light onto the retina.",
+        "ar-IQ": "عدسة شفافة محدبة الوجهين خلف القزحية تركز الضوء على الشبكية.",
+        "ckb": "عەدەسەیەکی شەفافی دوولای قوپاوە لە پشت قازحیە ڕووناکی لەسەر تۆڕینە کۆدەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.lens"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.lens-capsule",
+      "kind": "anatomy",
+      "title": {
+        "en": "Lens capsule",
+        "ar-IQ": "محفظة العدسة",
+        "ckb": "کەپسوولی عەدەسە"
+      },
+      "aliases": [
+        "Lens capsule",
+        "lens capsule",
+        "محفظة العدسة",
+        "کەپسوولی عەدەسە"
+      ],
+      "answer": {
+        "en": "An elastic envelope surrounds the lens.",
+        "ar-IQ": "غلاف مرن يحيط بالعدسة.",
+        "ckb": "پۆشێکی نەرم و کێشاو عەدەسە دادەپۆشێت."
+      },
+      "anatomy_ids": [
+        "eye.lens-capsule"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.anterior-chamber",
+      "kind": "anatomy",
+      "title": {
+        "en": "Anterior chamber",
+        "ar-IQ": "الحجرة الأمامية",
+        "ckb": "ژووری پێشەوە"
+      },
+      "aliases": [
+        "Anterior chamber",
+        "anterior chamber",
+        "الحجرة الأمامية",
+        "ژووری پێشەوە"
+      ],
+      "answer": {
+        "en": "The aqueous-filled space between cornea and iris.",
+        "ar-IQ": "حيز مملوء بالخلط المائي بين القرنية والقزحية.",
+        "ckb": "بۆشاییەکی پڕ لە شلەی ئاوییە لە نێوان قەرنیە و قازحیە."
+      },
+      "anatomy_ids": [
+        "eye.anterior-chamber"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.posterior-chamber",
+      "kind": "anatomy",
+      "title": {
+        "en": "Posterior chamber",
+        "ar-IQ": "الحجرة الخلفية",
+        "ckb": "ژووری دواوە"
+      },
+      "aliases": [
+        "Posterior chamber",
+        "posterior chamber",
+        "الحجرة الخلفية",
+        "ژووری دواوە"
+      ],
+      "answer": {
+        "en": "A narrow aqueous-filled space behind the iris, in front of the lens and ciliary body; not the vitreous chamber.",
+        "ar-IQ": "حيز مائي ضيق خلف القزحية وأمام العدسة والجسم الهدبي؛ يختلف عن الحجرة الزجاجية.",
+        "ckb": "بۆشاییەکی تەسکی ئاوییە لە پشت قازحیە و پێش عەدەسە و جەستەی مژۆڵکەیی؛ جیاوازە لە ژووری شووشەیی."
+      },
+      "anatomy_ids": [
+        "eye.posterior-chamber"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.aqueous-humour",
+      "kind": "anatomy",
+      "title": {
+        "en": "Aqueous humour",
+        "ar-IQ": "الخلط المائي",
+        "ckb": "شلەی ئاوی"
+      },
+      "aliases": [
+        "Aqueous humour",
+        "aqueous humour",
+        "الخلط المائي",
+        "شلەی ئاوی"
+      ],
+      "answer": {
+        "en": "Fluid produced by the ciliary processes flows through the pupil to the anterior chamber.",
+        "ar-IQ": "سائل تنتجه النواتئ الهدبية ويمر عبر البؤبؤ إلى الحجرة الأمامية.",
+        "ckb": "شلەیەکە پڕۆسە مژۆڵکەییەکان دروستی دەکەن و بە بیلبیلەدا بۆ ژووری پێشەوە دەڕوات."
+      },
+      "anatomy_ids": [
+        "eye.aqueous-humour"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.drainage-angle",
+      "kind": "anatomy",
+      "title": {
+        "en": "Drainage angle",
+        "ar-IQ": "زاوية التصريف",
+        "ckb": "گۆشەی دەرچوونی شلە"
+      },
+      "aliases": [
+        "Drainage angle",
+        "drainage angle",
+        "زاوية التصريف",
+        "گۆشەی دەرچوونی شلە"
+      ],
+      "answer": {
+        "en": "The angle where the peripheral cornea meets the iris contains drainage tissues.",
+        "ar-IQ": "زاوية التقاء محيط القرنية بالقزحية وتحتوي أنسجة التصريف.",
+        "ckb": "گۆشەی یەکگرتنی لێواری قەرنیە و قازحیەیە و شانەی دەرچوونی شلەی تێدایە."
+      },
+      "anatomy_ids": [
+        "eye.drainage-angle"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.trabecular-meshwork",
+      "kind": "anatomy",
+      "title": {
+        "en": "Trabecular meshwork",
+        "ar-IQ": "الشبكة التربيقية",
+        "ckb": "تۆڕی ترابێکولار"
+      },
+      "aliases": [
+        "Trabecular meshwork",
+        "trabecular meshwork",
+        "الشبكة التربيقية",
+        "تۆڕی ترابێکولار"
+      ],
+      "answer": {
+        "en": "Aqueous passes through this tissue at the drainage angle.",
+        "ar-IQ": "يمر الخلط المائي عبر هذا النسيج بزاوية التصريف.",
+        "ckb": "شلەی ئاوی بە ناو ئەم شانەیە لە گۆشەی دەرچوون تێدەپەڕێت."
+      },
+      "anatomy_ids": [
+        "eye.trabecular-meshwork"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.schlemms-canal",
+      "kind": "anatomy",
+      "title": {
+        "en": "Schlemm’s canal",
+        "ar-IQ": "قناة شليم",
+        "ckb": "کەناڵی شلێم"
+      },
+      "aliases": [
+        "Schlemm’s canal",
+        "schlemms canal",
+        "قناة شليم",
+        "کەناڵی شلێم"
+      ],
+      "answer": {
+        "en": "Collects aqueous draining through the trabecular meshwork.",
+        "ar-IQ": "يجمع السائل المار عبر الشبكة التربيقية.",
+        "ckb": "شلەی تێپەڕیو بە تۆڕی ترابێکولار کۆدەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.schlemms-canal"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.vitreous-chamber",
+      "kind": "anatomy",
+      "title": {
+        "en": "Vitreous chamber",
+        "ar-IQ": "الحجرة الزجاجية",
+        "ckb": "ژووری شووشەیی"
+      },
+      "aliases": [
+        "Vitreous chamber",
+        "vitreous chamber",
+        "الحجرة الزجاجية",
+        "ژووری شووشەیی"
+      ],
+      "answer": {
+        "en": "The large cavity behind the lens and in front of the retina.",
+        "ar-IQ": "التجويف الكبير خلف العدسة وأمام الشبكية.",
+        "ckb": "بۆشاییە گەورەکەی پشت عەدەسە و پێش تۆڕینەیە."
+      },
+      "anatomy_ids": [
+        "eye.vitreous-chamber"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.vitreous-body",
+      "kind": "anatomy",
+      "title": {
+        "en": "Vitreous body",
+        "ar-IQ": "الجسم الزجاجي",
+        "ckb": "جەستەی شووشەیی"
+      },
+      "aliases": [
+        "Vitreous body",
+        "vitreous body",
+        "الجسم الزجاجي",
+        "جەستەی شووشەیی"
+      ],
+      "answer": {
+        "en": "A transparent gel fills most of the globe behind the lens.",
+        "ar-IQ": "هلام شفاف يملأ معظم المقلة خلف العدسة.",
+        "ckb": "جێلێکی شەفاف زۆربەی گۆی چاو لە پشت عەدەسە پڕ دەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.vitreous-body"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.posterior-vitreous-interface",
+      "kind": "anatomy",
+      "title": {
+        "en": "Posterior vitreous interface",
+        "ar-IQ": "السطح الزجاجي الخلفي",
+        "ckb": "ڕووپۆشی پشتی شووشەیی"
+      },
+      "aliases": [
+        "Posterior vitreous interface",
+        "posterior vitreous interface",
+        "السطح الزجاجي الخلفي",
+        "ڕووپۆشی پشتی شووشەیی"
+      ],
+      "answer": {
+        "en": "The posterior vitreous cortex contacts the inner retina.",
+        "ar-IQ": "قشرة الزجاجي الخلفية تلامس السطح الداخلي للشبكية.",
+        "ckb": "ڕووپۆشی پشتی شووشەیی دەکەوێتە سەر ڕووکاری ناوەوەی تۆڕینە."
+      },
+      "anatomy_ids": [
+        "eye.posterior-vitreous-interface"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.retina",
+      "kind": "anatomy",
+      "title": {
+        "en": "Retina",
+        "ar-IQ": "الشبكية",
+        "ckb": "تۆڕینە"
+      },
+      "aliases": [
+        "Retina",
+        "retina",
+        "الشبكية",
+        "تۆڕینە"
+      ],
+      "answer": {
+        "en": "Light-sensitive neural tissue lines the inner posterior globe.",
+        "ar-IQ": "نسيج عصبي حساس للضوء يبطن داخل الجزء الخلفي من المقلة.",
+        "ckb": "شانەیەکی دەمارەیی هەستیار بە ڕووناکی ناوەوەی پشتی گۆی چاو دادەپۆشێت."
+      },
+      "anatomy_ids": [
+        "eye.retina"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.retinal-pigment-epithelium",
+      "kind": "anatomy",
+      "title": {
+        "en": "Retinal pigment epithelium",
+        "ar-IQ": "الظهارة الصباغية للشبكية",
+        "ckb": "ئەپیثیلیۆمی ڕەنگداری تۆڕینە"
+      },
+      "aliases": [
+        "Retinal pigment epithelium",
+        "retinal pigment epithelium",
+        "الظهارة الصباغية للشبكية",
+        "ئەپیثیلیۆمی ڕەنگداری تۆڕینە"
+      ],
+      "answer": {
+        "en": "A cell layer outside photoreceptors supports their function.",
+        "ar-IQ": "طبقة خلايا خارج المستقبلات الضوئية تدعم وظيفتها.",
+        "ckb": "چینێک خانە لە دەرەوەی وەرگرەکانی ڕووناکی پشتگیری کارەکانیان دەکات."
+      },
+      "anatomy_ids": [
+        "eye.retinal-pigment-epithelium"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.photoreceptors",
+      "kind": "anatomy",
+      "title": {
+        "en": "Photoreceptor detail",
+        "ar-IQ": "المستقبلات الضوئية",
+        "ckb": "وەرگرەکانی ڕووناکی"
+      },
+      "aliases": [
+        "Photoreceptor detail",
+        "photoreceptors",
+        "المستقبلات الضوئية",
+        "وەرگرەکانی ڕووناکی"
+      ],
+      "answer": {
+        "en": "Rods and cones convert light into signals; shown in a magnified educational view.",
+        "ar-IQ": "العصي والمخاريط تحول الضوء إلى إشارات؛ تظهر هنا بمنظر تعليمي مكبر.",
+        "ckb": "ڕۆد و کۆن ڕووناکی دەگۆڕن بۆ نیشانە؛ لێرە لە دیمەنێکی فێرکاریی گەورەکراودا پیشان دەدرێن."
+      },
+      "anatomy_ids": [
+        "eye.photoreceptors"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.peripheral-retina",
+      "kind": "anatomy",
+      "title": {
+        "en": "Peripheral retina",
+        "ar-IQ": "الشبكية المحيطية",
+        "ckb": "دەوروبەری تۆڕینە"
+      },
+      "aliases": [
+        "Peripheral retina",
+        "peripheral retina",
+        "الشبكية المحيطية",
+        "دەوروبەری تۆڕینە"
+      ],
+      "answer": {
+        "en": "Retina outside the central macula supports peripheral vision.",
+        "ar-IQ": "الشبكية خارج البقعة المركزية تدعم النظر المحيطي.",
+        "ckb": "تۆڕینەی دەرەوەی ماکولای ناوەندی پشتگیری بینینی دەوروبەر دەکات."
+      },
+      "anatomy_ids": [
+        "eye.peripheral-retina"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.macula",
+      "kind": "anatomy",
+      "title": {
+        "en": "Macula",
+        "ar-IQ": "البقعة الصفراء",
+        "ckb": "ماکولا"
+      },
+      "aliases": [
+        "Macula",
+        "macula",
+        "البقعة الصفراء",
+        "ماکولا"
+      ],
+      "answer": {
+        "en": "Central posterior retina, temporal to the optic disc, supports detailed vision.",
+        "ar-IQ": "منطقة بالشبكية الخلفية تقع بجهة الصدغ من القرص البصري وتدعم النظر الدقيق.",
+        "ckb": "ناوچەیەکی پشتی تۆڕینەیە لە لای گۆنەوەی دیسکی بینایی و پشتگیری بینینی ورد دەکات."
+      },
+      "anatomy_ids": [
+        "eye.macula"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.fovea",
+      "kind": "anatomy",
+      "title": {
+        "en": "Fovea",
+        "ar-IQ": "النقرة المركزية",
+        "ckb": "فۆڤیا"
+      },
+      "aliases": [
+        "Fovea",
+        "fovea",
+        "النقرة المركزية",
+        "فۆڤیا"
+      ],
+      "answer": {
+        "en": "A small central depression within the macula provides sharp central vision.",
+        "ar-IQ": "انخفاض صغير بوسط البقعة يوفر نظر مركزي دقيق.",
+        "ckb": "قووڵاییەکی بچووک لە ناوەڕاستی ماکولا بینینی ناوەندیی تیژ دابین دەکات."
+      },
+      "anatomy_ids": [
+        "eye.fovea"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.retinal-vessels",
+      "kind": "anatomy",
+      "title": {
+        "en": "Retinal blood vessels",
+        "ar-IQ": "الأوعية الدموية للشبكية",
+        "ckb": "ڕەگە خوێنییەکانی تۆڕینە"
+      },
+      "aliases": [
+        "Retinal blood vessels",
+        "retinal vessels",
+        "الأوعية الدموية للشبكية",
+        "ڕەگە خوێنییەکانی تۆڕینە"
+      ],
+      "answer": {
+        "en": "Branch from the optic disc across the inner retina.",
+        "ar-IQ": "تتفرع من القرص البصري فوق السطح الداخلي للشبكية.",
+        "ckb": "لە دیسکی بیناییەوە بەسەر ڕووکاری ناوەوەی تۆڕینەدا لق دەبنەوە."
+      },
+      "anatomy_ids": [
+        "eye.retinal-vessels"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.optic-disc",
+      "kind": "anatomy",
+      "title": {
+        "en": "Optic disc",
+        "ar-IQ": "القرص البصري",
+        "ckb": "دیسکی بینایی"
+      },
+      "aliases": [
+        "Optic disc",
+        "optic disc",
+        "القرص البصري",
+        "دیسکی بینایی"
+      ],
+      "answer": {
+        "en": "Retinal nerve fibres leave the eye here, nasal to the macula; there are no photoreceptors at the disc.",
+        "ar-IQ": "تخرج ألياف الأعصاب من هنا بجهة الأنف من البقعة؛ لا توجد مستقبلات ضوئية في القرص.",
+        "ckb": "ڕیشاڵە دەمارەییەکان لێرە لە لای لووتی ماکولا دەردەچن؛ وەرگری ڕووناکی لە دیسکدا نییە."
+      },
+      "anatomy_ids": [
+        "eye.optic-disc"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.optic-nerve",
+      "kind": "anatomy",
+      "title": {
+        "en": "Optic nerve",
+        "ar-IQ": "العصب البصري",
+        "ckb": "دەمارە بیناییەکە"
+      },
+      "aliases": [
+        "Optic nerve",
+        "optic nerve",
+        "العصب البصري",
+        "دەمارە بیناییەکە"
+      ],
+      "answer": {
+        "en": "Carries retinal signals toward the brain, exiting posteriorly at the optic disc.",
+        "ar-IQ": "ينقل إشارات الشبكية نحو الدماغ ويخرج من خلف القرص البصري.",
+        "ckb": "نیشانەکانی تۆڕینە بەرەو مێشک دەبات و لە پشتی دیسکی بینایی دەردەچێت."
+      },
+      "anatomy_ids": [
+        "eye.optic-nerve"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.bony-orbit",
+      "kind": "anatomy",
+      "title": {
+        "en": "Bony orbit",
+        "ar-IQ": "الحجاج العظمي",
+        "ckb": "کاسەی ئێسکی چاو"
+      },
+      "aliases": [
+        "Bony orbit",
+        "bony orbit",
+        "الحجاج العظمي",
+        "کاسەی ئێسکی چاو"
+      ],
+      "answer": {
+        "en": "The bony socket surrounds and protects orbital contents.",
+        "ar-IQ": "التجويف العظمي يحيط بمحتويات الحجاج ويحميها.",
+        "ckb": "کاسەی ئێسکی دەوری پێکهاتەکانی کاسەی چاو دەدات و دەیانپارێزێت."
+      },
+      "anatomy_ids": [
+        "eye.bony-orbit"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.orbital-fat",
+      "kind": "anatomy",
+      "title": {
+        "en": "Orbital fat",
+        "ar-IQ": "دهون الحجاج",
+        "ckb": "چەوری کاسەی چاو"
+      },
+      "aliases": [
+        "Orbital fat",
+        "orbital fat",
+        "دهون الحجاج",
+        "چەوری کاسەی چاو"
+      ],
+      "answer": {
+        "en": "Cushions the globe and occupies spaces around muscles and nerves.",
+        "ar-IQ": "يساند المقلة ويملأ الفراغات حول العضلات والأعصاب.",
+        "ckb": "گۆی چاو پشتگیری دەکات و بۆشایی دەوری ماسولکە و دەمارەکان پڕ دەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.orbital-fat"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.superior-rectus",
+      "kind": "anatomy",
+      "title": {
+        "en": "Superior rectus",
+        "ar-IQ": "المستقيمة العلوية",
+        "ckb": "ماسولکەی ڕاستی سەرەوە"
+      },
+      "aliases": [
+        "Superior rectus",
+        "superior rectus",
+        "المستقيمة العلوية",
+        "ماسولکەی ڕاستی سەرەوە"
+      ],
+      "answer": {
+        "en": "Mainly elevates the eye; its action also depends on eye position.",
+        "ar-IQ": "ترفع العين بصورة رئيسية ويتغير فعلها حسب وضع العين.",
+        "ckb": "بە سەرەکی چاو بەرز دەکاتەوە و کاریگەرییەکەی بە دۆخی چاو دەگۆڕێت."
+      },
+      "anatomy_ids": [
+        "eye.superior-rectus"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.inferior-rectus",
+      "kind": "anatomy",
+      "title": {
+        "en": "Inferior rectus",
+        "ar-IQ": "المستقيمة السفلية",
+        "ckb": "ماسولکەی ڕاستی خوارەوە"
+      },
+      "aliases": [
+        "Inferior rectus",
+        "inferior rectus",
+        "المستقيمة السفلية",
+        "ماسولکەی ڕاستی خوارەوە"
+      ],
+      "answer": {
+        "en": "Mainly depresses the eye.",
+        "ar-IQ": "تخفض العين بصورة رئيسية.",
+        "ckb": "بە سەرەکی چاو دادەبەزێنێت."
+      },
+      "anatomy_ids": [
+        "eye.inferior-rectus"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.medial-rectus",
+      "kind": "anatomy",
+      "title": {
+        "en": "Medial rectus",
+        "ar-IQ": "المستقيمة الإنسية",
+        "ckb": "ماسولکەی ڕاستی ناوەوە"
+      },
+      "aliases": [
+        "Medial rectus",
+        "medial rectus",
+        "المستقيمة الإنسية",
+        "ماسولکەی ڕاستی ناوەوە"
+      ],
+      "answer": {
+        "en": "Turns the eye toward the nose.",
+        "ar-IQ": "تحرك العين باتجاه الأنف.",
+        "ckb": "چاو بەرەو لووت دەجووڵێنێت."
+      },
+      "anatomy_ids": [
+        "eye.medial-rectus"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.lateral-rectus",
+      "kind": "anatomy",
+      "title": {
+        "en": "Lateral rectus",
+        "ar-IQ": "المستقيمة الوحشية",
+        "ckb": "ماسولکەی ڕاستی دەرەوە"
+      },
+      "aliases": [
+        "Lateral rectus",
+        "lateral rectus",
+        "المستقيمة الوحشية",
+        "ماسولکەی ڕاستی دەرەوە"
+      ],
+      "answer": {
+        "en": "Turns the eye toward the temple.",
+        "ar-IQ": "تحرك العين باتجاه الصدغ.",
+        "ckb": "چاو بەرەو گۆنە دەجووڵێنێت."
+      },
+      "anatomy_ids": [
+        "eye.lateral-rectus"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.superior-oblique",
+      "kind": "anatomy",
+      "title": {
+        "en": "Superior oblique",
+        "ar-IQ": "المائلة العلوية",
+        "ckb": "ماسولکەی لارەکی سەرەوە"
+      },
+      "aliases": [
+        "Superior oblique",
+        "superior oblique",
+        "المائلة العلوية",
+        "ماسولکەی لارەکی سەرەوە"
+      ],
+      "answer": {
+        "en": "Passes through the superonasal trochlea and helps rotate and depress the eye.",
+        "ar-IQ": "تمر عبر البكرة العلوية الإنسية وتساعد تدوير العين وخفضها.",
+        "ckb": "بە پۆڵی سەرەوەی ناوەوەدا تێدەپەڕێت و یارمەتی سووڕاندن و دابەزاندنی چاو دەدات."
+      },
+      "anatomy_ids": [
+        "eye.superior-oblique"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.inferior-oblique",
+      "kind": "anatomy",
+      "title": {
+        "en": "Inferior oblique",
+        "ar-IQ": "المائلة السفلية",
+        "ckb": "ماسولکەی لارەکی خوارەوە"
+      },
+      "aliases": [
+        "Inferior oblique",
+        "inferior oblique",
+        "المائلة السفلية",
+        "ماسولکەی لارەکی خوارەوە"
+      ],
+      "answer": {
+        "en": "Runs from the anterior medial orbital floor beneath the globe toward its temporal posterior surface.",
+        "ar-IQ": "تمتد من أرضية الحجاج الأمامية الإنسية تحت المقلة نحو سطحها الخلفي الصدغي.",
+        "ckb": "لە بنکەی پێشەوەی ناوەوەی کاسەی چاو لە ژێر گۆی چاو بۆ ڕووکاری پشتی لای گۆنە دەڕوات."
+      },
+      "anatomy_ids": [
+        "eye.inferior-oblique"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "eye.levator-palpebrae",
+      "kind": "anatomy",
+      "title": {
+        "en": "Levator palpebrae superioris",
+        "ar-IQ": "رافعة الجفن العلوي",
+        "ckb": "بەرزکەرەوەی پلکی سەرەوە"
+      },
+      "aliases": [
+        "Levator palpebrae superioris",
+        "levator palpebrae",
+        "رافعة الجفن العلوي",
+        "بەرزکەرەوەی پلکی سەرەوە"
+      ],
+      "answer": {
+        "en": "Raises the upper eyelid above the superior rectus.",
+        "ar-IQ": "ترفع الجفن العلوي وتمتد فوق العضلة المستقيمة العلوية.",
+        "ckb": "پلکی سەرەوە بەرز دەکاتەوە و لە سەر ماسولکەی ڕاستی سەرەوە درێژ دەبێتەوە."
+      },
+      "anatomy_ids": [
+        "eye.levator-palpebrae"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+      ]
+    },
+    {
+      "id": "condition.blepharitis",
+      "kind": "condition",
+      "title": {
+        "en": "Blepharitis",
+        "ar-IQ": "التهاب حواف الجفن",
+        "ckb": "هەوکردنی لێواری پلک"
+      },
+      "aliases": [
+        "Blepharitis",
+        "blepharitis",
+        "lid inflammation",
+        "التهاب حواف الجفن",
+        "هەوکردنی لێواری پلک"
+      ],
+      "answer": {
+        "en": "Inflammation of the lid edges may cause irritation and crusting.",
+        "ar-IQ": "التهاب حافة الجفن ممكن يسبب تهيج وقشور.",
+        "ckb": "هەوکردنی لێواری پلک دەکرێت بورووژان و توێکڵ دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.eyelid-margin",
+        "eye.eyelashes"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/blepharitis"
+      ]
+    },
+    {
+      "id": "condition.meibomian-dysfunction",
+      "kind": "condition",
+      "title": {
+        "en": "Meibomian gland dysfunction",
+        "ar-IQ": "خلل غدد ميبوميان",
+        "ckb": "تێکچوونی ڕژێنەکانی میبۆمیان"
+      },
+      "aliases": [
+        "Meibomian gland dysfunction",
+        "meibomian dysfunction",
+        "MGD",
+        "خلل غدد ميبوميان",
+        "تێکچوونی ڕژێنەکانی میبۆمیان"
+      ],
+      "answer": {
+        "en": "Reduced or altered lid oil can destabilize the tear film.",
+        "ar-IQ": "تغير أو نقص دهن الجفن ممكن يزعزع طبقة الدمع.",
+        "ckb": "گۆڕان یان کەمی چەوری پلک دەکرێت چینی فرمێسک ناسەقامگیر بکات."
+      },
+      "anatomy_ids": [
+        "eye.meibomian-glands",
+        "eye.tear-film"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/blepharitis"
+      ]
+    },
+    {
+      "id": "condition.stye",
+      "kind": "condition",
+      "title": {
+        "en": "Stye / hordeolum",
+        "ar-IQ": "شحاذ العين",
+        "ckb": "گولەی پلک"
+      },
+      "aliases": [
+        "Stye / hordeolum",
+        "stye",
+        "hordeolum",
+        "شحاذ العين",
+        "گولەی پلک"
+      ],
+      "answer": {
+        "en": "A localized acute lid gland infection can form a tender lump.",
+        "ar-IQ": "عدوى موضعية حادة بغدة الجفن ممكن تسبب كتلة مؤلمة.",
+        "ckb": "تووشبوونی ناوچەیی توندی ڕژێنی پلک دەکرێت گرێیەکی ئازاردار دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.eyelid-margin",
+        "eye.eyelashes"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/chalazion-and-hordeolum-stye"
+      ]
+    },
+    {
+      "id": "condition.chalazion",
+      "kind": "condition",
+      "title": {
+        "en": "Chalazion",
+        "ar-IQ": "بردة الجفن",
+        "ckb": "کیسی پلک"
+      },
+      "aliases": [
+        "Chalazion",
+        "chalazion",
+        "meibomian cyst",
+        "بردة الجفن",
+        "کیسی پلک"
+      ],
+      "answer": {
+        "en": "A blocked meibomian gland may cause a persistent lid nodule.",
+        "ar-IQ": "انسداد غدة ميبوميان ممكن يسبب عقدة مستمرة بالجفن.",
+        "ckb": "گیرانی ڕژێنی میبۆمیان دەکرێت گرێیەکی بەردەوام لە پلک دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.meibomian-glands",
+        "eye.upper-eyelid"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/chalazion-and-hordeolum-stye"
+      ]
+    },
+    {
+      "id": "condition.ptosis",
+      "kind": "condition",
+      "title": {
+        "en": "Ptosis",
+        "ar-IQ": "تدلي الجفن",
+        "ckb": "داکەوتنی پلک"
+      },
+      "aliases": [
+        "Ptosis",
+        "ptosis",
+        "drooping lid",
+        "تدلي الجفن",
+        "داکەوتنی پلک"
+      ],
+      "answer": {
+        "en": "The upper lid sits lower than expected; the cause needs assessment.",
+        "ar-IQ": "يكون الجفن العلوي أوطى من المتوقع ويحتاج السبب للفحص.",
+        "ckb": "پلکی سەرەوە لە ئاسایی نزمترە و هۆکارەکە پێویستی بە پشکنین هەیە."
+      },
+      "anatomy_ids": [
+        "eye.upper-eyelid",
+        "eye.levator-palpebrae"
+      ],
+      "source_urls": [
+        "https://aapos.org/glossary/ptosis"
+      ]
+    },
+    {
+      "id": "condition.entropion",
+      "kind": "condition",
+      "title": {
+        "en": "Entropion",
+        "ar-IQ": "انقلاب الجفن للداخل",
+        "ckb": "وەرگەڕانی پلک بۆ ناوەوە"
+      },
+      "aliases": [
+        "Entropion",
+        "entropion",
+        "inward lid",
+        "انقلاب الجفن للداخل",
+        "وەرگەڕانی پلک بۆ ناوەوە"
+      ],
+      "answer": {
+        "en": "The lid turns inward so lashes may rub the eye.",
+        "ar-IQ": "ينقلب الجفن للداخل وممكن الرموش تحتك بالعين.",
+        "ckb": "پلک بۆ ناوەوە دەگەڕێتەوە و برژانگ دەکرێت بە چاو بخرێت."
+      },
+      "anatomy_ids": [
+        "eye.lower-eyelid",
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/entropion-and-ectropion"
+      ]
+    },
+    {
+      "id": "condition.ectropion",
+      "kind": "condition",
+      "title": {
+        "en": "Ectropion",
+        "ar-IQ": "انقلاب الجفن للخارج",
+        "ckb": "وەرگەڕانی پلک بۆ دەرەوە"
+      },
+      "aliases": [
+        "Ectropion",
+        "ectropion",
+        "outward lid",
+        "انقلاب الجفن للخارج",
+        "وەرگەڕانی پلک بۆ دەرەوە"
+      ],
+      "answer": {
+        "en": "An outward-turning lid may expose the surface and impair tear drainage.",
+        "ar-IQ": "انقلاب الجفن للخارج ممكن يعرض سطح العين ويضعف تصريف الدمع.",
+        "ckb": "وەرگەڕانی پلک بۆ دەرەوە دەکرێت ڕووکار بەرکەوتوو بکات و دەرچوونی فرمێسک تێکبدات."
+      },
+      "anatomy_ids": [
+        "eye.lower-eyelid",
+        "eye.lower-punctum"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/entropion-and-ectropion"
+      ]
+    },
+    {
+      "id": "condition.trichiasis",
+      "kind": "condition",
+      "title": {
+        "en": "Trichiasis",
+        "ar-IQ": "انحراف الرموش",
+        "ckb": "لاربوونی برژانگ"
+      },
+      "aliases": [
+        "Trichiasis",
+        "trichiasis",
+        "misdirected lashes",
+        "انحراف الرموش",
+        "لاربوونی برژانگ"
+      ],
+      "answer": {
+        "en": "Misdirected lashes rub against the eye surface.",
+        "ar-IQ": "رموش باتجاه غير طبيعي تحتك بسطح العين.",
+        "ckb": "برژانگی بە ئاراستەی نائاسایی بە ڕووکاری چاو دەخرێت."
+      },
+      "anatomy_ids": [
+        "eye.eyelashes",
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/trichiasis"
+      ]
+    },
+    {
+      "id": "condition.lagophthalmos",
+      "kind": "condition",
+      "title": {
+        "en": "Lagophthalmos",
+        "ar-IQ": "عدم انغلاق الجفن",
+        "ckb": "داخراونەبوونی تەواوی پلک"
+      },
+      "aliases": [
+        "Lagophthalmos",
+        "lagophthalmos",
+        "incomplete lid closure",
+        "عدم انغلاق الجفن",
+        "داخراونەبوونی تەواوی پلک"
+      ],
+      "answer": {
+        "en": "Incomplete eyelid closure can expose and damage the cornea.",
+        "ar-IQ": "عدم انغلاق الجفن بالكامل ممكن يعرض القرنية ويسبب ضرر.",
+        "ckb": "داخراونەبوونی تەواوی پلک دەکرێت قەرنیە بەرکەوتوو و زیانپێگەیشتوو بکات."
+      },
+      "anatomy_ids": [
+        "eye.upper-eyelid",
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK560661/"
+      ]
+    },
+    {
+      "id": "condition.lid-dermatitis",
+      "kind": "condition",
+      "title": {
+        "en": "Eyelid dermatitis",
+        "ar-IQ": "التهاب جلد الجفن",
+        "ckb": "هەوکردنی پێستی پلک"
+      },
+      "aliases": [
+        "Eyelid dermatitis",
+        "lid dermatitis",
+        "contact dermatitis",
+        "التهاب جلد الجفن",
+        "هەوکردنی پێستی پلک"
+      ],
+      "answer": {
+        "en": "Inflamed lid skin may be itchy, scaly or swollen.",
+        "ar-IQ": "التهاب جلد الجفن ممكن يسبب حكة وقشور وتورم.",
+        "ckb": "هەوکردنی پێستی پلک دەکرێت خوران و توێکڵ و ئاوسان دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.upper-eyelid",
+        "eye.lower-eyelid"
+      ],
+      "source_urls": [
+        "https://dermnetnz.org/topics/eyelid-contact-dermatitis"
+      ]
+    },
+    {
+      "id": "condition.lid-lesion",
+      "kind": "finding",
+      "title": {
+        "en": "Eyelid lesions",
+        "ar-IQ": "آفات الجفن",
+        "ckb": "گۆڕانکارییەکانی پلک"
+      },
+      "aliases": [
+        "Eyelid lesions",
+        "lid lesion",
+        "eyelid growth",
+        "آفات الجفن",
+        "گۆڕانکارییەکانی پلک"
+      ],
+      "answer": {
+        "en": "Lid growths have several causes and sometimes need tissue examination.",
+        "ar-IQ": "لنموات الجفن أسباب متعددة وأحياناً تحتاج فحص نسيجي.",
+        "ckb": "گەشەکانی پلک هۆکاری جیاوازیان هەیە و هەندێک جار پشکنینی شانەیان پێویستە."
+      },
+      "anatomy_ids": [
+        "eye.upper-eyelid",
+        "eye.eyelid-margin"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/eyelid-growths"
+      ]
+    },
+    {
+      "id": "condition.aqueous-dry-eye",
+      "kind": "condition",
+      "title": {
+        "en": "Aqueous-deficient dry eye",
+        "ar-IQ": "جفاف نقص الدمع",
+        "ckb": "وشکی چاو بەهۆی کەمی فرمێسک"
+      },
+      "aliases": [
+        "Aqueous-deficient dry eye",
+        "aqueous dry eye",
+        "aqueous deficiency",
+        "جفاف نقص الدمع",
+        "وشکی چاو بەهۆی کەمی فرمێسک"
+      ],
+      "answer": {
+        "en": "Insufficient aqueous tears can disturb the ocular surface.",
+        "ar-IQ": "نقص الجزء المائي من الدمع ممكن يخل بسطح العين.",
+        "ckb": "کەمی بەشی ئاویی فرمێسک دەکرێت ڕووکاری چاو تێکبدات."
+      },
+      "anatomy_ids": [
+        "eye.lacrimal-gland",
+        "eye.tear-film"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/keratoconjunctivitis-sicca"
+      ]
+    },
+    {
+      "id": "condition.evaporative-dry-eye",
+      "kind": "condition",
+      "title": {
+        "en": "Evaporative dry eye",
+        "ar-IQ": "الجفاف التبخري",
+        "ckb": "وشکی چاو بەهۆی هەڵمبوون"
+      },
+      "aliases": [
+        "Evaporative dry eye",
+        "evaporative dry eye",
+        "evaporative tear deficiency",
+        "الجفاف التبخري",
+        "وشکی چاو بەهۆی هەڵمبوون"
+      ],
+      "answer": {
+        "en": "Excess tear evaporation may cause burning and fluctuating blur.",
+        "ar-IQ": "التبخر الزائد للدمع ممكن يسبب حرقة وغشاوة متغيرة.",
+        "ckb": "هەڵمبوونی زۆری فرمێسک دەکرێت سووتان و تەماویی گۆڕاو دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.tear-film",
+        "eye.meibomian-glands"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/keratoconjunctivitis-sicca"
+      ]
+    },
+    {
+      "id": "condition.tear-obstruction",
+      "kind": "condition",
+      "title": {
+        "en": "Tear drainage obstruction",
+        "ar-IQ": "انسداد مجرى الدمع",
+        "ckb": "گیرانی ڕێڕەوی فرمێسک"
+      },
+      "aliases": [
+        "Tear drainage obstruction",
+        "tear obstruction",
+        "nasolacrimal obstruction",
+        "انسداد مجرى الدمع",
+        "گیرانی ڕێڕەوی فرمێسک"
+      ],
+      "answer": {
+        "en": "Tears drain poorly when part of the drainage pathway is narrowed or blocked.",
+        "ar-IQ": "يضطرب تصريف الدمع لما يضيق أو ينسد جزء من مجراه.",
+        "ckb": "کاتێک بەشێکی ڕێڕەوەکە تەسک یان گیراو دەبێت دەرچوونی فرمێسک تێکدەچێت."
+      },
+      "anatomy_ids": [
+        "eye.canaliculi",
+        "eye.lacrimal-sac",
+        "eye.nasolacrimal-duct"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/dacryostenosis"
+      ]
+    },
+    {
+      "id": "condition.dacryocystitis",
+      "kind": "condition",
+      "title": {
+        "en": "Dacryocystitis",
+        "ar-IQ": "التهاب كيس الدمع",
+        "ckb": "هەوکردنی کیسی فرمێسک"
+      },
+      "aliases": [
+        "Dacryocystitis",
+        "dacryocystitis",
+        "التهاب كيس الدمع",
+        "هەوکردنی کیسی فرمێسک"
+      ],
+      "answer": {
+        "en": "Infection of the tear sac can cause painful swelling near the nose.",
+        "ar-IQ": "عدوى كيس الدمع ممكن تسبب تورم مؤلم قرب الأنف.",
+        "ckb": "تووشبوونی کیسی فرمێسک دەکرێت ئاوسانی ئازاردار نزیک لووت دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.lacrimal-sac"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/dacryocystitis"
+      ]
+    },
+    {
+      "id": "condition.dacryoadenitis",
+      "kind": "condition",
+      "title": {
+        "en": "Dacryoadenitis",
+        "ar-IQ": "التهاب الغدة الدمعية",
+        "ckb": "هەوکردنی ڕژێنی فرمێسک"
+      },
+      "aliases": [
+        "Dacryoadenitis",
+        "dacryoadenitis",
+        "التهاب الغدة الدمعية",
+        "هەوکردنی ڕژێنی فرمێسک"
+      ],
+      "answer": {
+        "en": "Inflammation of the lacrimal gland may cause upper outer lid swelling.",
+        "ar-IQ": "التهاب الغدة الدمعية ممكن يسبب تورم بالجزء العلوي الخارجي للجفن.",
+        "ckb": "هەوکردنی ڕژێنی فرمێسک دەکرێت بەشی سەرەوەی دەرەکیی پلک بئاوسێنێت."
+      },
+      "anatomy_ids": [
+        "eye.lacrimal-gland"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Dacryoadenitis"
+      ]
+    },
+    {
+      "id": "condition.allergic-conjunctivitis",
+      "kind": "condition",
+      "title": {
+        "en": "Allergic conjunctivitis",
+        "ar-IQ": "التهاب الملتحمة التحسسي",
+        "ckb": "هەوکردنی هەستیاریی پەردەی چاو"
+      },
+      "aliases": [
+        "Allergic conjunctivitis",
+        "allergic conjunctivitis",
+        "التهاب الملتحمة التحسسي",
+        "هەوکردنی هەستیاریی پەردەی چاو"
+      ],
+      "answer": {
+        "en": "Allergen-triggered surface inflammation commonly causes itching and watering.",
+        "ar-IQ": "التهاب السطح بسبب الحساسية غالباً يسبب حكة ودموع.",
+        "ckb": "هەوکردنی ڕووکار بەهۆی هەستیاری زۆرجار خوران و فرمێسک دروست دەکات."
+      },
+      "anatomy_ids": [
+        "eye.bulbar-conjunctiva",
+        "eye.palpebral-conjunctiva"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/allergic-conjunctivitis"
+      ]
+    },
+    {
+      "id": "condition.viral-conjunctivitis",
+      "kind": "condition",
+      "title": {
+        "en": "Viral conjunctivitis",
+        "ar-IQ": "التهاب الملتحمة الفيروسي",
+        "ckb": "هەوکردنی ڤایرۆسی پەردەی چاو"
+      },
+      "aliases": [
+        "Viral conjunctivitis",
+        "viral conjunctivitis",
+        "pink eye",
+        "التهاب الملتحمة الفيروسي",
+        "هەوکردنی ڤایرۆسی پەردەی چاو"
+      ],
+      "answer": {
+        "en": "Viral surface infection may cause redness and watery discharge.",
+        "ar-IQ": "عدوى فيروسية بالسطح ممكن تسبب احمرار وإفراز مائي.",
+        "ckb": "تووشبوونی ڤایرۆسی ڕووکار دەکرێت سووربوونەوە و دەردانی شلەی ئاوی دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.bulbar-conjunctiva"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/viral-conjunctivitis"
+      ]
+    },
+    {
+      "id": "condition.bacterial-conjunctivitis",
+      "kind": "condition",
+      "title": {
+        "en": "Bacterial conjunctivitis",
+        "ar-IQ": "التهاب الملتحمة البكتيري",
+        "ckb": "هەوکردنی بەکتریایی پەردەی چاو"
+      },
+      "aliases": [
+        "Bacterial conjunctivitis",
+        "bacterial conjunctivitis",
+        "التهاب الملتحمة البكتيري",
+        "هەوکردنی بەکتریایی پەردەی چاو"
+      ],
+      "answer": {
+        "en": "Bacterial surface infection can cause discharge and redness; symptoms alone cannot confirm the organism.",
+        "ar-IQ": "العدوى البكتيرية ممكن تسبب احمرار وإفرازات؛ الأعراض وحدها ما تحدد الجرثومة.",
+        "ckb": "تووشبوونی بەکتریایی دەکرێت سووربوونەوە و شلە دروست بکات؛ نیشانەکان بە تەنها میکرۆب دیاری ناکەن."
+      },
+      "anatomy_ids": [
+        "eye.bulbar-conjunctiva"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/acute-bacterial-conjunctivitis"
+      ]
+    },
+    {
+      "id": "condition.subconjunctival-haemorrhage",
+      "kind": "condition",
+      "title": {
+        "en": "Subconjunctival haemorrhage",
+        "ar-IQ": "نزف تحت الملتحمة",
+        "ckb": "خوێنبەربوون لە ژێر پەردەی چاو"
+      },
+      "aliases": [
+        "Subconjunctival haemorrhage",
+        "subconjunctival haemorrhage",
+        "subconjunctival hemorrhage",
+        "نزف تحت الملتحمة",
+        "خوێنبەربوون لە ژێر پەردەی چاو"
+      ],
+      "answer": {
+        "en": "Blood under the conjunctiva forms a red patch; associated pain, injury or vision change needs assessment.",
+        "ar-IQ": "الدم تحت الملتحمة يكون بقعة حمراء؛ الألم أو الإصابة أو تغير النظر يحتاج فحص.",
+        "ckb": "خوێنی ژێر پەردەی چاو پەڵەیەکی سوور دروست دەکات؛ ئازار، برینداری یان گۆڕانی بینین پشکنینی پێویستە."
+      },
+      "anatomy_ids": [
+        "eye.bulbar-conjunctiva"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/subconjunctival-hemorrhages"
+      ]
+    },
+    {
+      "id": "condition.pinguecula",
+      "kind": "condition",
+      "title": {
+        "en": "Pinguecula",
+        "ar-IQ": "شحيمة الملتحمة",
+        "ckb": "پینگۆکولا"
+      },
+      "aliases": [
+        "Pinguecula",
+        "pinguecula",
+        "شحيمة الملتحمة",
+        "پینگۆکولا"
+      ],
+      "answer": {
+        "en": "A raised conjunctival change occurs beside the cornea.",
+        "ar-IQ": "تغير مرتفع بالملتحمة بجانب القرنية.",
+        "ckb": "گۆڕانکارییەکی بەرزبوو لە پەردەی چاو لە تەنیشت قەرنیەیە."
+      },
+      "anatomy_ids": [
+        "eye.bulbar-conjunctiva",
+        "eye.limbus"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/pinguecula-and-pterygium"
+      ]
+    },
+    {
+      "id": "condition.pterygium",
+      "kind": "condition",
+      "title": {
+        "en": "Pterygium",
+        "ar-IQ": "ظفرة",
+        "ckb": "پتەریجیۆم"
+      },
+      "aliases": [
+        "Pterygium",
+        "pterygium",
+        "ظفرة",
+        "پتەریجیۆم"
+      ],
+      "answer": {
+        "en": "Conjunctival tissue extends onto the cornea and can affect vision.",
+        "ar-IQ": "يمتد نسيج الملتحمة فوق القرنية وممكن يأثر على النظر.",
+        "ckb": "شانەی پەردەی چاو بەسەر قەرنیەدا درێژ دەبێت و دەکرێت بینین تێکبدات."
+      },
+      "anatomy_ids": [
+        "eye.bulbar-conjunctiva",
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/pinguecula-and-pterygium"
+      ]
+    },
+    {
+      "id": "condition.corneal-abrasion",
+      "kind": "condition",
+      "title": {
+        "en": "Corneal abrasion",
+        "ar-IQ": "خدش القرنية",
+        "ckb": "خەوشی قەرنیە"
+      },
+      "aliases": [
+        "Corneal abrasion",
+        "corneal abrasion",
+        "خدش القرنية",
+        "خەوشی قەرنیە"
+      ],
+      "answer": {
+        "en": "An epithelial scratch may cause pain, watering and light sensitivity.",
+        "ar-IQ": "خدش الظهارة ممكن يسبب ألم ودموع وحساسية للضوء.",
+        "ckb": "خەوشی ئەپیثیلیۆم دەکرێت ئازار و فرمێسک و هەستیاری بە ڕووناکی دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.corneal-epithelium"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/injuries-poisoning/eye-trauma/corneal-abrasions-and-corneal-foreign-bodies"
+      ]
+    },
+    {
+      "id": "condition.corneal-foreign-body",
+      "kind": "condition",
+      "title": {
+        "en": "Corneal foreign body",
+        "ar-IQ": "جسم غريب بالقرنية",
+        "ckb": "تەنێکی نامۆ لە قەرنیە"
+      },
+      "aliases": [
+        "Corneal foreign body",
+        "corneal foreign body",
+        "جسم غريب بالقرنية",
+        "تەنێکی نامۆ لە قەرنیە"
+      ],
+      "answer": {
+        "en": "A surface particle can damage the cornea; high-speed injuries may penetrate deeper.",
+        "ar-IQ": "جزيئة سطحية ممكن تضر القرنية؛ إصابة السرعة العالية ممكن تنفذ للداخل.",
+        "ckb": "تەنۆلکەی ڕووکاری دەکرێت قەرنیە زیانمەند بکات؛ برینداریی خێرا دەکرێت بچێتە قوواڵی."
+      },
+      "anatomy_ids": [
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Removal_of_Corneal_Foreign_Bodies"
+      ]
+    },
+    {
+      "id": "condition.recurrent-erosion",
+      "kind": "condition",
+      "title": {
+        "en": "Recurrent corneal erosion",
+        "ar-IQ": "تآكل القرنية المتكرر",
+        "ckb": "خەوشی دووبارەی قەرنیە"
+      },
+      "aliases": [
+        "Recurrent corneal erosion",
+        "recurrent erosion",
+        "تآكل القرنية المتكرر",
+        "خەوشی دووبارەی قەرنیە"
+      ],
+      "answer": {
+        "en": "Poor epithelial attachment can lead to repeated painful surface breakdown.",
+        "ar-IQ": "ضعف التصاق الظهارة ممكن يسبب تآكل سطحي مؤلم ومتكرر.",
+        "ckb": "لاوازیی چەسپانی ئەپیثیلیۆم دەکرێت خەوشی دووبارە و ئازارداری ڕووکار دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.corneal-epithelium",
+        "eye.bowmans-layer"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Recurrent_Corneal_Erosion"
+      ]
+    },
+    {
+      "id": "condition.infectious-keratitis",
+      "kind": "condition",
+      "title": {
+        "en": "Infectious keratitis",
+        "ar-IQ": "التهاب القرنية المعدي",
+        "ckb": "هەوکردنی میکرۆبی قەرنیە"
+      },
+      "aliases": [
+        "Infectious keratitis",
+        "infectious keratitis",
+        "microbial keratitis",
+        "التهاب القرنية المعدي",
+        "هەوکردنی میکرۆبی قەرنیە"
+      ],
+      "answer": {
+        "en": "Corneal infection may threaten sight and needs urgent examination.",
+        "ar-IQ": "عدوى القرنية ممكن تهدد النظر وتحتاج فحص عاجل.",
+        "ckb": "تووشبوونی میکرۆبی قەرنیە دەکرێت بینین بخاتە مەترسی و پشکنینی پەلەیی دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.corneal-stroma"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/corneal-ulcer"
+      ]
+    },
+    {
+      "id": "condition.corneal-ulcer",
+      "kind": "condition",
+      "title": {
+        "en": "Corneal ulcer",
+        "ar-IQ": "قرحة القرنية",
+        "ckb": "برینی قەرنیە"
+      },
+      "aliases": [
+        "Corneal ulcer",
+        "corneal ulcer",
+        "قرحة القرنية",
+        "برینی قەرنیە"
+      ],
+      "answer": {
+        "en": "Loss of corneal epithelium with stromal inflammation requires urgent assessment.",
+        "ar-IQ": "فقدان الظهارة مع التهاب السدى يحتاج تقييم عاجل.",
+        "ckb": "لەدەستدانی ئەپیثیلیۆم لەگەڵ هەوکردنی سترۆما هەڵسەنگاندنی پەلەیی دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.corneal-epithelium",
+        "eye.corneal-stroma"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/corneal-ulcer"
+      ]
+    },
+    {
+      "id": "condition.exposure-keratopathy",
+      "kind": "condition",
+      "title": {
+        "en": "Exposure keratopathy",
+        "ar-IQ": "اعتلال القرنية بالتعرض",
+        "ckb": "زیانی قەرنیە بەهۆی بەرکەوتن"
+      },
+      "aliases": [
+        "Exposure keratopathy",
+        "exposure keratopathy",
+        "اعتلال القرنية بالتعرض",
+        "زیانی قەرنیە بەهۆی بەرکەوتن"
+      ],
+      "answer": {
+        "en": "Incomplete protection of the surface can damage the corneal epithelium.",
+        "ar-IQ": "نقص حماية سطح العين ممكن يضر ظهارة القرنية.",
+        "ckb": "کەمی پاراستنی ڕووکاری چاو دەکرێت ئەپیثیلیۆمی قەرنیە زیانمەند بکات."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.upper-eyelid"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Exposure_Keratopathy"
+      ]
+    },
+    {
+      "id": "condition.keratoconus",
+      "kind": "condition",
+      "title": {
+        "en": "Keratoconus",
+        "ar-IQ": "القرنية المخروطية",
+        "ckb": "قەرنیەی کۆنی"
+      },
+      "aliases": [
+        "Keratoconus",
+        "keratoconus",
+        "القرنية المخروطية",
+        "قەرنیەی کۆنی"
+      ],
+      "answer": {
+        "en": "Progressive corneal thinning and shape change can distort vision.",
+        "ar-IQ": "ترقق القرنية وتغير شكلها تدريجياً ممكن يشوه النظر.",
+        "ckb": "ناسکبوون و گۆڕانی وردەوردەی شێوەی قەرنیە دەکرێت بینین بشێوێنێت."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.corneal-stroma"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/keratoconus"
+      ]
+    },
+    {
+      "id": "condition.corneal-dystrophy",
+      "kind": "condition",
+      "title": {
+        "en": "Corneal dystrophies",
+        "ar-IQ": "حثل القرنية",
+        "ckb": "دیسترۆفی قەرنیە"
+      },
+      "aliases": [
+        "Corneal dystrophies",
+        "corneal dystrophy",
+        "حثل القرنية",
+        "دیسترۆفی قەرنیە"
+      ],
+      "answer": {
+        "en": "Inherited corneal disorders can alter clarity or cause recurrent erosions.",
+        "ar-IQ": "اضطرابات وراثية بالقرنية ممكن تغير شفافيتها أو تسبب تآكل متكرر.",
+        "ckb": "تێکچوونی بۆماوەیی قەرنیە دەکرێت شەفافی بگۆڕێت یان خەوشی دووبارە دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.corneal-stroma"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/corneal-conditions"
+      ]
+    },
+    {
+      "id": "condition.fuchs-dystrophy",
+      "kind": "condition",
+      "title": {
+        "en": "Fuchs’ endothelial dystrophy",
+        "ar-IQ": "حثل فوكس",
+        "ckb": "دیسترۆفی فوکس"
+      },
+      "aliases": [
+        "Fuchs’ endothelial dystrophy",
+        "fuchs dystrophy",
+        "Fuchs dystrophy",
+        "حثل فوكس",
+        "دیسترۆفی فوکس"
+      ],
+      "answer": {
+        "en": "Loss of endothelial function may cause corneal swelling and blurred vision.",
+        "ar-IQ": "ضعف عمل بطانة القرنية ممكن يسبب تورم وغشاوة.",
+        "ckb": "لاوازیی کاری ئەندۆثیلیۆمی قەرنیە دەکرێت ئاوسان و تەماوی دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.corneal-endothelium",
+        "eye.descemets-membrane"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/bullous-keratopathy"
+      ]
+    },
+    {
+      "id": "condition.corneal-scarring",
+      "kind": "condition",
+      "title": {
+        "en": "Corneal scarring",
+        "ar-IQ": "تندب القرنية",
+        "ckb": "برینی کۆنی قەرنیە"
+      },
+      "aliases": [
+        "Corneal scarring",
+        "corneal scarring",
+        "تندب القرنية",
+        "برینی کۆنی قەرنیە"
+      ],
+      "answer": {
+        "en": "Scar tissue from injury or inflammation may reduce corneal clarity.",
+        "ar-IQ": "ندبة بعد إصابة أو التهاب ممكن تقلل شفافية القرنية.",
+        "ckb": "شوێنی برین دوای برینداری یان هەوکردن دەکرێت شەفافی قەرنیە کەم بکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.corneal-stroma"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/corneal-conditions"
+      ]
+    },
+    {
+      "id": "condition.bacterial-keratitis",
+      "kind": "condition",
+      "title": {
+        "en": "Bacterial keratitis",
+        "ar-IQ": "التهاب القرنية البكتيري",
+        "ckb": "هەوکردنی بەکتریایی قەرنیە"
+      },
+      "aliases": [
+        "Bacterial keratitis",
+        "bacterial keratitis",
+        "التهاب القرنية البكتيري",
+        "هەوکردنی بەکتریایی قەرنیە"
+      ],
+      "answer": {
+        "en": "Bacterial infection can rapidly damage corneal tissue.",
+        "ar-IQ": "العدوى البكتيرية ممكن تخرب نسيج القرنية بسرعة.",
+        "ckb": "تووشبوونی بەکتریایی دەکرێت بە خێرایی شانەی قەرنیە زیانمەند بکات."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.corneal-stroma"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/corneal-ulcer"
+      ]
+    },
+    {
+      "id": "condition.fungal-keratitis",
+      "kind": "condition",
+      "title": {
+        "en": "Fungal keratitis",
+        "ar-IQ": "التهاب القرنية الفطري",
+        "ckb": "هەوکردنی کەڕوویی قەرنیە"
+      },
+      "aliases": [
+        "Fungal keratitis",
+        "fungal keratitis",
+        "التهاب القرنية الفطري",
+        "هەوکردنی کەڕوویی قەرنیە"
+      ],
+      "answer": {
+        "en": "Fungal corneal infection can follow plant injury or other exposures.",
+        "ar-IQ": "عدوى القرنية الفطرية ممكن تتبع إصابة نباتية أو تعرضات أخرى.",
+        "ckb": "تووشبوونی کەڕوویی قەرنیە دەکرێت دوای برینداری بە ڕووەک یان بەرکەوتنی تر ڕووبدات."
+      },
+      "anatomy_ids": [
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Fungal_Keratitis"
+      ]
+    },
+    {
+      "id": "condition.herpes-simplex-keratitis",
+      "kind": "condition",
+      "title": {
+        "en": "Herpes simplex keratitis",
+        "ar-IQ": "التهاب القرنية بالهربس البسيط",
+        "ckb": "هەوکردنی قەرنیە بە هێرپێسی سادە"
+      },
+      "aliases": [
+        "Herpes simplex keratitis",
+        "herpes simplex keratitis",
+        "HSV keratitis",
+        "التهاب القرنية بالهربس البسيط",
+        "هەوکردنی قەرنیە بە هێرپێسی سادە"
+      ],
+      "answer": {
+        "en": "Herpes simplex virus may cause recurrent corneal disease.",
+        "ar-IQ": "فيروس الهربس البسيط ممكن يسبب مرض قرنية متكرر.",
+        "ckb": "ڤایرۆسی هێرپێسی سادە دەکرێت نەخۆشیی دووبارەی قەرنیە دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.corneal-epithelium",
+        "eye.corneal-stroma"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/herpes-simplex-keratitis"
+      ]
+    },
+    {
+      "id": "condition.herpes-zoster-eye",
+      "kind": "condition",
+      "title": {
+        "en": "Herpes zoster ophthalmicus",
+        "ar-IQ": "الحزام الناري العيني",
+        "ckb": "هێرپێس زۆستەری چاو"
+      },
+      "aliases": [
+        "Herpes zoster ophthalmicus",
+        "herpes zoster eye",
+        "HZO",
+        "الحزام الناري العيني",
+        "هێرپێس زۆستەری چاو"
+      ],
+      "answer": {
+        "en": "Shingles affecting the forehead or nose may involve the eye.",
+        "ar-IQ": "الحزام الناري بالجبهة أو الأنف ممكن يشمل العين.",
+        "ckb": "زۆستەری نێوچەوان یان لووت دەکرێت چاو بگرێتەوە."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.upper-eyelid"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/herpes-zoster-ophthalmicus"
+      ]
+    },
+    {
+      "id": "condition.acanthamoeba-keratitis",
+      "kind": "condition",
+      "title": {
+        "en": "Acanthamoeba keratitis",
+        "ar-IQ": "التهاب القرنية بالأكانثاميبا",
+        "ckb": "هەوکردنی قەرنیە بە ئەکانتامێبا"
+      },
+      "aliases": [
+        "Acanthamoeba keratitis",
+        "acanthamoeba keratitis",
+        "التهاب القرنية بالأكانثاميبا",
+        "هەوکردنی قەرنیە بە ئەکانتامێبا"
+      ],
+      "answer": {
+        "en": "Acanthamoeba infection can follow contaminated water exposure, particularly with contact lenses.",
+        "ar-IQ": "عدوى الأكانثاميبا ممكن تتبع مي ملوث، خصوصاً مع العدسات اللاصقة.",
+        "ckb": "تووشبوونی ئەکانتامێبا دەکرێت دوای ئاوی پیس، بەتایبەتی لەگەڵ لێنزی چەسپاو، ڕووبدات."
+      },
+      "anatomy_ids": [
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Acanthamoeba_Keratitis"
+      ]
+    },
+    {
+      "id": "condition.episcleritis",
+      "kind": "condition",
+      "title": {
+        "en": "Episcleritis",
+        "ar-IQ": "التهاب فوق الصلبة",
+        "ckb": "هەوکردنی ڕووپۆشی سکلێرا"
+      },
+      "aliases": [
+        "Episcleritis",
+        "episcleritis",
+        "التهاب فوق الصلبة",
+        "هەوکردنی ڕووپۆشی سکلێرا"
+      ],
+      "answer": {
+        "en": "Inflammation of the superficial tissue over the sclera causes redness.",
+        "ar-IQ": "التهاب النسيج السطحي فوق الصلبة يسبب احمرار.",
+        "ckb": "هەوکردنی شانەی ڕووکاری سەر سکلێرا سووربوونەوە دروست دەکات."
+      },
+      "anatomy_ids": [
+        "eye.episclera"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/episcleritis"
+      ]
+    },
+    {
+      "id": "condition.scleritis",
+      "kind": "condition",
+      "title": {
+        "en": "Scleritis",
+        "ar-IQ": "التهاب الصلبة",
+        "ckb": "هەوکردنی سکلێرا"
+      },
+      "aliases": [
+        "Scleritis",
+        "scleritis",
+        "التهاب الصلبة",
+        "هەوکردنی سکلێرا"
+      ],
+      "answer": {
+        "en": "Deep scleral inflammation can cause severe pain and may accompany systemic disease.",
+        "ar-IQ": "التهاب الصلبة العميق ممكن يسبب ألم شديد ويرتبط بأمراض عامة.",
+        "ckb": "هەوکردنی قووڵی سکلێرا دەکرێت ئازاری توند دروست بکات و پەیوەندی بە نەخۆشیی گشتی هەبێت."
+      },
+      "anatomy_ids": [
+        "eye.sclera"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/scleritis"
+      ]
+    },
+    {
+      "id": "condition.anterior-uveitis",
+      "kind": "condition",
+      "title": {
+        "en": "Anterior uveitis / iritis",
+        "ar-IQ": "التهاب العنبية الأمامي",
+        "ckb": "هەوکردنی یوڤیای پێشەوە"
+      },
+      "aliases": [
+        "Anterior uveitis / iritis",
+        "anterior uveitis",
+        "iritis",
+        "التهاب العنبية الأمامي",
+        "هەوکردنی یوڤیای پێشەوە"
+      ],
+      "answer": {
+        "en": "Inflammation mainly affects the anterior chamber and often the iris.",
+        "ar-IQ": "الالتهاب يصيب أساساً الحجرة الأمامية وغالباً القزحية.",
+        "ckb": "هەوکردن بە سەرەکی ژووری پێشەوە و زۆرجار قازحیە دەگرێتەوە."
+      },
+      "anatomy_ids": [
+        "eye.iris",
+        "eye.anterior-chamber"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/overview-of-uveitis"
+      ]
+    },
+    {
+      "id": "condition.intermediate-uveitis",
+      "kind": "condition",
+      "title": {
+        "en": "Intermediate uveitis",
+        "ar-IQ": "التهاب العنبية المتوسط",
+        "ckb": "هەوکردنی یوڤیای ناوەڕاست"
+      },
+      "aliases": [
+        "Intermediate uveitis",
+        "intermediate uveitis",
+        "التهاب العنبية المتوسط",
+        "هەوکردنی یوڤیای ناوەڕاست"
+      ],
+      "answer": {
+        "en": "Inflammation mainly involves the vitreous and peripheral retinal region.",
+        "ar-IQ": "الالتهاب يصيب أساساً الزجاجي ومنطقة الشبكية المحيطية.",
+        "ckb": "هەوکردن بە سەرەکی شووشەیی و ناوچەی دەوروبەری تۆڕینە دەگرێتەوە."
+      },
+      "anatomy_ids": [
+        "eye.vitreous-body",
+        "eye.peripheral-retina"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/overview-of-uveitis"
+      ]
+    },
+    {
+      "id": "condition.posterior-uveitis",
+      "kind": "condition",
+      "title": {
+        "en": "Posterior uveitis",
+        "ar-IQ": "التهاب العنبية الخلفي",
+        "ckb": "هەوکردنی یوڤیای دواوە"
+      },
+      "aliases": [
+        "Posterior uveitis",
+        "posterior uveitis",
+        "التهاب العنبية الخلفي",
+        "هەوکردنی یوڤیای دواوە"
+      ],
+      "answer": {
+        "en": "Inflammation mainly involves the retina or choroid.",
+        "ar-IQ": "الالتهاب يصيب أساساً الشبكية أو المشيمية.",
+        "ckb": "هەوکردن بە سەرەکی تۆڕینە یان کۆرۆید دەگرێتەوە."
+      },
+      "anatomy_ids": [
+        "eye.retina",
+        "eye.choroid"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/overview-of-uveitis"
+      ]
+    },
+    {
+      "id": "condition.panuveitis",
+      "kind": "condition",
+      "title": {
+        "en": "Panuveitis",
+        "ar-IQ": "التهاب العنبية الشامل",
+        "ckb": "هەوکردنی هەموو یوڤیا"
+      },
+      "aliases": [
+        "Panuveitis",
+        "panuveitis",
+        "التهاب العنبية الشامل",
+        "هەوکردنی هەموو یوڤیا"
+      ],
+      "answer": {
+        "en": "Inflammation affects anterior, intermediate and posterior eye regions.",
+        "ar-IQ": "الالتهاب يشمل الأجزاء الأمامية والمتوسطة والخلفية للعين.",
+        "ckb": "هەوکردن بەشەکانی پێشەوە، ناوەڕاست و دواوەی چاو دەگرێتەوە."
+      },
+      "anatomy_ids": [
+        "eye.iris",
+        "eye.vitreous-body",
+        "eye.choroid"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/overview-of-uveitis"
+      ]
+    },
+    {
+      "id": "condition.choroiditis",
+      "kind": "condition",
+      "title": {
+        "en": "Choroiditis",
+        "ar-IQ": "التهاب المشيمية",
+        "ckb": "هەوکردنی کۆرۆید"
+      },
+      "aliases": [
+        "Choroiditis",
+        "choroiditis",
+        "التهاب المشيمية",
+        "هەوکردنی کۆرۆید"
+      ],
+      "answer": {
+        "en": "Inflammation involves the choroid and may affect the adjacent retina.",
+        "ar-IQ": "التهاب بالمشيمية ممكن يشمل الشبكية المجاورة.",
+        "ckb": "هەوکردنی کۆرۆید دەکرێت تۆڕینەی تەنیشتی بگرێتەوە."
+      },
+      "anatomy_ids": [
+        "eye.choroid",
+        "eye.retina"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/infectious-uveitis"
+      ]
+    },
+    {
+      "id": "condition.age-cataract",
+      "kind": "condition",
+      "title": {
+        "en": "Age-related cataract",
+        "ar-IQ": "الساد المرتبط بالعمر",
+        "ckb": "کاتاراکتی پەیوەندیدار بە تەمەن"
+      },
+      "aliases": [
+        "Age-related cataract",
+        "age cataract",
+        "age-related lens opacity",
+        "الساد المرتبط بالعمر",
+        "کاتاراکتی پەیوەندیدار بە تەمەن"
+      ],
+      "answer": {
+        "en": "Age-related lens clouding can gradually reduce clarity and increase glare.",
+        "ar-IQ": "عتامة العدسة مع العمر ممكن تقلل الوضوح وتزيد الانبهار تدريجياً.",
+        "ckb": "تەمەنگرتنی عەدەسە بە تەمەن دەکرێت وردەوردە ڕوونی کەم و بریقە زیاد بکات."
+      },
+      "anatomy_ids": [
+        "eye.lens"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/cataract/cataract"
+      ]
+    },
+    {
+      "id": "condition.congenital-cataract",
+      "kind": "condition",
+      "title": {
+        "en": "Congenital cataract",
+        "ar-IQ": "الساد الخلقي",
+        "ckb": "کاتاراکتی لەدایکبوون"
+      },
+      "aliases": [
+        "Congenital cataract",
+        "congenital cataract",
+        "childhood cataract",
+        "الساد الخلقي",
+        "کاتاراکتی لەدایکبوون"
+      ],
+      "answer": {
+        "en": "Lens opacity present early in life can interfere with visual development.",
+        "ar-IQ": "عتامة العدسة المبكرة ممكن تعيق تطور النظر.",
+        "ckb": "تەمەنگرتنی زووی عەدەسە دەکرێت گەشەی بینین تێکبدات."
+      },
+      "anatomy_ids": [
+        "eye.lens"
+      ],
+      "source_urls": [
+        "https://aapos.org/glossary/cataract"
+      ]
+    },
+    {
+      "id": "condition.traumatic-cataract",
+      "kind": "condition",
+      "title": {
+        "en": "Traumatic cataract",
+        "ar-IQ": "الساد الرضي",
+        "ckb": "کاتاراکتی برینداری"
+      },
+      "aliases": [
+        "Traumatic cataract",
+        "traumatic cataract",
+        "الساد الرضي",
+        "کاتاراکتی برینداری"
+      ],
+      "answer": {
+        "en": "Injury may cloud the lens, sometimes with other damage.",
+        "ar-IQ": "الإصابة ممكن تعتم العدسة، وأحياناً تصاحبها أضرار أخرى.",
+        "ckb": "برینداری دەکرێت عەدەسە تەمەن بکات، هەندێک جار لەگەڵ زیانی تر."
+      },
+      "anatomy_ids": [
+        "eye.lens",
+        "eye.lens-capsule"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/cataract/cataract"
+      ]
+    },
+    {
+      "id": "condition.medication-cataract",
+      "kind": "condition",
+      "title": {
+        "en": "Medication-associated cataract",
+        "ar-IQ": "الساد المرتبط بالأدوية",
+        "ckb": "کاتاراکتی پەیوەندیدار بە دەرمان"
+      },
+      "aliases": [
+        "Medication-associated cataract",
+        "medication cataract",
+        "الساد المرتبط بالأدوية",
+        "کاتاراکتی پەیوەندیدار بە دەرمان"
+      ],
+      "answer": {
+        "en": "Some medicines are associated with lens clouding; do not stop treatment without medical advice.",
+        "ar-IQ": "بعض الأدوية ترتبط بعتامة العدسة؛ لا توقف العلاج بدون رأي طبي.",
+        "ckb": "هەندێک دەرمان پەیوەندی بە تەمەنگرتنی عەدەسە هەیە؛ بەبێ ڕای پزیشک دەرمان مەوەستێنە."
+      },
+      "anatomy_ids": [
+        "eye.lens"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/cataract/cataract"
+      ]
+    },
+    {
+      "id": "condition.lens-displacement",
+      "kind": "condition",
+      "title": {
+        "en": "Lens displacement",
+        "ar-IQ": "انزياح العدسة",
+        "ckb": "جووڵانی عەدەسە لە شوێنی خۆی"
+      },
+      "aliases": [
+        "Lens displacement",
+        "lens displacement",
+        "ectopia lentis",
+        "انزياح العدسة",
+        "جووڵانی عەدەسە لە شوێنی خۆی"
+      ],
+      "answer": {
+        "en": "Weak or disrupted zonules can let the lens move from its usual position.",
+        "ar-IQ": "ضعف أو انقطاع ألياف الزونول ممكن يحرك العدسة من مكانها.",
+        "ckb": "لاوازی یان پچڕانی ڕیشاڵەی زۆنول دەکرێت عەدەسە لە شوێنی خۆی بجووڵێنێت."
+      },
+      "anatomy_ids": [
+        "eye.lens",
+        "eye.zonular-fibres"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Ectopia_Lentis"
+      ]
+    },
+    {
+      "id": "condition.open-angle-glaucoma",
+      "kind": "condition",
+      "title": {
+        "en": "Open-angle glaucoma",
+        "ar-IQ": "الزرق مفتوح الزاوية",
+        "ckb": "گلاوکۆمای گۆشەکراوە"
+      },
+      "aliases": [
+        "Open-angle glaucoma",
+        "open angle glaucoma",
+        "POAG",
+        "الزرق مفتوح الزاوية",
+        "گلاوکۆمای گۆشەکراوە"
+      ],
+      "answer": {
+        "en": "Progressive optic nerve damage may occur without early symptoms.",
+        "ar-IQ": "ضرر تدريجي بالعصب البصري ممكن يصير بدون أعراض مبكرة.",
+        "ckb": "زیانی وردەوردەی دەمارە بیناییەکە دەکرێت بەبێ نیشانەی سەرەتایی ڕووبدات."
+      },
+      "anatomy_ids": [
+        "eye.optic-disc",
+        "eye.trabecular-meshwork"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/primary-open-angle-glaucoma"
+      ]
+    },
+    {
+      "id": "condition.angle-closure-glaucoma",
+      "kind": "condition",
+      "title": {
+        "en": "Angle-closure glaucoma",
+        "ar-IQ": "الزرق مغلق الزاوية",
+        "ckb": "گلاوکۆمای گۆشەداخراو"
+      },
+      "aliases": [
+        "Angle-closure glaucoma",
+        "angle closure glaucoma",
+        "acute angle closure",
+        "الزرق مغلق الزاوية",
+        "گلاوکۆمای گۆشەداخراو"
+      ],
+      "answer": {
+        "en": "Blocked drainage angle can raise pressure; an acute painful episode is an emergency.",
+        "ar-IQ": "انسداد زاوية التصريف ممكن يرفع الضغط؛ النوبة الحادة المؤلمة طارئة.",
+        "ckb": "گیرانی گۆشەی دەرچوونی شلە دەکرێت فشار بەرز بکات؛ هێرشی توند و ئازاردار فریاکەوتنە."
+      },
+      "anatomy_ids": [
+        "eye.drainage-angle",
+        "eye.iris"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/angle-closure-glaucoma"
+      ]
+    },
+    {
+      "id": "condition.secondary-glaucoma",
+      "kind": "condition",
+      "title": {
+        "en": "Secondary glaucoma",
+        "ar-IQ": "الزرق الثانوي",
+        "ckb": "گلاوکۆمای لاوەکی"
+      },
+      "aliases": [
+        "Secondary glaucoma",
+        "secondary glaucoma",
+        "الزرق الثانوي",
+        "گلاوکۆمای لاوەکی"
+      ],
+      "answer": {
+        "en": "Other eye disease, injury or medicines can lead to glaucomatous nerve damage.",
+        "ar-IQ": "أمراض أو إصابات أو أدوية أخرى ممكن تسبب ضرر زرق بالعصب.",
+        "ckb": "نەخۆشی، برینداری یان دەرمانی تر دەکرێت زیانی گلاوکۆمایی دەمار دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.optic-disc",
+        "eye.drainage-angle"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/overview-of-glaucoma"
+      ]
+    },
+    {
+      "id": "condition.congenital-glaucoma",
+      "kind": "condition",
+      "title": {
+        "en": "Congenital glaucoma",
+        "ar-IQ": "الزرق الخلقي",
+        "ckb": "گلاوکۆمای لەدایکبوون"
+      },
+      "aliases": [
+        "Congenital glaucoma",
+        "congenital glaucoma",
+        "infantile glaucoma",
+        "الزرق الخلقي",
+        "گلاوکۆمای لەدایکبوون"
+      ],
+      "answer": {
+        "en": "Abnormal early drainage development can damage vision in infants and children.",
+        "ar-IQ": "خلل تطور التصريف المبكر ممكن يضر نظر الرضع والأطفال.",
+        "ckb": "تێکچوونی گەشەی زووی دەرچوونی شلە دەکرێت بینینی کۆرپە و منداڵ زیانمەند بکات."
+      },
+      "anatomy_ids": [
+        "eye.drainage-angle",
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://aapos.org/glossary/glaucoma-in-children"
+      ]
+    },
+    {
+      "id": "condition.ocular-hypertension",
+      "kind": "condition",
+      "title": {
+        "en": "Ocular hypertension",
+        "ar-IQ": "ارتفاع ضغط العين",
+        "ckb": "بەرزبوونی فشاری چاو"
+      },
+      "aliases": [
+        "Ocular hypertension",
+        "ocular hypertension",
+        "ارتفاع ضغط العين",
+        "بەرزبوونی فشاری چاو"
+      ],
+      "answer": {
+        "en": "Raised eye pressure without demonstrated glaucoma still needs risk assessment and monitoring.",
+        "ar-IQ": "ضغط عين مرتفع بدون زرق مثبت يحتاج تقييم خطر ومتابعة.",
+        "ckb": "فشاری بەرزی چاو بەبێ گلاوکۆمای سەلمێنراو هەڵسەنگاندنی مەترسی و بەدواداچوون دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.aqueous-humour",
+        "eye.trabecular-meshwork"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/overview-of-glaucoma"
+      ]
+    },
+    {
+      "id": "condition.posterior-vitreous-detachment",
+      "kind": "condition",
+      "title": {
+        "en": "Posterior vitreous detachment",
+        "ar-IQ": "انفصال الجسم الزجاجي الخلفي",
+        "ckb": "جیابوونەوەی پشتی شووشەیی"
+      },
+      "aliases": [
+        "Posterior vitreous detachment",
+        "posterior vitreous detachment",
+        "PVD",
+        "انفصال الجسم الزجاجي الخلفي",
+        "جیابوونەوەی پشتی شووشەیی"
+      ],
+      "answer": {
+        "en": "The vitreous separates from the retina; new symptoms need a retinal tear check.",
+        "ar-IQ": "ينفصل الزجاجي عن الشبكية؛ الأعراض الجديدة تحتاج استبعاد تمزق.",
+        "ckb": "شووشەیی لە تۆڕینە جیادەبێتەوە؛ نیشانەی نوێ پشکنینی دڕانی تۆڕینە دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.vitreous-body",
+        "eye.posterior-vitreous-interface"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/vitreous-detachment"
+      ]
+    },
+    {
+      "id": "condition.vitreous-haemorrhage",
+      "kind": "condition",
+      "title": {
+        "en": "Vitreous haemorrhage",
+        "ar-IQ": "نزف الجسم الزجاجي",
+        "ckb": "خوێنبەربوونی شووشەیی"
+      },
+      "aliases": [
+        "Vitreous haemorrhage",
+        "vitreous haemorrhage",
+        "vitreous hemorrhage",
+        "نزف الجسم الزجاجي",
+        "خوێنبەربوونی شووشەیی"
+      ],
+      "answer": {
+        "en": "Blood in the vitreous may obscure vision and requires assessment of its cause.",
+        "ar-IQ": "الدم بالزجاجي ممكن يحجب النظر ويحتاج فحص السبب.",
+        "ckb": "خوێن لە شووشەیی دەکرێت بینین بپۆشێت و پشکنینی هۆکارەکەی پێویستە."
+      },
+      "anatomy_ids": [
+        "eye.vitreous-body",
+        "eye.retinal-vessels"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Vitreous_Hemorrhage"
+      ]
+    },
+    {
+      "id": "condition.retinal-tear",
+      "kind": "condition",
+      "title": {
+        "en": "Retinal tear",
+        "ar-IQ": "تمزق الشبكية",
+        "ckb": "دڕانی تۆڕینە"
+      },
+      "aliases": [
+        "Retinal tear",
+        "retinal tear",
+        "تمزق الشبكية",
+        "دڕانی تۆڕینە"
+      ],
+      "answer": {
+        "en": "A retinal break can allow detachment; new flashes or floaters require urgent examination.",
+        "ar-IQ": "ثقب الشبكية ممكن يسمح بانفصالها؛ الومضات أو العوائم الجديدة تحتاج فحص عاجل.",
+        "ckb": "دڕانی تۆڕینە دەکرێت ڕێگە بە جیابوونەوە بدات؛ بروسکە یان خاڵی جووڵاوی نوێ پشکنینی پەلەیی دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.peripheral-retina"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/retinal-detachment"
+      ]
+    },
+    {
+      "id": "condition.retinal-detachment",
+      "kind": "condition",
+      "title": {
+        "en": "Retinal detachment",
+        "ar-IQ": "انفصال الشبكية",
+        "ckb": "جیابوونەوەی تۆڕینە"
+      },
+      "aliases": [
+        "Retinal detachment",
+        "retinal detachment",
+        "انفصال الشبكية",
+        "جیابوونەوەی تۆڕینە"
+      ],
+      "answer": {
+        "en": "The sensory retina separates from underlying tissue and can cause permanent sight loss.",
+        "ar-IQ": "تنفصل الشبكية الحسية عن النسيج تحتها وممكن يسبب فقدان نظر دائم.",
+        "ckb": "تۆڕینەی هەستیار لە شانەی ژێری جیادەبێتەوە و دەکرێت بینین هەمیشەیی لەدەست بدات."
+      },
+      "anatomy_ids": [
+        "eye.retina"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/retinal-detachment"
+      ]
+    },
+    {
+      "id": "condition.diabetic-retinopathy",
+      "kind": "condition",
+      "title": {
+        "en": "Diabetic retinopathy",
+        "ar-IQ": "اعتلال الشبكية السكري",
+        "ckb": "زیانی تۆڕینەی شەکرە"
+      },
+      "aliases": [
+        "Diabetic retinopathy",
+        "diabetic retinopathy",
+        "اعتلال الشبكية السكري",
+        "زیانی تۆڕینەی شەکرە"
+      ],
+      "answer": {
+        "en": "Diabetes can damage retinal vessels before noticeable visual symptoms occur.",
+        "ar-IQ": "السكري ممكن يضر أوعية الشبكية قبل ظهور أعراض نظر.",
+        "ckb": "شەکرە دەکرێت پێش دەرکەوتنی نیشانەی بینین ڕەگەکانی تۆڕینە زیانمەند بکات."
+      },
+      "anatomy_ids": [
+        "eye.retina",
+        "eye.retinal-vessels"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/diabetic-retinopathy"
+      ]
+    },
+    {
+      "id": "condition.hypertensive-retinopathy",
+      "kind": "condition",
+      "title": {
+        "en": "Hypertensive retinopathy",
+        "ar-IQ": "اعتلال الشبكية بارتفاع الضغط",
+        "ckb": "زیانی تۆڕینەی فشاری خوێن"
+      },
+      "aliases": [
+        "Hypertensive retinopathy",
+        "hypertensive retinopathy",
+        "اعتلال الشبكية بارتفاع الضغط",
+        "زیانی تۆڕینەی فشاری خوێن"
+      ],
+      "answer": {
+        "en": "High blood pressure can damage retinal blood vessels.",
+        "ar-IQ": "ضغط الدم المرتفع ممكن يضر أوعية الشبكية.",
+        "ckb": "فشاری بەرزی خوێن دەکرێت ڕەگە خوێنییەکانی تۆڕینە زیانمەند بکات."
+      },
+      "anatomy_ids": [
+        "eye.retinal-vessels"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/retinal-disorders/hypertensive-retinopathy"
+      ]
+    },
+    {
+      "id": "condition.retinal-artery-occlusion",
+      "kind": "condition",
+      "title": {
+        "en": "Retinal artery occlusion",
+        "ar-IQ": "انسداد شريان الشبكية",
+        "ckb": "گیرانی شەریانی تۆڕینە"
+      },
+      "aliases": [
+        "Retinal artery occlusion",
+        "retinal artery occlusion",
+        "RAO",
+        "انسداد شريان الشبكية",
+        "گیرانی شەریانی تۆڕینە"
+      ],
+      "answer": {
+        "en": "Interrupted retinal arterial blood flow can cause sudden painless sight loss and needs emergency assessment.",
+        "ar-IQ": "انقطاع الدم الشرياني للشبكية ممكن يفقد النظر فجأة بدون ألم ويحتاج طوارئ.",
+        "ckb": "پچڕانی خوێنی شەریانی تۆڕینە دەکرێت لەناکاو بەبێ ئازار بینین لەدەست بدات و فریاکەوتنی پێویستە."
+      },
+      "anatomy_ids": [
+        "eye.retinal-vessels",
+        "eye.retina"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/retinal-disorders/central-retinal-artery-occlusion-and-branch-retinal-artery-occlusion"
+      ]
+    },
+    {
+      "id": "condition.retinal-vein-occlusion",
+      "kind": "condition",
+      "title": {
+        "en": "Retinal vein occlusion",
+        "ar-IQ": "انسداد وريد الشبكية",
+        "ckb": "گیرانی وریدی تۆڕینە"
+      },
+      "aliases": [
+        "Retinal vein occlusion",
+        "retinal vein occlusion",
+        "RVO",
+        "انسداد وريد الشبكية",
+        "گیرانی وریدی تۆڕینە"
+      ],
+      "answer": {
+        "en": "Blocked retinal venous drainage can cause bleeding and macular swelling.",
+        "ar-IQ": "انسداد التصريف الوريدي للشبكية ممكن يسبب نزف وتورم بالبقعة.",
+        "ckb": "گیرانی دەرچوونی وریدی تۆڕینە دەکرێت خوێنبەربوون و ئاوسانی ماکولا دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.retinal-vessels",
+        "eye.macula"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/retinal-disorders/central-retinal-vein-occlusion-and-branch-retinal-vein-occlusion"
+      ]
+    },
+    {
+      "id": "condition.amd",
+      "kind": "condition",
+      "title": {
+        "en": "Age-related macular degeneration",
+        "ar-IQ": "تنكس البقعة المرتبط بالعمر",
+        "ckb": "تێکچوونی ماکولای پەیوەندیدار بە تەمەن"
+      },
+      "aliases": [
+        "Age-related macular degeneration",
+        "amd",
+        "AMD",
+        "تنكس البقعة المرتبط بالعمر",
+        "تێکچوونی ماکولای پەیوەندیدار بە تەمەن"
+      ],
+      "answer": {
+        "en": "Degenerative macular changes can impair central vision.",
+        "ar-IQ": "تغيرات تنكسية بالبقعة ممكن تضعف النظر المركزي.",
+        "ckb": "گۆڕانی تێکچوونی ماکولا دەکرێت بینینی ناوەندی لاواز بکات."
+      },
+      "anatomy_ids": [
+        "eye.macula",
+        "eye.retinal-pigment-epithelium"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/age-related-macular-degeneration"
+      ]
+    },
+    {
+      "id": "condition.macular-oedema",
+      "kind": "condition",
+      "title": {
+        "en": "Macular oedema",
+        "ar-IQ": "وذمة البقعة",
+        "ckb": "ئاوسانی ماکولا"
+      },
+      "aliases": [
+        "Macular oedema",
+        "macular oedema",
+        "macular edema",
+        "وذمة البقعة",
+        "ئاوسانی ماکولا"
+      ],
+      "answer": {
+        "en": "Fluid accumulation thickens the macula; several diseases can cause it.",
+        "ar-IQ": "تجمع السائل يزيد سماكة البقعة وله أسباب متعددة.",
+        "ckb": "کۆبوونەوەی شلە ماکولا ئەستوور دەکات و چەندین هۆکاری هەیە."
+      },
+      "anatomy_ids": [
+        "eye.macula",
+        "eye.retinal-vessels"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/macular-edema"
+      ]
+    },
+    {
+      "id": "condition.macular-hole",
+      "kind": "condition",
+      "title": {
+        "en": "Macular hole",
+        "ar-IQ": "ثقب البقعة",
+        "ckb": "کونی ماکولا"
+      },
+      "aliases": [
+        "Macular hole",
+        "macular hole",
+        "ثقب البقعة",
+        "کونی ماکولا"
+      ],
+      "answer": {
+        "en": "A defect through the central retina can distort central vision.",
+        "ar-IQ": "عيب بسمك الشبكية المركزية ممكن يشوه النظر المركزي.",
+        "ckb": "کەموکوڕییەک لە ئەستووریی تۆڕینەی ناوەندی دەکرێت بینینی ناوەندی بشێوێنێت."
+      },
+      "anatomy_ids": [
+        "eye.fovea",
+        "eye.macula"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/macular-hole"
+      ]
+    },
+    {
+      "id": "condition.epiretinal-membrane",
+      "kind": "condition",
+      "title": {
+        "en": "Epiretinal membrane",
+        "ar-IQ": "غشاء فوق الشبكية",
+        "ckb": "پەردەی سەر تۆڕینە"
+      },
+      "aliases": [
+        "Epiretinal membrane",
+        "epiretinal membrane",
+        "macular pucker",
+        "غشاء فوق الشبكية",
+        "پەردەی سەر تۆڕینە"
+      ],
+      "answer": {
+        "en": "A membrane on the retinal surface may wrinkle the macula.",
+        "ar-IQ": "غشاء على سطح الشبكية ممكن يجعد البقعة.",
+        "ckb": "پەردەیەک لەسەر تۆڕینە دەکرێت ماکولا چرچ بکات."
+      },
+      "anatomy_ids": [
+        "eye.macula"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/macular-pucker"
+      ]
+    },
+    {
+      "id": "condition.central-serous",
+      "kind": "condition",
+      "title": {
+        "en": "Central serous chorioretinopathy",
+        "ar-IQ": "اعتلال المشيمية والشبكية المصلي المركزي",
+        "ckb": "نەخۆشی سیرۆزی ناوەندی کۆرۆید و تۆڕینە"
+      },
+      "aliases": [
+        "Central serous chorioretinopathy",
+        "central serous",
+        "CSCR",
+        "اعتلال المشيمية والشبكية المصلي المركزي",
+        "نەخۆشی سیرۆزی ناوەندی کۆرۆید و تۆڕینە"
+      ],
+      "answer": {
+        "en": "Fluid beneath central retina can distort or blur vision.",
+        "ar-IQ": "السائل تحت الشبكية المركزية ممكن يشوه أو يغوش النظر.",
+        "ckb": "شلەی ژێر تۆڕینەی ناوەندی دەکرێت بینین بشێوێنێت یان تەمەن بکات."
+      },
+      "anatomy_ids": [
+        "eye.macula",
+        "eye.choroid"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Central_Serous_Chorioretinopathy"
+      ]
+    },
+    {
+      "id": "condition.retinitis-pigmentosa",
+      "kind": "condition",
+      "title": {
+        "en": "Retinitis pigmentosa",
+        "ar-IQ": "التهاب الشبكية الصباغي",
+        "ckb": "ڕەتینایتیسی ڕەنگدار"
+      },
+      "aliases": [
+        "Retinitis pigmentosa",
+        "retinitis pigmentosa",
+        "RP",
+        "التهاب الشبكية الصباغي",
+        "ڕەتینایتیسی ڕەنگدار"
+      ],
+      "answer": {
+        "en": "Inherited retinal degeneration can impair night and peripheral vision.",
+        "ar-IQ": "تنكس شبكية وراثي ممكن يضعف نظر الليل والمحيط.",
+        "ckb": "تێکچوونی بۆماوەیی تۆڕینە دەکرێت بینینی شەو و دەوروبەر لاواز بکات."
+      },
+      "anatomy_ids": [
+        "eye.photoreceptors",
+        "eye.peripheral-retina"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinitis-pigmentosa"
+      ]
+    },
+    {
+      "id": "condition.stargardt",
+      "kind": "condition",
+      "title": {
+        "en": "Stargardt disease",
+        "ar-IQ": "مرض ستارغارت",
+        "ckb": "نەخۆشی ستارگارت"
+      },
+      "aliases": [
+        "Stargardt disease",
+        "stargardt",
+        "مرض ستارغارت",
+        "نەخۆشی ستارگارت"
+      ],
+      "answer": {
+        "en": "An inherited macular disorder often reduces central vision beginning in youth.",
+        "ar-IQ": "اضطراب بقعة وراثي غالباً يقلل النظر المركزي من سن مبكرة.",
+        "ckb": "تێکچوونێکی بۆماوەیی ماکولا زۆرجار لە تەمەنی گەنجی بینینی ناوەندی کەم دەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.macula",
+        "eye.retinal-pigment-epithelium"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/stargardt-disease"
+      ]
+    },
+    {
+      "id": "condition.usher",
+      "kind": "condition",
+      "title": {
+        "en": "Usher syndrome",
+        "ar-IQ": "متلازمة أشر",
+        "ckb": "سندرۆمی ئەشەر"
+      },
+      "aliases": [
+        "Usher syndrome",
+        "usher",
+        "متلازمة أشر",
+        "سندرۆمی ئەشەر"
+      ],
+      "answer": {
+        "en": "An inherited condition combines hearing loss with progressive retinal degeneration.",
+        "ar-IQ": "حالة وراثية تجمع ضعف السمع مع تنكس الشبكية التدريجي.",
+        "ckb": "دۆخێکی بۆماوەییە کە لاوازی بیستن لەگەڵ تێکچوونی وردەوردەی تۆڕینە کۆدەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.photoreceptors",
+        "eye.retina"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/usher-syndrome"
+      ]
+    },
+    {
+      "id": "condition.inherited-retinal-disorders",
+      "kind": "condition",
+      "title": {
+        "en": "Other inherited retinal disorders",
+        "ar-IQ": "أمراض الشبكية الوراثية الأخرى",
+        "ckb": "نەخۆشییە بۆماوەییەکانی تری تۆڕینە"
+      },
+      "aliases": [
+        "Other inherited retinal disorders",
+        "inherited retinal disorders",
+        "inherited retinal dystrophy",
+        "أمراض الشبكية الوراثية الأخرى",
+        "نەخۆشییە بۆماوەییەکانی تری تۆڕینە"
+      ],
+      "answer": {
+        "en": "Genetically diverse retinal diseases require specialist phenotyping and sometimes genetic testing.",
+        "ar-IQ": "أمراض شبكية متنوعة وراثياً تحتاج تقييم مختص وأحياناً فحص جيني.",
+        "ckb": "نەخۆشیی بۆماوەیی جیاوازی تۆڕینە پشکنینی پسپۆڕ و هەندێک جار تاقیکردنەوەی جینی دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.photoreceptors",
+        "eye.retina"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/rare-diseases"
+      ]
+    },
+    {
+      "id": "condition.optic-neuritis",
+      "kind": "condition",
+      "title": {
+        "en": "Optic neuritis",
+        "ar-IQ": "التهاب العصب البصري",
+        "ckb": "هەوکردنی دەمارە بیناییەکە"
+      },
+      "aliases": [
+        "Optic neuritis",
+        "optic neuritis",
+        "التهاب العصب البصري",
+        "هەوکردنی دەمارە بیناییەکە"
+      ],
+      "answer": {
+        "en": "Optic nerve inflammation can reduce vision and colour perception, sometimes with movement pain.",
+        "ar-IQ": "التهاب العصب البصري ممكن يقلل النظر وتمييز اللون وأحياناً يؤلم مع الحركة.",
+        "ckb": "هەوکردنی دەمارە بیناییەکە دەکرێت بینین و جیاکردنەوەی ڕەنگ کەم بکاتەوە، هەندێک جار لەگەڵ ئازاری جووڵە."
+      },
+      "anatomy_ids": [
+        "eye.optic-nerve"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/optic-neuritis"
+      ]
+    },
+    {
+      "id": "condition.ischaemic-optic-neuropathy",
+      "kind": "condition",
+      "title": {
+        "en": "Ischaemic optic neuropathy",
+        "ar-IQ": "اعتلال العصب البصري الإقفاري",
+        "ckb": "زیانی دەمارە بیناییەکە بەهۆی کەمی خوێن"
+      },
+      "aliases": [
+        "Ischaemic optic neuropathy",
+        "ischaemic optic neuropathy",
+        "ischemic optic neuropathy",
+        "اعتلال العصب البصري الإقفاري",
+        "زیانی دەمارە بیناییەکە بەهۆی کەمی خوێن"
+      ],
+      "answer": {
+        "en": "Reduced optic nerve blood supply can cause sudden sight loss; urgent assessment identifies dangerous causes.",
+        "ar-IQ": "نقص دم العصب ممكن يفقد النظر فجأة؛ الفحص العاجل يحدد الأسباب الخطرة.",
+        "ckb": "کەمی خوێنی دەمار دەکرێت بینین لەناکاو لەدەست بدات؛ پشکنینی پەلەیی هۆکارە مەترسیدارەکان دیاری دەکات."
+      },
+      "anatomy_ids": [
+        "eye.optic-disc",
+        "eye.optic-nerve"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/ischemic-optic-neuropathy"
+      ]
+    },
+    {
+      "id": "condition.optic-atrophy",
+      "kind": "outcome",
+      "title": {
+        "en": "Optic atrophy",
+        "ar-IQ": "ضمور العصب البصري",
+        "ckb": "پووکانی دەمارە بیناییەکە"
+      },
+      "aliases": [
+        "Optic atrophy",
+        "optic atrophy",
+        "ضمور العصب البصري",
+        "پووکانی دەمارە بیناییەکە"
+      ],
+      "answer": {
+        "en": "Optic nerve tissue loss is an outcome with several possible underlying causes.",
+        "ar-IQ": "فقدان نسيج العصب البصري نتيجة ممكن تجي من أسباب متعددة.",
+        "ckb": "لەدەستدانی شانەی دەمارە بیناییەکە ئەنجامێکە کە چەندین هۆکاری دەکرێت هەبێت."
+      },
+      "anatomy_ids": [
+        "eye.optic-nerve",
+        "eye.optic-disc"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Optic_Atrophy"
+      ]
+    },
+    {
+      "id": "condition.disc-swelling",
+      "kind": "finding",
+      "title": {
+        "en": "Optic-disc swelling / papilloedema",
+        "ar-IQ": "تورم القرص البصري",
+        "ckb": "ئاوسانی دیسکی بینایی"
+      },
+      "aliases": [
+        "Optic-disc swelling / papilloedema",
+        "disc swelling",
+        "papilledema",
+        "تورم القرص البصري",
+        "ئاوسانی دیسکی بینایی"
+      ],
+      "answer": {
+        "en": "Disc swelling is a finding; papilloedema specifically relates to raised intracranial pressure and needs urgent assessment.",
+        "ar-IQ": "تورم القرص علامة؛ الوذمة الحليمية تحديداً ترتبط بضغط داخل الجمجمة وتحتاج فحص عاجل.",
+        "ckb": "ئاوسانی دیسک نیشانەیە؛ پاپیلۆئیدیما بە تایبەتی بە فشاری ناو کاسەی سەر پەیوەستە و پشکنینی پەلەیی دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.optic-disc"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/papilledema"
+      ]
+    },
+    {
+      "id": "condition.myopia",
+      "kind": "condition",
+      "title": {
+        "en": "Myopia",
+        "ar-IQ": "قصر النظر",
+        "ckb": "کورتبینی"
+      },
+      "aliases": [
+        "Myopia",
+        "myopia",
+        "nearsightedness",
+        "قصر النظر",
+        "کورتبینی"
+      ],
+      "answer": {
+        "en": "Light focuses in front of the retina, often blurring distance vision.",
+        "ar-IQ": "يتركز الضوء أمام الشبكية فيغوش نظر البعيد غالباً.",
+        "ckb": "ڕووناکی لە پێش تۆڕینە کۆدەبێتەوە و زۆرجار بینینی دوور تەمەن دەکات."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.lens",
+        "eye.retina"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/nearsightedness-myopia"
+      ]
+    },
+    {
+      "id": "condition.hyperopia",
+      "kind": "condition",
+      "title": {
+        "en": "Hyperopia",
+        "ar-IQ": "طول النظر",
+        "ckb": "دووربینی"
+      },
+      "aliases": [
+        "Hyperopia",
+        "hyperopia",
+        "farsightedness",
+        "طول النظر",
+        "دووربینی"
+      ],
+      "answer": {
+        "en": "Focusing demand is increased when the eye’s optical power is insufficient for its length.",
+        "ar-IQ": "يزيد جهد التركيز لما تكون قوة العين البصرية قليلة نسبة لطولها.",
+        "ckb": "کاتێک هێزی ڕووناکیی چاو بە پێی درێژییەکەی کەمە پێویستی بە هەوڵی فۆکەسی زیاتر هەیە."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.lens"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/farsightedness-hyperopia"
+      ]
+    },
+    {
+      "id": "condition.astigmatism",
+      "kind": "condition",
+      "title": {
+        "en": "Astigmatism",
+        "ar-IQ": "اللابؤرية",
+        "ckb": "ئاستیگماتیزم"
+      },
+      "aliases": [
+        "Astigmatism",
+        "astigmatism",
+        "اللابؤرية",
+        "ئاستیگماتیزم"
+      ],
+      "answer": {
+        "en": "Unequal optical curvature can blur or distort vision.",
+        "ar-IQ": "اختلاف تقوس السطح البصري ممكن يغوش أو يشوه النظر.",
+        "ckb": "نایەکسانی چەمی ڕووکاری بینین دەکرێت بینین تەمەن یان شێواو بکات."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.lens"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/astigmatism"
+      ]
+    },
+    {
+      "id": "condition.presbyopia",
+      "kind": "condition",
+      "title": {
+        "en": "Presbyopia",
+        "ar-IQ": "قصو البصر الشيخي",
+        "ckb": "لاوازی بینینی نزیک بە تەمەن"
+      },
+      "aliases": [
+        "Presbyopia",
+        "presbyopia",
+        "قصو البصر الشيخي",
+        "لاوازی بینینی نزیک بە تەمەن"
+      ],
+      "answer": {
+        "en": "Age-related loss of lens accommodation makes near focusing harder.",
+        "ar-IQ": "نقص مرونة تركيز العدسة مع العمر يصعب النظر القريب.",
+        "ckb": "کەمبوونی توانای فۆکەسی عەدەسە بە تەمەن بینینی نزیک قورس دەکات."
+      },
+      "anatomy_ids": [
+        "eye.lens",
+        "eye.ciliary-muscle"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/presbyopia"
+      ]
+    },
+    {
+      "id": "condition.amblyopia",
+      "kind": "condition",
+      "title": {
+        "en": "Amblyopia",
+        "ar-IQ": "كسل العين",
+        "ckb": "تەمبەڵی چاو"
+      },
+      "aliases": [
+        "Amblyopia",
+        "amblyopia",
+        "lazy eye",
+        "كسل العين",
+        "تەمبەڵی چاو"
+      ],
+      "answer": {
+        "en": "Abnormal early visual development reduces vision despite appropriate optical correction.",
+        "ar-IQ": "خلل تطور النظر المبكر يقلل النظر حتى مع التصحيح البصري المناسب.",
+        "ckb": "تێکچوونی گەشەی زووی بینین، تەنانەت لەگەڵ ڕاستکردنەوەی گونجاو، بینین کەم دەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.retina",
+        "eye.optic-nerve"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/amblyopia-lazy-eye"
+      ]
+    },
+    {
+      "id": "condition.colour-deficiency",
+      "kind": "condition",
+      "title": {
+        "en": "Colour-vision deficiency",
+        "ar-IQ": "ضعف تمييز الألوان",
+        "ckb": "کەموکوڕی بینینی ڕەنگ"
+      },
+      "aliases": [
+        "Colour-vision deficiency",
+        "colour deficiency",
+        "color blindness",
+        "ضعف تمييز الألوان",
+        "کەموکوڕی بینینی ڕەنگ"
+      ],
+      "answer": {
+        "en": "Inherited or acquired changes reduce the ability to distinguish some colours.",
+        "ar-IQ": "تغيرات وراثية أو مكتسبة تقلل تمييز بعض الألوان.",
+        "ckb": "گۆڕانی بۆماوەیی یان بەدەستهاتوو توانای جیاکردنەوەی هەندێک ڕەنگ کەم دەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.photoreceptors",
+        "eye.optic-nerve"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness"
+      ]
+    },
+    {
+      "id": "condition.strabismus",
+      "kind": "condition",
+      "title": {
+        "en": "Strabismus",
+        "ar-IQ": "الحول",
+        "ckb": "خێڵی چاو"
+      },
+      "aliases": [
+        "Strabismus",
+        "strabismus",
+        "squint",
+        "الحول",
+        "خێڵی چاو"
+      ],
+      "answer": {
+        "en": "The eyes do not align on the same target; causes and visual effects vary.",
+        "ar-IQ": "العينان مو بمحاذاة نفس الهدف؛ تختلف الأسباب والآثار.",
+        "ckb": "چاوەکان لەسەر یەک ئامانج ڕیز نین؛ هۆکار و کاریگەرییەکان جیاوازن."
+      },
+      "anatomy_ids": [
+        "eye.medial-rectus",
+        "eye.lateral-rectus"
+      ],
+      "source_urls": [
+        "https://aapos.org/glossary/strabismus"
+      ]
+    },
+    {
+      "id": "condition.convergence-insufficiency",
+      "kind": "condition",
+      "title": {
+        "en": "Convergence insufficiency",
+        "ar-IQ": "قصور التقارب",
+        "ckb": "کەموکوڕی نزیکبوونەوەی چاوەکان"
+      },
+      "aliases": [
+        "Convergence insufficiency",
+        "convergence insufficiency",
+        "قصور التقارب",
+        "کەموکوڕی نزیکبوونەوەی چاوەکان"
+      ],
+      "answer": {
+        "en": "The eyes have difficulty maintaining coordinated inward alignment for near tasks.",
+        "ar-IQ": "يصعب على العينين الحفاظ على تقارب منسق للمهام القريبة.",
+        "ckb": "چاوەکان لە پاراستنی نزیکبوونەوەی هاوئاهەنگ بۆ کاری نزیک کێشەیان هەیە."
+      },
+      "anatomy_ids": [
+        "eye.medial-rectus"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/convergence-insufficiency"
+      ]
+    },
+    {
+      "id": "condition.nystagmus",
+      "kind": "condition",
+      "title": {
+        "en": "Nystagmus",
+        "ar-IQ": "الرأرأة",
+        "ckb": "لەرزینی چاو"
+      },
+      "aliases": [
+        "Nystagmus",
+        "nystagmus",
+        "الرأرأة",
+        "لەرزینی چاو"
+      ],
+      "answer": {
+        "en": "Involuntary rhythmic eye movements can have developmental, eye or neurological causes.",
+        "ar-IQ": "حركات عين إيقاعية لا إرادية إلها أسباب تطورية أو عينية أو عصبية.",
+        "ckb": "جووڵەی ڕیتمی و بێویستی چاو دەکرێت هۆکاری گەشەیی، چاوی یان دەمارەیی هەبێت."
+      },
+      "anatomy_ids": [
+        "eye.superior-rectus",
+        "eye.lateral-rectus"
+      ],
+      "source_urls": [
+        "https://aapos.org/glossary/nystagmus"
+      ]
+    },
+    {
+      "id": "condition.ocular-motor-nerve-disorders",
+      "kind": "condition",
+      "title": {
+        "en": "Ocular motor nerve disorders",
+        "ar-IQ": "اضطرابات أعصاب حركة العين",
+        "ckb": "تێکچوونی دەمارە جووڵێنەرەکانی چاو"
+      },
+      "aliases": [
+        "Ocular motor nerve disorders",
+        "ocular motor nerve disorders",
+        "third fourth sixth nerve palsy",
+        "اضطرابات أعصاب حركة العين",
+        "تێکچوونی دەمارە جووڵێنەرەکانی چاو"
+      ],
+      "answer": {
+        "en": "Cranial nerve dysfunction may impair alignment or movement and sometimes alter the pupil or lid.",
+        "ar-IQ": "خلل الأعصاب القحفية ممكن يغير المحاذاة والحركة وأحياناً البؤبؤ أو الجفن.",
+        "ckb": "تێکچوونی دەمارەکانی کاسەی سەر دەکرێت ڕیزبوون و جووڵە و هەندێک جار بیلبیلە یان پلک بگۆڕێت."
+      },
+      "anatomy_ids": [
+        "eye.medial-rectus",
+        "eye.superior-oblique",
+        "eye.levator-palpebrae"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/symptoms-of-ophthalmic-disorders/diplopia"
+      ]
+    },
+    {
+      "id": "condition.preseptal-cellulitis",
+      "kind": "condition",
+      "title": {
+        "en": "Preseptal cellulitis",
+        "ar-IQ": "التهاب ما قبل الحاجز",
+        "ckb": "هەوکردنی پێش پەردەی کاسەی چاو"
+      },
+      "aliases": [
+        "Preseptal cellulitis",
+        "preseptal cellulitis",
+        "التهاب ما قبل الحاجز",
+        "هەوکردنی پێش پەردەی کاسەی چاو"
+      ],
+      "answer": {
+        "en": "Infection affects lid tissues in front of the orbital septum; examination must exclude orbital involvement.",
+        "ar-IQ": "عدوى قدام حاجز الحجاج؛ لازم الفحص يستبعد إصابة داخل الحجاج.",
+        "ckb": "تووشبوون لە پێش پەردەی کاسەی چاوە؛ پشکنین دەبێت تووشبوونی ناو کاسە ڕەت بکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.upper-eyelid",
+        "eye.lower-eyelid"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/preseptal-and-orbital-cellulitis"
+      ]
+    },
+    {
+      "id": "condition.orbital-cellulitis",
+      "kind": "condition",
+      "title": {
+        "en": "Orbital cellulitis",
+        "ar-IQ": "التهاب الحجاج",
+        "ckb": "هەوکردنی کاسەی چاو"
+      },
+      "aliases": [
+        "Orbital cellulitis",
+        "orbital cellulitis",
+        "التهاب الحجاج",
+        "هەوکردنی کاسەی چاو"
+      ],
+      "answer": {
+        "en": "Infection behind the orbital septum can threaten vision and life.",
+        "ar-IQ": "عدوى خلف حاجز الحجاج ممكن تهدد النظر والحياة.",
+        "ckb": "تووشبوونی پشت پەردەی کاسەی چاو دەکرێت بینین و ژیان بخاتە مەترسی."
+      },
+      "anatomy_ids": [
+        "eye.orbital-fat",
+        "eye.optic-nerve"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/preseptal-and-orbital-cellulitis"
+      ]
+    },
+    {
+      "id": "condition.thyroid-eye-disease",
+      "kind": "condition",
+      "title": {
+        "en": "Thyroid eye disease",
+        "ar-IQ": "مرض العين الدرقي",
+        "ckb": "نەخۆشی چاوی تیڕۆید"
+      },
+      "aliases": [
+        "Thyroid eye disease",
+        "thyroid eye disease",
+        "Graves orbitopathy",
+        "مرض العين الدرقي",
+        "نەخۆشی چاوی تیڕۆید"
+      ],
+      "answer": {
+        "en": "Immune inflammation may enlarge orbital muscles and fat and alter eyelid position.",
+        "ar-IQ": "التهاب مناعي ممكن يكبر عضلات ودهون الحجاج ويغير وضع الجفن.",
+        "ckb": "هەوکردنی بەرگریی لەش دەکرێت ماسولکە و چەوریی کاسەی چاو گەورە بکات و دۆخی پلک بگۆڕێت."
+      },
+      "anatomy_ids": [
+        "eye.orbital-fat",
+        "eye.medial-rectus",
+        "eye.upper-eyelid"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/graves-eye-disease"
+      ]
+    },
+    {
+      "id": "condition.orbital-inflammation",
+      "kind": "condition",
+      "title": {
+        "en": "Orbital inflammation",
+        "ar-IQ": "التهاب الحجاج غير المعدي",
+        "ckb": "هەوکردنی نامیکرۆبی کاسەی چاو"
+      },
+      "aliases": [
+        "Orbital inflammation",
+        "orbital inflammation",
+        "التهاب الحجاج غير المعدي",
+        "هەوکردنی نامیکرۆبی کاسەی چاو"
+      ],
+      "answer": {
+        "en": "Non-infectious orbital inflammation can cause pain, swelling or restricted movement.",
+        "ar-IQ": "التهاب حجاج غير معدي ممكن يسبب ألم وتورم أو تقييد الحركة.",
+        "ckb": "هەوکردنی نامیکرۆبی کاسەی چاو دەکرێت ئازار و ئاوسان یان سنوورداربوونی جووڵە دروست بکات."
+      },
+      "anatomy_ids": [
+        "eye.orbital-fat",
+        "eye.superior-rectus"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/inflammatory-orbital-disease"
+      ]
+    },
+    {
+      "id": "condition.orbital-mass",
+      "kind": "condition",
+      "title": {
+        "en": "Orbital masses",
+        "ar-IQ": "كتل الحجاج",
+        "ckb": "گرێکانی کاسەی چاو"
+      },
+      "aliases": [
+        "Orbital masses",
+        "orbital mass",
+        "كتل الحجاج",
+        "گرێکانی کاسەی چاو"
+      ],
+      "answer": {
+        "en": "A space-occupying orbital lesion can displace the globe or affect vision.",
+        "ar-IQ": "كتلة بالحجاج ممكن تزحزح المقلة أو تأثر على النظر.",
+        "ckb": "گرێیەک لە کاسەی چاو دەکرێت گۆی چاو بجووڵێنێت یان بینین تێکبدات."
+      },
+      "anatomy_ids": [
+        "eye.bony-orbit",
+        "eye.orbital-fat"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/tumors-of-the-orbit"
+      ]
+    },
+    {
+      "id": "condition.chemical-injury",
+      "kind": "condition",
+      "title": {
+        "en": "Chemical eye injury",
+        "ar-IQ": "إصابة العين الكيميائية",
+        "ckb": "برینداریی کیمیایی چاو"
+      },
+      "aliases": [
+        "Chemical eye injury",
+        "chemical injury",
+        "إصابة العين الكيميائية",
+        "برینداریی کیمیایی چاو"
+      ],
+      "answer": {
+        "en": "Chemical exposure needs immediate rinsing and emergency assessment.",
+        "ar-IQ": "التعرض الكيميائي يحتاج غسل فوري وفحص طارئ.",
+        "ckb": "بەرکەوتنی کیمیایی شۆردنی دەستبەجێ و پشکنینی فریاکەوتن دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.bulbar-conjunctiva"
+      ],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/eye-injuries/"
+      ]
+    },
+    {
+      "id": "condition.thermal-injury",
+      "kind": "condition",
+      "title": {
+        "en": "Thermal eye injury",
+        "ar-IQ": "إصابة العين الحرارية",
+        "ckb": "برینداریی گەرمی چاو"
+      },
+      "aliases": [
+        "Thermal eye injury",
+        "thermal injury",
+        "إصابة العين الحرارية",
+        "برینداریی گەرمی چاو"
+      ],
+      "answer": {
+        "en": "Heat can damage lids and the ocular surface.",
+        "ar-IQ": "الحرارة ممكن تضر الجفون وسطح العين.",
+        "ckb": "گەرمی دەکرێت پلک و ڕووکاری چاو زیانمەند بکات."
+      },
+      "anatomy_ids": [
+        "eye.upper-eyelid",
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/injuries-poisoning/eye-trauma/ocular-burns"
+      ]
+    },
+    {
+      "id": "condition.uv-keratitis",
+      "kind": "condition",
+      "title": {
+        "en": "UV keratitis",
+        "ar-IQ": "التهاب القرنية بالأشعة فوق البنفسجية",
+        "ckb": "هەوکردنی قەرنیەی تیشکی سەروو بنەوشەیی"
+      },
+      "aliases": [
+        "UV keratitis",
+        "uv keratitis",
+        "photokeratitis",
+        "التهاب القرنية بالأشعة فوق البنفسجية",
+        "هەوکردنی قەرنیەی تیشکی سەروو بنەوشەیی"
+      ],
+      "answer": {
+        "en": "Ultraviolet exposure can injure the corneal epithelium, often affecting both eyes.",
+        "ar-IQ": "الأشعة فوق البنفسجية ممكن تضر ظهارة القرنية، وغالباً بالعينين.",
+        "ckb": "تیشکی سەروو بنەوشەیی دەکرێت ئەپیثیلیۆمی قەرنیە زیانمەند بکات، زۆرجار لە هەردوو چاو."
+      },
+      "anatomy_ids": [
+        "eye.corneal-epithelium"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/superficial-punctate-keratitis"
+      ]
+    },
+    {
+      "id": "condition.blunt-injury",
+      "kind": "condition",
+      "title": {
+        "en": "Blunt eye injury",
+        "ar-IQ": "رض العين",
+        "ckb": "زەبری چاو"
+      },
+      "aliases": [
+        "Blunt eye injury",
+        "blunt injury",
+        "رض العين",
+        "زەبری چاو"
+      ],
+      "answer": {
+        "en": "A blunt impact can damage external and internal structures despite an intact surface.",
+        "ar-IQ": "الضربة غير النافذة ممكن تضر أجزاء داخلية وخارجية رغم سلامة السطح.",
+        "ckb": "زەبری نەچووەناو دەکرێت بەشە ناوخۆیی و دەرەکییەکان زیانمەند بکات تەنانەت بە ڕووکاری ساغ."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.lens",
+        "eye.retina"
+      ],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/eye-injuries/"
+      ]
+    },
+    {
+      "id": "condition.penetrating-injury",
+      "kind": "condition",
+      "title": {
+        "en": "Penetrating eye injury",
+        "ar-IQ": "جرح العين النافذ",
+        "ckb": "برینداریی چوونەناوی چاو"
+      },
+      "aliases": [
+        "Penetrating eye injury",
+        "penetrating injury",
+        "open globe",
+        "جرح العين النافذ",
+        "برینداریی چوونەناوی چاو"
+      ],
+      "answer": {
+        "en": "An open-globe injury needs emergency care; do not press the eye or remove an embedded object.",
+        "ar-IQ": "جرح المقلة المفتوح طارئ؛ لا تضغط على العين ولا تزيل جسم مغروس.",
+        "ckb": "برینداریی گۆی چاوی کراوە فریاکەوتنە؛ فشار لە چاو مەکە و تەنێکی چەسپاو دەر مەهێنە."
+      },
+      "anatomy_ids": [
+        "eye.sclera",
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/eye-injuries/"
+      ]
+    },
+    {
+      "id": "condition.hyphema",
+      "kind": "condition",
+      "title": {
+        "en": "Hyphema",
+        "ar-IQ": "تحدمية",
+        "ckb": "خوێن لە ژووری پێشەوە"
+      },
+      "aliases": [
+        "Hyphema",
+        "hyphema",
+        "تحدمية",
+        "خوێن لە ژووری پێشەوە"
+      ],
+      "answer": {
+        "en": "Blood collects in the anterior chamber, commonly after injury.",
+        "ar-IQ": "يتجمع الدم بالحجرة الأمامية، غالباً بعد إصابة.",
+        "ckb": "خوێن لە ژووری پێشەوە کۆدەبێتەوە، زۆرجار دوای برینداری."
+      },
+      "anatomy_ids": [
+        "eye.anterior-chamber",
+        "eye.iris"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Hyphema"
+      ]
+    },
+    {
+      "id": "condition.orbital-fracture",
+      "kind": "condition",
+      "title": {
+        "en": "Orbital fracture",
+        "ar-IQ": "كسر الحجاج",
+        "ckb": "شکانی کاسەی چاو"
+      },
+      "aliases": [
+        "Orbital fracture",
+        "orbital fracture",
+        "كسر الحجاج",
+        "شکانی کاسەی چاو"
+      ],
+      "answer": {
+        "en": "An orbital bone fracture can trap tissue or affect eye position and movement.",
+        "ar-IQ": "كسر عظم الحجاج ممكن يحبس نسيج أو يغير وضع وحركة العين.",
+        "ckb": "شکانی ئێسکی کاسەی چاو دەکرێت شانە بگیرێنێت یان دۆخ و جووڵەی چاو بگۆڕێت."
+      },
+      "anatomy_ids": [
+        "eye.bony-orbit",
+        "eye.inferior-rectus"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Orbital_Floor_Fractures"
+      ]
+    },
+    {
+      "id": "condition.intraocular-foreign-body",
+      "kind": "condition",
+      "title": {
+        "en": "Intraocular foreign body",
+        "ar-IQ": "جسم غريب داخل العين",
+        "ckb": "تەنێکی نامۆ لە ناو چاو"
+      },
+      "aliases": [
+        "Intraocular foreign body",
+        "intraocular foreign body",
+        "IOFB",
+        "جسم غريب داخل العين",
+        "تەنێکی نامۆ لە ناو چاو"
+      ],
+      "answer": {
+        "en": "A penetrating fragment inside the eye is an emergency even if pain is limited.",
+        "ar-IQ": "شظية نافذة داخل العين طارئة حتى إذا الألم قليل.",
+        "ckb": "پارچەیەکی چووەناوی چاو فریاکەوتنە تەنانەت ئەگەر ئازار کەم بێت."
+      },
+      "anatomy_ids": [
+        "eye.cornea",
+        "eye.vitreous-body"
+      ],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/eye-injuries/"
+      ]
+    },
+    {
+      "id": "condition.endophthalmitis",
+      "kind": "condition",
+      "title": {
+        "en": "Endophthalmitis",
+        "ar-IQ": "التهاب باطن العين",
+        "ckb": "هەوکردنی ناو چاو"
+      },
+      "aliases": [
+        "Endophthalmitis",
+        "endophthalmitis",
+        "التهاب باطن العين",
+        "هەوکردنی ناو چاو"
+      ],
+      "answer": {
+        "en": "Severe internal infection may follow surgery, injection, injury or bloodstream infection.",
+        "ar-IQ": "عدوى داخلية شديدة ممكن تتبع عملية أو حقنة أو إصابة أو عدوى بالدم.",
+        "ckb": "تووشبوونی توندی ناو چاو دەکرێت دوای نەشتەرگەری، دەرزی، برینداری یان تووشبوونی خوێن ڕووبدات."
+      },
+      "anatomy_ids": [
+        "eye.vitreous-body",
+        "eye.anterior-chamber"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/endophthalmitis"
+      ]
+    },
+    {
+      "id": "condition.retinopathy-prematurity",
+      "kind": "condition",
+      "title": {
+        "en": "Retinopathy of prematurity",
+        "ar-IQ": "اعتلال شبكية الخدج",
+        "ckb": "زیانی تۆڕینەی منداڵی پێشوەخت"
+      },
+      "aliases": [
+        "Retinopathy of prematurity",
+        "retinopathy prematurity",
+        "ROP",
+        "اعتلال شبكية الخدج",
+        "زیانی تۆڕینەی منداڵی پێشوەخت"
+      ],
+      "answer": {
+        "en": "Abnormal retinal blood vessel development in premature infants requires scheduled screening.",
+        "ar-IQ": "نمو أوعية شبكية غير طبيعي بالخدج يحتاج تحري بمواعيد محددة.",
+        "ckb": "گەشەی نائاسایی ڕەگەکانی تۆڕینە لە کۆرپەی پێشوەخت پشکنینی بەکات دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.retinal-vessels",
+        "eye.peripheral-retina"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinopathy-prematurity"
+      ]
+    },
+    {
+      "id": "condition.coloboma",
+      "kind": "condition",
+      "title": {
+        "en": "Coloboma",
+        "ar-IQ": "ثلامة العين",
+        "ckb": "کۆلۆبۆما"
+      },
+      "aliases": [
+        "Coloboma",
+        "coloboma",
+        "ثلامة العين",
+        "کۆلۆبۆما"
+      ],
+      "answer": {
+        "en": "A developmental gap may affect the iris, retina or optic nerve.",
+        "ar-IQ": "فجوة تطورية ممكن تصيب القزحية أو الشبكية أو العصب البصري.",
+        "ckb": "بۆشاییەکی گەشەیی دەکرێت قازحیە، تۆڕینە یان دەمارە بیناییەکە بگرێتەوە."
+      },
+      "anatomy_ids": [
+        "eye.iris",
+        "eye.retina",
+        "eye.optic-nerve"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/coloboma"
+      ]
+    },
+    {
+      "id": "condition.aniridia",
+      "kind": "condition",
+      "title": {
+        "en": "Aniridia",
+        "ar-IQ": "انعدام القزحية",
+        "ckb": "نەبوونی قازحیە"
+      },
+      "aliases": [
+        "Aniridia",
+        "aniridia",
+        "انعدام القزحية",
+        "نەبوونی قازحیە"
+      ],
+      "answer": {
+        "en": "Reduced iris development can coexist with other eye and sometimes systemic abnormalities.",
+        "ar-IQ": "نقص تطور القزحية ممكن يجي ويه مشاكل عينية وأحياناً عامة.",
+        "ckb": "کەمی گەشەی قازحیە دەکرێت لەگەڵ کێشەی تری چاو و هەندێک جار گشتی بێت."
+      },
+      "anatomy_ids": [
+        "eye.iris",
+        "eye.fovea"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Aniridia"
+      ]
+    },
+    {
+      "id": "condition.microphthalmia",
+      "kind": "condition",
+      "title": {
+        "en": "Microphthalmia",
+        "ar-IQ": "صغر العين الخلقي",
+        "ckb": "بچووکیی چاوی لەدایکبوون"
+      },
+      "aliases": [
+        "Microphthalmia",
+        "microphthalmia",
+        "صغر العين الخلقي",
+        "بچووکیی چاوی لەدایکبوون"
+      ],
+      "answer": {
+        "en": "One or both eyes are unusually small from altered development before birth.",
+        "ar-IQ": "عين وحدة أو العينان أصغر من الطبيعي بسبب خلل التطور قبل الولادة.",
+        "ckb": "یەک یان هەردوو چاو بەهۆی گۆڕانی گەشەی پێش لەدایکبوونەوە نائاسایی بچووکن."
+      },
+      "anatomy_ids": [
+        "eye.sclera",
+        "eye.retina"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/anophthalmia-and-microphthalmia"
+      ]
+    },
+    {
+      "id": "condition.retinoblastoma",
+      "kind": "condition",
+      "title": {
+        "en": "Retinoblastoma",
+        "ar-IQ": "الورم الأرومي الشبكي",
+        "ckb": "ڕەتینۆبلاستۆما"
+      },
+      "aliases": [
+        "Retinoblastoma",
+        "retinoblastoma",
+        "الورم الأرومي الشبكي",
+        "ڕەتینۆبلاستۆما"
+      ],
+      "answer": {
+        "en": "A childhood retinal cancer may first cause a white pupil reflection and needs prompt specialist assessment.",
+        "ar-IQ": "سرطان شبكية الطفولة ممكن يظهر أولاً كانعكاس بؤبؤ أبيض ويحتاج مختص بسرعة.",
+        "ckb": "شێرپەنجەی تۆڕینەی منداڵی دەکرێت سەرەتا بە ڕەنگدانەوەی سپیی بیلبیلە دەربکەوێت و زوو پشکنینی پسپۆڕ دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.retina"
+      ],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinoblastoma"
+      ]
+    },
+    {
+      "id": "condition.uveal-melanoma",
+      "kind": "condition",
+      "title": {
+        "en": "Uveal melanoma",
+        "ar-IQ": "ميلانوما العنبية",
+        "ckb": "مێلانۆمای یوڤیا"
+      },
+      "aliases": [
+        "Uveal melanoma",
+        "uveal melanoma",
+        "ميلانوما العنبية",
+        "مێلانۆمای یوڤیا"
+      ],
+      "answer": {
+        "en": "A malignant tumour can arise in the choroid, ciliary body or iris.",
+        "ar-IQ": "ورم خبيث ممكن ينشأ بالمشيمية أو الجسم الهدبي أو القزحية.",
+        "ckb": "گرێی خراپ دەکرێت لە کۆرۆید، جەستەی مژۆڵکەیی یان قازحیە دروست ببێت."
+      },
+      "anatomy_ids": [
+        "eye.choroid",
+        "eye.ciliary-body",
+        "eye.iris"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Choroidal_and_Ciliary_Body_Melanoma"
+      ]
+    },
+    {
+      "id": "condition.ocular-surface-tumours",
+      "kind": "condition",
+      "title": {
+        "en": "Ocular surface tumours",
+        "ar-IQ": "أورام سطح العين",
+        "ckb": "گرێکانی ڕووکاری چاو"
+      },
+      "aliases": [
+        "Ocular surface tumours",
+        "ocular surface tumours",
+        "أورام سطح العين",
+        "گرێکانی ڕووکاری چاو"
+      ],
+      "answer": {
+        "en": "Surface growths include benign, precancerous and malignant lesions requiring examination.",
+        "ar-IQ": "نموات السطح تشمل حميدة وما قبل السرطان وخبيثة وتحتاج فحص.",
+        "ckb": "گەشەکانی ڕووکار دەتوانن باشخوو، پێش شێرپەنجە یان خراپ بن و پشکنین دەوێن."
+      },
+      "anatomy_ids": [
+        "eye.bulbar-conjunctiva",
+        "eye.cornea"
+      ],
+      "source_urls": [
+        "https://eyewiki.aao.org/Ocular_Surface_Squamous_Neoplasia"
+      ]
+    },
+    {
+      "id": "condition.eyelid-tumours",
+      "kind": "condition",
+      "title": {
+        "en": "Eyelid tumours",
+        "ar-IQ": "أورام الجفن",
+        "ckb": "گرێکانی پلک"
+      },
+      "aliases": [
+        "Eyelid tumours",
+        "eyelid tumours",
+        "أورام الجفن",
+        "گرێکانی پلک"
+      ],
+      "answer": {
+        "en": "Persistent or changing lid lesions sometimes need biopsy to identify their nature.",
+        "ar-IQ": "آفات الجفن المستمرة أو المتغيرة أحياناً تحتاج خزعة لمعرفة طبيعتها.",
+        "ckb": "گۆڕانکارییە بەردەوام یان گۆڕاوەکانی پلک هەندێک جار بۆ ناسینی جۆریان نموونەی شانە دەوێن."
+      },
+      "anatomy_ids": [
+        "eye.upper-eyelid",
+        "eye.eyelid-margin"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/eyelid-growths"
+      ]
+    },
+    {
+      "id": "condition.autoimmune-eye-disease",
+      "kind": "condition",
+      "title": {
+        "en": "Autoimmune eye involvement",
+        "ar-IQ": "تأثر العين بأمراض المناعة الذاتية",
+        "ckb": "کاریگەری نەخۆشیی خۆبەرگری لە چاو"
+      },
+      "aliases": [
+        "Autoimmune eye involvement",
+        "autoimmune eye disease",
+        "تأثر العين بأمراض المناعة الذاتية",
+        "کاریگەری نەخۆشیی خۆبەرگری لە چاو"
+      ],
+      "answer": {
+        "en": "Systemic inflammatory disease can affect the ocular surface, sclera, uvea or retinal vessels.",
+        "ar-IQ": "مرض التهابي عام ممكن يصيب السطح أو الصلبة أو العنبية أو أوعية الشبكية.",
+        "ckb": "نەخۆشیی هەوکردنی گشتی دەکرێت ڕووکار، سکلێرا، یوڤیا یان ڕەگەکانی تۆڕینە بگرێتەوە."
+      },
+      "anatomy_ids": [
+        "eye.sclera",
+        "eye.iris",
+        "eye.retinal-vessels"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/uveitis-caused-by-systemic-rheumatic-disease"
+      ]
+    },
+    {
+      "id": "condition.giant-cell-arteritis",
+      "kind": "condition",
+      "title": {
+        "en": "Giant cell arteritis",
+        "ar-IQ": "التهاب الشريان ذي الخلايا العملاقة",
+        "ckb": "هەوکردنی شەریانی خانە گەورەکان"
+      },
+      "aliases": [
+        "Giant cell arteritis",
+        "giant cell arteritis",
+        "temporal arteritis",
+        "التهاب الشريان ذي الخلايا العملاقة",
+        "هەوکردنی شەریانی خانە گەورەکان"
+      ],
+      "answer": {
+        "en": "Arterial inflammation, usually after age 50, can threaten sight and needs urgent assessment.",
+        "ar-IQ": "التهاب شرياني غالباً بعد عمر 50 ممكن يهدد النظر ويحتاج فحص عاجل.",
+        "ckb": "هەوکردنی شەریان زۆرجار دوای تەمەنی ٥٠ دەکرێت بینین بخاتە مەترسی و پشکنینی پەلەیی دەوێت."
+      },
+      "anatomy_ids": [
+        "eye.optic-nerve",
+        "eye.retinal-vessels"
+      ],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/temporal-arteritis/"
+      ]
+    },
+    {
+      "id": "condition.medication-toxicity",
+      "kind": "condition",
+      "title": {
+        "en": "Medication-related ocular toxicity",
+        "ar-IQ": "سمية الأدوية على العين",
+        "ckb": "ژەهراویبوونی چاو بە دەرمان"
+      },
+      "aliases": [
+        "Medication-related ocular toxicity",
+        "medication toxicity",
+        "drug toxicity",
+        "سمية الأدوية على العين",
+        "ژەهراویبوونی چاو بە دەرمان"
+      ],
+      "answer": {
+        "en": "Some medicines can damage retinal or optic nerve function; monitoring depends on the medicine.",
+        "ar-IQ": "بعض الأدوية ممكن تضر الشبكية أو العصب؛ المتابعة تعتمد على نوع الدواء.",
+        "ckb": "هەندێک دەرمان دەکرێت تۆڕینە یان دەمار زیانمەند بکەن؛ بەدواداچوون بە جۆری دەرمانەکە پەیوەستە."
+      },
+      "anatomy_ids": [
+        "eye.retina",
+        "eye.optic-nerve"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/toxic-and-nutritional-optic-neuropathies"
+      ]
+    },
+    {
+      "id": "condition.neurological-visual-causes",
+      "kind": "cause-category",
+      "title": {
+        "en": "Neurological causes of visual symptoms",
+        "ar-IQ": "أسباب عصبية لأعراض النظر",
+        "ckb": "هۆکارە دەمارەییەکانی نیشانەکانی بینین"
+      },
+      "aliases": [
+        "Neurological causes of visual symptoms",
+        "neurological visual causes",
+        "أسباب عصبية لأعراض النظر",
+        "هۆکارە دەمارەییەکانی نیشانەکانی بینین"
+      ],
+      "answer": {
+        "en": "Disorders beyond the eye can affect visual pathways or eye movement.",
+        "ar-IQ": "اضطرابات خارج العين ممكن تصيب مسارات النظر أو حركة العين.",
+        "ckb": "تێکچوونەکانی دەرەوەی چاو دەکرێت ڕێڕەوی بینین یان جووڵەی چاو بگرنەوە."
+      },
+      "anatomy_ids": [
+        "eye.optic-nerve",
+        "eye.superior-rectus"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/the-optic-pathway"
+      ]
+    },
+    {
+      "id": "condition.vascular-visual-causes",
+      "kind": "cause-category",
+      "title": {
+        "en": "Vascular causes of visual symptoms",
+        "ar-IQ": "أسباب وعائية لأعراض النظر",
+        "ckb": "هۆکارە ڕەگییەکانی نیشانەکانی بینین"
+      },
+      "aliases": [
+        "Vascular causes of visual symptoms",
+        "vascular visual causes",
+        "أسباب وعائية لأعراض النظر",
+        "هۆکارە ڕەگییەکانی نیشانەکانی بینین"
+      ],
+      "answer": {
+        "en": "Reduced blood flow in the eye or brain can cause sudden visual symptoms and needs emergency assessment.",
+        "ar-IQ": "نقص جريان الدم بالعين أو الدماغ ممكن يسبب أعراض نظر مفاجئة وتحتاج طوارئ.",
+        "ckb": "کەمی ڕۆیشتنی خوێن لە چاو یان مێشک دەکرێت نیشانەی لەناکاوی بینین دروست بکات و فریاکەوتنی پێویستە."
+      },
+      "anatomy_ids": [
+        "eye.retinal-vessels",
+        "eye.optic-nerve"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/symptoms-of-ophthalmic-disorders/acute-vision-loss"
+      ]
+    },
+    {
+      "id": "education.pain-scale",
+      "kind": "education",
+      "title": {
+        "en": "Understanding the pain score",
+        "ar-IQ": "فهم درجة الألم",
+        "ckb": "تێگەیشتن لە نمرەی ئازار"
+      },
+      "aliases": [
+        "pain scale",
+        "pain level",
+        "rate my pain",
+        "how bad is my pain"
+      ],
+      "answer": {
+        "en": "Choose your own score: 0 means no pain, 1–3 mild, 4–6 moderate and 7–10 severe. I can describe that reported band and its effect on activities, but cannot measure pain from text.",
+        "ar-IQ": "اختار درجتك: صفر بدون ألم، 1–3 خفيف، 4–6 متوسط، 7–10 شديد. أكدر أوصف الدرجة اللي تبلغ عنها وتأثيرها على نشاطك، بس ما أكدر أقيس الألم من النص.",
+        "ckb": "نمرەی خۆت هەڵبژێرە: سفر بێ ئازار، ١–٣ سووک، ٤–٦ مامناوەند، ٧–١٠ توند. دەتوانم پلەی ڕاگەیەنراو و کاریگەرییەکەی باس بکەم، بەڵام ناتوانم لە دەقەوە ئازار بپێوم."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://dhcw.nhs.wales/data/information-standards/data-standards/data-standards-files/nursing-documentation-docs/rsk-allwales-pain-risk-assessment-final-v2-4-pdf-pdf/"
+      ]
+    },
+    {
+      "id": "education.painless-warning",
+      "kind": "education",
+      "title": {
+        "en": "Can a serious eye problem be painless?",
+        "ar-IQ": "ممكن مشكلة خطرة تكون بدون ألم؟",
+        "ckb": "دەکرێت کێشەیەکی جدی بێ ئازار بێت؟"
+      },
+      "aliases": [
+        "no pain",
+        "painless",
+        "zero pain"
+      ],
+      "answer": {
+        "en": "Yes. Sudden sight loss needs emergency assessment even with a pain score of zero. A pain score is separate from urgency.",
+        "ar-IQ": "نعم. فقدان النظر المفاجئ يحتاج طوارئ حتى بدرجة ألم صفر. درجة الألم منفصلة عن الاستعجال.",
+        "ckb": "بەڵێ. لەدەستدانی لەناکاوی بینین فریاکەوتن دەوێت تەنانەت بە نمرەی ئازاری سفر. نمرەی ئازار جیاوازە لە پەلە."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/vision-loss/"
+      ]
+    },
+    {
+      "id": "education.dryness",
+      "kind": "education",
+      "title": {
+        "en": "Why can eyes feel dry?",
+        "ar-IQ": "ليش العين تحس بالجفاف؟",
+        "ckb": "بۆچی چاو هەستی وشکی دەکات؟"
+      },
+      "aliases": [
+        "dryness",
+        "dry eyes",
+        "dry eye"
+      ],
+      "answer": {
+        "en": "Tear quantity, tear stability, blinking and the environment can affect comfort. Similar symptoms have several causes; an examination is needed to establish the cause.",
+        "ar-IQ": "كمية وثبات الدمع والرمش والجو ممكن يأثرون على الراحة. الأعراض المتشابهة إلها أسباب مختلفة والفحص يحدد السبب.",
+        "ckb": "بڕ و سەقامگیریی فرمێسک، چەپڵەدان و ژینگە کاریگەری لە ئارامی دەکەن. نیشانەی هاوشێوە چەند هۆکارێکی هەیە و پشکنین هۆکار دیاری دەکات."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/dry-eye"
+      ]
+    },
+    {
+      "id": "education.screens",
+      "kind": "education",
+      "title": {
+        "en": "Screens and eye discomfort",
+        "ar-IQ": "الشاشات وتهيج العين",
+        "ckb": "شاشە و نارەحەتیی چاو"
+      },
+      "aliases": [
+        "screen",
+        "computer",
+        "digital eye strain"
+      ],
+      "answer": {
+        "en": "Long screen sessions can be associated with dry-eye symptoms. The interview asks about screen triggers and blinking; this association does not explain every episode of blur or pain.",
+        "ar-IQ": "استخدام الشاشة لفترة طويلة ممكن يرتبط بأعراض جفاف. نسأل عن الشاشات والرمش، بس هذا ما يفسر كل غشاوة أو ألم.",
+        "ckb": "بەکارهێنانی درێژی شاشە دەکرێت بە نیشانەی وشکی پەیوەست بێت. لە شاشە و چەپڵەدان دەپرسین، بەڵام ئەمە هەموو تەماوی یان ئازارێک ڕوون ناکاتەوە."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/dry-eye"
+      ]
+    },
+    {
+      "id": "education.redness",
+      "kind": "education",
+      "title": {
+        "en": "Understanding redness",
+        "ar-IQ": "فهم احمرار العين",
+        "ckb": "تێگەیشتن لە سووربوونی چاو"
+      },
+      "aliases": [
+        "red eye",
+        "redness"
+      ],
+      "answer": {
+        "en": "Redness has several possible causes. Pain, vision changes, contact lenses and injury change the urgency; appearance alone does not establish a diagnosis.",
+        "ar-IQ": "الاحمرار إله أسباب متعددة. الألم وتغير النظر والعدسات والإصابة يغيرون الاستعجال؛ الشكل وحده مو تشخيص.",
+        "ckb": "سووربوون چەندین هۆکاری هەیە. ئازار، گۆڕانی بینین، لێنز و برینداری پەلە دەگۆڕن؛ شێوە بە تەنها دەستنیشانکردن نییە."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/red-eye/"
+      ]
+    },
+    {
+      "id": "education.contact-lenses",
+      "kind": "education",
+      "title": {
+        "en": "Why ask about contact lenses?",
+        "ar-IQ": "ليش نسأل عن العدسات؟",
+        "ckb": "بۆچی لە لێنزی چەسپاو دەپرسین؟"
+      },
+      "aliases": [
+        "contact lens safety",
+        "lens hygiene"
+      ],
+      "answer": {
+        "en": "A red or painful eye in a contact-lens wearer needs urgent assessment. The interview also asks about overnight wear and water exposure to collect relevant context.",
+        "ar-IQ": "عين حمراء أو مؤلمة عند مستخدم العدسات تحتاج فحص عاجل. نسأل عن النوم بالعدسات والمي لجمع معلومات مهمة.",
+        "ckb": "چاوی سوور یان ئازاردار لە بەکارهێنەری لێنز پشکنینی پەلەیی دەوێت. لە خەوتن بە لێنز و بەرکەوتن بە ئاویش دەپرسین."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/red-eye/"
+      ]
+    },
+    {
+      "id": "education.chemical",
+      "kind": "education",
+      "title": {
+        "en": "What if a chemical enters the eye?",
+        "ar-IQ": "شنو إذا دخلت مادة كيميائية بالعين؟",
+        "ckb": "ئەگەر ماددەی کیمیایی بچێتە چاو چی؟"
+      },
+      "aliases": [
+        "chemical splash",
+        "chemical exposure"
+      ],
+      "answer": {
+        "en": "Do not wait for a questionnaire. Begin gentle rinsing with clean water for at least 20 minutes and arrange emergency assessment. Do not add other chemicals.",
+        "ar-IQ": "لا تنتظر الأسئلة. ابدأ غسل لطيف بمي نظيف لمدة لا تقل عن 20 دقيقة ورتب طوارئ. لا تضيف مواد كيميائية ثانية.",
+        "ckb": "چاوەڕێی پرسیارەکان مەکە. بە ئاوی پاک بە هێواشی بۆ لانیکەم ٢٠ خولەک بشۆ و فریاکەوتن ڕێکبخە. ماددەی کیمیایی تر زیاد مەکە."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/eye-injuries/"
+      ]
+    },
+    {
+      "id": "education.embedded-object",
+      "kind": "education",
+      "title": {
+        "en": "An embedded object",
+        "ar-IQ": "جسم مغروس بالعين",
+        "ckb": "تەنێکی چەسپاو لە چاو"
+      },
+      "aliases": [
+        "embedded object",
+        "penetrating injury"
+      ],
+      "answer": {
+        "en": "Do not try to remove an embedded object or press on the eye. Penetration or a high-speed impact needs emergency assessment.",
+        "ar-IQ": "لا تحاول تزيل جسم مغروس ولا تضغط على العين. الجرح النافذ أو الضربة السريعة يحتاج طوارئ.",
+        "ckb": "تەنێکی چەسپاو دەر مەهێنە و فشار لە چاو مەکە. برینداریی چوونەناو یان زەبری خێرا فریاکەوتن دەوێت."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/eye-injuries/"
+      ]
+    },
+    {
+      "id": "education.flashes",
+      "kind": "education",
+      "title": {
+        "en": "Why ask about flashes and floaters?",
+        "ar-IQ": "ليش نسأل عن الومضات والعوائم؟",
+        "ckb": "بۆچی لە بروسکە و خاڵی جووڵاو دەپرسین؟"
+      },
+      "aliases": [
+        "flashes and floaters",
+        "new floaters"
+      ],
+      "answer": {
+        "en": "New or increasing flashes or floaters, especially with a curtain or shadow, need urgent eye assessment. Do not wait to complete the interview.",
+        "ar-IQ": "ومضات أو عوائم جديدة أو متزايدة، خصوصاً ويا ستار أو ظل، تحتاج فحص عاجل. لا تنتظر تكمل الأسئلة.",
+        "ckb": "بروسکە یان خاڵی جووڵاوی نوێ یان زیادبوو، بەتایبەتی لەگەڵ پەردە یان سێبەر، پشکنینی پەلەیی دەوێت. چاوەڕێی تەواوبوونی پرسیارەکان مەکە."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/floaters-and-flashes-in-the-eyes/"
+      ]
+    },
+    {
+      "id": "education.blur",
+      "kind": "education",
+      "title": {
+        "en": "Why ask about blurred vision?",
+        "ar-IQ": "ليش نسأل عن الغشاوة؟",
+        "ckb": "بۆچی لە تەماوی دەپرسین؟"
+      },
+      "aliases": [
+        "blurred vision",
+        "blurry vision"
+      ],
+      "answer": {
+        "en": "The onset, persistence, affected eye and associated symptoms matter. New visual change needs professional assessment; chatting cannot check the retina, pressure or optic nerve.",
+        "ar-IQ": "وقت البداية والاستمرار والعين المتأثرة والأعراض المصاحبة مهمة. تغير النظر الجديد يحتاج مختص؛ المحادثة ما تفحص الشبكية أو الضغط أو العصب.",
+        "ckb": "دەستپێک، بەردەوامی، چاوی تووشبوو و نیشانە هاوبەشەکان گرنگن. گۆڕانی نوێی بینین پشکنینی پسپۆڕ دەوێت؛ گفتوگۆ تۆڕینە، فشار یان دەمار ناپشکنێت."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/vision-loss/"
+      ]
+    },
+    {
+      "id": "education.itch",
+      "kind": "education",
+      "title": {
+        "en": "What can itching tell us?",
+        "ar-IQ": "شنو تبين الحكة؟",
+        "ckb": "خوران چی پێمان دەڵێت؟"
+      },
+      "aliases": [
+        "itchy eyes",
+        "itching"
+      ],
+      "answer": {
+        "en": "Itching can occur with surface irritation or allergy, among other causes. It does not by itself confirm an infection or allergy.",
+        "ar-IQ": "الحكة ممكن تصير مع تهيج السطح أو حساسية وأسباب أخرى. وحدها ما تثبت عدوى أو حساسية.",
+        "ckb": "خوران دەکرێت لەگەڵ ورووژانی ڕووکار یان هەستیاری و هۆکاری تر بێت. بە تەنها تووشبوون یان هەستیاری ناسەلمێنێت."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/red-eye/"
+      ]
+    },
+    {
+      "id": "education.watering",
+      "kind": "education",
+      "title": {
+        "en": "Why can a dry eye water?",
+        "ar-IQ": "ليش العين الجافة تدمع؟",
+        "ckb": "بۆچی چاوی وشک فرمێسکی لێ دێت؟"
+      },
+      "aliases": [
+        "watery eyes",
+        "watering",
+        "tearing"
+      ],
+      "answer": {
+        "en": "Watery eyes can accompany surface irritation. Tear production and drainage both matter, so the interview asks about irritation and swelling near the inner corner.",
+        "ar-IQ": "الدمع ممكن يصاحب تهيج السطح. إنتاج وتصريف الدمع مهمين، لذلك نسأل عن التهيج والتورم قرب زاوية العين الداخلية.",
+        "ckb": "فرمێسک دەکرێت لەگەڵ ورووژانی ڕووکار بێت. بەرهەمهێنان و دەرچوونی فرمێسک گرنگن، بۆیە لە ورووژان و ئاوسانی گۆشەی ناوەوە دەپرسین."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/dry-eye"
+      ]
+    },
+    {
+      "id": "education.discharge",
+      "kind": "education",
+      "title": {
+        "en": "Can discharge identify an infection?",
+        "ar-IQ": "الإفرازات تحدد العدوى؟",
+        "ckb": "شلە جۆری تووشبوون دیاری دەکات؟"
+      },
+      "aliases": [
+        "eye discharge",
+        "sticky eye"
+      ],
+      "answer": {
+        "en": "The appearance and timing of discharge are useful descriptions, but a chat cannot reliably identify the cause or choose an antibiotic.",
+        "ar-IQ": "شكل ووقت الإفرازات معلومات مفيدة، بس المحادثة ما تحدد السبب بدقة ولا تختار مضاد حيوي.",
+        "ckb": "شێوە و کاتی شلە وەسفی بەسوودن، بەڵام گفتوگۆ ناتوانێت بە دڵنیایی هۆکار دیاری بکات یان ئەنتیبیۆتیک هەڵبژێرێت."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/red-eye/"
+      ]
+    },
+    {
+      "id": "education.drops",
+      "kind": "education",
+      "title": {
+        "en": "Can the assistant choose eye drops?",
+        "ar-IQ": "المساعد يختار قطرات؟",
+        "ckb": "یاریدەدەر دەتوانێت دڵۆپ هەڵبژێرێت؟"
+      },
+      "aliases": [
+        "eye drops",
+        "antibiotic",
+        "steroid drops",
+        "treatment"
+      ],
+      "answer": {
+        "en": "This prototype does not prescribe treatment. Eye-drop choice depends on the cause and examination; do not start prescription drops from a chatbot answer.",
+        "ar-IQ": "هذا النموذج ما يصف علاج. اختيار القطرة يعتمد على السبب والفحص؛ لا تبدأ قطرات بوصفة اعتماداً على جواب محادثة.",
+        "ckb": "ئەم مۆدێلە چارەسەر نانووسێت. هەڵبژاردنی دڵۆپ بە هۆکار و پشکنینەوە پەیوەستە؛ لەسەر بنەمای وەڵامی گفتوگۆ دڵۆپی ڕەچەتەدار دەست پێمەکە."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/red-eye/"
+      ]
+    },
+    {
+      "id": "education.side",
+      "kind": "education",
+      "title": {
+        "en": "How does left or right work?",
+        "ar-IQ": "شلون تحدد اليمين واليسار؟",
+        "ckb": "چەپ و ڕاست چۆن دیاری دەکرێت؟"
+      },
+      "aliases": [
+        "left right",
+        "both eyes",
+        "laterality"
+      ],
+      "answer": {
+        "en": "The 3D model uses the patient’s side. Rotating the camera does not change it. You can report both eyes even while one eye is displayed for learning.",
+        "ar-IQ": "النموذج يعتمد جهة المريض. تدوير الكاميرا ما يغيرها. تكدر تبلغ عن العينين حتى إذا النموذج يعرض عين وحدة للتعلم.",
+        "ckb": "مۆدێل لای نەخۆش بەکاردەهێنێت. سووڕاندنی کامێرا لایەکە ناگۆڕێت. دەتوانیت هەردوو چاو باس بکەیت تەنانەت کاتێک یەک چاو پیشان دەدرێت."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/vision-loss/"
+      ]
+    },
+    {
+      "id": "education.selection",
+      "kind": "education",
+      "title": {
+        "en": "Does selecting retina mean retinal disease?",
+        "ar-IQ": "اختيار الشبكية يعني مرض بيها؟",
+        "ckb": "هەڵبژاردنی تۆڕینە واتای نەخۆشییە؟"
+      },
+      "aliases": [
+        "clicked structure",
+        "anatomy selection"
+      ],
+      "answer": {
+        "en": "No. Anatomy selection is a learning action. It does not establish a symptom, a diagnosis, or where a problem originates.",
+        "ar-IQ": "لا. اختيار التشريح للتعلم. ما يثبت عرض أو تشخيص أو مصدر المشكلة.",
+        "ckb": "نەخێر. هەڵبژاردنی پێکهاتە بۆ فێربوونە. نیشانە، دەستنیشانکردن یان سەرچاوەی کێشە ناسەلمێنێت."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/vision-loss/"
+      ]
+    },
+    {
+      "id": "education.examination",
+      "kind": "education",
+      "title": {
+        "en": "Why might an eye examination be needed?",
+        "ar-IQ": "ليش ممكن نحتاج فحص عين؟",
+        "ckb": "بۆچی ڕەنگە پشکنینی چاو پێویست بێت؟"
+      },
+      "aliases": [
+        "eye examination",
+        "eye tests",
+        "diagnose me"
+      ],
+      "answer": {
+        "en": "An examination can assess vision and eye structures that chat cannot inspect. Depending on the concern, a professional may use a slit lamp, pressure measurement or retinal examination.",
+        "ar-IQ": "الفحص يقيم النظر وتراكيب ما تشوفها المحادثة. حسب المشكلة المختص ممكن يستخدم مصباح شقي أو قياس الضغط أو فحص الشبكية.",
+        "ckb": "پشکنین بینین و پێکهاتەیەک هەڵدەسەنگێنێت کە گفتوگۆ نایبینێت. بە پێی کێشەکە پسپۆڕ دەکرێت چرای شەق، پێوانی فشار یان پشکنینی تۆڕینە بەکاربهێنێت."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/vision-loss/"
+      ]
+    },
+    {
+      "id": "education.unknown",
+      "kind": "education",
+      "title": {
+        "en": "What if I do not know an answer?",
+        "ar-IQ": "إذا ما أعرف الجواب؟",
+        "ckb": "ئەگەر وەڵام نەزانم چی؟"
+      },
+      "aliases": [
+        "not sure",
+        "unknown answer"
+      ],
+      "answer": {
+        "en": "Choose Not sure. Missing information stays unknown; the assistant does not assume that an unreported warning sign is absent.",
+        "ar-IQ": "اختار مو متأكد. المعلومة الناقصة تبقى غير معروفة؛ المساعد ما يعتبر علامة الخطر غير موجودة لأن ما انذكرت.",
+        "ckb": "دڵنیا نیم هەڵبژێرە. زانیاریی کەم نادیار دەمێنێتەوە؛ یاریدەدەر نیشانەی نەباسکراو بە نەبوو دانانێت."
+      },
+      "anatomy_ids": [],
+      "source_urls": [
+        "https://www.nhs.uk/conditions/vision-loss/"
+      ]
+    },
+    {
+      "id": "education.glaucoma",
+      "kind": "education",
+      "title": {
+        "en": "What is glaucoma?",
+        "ar-IQ": "شنو الزرق؟",
+        "ckb": "گلاوکۆما چییە؟"
+      },
+      "aliases": [
+        "glaucoma",
+        "الزرق",
+        "گلاوکۆما"
+      ],
+      "answer": {
+        "en": "Glaucoma is a group of conditions that damage the optic nerve. There are different types, and some have few early symptoms. Diagnosis needs an eye examination, not a pain score.",
+        "ar-IQ": "الزرق مجموعة حالات تضر العصب البصري. إله أنواع مختلفة وبعضها بدون أعراض مبكرة واضحة. التشخيص يحتاج فحص عين، مو درجة ألم.",
+        "ckb": "گلاوکۆما کۆمەڵە دۆخێکە کە دەمارە بیناییەکە زیانمەند دەکات. چەند جۆرێکی هەیە و هەندێکی نیشانەی زووی کەمە. دەستنیشانکردن پشکنینی چاو دەوێت، نەک نمرەی ئازار."
+      },
+      "anatomy_ids": [
+        "eye.optic-nerve",
+        "eye.optic-disc",
+        "eye.drainage-angle"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/overview-of-glaucoma"
+      ]
+    },
+    {
+      "id": "education.cataract",
+      "kind": "education",
+      "title": {
+        "en": "What is a cataract?",
+        "ar-IQ": "شنو الساد؟",
+        "ckb": "کاتاراکت چییە؟"
+      },
+      "aliases": [
+        "cataract",
+        "cataracts",
+        "الساد",
+        "کاتاراکت"
+      ],
+      "answer": {
+        "en": "A cataract is clouding of the lens. Age, injury, early development and some medicines can be associated with different forms. An examination confirms the cause of blurred vision.",
+        "ar-IQ": "الساد عتامة بعدسة العين. العمر والإصابة والتطور المبكر وبعض الأدوية يرتبطون بأنواع مختلفة. الفحص يؤكد سبب الغشاوة.",
+        "ckb": "کاتاراکت تەمەنگرتنی عەدەسەیە. تەمەن، برینداری، گەشەی زوو و هەندێک دەرمان بە جۆری جیاواز پەیوەستن. پشکنین هۆکاری تەماوی پشتڕاست دەکاتەوە."
+      },
+      "anatomy_ids": [
+        "eye.lens"
+      ],
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/cataract/cataract"
+      ]
+    }
+  ]
+}

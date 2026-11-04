@@ -1,0 +1,3263 @@
+{
+  "version": "eye-draft-2026-10-30.4",
+  "clinical_review_status": "draft",
+  "clinical_use_available": false,
+  "symptoms": [
+    {
+      "id": "symptom.pain",
+      "label": {
+        "en": "Pain",
+        "ar-IQ": "ألم",
+        "ckb": "ئازار"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.burning",
+      "label": {
+        "en": "Burning",
+        "ar-IQ": "حرقة",
+        "ckb": "سووتان"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.itching",
+      "label": {
+        "en": "Itching",
+        "ar-IQ": "حكة",
+        "ckb": "خوران"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.grittiness",
+      "label": {
+        "en": "Grittiness",
+        "ar-IQ": "إحساس بالرمل",
+        "ckb": "هەستی لم"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.foreign-body",
+      "label": {
+        "en": "Foreign-body sensation",
+        "ar-IQ": "إحساس بجسم غريب",
+        "ckb": "هەستی شتێکی نامۆ"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.redness",
+      "label": {
+        "en": "Redness",
+        "ar-IQ": "احمرار",
+        "ckb": "سووربوونەوە"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.watering",
+      "label": {
+        "en": "Watering",
+        "ar-IQ": "دموع زائدة",
+        "ckb": "فرمێسکی زۆر"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.dryness",
+      "label": {
+        "en": "Dryness",
+        "ar-IQ": "جفاف",
+        "ckb": "وشکی"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.discharge",
+      "label": {
+        "en": "Discharge",
+        "ar-IQ": "إفرازات",
+        "ckb": "دەردانی شلە"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.crusting",
+      "label": {
+        "en": "Crusting",
+        "ar-IQ": "قشور",
+        "ckb": "توێکڵ"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.swelling",
+      "label": {
+        "en": "Swelling",
+        "ar-IQ": "تورم",
+        "ckb": "ئاوسان"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.lid-lump",
+      "label": {
+        "en": "Eyelid lump",
+        "ar-IQ": "كتلة بالجفن",
+        "ckb": "گرێ لە پلک"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.drooping",
+      "label": {
+        "en": "Drooping eyelid",
+        "ar-IQ": "تدلي الجفن",
+        "ckb": "داکەوتنی پلک"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.twitching",
+      "label": {
+        "en": "Eyelid twitching",
+        "ar-IQ": "رفة الجفن",
+        "ckb": "لەرزینی پلک"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.blurred-vision",
+      "label": {
+        "en": "Blurred vision",
+        "ar-IQ": "غشاوة بالنظر",
+        "ckb": "تەماوی بینین"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.double-vision",
+      "label": {
+        "en": "Double vision",
+        "ar-IQ": "ازدواج النظر",
+        "ckb": "دووانبینین"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.vision-loss",
+      "label": {
+        "en": "Loss of vision",
+        "ar-IQ": "فقدان النظر",
+        "ckb": "لەدەستدانی بینین"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.flashes",
+      "label": {
+        "en": "Flashes",
+        "ar-IQ": "ومضات ضوئية",
+        "ckb": "بروسکەی ڕووناکی"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.floaters",
+      "label": {
+        "en": "Floaters",
+        "ar-IQ": "عوائم بالنظر",
+        "ckb": "خاڵی جووڵاو"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.curtain",
+      "label": {
+        "en": "Curtain or shadow",
+        "ar-IQ": "ستار أو ظل بالنظر",
+        "ckb": "پەردە یان سێبەر لە بینین"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.halos",
+      "label": {
+        "en": "Halos",
+        "ar-IQ": "هالات حول الضوء",
+        "ckb": "بازنە دەوری ڕووناکی"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.glare",
+      "label": {
+        "en": "Glare",
+        "ar-IQ": "انبهار بالضوء",
+        "ckb": "بریقەی ڕووناکی"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.light-sensitivity",
+      "label": {
+        "en": "Light sensitivity",
+        "ar-IQ": "حساسية للضوء",
+        "ckb": "هەستیاری بە ڕووناکی"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.distorted-lines",
+      "label": {
+        "en": "Distorted lines",
+        "ar-IQ": "خطوط متعرجة",
+        "ckb": "خەتی خواروخێچ"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.blind-spots",
+      "label": {
+        "en": "Blind spots",
+        "ar-IQ": "بقع عمياء",
+        "ckb": "خاڵی نابینا"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.colour-change",
+      "label": {
+        "en": "Colour changes",
+        "ar-IQ": "تغير بالألوان",
+        "ckb": "گۆڕانی ڕەنگ"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.night-vision",
+      "label": {
+        "en": "Poor night vision",
+        "ar-IQ": "ضعف النظر بالليل",
+        "ckb": "لاوازی بینینی شەو"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.protrusion",
+      "label": {
+        "en": "Protrusion",
+        "ar-IQ": "جحوظ العين",
+        "ckb": "هاتنەدەرەوەی چاو"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.movement-pain",
+      "label": {
+        "en": "Pain on eye movement",
+        "ar-IQ": "ألم عند تحريك العين",
+        "ckb": "ئازار لە جووڵاندنی چاو"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.white-pupil",
+      "label": {
+        "en": "White pupil or reflection",
+        "ar-IQ": "بؤبؤ أو انعكاس أبيض",
+        "ckb": "بیلبیلە یان ڕەنگدانەوەی سپی"
+      },
+      "kind": "symptom_or_observed_sign"
+    },
+    {
+      "id": "symptom.unequal-pupils",
+      "label": {
+        "en": "New unequal pupils",
+        "ar-IQ": "اختلاف جديد بحجم البؤبؤ",
+        "ckb": "جیاوازی نوێی قەبارەی بیلبیلە"
+      },
+      "kind": "symptom_or_observed_sign"
+    }
+  ],
+  "locations": [
+    {
+      "id": "whole-eye",
+      "label": {
+        "en": "Whole eye",
+        "ar-IQ": "كل العين",
+        "ckb": "هەموو چاو"
+      }
+    },
+    {
+      "id": "surface",
+      "label": {
+        "en": "Surface",
+        "ar-IQ": "سطح العين",
+        "ckb": "ڕووکاری چاو"
+      }
+    },
+    {
+      "id": "eyelid",
+      "label": {
+        "en": "Eyelid",
+        "ar-IQ": "الجفن",
+        "ckb": "پلک"
+      }
+    },
+    {
+      "id": "behind",
+      "label": {
+        "en": "Behind the eye",
+        "ar-IQ": "خلف العين",
+        "ckb": "پشت چاو"
+      }
+    },
+    {
+      "id": "around",
+      "label": {
+        "en": "Around the eye",
+        "ar-IQ": "حول العين",
+        "ckb": "دەوروبەری چاو"
+      }
+    },
+    {
+      "id": "unknown",
+      "label": {
+        "en": "Not sure",
+        "ar-IQ": "مو متأكد",
+        "ckb": "دڵنیا نیم"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "question.concern",
+      "field": "concern",
+      "text": {
+        "en": "What is the main eye concern in this synthetic example?",
+        "ar-IQ": "شنو المشكلة الرئيسية بالعين بهذا المثال التعليمي؟",
+        "ckb": "لە ئەم نموونە فێرکارییەدا کێشەی سەرەکی چاو چییە؟"
+      },
+      "options": [],
+      "when": null,
+      "type": "text"
+    },
+    {
+      "id": "question.vision",
+      "field": "vision",
+      "text": {
+        "en": "Has the vision changed?",
+        "ar-IQ": "هل تغير النظر؟",
+        "ckb": "ئایا بینین گۆڕاوە؟"
+      },
+      "options": [
+        {
+          "value": "unchanged",
+          "label": {
+            "en": "No change",
+            "ar-IQ": "ماكو تغير",
+            "ckb": "گۆڕان نییە"
+          }
+        },
+        {
+          "value": "blurred",
+          "label": {
+            "en": "Blurred",
+            "ar-IQ": "غشاوة",
+            "ckb": "تەماوی"
+          }
+        },
+        {
+          "value": "loss",
+          "label": {
+            "en": "Some or all vision lost",
+            "ar-IQ": "فقدان جزء أو كل النظر",
+            "ckb": "لەدەستدانی هەندێک یان هەموو بینین"
+          }
+        },
+        {
+          "value": "double",
+          "label": {
+            "en": "Double vision",
+            "ar-IQ": "ازدواج النظر",
+            "ckb": "دووانبینین"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": null,
+      "type": "choice"
+    },
+    {
+      "id": "question.exposure",
+      "field": "exposure",
+      "text": {
+        "en": "Was there an injury or chemical splash?",
+        "ar-IQ": "صار جرح أو تعرض لمادة كيميائية؟",
+        "ckb": "برینداری یان پڕژانی ماددەی کیمیایی ڕوویداوە؟"
+      },
+      "options": [
+        {
+          "value": "none",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "chemical",
+          "label": {
+            "en": "Chemical splash",
+            "ar-IQ": "مادة كيميائية",
+            "ckb": "ماددەی کیمیایی"
+          }
+        },
+        {
+          "value": "penetrating",
+          "label": {
+            "en": "Sharp or embedded object",
+            "ar-IQ": "جسم حاد أو مغروس",
+            "ckb": "شتێکی تیژ یان چەسپاو"
+          }
+        },
+        {
+          "value": "high-speed",
+          "label": {
+            "en": "High-speed impact",
+            "ar-IQ": "ضربة بسرعة عالية",
+            "ckb": "پێکدادان بە خێرایی زۆر"
+          }
+        },
+        {
+          "value": "other",
+          "label": {
+            "en": "Other injury",
+            "ar-IQ": "إصابة أخرى",
+            "ckb": "برینداری تر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": null,
+      "type": "choice"
+    },
+    {
+      "id": "question.onset",
+      "field": "onset",
+      "text": {
+        "en": "Did the problem start suddenly or gradually?",
+        "ar-IQ": "المشكلة بدت فجأة لو بالتدريج؟",
+        "ckb": "کێشەکە لەناکاو دەستی پێکرد یان وردەوردە؟"
+      },
+      "options": [
+        {
+          "value": "sudden",
+          "label": {
+            "en": "Suddenly",
+            "ar-IQ": "فجأة",
+            "ckb": "لەناکاو"
+          }
+        },
+        {
+          "value": "gradual",
+          "label": {
+            "en": "Gradually",
+            "ar-IQ": "بالتدريج",
+            "ckb": "وردەوردە"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": null,
+      "type": "choice"
+    },
+    {
+      "id": "question.pain",
+      "field": "pain",
+      "text": {
+        "en": "How much eye pain is there, from 0 (none) to 10?",
+        "ar-IQ": "شكد ألم العين من صفر (بدون ألم) إلى عشرة؟",
+        "ckb": "ئازاری چاو لە سفر (بێ ئازار) تا دە چەندە؟"
+      },
+      "options": [],
+      "when": null,
+      "type": "pain"
+    },
+    {
+      "id": "question.pain-function",
+      "field": "pain_function",
+      "text": {
+        "en": "How does the pain affect normal activities?",
+        "ar-IQ": "شلون الألم يأثر على نشاطك العادي؟",
+        "ckb": "ئازار چۆن کاریگەری لە چالاکییە ئاساییەکانت دەکات؟"
+      },
+      "when": {
+        "pain_present": true
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "normal",
+          "label": {
+            "en": "I can do my normal activities",
+            "ar-IQ": "أكدر أسوي نشاطي العادي",
+            "ckb": "دەتوانم چالاکیی ئاسایی بکەم"
+          }
+        },
+        {
+          "value": "slowed",
+          "label": {
+            "en": "I can do them, but it is distracting",
+            "ar-IQ": "أكدر، بس الألم يشتتني",
+            "ckb": "دەتوانم، بەڵام ئازار سەرنجم دەبات"
+          }
+        },
+        {
+          "value": "stopped",
+          "label": {
+            "en": "I have stopped some activities",
+            "ar-IQ": "وقفت بعض النشاطات",
+            "ckb": "هەندێک چالاکیم وەستاندووە"
+          }
+        },
+        {
+          "value": "cannot",
+          "label": {
+            "en": "I cannot do my usual activities",
+            "ar-IQ": "ما أكدر أسوي نشاطي المعتاد",
+            "ckb": "ناتوانم چالاکییە ئاساییەکانم بکەم"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.contact",
+      "field": "contact_lenses",
+      "text": {
+        "en": "Are contact lenses worn?",
+        "ar-IQ": "يستخدم عدسات لاصقة؟",
+        "ckb": "لێنزی چەسپاو بەکاردەهێنێت؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": null,
+      "type": "choice"
+    },
+    {
+      "id": "question.surgery",
+      "field": "recent_procedure",
+      "text": {
+        "en": "Was there recent eye surgery, injection or another eye procedure?",
+        "ar-IQ": "صار مؤخراً عملية أو حقنة أو إجراء للعين؟",
+        "ckb": "لە ماوەی ڕابردوودا نەشتەرگەری، دەرزی یان کرداری چاو کراوە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": null,
+      "type": "choice"
+    },
+    {
+      "id": "question.movement",
+      "field": "movement_pain",
+      "text": {
+        "en": "Does moving the eye hurt or feel restricted?",
+        "ar-IQ": "تحريك العين يوجع أو حركتها محدودة؟",
+        "ckb": "جووڵاندنی چاو ئازاری هەیە یان سنووردارە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": {
+        "any_symptoms": [
+          "swelling",
+          "protrusion",
+          "pain",
+          "double-vision"
+        ]
+      },
+      "type": "choice"
+    },
+    {
+      "id": "question.fever",
+      "field": "fever",
+      "text": {
+        "en": "Is there a fever?",
+        "ar-IQ": "أكو حرارة؟",
+        "ckb": "تا هەیە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": {
+        "any_symptoms": [
+          "swelling",
+          "protrusion",
+          "movement-pain"
+        ]
+      },
+      "type": "choice"
+    },
+    {
+      "id": "question.headache",
+      "field": "severe_headache",
+      "text": {
+        "en": "Is there a severe or new headache?",
+        "ar-IQ": "أكو صداع شديد أو جديد؟",
+        "ckb": "سەرئێشەی توند یان نوێ هەیە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": {
+        "any_symptoms": [
+          "redness",
+          "pain",
+          "vision-loss",
+          "double-vision",
+          "unequal-pupils"
+        ]
+      },
+      "type": "choice"
+    },
+    {
+      "id": "question.nausea",
+      "field": "nausea",
+      "text": {
+        "en": "Is there nausea or vomiting?",
+        "ar-IQ": "أكو غثيان أو تقيؤ؟",
+        "ckb": "دڵتێکچوون یان ڕشانەوە هەیە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": {
+        "severe_headache": "yes"
+      },
+      "type": "choice"
+    },
+    {
+      "id": "question.vascular",
+      "field": "jaw_scalp",
+      "text": {
+        "en": "Is there new jaw pain when chewing or scalp tenderness?",
+        "ar-IQ": "أكو ألم جديد بالفك عند المضغ أو ألم بفروة الرأس؟",
+        "ckb": "ئازاری نوێی چەناگە لە کاتی جوین یان ناسکیی سەری پێست هەیە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": {
+        "visual": true
+      },
+      "type": "choice"
+    },
+    {
+      "id": "question.neurological",
+      "field": "neurological",
+      "text": {
+        "en": "Is there new weakness, facial droop, confusion or trouble speaking?",
+        "ar-IQ": "أكو ضعف جديد، تدلي بالوجه، تشوش أو صعوبة بالكلام؟",
+        "ckb": "لاوازیی نوێ، داکەوتنی ڕوو، شێوان یان کێشەی قسەکردن هەیە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": {
+        "any_symptoms": [
+          "double-vision",
+          "vision-loss",
+          "unequal-pupils"
+        ]
+      },
+      "type": "choice"
+    },
+    {
+      "id": "question.age",
+      "field": "age",
+      "text": {
+        "en": "What is the patient’s age in years? For a newborn, enter 0.",
+        "ar-IQ": "شكد عمر المريض بالسنين؟ للمولود الجديد اكتب صفر.",
+        "ckb": "تەمەنی نەخۆش بە ساڵ چەندە؟ بۆ تازەلەدایکبوو سفر بنووسە."
+      },
+      "options": [],
+      "when": null,
+      "type": "age"
+    },
+    {
+      "id": "question.infant-age",
+      "field": "age_days",
+      "text": {
+        "en": "For a baby under one year, how many days old are they?",
+        "ar-IQ": "للطفل الأقل من سنة، شكد عمره بالأيام؟",
+        "ckb": "بۆ منداڵی خوار یەک ساڵ، تەمەنی بە ڕۆژ چەندە؟"
+      },
+      "options": [],
+      "when": {
+        "age": 0
+      },
+      "type": "days"
+    },
+    {
+      "id": "question.side",
+      "field": "laterality",
+      "text": {
+        "en": "Which eye is affected, from the patient’s perspective?",
+        "ar-IQ": "أي عين متأثرة من جهة المريض؟",
+        "ckb": "لە ڕوانگەی نەخۆشەوە کام چاو تووش بووە؟"
+      },
+      "options": [
+        {
+          "value": "left",
+          "label": {
+            "en": "Left",
+            "ar-IQ": "اليسرى",
+            "ckb": "چەپ"
+          }
+        },
+        {
+          "value": "right",
+          "label": {
+            "en": "Right",
+            "ar-IQ": "اليمنى",
+            "ckb": "ڕاست"
+          }
+        },
+        {
+          "value": "both",
+          "label": {
+            "en": "Both eyes",
+            "ar-IQ": "العينين",
+            "ckb": "هەردوو چاو"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": null,
+      "type": "choice"
+    },
+    {
+      "id": "question.location",
+      "field": "location",
+      "text": {
+        "en": "Where does the problem seem to be?",
+        "ar-IQ": "وين تحس المشكلة؟",
+        "ckb": "هەست دەکەیت کێشەکە لە کوێیە؟"
+      },
+      "options": [
+        {
+          "value": "whole-eye",
+          "label": {
+            "en": "Whole eye",
+            "ar-IQ": "كل العين",
+            "ckb": "هەموو چاو"
+          }
+        },
+        {
+          "value": "surface",
+          "label": {
+            "en": "Surface",
+            "ar-IQ": "سطح العين",
+            "ckb": "ڕووکاری چاو"
+          }
+        },
+        {
+          "value": "eyelid",
+          "label": {
+            "en": "Eyelid",
+            "ar-IQ": "الجفن",
+            "ckb": "پلک"
+          }
+        },
+        {
+          "value": "behind",
+          "label": {
+            "en": "Behind the eye",
+            "ar-IQ": "خلف العين",
+            "ckb": "پشت چاو"
+          }
+        },
+        {
+          "value": "around",
+          "label": {
+            "en": "Around the eye",
+            "ar-IQ": "حول العين",
+            "ckb": "دەوروبەری چاو"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": null,
+      "type": "choice"
+    },
+    {
+      "id": "question.duration",
+      "field": "duration",
+      "text": {
+        "en": "How long has the problem been present?",
+        "ar-IQ": "صارلها شكد المشكلة؟",
+        "ckb": "کێشەکە ماوەی چەندە هەیە؟"
+      },
+      "options": [],
+      "when": null,
+      "type": "text"
+    },
+    {
+      "id": "question.progression",
+      "field": "progression",
+      "text": {
+        "en": "Is it getting worse, improving or staying the same?",
+        "ar-IQ": "دا تسوء لو تتحسن لو مثل ما هي؟",
+        "ckb": "خراپتر دەبێت، باشتر دەبێت یان وەک خۆیەتی؟"
+      },
+      "options": [
+        {
+          "value": "worsening",
+          "label": {
+            "en": "Getting worse",
+            "ar-IQ": "دا تسوء",
+            "ckb": "خراپتر دەبێت"
+          }
+        },
+        {
+          "value": "improving",
+          "label": {
+            "en": "Improving",
+            "ar-IQ": "دا تتحسن",
+            "ckb": "باشتر دەبێت"
+          }
+        },
+        {
+          "value": "same",
+          "label": {
+            "en": "Unchanged",
+            "ar-IQ": "مثل ما هي",
+            "ckb": "وەک خۆیەتی"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": null,
+      "type": "choice"
+    },
+    {
+      "id": "question.overnight",
+      "field": "overnight",
+      "text": {
+        "en": "Were contact lenses worn during sleep?",
+        "ar-IQ": "نام بالعدسات اللاصقة؟",
+        "ckb": "بە لێنزی چەسپاوەوە نووستووە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": {
+        "contact_lenses": "yes"
+      },
+      "type": "choice"
+    },
+    {
+      "id": "question.water",
+      "field": "water_exposure",
+      "text": {
+        "en": "Did the lenses contact tap water, a pool or shower water?",
+        "ar-IQ": "العدسات لامست مي الحنفية أو المسبح أو الدوش؟",
+        "ckb": "لێنزەکان پەیوەندییان بە ئاوی بۆری، مەلەوانگە یان دووشەوە هەبووە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": {
+        "contact_lenses": "yes"
+      },
+      "type": "choice"
+    },
+    {
+      "id": "question.caregiver",
+      "field": "caregiver",
+      "text": {
+        "en": "What has the caregiver noticed about the child’s eyes or behaviour?",
+        "ar-IQ": "شنو لاحظ مقدم الرعاية على عيون الطفل أو تصرفاته؟",
+        "ckb": "چاودێر چی لە چاوەکان یان ڕەفتاری منداڵەکە تێبینی کردووە؟"
+      },
+      "options": [],
+      "when": {
+        "child": true
+      },
+      "type": "text"
+    },
+    {
+      "id": "question.diabetes",
+      "field": "diabetes",
+      "text": {
+        "en": "Does the patient have diabetes?",
+        "ar-IQ": "المريض عنده سكري؟",
+        "ckb": "نەخۆشەکە شەکرەی هەیە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": null,
+      "type": "choice"
+    },
+    {
+      "id": "question.immunity",
+      "field": "immunosuppressed",
+      "text": {
+        "en": "Is the immune system weakened by illness or treatment?",
+        "ar-IQ": "المناعة ضعيفة بسبب مرض أو علاج؟",
+        "ckb": "بەرگریی لەش بەهۆی نەخۆشی یان چارەسەرەوە لاوازە؟"
+      },
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ],
+      "when": null,
+      "type": "choice"
+    },
+    {
+      "id": "question.history",
+      "field": "history",
+      "text": {
+        "en": "What relevant eye problems or treatments happened before?",
+        "ar-IQ": "شنو مشاكل أو علاجات العين السابقة؟",
+        "ckb": "پێشتر چ کێشە یان چارەسەرێکی پەیوەندیدار بە چاو هەبووە؟"
+      },
+      "options": [],
+      "when": null,
+      "type": "text"
+    },
+    {
+      "id": "question.medicines",
+      "field": "medicines",
+      "text": {
+        "en": "What medicines are used, including eye drops?",
+        "ar-IQ": "شنو الأدوية المستخدمة، ومنها قطرات العين؟",
+        "ckb": "چ دەرمانێک بەکاردەهێنرێت، لەوانەش دڵۆپی چاو؟"
+      },
+      "options": [],
+      "when": null,
+      "type": "text"
+    },
+    {
+      "id": "question.pain-character",
+      "field": "pain_character",
+      "text": {
+        "en": "Which description best fits the discomfort?",
+        "ar-IQ": "أي وصف أقرب للإحساس؟",
+        "ckb": "کام وەسف لە هەستەکەت نزیکترە؟"
+      },
+      "when": {
+        "pain_present": true
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "sharp",
+          "label": {
+            "en": "Sharp or stabbing",
+            "ar-IQ": "حاد أو مثل الطعن",
+            "ckb": "تیژ یان وەک لێدان"
+          }
+        },
+        {
+          "value": "ache",
+          "label": {
+            "en": "Aching or pressure",
+            "ar-IQ": "وجع أو ضغط",
+            "ckb": "ئێشە یان فشار"
+          }
+        },
+        {
+          "value": "burning",
+          "label": {
+            "en": "Burning",
+            "ar-IQ": "حرقة",
+            "ckb": "سووتان"
+          }
+        },
+        {
+          "value": "gritty",
+          "label": {
+            "en": "Gritty or scratchy",
+            "ar-IQ": "مثل الرمل أو الخدش",
+            "ckb": "وەک لم یان خەوش"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.pain-pattern",
+      "field": "pain_pattern",
+      "text": {
+        "en": "Is the pain constant or does it come and go?",
+        "ar-IQ": "الألم مستمر لو يروح ويجي؟",
+        "ckb": "ئازار بەردەوامە یان دێت و دەڕوات؟"
+      },
+      "when": {
+        "pain_present": true
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "constant",
+          "label": {
+            "en": "Constant",
+            "ar-IQ": "مستمر",
+            "ckb": "بەردەوام"
+          }
+        },
+        {
+          "value": "intermittent",
+          "label": {
+            "en": "Comes and goes",
+            "ar-IQ": "يروح ويجي",
+            "ckb": "دێت و دەڕوات"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.pain-sleep",
+      "field": "pain_sleep",
+      "text": {
+        "en": "Has discomfort interrupted sleep?",
+        "ar-IQ": "الألم قطع نومك؟",
+        "ckb": "ئازار خەوتنی پچڕاندوویت؟"
+      },
+      "when": {
+        "pain_present": true
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.pain-blink",
+      "field": "pain_blink",
+      "text": {
+        "en": "Does blinking make the discomfort worse?",
+        "ar-IQ": "الرمش يزيد الإحساس؟",
+        "ckb": "چەپڵەدان هەستەکە خراپتر دەکات؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "pain",
+          "foreign-body",
+          "grittiness"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.pain-relief",
+      "field": "pain_relief",
+      "text": {
+        "en": "What seems to worsen or ease the discomfort?",
+        "ar-IQ": "شنو يزيد الإحساس أو يخففه؟",
+        "ckb": "چی هەستەکە خراپتر یان سووکتر دەکات؟"
+      },
+      "when": {
+        "pain_present": true
+      },
+      "type": "text",
+      "options": []
+    },
+    {
+      "id": "question.light",
+      "field": "light_sensitivity",
+      "text": {
+        "en": "Does ordinary light hurt the eye?",
+        "ar-IQ": "الضوء العادي يوجع العين؟",
+        "ckb": "ڕووناکیی ئاسایی چاو ئازار دەدات؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "pain",
+          "redness",
+          "burning"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.itch-pattern",
+      "field": "itch_pattern",
+      "text": {
+        "en": "Does the itching affect one eye or both at the same time?",
+        "ar-IQ": "الحكة بعين وحدة لو العينين بنفس الوقت؟",
+        "ckb": "خوران لە یەک چاوە یان هەردوو بەیەکەوە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "itching"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "one",
+          "label": {
+            "en": "One eye",
+            "ar-IQ": "عين وحدة",
+            "ckb": "یەک چاو"
+          }
+        },
+        {
+          "value": "both",
+          "label": {
+            "en": "Both at the same time",
+            "ar-IQ": "العينين سوا",
+            "ckb": "هەردوو بەیەکەوە"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.allergen",
+      "field": "allergen_exposure",
+      "text": {
+        "en": "Was there a recent exposure to dust, pollen, pets or a new product?",
+        "ar-IQ": "صار تعرض لغبار أو لقاح أو حيوان أو منتج جديد؟",
+        "ckb": "بەرکەوتن بە تۆز، گوڵەباخ، ئاژەڵ یان بەرهەمێکی نوێ هەبووە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "itching",
+          "redness",
+          "swelling"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.nose",
+      "field": "nose_symptoms",
+      "text": {
+        "en": "Are there sneezing or nasal allergy symptoms too?",
+        "ar-IQ": "أكو عطاس أو حساسية بالأنف هم؟",
+        "ckb": "پژمین یان نیشانەی هەستیاریی لووتیش هەیە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "itching",
+          "watering"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.discharge-kind",
+      "field": "discharge_kind",
+      "text": {
+        "en": "What does the discharge look like?",
+        "ar-IQ": "شلون شكل الإفرازات؟",
+        "ckb": "شلەکە چ شێوەیەکە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "discharge",
+          "crusting"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "watery",
+          "label": {
+            "en": "Watery",
+            "ar-IQ": "مائية",
+            "ckb": "ئاوی"
+          }
+        },
+        {
+          "value": "sticky",
+          "label": {
+            "en": "Sticky or thick",
+            "ar-IQ": "لزجة أو سميكة",
+            "ckb": "لەزج یان ئەستوور"
+          }
+        },
+        {
+          "value": "blood",
+          "label": {
+            "en": "Blood-stained",
+            "ar-IQ": "مختلطة بدم",
+            "ckb": "تێکەڵ بە خوێن"
+          }
+        },
+        {
+          "value": "none",
+          "label": {
+            "en": "No discharge",
+            "ar-IQ": "ماكو إفرازات",
+            "ckb": "شلە نییە"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.morning-crust",
+      "field": "morning_crust",
+      "text": {
+        "en": "Are the eyelids stuck together on waking?",
+        "ar-IQ": "الجفون تلزك سوا من تكعد من النوم؟",
+        "ckb": "کاتێک لە خەو هەڵدەستیت پلکەکان بەیەکەوە دەچەسپێن؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "discharge",
+          "crusting"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.ill-contact",
+      "field": "ill_contact",
+      "text": {
+        "en": "Has anyone close to the patient had a similar red or sticky eye?",
+        "ar-IQ": "أحد قريب من المريض عنده احمرار أو إفراز مشابه؟",
+        "ckb": "کەسێکی نزیک سووربوون یان شلەی هاوشێوەی چاو هەبووە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "discharge",
+          "redness"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.screen",
+      "field": "screen_trigger",
+      "text": {
+        "en": "Is it worse during screen use or close work?",
+        "ar-IQ": "يسوء ويا الشاشات أو الشغل القريب؟",
+        "ckb": "لە کاتی بەکارهێنانی شاشە یان کاری نزیک خراپتر دەبێت؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "dryness",
+          "burning",
+          "grittiness",
+          "blurred-vision"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.environment",
+      "field": "environment_trigger",
+      "text": {
+        "en": "Is there exposure to smoke, wind or air conditioning?",
+        "ar-IQ": "أكو تعرض لدخان أو هوا أو تبريد؟",
+        "ckb": "بەرکەوتن بە دووکەڵ، با یان هەوای ساردکەرەوە هەیە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "dryness",
+          "burning",
+          "watering"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.blink-blur",
+      "field": "blur_after_blink",
+      "text": {
+        "en": "Does the blur change after blinking?",
+        "ar-IQ": "الغشاوة تتغير بعد الرمش؟",
+        "ckb": "تەماوی دوای چەپڵەدان دەگۆڕێت؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "blurred-vision",
+          "dryness"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.lid-lump-site",
+      "field": "lid_lump_site",
+      "text": {
+        "en": "Is the lump near the lash edge or deeper inside the lid?",
+        "ar-IQ": "الكتلة قرب الرموش لو أعمق بالجفن؟",
+        "ckb": "گرێکە نزیک برژانگە یان لە قوواڵیی پلک؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "lid-lump"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "edge",
+          "label": {
+            "en": "Near the lash edge",
+            "ar-IQ": "قرب الرموش",
+            "ckb": "نزیک برژانگ"
+          }
+        },
+        {
+          "value": "deeper",
+          "label": {
+            "en": "Deeper in the lid",
+            "ar-IQ": "أعمق بالجفن",
+            "ckb": "لە قوواڵیی پلک"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.lid-lump-tender",
+      "field": "lid_lump_tender",
+      "text": {
+        "en": "Is the eyelid lump tender?",
+        "ar-IQ": "كتلة الجفن توجع عند اللمس؟",
+        "ckb": "گرێی پلک لە کاتی دەستلێدان ئازاری هەیە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "lid-lump"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.lid-recurrent",
+      "field": "lid_recurrent",
+      "text": {
+        "en": "Has a lump repeatedly appeared in the same place?",
+        "ar-IQ": "تكررت كتلة بنفس المكان؟",
+        "ckb": "گرێکە لە هەمان شوێن دووبارە بووەتەوە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "lid-lump"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.lid-change",
+      "field": "lid_change",
+      "text": {
+        "en": "Is there a persistent wound, bleeding or loss of lashes?",
+        "ar-IQ": "أكو جرح مستمر أو نزف أو سقوط رموش؟",
+        "ckb": "برینی بەردەوام، خوێنبەربوون یان کەوتنی برژانگ هەیە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "lid-lump",
+          "crusting"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.lid-closure",
+      "field": "lid_closure",
+      "text": {
+        "en": "Can the eyelids close completely?",
+        "ar-IQ": "الجفون تنغلق بالكامل؟",
+        "ckb": "پلکەکان بە تەواوی دادەخرێن؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "dryness",
+          "drooping",
+          "burning"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.droop-onset",
+      "field": "droop_onset",
+      "text": {
+        "en": "Did the drooping begin recently?",
+        "ar-IQ": "تدلي الجفن بدأ مؤخراً؟",
+        "ckb": "داکەوتنی پلک نوێیە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "drooping"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.twitch-frequency",
+      "field": "twitch_frequency",
+      "text": {
+        "en": "How often does the twitch happen?",
+        "ar-IQ": "شكد تتكرر الرفة؟",
+        "ckb": "لەرزینەکە چەند جار ڕوودەدات؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "twitching"
+        ]
+      },
+      "type": "text",
+      "options": []
+    },
+    {
+      "id": "question.watering-pattern",
+      "field": "watering_pattern",
+      "text": {
+        "en": "Is watering constant or triggered by wind, cold or irritation?",
+        "ar-IQ": "الدمع مستمر لو يجي ويا برد أو هوا أو تهيج؟",
+        "ckb": "فرمێسک بەردەوامە یان لەگەڵ ساردی، با یان ورووژان دێت؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "watering"
+        ]
+      },
+      "type": "text",
+      "options": []
+    },
+    {
+      "id": "question.inner-corner",
+      "field": "inner_corner_swelling",
+      "text": {
+        "en": "Is there tenderness or swelling near the inner corner by the nose?",
+        "ar-IQ": "أكو وجع أو تورم بزاوية العين قرب الأنف؟",
+        "ckb": "ناسکی یان ئاوسان لە گۆشەی چاو نزیک لووت هەیە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "watering",
+          "discharge",
+          "swelling"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.vision-distance",
+      "field": "vision_distance",
+      "text": {
+        "en": "Is blur mainly at near, distance, or both?",
+        "ar-IQ": "الغشاوة بالقريب لو البعيد لو الاثنين؟",
+        "ckb": "تەماوی لە نزیکە، دوورە یان هەردوو؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "blurred-vision"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "near",
+          "label": {
+            "en": "Near",
+            "ar-IQ": "قريب",
+            "ckb": "نزیک"
+          }
+        },
+        {
+          "value": "distance",
+          "label": {
+            "en": "Distance",
+            "ar-IQ": "بعيد",
+            "ckb": "دوور"
+          }
+        },
+        {
+          "value": "both",
+          "label": {
+            "en": "Both",
+            "ar-IQ": "الاثنين",
+            "ckb": "هەردوو"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.vision-constant",
+      "field": "vision_constant",
+      "text": {
+        "en": "Is the blur persistent or does it fluctuate?",
+        "ar-IQ": "الغشاوة مستمرة لو تتغير؟",
+        "ckb": "تەماوی بەردەوامە یان دەگۆڕێت؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "blurred-vision"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "constant",
+          "label": {
+            "en": "Persistent",
+            "ar-IQ": "مستمرة",
+            "ckb": "بەردەوام"
+          }
+        },
+        {
+          "value": "fluctuating",
+          "label": {
+            "en": "Fluctuates",
+            "ar-IQ": "تتغير",
+            "ckb": "دەگۆڕێت"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.glasses",
+      "field": "glasses",
+      "text": {
+        "en": "Does the patient normally wear glasses?",
+        "ar-IQ": "المريض عادة يلبس نظارات؟",
+        "ckb": "نەخۆشەکە بە ئاسایی چاویلکە دەپۆشێت؟"
+      },
+      "when": {
+        "visual": true
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.double-pattern",
+      "field": "double_pattern",
+      "text": {
+        "en": "Does the double vision go away when either eye is covered?",
+        "ar-IQ": "ازدواج النظر يروح من تنغطي أي عين؟",
+        "ckb": "دووانبینین کاتێک هەر چاوێک دادەپۆشرێت نامێنێت؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "double-vision"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.distorted",
+      "field": "distorted_central",
+      "text": {
+        "en": "Do straight lines look bent or wavy?",
+        "ar-IQ": "الخطوط المستقيمة تبين معوجة أو متموجة؟",
+        "ckb": "خەتی ڕاست خوار یان شەپۆلاوی دەردەکەوێت؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "blurred-vision",
+          "distorted-lines",
+          "blind-spots"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.central-peripheral",
+      "field": "vision_area",
+      "text": {
+        "en": "Is the difficulty in the centre, at the sides, or across the whole view?",
+        "ar-IQ": "المشكلة بوسط النظر لو الأطراف لو كله؟",
+        "ckb": "کێشەکە لە ناوەڕاستی بینینە، لە لایەکانە یان هەمووی؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "blurred-vision",
+          "blind-spots",
+          "night-vision"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "central",
+          "label": {
+            "en": "Centre",
+            "ar-IQ": "الوسط",
+            "ckb": "ناوەڕاست"
+          }
+        },
+        {
+          "value": "peripheral",
+          "label": {
+            "en": "Sides",
+            "ar-IQ": "الأطراف",
+            "ckb": "لایەکان"
+          }
+        },
+        {
+          "value": "whole",
+          "label": {
+            "en": "Whole view",
+            "ar-IQ": "كل النظر",
+            "ckb": "هەموو بینین"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.night-duration",
+      "field": "night_duration",
+      "text": {
+        "en": "Has night-vision difficulty been present since childhood or is it new?",
+        "ar-IQ": "صعوبة النظر بالليل من الطفولة لو جديدة؟",
+        "ckb": "کێشەی بینینی شەو لە منداڵییەوەیە یان نوێیە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "night-vision"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "childhood",
+          "label": {
+            "en": "Since childhood",
+            "ar-IQ": "من الطفولة",
+            "ckb": "لە منداڵییەوە"
+          }
+        },
+        {
+          "value": "new",
+          "label": {
+            "en": "New or recently worse",
+            "ar-IQ": "جديدة أو ساءت مؤخراً",
+            "ckb": "نوێ یان تازە خراپتر بووە"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.colour-onset",
+      "field": "colour_onset",
+      "text": {
+        "en": "Is the colour-perception difference lifelong or recent?",
+        "ar-IQ": "اختلاف الألوان من زمان لو جديد؟",
+        "ckb": "جیاوازیی بینینی ڕەنگ لە زووەوەیە یان نوێیە؟"
+      },
+      "when": {
+        "any_symptoms": [
+          "colour-change"
+        ]
+      },
+      "type": "choice",
+      "options": [
+        {
+          "value": "lifelong",
+          "label": {
+            "en": "Lifelong",
+            "ar-IQ": "من زمان",
+            "ckb": "لە زووەوە"
+          }
+        },
+        {
+          "value": "recent",
+          "label": {
+            "en": "Recent",
+            "ar-IQ": "جديد",
+            "ckb": "نوێ"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.family-history",
+      "field": "family_history",
+      "text": {
+        "en": "Is there a family history of glaucoma or inherited eye disease?",
+        "ar-IQ": "أكو بالعائلة زرق أو مرض عين وراثي؟",
+        "ckb": "لە خێزاندا گلاوکۆما یان نەخۆشیی بۆماوەیی چاو هەیە؟"
+      },
+      "when": null,
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.previous-episodes",
+      "field": "previous_episodes",
+      "text": {
+        "en": "Has a similar episode happened before?",
+        "ar-IQ": "صارت مشكلة مشابهة قبل؟",
+        "ckb": "پێشتر کێشەیەکی هاوشێوە ڕوویداوە؟"
+      },
+      "when": null,
+      "type": "choice",
+      "options": [
+        {
+          "value": "yes",
+          "label": {
+            "en": "Yes",
+            "ar-IQ": "نعم",
+            "ckb": "بەڵێ"
+          }
+        },
+        {
+          "value": "no",
+          "label": {
+            "en": "No",
+            "ar-IQ": "لا",
+            "ckb": "نەخێر"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "Not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "question.treatment-response",
+      "field": "treatment_response",
+      "text": {
+        "en": "Has anything already been tried, and what happened?",
+        "ar-IQ": "شنو جربت لحد هسه وشنو صار؟",
+        "ckb": "تا ئێستا چیت تاقیکردووەتەوە و چی ڕوویداوە؟"
+      },
+      "when": null,
+      "type": "text",
+      "options": []
+    },
+    {
+      "id": "question.lens-hygiene",
+      "field": "lens_hygiene",
+      "text": {
+        "en": "How are the contact lenses cleaned and stored?",
+        "ar-IQ": "شلون تنظف وتحفظ العدسات؟",
+        "ckb": "لێنزەکان چۆن پاک و هەڵدەگیرێن؟"
+      },
+      "when": {
+        "contact_lenses": "yes"
+      },
+      "type": "text",
+      "options": []
+    },
+    {
+      "id": "question.last-exam",
+      "field": "last_eye_exam",
+      "text": {
+        "en": "When was the most recent eye examination?",
+        "ar-IQ": "متى آخر فحص عين؟",
+        "ckb": "دوا پشکنینی چاو کەی بووە؟"
+      },
+      "when": null,
+      "type": "text",
+      "options": []
+    },
+    {
+      "id": "question.pain-description",
+      "field": "pain_descriptor",
+      "type": "choice",
+      "when": {
+        "pain_present": true
+      },
+      "text": {
+        "en": "Describe the pain in words; I will help suggest a number.",
+        "ar-IQ": "اوصف الألم بالكلمات؛ أساعدك باقتراح رقم.",
+        "ckb": "ئازارەکە بە وشە وەسف بکە؛ یارمەتیت دەدەم ژمارەیەک پێشنیار بکەم."
+      },
+      "options": [
+        {
+          "value": "none",
+          "label": {
+            "en": "No pain",
+            "ar-IQ": "بدون ألم",
+            "ckb": "بێ ئازار"
+          }
+        },
+        {
+          "value": "mild",
+          "label": {
+            "en": "Mild discomfort",
+            "ar-IQ": "ألم خفيف",
+            "ckb": "ئازاری سووک"
+          }
+        },
+        {
+          "value": "moderate",
+          "label": {
+            "en": "Moderate pain",
+            "ar-IQ": "ألم متوسط",
+            "ckb": "ئازاری مامناوەند"
+          }
+        },
+        {
+          "value": "severe",
+          "label": {
+            "en": "Severe pain",
+            "ar-IQ": "ألم شديد",
+            "ckb": "ئازاری توند"
+          }
+        },
+        {
+          "value": "unknown",
+          "label": {
+            "en": "I am not sure",
+            "ar-IQ": "مو متأكد",
+            "ckb": "دڵنیا نیم"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "eye.rule.chemical",
+      "level": "emergency",
+      "all": {
+        "exposure": "chemical"
+      },
+      "any": null,
+      "reason": {
+        "en": "A chemical splash can damage the eye and needs immediate first aid and emergency assessment.",
+        "ar-IQ": "التعرض الكيميائي ممكن يضر العين ويحتاج إسعاف أولي فوري وفحص طارئ.",
+        "ckb": "بەرکەوتنی کیمیایی دەکرێت چاو زیانمەند بکات و یارمەتیی سەرەتایی دەستبەجێ و فریاکەوتن دەوێت."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/conditions/eye-injuries/"
+      ],
+      "first_aid": {
+        "en": "Start rinsing now with plenty of clean, lukewarm water for at least 20 minutes. Hold the eyelids open and use a gentle flow. Keep rinsing while help is arranged. Do not add other chemicals.",
+        "ar-IQ": "ابدأ غسل العين هسه بمي نظيف فاتر وبكمية كبيرة لمدة لا تقل عن 20 دقيقة. افتح الجفون وخلي تدفق المي لطيف. استمر بالغسل لحد ترتيب المساعدة. لا تضيف مواد كيميائية ثانية.",
+        "ckb": "ئێستا دەست بە شۆردن بکە بە ئاوی پاکی نیمگەرم بۆ لانیکەم ٢٠ خولەک. پلکەکان بکەرەوە و ئاوی هێواش بەکاربهێنە. تا ڕێکخستنی یارمەتی بەردەوام بە. ماددەی کیمیایی تر زیاد مەکە."
+      },
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.penetrating",
+      "level": "emergency",
+      "all": null,
+      "any": {
+        "exposure": [
+          "penetrating",
+          "high-speed"
+        ]
+      },
+      "reason": {
+        "en": "A penetrating object or high-speed impact needs emergency assessment. Do not remove an embedded object or press on the eye.",
+        "ar-IQ": "جسم نافذ أو ضربة سريعة يحتاج فحص طارئ. لا تزيل جسم مغروس ولا تضغط على العين.",
+        "ckb": "تەنێکی چووەناو یان زەبری خێرا پشکنینی فریاکەوتن دەوێت. تەنێکی چەسپاو دەر مەهێنە و فشار لە چاو مەکە."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/conditions/eye-injuries/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.sudden-vision-loss",
+      "level": "emergency",
+      "all": {
+        "onset": "sudden",
+        "vision": "loss"
+      },
+      "any": null,
+      "reason": {
+        "en": "Sudden loss of vision is an emergency even when there is no pain.",
+        "ar-IQ": "فقدان النظر المفاجئ طارئ حتى إذا ماكو ألم.",
+        "ckb": "لەدەستدانی لەناکاوی بینین فریاکەوتنە تەنانەت ئەگەر ئازار نەبێت."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/conditions/vision-loss/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.sudden-severe-pain",
+      "level": "emergency",
+      "all": {
+        "onset": "sudden",
+        "pain_gte": 7
+      },
+      "any": null,
+      "reason": {
+        "en": "Sudden severe eye pain needs emergency assessment.",
+        "ar-IQ": "ألم العين الشديد والمفاجئ يحتاج فحص طارئ.",
+        "ckb": "ئازاری توند و لەناکاوی چاو پشکنینی فریاکەوتن دەوێت."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/conditions/vision-loss/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.curtain",
+      "level": "emergency",
+      "all": {
+        "symptom": "curtain"
+      },
+      "any": null,
+      "reason": {
+        "en": "A new curtain or shadow may reflect a sight-threatening retinal problem and needs immediate eye assessment.",
+        "ar-IQ": "ستار أو ظل جديد ممكن يدل على مشكلة خطرة بالشبكية ويحتاج فحص فوري.",
+        "ckb": "پەردە یان سێبەری نوێ دەکرێت نیشانەی کێشەی مەترسیداری تۆڕینە بێت و پشکنینی دەستبەجێ دەوێت."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/floaters-and-flashes-in-the-eyes/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.new-flashes-floaters",
+      "level": "urgent",
+      "all": null,
+      "any": {
+        "symptoms": [
+          "flashes",
+          "floaters"
+        ]
+      },
+      "reason": {
+        "en": "New or increasing flashes or floaters need urgent eye assessment without waiting for this interview. Chronic unchanged symptoms still need clinical context.",
+        "ar-IQ": "ومضات أو عوائم جديدة أو متزايدة تحتاج فحص عاجل بدون انتظار المحادثة. الأعراض القديمة الثابتة هم تحتاج سياق طبي.",
+        "ckb": "بروسکە یان خاڵی جووڵاوی نوێ یان زیادبوو پشکنینی پەلەیی دەوێت بەبێ چاوەڕێی گفتوگۆ. نیشانەی کۆن و نەگۆڕاویش پێویستی بە زانیاریی پزیشکی هەیە."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/floaters-and-flashes-in-the-eyes/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.contact-vision",
+      "level": "emergency",
+      "all": {
+        "contact_lenses": "yes",
+        "visual": true
+      },
+      "any": {
+        "symptoms": [
+          "pain",
+          "redness"
+        ]
+      },
+      "reason": {
+        "en": "A painful or red eye with contact lens use and changed vision needs emergency eye assessment.",
+        "ar-IQ": "ألم أو احمرار مع عدسات لاصقة وتغير نظر يحتاج فحص عين طارئ.",
+        "ckb": "ئازار یان سووربوون لەگەڵ لێنزی چەسپاو و گۆڕانی بینین پشکنینی فریاکەوتنی چاو دەوێت."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/red-eye/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.contact-red-pain",
+      "level": "urgent",
+      "all": {
+        "contact_lenses": "yes"
+      },
+      "any": {
+        "symptoms": [
+          "pain",
+          "redness"
+        ]
+      },
+      "reason": {
+        "en": "Contact lens use with a painful or red eye needs urgent assessment; stop wearing the lenses.",
+        "ar-IQ": "عدسات لاصقة مع ألم أو احمرار تحتاج فحص عاجل؛ أوقف لبس العدسات.",
+        "ckb": "لێنزی چەسپاو لەگەڵ ئازار یان سووربوون پشکنینی پەلەیی دەوێت؛ لێنزەکان مەپۆشە."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/red-eye/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.red-headache-nausea",
+      "level": "emergency",
+      "all": {
+        "symptom": "redness",
+        "severe_headache": "yes",
+        "nausea": "yes"
+      },
+      "any": null,
+      "reason": {
+        "en": "A red eye with severe headache and nausea needs emergency assessment.",
+        "ar-IQ": "احمرار العين مع صداع شديد وغثيان يحتاج فحص طارئ.",
+        "ckb": "سووربوونی چاو لەگەڵ سەرئێشەی توند و دڵتێکچوون پشکنینی فریاکەوتن دەوێت."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/red-eye/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.pupil-neurology",
+      "level": "emergency",
+      "all": {
+        "symptom": "unequal-pupils"
+      },
+      "any": {
+        "visual": true,
+        "neurological": "yes"
+      },
+      "reason": {
+        "en": "A new pupil abnormality with visual or neurological changes needs emergency assessment.",
+        "ar-IQ": "تغير جديد بالبؤبؤ مع تغير نظر أو أعراض عصبية يحتاج فحص طارئ.",
+        "ckb": "گۆڕانی نوێی بیلبیلە لەگەڵ گۆڕانی بینین یان نیشانەی دەمارەیی پشکنینی فریاکەوتن دەوێت."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/red-eye/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.neurological",
+      "level": "emergency",
+      "all": {
+        "neurological": "yes"
+      },
+      "any": null,
+      "reason": {
+        "en": "New neurological symptoms accompanying an eye concern need emergency assessment.",
+        "ar-IQ": "أعراض عصبية جديدة مع مشكلة العين تحتاج فحص طارئ.",
+        "ckb": "نیشانەی دەمارەیی نوێ لەگەڵ کێشەی چاو پشکنینی فریاکەوتن دەوێت."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/conditions/vision-loss/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.orbital",
+      "level": "emergency",
+      "all": {
+        "symptom": "swelling"
+      },
+      "any": {
+        "movement_pain": "yes",
+        "symptoms": [
+          "protrusion"
+        ],
+        "visual": true
+      },
+      "reason": {
+        "en": "Swelling with painful or restricted movement, protrusion or changed vision needs emergency assessment. Fever is not required.",
+        "ar-IQ": "تورم مع ألم أو تقييد حركة العين أو جحوظ أو تغير نظر يحتاج طوارئ؛ مو شرط تكون أكو حرارة.",
+        "ckb": "ئاوسان لەگەڵ ئازار یان سنوورداربوونی جووڵە، هاتنەدەرەوەی چاو یان گۆڕانی بینین فریاکەوتن دەوێت؛ تا بوونی مەرج نییە."
+      },
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/preseptal-and-orbital-cellulitis"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.postoperative",
+      "level": "emergency",
+      "all": {
+        "recent_procedure": "yes"
+      },
+      "any": {
+        "pain_gte": 7,
+        "visual": true
+      },
+      "reason": {
+        "en": "Severe eye pain or changed vision after a recent eye procedure needs emergency assessment.",
+        "ar-IQ": "ألم شديد أو تغير نظر بعد إجراء عين حديث يحتاج فحص طارئ.",
+        "ckb": "ئازاری توند یان گۆڕانی بینین دوای کرداری نوێی چاو پشکنینی فریاکەوتن دەوێت."
+      },
+      "source_urls": [
+        "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/endophthalmitis"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.vascular",
+      "level": "urgent",
+      "all": {
+        "visual": true
+      },
+      "any": {
+        "jaw_scalp": "yes",
+        "severe_headache": "yes"
+      },
+      "reason": {
+        "en": "Visual symptoms with a new headache, jaw pain or scalp tenderness need urgent same-day assessment for a potentially serious vascular cause, especially after age 50.",
+        "ar-IQ": "تغير نظر مع صداع جديد أو ألم فك أو فروة الرأس يحتاج فحص عاجل اليوم، خصوصاً بعد عمر 50.",
+        "ckb": "گۆڕانی بینین لەگەڵ سەرئێشەی نوێ یان ئازاری چەناگە یان پێستی سەر پشکنینی پەلەیی ئەمڕۆ دەوێت، بەتایبەتی دوای تەمەنی ٥٠."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/conditions/temporal-arteritis/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.white-pupil",
+      "level": "urgent",
+      "all": {
+        "symptom": "white-pupil"
+      },
+      "any": null,
+      "reason": {
+        "en": "A white pupil or reflection, particularly in a child, needs prompt urgent clinical assessment. It is a finding, not a diagnosis.",
+        "ar-IQ": "بؤبؤ أو انعكاس أبيض، خصوصاً بالطفل، يحتاج فحص عاجل. هو علامة مو تشخيص.",
+        "ckb": "بیلبیلە یان ڕەنگدانەوەی سپی، بەتایبەتی لە منداڵ، پشکنینی پەلەیی دەوێت. ئەمە نیشانەیە نەک دەستنیشانکردن."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/conditions/retinoblastoma/symptoms/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.newborn-red-sticky",
+      "level": "urgent",
+      "all": {
+        "newborn": true
+      },
+      "any": {
+        "symptoms": [
+          "redness",
+          "discharge"
+        ]
+      },
+      "reason": {
+        "en": "A newborn with a red or sticky eye needs urgent clinical assessment.",
+        "ar-IQ": "احمرار أو إفراز لزج بعين مولود جديد يحتاج فحص طبي عاجل.",
+        "ckb": "سووربوون یان شلەی لەزجی چاوی تازەلەدایکبوو پشکنینی پەلەیی پزیشکی دەوێت."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/red-eye/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.unexplained-vision-loss",
+      "level": "urgent",
+      "all": {
+        "vision": "loss"
+      },
+      "any": null,
+      "reason": {
+        "en": "Loss of vision requires clinical assessment; missing onset information does not make it safe.",
+        "ar-IQ": "فقدان النظر يحتاج فحص؛ عدم معرفة وقت البداية ما يعني الأمان.",
+        "ckb": "لەدەستدانی بینین پشکنین دەوێت؛ نەزانینی کاتی دەستپێک واتای سەلامەتی نییە."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/conditions/vision-loss/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    },
+    {
+      "id": "eye.rule.severe-eye-pain",
+      "level": "urgent",
+      "all": {
+        "pain_gte": 7
+      },
+      "any": null,
+      "reason": {
+        "en": "Severe eye pain needs urgent same-day assessment even when the onset is unknown or gradual. Sudden severe pain remains an emergency.",
+        "ar-IQ": "ألم العين الشديد يحتاج فحص عاجل بنفس اليوم حتى إذا البداية مو معروفة أو تدريجية. الألم الشديد المفاجئ يبقى طارئ.",
+        "ckb": "ئازاری توندی چاو پشکنینی پەلەیی هەمان ڕۆژ دەوێت تەنانەت ئەگەر دەستپێک نادیار یان وردەوردە بێت. ئازاری توندی لەناکاو هێشتا فریاکەوتنە."
+      },
+      "source_urls": [
+        "https://www.nhs.uk/symptoms/eye-pain/"
+      ],
+      "first_aid": null,
+      "clinical_review_status": "draft",
+      "version": "eye-draft-2026-10-30.4"
+    }
+  ],
+  "lexical": [
+    {
+      "field": "vision",
+      "value": "loss",
+      "pattern": "(?:cannot see|can.t see|lost (?:my |all |the )?(?:sight|vision)|(?:vision|sight) (?:loss|gone)|loss of (?:vision|sight)|فقدان (?:النظر|البصر)|ما اشوف|لەدەستدانی بینین)"
+    },
+    {
+      "field": "vision",
+      "value": "blurred",
+      "pattern": "(?:blurred? (?:vision|sight)|blurry|reduced (?:vision|sight)|غشاوة|تشوش النظر|تەماوی)"
+    },
+    {
+      "field": "vision",
+      "value": "double",
+      "pattern": "(?:double vision|seeing double|ازدواج|دووانبینین)"
+    },
+    {
+      "field": "onset",
+      "value": "sudden",
+      "pattern": "(?:sudden(?:ly)?|all of a sudden|just (?:lost|started)|فجأة|فجائي|لەناکاو)"
+    },
+    {
+      "field": "onset",
+      "value": "gradual",
+      "pattern": "(?:gradual(?:ly)?|بالتدريج|وردەوردە)"
+    },
+    {
+      "field": "exposure",
+      "value": "chemical",
+      "pattern": "(?:chemical|bleach|acid|alkali|oven cleaner|مادة كيميائية|كلور|حامض|ماددەی کیمیایی)"
+    },
+    {
+      "field": "exposure",
+      "value": "penetrating",
+      "pattern": "(?:penetrat|embedded|pierced|stuck (?:in|into) (?:my |the )?eye|جسم مغروس|اخترق|چەسپاو)"
+    },
+    {
+      "field": "exposure",
+      "value": "high-speed",
+      "pattern": "(?:high.speed|grind(?:er|ing)|hammering|metal fragment|سرعة عالية|بە خێرایی زۆر)"
+    },
+    {
+      "field": "contact_lenses",
+      "value": "yes",
+      "pattern": "(?:contact lens(?:es)?|contacts|عدسات لاصقة|لێنزی چەسپاو)"
+    },
+    {
+      "field": "recent_procedure",
+      "value": "yes",
+      "pattern": "(?:(?:recent|yesterday|last week|after|following).{0,32}(?:eye surgery|eye operation|eye injection|cataract surgery)|(?:eye surgery|eye injection).{0,22}(?:yesterday|recent|last week)|عملية عين|حقنة بالعين|نەشتەرگەری چاو)"
+    },
+    {
+      "field": "movement_pain",
+      "value": "yes",
+      "pattern": "(?:pain(?:ful)? (?:on |with |when )?(?:eye )?mov(?:ement|ing)|hurts? (?:to|when I) mov|restricted (?:eye )?movement|ألم عند تحريك|جووڵاندنی چاو ئازار)"
+    },
+    {
+      "field": "fever",
+      "value": "yes",
+      "pattern": "(?:fever|temperature|حمى|حرارة|تا هەیە)"
+    },
+    {
+      "field": "severe_headache",
+      "value": "yes",
+      "pattern": "(?:(?:severe|new|bad|terrible) headache|صداع شديد|صداع جديد|سەرئێشەی توند)"
+    },
+    {
+      "field": "nausea",
+      "value": "yes",
+      "pattern": "(?:nausea|vomit|feeling sick|غثيان|تقيؤ|ڕشانەوە)"
+    },
+    {
+      "field": "jaw_scalp",
+      "value": "yes",
+      "pattern": "(?:jaw pain|scalp tender|ألم الفك|فروة الرأس|ئازاری چەناگە)"
+    },
+    {
+      "field": "neurological",
+      "value": "yes",
+      "pattern": "(?:facial droop|slurred speech|new weakness|cannot speak|تدلي الوجه|صعوبة بالكلام|لاوازیی نوێ)"
+    }
+  ],
+  "symptom_patterns": {
+    "pain": "\\b(?:pain(?:ful)?|ache|hurts?)\\b|ألم|يوجع|ئازار",
+    "burning": "burn|حرقة|سووتان",
+    "itching": "itch|حكة|خوران",
+    "grittiness": "grit|sand|رمل|هەستی لم",
+    "foreign-body": "foreign.body|something in|جسم غريب|شتێکی نامۆ",
+    "redness": "\\bred(?:ness)?\\b|احمرار|سووربوون",
+    "watering": "water(?:ing|y)|tearing|دموع|فرمێسکی زۆر",
+    "dryness": "dry|جفاف|وشکی",
+    "discharge": "discharge|sticky|إفرازات|لەزج",
+    "crusting": "crust|قشور|توێکڵ",
+    "swelling": "swell|swollen|تورم|ئاوسان",
+    "lid-lump": "(?:lid|eyelid) lump|كتلة بالجفن|گرێ لە پلک",
+    "drooping": "droop|تدلي|داکەوتنی پلک",
+    "twitching": "twitch|رفة|لەرزینی پلک",
+    "blurred-vision": "blurr|غشاوة|تەماوی",
+    "double-vision": "double vision|seeing double|ازدواج|دووانبینین",
+    "vision-loss": "vision loss|sight loss|cannot see|lost.{0,15}(?:vision|sight)|فقدان النظر|ما اشوف|لەدەستدانی بینین",
+    "flashes": "flash|ومضات|بروسکە",
+    "floaters": "floater|عوائم|خاڵی جووڵاو",
+    "curtain": "curtain|shadow.{0,16}(?:vision|eye|sight)|ستار|ظل بالنظر|پەردە لە بینین",
+    "halos": "halo|هالات|بازنە دەوری",
+    "glare": "glare|انبهار|بریقە",
+    "light-sensitivity": "photophobia|light sensitiv|sensitive to light|حساسية للضوء|هەستیاری بە ڕووناکی",
+    "distorted-lines": "wavy|distort|متعرج|خواروخێچ",
+    "blind-spots": "blind spot|بقع عمياء|خاڵی نابینا",
+    "colour-change": "colou?r chang|تغير بالألوان|گۆڕانی ڕەنگ",
+    "night-vision": "night vision|النظر بالليل|بینینی شەو",
+    "protrusion": "protrud|bulg|جحوظ|هاتنەدەرەوەی چاو",
+    "movement-pain": "pain.{0,12}mov|ألم عند تحريك|جووڵاندنی چاو ئازار",
+    "white-pupil": "white (?:pupil|reflex|reflection|glow)|بؤبؤ أبيض|انعكاس أبيض|بیلبیلەی سپی",
+    "unequal-pupils": "unequal pupils|different.{0,12}pupil|اختلاف.{0,16}البؤبؤ|جیاوازی.{0,16}بیلبیلە"
+  },
+  "negation_pattern": "(?:no|not|without|never|denies|don.t|do not|لا|ما عندي|بدون|نییە|نەخێر)\\s+(?:\\w+\\s+){0,3}$",
+  "actions": {
+    "emergency": {
+      "en": "Seek emergency assessment now at the nearest emergency department or emergency eye service. Ask someone to take you; do not drive with affected vision. Use your local emergency service if you cannot travel safely.",
+      "ar-IQ": "راجع هسه أقرب طوارئ أو طوارئ عيون. خلي شخص يوصلك ولا تسوق إذا نظرك متأثر. اتصل بخدمة الطوارئ المحلية إذا ما تكدر توصل بأمان.",
+      "ckb": "ئێستا سەردانی نزیکترین فریاکەوتن یان فریاکەوتنی چاو بکە. داوا لە کەسێک بکە بتبات؛ ئەگەر بینینت تێکچووە شۆفێری مەکە. ئەگەر بە سەلامەتی ناگەیت پەیوەندی بە فریاکەوتنی ناوخۆ بکە."
+    },
+    "urgent": {
+      "en": "Arrange urgent eye assessment today. Do not wait to finish this interview. If urgent eye care is unavailable, attend an emergency department.",
+      "ar-IQ": "ڕتب فحص عيون عاجل اليوم. لا تنتظر تكمل المحادثة. إذا ما متوفر فحص عاجل، راجع الطوارئ.",
+      "ckb": "ئەمڕۆ پشکنینی پەلەیی چاو ڕێکبخە. چاوەڕێی تەواوبوونی گفتوگۆ مەکە. ئەگەر خزمەتگوزاری پەلەیی چاو نییە، بڕۆ بۆ فریاکەوتن."
+    },
+    "unknown": {
+      "en": "Urgency is not established. An eye professional needs to assess the cause; incomplete answers or no pain do not rule out a serious problem.",
+      "ar-IQ": "درجة الاستعجال مو محددة. لازم مختص يفحص السبب؛ نقص المعلومات أو عدم وجود ألم ما ينفي مشكلة خطيرة.",
+      "ckb": "پلەی پەلە دیاری نەکراوە. پێویستە پسپۆڕی چاو هۆکارەکە بپشکنێت؛ وەڵامی ناتەواو یان نەبوونی ئازار کێشەی جدی ڕەت ناکاتەوە."
+    }
+  }
+}

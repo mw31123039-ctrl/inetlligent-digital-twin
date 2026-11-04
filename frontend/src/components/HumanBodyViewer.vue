@@ -8,9 +8,11 @@ import { buildHumanRig } from '../three/buildHumanRig'
 import { disposeScene } from '../three/disposeScene'
 import { humanModelConfig, regionLabels, viewAngles, viewFromAngle, type HumanModelConfig, type HumanView } from '../three/humanViewerConfig'
 import type { RegionId } from '../types'
+import { bodyParts, type PatientSide } from '../data/bodyParts'
 
 const props = withDefaults(defineProps<{
   selected: RegionId | null
+  side?: PatientSide
   view: HumanView
   zoom: number
   reducedMotion: boolean
@@ -18,7 +20,7 @@ const props = withDefaults(defineProps<{
   modelConfig?: HumanModelConfig
 }>(), { paused: false, modelConfig: () => humanModelConfig })
 const emit = defineEmits<{
-  select: [id: RegionId]; error: [message: string]; ready: []
+  select: [id: RegionId, side?: PatientSide]; error: [message: string]; ready: []
   progress: [percent: number | null]; orientation: [view: HumanView]; zoom: [value: number]
 }>()
 const host = ref<HTMLDivElement>()
@@ -40,6 +42,8 @@ let active = true
 let previousTime = 0
 let distance = 4.2
 let tween: { from: THREE.Spherical; to: THREE.Spherical; start: number } | undefined
+let focusTween: { from: THREE.Vector3; to: THREE.Vector3; targetFrom: THREE.Vector3; targetTo: THREE.Vector3; start: number; finish: () => void } | undefined
+let focused = false
 const target = new THREE.Vector3(0, .92, 0)
 const pointer = new THREE.Vector2()
 const raycaster = new THREE.Raycaster()
@@ -79,8 +83,15 @@ function animate(now: number) {
   if (disposed || failed) return
   const delta = previousTime ? Math.min((now - previousTime) / 1000, .05) : 0
   previousTime = now
-  if (active && !document.hidden) {
+  if ((active || focused) && !document.hidden) {
     if (!props.paused && !reduceMotion()) mixer?.update(delta)
+    if (focusTween && camera && controls) {
+      const t = reduceMotion() ? 1 : Math.min(1, (now - focusTween.start) / 620)
+      const ease = t * t * t * (t * (t * 6 - 15) + 10)
+      camera.position.lerpVectors(focusTween.from, focusTween.to, ease)
+      controls.target.lerpVectors(focusTween.targetFrom, focusTween.targetTo, ease)
+      if (t === 1) { const done = focusTween.finish; focusTween = undefined; done() }
+    }
     if (tween && camera && controls) {
       const t = reduceMotion() ? 1 : Math.min(1, (now - tween.start) / 550)
       const ease = t * t * (3 - 2 * t)
@@ -100,6 +111,7 @@ function animate(now: number) {
 
 function moveCamera(view: HumanView, zoom = props.zoom, immediate = false) {
   if (!camera || !controls) return
+  cancelFocus()
   controls.enableDamping = false
   controls.update()
   controls.enableDamping = !reduceMotion()
@@ -155,7 +167,7 @@ function pointerUp(event: PointerEvent) {
   scene?.updateMatrixWorld(true)
   raycaster.setFromCamera(pointer, camera)
   const region = rig.pick(raycaster, camera.position)
-  if (region) emit('select', region)
+  if (region) emit('select', region, rig.pickSide(raycaster, region))
 }
 function contextLost(event: Event) {
   event.preventDefault()
@@ -176,7 +188,7 @@ function handleKey(event: KeyboardEvent) {
   }
 }
 function reportCamera() {
-  if (!camera || !controls) return
+  if (!camera || !controls || focused) return
   const offset = camera.position.clone().sub(target)
   const view = viewFromAngle(Math.atan2(offset.x, offset.z))
   if (view !== props.view) emit('orientation', view)
@@ -189,6 +201,21 @@ function preferenceChanged(event: MediaQueryListEvent) {
 }
 function reset() { moveCamera('front', 1) }
 function setView(view: HumanView) { moveCamera(view) }
+function cancelFocus() {
+  const done = focusTween?.finish; focusTween = undefined; focused = false; done?.()
+  if (controls) { controls.enabled = true; controls.enableDamping = !reduceMotion(); controls.target.copy(target); controls.minDistance = distance / 1.7 }
+}
+function focusPart(id: RegionId, side: PatientSide): Promise<void> {
+  cancelFocus()
+  if (!rig || !camera || !controls) return Promise.resolve()
+  tween = undefined; focused = true
+  controls.enableDamping = false; controls.update(); controls.enabled = false; controls.minDistance = .05
+  rig.highlight(id, bodyParts[id].paired ? side : undefined)
+  const point = rig.anchor(id, bodyParts[id].paired ? side : undefined)
+  const destination = point.clone().add(new THREE.Vector3(0, .015, bodyParts[id].focusDistance))
+  if (reduceMotion()) { camera.position.copy(destination); controls.target.copy(point); controls.update(); render(); return Promise.resolve() }
+  return new Promise(finish => { focusTween = { from: camera!.position.clone(), to: destination, targetFrom: controls!.target.clone(), targetTo: point, start: performance.now(), finish } })
+}
 
 // Useful to embedding screens and browser verification; never exposes the scene for mutation.
 function getSnapshot() {
@@ -202,7 +229,7 @@ function getSnapshot() {
     })) : {},
   }
 }
-defineExpose({ reset, setView, getSnapshot })
+defineExpose({ reset, setView, focusPart, getSnapshot })
 
 onMounted(async () => {
   try {
@@ -290,7 +317,7 @@ onMounted(async () => {
     mixer = new THREE.AnimationMixer(gltf.scene)
     mixer.clipAction(rig.idle).play()
     mixer.update(0)
-    rig.highlight(props.selected)
+    rig.highlight(props.selected, props.side)
     ready.value = true
     emit('progress', 100)
     render()
@@ -303,14 +330,14 @@ onMounted(async () => {
 })
 let intersectionObserver: IntersectionObserver | undefined
 let loadTimeout = 0
-watch(() => props.selected, id => { rig?.highlight(id); projectLabel() })
+watch(() => [props.selected, props.side] as const, ([id, side]) => { rig?.highlight(id, side); projectLabel() })
 watch(() => props.view, value => {
   if (!camera || tween) { if (tween) moveCamera(value); return }
   const angle = Math.atan2(camera.position.x, camera.position.z)
   if (viewFromAngle(angle) !== value) moveCamera(value)
 })
 watch(() => props.zoom, value => {
-  if (!camera || !controls) return
+  if (!camera || !controls || focused) return
   const from = new THREE.Spherical().setFromVector3(camera.position.clone().sub(target))
   if (Math.abs(distance / from.radius - value) < .02) return
   tween = { from, to: new THREE.Spherical(distance / value, tween?.to.phi ?? from.phi, tween?.to.theta ?? from.theta), start: performance.now() }
@@ -318,6 +345,7 @@ watch(() => props.zoom, value => {
 watch(() => props.reducedMotion, () => { if (controls) controls.enableDamping = !reduceMotion() })
 onBeforeUnmount(() => {
   disposed = true
+  focusTween?.finish(); focusTween = undefined
   cancelAnimationFrame(frame)
   window.clearTimeout(loadTimeout)
   loadingManager?.abort()

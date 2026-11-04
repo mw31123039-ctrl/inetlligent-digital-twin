@@ -49,6 +49,8 @@ test('2D SVG selections, front/back, zoom and empty states', async ({ page }) =>
     }, point)
     await page.mouse.click(position.x, position.y)
     await expect(page.locator('.region-selector button.selected')).toContainText(region, { ignoreCase: true })
+    await expect(page.locator('.body-stage')).toHaveAttribute('data-phase', 'detail')
+    await page.getByRole('button', { name: 'Back to full body', exact: true }).click()
   }
   await page.getByRole('button', { name: 'Back', exact: true }).click()
   await expect(page.getByRole('button', { name: 'Back', exact: true })).toHaveAttribute('aria-pressed', 'true')
@@ -68,6 +70,8 @@ test('3D raycast selection, rotation, WebGL context error and 2D fallback', asyn
   const box = (await canvas.boundingBox())!
   await canvas.click({ position: { x: box.width / 2, y: box.height * .30 } })
   await expect(page.locator('.region-selector button.selected')).toHaveText('Chest')
+  await expect(page.locator('.body-stage')).toHaveAttribute('data-phase', 'detail')
+  await page.getByRole('button', { name: 'Back to full body', exact: true }).click()
   await page.locator('.body-canvas').focus()
   await page.keyboard.press('ArrowRight')
   await page.getByRole('button', { name: 'Back', exact: true }).click()
@@ -94,7 +98,7 @@ test('simulated response error retries safely and region changes cancel stale re
   await expect(page.getByRole('button', { name: 'My leg hurts', exact: true })).toBeVisible()
   await page.waitForTimeout(800)
   await expect(page.locator('.message-row')).toHaveCount(1)
-  await expect(page.locator('.conversation')).toContainText('You selected your legs')
+  await expect(page.locator('.conversation')).toContainText('You selected your left leg')
 })
 
 test('mobile navigation, all screens, settings and help dialog', async ({ page }) => {

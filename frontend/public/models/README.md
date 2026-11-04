@@ -1,5 +1,11 @@
 # Bundled human model
 
+The active model is now **`human-detailed.glb`**: the same licensed rig with original 2048px face color and face/body normal maps. Its source/output hashes are in `human-detailed.manifest.json`. From `frontend/`, rebuild with `node scripts/prepare-human-realism.mjs`; the original `human.glb` and MIT notice remain available.
+
+The `anatomy/` folder contains seven prepared BodyParts3D regional reference models, including separate published left/right limb elements. Its `ATTRIBUTION.txt` and `manifest.json` carry CC BY 4.0 attribution, source IDs, transforms and hashes. Rebuild with `node scripts/prepare-reference-anatomy.mjs`. These reference models and the avatar are not scans of the study subject.
+
+The default chest **Organ surfaces** view additionally uses `anatomy/chest-surface.glb`, an 18-mesh Z-Anatomy derivative under **CC BY-SA 4.0**. Retain `ATTRIBUTION-Z-Anatomy.txt`, `LICENSE-Z-Anatomy.txt` and `chest-surface.manifest.json` with it. Rebuild with `node scripts/prepare-chest-surface.mjs`. The alternative **Vessels and ribs** view uses the original BodyParts3D chest model. See the frontend asset-attribution document for source authors and license boundaries.
+
 `human.glb` is ready to use. No model downloads or API keys are required at runtime.
 
 Source: [Microsoft Rocketbox, Male_Adult_01](https://github.com/microsoft/Microsoft-Rocketbox/tree/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_01), revision `0943055db6ec570bcef9f2c8b41c9e5467c808f9`.

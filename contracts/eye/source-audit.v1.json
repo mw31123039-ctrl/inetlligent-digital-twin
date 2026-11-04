@@ -1,0 +1,757 @@
+{
+  "checked_at": "2026-10-29T23:48:57.737Z",
+  "purpose": "Public link and title verification only. This is not a clinical content review.",
+  "sources": [
+    {
+      "url": "https://aapos.org/glossary/cataract",
+      "status": 200,
+      "final_url": "https://aapos.org/glossary/cataract",
+      "title": "Cataract - American Association for Pediatric Ophthalmology and Strabismus",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://aapos.org/glossary/glaucoma-in-children",
+      "status": 200,
+      "final_url": "https://aapos.org/glossary/glaucoma-in-children",
+      "title": "Glaucoma in Children - American Association for Pediatric Ophthalmology and Strabismus",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://aapos.org/glossary/nystagmus",
+      "status": 200,
+      "final_url": "https://aapos.org/glossary/nystagmus",
+      "title": "Nystagmus - American Association for Pediatric Ophthalmology and Strabismus",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://aapos.org/glossary/ptosis",
+      "status": 200,
+      "final_url": "https://aapos.org/glossary/ptosis",
+      "title": "Ptosis - American Association for Pediatric Ophthalmology and Strabismus",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://aapos.org/glossary/strabismus",
+      "status": 200,
+      "final_url": "https://aapos.org/glossary/strabismus",
+      "title": "Strabismus - American Association for Pediatric Ophthalmology and Strabismus",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://dermnetnz.org/topics/eyelid-contact-dermatitis",
+      "status": 200,
+      "final_url": "https://dermnetnz.org/topics/eyelid-contact-dermatitis",
+      "title": "Eyelid contact dermatitis",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Acanthamoeba_Keratitis",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Acanthamoeba_Keratitis",
+      "title": "Acanthamoeba Keratitis - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Aniridia",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Aniridia",
+      "title": "Aniridia - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Central_Serous_Chorioretinopathy",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Central_Serous_Chorioretinopathy",
+      "title": "Central Serous Chorioretinopathy - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Choroidal_and_Ciliary_Body_Melanoma",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Choroidal_and_Ciliary_Body_Melanoma",
+      "title": "Choroidal and Ciliary Body Melanoma - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Dacryoadenitis",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Dacryoadenitis",
+      "title": "Dacryoadenitis - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Ectopia_Lentis",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Ectopia_Lentis",
+      "title": "Ectopia Lentis - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Exposure_Keratopathy",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Exposure_Keratopathy",
+      "title": "Exposure Keratopathy - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Fungal_Keratitis",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Fungal_Keratitis",
+      "title": "Fungal Keratitis - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Hyphema",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Hyphema",
+      "title": "Hyphema - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Ocular_Surface_Squamous_Neoplasia",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Ocular_Surface_Squamous_Neoplasia",
+      "title": "Ocular Surface Squamous Neoplasia - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Optic_Atrophy",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Optic_Atrophy",
+      "title": "Optic Atrophy - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Orbital_Floor_Fractures",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Orbital_Floor_Fractures",
+      "title": "Orbital Floor Fractures - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Recurrent_Corneal_Erosion",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Recurrent_Corneal_Erosion",
+      "title": "Recurrent Corneal Erosion - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Removal_of_Corneal_Foreign_Bodies",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Removal_of_Corneal_Foreign_Bodies",
+      "title": "Removal of Corneal Foreign Bodies - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://eyewiki.aao.org/Vitreous_Hemorrhage",
+      "status": 200,
+      "final_url": "https://eyewiki.aao.org/Vitreous_Hemorrhage",
+      "title": "Vitreous Hemorrhage - EyeWiki",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.aao.org/eye-health/anatomy/human-eye",
+      "status": 200,
+      "final_url": "https://www.aao.org/eye-health/anatomy/human-eye",
+      "title": "Human eye - American Academy of Ophthalmology",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy",
+      "title": "Ophthalmic Anatomy - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/cataract/cataract",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/cataract/cataract",
+      "title": "Cataract - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/acute-bacterial-conjunctivitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/acute-bacterial-conjunctivitis",
+      "title": "Acute Bacterial Conjunctivitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/allergic-conjunctivitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/allergic-conjunctivitis",
+      "title": "Allergic Conjunctivitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/episcleritis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/episcleritis",
+      "title": "Episcleritis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/pinguecula-and-pterygium",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/pinguecula-and-pterygium",
+      "title": "Pinguecula and Pterygium - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/scleritis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/scleritis",
+      "title": "Scleritis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/subconjunctival-hemorrhages",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/subconjunctival-hemorrhages",
+      "title": "Subconjunctival Hemorrhages - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/viral-conjunctivitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/conjunctival-and-scleral-disorders/viral-conjunctivitis",
+      "title": "Viral Conjunctivitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/bullous-keratopathy",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/bullous-keratopathy",
+      "title": "Bullous Keratopathy - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/corneal-ulcer",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/corneal-ulcer",
+      "title": "Corneal Ulcer - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/herpes-simplex-keratitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/herpes-simplex-keratitis",
+      "title": "Herpes Simplex Keratitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/herpes-zoster-ophthalmicus",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/herpes-zoster-ophthalmicus",
+      "title": "Herpes Zoster Ophthalmicus - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/keratoconjunctivitis-sicca",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/keratoconjunctivitis-sicca",
+      "title": "Keratoconjunctivitis Sicca - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/keratoconus",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/keratoconus",
+      "title": "Keratoconus - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/superficial-punctate-keratitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/corneal-disorders/superficial-punctate-keratitis",
+      "title": "Superficial Punctate Keratitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/blepharitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/blepharitis",
+      "title": "Blepharitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/chalazion-and-hordeolum-stye",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/chalazion-and-hordeolum-stye",
+      "title": "Chalazion and Hordeolum (Stye) - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/dacryocystitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/dacryocystitis",
+      "title": "Dacryocystitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/dacryostenosis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/dacryostenosis",
+      "title": "Dacryostenosis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/entropion-and-ectropion",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/entropion-and-ectropion",
+      "title": "Entropion and Ectropion - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/eyelid-growths",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/eyelid-growths",
+      "title": "Eyelid Growths - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/trichiasis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/eyelid-and-lacrimal-disorders/trichiasis",
+      "title": "Trichiasis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/angle-closure-glaucoma",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/angle-closure-glaucoma",
+      "title": "Angle-Closure Glaucoma - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/overview-of-glaucoma",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/overview-of-glaucoma",
+      "title": "Overview of Glaucoma - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/primary-open-angle-glaucoma",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/glaucoma/primary-open-angle-glaucoma",
+      "title": "Primary Open-Angle Glaucoma - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/ischemic-optic-neuropathy",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/ischemic-optic-neuropathy",
+      "title": "Ischemic Optic Neuropathy - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/optic-neuritis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/optic-neuritis",
+      "title": "Optic Neuritis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/papilledema",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/papilledema",
+      "title": "Papilledema - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/the-optic-pathway",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/the-optic-pathway",
+      "title": "The Optic Pathway - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/toxic-and-nutritional-optic-neuropathies",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/optic-nerve-disorders/toxic-and-nutritional-optic-neuropathies",
+      "title": "Toxic and Nutritional Optic Neuropathies - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/inflammatory-orbital-disease",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/inflammatory-orbital-disease",
+      "title": "Inflammatory Orbital Disease - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/preseptal-and-orbital-cellulitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/preseptal-and-orbital-cellulitis",
+      "title": "Preseptal and Orbital Cellulitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/tumors-of-the-orbit",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/orbital-diseases/tumors-of-the-orbit",
+      "title": "Tumors of the Orbit - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/retinal-disorders/central-retinal-artery-occlusion-and-branch-retinal-artery-occlusion",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/retinal-disorders/central-retinal-artery-occlusion-and-branch-retinal-artery-occlusion",
+      "title": "Central Retinal Artery Occlusion and Branch Retinal Artery Occlusion - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/retinal-disorders/central-retinal-vein-occlusion-and-branch-retinal-vein-occlusion",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/retinal-disorders/central-retinal-vein-occlusion-and-branch-retinal-vein-occlusion",
+      "title": "Central Retinal Vein Occlusion and Branch Retinal Vein Occlusion - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/retinal-disorders/hypertensive-retinopathy",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/retinal-disorders/hypertensive-retinopathy",
+      "title": "Hypertensive Retinopathy - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/symptoms-of-ophthalmic-disorders/acute-vision-loss",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/symptoms-of-ophthalmic-disorders/acute-vision-loss",
+      "title": "Acute Vision Loss - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/symptoms-of-ophthalmic-disorders/diplopia",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/symptoms-of-ophthalmic-disorders/diplopia",
+      "title": "Diplopia - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/endophthalmitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/endophthalmitis",
+      "title": "Endophthalmitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/infectious-uveitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/infectious-uveitis",
+      "title": "Infectious Uveitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/overview-of-uveitis",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/overview-of-uveitis",
+      "title": "Overview of Uveitis - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/uveitis-caused-by-systemic-rheumatic-disease",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/eye-disorders/uveitis-and-related-disorders/uveitis-caused-by-systemic-rheumatic-disease",
+      "title": "Uveitis Caused by Systemic Rheumatic Disease - Ophthalmology - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/injuries-poisoning/eye-trauma/corneal-abrasions-and-corneal-foreign-bodies",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/injuries-poisoning/eye-trauma/corneal-abrasions-and-corneal-foreign-bodies",
+      "title": "Corneal Abrasions and Corneal Foreign Bodies - Injuries; Poisoning - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.msdmanuals.com/professional/injuries-poisoning/eye-trauma/ocular-burns",
+      "status": 200,
+      "final_url": "https://www.msdmanuals.com/professional/injuries-poisoning/eye-trauma/ocular-burns",
+      "title": "Ocular Burns - Injuries; Poisoning - MSD Manual Professional Edition",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK560661/",
+      "status": null,
+      "link_check": "requires-verification",
+      "error": "TypeError",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/anophthalmia-and-microphthalmia",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/anophthalmia-and-microphthalmia",
+      "title": "Anophthalmia and Microphthalmia | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/coloboma",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/coloboma",
+      "title": "Coloboma | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/convergence-insufficiency",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/convergence-insufficiency",
+      "title": "Convergence Insufficiency | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/corneal-conditions",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/corneal-conditions",
+      "title": "Corneal Conditions | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/farsightedness-hyperopia",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/farsightedness-hyperopia",
+      "title": "Farsightedness (Hyperopia) | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/graves-eye-disease",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/graves-eye-disease",
+      "title": "Graves’ Eye Disease | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/macular-edema",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/macular-edema",
+      "title": "Macular Edema | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/macular-hole",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/macular-hole",
+      "title": "Macular Hole | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/macular-pucker",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/macular-pucker",
+      "title": "Macular Pucker | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/nearsightedness-myopia",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/nearsightedness-myopia",
+      "title": "Nearsightedness (Myopia) | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/presbyopia",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/presbyopia",
+      "title": "Presbyopia | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/rare-diseases",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/rare-diseases",
+      "title": "Rare Diseases | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinitis-pigmentosa",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinitis-pigmentosa",
+      "title": "Retinitis Pigmentosa | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinoblastoma",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinoblastoma",
+      "title": "Retinoblastoma | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinopathy-prematurity",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinopathy-prematurity",
+      "title": "Retinopathy of Prematurity | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/stargardt-disease",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/stargardt-disease",
+      "title": "Stargardt Disease | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/usher-syndrome",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/usher-syndrome",
+      "title": "Usher Syndrome | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/vitreous-detachment",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/vitreous-detachment",
+      "title": "Vitreous Detachment | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/age-related-macular-degeneration",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/age-related-macular-degeneration",
+      "title": "Age-Related Macular Degeneration (AMD) | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/amblyopia-lazy-eye",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/amblyopia-lazy-eye",
+      "title": "Amblyopia (Lazy Eye) | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/astigmatism",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/astigmatism",
+      "title": "Astigmatism | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/color-blindness",
+      "title": "Color Blindness | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/diabetic-retinopathy",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/diabetic-retinopathy",
+      "title": "Diabetic Retinopathy | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/retinal-detachment",
+      "status": 200,
+      "final_url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/retinal-detachment",
+      "title": "Retinal Detachment | National Eye Institute",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nhs.uk/conditions/eye-injuries/",
+      "status": 200,
+      "final_url": "https://www.nhs.uk/conditions/eye-injuries/",
+      "title": "Eye injuries - NHS",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    },
+    {
+      "url": "https://www.nhs.uk/conditions/temporal-arteritis/",
+      "status": 200,
+      "final_url": "https://www.nhs.uk/conditions/temporal-arteritis/",
+      "title": "Temporal arteritis - NHS",
+      "link_check": "reachable",
+      "clinical_review": "not-performed"
+    }
+  ]
+}

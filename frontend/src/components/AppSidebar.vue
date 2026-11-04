@@ -3,7 +3,7 @@ import type { Navigation } from '../types'
 import AppIcon from './AppIcon.vue'
 defineProps<{ active: Navigation; open: boolean; demo: boolean }>()
 defineEmits<{ navigate: [page: Navigation]; close: [] }>()
-const links: { label: Navigation; icon: string }[] = [{ label: 'Overview', icon: 'overview' }, { label: 'Body explorer', icon: 'body' }, { label: 'Assessments', icon: 'clipboard' }, { label: 'History', icon: 'history' }, { label: 'Settings', icon: 'settings' }]
+const links: { label: Navigation; icon: string }[] = [{ label: 'Overview', icon: 'overview' }, { label: 'Body explorer', icon: 'body' }, { label: 'Patient twin', icon: 'activity' }, { label: 'Assessments', icon: 'clipboard' }, { label: 'History', icon: 'history' }, { label: 'Settings', icon: 'settings' }]
 </script>
 <template>
   <button v-if="open" class="sidebar-scrim" aria-label="Close navigation" @click="$emit('close')"></button>

@@ -1,0 +1,179 @@
+{
+  "version": "pain-assistance-draft-2026-10-30.1",
+  "clinical_review_status": "draft",
+  "clinical_use_available": false,
+  "algorithm": "Original unvalidated helper heuristic. Referenced sources inform assessment questions and broad bands; they do not validate these proposed scores.",
+  "confirmation_required": true,
+  "ranges": {
+    "none": [
+      0,
+      0
+    ],
+    "mild": [
+      1,
+      3
+    ],
+    "moderate": [
+      4,
+      6
+    ],
+    "severe": [
+      7,
+      10
+    ]
+  },
+  "proposals": {
+    "none": {
+      "unknown": 0,
+      "normal": 0,
+      "slowed": null,
+      "stopped": null,
+      "cannot": null
+    },
+    "mild": {
+      "unknown": null,
+      "normal": 2,
+      "slowed": 3,
+      "stopped": null,
+      "cannot": null
+    },
+    "moderate": {
+      "unknown": null,
+      "normal": 4,
+      "slowed": 5,
+      "stopped": 6,
+      "cannot": null
+    },
+    "severe": {
+      "unknown": 8,
+      "normal": null,
+      "slowed": null,
+      "stopped": 8,
+      "cannot": 9
+    }
+  },
+  "activity_patterns": [
+    {
+      "value": "cannot",
+      "pattern": "(?:cannot|can.t|unable to|not able to).{0,22}(?:usual|normal|daily|anything|activities)|ما أكدر.{0,18}(?:نشاط|شي)|ناتوانم.{0,18}چالاکی"
+    },
+    {
+      "value": "stopped",
+      "pattern": "(?:stopped|avoid|interrupts?).{0,22}activit|وقفت بعض النشاط|هەندێک چالاکیم وەستاندووە"
+    },
+    {
+      "value": "slowed",
+      "pattern": "\\b(?:distract(?:s|ing|ed)?|hard to concentrate)\\b|يشتتني|سەرنجم دەبات"
+    },
+    {
+      "value": "normal",
+      "pattern": "\\b(?:can|able to).{0,18}(?:usual|normal|daily) activit|أكدر أسوي نشاطي|دەتوانم چالاکیی ئاسایی"
+    }
+  ],
+  "labels": {
+    "button": {
+      "en": "Let the assistant choose",
+      "ar-IQ": "خلي المساعد يختار",
+      "ckb": "با یاریدەدەر هەڵبژێرێت"
+    },
+    "title": {
+      "en": "Assistant-suggested pain level",
+      "ar-IQ": "درجة الألم المقترحة من المساعد",
+      "ckb": "ئاستی ئازاری پێشنیارکراوی یاریدەدەر"
+    },
+    "accept": {
+      "en": "Yes, use this estimate",
+      "ar-IQ": "نعم، استخدم هذا التقدير",
+      "ckb": "بەڵێ، ئەم خەماڵاندنە بەکاربهێنە"
+    },
+    "change": {
+      "en": "I will choose my own score",
+      "ar-IQ": "أختار درجتي بنفسي",
+      "ckb": "خۆم نمرەکەم هەڵدەبژێرم"
+    },
+    "skip": {
+      "en": "Keep it unrated and continue",
+      "ar-IQ": "خليه بدون درجة واستمر",
+      "ckb": "بێ نمرە بیهێڵەوە و بەردەوام بە"
+    },
+    "waiting": {
+      "en": "Describe how the pain feels and how it affects activities. I will suggest a score for you to confirm.",
+      "ar-IQ": "اوصف شلون تحس بالألم وشلون يأثر على نشاطك. أقترح درجة حتى تأكدها.",
+      "ckb": "باس بکە ئازارەکە چۆنە و چۆن کاریگەری لە چالاکی دەکات. نمرەیەک پێشنیار دەکەم بۆ پشتڕاستکردنەوە."
+    },
+    "conflict": {
+      "en": "These answers do not fit one clear estimate. Please clarify or choose your own score.",
+      "ar-IQ": "هالأجوبة ما تناسب تقدير واضح واحد. وضحها أو اختار درجتك بنفسك.",
+      "ckb": "ئەم وەڵامانە لەگەڵ یەک خەماڵاندنی ڕوون ناگونجێن. ڕوونی بکەرەوە یان خۆت نمرە هەڵبژێرە."
+    },
+    "limit": {
+      "en": "This is a rough suggestion from your answers, not a measurement. Only you can confirm whether it reflects your pain.",
+      "ar-IQ": "هذا اقتراح تقريبي من أجوبتك، مو قياس. أنت وحدك تكدر تأكد إذا يمثل ألمك.",
+      "ckb": "ئەمە پێشنیارێکی نزیکەییە لە وەڵامەکانتەوە، نەک پێوانە. تەنها تۆ دەتوانیت پشتڕاستی بکەیتەوە کە ئازارەکەت دەنوێنێت."
+    },
+    "urgent": {
+      "en": "Do not delay urgent care to complete or confirm a pain estimate.",
+      "ar-IQ": "لا تأخر الرعاية العاجلة حتى تكمل أو تأكد تقدير الألم.",
+      "ckb": "بۆ تەواوکردن یان پشتڕاستکردنەوەی خەماڵاندنی ئازار چاودێریی پەلەیی دوا مەخە."
+    }
+  },
+  "description_question": {
+    "id": "question.pain-description",
+    "field": "pain_descriptor",
+    "type": "choice",
+    "when": {
+      "pain_present": true
+    },
+    "text": {
+      "en": "Describe the pain in words; I will help suggest a number.",
+      "ar-IQ": "اوصف الألم بالكلمات؛ أساعدك باقتراح رقم.",
+      "ckb": "ئازارەکە بە وشە وەسف بکە؛ یارمەتیت دەدەم ژمارەیەک پێشنیار بکەم."
+    },
+    "options": [
+      {
+        "value": "none",
+        "label": {
+          "en": "No pain",
+          "ar-IQ": "بدون ألم",
+          "ckb": "بێ ئازار"
+        }
+      },
+      {
+        "value": "mild",
+        "label": {
+          "en": "Mild discomfort",
+          "ar-IQ": "ألم خفيف",
+          "ckb": "ئازاری سووک"
+        }
+      },
+      {
+        "value": "moderate",
+        "label": {
+          "en": "Moderate pain",
+          "ar-IQ": "ألم متوسط",
+          "ckb": "ئازاری مامناوەند"
+        }
+      },
+      {
+        "value": "severe",
+        "label": {
+          "en": "Severe pain",
+          "ar-IQ": "ألم شديد",
+          "ckb": "ئازاری توند"
+        }
+      },
+      {
+        "value": "unknown",
+        "label": {
+          "en": "I am not sure",
+          "ar-IQ": "مو متأكد",
+          "ckb": "دڵنیا نیم"
+        }
+      }
+    ]
+  },
+  "source_urls": [
+    "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0003/212880/ACI-Pain-assessment.pdf",
+    "https://dhcw.nhs.wales/data/information-standards/data-standards/data-standards-files/nursing-documentation-docs/rsk-allwales-pain-risk-assessment-final-v2-4-pdf-pdf/"
+  ]
+}

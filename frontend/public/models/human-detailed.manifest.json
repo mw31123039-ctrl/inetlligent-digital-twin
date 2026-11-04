@@ -1,0 +1,33 @@
+{
+  "source_glb_sha256": "8b8a591ad975a124e9419f64e397c677773195cb3fbd65c4291d6351bd7ed197",
+  "output_sha256": "eb14e93108d598ba1d0727b0f0db13a4ab372a46e91f9a6ed3bcc93c57ba5e3e",
+  "bytes": 17548680,
+  "sources": [
+    {
+      "file": "m002_head_color.tga",
+      "sha256": "f5b64e4894930d438f7c419c3c9d0bba1f95fa4de9af078b762ea55bfca1ab85",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "file": "m002_head_normal.tga",
+      "sha256": "5ef5ae404c9276f17641e392d0d4bdbe5fb23e94f28238b23a381e6a357c42ea",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "file": "m002_body_normal.tga",
+      "sha256": "c9892e80c56890f6f5365627835286c2d4d2cc34cc473f6788fe3d560a52fb69",
+      "width": 2048,
+      "height": 2048
+    }
+  ],
+  "license": "MIT",
+  "license_file": "LICENSE-Rocketbox.txt",
+  "preparation": {
+    "source": "Microsoft Rocketbox Male_Adult_01",
+    "source_revision": "0943055db6ec570bcef9f2c8b41c9e5467c808f9",
+    "license": "MIT",
+    "preparation": "Original head color at 2048px, original skin/clothing normal maps at 2048px, retained rig/UVs, adjusted PBR roughness."
+  }
+}

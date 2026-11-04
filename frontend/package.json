@@ -7,26 +7,45 @@
     "dev": "vite --host 127.0.0.1",
     "typecheck": "vue-tsc --noEmit",
     "build": "vue-tsc --noEmit && vite build",
+    "build:portable": "vue-tsc --noEmit && node scripts/portable.mjs",
+    "preview:eye": "node scripts/serve-eye-preview.mjs",
+    "test:eye": "node scripts/test-eye.mjs",
+    "test:eye:browser": "node scripts/smoke-eye.mjs",
+    "test:eye:chat": "node scripts/smoke-eye-chat.mjs",
+    "test:eye:care": "node scripts/smoke-eye-care.mjs",
+    "test:eye:pain": "node scripts/smoke-pain-suggestion.mjs",
+    "research:eye": "node ../research/run-eye-benchmark.mjs",
+    "research:test": "node --test ../research/tests/evaluation.test.mjs",
+    "research:test:browser": "node ../research/tests/report-browser.mjs",
+    "test:twin": "node scripts/test-twin.mjs",
+    "test:twin:browser": "node scripts/smoke-twin.mjs",
+    "test:realism": "node scripts/test-realism.mjs",
+    "test:realism:browser": "node scripts/smoke-realism.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest run",
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "vue": "^3.5.22",
+    "@lucide/vue": "^1.59.0",
     "three": "^0.180.0",
-    "@lucide/vue": "^1.59.0"
+    "vue": "^3.5.22"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/wasm-node": "^4.64.10",
     "@tailwindcss/vite": "^4.1.14",
     "@types/node": "^22.18.0",
     "@types/three": "^0.180.0",
     "@vitejs/plugin-vue": "^6.0.1",
+    "php-parser": "^3.7.0",
     "tailwindcss": "^4.1.14",
     "typescript": "~5.9.3",
     "vite": "^7.1.10",
     "vitest": "^5.0.5",
     "vue-tsc": "^3.1.1"
   },
-  "engines": { "node": ">=22.12.0" }
+  "engines": {
+    "node": ">=22.12.0"
+  }
 }

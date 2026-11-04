@@ -1,0 +1,5 @@
+MakeHuman core eye texture, CC0 1.0.
+Core graphics assets were explicitly released under CC0 in September 2020.
+Copyright holders at that release: Data Collection AB, Joel Palmius and Jonas Hauquier.
+Original source texture and material retained unchanged. Only UV coordinates in the application select the iris area.
+See brown.mhmat, LICENSE-MakeHuman.md and manifest.json for the source license declaration, revision and hashes.

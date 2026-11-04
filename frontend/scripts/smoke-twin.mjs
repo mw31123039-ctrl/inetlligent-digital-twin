@@ -1,0 +1,98 @@
+import assert from 'node:assert/strict'
+import { chromium } from '@playwright/test'
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const artifacts = fileURLToPath(new URL('../../research/results/latest/', import.meta.url))
+await fs.mkdir(artifacts, { recursive: true })
+const channel = process.env.HUMANTWIN_BROWSER_CHANNEL || (process.platform === 'win32' ? 'chrome' : undefined)
+const browser = await chromium.launch({ channel, headless: true, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
+let page
+try {
+  page = await browser.newPage({ viewport: { width: 1440, height: 1100 } })
+  page.setDefaultTimeout(15000)
+  const errors = []
+  page.on('pageerror', error => errors.push(error.message))
+  await page.goto((process.env.HUMANTWIN_EYE_URL || 'http://127.0.0.1:5174') + '/#twin')
+  await page.getByRole('heading', { name: 'A twin that changes with its subject' }).waitFor()
+  assert.equal(await page.locator('.twin-ledger tbody tr').count(), 0)
+  await page.getByRole('button', { name: 'Load synthetic example', exact: true }).click()
+  await page.getByRole('heading', { name: 'SYNTHETIC-001', exact: true }).waitFor()
+  assert.equal(await page.locator('.twin-ledger tbody tr').count(), 7)
+  assert.match(await page.getByTestId('twin-projection').innerText(), /Experimental projection:/)
+  await page.getByRole('button', { name: 'Use selected stream', exact: true }).click()
+  await page.getByLabel('Resting heart rate value (bpm)', { exact: true }).fill('73')
+  await page.getByRole('button', { name: 'Add observation', exact: true }).click()
+  assert.equal(await page.locator('.twin-ledger tbody tr').count(), 8)
+  assert.match(await page.locator('.twin-identity').innerText(), /8 active observations/)
+  await page.locator('.twin-ledger tbody tr').first().getByRole('button', { name: 'Correct', exact: true }).click()
+  await page.getByLabel('Resting heart rate value (bpm)', { exact: true }).fill('75')
+  await page.getByRole('button', { name: 'Append correction', exact: true }).click()
+  assert.equal(await page.locator('.twin-ledger tbody tr').count(), 9)
+  assert.equal(await page.locator('.twin-superseded').count(), 1)
+  assert.match(await page.locator('.twin-identity').innerText(), /8 active observations/)
+
+  const [recordDownload] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Export record', exact: true }).click()])
+  const recordPath = path.join(artifacts, 'twin-record.json')
+  await recordDownload.saveAs(recordPath)
+  const record = JSON.parse(await fs.readFile(recordPath, 'utf8'))
+  assert.equal(record.subject_id, 'SYNTHETIC-001')
+  assert.equal(record.observations.length, 9)
+  assert.equal(record.observations[8].value, 75)
+  assert.ok(record.observations[8].supersedes)
+  const [analysisDownload] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Export model analysis', exact: true }).click()])
+  const analysisPath = path.join(artifacts, 'twin-analysis.json')
+  await analysisDownload.saveAs(analysisPath)
+  const analysis = JSON.parse(await fs.readFile(analysisPath, 'utf8'))
+  assert.equal(analysis.schema_version, 'humantwin-analysis-v1')
+  assert.equal(analysis.streams[0].projection.n, 8)
+  assert.ok(analysis.streams[0].retrospective.count > 0)
+  assert.ok(!analysis.streams[0].projection.training_ids.includes(record.observations[7].id))
+
+  const invalid = structuredClone(record); invalid.observations[0].subject_id = 'OTHER-SUBJECT'
+  await page.getByLabel('Import research JSON', { exact: true }).setInputFiles({ name: 'invalid.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(invalid)) })
+  await page.getByRole('alert').filter({ hasText: 'different subject' }).waitFor()
+  assert.equal(await page.locator('.twin-ledger tbody tr').count(), 9)
+  await page.getByLabel('Synthetic study subject ID', { exact: true }).fill('STUDY-B')
+  await page.getByRole('button', { name: 'Start empty twin', exact: true }).click()
+  await page.getByRole('button', { name: 'Use this research twin', exact: true }).click()
+  assert.match(await page.locator('.twin-identity').innerText(), /0 active observations/)
+  await page.getByLabel('Import research JSON', { exact: true }).setInputFiles(recordPath)
+  await page.getByRole('button', { name: 'Use this research twin', exact: true }).click()
+  assert.equal(await page.locator('.twin-ledger tbody tr').count(), 9)
+  assert.match(await page.locator('.twin-identity').innerText(), /SYNTHETIC-001/)
+  await page.getByLabel('Measurement', { exact: true }).selectOption('pain')
+  await page.getByLabel('Reported body region', { exact: true }).selectOption('eyes')
+  await page.getByLabel('Patient side', { exact: true }).selectOption('left')
+  await page.getByLabel('Self-reported pain value (/10)', { exact: true }).fill('4')
+  await page.getByRole('button', { name: 'Add observation', exact: true }).click()
+  assert.equal(await page.locator('.twin-ledger tbody tr').count(), 10)
+  assert.match(await page.getByTestId('twin-projection').innerText(), /Projection withheld/)
+  await page.getByRole('button', { name: 'Explore Eyes', exact: true }).click()
+  await page.locator('.eye-part-detail .eye-atlas').waitFor()
+  await page.getByRole('button', { name: 'Patient twin', exact: true }).click()
+  assert.equal(await page.locator('.twin-ledger tbody tr').count(), 10)
+  const hrKey = await page.getByLabel('Measurement stream', { exact: true }).locator('option').evaluateAll(items => items.find(item => item.textContent.includes('Resting heart rate')).value)
+  await page.getByLabel('Measurement stream', { exact: true }).selectOption(hrKey)
+  assert.match(await page.getByTestId('twin-projection').innerText(), /Experimental projection:/)
+  await page.evaluate(() => window.scrollTo(0, 0))
+  await page.screenshot({ path: path.join(artifacts, 'twin-desktop.png'), fullPage: true })
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.waitForFunction(() => document.querySelector('.sidebar').getBoundingClientRect().right <= 1)
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 2), 'Twin workspace overflows on mobile')
+  await page.evaluate(() => window.scrollTo(0, 0))
+  await page.screenshot({ path: path.join(artifacts, 'twin-mobile.png'), fullPage: true })
+  assert.deepEqual(errors, [])
+  const storage = await page.evaluate(() => Object.keys(localStorage).filter(key => /twin.*(patient|record|observation)|patient.*twin/i.test(key)))
+  assert.deepEqual(storage, [], 'Research readings must not be written to browser storage')
+  console.log('PASS: subject model; observation assimilation; immutable correction; model and record exports; cross-subject rejection; import restoration; anatomy navigation; mobile layout; no page errors.')
+} catch (error) {
+  if (page) {
+    console.error((await page.locator('body').innerText()).slice(-6500))
+    await page.screenshot({ path: path.join(artifacts, 'twin-browser-failure.png'), fullPage: true })
+  }
+  throw error
+} finally {
+  await browser.close()
+}

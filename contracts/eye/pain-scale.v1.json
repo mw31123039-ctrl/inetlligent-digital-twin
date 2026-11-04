@@ -1,0 +1,52 @@
+{
+  "version": "eye-draft-2026-10-30.2",
+  "clinical_review_status": "draft",
+  "clinical_use_available": false,
+  "numeric_source": "self-reported-or-patient-confirmed-assistant-estimate",
+  "bands": [
+    {
+      "id": "none",
+      "min": 0,
+      "max": 0,
+      "label": {
+        "en": "No pain",
+        "ar-IQ": "بدون ألم",
+        "ckb": "بێ ئازار"
+      }
+    },
+    {
+      "id": "mild",
+      "min": 1,
+      "max": 3,
+      "label": {
+        "en": "Mild pain",
+        "ar-IQ": "ألم خفيف",
+        "ckb": "ئازاری سووک"
+      }
+    },
+    {
+      "id": "moderate",
+      "min": 4,
+      "max": 6,
+      "label": {
+        "en": "Moderate pain",
+        "ar-IQ": "ألم متوسط",
+        "ckb": "ئازاری مامناوەند"
+      }
+    },
+    {
+      "id": "severe",
+      "min": 7,
+      "max": 10,
+      "label": {
+        "en": "Severe pain",
+        "ar-IQ": "ألم شديد",
+        "ckb": "ئازاری توند"
+      }
+    }
+  ],
+  "source_urls": [
+    "https://dhcw.nhs.wales/data/information-standards/data-standards/data-standards-files/nursing-documentation-docs/rsk-allwales-pain-risk-assessment-final-v2-4-pdf-pdf/"
+  ],
+  "limitation": "This describes a self-reported pain score. Functional impact is collected separately. Neither score nor band establishes diagnosis or urgency."
+}

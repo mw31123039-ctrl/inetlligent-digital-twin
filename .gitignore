@@ -8,6 +8,7 @@
 **/.pytest_cache/
 **/*.pyc
 **/dist/
+**/dist-eye-preview/
 **/test-results/
 **/playwright-report/
 backend/database/*.sqlite*
@@ -24,3 +25,4 @@ backend/bootstrap/cache/*.php
 **/.openai/
 *.zip
 *.tar.gz
+research/results/

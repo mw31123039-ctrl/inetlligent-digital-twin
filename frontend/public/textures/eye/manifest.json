@@ -1,0 +1,27 @@
+{
+  "source": "MakeHuman core eye asset",
+  "revision": "a8bc2d54ff0ac92e78ff71431b1023eda42bf482",
+  "license": "CC0-1.0 for core graphics assets",
+  "license_url": "https://www.makehumancommunity.org/about/license.html",
+  "modifications": "Original PNG retained unchanged. Iris sampled through 3D mesh UVs; no image editing.",
+  "files": [
+    {
+      "name": "brown_eye.png",
+      "source_url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/eyes/materials/brown_eye.png",
+      "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b",
+      "bytes": 610817
+    },
+    {
+      "name": "brown.mhmat",
+      "source_url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/eyes/materials/brown.mhmat",
+      "sha256": "4abad93ce50541c08127721e77bce035640c9f16bed16cd0f5524b1cd5908465",
+      "bytes": 1247
+    },
+    {
+      "name": "LICENSE-MakeHuman.md",
+      "source_url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/LICENSE.md",
+      "sha256": "edd99571ca62698f78c943fd4fffb159a413c315fa0d4819d3cec5cadaf8b4f1",
+      "bytes": 3598
+    }
+  ]
+}

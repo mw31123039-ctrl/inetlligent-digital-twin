@@ -2,10 +2,12 @@ import { computed, ref } from 'vue'
 import { getRegion } from '../data/regions'
 import { createMockSymptomService } from '../services/mockSymptomService'
 import type { Answers, Assessment, DemoSettings, Message, RegionId } from '../types'
+import { bodyParts, partLabel, type PatientSide } from '../data/bodyParts'
 
 const emptyAnswers = (): Answers => ({ symptom: '', location: '', onset: '', character: '' })
 export function useAssessment(settings: DemoSettings) {
   const region = ref<RegionId | null>('eyes')
+  const side = ref<PatientSide>()
   const messages = ref<Message[]>([])
   const answers = ref(emptyAnswers())
   const pain = ref(4)
@@ -23,10 +25,11 @@ export function useAssessment(settings: DemoSettings) {
     settings.failNextResponse = false
     return true
   } })
-  function selectRegion(id: RegionId | null) {
+  function selectRegion(id: RegionId | null, patientSide?: PatientSide) {
     generation++
     assessmentId = crypto.randomUUID()
     region.value = id
+    side.value = patientSide
     answers.value = emptyAnswers()
     pain.value = 4
     step.value = 0
@@ -34,9 +37,11 @@ export function useAssessment(settings: DemoSettings) {
     pending.value = false
     saved.value = false
     failedAnswer.value = ''
-    messages.value = id ? [{ id: crypto.randomUUID(), role: 'assistant', text: `You selected your ${getRegion(id).label.toLowerCase()}. What is bothering you?` }] : []
+    messages.value = id ? [{ id: crypto.randomUUID(), role: 'assistant', text: opening(id) }] : []
     options.value = id ? getRegion(id).symptomOptions : []
   }
+  function opening(id: RegionId) { return `You selected your ${side.value && bodyParts[id].paired ? partLabel(id, side.value).toLowerCase() : getRegion(id).label.toLowerCase()}. What is bothering you?` }
+  function setSide(value: PatientSide) { side.value = value; if (region.value && messages.value[0]?.role === 'assistant') messages.value[0].text = opening(region.value) }
   async function send(text: string, retry = false) {
     if (!region.value || pending.value) return
     const answer = text.trim()
@@ -65,8 +70,8 @@ export function useAssessment(settings: DemoSettings) {
   function retry() { if (failedAnswer.value) return send(failedAnswer.value, true) }
   function snapshot(): Assessment | null {
     if (!region.value || !complete.value) return null
-    return { id: assessmentId, region: region.value, answers: { ...answers.value }, pain: pain.value, messages: messages.value.map(m => ({ ...m })), createdAt: new Date().toISOString() }
+    return { id: assessmentId, region: region.value, side: side.value, answers: { ...answers.value }, pain: pain.value, messages: messages.value.map(m => ({ ...m })), createdAt: new Date().toISOString() }
   }
   selectRegion('eyes')
-  return { region, messages, answers, pain, step, pending, error, options, saved, complete, selectRegion, send, retry, snapshot, canRetry: computed(() => !!failedAnswer.value) }
+  return { region, side, messages, answers, pain, step, pending, error, options, saved, complete, selectRegion, setSide, send, retry, snapshot, canRetry: computed(() => !!failedAnswer.value) }
 }

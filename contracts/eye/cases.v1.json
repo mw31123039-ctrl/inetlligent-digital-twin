@@ -1,0 +1,23 @@
+{
+  "version": "eye-draft-2026-10-30.1",
+  "cases": [
+    {"id":"painless-sudden-loss","text":"I suddenly lost vision in my left eye with no pain","level":"emergency","rule":"eye.rule.sudden-vision-loss"},
+    {"id":"chemical-interruption","text":"Bleach splashed in my eye","level":"emergency","rule":"eye.rule.chemical"},
+    {"id":"flashes-curtain","text":"New flashes and floaters with a curtain in my vision","level":"emergency","rule":"eye.rule.curtain"},
+    {"id":"contact-lens-vision","text":"I wear contact lenses and have eye pain with blurred vision","level":"emergency","rule":"eye.rule.contact-vision"},
+    {"id":"orbital-warning","text":"My eye is swollen and I have fever and pain on eye movement","level":"emergency","rule":"eye.rule.orbital"},
+    {"id":"postoperative-pain","text":"I had eye surgery yesterday and have severe eye pain","level":"emergency","rule":"eye.rule.postoperative"},
+    {"id":"post-injection-vision","text":"After an eye injection I have blurred vision","level":"emergency","rule":"eye.rule.postoperative"},
+    {"id":"child-white-pupil","text":"My child has a white pupil in a photograph","level":"urgent","rule":"eye.rule.white-pupil"},
+    {"id":"newborn-sticky","text":"My newborn has a red sticky eye","level":"urgent","rule":"eye.rule.newborn-red-sticky"},
+    {"id":"penetrating","text":"A sharp object pierced my eye","level":"emergency","rule":"eye.rule.penetrating"},
+    {"id":"high-speed","text":"A metal fragment hit my eye while grinding","level":"emergency","rule":"eye.rule.penetrating"},
+    {"id":"red-headache","text":"My eye is red and I have a severe headache and nausea","level":"emergency","rule":"eye.rule.red-headache-nausea"},
+    {"id":"vascular-warning","text":"I have blurred vision and new jaw pain while chewing","level":"urgent","rule":"eye.rule.vascular"},
+    {"id":"no-warning-established","text":"There is mild itching in both eyes","level":"unknown","laterality":"both"},
+    {"id":"negated-loss","text":"No vision loss. No pain. My eyes itch.","level":"unknown"},
+    {"id":"arabic-painless-loss","text":"فقدان النظر فجأة بدون ألم","level":"emergency","rule":"eye.rule.sudden-vision-loss"},
+    {"id":"sorani-painless-loss","text":"لەدەستدانی بینین لەناکاو بێ ئازار","level":"emergency","rule":"eye.rule.sudden-vision-loss"},
+    {"id":"painful-contact-reduced-vision","text":"I wear contact lenses and have a painful red eye with reduced vision","level":"emergency","rule":"eye.rule.contact-vision"}
+  ]
+}

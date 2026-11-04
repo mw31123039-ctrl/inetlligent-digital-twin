@@ -1,0 +1,9 @@
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
+
+Source: https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip
+Official current license: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+License: https://creativecommons.org/licenses/by/4.0/
+
+Selected original meshes; welded duplicate position vertices and recomputed smooth normals; source Z-up to Y-up with anterior -Y mapped to +Z; uniform regional centering/scaling; illustrative PBR colors and subtle vertex variation; exported GLB. No polygon decimation or patient-specific reconstruction.
+Detailed source identifiers, hashes and transformations are recorded in manifest.json.
+These reference anatomical assets are educational and are not patient scans or clinically validated by this application.

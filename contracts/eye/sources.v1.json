@@ -1,0 +1,18 @@
+{
+  "version": "eye-draft-2026-10-30.2",
+  "anatomy": [
+    {
+      "id": "anatomy-msd",
+      "url": "https://www.msdmanuals.com/professional/eye-disorders/approach-to-the-ophthalmologic-patient/ophthalmic-anatomy"
+    },
+    {
+      "id": "anatomy-aao",
+      "url": "https://www.aao.org/eye-health/anatomy/human-eye"
+    }
+  ],
+  "index_urls": {
+    "msd": "https://www.msdmanuals.com/professional/eye-disorders",
+    "nei": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases"
+  },
+  "unresolved_hints": []
+}

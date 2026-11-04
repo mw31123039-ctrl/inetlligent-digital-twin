@@ -1,5 +1,13 @@
 # Intelligent Digital Twin of the Human Body
 
+**3D visual update:** Patient twin now displays the textured, rigged human with higher-resolution face and normal maps. The eye starts with a lifelike surface view using a licensed reference iris, shaped lids and clear cornea. Regional close-ups use bundled anatomical mesh geometry: BodyParts3D plus a Z-Anatomy chest organ-surface view, with a separate vessels-and-ribs view. Read [asset provenance and licenses](frontend/ASSET_ATTRIBUTIONS.md). These are reference representations, not a reconstruction of the study subject.
+
+**Patient-specific research twin:** select **Patient twin** in the sidebar, or open `/#twin`. The new workspace updates an individual model from time-stamped observations, keeps corrections and source provenance, plots a personal reference, and provides an experimental statistical projection with retrospective comparison and JSON exports. Read [PATIENT_TWIN_RESEARCH.md](PATIENT_TWIN_RESEARCH.md) for the model, assumptions and local running instructions. Synthetic research inputs only; this is not a validated physiological or clinical twin.
+
+Research review and reproducible evaluation: [research/README.md](research/README.md). Run `node research/run-eye-benchmark.mjs` from the project root to produce an offline interactive report, JSON traces and CSV for 90 synthetic eye scenarios in English, Iraqi Arabic and Sorani. The benchmark compares retained conversation context with explicit software ablations, preserves disagreements and records source fingerprints. Draft fixture agreement is not clinical accuracy; patient-specific updating and prediction remain future research work.
+
+The detailed eye explorer is documented in [EYE_MODULE_REVIEW.md](EYE_MODULE_REVIEW.md). It includes an educational anatomy atlas, adaptive synthetic symptom interview, source-linked condition library and protected eye-record API. Clinical use remains disabled pending review. An optional native-free frontend build/preview is available through `npm run build:portable` and `npm run preview:eye` in `frontend/`.
+
 Vue/Three.js human explorer with an authenticated Laravel API and private Python symptom-assistant service.
 
 **Development prototype; not clinically validated. Use synthetic inputs.** No external AI key or model is configured. The interface reports **AI not configured** and offers limited, explicitly labeled rule-based intake, without AI explanations. The original questionnaire remains under **Scripted demo**. Test doubles are used only in tests.
@@ -87,4 +95,4 @@ npm run test:e2e
 
 Install Chromium with `npx playwright install chromium` if needed. Full-stack browser tests require all three services and run only with AI disabled; no paid calls occur. Unit tests use test-only provider/source doubles. Tests cover context, follow-ups, corrections, urgency, insufficient information, unsupported explanations, malformed outputs, failures, consent, encryption, deletion, isolation and the existing body viewer. Passing software tests does not establish clinical performance.
 
-Human model/license: [asset attribution](frontend/ASSET_ATTRIBUTIONS.md). No new model file is needed. Existing zip/tar deployment archives remain older frontend snapshots, not updated releases.
+Human model/license: [asset attribution](frontend/ASSET_ATTRIBUTIONS.md). All required reference models and textures are bundled. Existing zip/tar deployment archives remain older frontend snapshots, not updated releases.
