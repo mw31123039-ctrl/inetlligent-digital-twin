@@ -1,0 +1,75 @@
+import { chromium } from '@playwright/test'
+import assert from 'node:assert/strict'
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import * as T from 'three'
+const base=process.env.HUMANTWIN_EYE_URL||'http://127.0.0.1:5174',out=path.resolve('test-results/dental')
+await fs.mkdir(out,{recursive:true})
+const browser=await chromium.launch({channel:process.env.HUMANTWIN_BROWSER_CHANNEL||(process.platform==='win32'?'chrome':undefined),headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']})
+const errors=[],shaders=[],failedAssets=[],unexpectedRequests=[]
+function inspect(page){page.setDefaultTimeout(30000);page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error'&&/Shader Error|WebGLProgram|GL_INVALID/.test(m.text()))shaders.push(m.text())});page.on('response',r=>{if(/\/data\/dental\//.test(r.url())&&!r.ok())failedAssets.push(r.url())});page.on('request',r=>{if(!r.url().startsWith(base)&&!r.url().startsWith('blob:')&&!r.url().startsWith('data:'))unexpectedRequests.push(r.url())})}
+async function ready(page,selector='.dental-model-stage .dental-canvas'){await page.locator(selector+'[aria-busy=false] canvas').waitFor();await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))))}
+async function setRange(locator,value){await locator.evaluate((el,v)=>{el.value=String(v);el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}))},value)}
+let page
+try{
+ page=await browser.newPage({viewport:{width:1440,height:1080}});inspect(page)
+ await page.goto(base+'/#dental');await ready(page)
+ assert.equal(await page.locator('.dental-chart-row button').count(),32)
+ assert.equal(await page.locator('.settings-grid').count(),0)
+ // Pick a real tooth through ray casting, not a chart or test-only component hook.
+ const box=await page.locator('.dental-model-stage .dental-canvas').boundingBox()
+ const camera=new T.PerspectiveCamera(38,box.width/box.height,.03,80);camera.position.set(0,.65,5.8);camera.lookAt(0,-.12,.05);camera.updateMatrixWorld();const point=new T.Vector3(.146,.32,1.48).project(camera)
+ await page.mouse.click(box.x+(point.x+1)/2*box.width,box.y+(1-point.y)/2*box.height)
+ assert.equal(await page.locator('[data-fdi="21"]').getAttribute('aria-pressed'),'true')
+ await page.locator('[data-fdi="36"]').click();await setRange(page.getByRole('slider',{name:'Dental pain intensity'}),5)
+ await page.locator('[data-fdi="11"]').click();assert.equal(await page.getByRole('slider',{name:'Dental pain intensity'}).inputValue(),'0')
+ await page.locator('[data-fdi="36"]').click();assert.equal(await page.getByRole('slider',{name:'Dental pain intensity'}).inputValue(),'5')
+ await page.getByLabel('I have reviewed every sign above.').check()
+ await page.getByLabel('Difficulty breathing, swallowing or speaking',{exact:true}).check();assert.match(await page.getByTestId('dental-guidance').innerText(),/Get emergency care now/)
+ await page.getByLabel('Difficulty breathing, swallowing or speaking',{exact:true}).uncheck();await page.locator('[data-fdi="11"]').click();assert.match(await page.getByTestId('dental-guidance').innerText(),/reported earlier/)
+ const exportPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Export summary',exact:true}).click();const exported=await exportPromise;const summary=JSON.parse(await fs.readFile(await exported.path(),'utf8'));assert.ok(summary.emergency_reported_at);assert.equal(summary.clinical_validation,false)
+ await page.getByRole('button',{name:'New pain assessment',exact:true}).click();assert.match(await page.getByTestId('dental-guidance').innerText(),/First, check/)
+ await page.getByRole('button',{name:'Pulp & canals',exact:true}).click();await ready(page);await page.locator('.dental-model-stage').screenshot({path:path.join(out,'tooth-section.png')})
+ await page.getByRole('button',{name:'Front',exact:true}).click();await ready(page)
+ const before=await page.locator('.dental-model-stage canvas').screenshot();await page.locator('.dental-model-stage .dental-canvas').press('ArrowRight');await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));const after=await page.locator('.dental-model-stage canvas').screenshot();assert.notDeepEqual(before,after)
+ await page.getByRole('button',{name:'Reset dental model',exact:true}).click()
+ await page.getByRole('button',{name:'Braces studio',exact:true}).click();await ready(page)
+ await page.getByRole('button',{name:'Ceramic brackets',exact:true}).click();await page.getByRole('button',{name:'Lavender ligatures',exact:true}).click();await setRange(page.getByRole('slider',{name:'Jaw separation'}),.4);await ready(page)
+ await page.screenshot({path:path.join(out,'braces-desktop.png'),fullPage:true})
+ await page.getByRole('button',{name:'Upper arch',exact:true}).click();await ready(page);await page.getByRole('button',{name:'Lower arch',exact:true}).click();await ready(page)
+ await page.getByRole('button',{name:'Research data',exact:true}).click();await page.getByRole('button',{name:'Load published casts',exact:true}).click();await ready(page,'.dental-scan-stage .dental-canvas')
+ assert.match(await page.locator('.dental-scan-provenance').innerText(),/CC BY 4.0/)
+ await page.locator('.dental-scan-stage').screenshot({path:path.join(out,'published-casts.png')})
+ // Valid local STL, OBJ and GLB imports; no external resources or labels invented.
+ await page.locator('input[type=file][accept=".stl,.obj,.glb"]').setInputFiles(path.resolve('public/data/dental/reference-upper.stl'));await page.locator('.dental-scan-provenance strong').filter({hasText:'reference-upper.stl'}).waitFor();await ready(page,'.dental-scan-stage .dental-canvas')
+ await page.locator('input[type=file][accept=".stl,.obj,.glb"]').setInputFiles({name:'test-surface.obj',mimeType:'text/plain',buffer:Buffer.from('v -1 0 0\nv 1 0 0\nv 0 1 0\nf 1 2 3\n')});await page.locator('.dental-scan-provenance strong').filter({hasText:'test-surface.obj'}).waitFor();await ready(page,'.dental-scan-stage .dental-canvas')
+ const positions=Buffer.from(new Float32Array([-1,0,0,1,0,0,0,1,0]).buffer),json=JSON.stringify({asset:{version:'2.0'},buffers:[{byteLength:36}],bufferViews:[{buffer:0,byteLength:36}],accessors:[{bufferView:0,componentType:5126,count:3,type:'VEC3',min:[-1,0,0],max:[1,1,0]}],meshes:[{primitives:[{attributes:{POSITION:0}}]}],nodes:[{mesh:0}],scenes:[{nodes:[0]}],scene:0}),chunk=Buffer.from(json.padEnd(Math.ceil(json.length/4)*4,' ')),glb=Buffer.alloc(12+8+chunk.length+8+positions.length)
+ glb.writeUInt32LE(0x46546c67);glb.writeUInt32LE(2,4);glb.writeUInt32LE(glb.length,8);glb.writeUInt32LE(chunk.length,12);glb.writeUInt32LE(0x4e4f534a,16);chunk.copy(glb,20);glb.writeUInt32LE(positions.length,20+chunk.length);glb.writeUInt32LE(0x004e4942,24+chunk.length);positions.copy(glb,28+chunk.length)
+ await page.locator('input[type=file][accept=".stl,.obj,.glb"]').setInputFiles({name:'test-surface.glb',mimeType:'model/gltf-binary',buffer:glb});await page.locator('.dental-scan-provenance strong').filter({hasText:'test-surface.glb'}).waitFor();await ready(page,'.dental-scan-stage .dental-canvas')
+ await page.getByRole('button',{name:'X-rays & images',exact:true}).click();await page.getByRole('button',{name:'Load reference X-ray',exact:true}).click();await page.locator('.dental-expert-landmarks').waitFor()
+ assert.equal(await page.locator('.dental-expert-landmarks circle').count(),29)
+ const fields=page.locator('.dental-point-fields input');await fields.nth(0).fill('0');await fields.nth(0).press('Tab');await fields.nth(1).fill('0');await fields.nth(1).press('Tab');await fields.nth(2).fill('30');await fields.nth(2).press('Tab');await fields.nth(3).fill('40');await fields.nth(3).press('Tab')
+ assert.match(await page.locator('.dental-measurement-output').innerText(),/50.0 px/)
+ await page.getByLabel('Calibration',{exact:false}).fill('0.1');assert.match(await page.locator('.dental-measurement-output').innerText(),/5.00 mm/)
+ await page.screenshot({path:path.join(out,'cephalometric-review.png'),fullPage:true})
+ await page.getByRole('button',{name:'Measurements',exact:true}).click();await page.getByRole('button',{name:'Load 108 reference rows',exact:true}).click();await page.locator('.dental-import-status').waitFor()
+ assert.match(await page.locator('.dental-import-status').innerText(),/108 measurements.*27 coded subjects/)
+ await page.getByRole('combobox',{name:'Measurement subject'}).selectOption('M01');assert.match(await page.locator('.dental-observation-stats').innerText(),/31/);assert.equal(await page.locator('.dental-table-scroll tbody tr').count(),4)
+ await page.screenshot({path:path.join(out,'growth-measurements.png'),fullPage:true})
+ const csvInput=page.locator('input[type=file][accept=".csv,.json"]')
+ await csvInput.setInputFiles({name:'study.csv',mimeType:'text/csv',buffer:Buffer.from('subject_id,recorded_at,tooth_fdi,metric,value,unit\nCODE_01,2026-10-01,11,pain,4,score\nCODE_01,2026-10-15,11,pain,2,score\n')});await page.waitForFunction(()=>document.querySelector('.dental-import-status')?.textContent.includes('2 measurements'))
+ assert.equal(await page.getByRole('combobox',{name:'Measurement tooth'}).inputValue(),'11');assert.equal(await page.locator('.dental-table-scroll tbody tr').count(),2)
+ await csvInput.setInputFiles({name:'invalid.csv',mimeType:'text/csv',buffer:Buffer.from('subject_id,recorded_at,tooth_fdi,metric,value,unit\nCODE_01,2026-02-31,11,pain,4,score')});await page.locator('.dental-error').filter({hasText:'invalid date'}).waitFor();assert.match(await page.locator('.dental-import-status').innerText(),/2 measurements/)
+ await csvInput.setInputFiles({name:'observations.JSON',mimeType:'application/json',buffer:Buffer.from(JSON.stringify([{subject_id:'CODE_02',recorded_at:'2026-10-01',tooth_fdi:21,metric:'overjet',value:4.5,unit:'mm'},{subject_id:'CODE_02',recorded_at:'2026-11-01',tooth_fdi:21,metric:'overjet',value:4.2,unit:'mm'}]))});await page.waitForFunction(()=>document.querySelector('select[aria-label="Measurement subject"]')?.value==='CODE_02');assert.equal(await page.getByRole('combobox',{name:'Measurement tooth'}).inputValue(),'21')
+ await page.getByRole('button',{name:'X-rays & images',exact:true}).click();assert.match(await page.locator('.dental-measurement-output').innerText(),/5.00 mm/)
+ await page.getByRole('button',{name:'Source library',exact:true}).click();assert.equal(await page.locator('.dental-dataset-card').count(),5)
+ await page.getByRole('button',{name:'Body explorer',exact:true}).first().click();await page.locator('.region-selector').getByRole('button',{name:'Dental pain',exact:true}).waitFor();assert.equal(await page.locator('.region-selector').getByRole('button',{name:'Arms',exact:true}).count(),0);assert.equal(await page.locator('.region-selector').getByRole('button',{name:'Legs',exact:true}).count(),0)
+ await page.locator('.region-selector').getByRole('button',{name:'Braces & bite',exact:true}).click();assert.equal(await page.getByRole('button',{name:'Braces studio',exact:true}).getAttribute('aria-pressed'),'true')
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2))
+ const phone=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'});inspect(phone);await phone.goto(base+'/#orthodontics');await ready(phone)
+ await phone.locator('[data-fdi="46"]').tap();assert.equal(await phone.locator('[data-fdi="46"]').getAttribute('aria-pressed'),'true')
+ await phone.evaluate(()=>{if(document.activeElement instanceof HTMLElement)document.activeElement.blur();scrollTo(0,0)});await phone.screenshot({path:path.join(out,'mobile-braces.png'),fullPage:true});assert.ok(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2))
+ await phone.getByRole('button',{name:'Research data',exact:true}).tap();await phone.getByRole('button',{name:'Measurements',exact:true}).tap();await phone.getByRole('button',{name:'Load 108 reference rows',exact:true}).tap();await phone.locator('.dental-import-status').waitFor();assert.ok(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2))
+ assert.deepEqual(errors,[]);assert.deepEqual(shaders,[]);assert.deepEqual(failedAssets,[]);assert.deepEqual(unexpectedRequests,[])
+ console.log('PASS: dental ray picking; tooth-specific pain; sticky emergency guidance and export; bracket controls and arch views; published and local STL/OBJ/GLB scans; 29 expert X-ray landmarks; calibrated manual distances; reference and custom CSV; invalid import recovery; five source records; replacement area launchers; touch and reduced-motion mobile layout; no page, shader, asset or external-network errors.')
+}catch(e){console.error(JSON.stringify({errors,shaders,failedAssets,unexpectedRequests}));if(page){await page.screenshot({path:path.join(out,'failure.png'),fullPage:true});console.error((await page.locator('body').innerText()).slice(-1800))}throw e}finally{await browser.close()}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "reviewed_on": "2026-11-05",
+  "clinical_validation": false,
+  "sources": [
+    { "id": "nhs-toothache", "title": "NHS · Toothache", "url": "https://www.nhs.uk/symptoms/toothache/", "purpose": "Pain, duration and emergency warning signs" },
+    { "id": "nhs-abscess", "title": "NHS · Dental abscess", "url": "https://www.nhs.uk/conditions/dental-abscess/", "purpose": "Swelling, systemic symptoms and urgent assessment" },
+    { "id": "nhs-fife", "title": "NHS Fife · Orthodontic emergencies", "url": "https://www.nhsfife.org/services/all-services/patient-advice/orthodontic-emergencies/", "purpose": "Appliance discomfort and contacting the orthodontic team" },
+    { "id": "aao-emergency", "title": "AAO · Orthodontic emergencies", "url": "https://aaoinfo.org/whats-trending/what-is-an-orthodontic-emergency/", "purpose": "Injury, bleeding and orthodontic appliance problems" },
+    { "id": "ada-anatomy", "title": "ADA MouthHealthy · Tooth anatomy", "url": "https://www.mouthhealthy.org/all-topics-a-z/tooth/", "purpose": "Enamel, dentin, pulp and sensitivity education" },
+    { "id": "nhs-braces", "title": "NHS · Braces", "url": "https://www.nhs.uk/tests-and-treatments/braces/", "purpose": "Fixed appliances and ligatures" }
+  ],
+  "learning": [
+    { "title": "Tooth decay", "text": "Decay is one possible cause of toothache. A dentist needs to examine the tooth to establish the cause.", "source": "nhs-toothache" },
+    { "title": "Tooth sensitivity", "text": "Dentin beneath enamel surrounds the pulp. When dentin is exposed, temperature changes can stimulate the tissues inside.", "source": "ada-anatomy" },
+    { "title": "Damaged teeth or fillings", "text": "A damaged tooth or filling can be associated with pain. Record the affected area and arrange a dental examination.", "source": "nhs-toothache" },
+    { "title": "Dental abscess", "text": "An infection-related collection in teeth or gums needs urgent dental treatment. The symptom form cannot confirm or exclude an abscess.", "source": "nhs-abscess" },
+    { "title": "A rubbing bracket or wire", "text": "Record the location and contact the orthodontic team. Orthodontic wax can cover a rubbing area while you arrange advice.", "source": "nhs-fife" },
+    { "title": "Brackets, wires and ligatures", "text": "Fixed braces attach brackets to teeth. Small elastic ligatures retain the archwire in conventional brackets.", "source": "nhs-braces" }
+  ],
+  "datasets": [
+    { "id": "serial-casts", "title": "Serial 3D Dental Models", "institution": "Amir Abdi & Mahtab Nouri · Mendeley Data", "modality": "3D scans", "scale": "24 longitudinal participants", "license": "CC BY 4.0", "url": "https://data.mendeley.com/datasets/bpnmf2vhsk/1", "access": "Two original reference STL casts bundled; full series publicly downloadable.", "limitation": "Normal occlusions without orthodontic treatment. No per-tooth segmentation or treatment response labels." },
+    { "id": "aariz", "title": "Aariz Cephalometric Dataset", "institution": "Islamic International Dental College / Riphah International University", "modality": "X-rays & landmarks", "scale": "1,000 images · 29 landmarks", "license": "CC BY 4.0 (dataset)", "url": "https://doi.org/10.6084/m9.figshare.27986417.v1", "access": "One original validation JPEG and its senior expert annotation bundled. Full ZIP is about 2.1 GB.", "limitation": "Reference only; no trained detector or diagnostic model. Article license differs from dataset license." },
+    { "id": "orthodont", "title": "Orthodont growth measurements", "institution": "UNC Dental School · Potthoff & Roy / R nlme", "modality": "Measurements", "scale": "108 rows · 27 subjects · 4 ages", "license": "nlme package: GPL ≥ 2", "url": "https://cran.r-universe.dev/nlme", "access": "Original R-universe CSV bundled with package license and provenance.", "limitation": "Historical craniofacial distances, not tooth movement, brace outcomes or reference thresholds." },
+    { "id": "teeth3ds", "title": "Teeth3DS+", "institution": "Digital Research Center of Sfax · Udini · Inria", "modality": "3D segmentation & landmarks", "scale": "MICCAI 3D dental benchmarks", "license": "Check the selected OSF data release terms", "url": "https://crns-smartvision.github.io/teeth3ds/index.html", "access": "Official release and download instructions linked; not bundled.", "limitation": "Website CC BY-SA is not assumed to license every dataset file. Preserve the official patient-level split." },
+    { "id": "bite2text", "title": "Bite2Text", "institution": "University of Modena and Reggio Emilia · University of Ferrara", "modality": "Scans, photographs & reports", "scale": "1,000 orthodontic cases", "license": "Registration and release terms required", "url": "https://ditto.ing.unimore.it/bite2text/", "access": "Official access route linked; sign-in required. No account created or restricted files fetched.", "limitation": "Clinician reports and photographs need the dataset’s access agreement. Hidden test cases are not training data." }
+  ]
+}

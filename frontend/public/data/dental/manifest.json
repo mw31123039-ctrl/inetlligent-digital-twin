@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "retrieved": "2026-11-05",
+  "purpose": "Public research reference samples; not the current user or a treatment prediction.",
+  "files": [
+    {
+      "name": "reference-upper.stl",
+      "bytes": 7500034,
+      "sha256": "eaab95af5ee3cd70c9a88ef964b5db242f82778d820724a18f52e15ad35c4adf",
+      "source": "https://data.mendeley.com/datasets/bpnmf2vhsk/1",
+      "original": "Upper jaw.stl",
+      "originalFolder": "Patient01-1992",
+      "fileId": "e31d8057-e507-44de-8d46-08fa89f83002",
+      "license": "CC BY 4.0",
+      "authors": "Amir Abdi; Mahtab Nouri",
+      "modified": false,
+      "note": "Published serial dental-cast reference, normal occlusion; not a treated case or tooth-segmented scan."
+    },
+    {
+      "name": "reference-lower.stl",
+      "bytes": 7500034,
+      "sha256": "6899a3fce7bd677c497f8872371860ccf09cf2d9cfe5091707ca8599e0bfbe4e",
+      "source": "https://data.mendeley.com/datasets/bpnmf2vhsk/1",
+      "original": "Lower jaw.stl",
+      "originalFolder": "Patient01-1992",
+      "fileId": "a6d1af99-36e4-43d0-8525-746581d0fc14",
+      "license": "CC BY 4.0",
+      "authors": "Amir Abdi; Mahtab Nouri",
+      "modified": false,
+      "note": "Published serial dental-cast reference, normal occlusion; not a treated case or tooth-segmented scan."
+    },
+    {
+      "name": "reference-cephalogram.jpg",
+      "bytes": 426927,
+      "sha256": "15b103869ffea88e4a5d1587e22299f1457cb8ec44a997fd07ce5e0477acc636",
+      "source": "https://doi.org/10.6084/m9.figshare.27986417.v1",
+      "original": "Aariz/valid/Cephalograms/cl8ka1gfc2y3b072wawosdu4b.jpg",
+      "license": "CC BY 4.0",
+      "authors": "Muhammad Anwaar Khalid; Kanwal Zulfiqar; Ulfat Bashir; Areeba Shaheen; Rida Iqbal; Zarnab Rizwan; Ghina Rizwan; Muhammad Moazam Fraz",
+      "modified": false,
+      "note": "One published validation-set reference. Annotated by dataset experts; no image-analysis model is bundled."
+    },
+    {
+      "name": "reference-landmarks.json",
+      "bytes": 3685,
+      "sha256": "5c2789de123465da7ba508ee35ea517af6218d8073deba324e028557556b1c79",
+      "source": "https://doi.org/10.6084/m9.figshare.27986417.v1",
+      "original": "Aariz/valid/Annotations/Cephalometric Landmarks/Senior Orthodontists/cl8ka1gfc2y3b072wawosdu4b.json",
+      "license": "CC BY 4.0",
+      "authors": "Muhammad Anwaar Khalid; Kanwal Zulfiqar; Ulfat Bashir; Areeba Shaheen; Rida Iqbal; Zarnab Rizwan; Ghina Rizwan; Muhammad Moazam Fraz",
+      "modified": false,
+      "note": "One published validation-set reference. Annotated by dataset experts; no image-analysis model is bundled."
+    },
+    {
+      "name": "orthodont-growth.csv",
+      "bytes": 1808,
+      "sha256": "910e1475611d26ae3af6d2499a876ff83c7e355491686eb8e3d074b2195c191a",
+      "source": "https://cran.r-universe.dev/nlme/data/Orthodont/csv",
+      "package": "nlme 3.1-172",
+      "license": "GPL (>= 2), package distribution",
+      "authors": "R Core nlme contributors; original data: Potthoff and Roy (1964), University of North Carolina Dental School",
+      "modified": false,
+      "note": "108 historical craniofacial distance measurements from 27 children at ages 8, 10, 12 and 14. Not tooth movement, brace outcomes or normative thresholds."
+    }
+  ]
+}

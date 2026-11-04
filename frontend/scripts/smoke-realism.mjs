@@ -46,7 +46,7 @@ try {
   await page.locator('[data-structure-id="eye.photoreceptors"]').click()
   assert.equal(await page.locator('.eye-model-stage').getAttribute('data-view'), 'retinal-detail')
   await page.getByRole('button', { name: 'Back to body explorer', exact: false }).click()
-  for (const region of ['Head', 'Chest', 'Abdomen', 'Arms', 'Legs']) {
+  for (const region of ['Head', 'Chest', 'Abdomen']) {
     await page.locator('.region-selector').getByRole('button', { name: region, exact: true }).click()
     const part = page.locator(`.body-part-viewer[data-part="${region.toLowerCase()}"]`)
     await part.waitFor()
@@ -78,7 +78,7 @@ try {
   await phone.locator('.eye-model-stage canvas').waitFor()
   await (await phoneIris).finished(); await paint(phone)
   await phone.locator('.eye-model-stage').screenshot({ path: path.join(output, 'mobile-eye.png'), animations: 'disabled' })
-  for (const model of ['head', 'chest', 'abdomen', 'arms-left', 'arms-right', 'legs-left', 'legs-right']) assert.ok(loadedAssets.has(`/models/anatomy/${model}.glb`), model)
+  for (const model of ['head', 'chest', 'abdomen']) assert.ok(loadedAssets.has(`/models/anatomy/${model}.glb`), model)
   assert.deepEqual(errors, []); assert.deepEqual(shaderErrors, []); assert.deepEqual(failedAssets, [])
   console.log('PASS: textured 3D human; source iris and isolation; internal layers; lung/heart surfaces plus vascular chest view; sided reference anatomy; mobile fit; no page, shader or asset-load errors.')
 } catch (error) {

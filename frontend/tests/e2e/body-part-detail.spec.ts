@@ -80,7 +80,7 @@ test('complete eye flow: camera opening, real geometry, orbit, zoom, 2D atlas an
 test('all six body areas open from the actual full-body model and buttons; patient side matches anterior coordinates', async ({ page }) => {
   test.setTimeout(150_000)
   await page.emulateMedia({ reducedMotion: 'reduce' }); await ready(page)
-  for (const part of ['eyes', 'head', 'chest', 'abdomen', 'arms', 'legs']) {
+  for (const part of ['eyes', 'head', 'chest', 'abdomen']) {
     const point = await page.locator('.human-body-viewer').evaluate((node, id) => (node as any).__vueParentComponent.exposed.getSnapshot().regions[id] as { x: number; y: number }, part)
     const box = (await page.locator('.human-body-viewer').boundingBox())!
     await page.mouse.click(box.x + point.x, box.y + point.y); await detailReady(page, part)
@@ -91,7 +91,7 @@ test('all six body areas open from the actual full-body model and buttons; patie
     await page.getByRole('button', { name: '3D', exact: true }).click(); await detailReady(page, part)
     await page.getByRole('button', { name: 'Back to full body', exact: true }).click()
   }
-  for (const part of ['Eyes', 'Head', 'Chest', 'Abdomen', 'Arms', 'Legs']) { await page.getByRole('button', { name: part, exact: true }).click(); await detailReady(page, part.toLowerCase()); await page.getByRole('button', { name: 'Back to full body', exact: true }).click() }
+  for (const part of ['Eyes', 'Head', 'Chest', 'Abdomen']) { await page.getByRole('button', { name: part, exact: true }).click(); await detailReady(page, part.toLowerCase()); await page.getByRole('button', { name: 'Back to full body', exact: true }).click() }
 })
 
 test('detail loading and error recovery; rapid selections and a canceled opening do not leave a stale view', async ({ page }) => {

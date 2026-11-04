@@ -1,5 +1,7 @@
 # Intelligent Digital Twin of the Human Body
 
+**Dental and orthodontic workspace:** open `/#dental` for a selectable 32-tooth atlas and tooth-specific pain intake, `/#orthodontics` for bracket and archwire visualization, or `/#dental-data` for research scans, X-rays and measurement charts. Dental pain and Braces & bite replace the Arms/Legs area launchers. Includes licensed public STL casts, a cephalogram with expert landmarks and historical growth measurements, plus local research-file imports. See [DENTAL_MODULE_REVIEW.md](DENTAL_MODULE_REVIEW.md) for sources, limits and verification.
+
 **3D visual update:** Patient twin now displays the textured, rigged human with higher-resolution face and normal maps. The eye starts with a lifelike surface view using a licensed reference iris, shaped lids and clear cornea. Regional close-ups use bundled anatomical mesh geometry: BodyParts3D plus a Z-Anatomy chest organ-surface view, with a separate vessels-and-ribs view. Read [asset provenance and licenses](frontend/ASSET_ATTRIBUTIONS.md). These are reference representations, not a reconstruction of the study subject.
 
 **Patient-specific research twin:** select **Patient twin** in the sidebar, or open `/#twin`. The new workspace updates an individual model from time-stamped observations, keeps corrections and source provenance, plots a personal reference, and provides an experimental statistical projection with retrospective comparison and JSON exports. Read [PATIENT_TWIN_RESEARCH.md](PATIENT_TWIN_RESEARCH.md) for the model, assumptions and local running instructions. Synthetic research inputs only; this is not a validated physiological or clinical twin.
@@ -10,7 +12,7 @@ The detailed eye explorer is documented in [EYE_MODULE_REVIEW.md](EYE_MODULE_REV
 
 Vue/Three.js human explorer with an authenticated Laravel API and private Python symptom-assistant service.
 
-**Development prototype; not clinically validated. Use synthetic inputs.** No external AI key or model is configured. The interface reports **AI not configured** and offers limited, explicitly labeled rule-based intake, without AI explanations. The original questionnaire remains under **Scripted demo**. Test doubles are used only in tests.
+**Development prototype; not clinically validated. Use synthetic symptom inputs. The dental data viewer also supports licensed public and de-identified research references.** No external AI key or model is configured. The interface reports **AI not configured** and offers limited, explicitly labeled rule-based intake, without AI explanations. The original questionnaire remains under **Scripted demo**. Test doubles are used only in tests.
 
 ## Local setup
 

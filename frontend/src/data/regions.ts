@@ -9,5 +9,7 @@ export const regions: Region[] = [
   { id: 'legs', label: 'Legs', description: 'Hips to toes', symptomOptions: ['My leg hurts', 'A sore knee', 'Ankle discomfort'], locationQuestion: 'Which leg is bothering you?', locations: ['Left leg', 'Right leg', 'Both legs'] },
 ]
 export const getRegion = (id: string) => regions.find(region => region.id === id)!
+// Limb IDs remain readable in earlier records; new exploration starts with oral care.
+export const explorerRegions = regions.filter(region => region.id !== 'arms' && region.id !== 'legs')
 export const onsetOptions = ['Just today', 'A few days', 'A week or more']
 export const characterOptions = ['Constant', 'Comes and goes', 'Only with movement']
