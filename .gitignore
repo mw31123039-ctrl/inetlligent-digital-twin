@@ -26,3 +26,6 @@ backend/bootstrap/cache/*.php
 *.zip
 *.tar.gz
 research/results/
+ai-service/models/
+ai-service/training-data/
+ai-service/Ultralytics/

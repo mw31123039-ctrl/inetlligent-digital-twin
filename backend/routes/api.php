@@ -1,17 +1,33 @@
 <?php
 
 use App\Http\Controllers\ConversationController;
-use App\Http\Controllers\SessionController;
+use App\Http\Controllers\DentalCoachController;
+use App\Http\Controllers\DentalLearningController;
+use App\Http\Controllers\DentalPhotoController;
+use App\Http\Controllers\DentalScreeningController;
 use App\Http\Controllers\EyeAssessmentController;
+use App\Http\Controllers\SessionController;
 use App\Services\AiService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/status', fn (AiService $ai) => $ai->status())->middleware('throttle:service-status');
 Route::get('/eye/status', [EyeAssessmentController::class, 'status'])->middleware('throttle:service-status');
+Route::get('/dental/detector-status', [DentalPhotoController::class, 'status'])->middleware('throttle:service-status');
 Route::post('/register', [SessionController::class, 'register'])->middleware('throttle:auth-register');
 Route::post('/login', [SessionController::class, 'login'])->middleware('throttle:auth-login');
 Route::middleware(['auth:sanctum', 'throttle:private-api'])->group(function () {
+    Route::get('/dental/screening/cases', [DentalScreeningController::class, 'index']);
+    Route::post('/dental/screening/cases', [DentalScreeningController::class, 'store'])->middleware('throttle:ai-turns');
+    Route::get('/dental/screening/cases/{caseId}', [DentalScreeningController::class, 'show'])->where('caseId', '[a-f0-9]{64}');
+    Route::delete('/dental/screening/cases/{caseId}', [DentalScreeningController::class, 'destroy'])->where('caseId', '[a-f0-9]{64}');
+    Route::get('/dental/learning', [DentalLearningController::class, 'index']);
+    Route::post('/dental/learning/examples', [DentalLearningController::class, 'store'])->middleware('throttle:ai-turns');
+    Route::delete('/dental/learning/examples/{exampleId}', [DentalLearningController::class, 'destroy'])->where('exampleId', '[a-f0-9]{64}');
+    Route::post('/dental/learning/train', [DentalLearningController::class, 'train'])->middleware('throttle:ai-turns');
+    Route::post('/dental/coach', [DentalCoachController::class, 'review'])->middleware('throttle:ai-turns');
+    Route::post('/dental/detect', [DentalPhotoController::class, 'detect'])->middleware('throttle:ai-turns');
+    Route::post('/dental/segment', [DentalPhotoController::class, 'segment'])->middleware('throttle:ai-turns');
     Route::get('/me', fn (Request $request) => ['user' => ['id' => $request->user()->id, 'email' => $request->user()->email]]);
     Route::post('/logout', [SessionController::class, 'logout']);
     Route::get('/eye/assessments', [EyeAssessmentController::class, 'index']);

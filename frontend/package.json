@@ -26,6 +26,11 @@
     "test:e2e": "playwright test",
     "test:dental": "node scripts/test-dental.mjs",
     "test:dental:browser": "node scripts/smoke-dental.mjs",
+    "test:dental:cases": "vitest run dental-cases.test.ts",
+    "test:dental:cases:browser": "node scripts/smoke-dental-cases.mjs",
+    "test:dental:photo": "vitest run dental-photo.test.ts",
+    "test:dental:photo:browser": "node scripts/smoke-dental-photo.mjs",
+    "test:dental:screening:browser": "node scripts/smoke-dental-screening.mjs",
     "data:dental": "node scripts/fetch-dental-references.mjs"
   },
   "dependencies": {

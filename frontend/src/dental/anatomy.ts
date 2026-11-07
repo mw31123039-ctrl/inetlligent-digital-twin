@@ -1,6 +1,7 @@
 import * as T from 'three'
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js'
 import { teeth, toothById, type Tooth, type Appliance, type DentalView } from './model'
+import { caseToothOffset, jawOffset, type DentalSimulation } from './caseModel'
 
 /** Original, dimensionless teaching geometry. No patient-specific reconstruction. */
 const enamel = () => new T.MeshPhysicalMaterial({ color: '#f1ead5', roughness: .23, metalness: 0, clearcoat: .7, clearcoatRoughness: .2, sheen: .15, sheenColor: new T.Color('#fffaf1'), side: T.DoubleSide })
@@ -87,24 +88,29 @@ function gingiva(jaw: 'upper'|'lower',opening: number) {
   const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.Float32BufferAttribute(vertices,3));geometry.setIndex(indices);geometry.computeVertexNormals()
   const gum=mesh(geometry,new T.MeshPhysicalMaterial({color:'#c77e87',roughness:.43,clearcoat:.18,side:T.DoubleSide}));gum.name=`gingiva-${jaw}`;gum.userData.pickThrough=true;return gum
 }
-export function buildDentalAtlas(options: { view: DentalView; selected: number; appliance: Appliance; elastic: string; opening: number }) {
-  const {view,selected,appliance,elastic,opening}=options,group=new T.Group();group.name='original-permanent-tooth-atlas'
+export function buildDentalAtlas(options: { view: DentalView; selected: number; appliance: Appliance; elastic: string; opening: number; simulation?: DentalSimulation }) {
+  const {view,selected,appliance,elastic,opening,simulation}=options,group=new T.Group();group.name='original-permanent-tooth-atlas'
+  function displayPose(t: Tooth) {
+    const pose=toothPose(t,opening),delta=caseToothOffset(t,simulation),jaw=jawOffset(t.jaw,simulation)
+    pose.position.add(new T.Vector3(delta.x+jaw.x,delta.y+jaw.y,delta.z+jaw.z));pose.yaw+=T.MathUtils.degToRad(delta.rotation)
+    return {...pose,hidden:delta.hidden}
+  }
   if(view==='section'){
     const t=toothById(selected)!;const tooth=toothBody(t,true);tooth.scale.setScalar(3.1);tooth.position.y=.05;tooth.rotation.y=-.2;group.add(tooth);return group
   }
   for(const jaw of ['upper','lower'] as const){
     if(view==='upper'&&jaw==='lower'||view==='lower'&&jaw==='upper')continue
-    group.add(gingiva(jaw,opening))
-    const arch=teeth.filter(t=>t.jaw===jaw)
+    const gum=gingiva(jaw,opening),shift=jawOffset(jaw,simulation);gum.position.set(shift.x,shift.y,shift.z);group.add(gum)
+    const arch=teeth.filter(t=>t.jaw===jaw&&!caseToothOffset(t,simulation).hidden)
     for(const t of arch){
-      const pose=toothPose(t,opening),tooth=toothBody(t,false)
+      const pose=displayPose(t),tooth=toothBody(t,false)
       tooth.name=`tooth-${t.fdi}`;tooth.position.copy(pose.position);tooth.rotation.y=pose.yaw;tooth.scale.y=pose.sign
       if(appliance!=='none'&&t.position<=6){const brace=bracket(appliance,elastic);brace.position.set(0,heights[t.position-1]!*.47,depths[t.position-1]!*.5+.03);brace.name='bracket';tooth.add(brace)}
       tooth.traverse(o=>{o.userData.toothFdi=t.fdi});group.add(tooth)
     }
     if(appliance!=='none'){
-      const ordered=arch.filter(t=>t.position<=6).sort((a,b)=>toothPose(a,opening).position.x-toothPose(b,opening).position.x)
-      const points=ordered.map(t=>{const p=toothPose(t,opening);return p.position.clone().add(p.normal.multiplyScalar(depths[t.position-1]!*.5+.09)).add(new T.Vector3(0,p.sign*heights[t.position-1]!*.47,0))})
+      const ordered=arch.filter(t=>t.position<=6).sort((a,b)=>displayPose(a).position.x-displayPose(b).position.x)
+      const points=ordered.map(t=>{const p=displayPose(t);return p.position.clone().add(new T.Vector3(Math.sin(p.yaw),0,Math.cos(p.yaw)).multiplyScalar(depths[t.position-1]!*.5+.09)).add(new T.Vector3(0,p.sign*heights[t.position-1]!*.47,0))})
       const wire=tube(points,.012,material('#b8c7d1',.2,.94),100);wire.name=`archwire-${jaw}`;wire.userData.pickThrough=true;group.add(wire)
     }
   }

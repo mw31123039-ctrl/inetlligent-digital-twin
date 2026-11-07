@@ -10,3 +10,13 @@ schema = Assessment.model_json_schema()
 schema['$schema'] = 'https://json-schema.org/draft/2020-12/schema'
 (root.parent / 'contracts' / 'assessment.schema.json').write_text(json.dumps(schema, indent=2), encoding='utf-8')
 print('Exported assessment JSON Schema.')
+from app.dental_photo import PhotoDetectionResult
+photo_schema = PhotoDetectionResult.model_json_schema()
+photo_schema['$schema'] = 'https://json-schema.org/draft/2020-12/schema'
+(root.parent / 'contracts/dental/photo-detection.schema.json').write_text(json.dumps(photo_schema, indent=2) + '\n', encoding='utf-8')
+print('Exported dental photo-detection JSON Schema.')
+from app.dental_screening import ScreeningRecord
+screening_schema = ScreeningRecord.model_json_schema()
+screening_schema['$schema'] = 'https://json-schema.org/draft/2020-12/schema'
+(root.parent / 'contracts/dental/screening-case.schema.json').write_text(json.dumps(screening_schema, indent=2) + '\n', encoding='utf-8')
+print('Exported orthodontic screening-case JSON Schema.')

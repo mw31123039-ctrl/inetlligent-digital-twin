@@ -2,10 +2,10 @@ export class ApiError extends Error {
   constructor(message: string, public status = 0) { super(message) }
 }
 
-async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
+async function request<T>(path: string, options: RequestInit = {}, timeoutMs=35_000): Promise<T> {
   const csrf = document.cookie.split('; ').find(item => item.startsWith('XSRF-TOKEN='))?.slice(11)
   const timeout = new AbortController()
-  const timer = window.setTimeout(() => timeout.abort(), 35_000)
+  const timer = window.setTimeout(() => timeout.abort(), timeoutMs)
   try {
     const response = await fetch(path, {
       ...options, credentials: 'include', cache: 'no-store',
@@ -29,7 +29,7 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
 
 export const aiApi = {
   get: <T>(path: string, signal?: AbortSignal) => request<T>(`/api${path}`, { signal }),
-  post: <T>(path: string, body: unknown, signal?: AbortSignal) => request<T>(`/api${path}`, { method: 'POST', body: JSON.stringify(body), signal }),
+  post: <T>(path: string, body: unknown, signal?: AbortSignal, timeoutMs?:number) => request<T>(`/api${path}`, { method: 'POST', body: JSON.stringify(body), signal },timeoutMs),
   delete: (path: string) => request<void>(`/api${path}`, { method: 'DELETE' }),
   csrf: () => request<void>('/sanctum/csrf-cookie'),
 }

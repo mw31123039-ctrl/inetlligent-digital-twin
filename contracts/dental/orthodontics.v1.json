@@ -1,0 +1,264 @@
+{
+  "version": "orthodontics-education-v1",
+  "review_status": "draft; clinician review required",
+  "clinical_validation": false,
+  "content_type": "Original educational summaries and synthetic questions; not patient labels or model training data",
+  "sources": [
+    {"id":"aao-bite-problems","title":"Seven common bite problems","url":"https://aaoinfo.org/whats-trending/7-common-bite-problems/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"aao-crossbite","title":"What is a crossbite?","url":"https://aaoinfo.org/whats-trending/what-is-a-crossbite/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"aao-glossary","title":"Glossary of orthodontic terms","url":"https://aaoinfo.org/resources/glossary-of-orthodontic-terms/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"aao-braces","title":"How do braces work?","url":"https://aaoinfo.org/treatments/braces/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"aao-aligners","title":"Clear aligners","url":"https://aaoinfo.org/treatments/aligners/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"aao-early-assessment","title":"When should your child see an orthodontist?","url":"https://aaoinfo.org/whats-trending/when-should-your-child-see-an-orthodontist/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"aao-retainers","title":"Understanding retainers","url":"https://aaoinfo.org/treatments/retainers/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"bos-adult-reasons","title":"Why orthodontics?","url":"https://bos.org.uk/patients/treatments/orthodontics-for-adults/why-orthodontics/","publisher":"British Orthodontic Society","checked_at":"2026-11-07"},
+    {"id":"nhs-braces","title":"Braces and orthodontic assessment","url":"https://www.nhs.uk/tests-and-treatments/braces/","publisher":"NHS","checked_at":"2026-11-07"},
+    {"id":"nhs-oxford-referral","title":"Orthodontics referrals","url":"https://www.ouh.nhs.uk/services/referrals/specialist-surgery/orthodontics/","publisher":"Oxford University Hospitals NHS Foundation Trust","checked_at":"2026-11-07"},
+    {"id":"nhs-eruption-guide","title":"Quick reference guide to orthodontic assessment and referral","url":"https://www.england.nhs.uk/wp-content/uploads/sites/6/2014/09/ortho-referral-quick-reference-sheet.pdf","publisher":"NHS England / Scott and Atack, 2015","checked_at":"2026-11-07"},
+    {"id":"nhs-impaction","title":"Tooth impaction","url":"https://www.nuh.nhs.uk/orthodontics-tooth-impaction/","publisher":"Nottingham University Hospitals NHS Trust","checked_at":"2026-11-07"},
+    {"id":"nhs-anomalies","title":"Orthodontics and dental anomalies","url":"https://www.barnsleyhospital.nhs.uk/services/orthodontics","publisher":"Barnsley Hospital NHS Foundation Trust","checked_at":"2026-11-07"},
+    {"id":"nhs-development","title":"Orthodontic treatment","url":"https://www.royaldevon.nhs.uk/services/orthodontics/orthodontic-treatment/","publisher":"Royal Devon University Healthcare NHS Foundation Trust","checked_at":"2026-11-07"},
+    {"id":"aapd-development","title":"Management of the developing dentition and occlusion, revision 2024","url":"https://www.aapd.org/media/Policies_Guidelines/BP_DevelopDentition.pdf","publisher":"American Academy of Pediatric Dentistry","checked_at":"2026-11-07"},
+    {"id":"ucl-class-ii","title":"Deep bite and retroclined upper front teeth: classification and evidence review","url":"https://discovery.ucl.ac.uk/id/eprint/10034715/1/Cunningham_Millett_et_al-2017-.pdf","publisher":"Millett et al., Cochrane Oral Health; UCL repository, 2017","checked_at":"2026-11-07"},
+    {"id":"atsu-scissor-bite","title":"Scissor bite correction: definition and assessment context","url":"https://scholarworks.atsu.edu/asdoh-faculty/440/","publisher":"Lee et al.; A.T. Still University faculty repository, 2020","checked_at":"2026-11-07"},
+    {"id":"bristol-tooth-wear","title":"Tooth wear patient information","url":"https://www.bristol.ac.uk/media-library/sites/dental/patient-leaflets/tooth-wear-patient-information.pdf","publisher":"University of Bristol Dental School","checked_at":"2026-11-07"},
+    {"id":"ida-gingival-display","title":"Gummy smile","url":"https://www.ida.org.in/Public/Details/GummySmile","publisher":"Indian Dental Association","checked_at":"2026-11-07"},
+    {"id":"nlm-diastema","title":"Diastema terminology","url":"https://www.ncbi.nlm.nih.gov/mesh/68003970","publisher":"US National Library of Medicine","checked_at":"2026-11-07"}
+  ],
+  "cases": [
+    {
+      "id":"crowding","name":"Crowded teeth","category":"alignment",
+      "summary":"Teeth overlap or sit outside the line of the dental arch.",
+      "recognition":["Overlapping adjacent crowns","Displaced contact points","Some teeth may also be rotated"],
+      "review":["Assess available space using clinical records","Review hygiene access and gum health","Discuss alignment goals with the patient"],
+      "limits":"A photograph cannot establish root positions, available bone, or a treatment plan.",
+      "source_ids":["aao-braces","nhs-braces"],
+      "quiz":{"question":"Which observation most directly describes crowding?","options":["Overlapping teeth within an arch","A gap between all teeth","Increased gum display alone","A missing tooth root"],"answer_index":0,"explanation":"Crowding describes tooth alignment and space; root and bone findings require additional assessment."}
+    },
+    {
+      "id":"spacing","name":"Generalized spacing","category":"alignment",
+      "summary":"Gaps occur between several teeth rather than at one contact.",
+      "recognition":["Several visible interdental gaps","Record which arch is affected","Distinguish spaces from absent teeth"],
+      "review":["Confirm the dental chart","Review gum health and previous tooth loss","Assess tooth size and arch relationships"],
+      "limits":"Gaps have different causes; appearance does not establish the cause or best approach.",
+      "source_ids":["nhs-braces","aao-aligners"],
+      "quiz":{"question":"What should happen before choosing how to close spaces?","options":["Assume every gap needs braces","Confirm cause and complete assessment","Predict treatment time from a selfie","Ignore missing teeth"],"answer_index":1,"explanation":"Space management depends on the complete dental situation, not the visible gap alone."}
+    },
+    {
+      "id":"diastema","name":"Midline diastema","category":"alignment",
+      "summary":"A space separates the central front teeth at the dental midline.",
+      "recognition":["Gap between central incisors","Describe upper or lower location","Record dentition stage"],
+      "review":["Review eruption and developmental stage","Check tooth number and proportions","Record whether the gap is changing"],
+      "limits":"A midline gap may be developmental in mixed dentition; a photo cannot explain its cause.",
+      "source_ids":["nlm-diastema","nhs-eruption-guide"],
+      "quiz":{"question":"Is every childhood midline gap a disease?","options":["Yes, always","Only if photographed","No; developmental stage matters","Yes, if no braces are present"],"answer_index":2,"explanation":"Mixed-dentition spacing can be developmental and needs context before any treatment decision."}
+    },
+    {
+      "id":"deep-bite","name":"Deep bite","category":"vertical",
+      "summary":"The upper front teeth overlap the lower front teeth excessively in the vertical direction.",
+      "recognition":["Reduced lower-incisor visibility in closure","Increased vertical incisor overlap","Check for soft-tissue contact"],
+      "review":["Confirm the bite clinically","Inspect for palatal or gingival trauma","Record wear and functional concerns"],
+      "limits":"A frontal image alone cannot quantify overlap or confirm traumatic contact.",
+      "source_ids":["nhs-oxford-referral"],
+      "quiz":{"question":"Deep bite primarily describes which direction?","options":["Tooth rotation","Horizontal projection","Arch width","Vertical incisor overlap"],"answer_index":3,"explanation":"Deep bite concerns vertical overlap; overjet concerns the horizontal incisor relationship."}
+    },
+    {
+      "id":"anterior-open-bite","name":"Anterior open bite","category":"vertical",
+      "summary":"A gap remains between front teeth when the back teeth come together.",
+      "recognition":["Anterior vertical separation in closure","Posterior contact must be confirmed","Record affected front teeth"],
+      "review":["Assess chewing and speech concerns","Review growth and habit history","Evaluate dental and skeletal contributions"],
+      "limits":"An open-mouth photograph is not proof of open bite; confirm the bite position.",
+      "source_ids":["aao-bite-problems"],
+      "quiz":{"question":"Which observation is needed to describe an anterior open bite?","options":["Front gap while back teeth meet","Mouth open during photography","One rotated molar","Upper lip raised"],"answer_index":0,"explanation":"An anterior gap must be considered with the posterior teeth in confirmed closure."}
+    },
+    {
+      "id":"posterior-open-bite","name":"Posterior open bite","category":"vertical",
+      "summary":"One or more back-tooth regions lack vertical contact in the confirmed bite.",
+      "recognition":["Posterior separation in closure","May affect one or both sides","Record erupted versus erupting teeth"],
+      "review":["Confirm contacts on each side","Review eruption and appliance history","Document onset and chewing concerns"],
+      "limits":"Incomplete eruption and an unclosed mouth must not be labelled automatically as posterior open bite.",
+      "source_ids":["nhs-oxford-referral"],
+      "quiz":{"question":"Why is a back-tooth gap in one photo insufficient?","options":["Photos always show bone","All gaps indicate impaction","Closure and eruption are unconfirmed","Posterior teeth never contact"],"answer_index":2,"explanation":"Clinical bite position and eruption status must be established before interpreting separation."}
+    },
+    {
+      "id":"underbite","name":"Underbite / reverse overjet","category":"sagittal",
+      "summary":"Lower front teeth sit ahead of upper front teeth in the horizontal relationship.",
+      "recognition":["Reversed incisor relationship","Check the natural bite position","Record front-tooth involvement"],
+      "review":["Assess function and mandibular movement","Review growth and facial relationships","Distinguish dental position from skeletal pattern"],
+      "limits":"Reverse overjet does not by itself establish skeletal Class III or prove that surgery is needed.",
+      "source_ids":["aao-bite-problems"],
+      "quiz":{"question":"What can reverse overjet alone establish?","options":["A required surgery","A specific skeletal diagnosis","Exact remaining growth","The observed incisor relationship"],"answer_index":3,"explanation":"The visible front-tooth relationship is descriptive; its cause requires broader assessment."}
+    },
+    {
+      "id":"increased-overjet","name":"Increased overjet","category":"sagittal",
+      "summary":"The upper front teeth project farther ahead of the lower front teeth horizontally.",
+      "recognition":["Prominent upper incisors","Horizontal separation in the bite","Side records improve description"],
+      "review":["Measure clinically with a documented method","Review previous front-tooth injury","Assess lips, function, and jaw relationships"],
+      "limits":"Photo perspective changes apparent projection; no millimetre measurement is inferred here.",
+      "source_ids":["nhs-development","aao-early-assessment"],
+      "quiz":{"question":"Overjet is the same measurement as overbite.","options":["True in every case","False: overjet is horizontal","True only with braces","True in photographs"],"answer_index":1,"explanation":"Overjet describes horizontal projection, whereas overbite describes vertical overlap."}
+    },
+    {
+      "id":"anterior-crossbite","name":"Anterior crossbite","category":"sagittal",
+      "summary":"One or more upper front teeth bite behind their lower counterparts.",
+      "recognition":["Localized reversed front-tooth relationship","Record the involved teeth","Confirm relation during closure"],
+      "review":["Check for a functional bite shift","Assess space and tooth inclinations","Inspect affected gum tissues"],
+      "limits":"A localized crossbite is not automatically a skeletal underbite.",
+      "source_ids":["aao-crossbite"],
+      "quiz":{"question":"Does one upper incisor biting behind a lower incisor prove skeletal Class III?","options":["Yes, always","Only if a photo is sharp","No; dental and functional factors need assessment","Yes, in children"],"answer_index":2,"explanation":"A single-tooth crossbite can reflect dental positioning; skeletal classification requires further records."}
+    },
+    {
+      "id":"unilateral-posterior-crossbite","name":"Unilateral posterior crossbite","category":"transverse",
+      "summary":"Upper back teeth bite inside lower back teeth on one side.",
+      "recognition":["Reversed posterior relationship on one side","Compare right and left contacts","Watch closure for a sideways shift"],
+      "review":["Check functional mandibular displacement","Assess arch widths and tooth inclinations","Distinguish dental and skeletal components"],
+      "limits":"A one-sided appearance can accompany a functional shift; one still image cannot resolve it.",
+      "source_ids":["aapd-development"],
+      "quiz":{"question":"Which additional observation is especially helpful?","options":["Jaw movement into the bite","Eye colour","Number of photos alone","Bracket colour"],"answer_index":0,"explanation":"Watching closure helps the clinician identify a functional mandibular shift."}
+    },
+    {
+      "id":"bilateral-posterior-crossbite","name":"Bilateral posterior crossbite","category":"transverse",
+      "summary":"Upper back teeth bite inside the lower teeth on both sides.",
+      "recognition":["Reversed right posterior relationship","Reversed left posterior relationship","Record involved tooth groups"],
+      "review":["Assess both arches in occlusion","Review transverse jaw relationships","Document function and growth status"],
+      "limits":"Both sides need usable records; no expansion amount is determined from a photo.",
+      "source_ids":["aao-crossbite"],
+      "quiz":{"question":"Bilateral means the finding affects which regions?","options":["Only the front teeth","Both right and left sides","Only one side","Only unerupted teeth"],"answer_index":1,"explanation":"Bilateral posterior crossbite describes posterior involvement on both sides, subject to clinical confirmation."}
+    },
+    {
+      "id":"scissor-bite","name":"Scissor bite","category":"transverse",
+      "summary":"Upper posterior teeth lie wholly outside their lower counterparts, disrupting normal interlocking contacts.",
+      "recognition":["Upper back teeth displaced cheekward","Posterior teeth bypass opposing cusps","May affect one or both sides"],
+      "review":["Confirm which teeth contact","Assess arch width and tooth inclinations","Review midlines and chewing difficulties"],
+      "limits":"This is a distinct transverse pattern; the diagram does not determine an appliance or force system.",
+      "source_ids":["atsu-scissor-bite"],
+      "quiz":{"question":"Which description best fits a scissor bite?","options":["Increased front-tooth spacing","A missing canine","Upper back teeth entirely outside opposing teeth","A front-tooth-only vertical gap"],"answer_index":2,"explanation":"Scissor bite describes a posterior transverse relationship with abnormal or absent interlocking contacts."}
+    },
+    {
+      "id":"class-ii-division-1","name":"Class II division 1","category":"sagittal",
+      "summary":"A Class II incisor relationship is accompanied by prominent upper incisors and increased overjet.",
+      "recognition":["Record horizontal incisor projection","Upper incisors commonly incline forward","Check posterior dental relationships separately"],
+      "review":["Document incisor and molar classifications","Assess growth and facial profile","Review injury history and lip function"],
+      "limits":"Dental classification is not skeletal classification; a frontal selfie is insufficient.",
+      "source_ids":["ucl-class-ii"],
+      "quiz":{"question":"What distinguishes division 1 from division 2 in this teaching comparison?","options":["Incisor inclination and relationship","Patient hair colour","Number of brackets","Whether a photograph exists"],"answer_index":0,"explanation":"Upper-incisor prominence contrasts with the retroclination typical of division 2."}
+    },
+    {
+      "id":"class-ii-division-2","name":"Class II division 2","category":"sagittal",
+      "summary":"A Class II incisor relationship includes inward-tilted upper central incisors, often with a deep bite.",
+      "recognition":["Upper central incisors incline palatally","Vertical overlap is often increased","Record lateral-incisor positions separately"],
+      "review":["Check soft-tissue contact and trauma","Assess space and incisor inclination","Evaluate dental and facial relationships"],
+      "limits":"A deep bite alone does not establish division 2 or select its management.",
+      "source_ids":["ucl-class-ii"],
+      "quiz":{"question":"Which inclination is characteristic of upper central incisors in division 2?","options":["Always fully horizontal","Always cheekward","Always unerupted","Retroclined toward the palate"],"answer_index":3,"explanation":"Retroclined upper central incisors are characteristic, frequently accompanied by increased vertical overlap."}
+    },
+    {
+      "id":"class-iii","name":"Class III dental relationship","category":"sagittal",
+      "summary":"The lower dental relationship is positioned ahead of the upper; causes may be dental, skeletal, or functional.",
+      "recognition":["Clinician records posterior dental relationship","Assess the incisor relationship separately","Observe any forward shift on closure"],
+      "review":["Review growth and family history","Distinguish functional shift from skeletal pattern","Assess full clinical records"],
+      "limits":"Class III dental and skeletal labels are not interchangeable, and front-tooth appearance alone is insufficient.",
+      "source_ids":["aao-glossary","aapd-development"],
+      "quiz":{"question":"A Class III dental relationship always proves which finding?","options":["A need for surgery","None of these skeletal conclusions","Excessive mandibular growth","Deficient maxillary growth"],"answer_index":1,"explanation":"Dental, skeletal, and functional contributions require separate assessment."}
+    },
+    {
+      "id":"midline-discrepancy","name":"Dental midline discrepancy","category":"alignment",
+      "summary":"Upper and lower dental centre lines do not coincide, or differ from the facial reference.",
+      "recognition":["Identify upper central-incisor contact","Identify lower central-incisor contact","Compare a documented facial reference"],
+      "review":["Check head and camera alignment","Review tooth loss or drifting","Observe the closing path"],
+      "limits":"A tilted image can mimic discrepancy; dental and facial midlines must be distinguished.",
+      "source_ids":["bos-adult-reasons"],
+      "quiz":{"question":"What can create a misleading midline comparison?","options":["Recording a reference","Checking both arches","A tilted head or camera","Confirming natural closure"],"answer_index":2,"explanation":"Standardized orientation helps avoid confusing photographic distortion with dental displacement."}
+    },
+    {
+      "id":"rotated-teeth","name":"Rotated teeth","category":"alignment",
+      "summary":"A tooth is turned around its long axis relative to the arch.",
+      "recognition":["Crown faces an altered direction","Contact alignment may be disrupted","Rotation can coexist with crowding"],
+      "review":["Assess space and opposing contacts","Document the affected tooth","Review previous alignment and retention"],
+      "limits":"Crown orientation does not reveal root anatomy or a safe movement path.",
+      "source_ids":["aao-glossary","aao-braces"],
+      "quiz":{"question":"Which statement about rotation is appropriate?","options":["It proves adequate bone","It always needs extraction","It cannot coexist with crowding","It describes orientation, not a treatment plan"],"answer_index":3,"explanation":"A visible rotation is an alignment observation; movement planning requires complete records."}
+    },
+    {
+      "id":"impacted-canine","name":"Suspected impacted canine","category":"eruption",
+      "summary":"A permanent canine has not erupted as expected and needs localization by a clinician.",
+      "recognition":["Canine absent from the visible arch","A primary canine may remain","Compare eruption on both sides"],
+      "review":["Confirm dentition and eruption history","Assess adjacent teeth and available space","Use clinically justified localization records"],
+      "limits":"An unseen canine may be unerupted, absent, or impacted; a surface photo cannot distinguish these.",
+      "source_ids":["nhs-impaction"],
+      "quiz":{"question":"Can a smile photo locate an unerupted canine root?","options":["No; clinical localization is required","Yes, from tooth colour","Yes, from bracket position","Only after enlarging the photo"],"answer_index":0,"explanation":"Impaction assessment needs clinical examination and appropriately justified imaging, not a photo-derived root estimate."}
+    },
+    {
+      "id":"missing-tooth","name":"Absent tooth / possible hypodontia","category":"eruption",
+      "summary":"A tooth is absent from the visible arch; the reason must be established.",
+      "recognition":["Record the empty tooth position","Check whether a primary tooth remains","Confirm the dental and extraction history"],
+      "review":["Distinguish congenital absence from tooth loss","Check for unerupted teeth","Discuss restorative and orthodontic assessment"],
+      "limits":"Hypodontia means developmental absence; a visible gap alone cannot establish it.",
+      "source_ids":["nhs-anomalies"],
+      "quiz":{"question":"An empty tooth position proves congenital absence.","options":["Always true","False; other explanations must be checked","True if the gap is small","True after adding braces"],"answer_index":1,"explanation":"Extraction, delayed eruption, impaction, and developmental absence require different assessments."}
+    },
+    {
+      "id":"supernumerary-tooth","name":"Suspected supernumerary tooth","category":"eruption",
+      "summary":"An additional tooth may be present beyond the expected dentition.",
+      "recognition":["An extra crown may be visible","Tooth count needs clinician confirmation","Additional teeth may remain unerupted"],
+      "review":["Chart primary and permanent teeth separately","Assess effects on neighbouring eruption","Review clinically indicated imaging"],
+      "limits":"A photo cannot exclude hidden additional teeth or establish removal as the best option.",
+      "source_ids":["aao-early-assessment","nhs-anomalies"],
+      "quiz":{"question":"Can a surface photo exclude all supernumerary teeth?","options":["Yes, with a flash","Yes, if all front teeth show","No; some additional teeth are unerupted","Yes, with a 3D illustration"],"answer_index":2,"explanation":"Clinical assessment may reveal teeth below the surface that are invisible in photographs."}
+    },
+    {
+      "id":"ectopic-eruption","name":"Ectopic eruption","category":"eruption",
+      "summary":"A developing tooth follows an abnormal eruption position or path.",
+      "recognition":["A tooth emerges outside the arch","Compare corresponding teeth","Record delayed or asymmetric emergence"],
+      "review":["Review eruption history and dentition stage","Assess nearby teeth and available space","Determine whether additional records are indicated"],
+      "limits":"Abnormal position does not reveal its cause, hidden damage, or the required intervention.",
+      "source_ids":["nhs-development"],
+      "quiz":{"question":"What does ectopic eruption describe?","options":["An ideal bite","Tooth whitening","A confirmed fracture","An abnormal eruption path or position"],"answer_index":3,"explanation":"Ectopic eruption concerns how or where a tooth develops into the mouth."}
+    },
+    {
+      "id":"mixed-dentition","name":"Mixed dentition review","category":"eruption",
+      "summary":"Primary and permanent teeth coexist while the dental arches develop.",
+      "recognition":["Both primary and permanent teeth present","Some tooth positions are changing","Spaces require developmental context"],
+      "review":["Chart the actual teeth present","Review eruption sequence and symmetry","Identify concerns requiring specialist assessment"],
+      "limits":"The permanent 32-tooth atlas is not a patient-specific mixed-dentition reconstruction.",
+      "source_ids":["nhs-eruption-guide"],
+      "quiz":{"question":"How should a permanent-tooth teaching atlas be used for a child?","options":["As a reference, with the actual dentition charted","As proof all adult teeth are present","As an automatic treatment prescription","As a substitute for examination"],"answer_index":0,"explanation":"Developing dentition differs from a complete permanent-tooth reference model."}
+    },
+    {
+      "id":"relapse","name":"Alignment change after treatment","category":"alignment",
+      "summary":"Teeth can change position after orthodontic treatment; retention and review remain relevant.",
+      "recognition":["Compare dated post-treatment records","A gap or rotation may reappear","A retainer may fit differently"],
+      "review":["Review previous treatment and retention history","Check retainer fit with the treating team","Assess current teeth and gum health"],
+      "limits":"A single current image cannot establish when or why movement occurred.",
+      "source_ids":["aao-retainers"],
+      "quiz":{"question":"What is the purpose of orthodontic retention?","options":["Guarantee teeth never change","Help maintain corrected positions","Replace all follow-up visits","Move every tooth without review"],"answer_index":1,"explanation":"Retainers help limit unwanted positional change; fit and ongoing care need professional review."}
+    },
+    {
+      "id":"tooth-wear","name":"Tooth wear and bite review","category":"combined",
+      "summary":"Loss of tooth surface may alter crown form and requires assessment of multiple possible causes.",
+      "recognition":["Shortened or flattened tooth edges","Possible cupping or chipping","Compare dated clinical records"],
+      "review":["Review sensitivity and function","Discuss dietary acid, reflux, and grinding history","Assess the pattern and progression clinically"],
+      "limits":"Wear appearance alone does not diagnose grinding or establish that the bite caused the wear.",
+      "source_ids":["bristol-tooth-wear"],
+      "quiz":{"question":"Visible tooth wear proves sleep grinding.","options":["True in every patient","True after braces","False; several causes need assessment","True from a frontal image"],"answer_index":2,"explanation":"Acid exposure, tooth contact, and other factors can contribute; history and examination matter."}
+    },
+    {
+      "id":"gummy-smile","name":"Increased gingival display","category":"combined",
+      "summary":"More gum is visible above the upper teeth during smiling.",
+      "recognition":["Observe a natural smile","Compare lip position at rest","Record apparent crown and gum proportions"],
+      "review":["Ask about the patient's own concerns","Assess gum health and tooth exposure","Evaluate lip and facial relationships"],
+      "limits":"Gum display is not automatically disease; a smile photo cannot identify its cause or appropriate management.",
+      "source_ids":["ida-gingival-display"],
+      "quiz":{"question":"Does increased gum display automatically require treatment?","options":["Yes, for every patient","Yes, whenever photographed","Yes, if braces are present","No; assess health, cause, and patient preferences"],"answer_index":3,"explanation":"Appearance alone does not establish pathology or a need for intervention."}
+    },
+    {
+      "id":"asymmetry","name":"Dental / facial asymmetry review","category":"combined",
+      "summary":"The arches, smile, or jaw position differ between sides and need comparison.",
+      "recognition":["Compare right and left dental relationships","Check dental midlines and smile orientation","Observe opening and closing movements"],
+      "review":["Standardize head position and photographs","Review development and tooth loss","Distinguish dental, functional, and skeletal factors"],
+      "limits":"One image cannot distinguish true asymmetry from camera distortion or establish skeletal diagnosis.",
+      "source_ids":["bos-adult-reasons"],
+      "quiz":{"question":"What is the appropriate first interpretation of apparent asymmetry in a selfie?","options":["A finding to verify with standardized records","Proof of a jaw-growth disorder","A reason to prescribe forces","A prediction of surgery"],"answer_index":0,"explanation":"Orientation, clinical movement, and full dental records are needed to interpret an apparent side difference."}
+    }
+  ]
+}

@@ -1,0 +1,564 @@
+{
+  "$defs": {
+    "DentalClassifications": {
+      "additionalProperties": false,
+      "properties": {
+        "overall": {
+          "enum": [
+            "not_recorded",
+            "uncertain",
+            "not_assessable",
+            "class_i",
+            "class_ii_division_1",
+            "class_ii_division_2",
+            "class_iii"
+          ],
+          "title": "Overall",
+          "type": "string"
+        },
+        "molar_right": {
+          "enum": [
+            "not_recorded",
+            "uncertain",
+            "not_assessable",
+            "class_i",
+            "class_ii",
+            "class_iii"
+          ],
+          "title": "Molar Right",
+          "type": "string"
+        },
+        "molar_left": {
+          "enum": [
+            "not_recorded",
+            "uncertain",
+            "not_assessable",
+            "class_i",
+            "class_ii",
+            "class_iii"
+          ],
+          "title": "Molar Left",
+          "type": "string"
+        },
+        "canine_right": {
+          "enum": [
+            "not_recorded",
+            "uncertain",
+            "not_assessable",
+            "class_i",
+            "class_ii",
+            "class_iii"
+          ],
+          "title": "Canine Right",
+          "type": "string"
+        },
+        "canine_left": {
+          "enum": [
+            "not_recorded",
+            "uncertain",
+            "not_assessable",
+            "class_i",
+            "class_ii",
+            "class_iii"
+          ],
+          "title": "Canine Left",
+          "type": "string"
+        },
+        "incisor": {
+          "enum": [
+            "not_recorded",
+            "uncertain",
+            "not_assessable",
+            "class_i",
+            "class_ii_division_1",
+            "class_ii_division_2",
+            "class_iii"
+          ],
+          "title": "Incisor",
+          "type": "string"
+        },
+        "entered_by_clinician": {
+          "title": "Entered By Clinician",
+          "type": "boolean"
+        },
+        "note": {
+          "maxLength": 1000,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "overall",
+        "molar_right",
+        "molar_left",
+        "canine_right",
+        "canine_left",
+        "incisor",
+        "entered_by_clinician",
+        "note"
+      ],
+      "title": "DentalClassifications",
+      "type": "object"
+    },
+    "ScreeningFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 80,
+          "title": "Id",
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "present",
+            "absent",
+            "uncertain",
+            "not_assessable"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "evidence_basis": {
+          "enum": [
+            "not_recorded",
+            "photo_observation",
+            "clinical_record_review",
+            "history_report"
+          ],
+          "title": "Evidence Basis",
+          "type": "string"
+        },
+        "photo_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 6,
+          "title": "Photo Ids",
+          "type": "array"
+        },
+        "record_reference": {
+          "maxLength": 300,
+          "title": "Record Reference",
+          "type": "string"
+        },
+        "note": {
+          "maxLength": 1000,
+          "title": "Note",
+          "type": "string"
+        },
+        "locations": {
+          "items": {
+            "$ref": "#/$defs/ScreeningLocation"
+          },
+          "maxItems": 8,
+          "title": "Locations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "state",
+        "evidence_basis",
+        "photo_ids",
+        "record_reference",
+        "note",
+        "locations"
+      ],
+      "title": "ScreeningFinding",
+      "type": "object"
+    },
+    "ScreeningLocation": {
+      "additionalProperties": false,
+      "properties": {
+        "arch": {
+          "enum": [
+            "upper",
+            "lower",
+            "both",
+            "unknown"
+          ],
+          "title": "Arch",
+          "type": "string"
+        },
+        "region": {
+          "enum": [
+            "anterior",
+            "posterior",
+            "whole_arch",
+            "tooth_specific",
+            "unknown"
+          ],
+          "title": "Region",
+          "type": "string"
+        },
+        "side": {
+          "enum": [
+            "patient_left",
+            "patient_right",
+            "bilateral",
+            "midline",
+            "unknown"
+          ],
+          "title": "Side",
+          "type": "string"
+        },
+        "tooth_ids": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 52,
+          "title": "Tooth Ids",
+          "type": "array"
+        },
+        "tooth_identity_confirmed": {
+          "title": "Tooth Identity Confirmed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "arch",
+        "region",
+        "side",
+        "tooth_ids",
+        "tooth_identity_confirmed"
+      ],
+      "title": "ScreeningLocation",
+      "type": "object"
+    },
+    "ScreeningPhoto": {
+      "additionalProperties": false,
+      "properties": {
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "width": {
+          "maximum": 24000000,
+          "minimum": 1,
+          "title": "Width",
+          "type": "integer"
+        },
+        "height": {
+          "maximum": 24000000,
+          "minimum": 1,
+          "title": "Height",
+          "type": "integer"
+        },
+        "standard_view": {
+          "enum": [
+            "frontal_bite",
+            "right_bite",
+            "left_bite",
+            "upper_occlusal",
+            "lower_occlusal",
+            "other",
+            "unknown"
+          ],
+          "title": "Standard View",
+          "type": "string"
+        },
+        "view_confirmed": {
+          "title": "View Confirmed",
+          "type": "boolean"
+        },
+        "quality": {
+          "enum": [
+            "not_reviewed",
+            "usable",
+            "limited",
+            "insufficient",
+            "out_of_scope"
+          ],
+          "title": "Quality",
+          "type": "string"
+        },
+        "quality_reasons": {
+          "items": {
+            "enum": [
+              "blur",
+              "lighting",
+              "occlusion",
+              "cropped_teeth",
+              "unconfirmed_view",
+              "not_biting_together",
+              "non_dental_image",
+              "radiograph_or_scan",
+              "other"
+            ],
+            "type": "string"
+          },
+          "maxItems": 9,
+          "title": "Quality Reasons",
+          "type": "array"
+        },
+        "biting_together": {
+          "enum": [
+            "yes",
+            "no",
+            "unknown"
+          ],
+          "title": "Biting Together",
+          "type": "string"
+        },
+        "patient_orientation_confirmed": {
+          "title": "Patient Orientation Confirmed",
+          "type": "boolean"
+        },
+        "data_url": {
+          "anyOf": [
+            {
+              "maxLength": 350000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Data Url"
+        },
+        "input_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Input Sha256"
+        }
+      },
+      "required": [
+        "source_sha256",
+        "width",
+        "height",
+        "standard_view",
+        "view_confirmed",
+        "quality",
+        "quality_reasons",
+        "biting_together",
+        "patient_orientation_confirmed",
+        "data_url",
+        "input_sha256"
+      ],
+      "title": "ScreeningPhoto",
+      "type": "object"
+    },
+    "ScreeningReview": {
+      "additionalProperties": false,
+      "properties": {
+        "reviewer_code": {
+          "pattern": "^([A-Za-z0-9_-]{1,48})?$",
+          "title": "Reviewer Code",
+          "type": "string"
+        },
+        "reviewer_role": {
+          "enum": [
+            "orthodontist",
+            "dentist",
+            "student",
+            "patient",
+            "unknown"
+          ],
+          "title": "Reviewer Role",
+          "type": "string"
+        },
+        "annotations_reviewed": {
+          "title": "Annotations Reviewed",
+          "type": "boolean"
+        },
+        "definitions_reviewed": {
+          "title": "Definitions Reviewed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "reviewer_code",
+        "reviewer_role",
+        "annotations_reviewed",
+        "definitions_reviewed"
+      ],
+      "title": "ScreeningReview",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "humantwin-orthodontic-screening-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "taxonomy_version": {
+      "maxLength": 80,
+      "title": "Taxonomy Version",
+      "type": "string"
+    },
+    "subject_code": {
+      "pattern": "^[A-Za-z0-9_-]{1,48}$",
+      "title": "Subject Code",
+      "type": "string"
+    },
+    "visit_code": {
+      "pattern": "^[A-Za-z0-9_-]{1,48}$",
+      "title": "Visit Code",
+      "type": "string"
+    },
+    "partition": {
+      "enum": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "title": "Partition",
+      "type": "string"
+    },
+    "age_years": {
+      "anyOf": [
+        {
+          "maximum": 120,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Age Years"
+    },
+    "dentition_stage": {
+      "enum": [
+        "primary",
+        "mixed",
+        "permanent",
+        "unknown"
+      ],
+      "title": "Dentition Stage",
+      "type": "string"
+    },
+    "scope": {
+      "enum": [
+        "not_reviewed",
+        "in_scope",
+        "insufficient_images",
+        "out_of_scope"
+      ],
+      "title": "Scope",
+      "type": "string"
+    },
+    "normal_appearance": {
+      "enum": [
+        "present",
+        "absent",
+        "uncertain",
+        "not_assessable"
+      ],
+      "title": "Normal Appearance",
+      "type": "string"
+    },
+    "existing_braces": {
+      "enum": [
+        "present",
+        "absent",
+        "uncertain",
+        "not_assessable"
+      ],
+      "title": "Existing Braces",
+      "type": "string"
+    },
+    "photos": {
+      "items": {
+        "$ref": "#/$defs/ScreeningPhoto"
+      },
+      "maxItems": 6,
+      "title": "Photos",
+      "type": "array"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/ScreeningFinding"
+      },
+      "maxItems": 41,
+      "minItems": 41,
+      "title": "Findings",
+      "type": "array"
+    },
+    "classifications": {
+      "$ref": "#/$defs/DentalClassifications"
+    },
+    "review": {
+      "$ref": "#/$defs/ScreeningReview"
+    },
+    "data_rights": {
+      "enum": [
+        "not_confirmed",
+        "consented_clinical_data",
+        "appropriately_licensed"
+      ],
+      "title": "Data Rights",
+      "type": "string"
+    },
+    "rights_reference": {
+      "maxLength": 300,
+      "title": "Rights Reference",
+      "type": "string"
+    },
+    "consent_storage": {
+      "title": "Consent Storage",
+      "type": "boolean"
+    },
+    "consent_training": {
+      "title": "Consent Training",
+      "type": "boolean"
+    },
+    "is_demonstration": {
+      "const": false,
+      "title": "Is Demonstration",
+      "type": "boolean"
+    },
+    "clinical_validation": {
+      "const": false,
+      "title": "Clinical Validation",
+      "type": "boolean"
+    },
+    "classifier_applied": {
+      "const": false,
+      "title": "Classifier Applied",
+      "type": "boolean"
+    },
+    "model_training_performed": {
+      "const": false,
+      "title": "Model Training Performed",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema_version",
+    "taxonomy_version",
+    "subject_code",
+    "visit_code",
+    "partition",
+    "age_years",
+    "dentition_stage",
+    "scope",
+    "normal_appearance",
+    "existing_braces",
+    "photos",
+    "findings",
+    "classifications",
+    "review",
+    "data_rights",
+    "rights_reference",
+    "consent_storage",
+    "consent_training",
+    "is_demonstration",
+    "clinical_validation",
+    "classifier_applied",
+    "model_training_performed"
+  ],
+  "title": "ScreeningRecord",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

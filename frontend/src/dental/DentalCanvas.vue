@@ -9,7 +9,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import { disposeScene } from '../three/disposeScene'
 import { buildDentalAtlas } from './anatomy'
 import type { Appliance, DentalScan, DentalView } from './model'
-const props=withDefaults(defineProps<{ view: DentalView; selected: number; structure?:string; appliance: Appliance; elastic: string; opening: number; reducedMotion: boolean; scan: DentalScan | null }>(),{structure:'all'})
+import type { DentalSimulation } from './caseModel'
+const props=withDefaults(defineProps<{ view: DentalView; selected: number; structure?:string; appliance: Appliance; elastic: string; opening: number; reducedMotion: boolean; scan: DentalScan | null; simulation?: DentalSimulation }>(),{structure:'all'})
 const emit=defineEmits<{ select: [id:number]; error: [message:string]; ready: [] }>()
 const host=ref<HTMLDivElement>(),busy=ref(true)
 let scene:T.Scene,camera:T.PerspectiveCamera,renderer:T.WebGLRenderer,controls:OrbitControls,model:T.Group|undefined,environment:T.WebGLRenderTarget|undefined,observer:ResizeObserver,visibility:IntersectionObserver
@@ -68,6 +69,7 @@ onMounted(()=>{try{
 }catch(e){busy.value=false;emit('error',e instanceof Error?e.message:'3D graphics are unavailable.')}})
 watch(()=>[props.view,props.scan?.id],()=>void rebuild())
 watch(()=>[props.appliance,props.elastic,props.opening],()=>{if(!props.scan)void rebuild(false)})
+watch(()=>props.simulation,()=>{if(!props.scan)void rebuild(false)},{deep:true})
 watch(()=>props.selected,()=>{if(props.view==='section')void rebuild(false);else highlight()})
 watch(()=>props.structure,highlight)
 watch(()=>props.reducedMotion,value=>{if(controls)controls.enableDamping=!value})

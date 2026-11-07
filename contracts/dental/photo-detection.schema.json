@@ -1,0 +1,116 @@
+{
+  "$defs": {
+    "CrownOutline": {
+      "additionalProperties": false,
+      "properties": {
+        "jaw": {
+          "enum": [
+            "upper",
+            "lower",
+            "unknown"
+          ],
+          "title": "Jaw",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/PhotoPoint"
+          },
+          "maxItems": 12,
+          "minItems": 4,
+          "title": "Points",
+          "type": "array"
+        }
+      },
+      "required": [
+        "jaw",
+        "points"
+      ],
+      "title": "CrownOutline",
+      "type": "object"
+    },
+    "PhotoPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "title": "PhotoPoint",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "image_quality": {
+      "enum": [
+        "usable",
+        "insufficient",
+        "unsupported_view"
+      ],
+      "title": "Image Quality",
+      "type": "string"
+    },
+    "crowns": {
+      "items": {
+        "$ref": "#/$defs/CrownOutline"
+      },
+      "maxItems": 32,
+      "title": "Crowns",
+      "type": "array"
+    },
+    "possible_case_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "title": "Possible Case Ids",
+      "type": "array"
+    },
+    "mode": {
+      "const": "photo-outline-draft",
+      "title": "Mode",
+      "type": "string"
+    },
+    "input_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Input Sha256",
+      "type": "string"
+    },
+    "clinical_validation": {
+      "const": false,
+      "title": "Clinical Validation",
+      "type": "boolean"
+    },
+    "geometry_dimensions": {
+      "const": "2d-visible-crowns",
+      "title": "Geometry Dimensions",
+      "type": "string"
+    }
+  },
+  "required": [
+    "image_quality",
+    "crowns",
+    "possible_case_ids",
+    "mode",
+    "input_sha256",
+    "clinical_validation",
+    "geometry_dimensions"
+  ],
+  "title": "PhotoDetectionResult",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

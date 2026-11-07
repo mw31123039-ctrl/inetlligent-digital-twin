@@ -4,25 +4,30 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
 class PrivateApi
 {
     public function handle(Request $request, Closure $next): Response
     {
-        abort_if((int) $request->header('Content-Length', 0) > 500000, 413, 'Request too large.');
+        $maxBytes = $request->isMethod('POST') && $request->path() === 'api/dental/screening/cases' ? 2300000 : 500000;
+        abort_if((int) $request->header('Content-Length', 0) > $maxBytes, 413, 'Request too large.');
         try {
             $response = $next($request);
-        } catch (\Illuminate\Validation\ValidationException|\Illuminate\Auth\AuthenticationException|\Illuminate\Database\Eloquent\ModelNotFoundException|\Symfony\Component\HttpKernel\Exception\HttpExceptionInterface $exception) {
+        } catch (ValidationException|\Illuminate\Auth\AuthenticationException|\Illuminate\Database\Eloquent\ModelNotFoundException|HttpExceptionInterface $exception) {
             throw $exception;
         } catch (\Throwable $exception) {
             // Operational visibility without message, stack arguments, request body or SQL.
-            \Illuminate\Support\Facades\Log::error('API operation failed', ['type' => $exception::class]);
+            Log::error('API operation failed', ['type' => $exception::class]);
             $response = response()->json(['message' => 'The service could not complete this request. Please retry.'], 503);
         }
         $response->headers->set('Cache-Control', 'no-store, private');
         $response->headers->set('X-Content-Type-Options', 'nosniff');
         $response->headers->set('Referrer-Policy', 'no-referrer');
+
         return $response;
     }
 }

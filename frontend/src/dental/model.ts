@@ -1,4 +1,4 @@
-export type DentalMode = 'pain' | 'braces' | 'research'
+export type DentalMode = 'pain' | 'braces' | 'research' | 'cases'
 export type DentalView = 'front' | 'upper' | 'lower' | 'side' | 'section'
 export type Appliance = 'none' | 'metal' | 'ceramic'
 export interface DentalScan { id: string; name: string; parts: { name: string; format: 'stl' | 'obj' | 'glb'; bytes: ArrayBuffer }[]; source: string; license: string }

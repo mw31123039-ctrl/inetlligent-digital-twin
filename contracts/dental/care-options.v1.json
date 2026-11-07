@@ -1,0 +1,108 @@
+{
+  "version": "dental-care-options-v1",
+  "review_status": "draft; dental and orthodontic clinician review required",
+  "clinical_validation": false,
+  "sources": [
+    {"id":"care-aao-braces","title":"How do braces work?","url":"https://aaoinfo.org/treatments/braces/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"care-aao-aligners","title":"Clear aligners","url":"https://aaoinfo.org/treatments/aligners/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"care-aapd-development","title":"Management of the developing dentition and occlusion, revision 2024","url":"https://www.aapd.org/media/Policies_Guidelines/BP_DevelopDentition.pdf","publisher":"American Academy of Pediatric Dentistry","checked_at":"2026-11-07"},
+    {"id":"care-bos-functional","title":"Functional appliances","url":"https://bos.org.uk/functional-appliances/","publisher":"British Orthodontic Society","checked_at":"2026-11-07"},
+    {"id":"care-nhs-jaw-surgery","title":"Orthognathic treatment","url":"https://www.plymouthhospitals.nhs.uk/display-pil/pil-orthognathic-treatment-5531/","publisher":"University Hospitals Plymouth NHS Trust","checked_at":"2026-11-07"},
+    {"id":"care-bos-adult","title":"Orthodontic treatment as an adult","url":"https://bos.org.uk/wp-content/uploads/2024/01/British-Orthodontic-Society-Adult2024.pdf","publisher":"British Orthodontic Society","checked_at":"2026-11-07"},
+    {"id":"care-nhs-impaction","title":"Tooth impaction","url":"https://www.nuh.nhs.uk/orthodontics-tooth-impaction/","publisher":"Nottingham University Hospitals NHS Trust","checked_at":"2026-11-07"},
+    {"id":"care-aao-retainers","title":"Understanding retainers","url":"https://aaoinfo.org/treatments/retainers/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"care-bos-patient-guide","title":"Before having your teeth straightened","url":"https://bos.org.uk/patients/treatments/orthodontics-for-adults/everything-you-need-to-know-before-having-your-teeth-straightened/","publisher":"British Orthodontic Society","checked_at":"2026-11-07"},
+    {"id":"care-aao-monitoring","title":"Early assessment, monitoring, and treatment","url":"https://aaoinfo.org/whats-trending/is-there-a-benefit-to-early-treatment/","publisher":"American Association of Orthodontists","checked_at":"2026-11-07"},
+    {"id":"care-bos-risks","title":"Risks of orthodontic treatment: guidance on informing patients, 2024","url":"https://bos.org.uk/wp-content/uploads/2024/12/RISKS-OF-ORTHODONTIC-TREATMENT-GUIDANCE-ON-INFORMING-PATIENTS-2024.pdf","publisher":"British Orthodontic Society","checked_at":"2026-11-07"}
+  ],
+  "options": [
+    {
+      "id":"fixed-braces",
+      "name":"Fixed braces",
+      "overview":"Brackets and an archwire move teeth under an orthodontist's planned, monitored care. They may be one part of a broader bite-management plan.",
+      "benefits":["Can improve the alignment of selected crowded or rotated teeth","Can address several dental alignment goals within one supervised plan","Remain attached, so daily tray insertion is not required"],
+      "tradeoffs":["Cleaning around brackets and wires takes extra attention","Soreness, rubbing, and appliance breakages can occur","Some jaw discrepancies need additional approaches beyond tooth alignment"],
+      "clinician_checks":["Confirm dental diagnosis, bite relationships, and treatment goals","Assess tooth, root, bone, and gum health using appropriate records","Discuss individual risks, visits, and retention before treatment"],
+      "case_ids":["crowding","spacing","diastema","deep-bite","anterior-open-bite","posterior-open-bite","increased-overjet","anterior-crossbite","unilateral-posterior-crossbite","bilateral-posterior-crossbite","scissor-bite","class-ii-division-1","class-ii-division-2","class-iii","midline-discrepancy","rotated-teeth","relapse"],
+      "source_ids":["care-aao-braces"]
+    },
+    {
+      "id":"clear-aligners",
+      "name":"Clear aligners",
+      "overview":"A clinician-planned sequence of removable trays can move selected teeth. Suitability depends on the actual bite, required movements, and oral health.",
+      "benefits":["Usually less conspicuous than visible fixed brackets","Can be removed for meals and tooth cleaning","Can address selected spacing, crowding, and bite concerns"],
+      "tradeoffs":["Results depend on following the prescribed wear routine","Attachments, additional stages, or fixed braces may still be needed","Removable appliances still carry tooth-movement, decay, and gum-care risks"],
+      "clinician_checks":["Assess whether the required movements are suitable for trays","Check teeth and gums before making treatment scans","Review the person's ability to manage wear, cleaning, and follow-up"],
+      "case_ids":["crowding","spacing","diastema","deep-bite","anterior-open-bite","increased-overjet","anterior-crossbite","midline-discrepancy","rotated-teeth","relapse"],
+      "source_ids":["care-aao-aligners","care-bos-risks"]
+    },
+    {
+      "id":"space-management",
+      "name":"Space assessment and management",
+      "overview":"A dental team may preserve, recover, or redistribute space according to dentition and tooth development. This is a planning category, not a recommendation to remove teeth.",
+      "benefits":["May preserve room after selected premature primary-tooth losses","May support a developing permanent tooth's eruption path","Can coordinate space with later alignment or tooth replacement"],
+      "tradeoffs":["Space-maintaining appliances can collect plaque, loosen, or break","Some proposed methods are irreversible and need separate risk discussion","Evidence and outcomes vary; later orthodontic treatment may still be needed"],
+      "clinician_checks":["Complete a space analysis and short- and long-term plan","Confirm tooth number, eruption status, and successor development","Review hygiene, bite, growth, and capacity for follow-up"],
+      "case_ids":["crowding","spacing","diastema","impacted-canine","missing-tooth","supernumerary-tooth","ectopic-eruption","mixed-dentition"],
+      "source_ids":["care-aapd-development","care-bos-adult"]
+    },
+    {
+      "id":"growth-appliances",
+      "name":"Functional appliances during growth",
+      "overview":"For selected growing patients with a Class II problem, a clinician may use a functional appliance to change the bite, mainly through dental changes. It does not guarantee permanent jaw-growth alteration.",
+      "benefits":["May reduce excessive upper-incisor projection in suitable cases","May improve the relationship between upper and lower front teeth","Dental repositioning may improve upper-lip coverage of the front teeth"],
+      "tradeoffs":["Response varies and depends on cooperation with appliance wear","A later or combined fixed-brace phase may be needed","Long-term changes in jaw size or position cannot be promised"],
+      "clinician_checks":["Assess remaining growth and the actual Class II pattern","Review incisor inclination, oral health, and functional concerns","Discuss realistic goals and alternative pathways"],
+      "case_ids":["increased-overjet","class-ii-division-1"],
+      "source_ids":["care-bos-functional"]
+    },
+    {
+      "id":"specialist-jaw-surgery",
+      "name":"Specialist jaw-surgery assessment",
+      "overview":"An orthodontist and maxillofacial surgeon may assess selected skeletal discrepancies that tooth movement alone cannot address. A case label or photograph does not establish a need for surgery.",
+      "benefits":["Can address jaw relationships beyond tooth alignment alone","May improve biting and chewing in selected patients","May improve facial balance when this is an agreed treatment goal"],
+      "tradeoffs":["Involves an operation, general anaesthetic, and recovery","Sensory changes can persist; individual surgical risks require discussion","Coordinated orthodontic and surgical care can be lengthy and demanding"],
+      "clinician_checks":["Confirm the skeletal problem using examination and justified records","Assess growth, health, expectations, and alternatives together","Explain individualized risks, likely changes, and consent"],
+      "case_ids":["underbite","class-iii","anterior-open-bite","asymmetry"],
+      "source_ids":["care-nhs-jaw-surgery"]
+    },
+    {
+      "id":"combined-dental-care",
+      "name":"Combined dental and specialist care",
+      "overview":"Some confirmed findings need coordinated orthodontic, restorative, periodontal, or oral-surgery input. The sequence depends on the cause, disease status, and the person's goals.",
+      "benefits":["Coordinates gum and tooth health with alignment decisions","Can plan spacing alongside the shape or replacement of teeth","Allows specialist discussion of impacted teeth and other complex findings"],
+      "tradeoffs":["Several clinicians or stages may be involved","A chosen pathway may include irreversible procedures and additional risks","Not every gap, tooth difference, or visible gum display needs correction"],
+      "clinician_checks":["Identify the confirmed cause and stabilize active disease","Agree responsibilities and sequence across the treating team","Discuss intervention, monitoring, and no-treatment alternatives"],
+      "case_ids":["spacing","diastema","impacted-canine","missing-tooth","supernumerary-tooth","ectopic-eruption","tooth-wear","gummy-smile","asymmetry"],
+      "source_ids":["care-bos-adult","care-nhs-impaction","care-bos-risks"]
+    },
+    {
+      "id":"retention",
+      "name":"Retention and maintenance",
+      "overview":"Fixed or removable retainers help maintain positions after active treatment. A retainer is not automatically a treatment for new crowding or a substitute for review.",
+      "benefits":["Helps limit unwanted positional changes after treatment","Supports maintenance of agreed alignment goals","Fixed and removable designs offer different care arrangements"],
+      "tradeoffs":["Removable designs depend on consistent prescribed wear","Fixed designs need careful cleaning and checks for bond failure","Repair, replacement, and ongoing review may be needed"],
+      "clinician_checks":["Check current alignment, gum health, and retainer fit","Review integrity and cleaning access for fixed retainers","Discuss the individualized maintenance plan and signs of change"],
+      "case_ids":["crowding","spacing","diastema","deep-bite","anterior-open-bite","underbite","increased-overjet","anterior-crossbite","unilateral-posterior-crossbite","bilateral-posterior-crossbite","scissor-bite","class-ii-division-1","class-ii-division-2","class-iii","midline-discrepancy","rotated-teeth","relapse"],
+      "source_ids":["care-aao-retainers","care-bos-patient-guide"]
+    },
+    {
+      "id":"observation",
+      "name":"Clinician-led observation",
+      "overview":"After examination, a clinician may advise no active treatment now, with planned review of development or changes. Observation is a deliberate option, not an automatic conclusion from a photo.",
+      "benefits":["Can avoid unnecessary intervention when treatment is not indicated","Allows tooth eruption and development to be reviewed over time","Preserves the option to reconsider care as findings change"],
+      "tradeoffs":["Does not actively straighten teeth or alter the bite","New symptoms or changes may require earlier reassessment","Missing review visits can delay recognition of a changing problem"],
+      "clinician_checks":["Confirm that observation is appropriate for the actual finding","Set individualized review arrangements and escalation signs","Record the person's concerns and reasons for the chosen approach"],
+      "case_ids":["diastema","mixed-dentition","ectopic-eruption","gummy-smile","spacing","relapse"],
+      "source_ids":["care-aao-monitoring"]
+    }
+  ],
+  "shared_risks": [
+    "Root resorption: roots can shorten during orthodontic movement; significant changes can affect tooth support and require clinical monitoring.",
+    "Decalcification and caries: plaque around fixed or removable appliances can contribute to white spots and tooth decay; prevention and review matter.",
+    "Gum and periodontal health: inflammation, recession, or support loss can occur; active disease needs clinician-led stabilization before tooth movement.",
+    "Relapse: teeth can change position after treatment; discuss retention and ongoing review as part of the plan."
+  ],
+  "shared_risk_source_ids": ["care-bos-risks"],
+  "pathway_note": "These are general discussion pathways with potential benefits and tradeoffs, not personalized treatment recommendations. Case links are educational associations; they do not determine candidacy. Only a qualified treating clinician can select an appropriate approach after examination and suitable records. A photograph cannot establish root and bone status, remaining growth, or treatment suitability. A rendered correction is an illustration, not a prediction, guarantee, appliance prescription, or movement schedule."
+}

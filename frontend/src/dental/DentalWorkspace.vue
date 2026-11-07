@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { computed, reactive, ref, watch } from 'vue'
+import { computed, defineAsyncComponent, reactive, ref, watch } from 'vue'
 import AppIcon from '../components/AppIcon.vue'
 import DentalCanvas from './DentalCanvas.vue'
 import DentalResearch from './DentalResearch.vue'
 import catalog from '../../../contracts/dental/sources.v1.json'
 import { chartRows, dentalAdvice, newPainRecord, safetySigns, toothById, toothLabel, type Appliance, type DentalMode, type DentalView, type PainRecord } from './model'
 import './dental.css'
-const props=defineProps<{initialMode:DentalMode;reducedMotion:boolean}>()
-const emit=defineEmits<{mode:[value:DentalMode];close:[]}>()
+import './caseStudio.css'
+const DentalCaseStudio=defineAsyncComponent(()=>import('./DentalCaseStudio.vue'))
+const props=withDefaults(defineProps<{initialMode:DentalMode;reducedMotion:boolean;user?:{id:number;email:string}|null;authPending?:boolean;authError?:string}>(),{user:null,authPending:false,authError:''})
+const emit=defineEmits<{mode:[value:DentalMode];close:[];authenticate:[email:string,password:string,register:boolean]}>()
+const casesOpened=ref(props.initialMode==='cases')
 const mode=ref<DentalMode>(props.initialMode),selected=ref(11),view=ref<DentalView>('front'),appliance=ref<Appliance>(props.initialMode==='braces'?'metal':'none'),elastic=ref('#399d91'),opening=ref(.14),structure=ref('enamel')
 const canvas=ref<InstanceType<typeof DentalCanvas>>(),canvasKey=ref(0),canvasError=ref(''),researchOpened=ref(props.initialMode==='research'),notice=ref('')
 const records=reactive<Record<number,PainRecord>>({11:newPainRecord()}),priorEmergency=ref(false),emergencyReportedAt=ref<string|null>(null),startedAt=ref(new Date().toISOString())
@@ -20,7 +23,7 @@ const reportedTeeth=computed(()=>Object.values(records).filter(r=>r.severity>0||
 const layers=[{id:'enamel',label:'Enamel',color:'#e6d9bd',description:'The hard outer crown surface. It covers the visible part of the tooth.'},{id:'dentin',label:'Dentin',color:'#c6a45c',description:'The tissue beneath enamel and around the root canal. Exposed dentin can be associated with sensitivity.'},{id:'pulp',label:'Pulp & canals',color:'#c5646f',description:'The central soft tissue contains nerves and blood vessels. The diagram shows a simplified canal path.'},{id:'root',label:'Tooth roots',color:'#b8a98d',description:'Roots anchor the tooth below the gum line. Root shapes and counts vary between people.'}]
 const currentLayer=computed(()=>layers.find(l=>l.id===structure.value)!)
 watch(()=>props.initialMode,value=>{mode.value=value})
-watch(mode,value=>{if(value==='braces'&&appliance.value==='none')appliance.value='metal';if(value==='research')researchOpened.value=true;emit('mode',value)})
+watch(mode,value=>{if(value==='braces'&&appliance.value==='none')appliance.value='metal';if(value==='research')researchOpened.value=true;if(value==='cases')casesOpened.value=true;emit('mode',value)})
 watch(records,()=>{if(Object.values(records).some(r=>safetySigns.some(s=>s.emergency&&r.signs.includes(s.id)))){priorEmergency.value=true;emergencyReportedAt.value??=new Date().toISOString()}},{deep:true,flush:'sync'})
 function choose(id:number){selected.value=id;if(!records[id])records[id]=newPainRecord(id);notice.value=''}
 function chartKey(event:KeyboardEvent,rowIndex:number,index:number){let nextRow=rowIndex,next=index;if(event.key==='ArrowRight')next=Math.min(15,index+1);else if(event.key==='ArrowLeft')next=Math.max(0,index-1);else if(event.key==='ArrowUp')nextRow=0;else if(event.key==='ArrowDown')nextRow=1;else if(event.key==='Home')next=0;else if(event.key==='End')next=15;else return;event.preventDefault();const id=chartRows[nextRow]![next]!;choose(id);(event.currentTarget as HTMLElement).closest('.dental-tooth-chart')?.querySelector<HTMLButtonElement>(`[data-fdi="${id}"]`)?.focus()}
@@ -30,9 +33,11 @@ function exportAssessment(){const text=JSON.stringify({schema_version:1,module:'
 <template>
  <section class="dental-workspace" aria-label="Dental and orthodontic workspace">
   <div class="dental-introduction"><div class="dental-intro-icon"><AppIcon name="tooth" :size="30"/></div><div><span class="dental-eyebrow">ORAL HEALTH · ANATOMY · ORTHODONTICS</span><p>Explore the tooth. Understand the context. Follow the evidence.</p></div><span class="dental-reference-tag"><i/>Research workspace</span></div>
-  <div class="dental-workspace-bar"><div class="dental-mode-tabs" role="group" aria-label="Dental workspace mode"><button :aria-pressed="mode==='pain'" @click="mode='pain'"><AppIcon name="tooth" :size="18"/>Teeth & pain</button><button :aria-pressed="mode==='braces'" @click="mode='braces'"><AppIcon name="braces" :size="18"/>Braces studio</button><button :aria-pressed="mode==='research'" @click="mode='research'"><AppIcon name="layers" :size="18"/>Research data</button></div><button class="dental-text-button dental-back" @click="emit('close')"><AppIcon name="arrowLeft" :size="15"/>Body explorer</button></div>
+  <div class="dental-workspace-bar"><div class="dental-mode-tabs" role="group" aria-label="Dental workspace mode"><button :aria-pressed="mode==='pain'" @click="mode='pain'"><AppIcon name="tooth" :size="18"/>Teeth & pain</button><button :aria-pressed="mode==='braces'" @click="mode='braces'"><AppIcon name="braces" :size="18"/>Braces studio</button><button :aria-pressed="mode==='cases'" @click="mode='cases'"><AppIcon name="tooth" :size="18"/>Cases & practice</button><button :aria-pressed="mode==='research'" @click="mode='research'"><AppIcon name="layers" :size="18"/>Research data</button></div><button class="dental-text-button dental-back" @click="emit('close')"><AppIcon name="arrowLeft" :size="15"/>Body explorer</button></div>
   <div v-if="priorEmergency&&mode!=='pain'" class="dental-advice emergency" role="alert"><AppIcon name="error"/><div><strong>Emergency symptoms were reported</strong><p>Contact local emergency services or an emergency department now. Changing tabs does not clear this guidance.</p></div></div>
-  <div v-if="mode!=='research'" class="dental-workbench">
+  <div v-if="mode==='pain'||mode==='braces'" class="dental-case-launch"><div><h3>Bring a patient case into the picture.</h3><p>Local photos, bite examples, individual tooth exploration and student tests.</p></div><button class="button-secondary" @click="mode='cases'">Open cases & practice <AppIcon name="arrowRight" :size="15"/></button></div>
+  <DentalCaseStudio v-if="casesOpened" v-show="mode==='cases'" :reduced-motion="reducedMotion" :user="user" :auth-pending="authPending" :auth-error="authError" @authenticate="(email,password,register)=>emit('authenticate',email,password,register)"/>
+  <div v-if="mode==='pain'||mode==='braces'" class="dental-workbench">
    <div class="dental-model-column"><section class="dental-atlas panel" aria-label="Tooth atlas"><div class="dental-atlas-heading"><div><span class="dental-eyebrow">{{ mode==='braces'?'APPLIANCE VISUALIZATION':'PERMANENT DENTITION' }}</span><h2>{{ mode==='braces'?'A closer look at braces.':'Meet your dental anatomy.' }}</h2></div><span class="dental-counter">32 <small>teeth</small></span></div>
     <div class="dental-views" role="group" aria-label="Dental model view"><button v-for="v in (['front','upper','lower','side','section'] as const)" :key="v" :aria-pressed="view===v" @click="view=v;canvasError=''">{{ ({front:'Front',upper:'Upper arch',lower:'Lower arch',side:'Side',section:'Tooth section'})[v] }}</button></div>
     <div class="dental-model-stage"><DentalCanvas :key="canvasKey" ref="canvas" :view="view" :selected="selected" :structure="view==='section'?structure:'all'" :appliance="appliance" :elastic="elastic" :opening="opening" :reduced-motion="reducedMotion" :scan="null" @select="choose" @error="canvasError=$event"/><div class="dental-canvas-badge">3D TOOTH ATLAS <span>{{ view==='section'?'Enamel · dentin · pulp · roots':'Original educational geometry' }}</span></div><div class="dental-stage-label"><span>SELECTED TOOTH</span><strong>{{ selected }}</strong><small>{{ tooth.jaw }} {{ tooth.side }} · patient perspective</small></div><div v-if="canvasError" class="dental-canvas-error" role="alert"><strong>3D viewer unavailable</strong><p>{{ canvasError }}</p><button class="button-secondary" @click="canvasKey++;canvasError=''">Retry viewer</button><span>The numbered tooth chart still works.</span></div></div>
