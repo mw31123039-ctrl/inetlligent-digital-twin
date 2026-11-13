@@ -1,0 +1,377 @@
+{
+  "$defs": {
+    "Explanation": {
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "const": "occlusion-sensitivity",
+          "title": "Method",
+          "type": "string"
+        },
+        "target_label": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Target Label",
+          "type": "string"
+        },
+        "grid_size": {
+          "enum": [
+            4,
+            6
+          ],
+          "title": "Grid Size",
+          "type": "integer"
+        },
+        "values": {
+          "items": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number"
+          },
+          "maxItems": 36,
+          "minItems": 16,
+          "title": "Values",
+          "type": "array"
+        },
+        "meaning": {
+          "const": "score-drop-under-occlusion",
+          "title": "Meaning",
+          "type": "string"
+        },
+        "localization": {
+          "const": false,
+          "title": "Localization",
+          "type": "boolean"
+        },
+        "max_score_drop": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Max Score Drop",
+          "type": "number"
+        }
+      },
+      "required": [
+        "method",
+        "target_label",
+        "grid_size",
+        "values",
+        "meaning",
+        "localization",
+        "max_score_drop"
+      ],
+      "title": "Explanation",
+      "type": "object"
+    },
+    "ImageChecks": {
+      "additionalProperties": false,
+      "properties": {
+        "width": {
+          "maximum": 2048,
+          "minimum": 32,
+          "title": "Width",
+          "type": "integer"
+        },
+        "height": {
+          "maximum": 2048,
+          "minimum": 32,
+          "title": "Height",
+          "type": "integer"
+        },
+        "brightness": {
+          "maximum": 255,
+          "minimum": 0,
+          "title": "Brightness",
+          "type": "number"
+        },
+        "contrast": {
+          "maximum": 128,
+          "minimum": 0,
+          "title": "Contrast",
+          "type": "number"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "brightness",
+        "contrast",
+        "warnings"
+      ],
+      "title": "ImageChecks",
+      "type": "object"
+    },
+    "ModelInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "source_url": {
+          "maxLength": 500,
+          "pattern": "^https://[^\\s]+$",
+          "title": "Source Url",
+          "type": "string"
+        },
+        "license": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "License",
+          "type": "string"
+        },
+        "evaluation_reference": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Evaluation Reference",
+          "type": "string"
+        },
+        "patient_disjoint": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Patient Disjoint"
+        }
+      },
+      "required": [
+        "source_url",
+        "license",
+        "evaluation_reference",
+        "patient_disjoint"
+      ],
+      "title": "ModelInfo",
+      "type": "object"
+    },
+    "Score": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "value": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "label",
+        "value"
+      ],
+      "title": "Score",
+      "type": "object"
+    },
+    "Uncertainty": {
+      "additionalProperties": false,
+      "properties": {
+        "normalized_entropy": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Normalized Entropy",
+          "type": "number"
+        },
+        "margin": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Margin",
+          "type": "number"
+        },
+        "interpretation": {
+          "const": "research-only",
+          "title": "Interpretation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "normalized_entropy",
+        "margin",
+        "interpretation"
+      ],
+      "title": "Uncertainty",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "humantwin-cancer-result-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "track": {
+      "enum": [
+        "skin",
+        "oral",
+        "lung",
+        "breast"
+      ],
+      "title": "Track",
+      "type": "string"
+    },
+    "modality": {
+      "enum": [
+        "skin_photo",
+        "dermoscopy",
+        "oral_photo",
+        "lung_ct_slice",
+        "mammogram",
+        "breast_ultrasound",
+        "breast_mri_slice"
+      ],
+      "title": "Modality",
+      "type": "string"
+    },
+    "model_version": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$",
+      "title": "Model Version",
+      "type": "string"
+    },
+    "target": {
+      "maxLength": 160,
+      "minLength": 1,
+      "title": "Target",
+      "type": "string"
+    },
+    "weights_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Weights Sha256",
+      "type": "string"
+    },
+    "input_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Input Sha256",
+      "type": "string"
+    },
+    "scores": {
+      "items": {
+        "$ref": "#/$defs/Score"
+      },
+      "maxItems": 20,
+      "minItems": 2,
+      "title": "Scores",
+      "type": "array"
+    },
+    "clinical_validation": {
+      "const": false,
+      "title": "Clinical Validation",
+      "type": "boolean"
+    },
+    "calibrated_cancer_probability": {
+      "const": false,
+      "title": "Calibrated Cancer Probability",
+      "type": "boolean"
+    },
+    "scope": {
+      "const": "single-2d-image",
+      "title": "Scope",
+      "type": "string"
+    },
+    "external_requests": {
+      "const": false,
+      "title": "External Requests",
+      "type": "boolean"
+    },
+    "inference_ms": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Inference Ms"
+    },
+    "runtime": {
+      "anyOf": [
+        {
+          "enum": [
+            "onnxruntime-cpu",
+            "opencv-cpu"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Runtime"
+    },
+    "uncertainty": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Uncertainty"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "explanation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Explanation"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "image_checks": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ImageChecks"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "model_info": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ModelInfo"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "schema_version",
+    "track",
+    "modality",
+    "model_version",
+    "target",
+    "weights_sha256",
+    "input_sha256",
+    "scores",
+    "clinical_validation",
+    "calibrated_cancer_probability",
+    "scope",
+    "external_requests"
+  ],
+  "title": "CancerResult",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -20,3 +20,13 @@ screening_schema = ScreeningRecord.model_json_schema()
 screening_schema['$schema'] = 'https://json-schema.org/draft/2020-12/schema'
 (root.parent / 'contracts/dental/screening-case.schema.json').write_text(json.dumps(screening_schema, indent=2) + '\n', encoding='utf-8')
 print('Exported orthodontic screening-case JSON Schema.')
+from app.cancer import CancerResult
+cancer_schema = CancerResult.model_json_schema()
+cancer_schema['$schema'] = 'https://json-schema.org/draft/2020-12/schema'
+(root.parent / 'contracts/cancer-result.schema.json').write_text(json.dumps(cancer_schema, indent=2) + '\n', encoding='utf-8')
+print('Exported cancer research result JSON Schema.')
+from app.cancer_knowledge import KnowledgeAnswer
+knowledge_schema = KnowledgeAnswer.model_json_schema()
+knowledge_schema['$schema'] = 'https://json-schema.org/draft/2020-12/schema'
+(root.parent / 'contracts/cancer-knowledge-result.schema.json').write_text(json.dumps(knowledge_schema, indent=2) + '\n', encoding='utf-8')
+print('Exported local cancer evidence search JSON Schema.')

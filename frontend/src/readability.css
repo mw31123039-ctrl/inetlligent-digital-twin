@@ -1,0 +1,24 @@
+/* Comfortable defaults for the shared workspace. No health data is stored here. */
+:root{--nav-width:248px;--header-height:88px}
+body{font-family:"Segoe UI",Arial,sans-serif;font-size:17px;color:#19393f;background:#f4f7f5}
+.topbar{padding:0 26px;gap:20px;background:#fff;border-bottom-color:#dae4df}
+.brand-section{width:calc(var(--nav-width) - 26px)}
+.brand{font-size:27px;letter-spacing:-1px;gap:11px;color:#173d41}
+.brand .brand-mark{width:45px;height:45px;flex:none}.brand-twin{color:#287b6c}
+.product-title{font-size:19px;color:#50686a;font-weight:500;letter-spacing:0}
+.header-actions{gap:17px}.profile-button{font-size:15px}.profile-dropdown{width:270px}.profile-dropdown strong{font-size:17px}.profile-dropdown p,.profile-dropdown button{font-size:15px}.profile-dropdown button{padding:13px 4px}
+.demo-badge{font-size:13px;padding:7px 10px;background:#e9f4ee;color:#286e5a}.demo-badge i{background:#398f71}
+.sidebar{padding:27px 13px 18px;border-right-color:#dce6e0;overflow-y:auto}.sidebar-eyebrow{font-size:12px;color:#71857b;letter-spacing:1.3px;margin-bottom:18px}.sidebar nav{gap:5px;flex:none}.nav-link{font-size:16px;min-height:52px;padding:13px 15px;gap:12px;color:#54706b}.nav-link.active{background:#e5f1e9;color:#1f715d}.nav-link.active:before{background:#318469;left:-13px}.nav-dot{background:#318469}.sidebar-bottom{padding:20px 3px 0}.demo-card{padding:17px 14px;background:#f4f8f3;border-color:#e1e9dc}.demo-card strong{font-size:15px;line-height:1.5}.demo-card p{font-size:14px;line-height:1.7;color:#6e8175}.local-note{font-size:12px;line-height:1.5;white-space:normal}.sidebar-version{font-size:12px;gap:8px;line-height:1.5}
+.main-content{padding:30px 32px 0;max-width:2200px}.page-heading{margin-bottom:25px}.page-heading h1{font-size:36px;line-height:1.2;letter-spacing:-1px;color:#183a40}.page-heading p{font-size:17px;line-height:1.6;color:#6b7d75}.breadcrumb,.breadcrumb span{font-size:12px;line-height:1.5}.page-footer,.page-footer span{font-size:12px;line-height:1.6}.page-footer{padding-top:26px;padding-bottom:20px;gap:14px}
+.button-primary,.button-secondary,.button-danger{font-size:16px;min-height:46px;padding:10px 17px;line-height:1.4}.button-primary{background:#287d68;border-color:#287d68;box-shadow:none}.button-primary:enabled:hover{background:#206550}.button-secondary{color:#315e54;border-color:#d4e1d8}.header-sign-in{font-size:15px!important;min-height:40px!important}.new-assessment{font-size:15px}
+.help-button{padding:7px}.text-size-button{min-width:44px;min-height:40px;border:1px solid #d9e4dc;border-radius:9px;font-size:16px;font-weight:650;color:#365f54;background:#f7faf6}.text-size-button[aria-pressed=true]{background:#e4f0e6;border-color:#68a78c}
+.ai-mode-bar{font-size:15px}.ai-mode-bar .segmented button{font-size:15px}.ai-consent{font-size:15px;line-height:1.65}.ai-auth label,.ai-auth input{font-size:16px}.account-auth .account-auth-error{font-size:15px}.account-password-hint{font-size:14px}
+.dialog-panel p,.dialog-panel li,.dialog-panel label,.dialog-body p,.dialog-body li{font-size:16px;line-height:1.7}.dialog-panel h2,.dialog-title{font-size:26px}.toast-message{font-size:15px;line-height:1.6}
+.app-shell.large-text .nav-link{font-size:18px}.app-shell.large-text .page-heading p{font-size:20px}.app-shell.large-text .button-primary,.app-shell.large-text .button-secondary{font-size:18px}.app-shell.large-text .cancer-workspace{--care-body:20px;--care-small:17px;--care-label:18px}
+.app-shell.large-text .cancer-workspace p{font-size:20px}.app-shell.large-text .cancer-workspace small{font-size:16px}
+@media(max-width:540px){.profile-button>svg{display:none}}
+@media(max-width:400px){.header-sign-in{display:none!important}}
+@media(max-width:1200px){.topbar{gap:13px}.product-title{font-size:16px}.header-actions{gap:11px}.brand-section{width:auto;margin-right:7px}.header-divider{display:none}.main-content{padding:25px 24px 0}}
+@media(max-width:900px){.product-title{display:none}.page-heading h1{font-size:31px}.demo-badge{font-size:12px}.header-actions{gap:10px}}
+@media(max-width:860px){.main-content{margin-left:0}.topbar{padding:0 16px;gap:12px}.brand-section{display:flex;align-items:center;gap:8px}.brand{font-size:25px}.brand .brand-mark{width:40px;height:40px}.sidebar{width:248px}.header-actions{margin-left:auto}.page-heading p{font-size:16px}}
+@media(max-width:540px){:root{--header-height:78px}.topbar{gap:8px;padding:0 12px}.brand{font-size:22px;gap:7px}.brand .brand-mark{width:34px;height:34px}.demo-badge{display:none}.help-button{display:none}.header-actions{gap:8px}.profile-button{gap:5px}.profile-button>span:not(.profile-avatar){display:none}.text-size-button{min-width:36px;min-height:36px;font-size:15px}.header-sign-in{font-size:13px!important;min-height:35px!important;padding:0 9px!important}.main-content{padding:23px 16px 0}.page-heading h1{font-size:29px}.page-heading p{font-size:16px}.page-footer{flex-direction:column;align-items:flex-start}}

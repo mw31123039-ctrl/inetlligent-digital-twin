@@ -1,0 +1,134 @@
+{
+  "$defs": {
+    "KnowledgeMatch": {
+      "additionalProperties": false,
+      "properties": {
+        "record_id": {
+          "enum": [
+            "skin",
+            "oral",
+            "lung",
+            "breast",
+            "colorectal",
+            "prostate",
+            "cervical",
+            "ovarian",
+            "pancreatic",
+            "liver",
+            "kidney",
+            "brain",
+            "bladder",
+            "thyroid",
+            "leukemia",
+            "lymphoma",
+            "upload-image",
+            "understand-scores",
+            "choose-treatment",
+            "urgent-concerns"
+          ],
+          "title": "Record Id",
+          "type": "string"
+        },
+        "similarity": {
+          "maximum": 1,
+          "minimum": -1,
+          "title": "Similarity",
+          "type": "number"
+        }
+      },
+      "required": [
+        "record_id",
+        "similarity"
+      ],
+      "title": "KnowledgeMatch",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "humantwin-cancer-retrieval-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "method": {
+      "const": "local-semantic-retrieval",
+      "title": "Method",
+      "type": "string"
+    },
+    "corpus_version": {
+      "const": "oncology-reference-2026-11-13",
+      "title": "Corpus Version",
+      "type": "string"
+    },
+    "model_version": {
+      "pattern": "^[a-zA-Z0-9._-]{1,80}$",
+      "title": "Model Version",
+      "type": "string"
+    },
+    "weights_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Weights Sha256",
+      "type": "string"
+    },
+    "question_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Question Sha256",
+      "type": "string"
+    },
+    "matches": {
+      "items": {
+        "$ref": "#/$defs/KnowledgeMatch"
+      },
+      "maxItems": 3,
+      "title": "Matches",
+      "type": "array"
+    },
+    "retrieval_ms": {
+      "minimum": 0,
+      "title": "Retrieval Ms",
+      "type": "number"
+    },
+    "safety_notice": {
+      "enum": [
+        "none",
+        "urgent-terms",
+        "emergency-terms"
+      ],
+      "title": "Safety Notice",
+      "type": "string"
+    },
+    "question_saved": {
+      "const": false,
+      "title": "Question Saved",
+      "type": "boolean"
+    },
+    "external_requests": {
+      "const": false,
+      "title": "External Requests",
+      "type": "boolean"
+    },
+    "clinical_validation": {
+      "const": false,
+      "title": "Clinical Validation",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema_version",
+    "method",
+    "corpus_version",
+    "model_version",
+    "weights_sha256",
+    "question_sha256",
+    "matches",
+    "retrieval_ms",
+    "safety_notice",
+    "question_saved",
+    "external_requests",
+    "clinical_validation"
+  ],
+  "title": "KnowledgeAnswer",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

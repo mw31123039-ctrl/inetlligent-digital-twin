@@ -1,0 +1,304 @@
+{
+  "schema_version": "humantwin-cancer-release-review-v1",
+  "policy_version": "humantwin-cancer-release-v1",
+  "created_at": "2026-11-13T20:27:03.462380+00:00",
+  "modality": "oral_photo",
+  "baseline_artifacts": {
+    "weights_sha256": "f9b99f053b2d73fd75738ad0a125ca263a7dbbbb23a504728bcd4aae11a5a15c",
+    "manifest_sha256": "a6a0369ea6e6041d345e514ba72ba915658501094c5afa4e29ca1e2c1317a416"
+  },
+  "candidate_artifacts": {
+    "weights_sha256": "e3c30d06b3d2c11587c9d09446196e362a00ac923a6c2e398f0d95285bd2c9f9",
+    "manifest_sha256": "66fd3d549a900522488780284d736e6cdc910b7a19361cb2f415ac82e551628e"
+  },
+  "cohort_sha256": "f6af88a1e0addf994d505c0d029fd9a292f9747bb64d1dcf0977f3634377117f",
+  "data_audit": {
+    "counts": {
+      "train": [
+        115,
+        111
+      ],
+      "validation": [
+        25,
+        24
+      ],
+      "test": [
+        25,
+        23
+      ]
+    },
+    "known_image_group_leakage": false,
+    "patient_disjoint": null,
+    "provided_patient_ids_partition_disjoint": null,
+    "patient_id_coverage": 0.0
+  },
+  "minimum_reference_images_per_class": 20,
+  "duplicate_evaluation_images_removed": 0,
+  "baseline": {
+    "validation": {
+      "unit": "images",
+      "images": 49,
+      "labels": [
+        "benign_lesion",
+        "malignant_lesion"
+      ],
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [
+          21,
+          4
+        ],
+        [
+          2,
+          22
+        ]
+      ],
+      "per_class": {
+        "benign_lesion": {
+          "support_images": 25,
+          "recall": 0.84,
+          "specificity": 0.9166666666666666,
+          "recall_wilson_95": [
+            0.6534637839282114,
+            0.9359654854332355
+          ],
+          "specificity_wilson_95": [
+            0.741511978067893,
+            0.9768411847029567
+          ]
+        },
+        "malignant_lesion": {
+          "support_images": 24,
+          "recall": 0.9166666666666666,
+          "specificity": 0.84,
+          "recall_wilson_95": [
+            0.741511978067893,
+            0.9768411847029567
+          ],
+          "specificity_wilson_95": [
+            0.6534637839282114,
+            0.9359654854332355
+          ]
+        }
+      },
+      "accuracy": 0.8775510204081632,
+      "accuracy_wilson_95": [
+        0.7575560270624347,
+        0.9426517420975983
+      ],
+      "balanced_accuracy": 0.8783333333333333,
+      "negative_log_likelihood": 0.4061466735885779,
+      "brier_score": 0.2472543760487472,
+      "score_uncertainty": {
+        "mean_normalized_entropy": 0.6868306378136344,
+        "mean_top_two_margin": 0.5508976893446512,
+        "interpretation": "Descriptive model-score uncertainty; not calibrated personal cancer risk or evidence that an input is in distribution."
+      },
+      "clinical_validation": false,
+      "patient_disjoint": null
+    },
+    "test": {
+      "unit": "images",
+      "images": 48,
+      "labels": [
+        "benign_lesion",
+        "malignant_lesion"
+      ],
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [
+          21,
+          4
+        ],
+        [
+          3,
+          20
+        ]
+      ],
+      "per_class": {
+        "benign_lesion": {
+          "support_images": 25,
+          "recall": 0.84,
+          "specificity": 0.8695652173913043,
+          "recall_wilson_95": [
+            0.6534637839282114,
+            0.9359654854332355
+          ],
+          "specificity_wilson_95": [
+            0.6787251772990404,
+            0.9546234090636876
+          ]
+        },
+        "malignant_lesion": {
+          "support_images": 23,
+          "recall": 0.8695652173913043,
+          "specificity": 0.84,
+          "recall_wilson_95": [
+            0.6787251772990404,
+            0.9546234090636876
+          ],
+          "specificity_wilson_95": [
+            0.6534637839282114,
+            0.9359654854332355
+          ]
+        }
+      },
+      "accuracy": 0.8541666666666666,
+      "accuracy_wilson_95": [
+        0.7283282347525372,
+        0.9275175067339628
+      ],
+      "balanced_accuracy": 0.8547826086956521,
+      "negative_log_likelihood": 0.40678601002248266,
+      "brier_score": 0.25665582219492195,
+      "score_uncertainty": {
+        "mean_normalized_entropy": 0.6943807378417949,
+        "mean_top_two_margin": 0.5501658905666905,
+        "interpretation": "Descriptive model-score uncertainty; not calibrated personal cancer risk or evidence that an input is in distribution."
+      },
+      "clinical_validation": false,
+      "patient_disjoint": null
+    }
+  },
+  "candidate": {
+    "validation": {
+      "unit": "images",
+      "images": 49,
+      "labels": [
+        "benign_lesion",
+        "malignant_lesion"
+      ],
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [
+          22,
+          3
+        ],
+        [
+          2,
+          22
+        ]
+      ],
+      "per_class": {
+        "benign_lesion": {
+          "support_images": 25,
+          "recall": 0.88,
+          "specificity": 0.9166666666666666,
+          "recall_wilson_95": [
+            0.7004420607907267,
+            0.9583318284955964
+          ],
+          "specificity_wilson_95": [
+            0.741511978067893,
+            0.9768411847029567
+          ]
+        },
+        "malignant_lesion": {
+          "support_images": 24,
+          "recall": 0.9166666666666666,
+          "specificity": 0.88,
+          "recall_wilson_95": [
+            0.741511978067893,
+            0.9768411847029567
+          ],
+          "specificity_wilson_95": [
+            0.7004420607907267,
+            0.9583318284955964
+          ]
+        }
+      },
+      "accuracy": 0.8979591836734694,
+      "accuracy_wilson_95": [
+        0.7824363845080409,
+        0.9556204532552373
+      ],
+      "balanced_accuracy": 0.8983333333333333,
+      "negative_log_likelihood": 0.31766124325553047,
+      "brier_score": 0.19076063185900394,
+      "score_uncertainty": {
+        "mean_normalized_entropy": 0.5274014115023252,
+        "mean_top_two_margin": 0.7113169688655405,
+        "interpretation": "Descriptive model-score uncertainty; not calibrated personal cancer risk or evidence that an input is in distribution."
+      },
+      "clinical_validation": false,
+      "patient_disjoint": null
+    },
+    "test": {
+      "unit": "images",
+      "images": 48,
+      "labels": [
+        "benign_lesion",
+        "malignant_lesion"
+      ],
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [
+          23,
+          2
+        ],
+        [
+          5,
+          18
+        ]
+      ],
+      "per_class": {
+        "benign_lesion": {
+          "support_images": 25,
+          "recall": 0.92,
+          "specificity": 0.782608695652174,
+          "recall_wilson_95": [
+            0.7503389104960468,
+            0.9777795987151524
+          ],
+          "specificity_wilson_95": [
+            0.5809651698373599,
+            0.9033602197341379
+          ]
+        },
+        "malignant_lesion": {
+          "support_images": 23,
+          "recall": 0.782608695652174,
+          "specificity": 0.92,
+          "recall_wilson_95": [
+            0.5809651698373599,
+            0.9033602197341379
+          ],
+          "specificity_wilson_95": [
+            0.7503389104960468,
+            0.9777795987151524
+          ]
+        }
+      },
+      "accuracy": 0.8541666666666666,
+      "accuracy_wilson_95": [
+        0.7283282347525372,
+        0.9275175067339628
+      ],
+      "balanced_accuracy": 0.851304347826087,
+      "negative_log_likelihood": 0.3620044996199267,
+      "brier_score": 0.22722626842546725,
+      "score_uncertainty": {
+        "mean_normalized_entropy": 0.5381443361829622,
+        "mean_top_two_margin": 0.6961518590105698,
+        "interpretation": "Descriptive model-score uncertainty; not calibrated personal cancer risk or evidence that an input is in distribution."
+      },
+      "clinical_validation": false,
+      "patient_disjoint": null
+    }
+  },
+  "eligible": false,
+  "reasons": [
+    "Patient identifiers are incomplete; separation cannot be checked for every record.",
+    "test: balanced accuracy regressed",
+    "test: benign_lesion specificity regressed",
+    "test: malignant_lesion recall regressed"
+  ],
+  "activation_requested": true,
+  "activated": false,
+  "clinical_validation": false,
+  "independent_patient_validation_established": false,
+  "limitations": [
+    "Release thresholds are development policy, not validated medical cutoffs.",
+    "Supplied patient codes and duplicate groups cannot establish true identities or discover every near-duplicate.",
+    "Reference labels and provenance still need independent expert review.",
+    "The audit split participates in activation decisions and is therefore development evidence.",
+    "Wilson intervals treat images as independent and do not adjust for correlated visits or multiple images of one patient.",
+    "Score uncertainty and cohort statistics do not establish individual cancer risk or exclude out-of-distribution inputs."
+  ]
+}

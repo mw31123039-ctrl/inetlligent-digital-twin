@@ -18,6 +18,8 @@ from .dental_public import public_status, detect_public_crowns
 from .dental_learning import LearningConflict, LocalDentalLearning, TrainRequest
 from .dental_screening import ScreeningRecord
 from .dental_screening_store import list_screening_cases, save_screening_case, read_screening_case, remove_screening_case
+from .cancer import CancerRequest, CancerResult, cancer_status, infer_cancer
+from .cancer_knowledge import KnowledgeQuestion, KnowledgeAnswer, knowledge_status, retrieve_knowledge
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file='.env', extra='ignore')
@@ -31,6 +33,8 @@ class Settings(BaseSettings):
     dental_local_model_dir: str = 'models/dental-local'
     dental_public_model_dir: str = 'models/dental-public'
     dental_learning_dir: str = 'training-data/app'
+    cancer_model_dir: str = 'models/cancer'
+    cancer_knowledge_model_dir: str = 'models/cancer-knowledge'
 
 settings = Settings()
 configured = settings.ai_provider == 'openai' and bool(settings.openai_api_key and settings.openai_model and settings.allow_external_ai)
@@ -77,6 +81,32 @@ def health():
 @app.post('/v1/assess', response_model=Assessment, dependencies=[Depends(authorize)])
 async def assess(request: AssessRequest):
     return await engine.assess(request)
+
+
+@app.get('/v1/cancer/status', dependencies=[Depends(authorize)])
+def cancer_model_status():
+    return cancer_status(Path(Settings().cancer_model_dir))
+
+
+@app.post('/v1/cancer/analyze', response_model=CancerResult, dependencies=[Depends(authorize)])
+def cancer_analyze(request: CancerRequest):
+    try:
+        return infer_cancer(Path(Settings().cancer_model_dir), request)
+    except Exception:
+        return JSONResponse(status_code=503, content={'detail': 'No research result was generated. Check the model installation and the supported JPEG input.'})
+
+
+@app.get('/v1/cancer/knowledge-status', dependencies=[Depends(authorize)])
+def cancer_knowledge_status():
+    return knowledge_status(Path(Settings().cancer_knowledge_model_dir))
+
+
+@app.post('/v1/cancer/knowledge', response_model=KnowledgeAnswer, dependencies=[Depends(authorize)])
+def cancer_knowledge(request: KnowledgeQuestion):
+    try:
+        return retrieve_knowledge(Path(Settings().cancer_knowledge_model_dir), request)
+    except Exception:
+        return JSONResponse(status_code=503, content={'detail': 'The local evidence search is unavailable. You can still browse the source-linked knowledge library.'})
 
 @app.post('/v1/dental/review', dependencies=[Depends(authorize)])
 async def dental_review():

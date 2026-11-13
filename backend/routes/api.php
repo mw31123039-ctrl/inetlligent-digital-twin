@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CancerResearchController;
 use App\Http\Controllers\ConversationController;
 use App\Http\Controllers\DentalCoachController;
 use App\Http\Controllers\DentalLearningController;
@@ -14,9 +15,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/status', fn (AiService $ai) => $ai->status())->middleware('throttle:service-status');
 Route::get('/eye/status', [EyeAssessmentController::class, 'status'])->middleware('throttle:service-status');
 Route::get('/dental/detector-status', [DentalPhotoController::class, 'status'])->middleware('throttle:service-status');
+Route::get('/cancer/status', [CancerResearchController::class, 'status'])->middleware('throttle:service-status');
+Route::get('/cancer/knowledge-status', [CancerResearchController::class, 'knowledgeStatus'])->middleware('throttle:service-status');
 Route::post('/register', [SessionController::class, 'register'])->middleware('throttle:auth-register');
 Route::post('/login', [SessionController::class, 'login'])->middleware('throttle:auth-login');
 Route::middleware(['auth:sanctum', 'throttle:private-api'])->group(function () {
+    Route::post('/cancer/analyze', [CancerResearchController::class, 'analyze'])->middleware('throttle:ai-turns');
+    Route::post('/cancer/knowledge', [CancerResearchController::class, 'knowledge'])->middleware('throttle:ai-turns');
     Route::get('/dental/screening/cases', [DentalScreeningController::class, 'index']);
     Route::post('/dental/screening/cases', [DentalScreeningController::class, 'store'])->middleware('throttle:ai-turns');
     Route::get('/dental/screening/cases/{caseId}', [DentalScreeningController::class, 'show'])->where('caseId', '[a-f0-9]{64}');

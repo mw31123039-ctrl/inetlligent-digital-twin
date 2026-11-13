@@ -1,0 +1,1476 @@
+{
+  "schema_version": "humantwin-cancer-improvement-review-v1",
+  "clinical_validation": false,
+  "image_training_experiment": {
+    "run_id": "20261113T195434Z",
+    "created_at": "2026-11-13T19:54:34.608021+00:00",
+    "clinical_validation": false,
+    "split_manifest_sha256": "b07f3e74fcb91a97291bf20ed0c2c7831dcdb7a762d08ff338ea132e40a04a51",
+    "source_archive_sha256": "23fdb08ae926782a9abd579b7f0e0123b90a3d8b284e043c31a7748f0268b70f",
+    "baseline_weights_sha256": "f9b99f053b2d73fd75738ad0a125ca263a7dbbbb23a504728bcd4aae11a5a15c",
+    "seed": 20261113,
+    "maximum_epochs": 24,
+    "patience": 7,
+    "candidates": [
+      "efficientnet-b0-finetuned",
+      "equal-probability-ensemble"
+    ],
+    "selection": "Validation only: strictly higher balanced accuracy and no lower sensitivity or specificity than baseline. NLL breaks ties.",
+    "activation_veto": "The one validation-selected candidate must not regress on the reused 48-image historical audit. This makes that split development evidence, not a new blind test.",
+    "new_independent_test_available": false,
+    "patient_disjoint": null,
+    "training_sources": "Pinned CC-BY-4.0 original public photographs only; no account or uploaded images.",
+    "architecture_reference": "https://docs.pytorch.org/vision/0.22/models/generated/torchvision.models.efficientnet_b0.html",
+    "augmentation": [
+      "horizontal flip",
+      "rotation +-10 degrees",
+      "brightness/contrast/saturation jitter +-0.1"
+    ],
+    "preprocessing": "RGB -> PIL bilinear stretch224 -> ImageNet mean/std. Training and inference deliberately share the same full-image resize; no central lesion crop.",
+    "training_performed": true,
+    "epochs_completed": 22,
+    "baseline_validation": {
+      "unit": "images",
+      "images": 49,
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [
+          21,
+          4
+        ],
+        [
+          2,
+          22
+        ]
+      ],
+      "accuracy": 0.8775510204081632,
+      "balanced_accuracy": 0.8783333333333333,
+      "malignant_image_sensitivity": 0.9166666666666666,
+      "benign_image_specificity": 0.84,
+      "roc_auc": 0.905,
+      "negative_log_likelihood": 0.4061467033359041,
+      "brier_score": 0.12362719936824866,
+      "wilson_95_intervals": {
+        "accuracy": [
+          0.7575560270624347,
+          0.9426517420975983
+        ],
+        "malignant_image_sensitivity": [
+          0.741511978067893,
+          0.9768411847029567
+        ],
+        "benign_image_specificity": [
+          0.6534637839282114,
+          0.9359654854332355
+        ]
+      },
+      "patient_disjoint": null,
+      "clinical_validation": false
+    },
+    "initial_weights": {
+      "url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+      "sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934"
+    },
+    "training_device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "selected_kind": "equal-probability-ensemble",
+    "selected_epoch": 15,
+    "activation_requested": true,
+    "activated": false,
+    "independent_patient_validation_available": false,
+    "selected_validation": {
+      "unit": "images",
+      "images": 49,
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [
+          22,
+          3
+        ],
+        [
+          2,
+          22
+        ]
+      ],
+      "accuracy": 0.8979591836734694,
+      "balanced_accuracy": 0.8983333333333333,
+      "malignant_image_sensitivity": 0.9166666666666666,
+      "benign_image_specificity": 0.88,
+      "roc_auc": 0.9416666666666667,
+      "negative_log_likelihood": 0.31756818548349713,
+      "brier_score": 0.09535779927363078,
+      "wilson_95_intervals": {
+        "accuracy": [
+          0.7824363845080409,
+          0.9556204532552373
+        ],
+        "malignant_image_sensitivity": [
+          0.741511978067893,
+          0.9768411847029567
+        ],
+        "benign_image_specificity": [
+          0.7004420607907267,
+          0.9583318284955964
+        ]
+      },
+      "patient_disjoint": null,
+      "clinical_validation": false
+    },
+    "baseline_historical_audit": {
+      "unit": "images",
+      "images": 48,
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [
+          21,
+          4
+        ],
+        [
+          3,
+          20
+        ]
+      ],
+      "accuracy": 0.8541666666666666,
+      "balanced_accuracy": 0.8547826086956521,
+      "malignant_image_sensitivity": 0.8695652173913043,
+      "benign_image_specificity": 0.84,
+      "roc_auc": 0.9008695652173913,
+      "negative_log_likelihood": 0.40678602083775733,
+      "brier_score": 0.1283279157279522,
+      "wilson_95_intervals": {
+        "accuracy": [
+          0.7283282347525372,
+          0.9275175067339628
+        ],
+        "malignant_image_sensitivity": [
+          0.6787251772990404,
+          0.9546234090636876
+        ],
+        "benign_image_specificity": [
+          0.6534637839282114,
+          0.9359654854332355
+        ]
+      },
+      "patient_disjoint": null,
+      "clinical_validation": false
+    },
+    "selected_historical_audit": {
+      "unit": "images",
+      "images": 48,
+      "confusion_matrix_rows_actual_columns_predicted": [
+        [
+          23,
+          2
+        ],
+        [
+          5,
+          18
+        ]
+      ],
+      "accuracy": 0.8541666666666666,
+      "balanced_accuracy": 0.851304347826087,
+      "malignant_image_sensitivity": 0.782608695652174,
+      "benign_image_specificity": 0.92,
+      "roc_auc": 0.9182608695652174,
+      "negative_log_likelihood": 0.3620323934214828,
+      "brier_score": 0.11364185106215378,
+      "wilson_95_intervals": {
+        "accuracy": [
+          0.7283282347525372,
+          0.9275175067339628
+        ],
+        "malignant_image_sensitivity": [
+          0.5809651698373599,
+          0.9033602197341379
+        ],
+        "benign_image_specificity": [
+          0.7503389104960468,
+          0.9777795987151524
+        ]
+      },
+      "patient_disjoint": null,
+      "clinical_validation": false
+    },
+    "activation_rejection": [
+      "historical-audit: balanced_accuracy regressed",
+      "historical-audit: malignant_image_sensitivity regressed"
+    ],
+    "onnx_export": {
+      "weights_sha256": "e3c30d06b3d2c11587c9d09446196e362a00ac923a6c2e398f0d95285bd2c9f9",
+      "validation_images_checked": 49,
+      "maximum_absolute_probability_difference": 0.0000015795230865478516,
+      "dynamic_batch_verified": true
+    },
+    "elapsed_seconds": 95.03
+  },
+  "source_retrieval_before": {
+    "schema_version": "humantwin-cancer-retrieval-evaluation-v1",
+    "created_at": "2026-11-13T19:57:02.037254+00:00",
+    "cases_sha256": "5fc80d6b2ec4130c1afb90e0f058c44a43ed5605618319ce681769059bdb9937",
+    "model_version": "minilm-l6-q8-751bff37",
+    "weights_sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1",
+    "corpus_version": "oncology-reference-2026-11-13",
+    "clinical_validation": false,
+    "interpretation": "Synthetic source-navigation development checks. These rates are not cancer-detection accuracy, clinical answer correctness or patient validation.",
+    "aggregates": {
+      "development": {
+        "cases": 24,
+        "source_queries": 20,
+        "top_one_source_accuracy": 0.95,
+        "top_three_source_recall": 1,
+        "mean_reciprocal_rank": 0.975,
+        "irrelevant_queries": 4,
+        "off_topic_abstention_rate": 1
+      }
+    },
+    "results": [
+      {
+        "case_id": "skin-dev",
+        "split": "development",
+        "accepted_records": [
+          "skin"
+        ],
+        "retrieved_records": [
+          "skin",
+          "oral",
+          "colorectal"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 612.97
+      },
+      {
+        "case_id": "oral-dev",
+        "split": "development",
+        "accepted_records": [
+          "oral"
+        ],
+        "retrieved_records": [
+          "oral",
+          "urgent-concerns"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.3
+      },
+      {
+        "case_id": "lung-dev",
+        "split": "development",
+        "accepted_records": [
+          "lung"
+        ],
+        "retrieved_records": [
+          "lung",
+          "brain",
+          "choose-treatment"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.27
+      },
+      {
+        "case_id": "breast-dev",
+        "split": "development",
+        "accepted_records": [
+          "breast"
+        ],
+        "retrieved_records": [
+          "breast",
+          "thyroid",
+          "oral"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.84
+      },
+      {
+        "case_id": "colorectal-dev",
+        "split": "development",
+        "accepted_records": [
+          "colorectal"
+        ],
+        "retrieved_records": [
+          "colorectal",
+          "ovarian",
+          "liver"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.15
+      },
+      {
+        "case_id": "prostate-dev",
+        "split": "development",
+        "accepted_records": [
+          "prostate"
+        ],
+        "retrieved_records": [
+          "prostate",
+          "liver",
+          "understand-scores"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.98
+      },
+      {
+        "case_id": "cervical-dev",
+        "split": "development",
+        "accepted_records": [
+          "cervical"
+        ],
+        "retrieved_records": [
+          "cervical",
+          "ovarian",
+          "oral"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.14
+      },
+      {
+        "case_id": "ovarian-dev",
+        "split": "development",
+        "accepted_records": [
+          "ovarian"
+        ],
+        "retrieved_records": [
+          "ovarian",
+          "colorectal",
+          "choose-treatment"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.13
+      },
+      {
+        "case_id": "pancreatic-dev",
+        "split": "development",
+        "accepted_records": [
+          "pancreatic"
+        ],
+        "retrieved_records": [
+          "pancreatic",
+          "colorectal",
+          "liver"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.85
+      },
+      {
+        "case_id": "liver-dev",
+        "split": "development",
+        "accepted_records": [
+          "liver"
+        ],
+        "retrieved_records": [
+          "liver",
+          "colorectal",
+          "ovarian"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.68
+      },
+      {
+        "case_id": "kidney-dev",
+        "split": "development",
+        "accepted_records": [
+          "kidney"
+        ],
+        "retrieved_records": [
+          "kidney",
+          "liver",
+          "prostate"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.59
+      },
+      {
+        "case_id": "brain-dev",
+        "split": "development",
+        "accepted_records": [
+          "brain"
+        ],
+        "retrieved_records": [
+          "brain",
+          "choose-treatment",
+          "skin"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.15
+      },
+      {
+        "case_id": "bladder-dev",
+        "split": "development",
+        "accepted_records": [
+          "bladder"
+        ],
+        "retrieved_records": [
+          "colorectal",
+          "bladder",
+          "prostate"
+        ],
+        "top_one": false,
+        "top_three": true,
+        "reciprocal_rank": 0.5,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.07
+      },
+      {
+        "case_id": "thyroid-dev",
+        "split": "development",
+        "accepted_records": [
+          "thyroid"
+        ],
+        "retrieved_records": [
+          "thyroid",
+          "kidney",
+          "breast"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.87
+      },
+      {
+        "case_id": "leukemia-dev",
+        "split": "development",
+        "accepted_records": [
+          "leukemia"
+        ],
+        "retrieved_records": [
+          "leukemia",
+          "ovarian",
+          "choose-treatment"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.18
+      },
+      {
+        "case_id": "lymphoma-dev",
+        "split": "development",
+        "accepted_records": [
+          "lymphoma"
+        ],
+        "retrieved_records": [
+          "lymphoma",
+          "thyroid",
+          "ovarian"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.32
+      },
+      {
+        "case_id": "upload-dev",
+        "split": "development",
+        "accepted_records": [
+          "upload-image"
+        ],
+        "retrieved_records": [
+          "upload-image"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.18
+      },
+      {
+        "case_id": "scores-dev",
+        "split": "development",
+        "accepted_records": [
+          "understand-scores"
+        ],
+        "retrieved_records": [
+          "understand-scores",
+          "liver",
+          "prostate"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.85
+      },
+      {
+        "case_id": "treatment-dev",
+        "split": "development",
+        "accepted_records": [
+          "choose-treatment"
+        ],
+        "retrieved_records": [
+          "choose-treatment",
+          "urgent-concerns",
+          "liver"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.91
+      },
+      {
+        "case_id": "urgent-dev",
+        "split": "development",
+        "accepted_records": [
+          "urgent-concerns"
+        ],
+        "retrieved_records": [
+          "urgent-concerns",
+          "understand-scores",
+          "kidney"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.17
+      },
+      {
+        "case_id": "irrelevant-dev-1",
+        "split": "development",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.96
+      },
+      {
+        "case_id": "irrelevant-dev-2",
+        "split": "development",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.92
+      },
+      {
+        "case_id": "irrelevant-dev-3",
+        "split": "development",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.96
+      },
+      {
+        "case_id": "irrelevant-dev-4",
+        "split": "development",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.17
+      }
+    ]
+  },
+  "source_retrieval_after": {
+    "schema_version": "humantwin-cancer-retrieval-evaluation-v1",
+    "created_at": "2026-11-13T19:58:46.415035+00:00",
+    "cases_sha256": "5fc80d6b2ec4130c1afb90e0f058c44a43ed5605618319ce681769059bdb9937",
+    "model_version": "minilm-l6-q8-751bff37",
+    "weights_sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1",
+    "corpus_version": "oncology-reference-2026-11-13",
+    "retrieval_revision": "semantic-v2-explicit-topic-reranking",
+    "retrieval_code_sha256": "c0f314e868c6484edd701e50580a45389583ec051e95ccafaf27a0e0bfa3f3fd",
+    "clinical_validation": false,
+    "interpretation": "Synthetic source-navigation development checks. These rates are not cancer-detection accuracy, clinical answer correctness or patient validation.",
+    "aggregates": {
+      "development": {
+        "cases": 24,
+        "source_queries": 20,
+        "top_one_source_accuracy": 1,
+        "top_three_source_recall": 1,
+        "mean_reciprocal_rank": 1,
+        "irrelevant_queries": 4,
+        "off_topic_abstention_rate": 1
+      },
+      "holdout": {
+        "cases": 24,
+        "source_queries": 20,
+        "top_one_source_accuracy": 1,
+        "top_three_source_recall": 1,
+        "mean_reciprocal_rank": 1,
+        "irrelevant_queries": 4,
+        "off_topic_abstention_rate": 1
+      }
+    },
+    "results": [
+      {
+        "case_id": "skin-dev",
+        "split": "development",
+        "accepted_records": [
+          "skin"
+        ],
+        "retrieved_records": [
+          "skin",
+          "oral",
+          "colorectal"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 566.77
+      },
+      {
+        "case_id": "skin-check",
+        "split": "holdout",
+        "accepted_records": [
+          "skin"
+        ],
+        "retrieved_records": [
+          "skin",
+          "leukemia",
+          "oral"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.77
+      },
+      {
+        "case_id": "oral-dev",
+        "split": "development",
+        "accepted_records": [
+          "oral"
+        ],
+        "retrieved_records": [
+          "oral",
+          "urgent-concerns"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.23
+      },
+      {
+        "case_id": "oral-check",
+        "split": "holdout",
+        "accepted_records": [
+          "oral"
+        ],
+        "retrieved_records": [
+          "oral",
+          "choose-treatment",
+          "leukemia"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.66
+      },
+      {
+        "case_id": "lung-dev",
+        "split": "development",
+        "accepted_records": [
+          "lung"
+        ],
+        "retrieved_records": [
+          "lung",
+          "brain",
+          "choose-treatment"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.47
+      },
+      {
+        "case_id": "lung-check",
+        "split": "holdout",
+        "accepted_records": [
+          "lung"
+        ],
+        "retrieved_records": [
+          "lung",
+          "colorectal",
+          "urgent-concerns"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.98
+      },
+      {
+        "case_id": "breast-dev",
+        "split": "development",
+        "accepted_records": [
+          "breast"
+        ],
+        "retrieved_records": [
+          "breast",
+          "thyroid",
+          "oral"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.49
+      },
+      {
+        "case_id": "breast-check",
+        "split": "holdout",
+        "accepted_records": [
+          "breast"
+        ],
+        "retrieved_records": [
+          "breast",
+          "upload-image",
+          "understand-scores"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.26
+      },
+      {
+        "case_id": "colorectal-dev",
+        "split": "development",
+        "accepted_records": [
+          "colorectal"
+        ],
+        "retrieved_records": [
+          "colorectal",
+          "ovarian",
+          "liver"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.53
+      },
+      {
+        "case_id": "colorectal-check",
+        "split": "holdout",
+        "accepted_records": [
+          "colorectal"
+        ],
+        "retrieved_records": [
+          "colorectal",
+          "ovarian",
+          "pancreatic"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.67
+      },
+      {
+        "case_id": "prostate-dev",
+        "split": "development",
+        "accepted_records": [
+          "prostate"
+        ],
+        "retrieved_records": [
+          "prostate",
+          "liver",
+          "understand-scores"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.22
+      },
+      {
+        "case_id": "prostate-check",
+        "split": "holdout",
+        "accepted_records": [
+          "prostate"
+        ],
+        "retrieved_records": [
+          "prostate",
+          "kidney",
+          "breast"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.18
+      },
+      {
+        "case_id": "cervical-dev",
+        "split": "development",
+        "accepted_records": [
+          "cervical"
+        ],
+        "retrieved_records": [
+          "cervical",
+          "ovarian",
+          "oral"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.75
+      },
+      {
+        "case_id": "cervical-check",
+        "split": "holdout",
+        "accepted_records": [
+          "cervical"
+        ],
+        "retrieved_records": [
+          "cervical",
+          "ovarian",
+          "oral"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.54
+      },
+      {
+        "case_id": "ovarian-dev",
+        "split": "development",
+        "accepted_records": [
+          "ovarian"
+        ],
+        "retrieved_records": [
+          "ovarian",
+          "colorectal",
+          "choose-treatment"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 3.08
+      },
+      {
+        "case_id": "ovarian-check",
+        "split": "holdout",
+        "accepted_records": [
+          "ovarian"
+        ],
+        "retrieved_records": [
+          "ovarian",
+          "kidney",
+          "cervical"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 14.27
+      },
+      {
+        "case_id": "pancreatic-dev",
+        "split": "development",
+        "accepted_records": [
+          "pancreatic"
+        ],
+        "retrieved_records": [
+          "pancreatic",
+          "colorectal",
+          "liver"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 16.68
+      },
+      {
+        "case_id": "pancreatic-check",
+        "split": "holdout",
+        "accepted_records": [
+          "pancreatic"
+        ],
+        "retrieved_records": [
+          "pancreatic",
+          "liver",
+          "leukemia"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 9.26
+      },
+      {
+        "case_id": "liver-dev",
+        "split": "development",
+        "accepted_records": [
+          "liver"
+        ],
+        "retrieved_records": [
+          "liver",
+          "colorectal",
+          "ovarian"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 10.65
+      },
+      {
+        "case_id": "liver-check",
+        "split": "holdout",
+        "accepted_records": [
+          "liver"
+        ],
+        "retrieved_records": [
+          "liver",
+          "choose-treatment",
+          "ovarian"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 6.45
+      },
+      {
+        "case_id": "kidney-dev",
+        "split": "development",
+        "accepted_records": [
+          "kidney"
+        ],
+        "retrieved_records": [
+          "kidney",
+          "liver",
+          "prostate"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 4.93
+      },
+      {
+        "case_id": "kidney-check",
+        "split": "holdout",
+        "accepted_records": [
+          "kidney"
+        ],
+        "retrieved_records": [
+          "kidney",
+          "liver",
+          "prostate"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 4.75
+      },
+      {
+        "case_id": "brain-dev",
+        "split": "development",
+        "accepted_records": [
+          "brain"
+        ],
+        "retrieved_records": [
+          "brain",
+          "choose-treatment",
+          "skin"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 20.84
+      },
+      {
+        "case_id": "brain-check",
+        "split": "holdout",
+        "accepted_records": [
+          "brain"
+        ],
+        "retrieved_records": [
+          "brain",
+          "choose-treatment",
+          "lymphoma"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 3.86
+      },
+      {
+        "case_id": "bladder-dev",
+        "split": "development",
+        "accepted_records": [
+          "bladder"
+        ],
+        "retrieved_records": [
+          "bladder",
+          "colorectal",
+          "prostate"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 4.9
+      },
+      {
+        "case_id": "bladder-check",
+        "split": "holdout",
+        "accepted_records": [
+          "bladder"
+        ],
+        "retrieved_records": [
+          "bladder",
+          "kidney",
+          "prostate"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 4.33
+      },
+      {
+        "case_id": "thyroid-dev",
+        "split": "development",
+        "accepted_records": [
+          "thyroid"
+        ],
+        "retrieved_records": [
+          "thyroid",
+          "kidney",
+          "breast"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 5.46
+      },
+      {
+        "case_id": "thyroid-check",
+        "split": "holdout",
+        "accepted_records": [
+          "thyroid"
+        ],
+        "retrieved_records": [
+          "thyroid",
+          "breast",
+          "liver"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 9.3
+      },
+      {
+        "case_id": "leukemia-dev",
+        "split": "development",
+        "accepted_records": [
+          "leukemia"
+        ],
+        "retrieved_records": [
+          "leukemia",
+          "ovarian",
+          "choose-treatment"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 3.01
+      },
+      {
+        "case_id": "leukemia-check",
+        "split": "holdout",
+        "accepted_records": [
+          "leukemia"
+        ],
+        "retrieved_records": [
+          "leukemia",
+          "ovarian",
+          "choose-treatment"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.55
+      },
+      {
+        "case_id": "lymphoma-dev",
+        "split": "development",
+        "accepted_records": [
+          "lymphoma"
+        ],
+        "retrieved_records": [
+          "lymphoma",
+          "thyroid",
+          "ovarian"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 5.02
+      },
+      {
+        "case_id": "lymphoma-check",
+        "split": "holdout",
+        "accepted_records": [
+          "lymphoma"
+        ],
+        "retrieved_records": [
+          "lymphoma",
+          "leukemia",
+          "skin"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 8.32
+      },
+      {
+        "case_id": "upload-dev",
+        "split": "development",
+        "accepted_records": [
+          "upload-image"
+        ],
+        "retrieved_records": [
+          "upload-image"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.66
+      },
+      {
+        "case_id": "upload-check",
+        "split": "holdout",
+        "accepted_records": [
+          "upload-image"
+        ],
+        "retrieved_records": [
+          "upload-image"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.22
+      },
+      {
+        "case_id": "scores-dev",
+        "split": "development",
+        "accepted_records": [
+          "understand-scores"
+        ],
+        "retrieved_records": [
+          "understand-scores",
+          "liver",
+          "prostate"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.13
+      },
+      {
+        "case_id": "scores-check",
+        "split": "holdout",
+        "accepted_records": [
+          "understand-scores"
+        ],
+        "retrieved_records": [
+          "understand-scores",
+          "breast",
+          "lung"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.18
+      },
+      {
+        "case_id": "treatment-dev",
+        "split": "development",
+        "accepted_records": [
+          "choose-treatment"
+        ],
+        "retrieved_records": [
+          "choose-treatment",
+          "urgent-concerns",
+          "liver"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.04
+      },
+      {
+        "case_id": "treatment-check",
+        "split": "holdout",
+        "accepted_records": [
+          "choose-treatment"
+        ],
+        "retrieved_records": [
+          "choose-treatment",
+          "liver",
+          "brain"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 2.1
+      },
+      {
+        "case_id": "urgent-dev",
+        "split": "development",
+        "accepted_records": [
+          "urgent-concerns"
+        ],
+        "retrieved_records": [
+          "urgent-concerns",
+          "understand-scores",
+          "kidney"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.96
+      },
+      {
+        "case_id": "urgent-check",
+        "split": "holdout",
+        "accepted_records": [
+          "urgent-concerns"
+        ],
+        "retrieved_records": [
+          "urgent-concerns",
+          "oral",
+          "lung"
+        ],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 1,
+        "off_topic_abstained": null,
+        "safety_notice_correct": true,
+        "retrieval_ms": 2
+      },
+      {
+        "case_id": "irrelevant-dev-1",
+        "split": "development",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.74
+      },
+      {
+        "case_id": "irrelevant-dev-2",
+        "split": "development",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.56
+      },
+      {
+        "case_id": "irrelevant-dev-3",
+        "split": "development",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.48
+      },
+      {
+        "case_id": "irrelevant-dev-4",
+        "split": "development",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.52
+      },
+      {
+        "case_id": "irrelevant-check-1",
+        "split": "holdout",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.63
+      },
+      {
+        "case_id": "irrelevant-check-2",
+        "split": "holdout",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 1.66
+      },
+      {
+        "case_id": "irrelevant-check-3",
+        "split": "holdout",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 3.17
+      },
+      {
+        "case_id": "irrelevant-check-4",
+        "split": "holdout",
+        "accepted_records": [],
+        "retrieved_records": [],
+        "top_one": true,
+        "top_three": true,
+        "reciprocal_rank": 0,
+        "off_topic_abstained": true,
+        "safety_notice_correct": null,
+        "retrieval_ms": 8.64
+      }
+    ]
+  }
+}

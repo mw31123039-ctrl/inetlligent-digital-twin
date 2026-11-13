@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
@@ -14,10 +16,13 @@ class PrivateApi
     public function handle(Request $request, Closure $next): Response
     {
         $maxBytes = $request->isMethod('POST') && $request->path() === 'api/dental/screening/cases' ? 2300000 : 500000;
+        if ($request->isMethod('POST') && $request->path() === 'api/cancer/analyze') {
+            $maxBytes = 1600000;
+        }
         abort_if((int) $request->header('Content-Length', 0) > $maxBytes, 413, 'Request too large.');
         try {
             $response = $next($request);
-        } catch (ValidationException|\Illuminate\Auth\AuthenticationException|\Illuminate\Database\Eloquent\ModelNotFoundException|HttpExceptionInterface $exception) {
+        } catch (ValidationException|AuthenticationException|ModelNotFoundException|HttpExceptionInterface $exception) {
             throw $exception;
         } catch (\Throwable $exception) {
             // Operational visibility without message, stack arguments, request body or SQL.

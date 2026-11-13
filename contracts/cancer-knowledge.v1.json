@@ -1,0 +1,505 @@
+{
+  "schema_version": "humantwin-cancer-knowledge-v1",
+  "version": "oncology-reference-2026-11-13",
+  "source_consulted_on": "2026-11-13",
+  "use": "educational-source-retrieval",
+  "clinical_validation": false,
+  "topics": [
+    {
+      "id": "skin",
+      "name": "Skin & melanoma",
+      "region": "skin",
+      "modelTrack": "skin",
+      "overview": "Skin cancers include several different diseases. Examination and, when indicated, tissue sampling distinguish them from non-cancerous changes.",
+      "symptoms": [
+        "A new or changing skin lesion",
+        "A sore or changing area that does not heal"
+      ],
+      "investigations": [
+        "Skin examination and dermoscopy",
+        "Biopsy with pathology when indicated"
+      ],
+      "treatment": [
+        "Local removal is used for many skin cancers",
+        "Further treatment depends on the confirmed type and extent"
+      ],
+      "specialist": "Dermatology",
+      "source": "https://www.cancer.gov/types/skin/patient/skin-treatment-pdq",
+      "symptomSource": "https://www.nhs.uk/conditions/melanoma-skin-cancer/symptoms/",
+      "keywords": [
+        "mole",
+        "melanoma",
+        "nevus",
+        "lesion",
+        "basal",
+        "squamous",
+        "dermoscopy"
+      ]
+    },
+    {
+      "id": "oral",
+      "name": "Mouth & oral cavity",
+      "region": "head",
+      "modelTrack": "oral",
+      "overview": "An oral photograph shows visible tissue. A dentist or doctor also examines and feels the mouth and neck; suspicious tissue may need biopsy.",
+      "symptoms": [
+        "A mouth ulcer lasting longer than three weeks",
+        "A persistent lump, red or white patch, or swallowing difficulty"
+      ],
+      "investigations": [
+        "Dental or medical mouth and neck examination",
+        "Biopsy and, when needed, imaging for extent"
+      ],
+      "treatment": [
+        "Surgery or radiotherapy may be considered",
+        "Systemic treatment is used in selected circumstances"
+      ],
+      "specialist": "Dentistry / head and neck team",
+      "source": "https://www.cancer.gov/types/head-and-neck/patient/adult/lip-mouth-treatment-pdq",
+      "symptomSource": "https://www.nhs.uk/conditions/mouth-cancer/symptoms/",
+      "keywords": [
+        "mouth",
+        "tongue",
+        "gum",
+        "ulcer",
+        "lip",
+        "oral",
+        "throat",
+        "swallow"
+      ]
+    },
+    {
+      "id": "lung",
+      "name": "Lung",
+      "region": "chest",
+      "modelTrack": "lung",
+      "overview": "A CT slice is only part of a lung investigation. Full imaging, clinical history and usually tissue sampling establish the diagnosis and its type.",
+      "symptoms": [
+        "A persistent or changing cough",
+        "Breathlessness or coughing up blood"
+      ],
+      "investigations": [
+        "Clinical assessment and chest imaging",
+        "Biopsy and pathology; staging and biomarkers when indicated"
+      ],
+      "treatment": [
+        "Surgery or radiotherapy in appropriate cases",
+        "Systemic treatment selected for the confirmed cancer and biomarkers"
+      ],
+      "specialist": "Respiratory medicine / thoracic oncology",
+      "source": "https://www.cancer.gov/types/lung/patient/non-small-cell-lung-treatment-pdq",
+      "symptomSource": "https://www.nhs.uk/conditions/lung-cancer/symptoms/",
+      "keywords": [
+        "lung",
+        "cough",
+        "chest",
+        "breath",
+        "smoking",
+        "ct",
+        "adenocarcinoma"
+      ]
+    },
+    {
+      "id": "breast",
+      "name": "Breast",
+      "region": "chest",
+      "modelTrack": "breast",
+      "overview": "Breast findings are assessed with examination, suitable imaging and tissue sampling when needed. An ultrasound classifier does not interpret mammography or MRI.",
+      "symptoms": [
+        "A new breast or armpit lump",
+        "Changes in breast skin, shape or nipple"
+      ],
+      "investigations": [
+        "Breast examination and appropriate imaging",
+        "Needle biopsy and pathology when indicated"
+      ],
+      "treatment": [
+        "Local treatment can include surgery and radiotherapy",
+        "Systemic options depend on subtype, stage and other findings"
+      ],
+      "specialist": "Breast clinic",
+      "source": "https://www.cancer.gov/types/breast/treatment",
+      "symptomSource": "https://www.nhs.uk/conditions/breast-cancer-in-women/symptoms-of-breast-cancer-in-women/",
+      "keywords": [
+        "breast",
+        "nipple",
+        "armpit",
+        "mammogram",
+        "ultrasound",
+        "lump"
+      ]
+    },
+    {
+      "id": "colorectal",
+      "name": "Colon & rectum",
+      "region": "abdomen",
+      "overview": "Bowel changes have many causes. Colorectal assessment can involve examination of the bowel and tissue sampling; a body photograph cannot diagnose it.",
+      "symptoms": [
+        "Blood in the stool",
+        "An unexplained change in bowel habits"
+      ],
+      "investigations": [
+        "Clinical assessment and appropriate bowel tests",
+        "Colonoscopy with biopsy when indicated"
+      ],
+      "treatment": [
+        "Surgery is a common treatment for localized colon cancer",
+        "Additional treatment depends on the location, extent and pathology"
+      ],
+      "specialist": "Gastroenterology / colorectal team",
+      "source": "https://www.cancer.gov/types/colorectal/patient/colon-treatment-pdq",
+      "keywords": [
+        "bowel",
+        "colon",
+        "rectum",
+        "stool",
+        "poo",
+        "colonoscopy",
+        "constipation"
+      ]
+    },
+    {
+      "id": "prostate",
+      "name": "Prostate",
+      "region": "pelvis",
+      "overview": "Prostate assessment combines history, examination and selected tests. A raised PSA alone does not establish cancer.",
+      "symptoms": [
+        "A change in urine flow",
+        "More frequent urination; early disease may have no symptoms"
+      ],
+      "investigations": [
+        "Discussion of PSA testing and its limitations",
+        "Appropriate imaging and biopsy when indicated"
+      ],
+      "treatment": [
+        "Monitoring can be appropriate for selected cancers",
+        "Surgery, radiotherapy or systemic treatment depend on the individual case"
+      ],
+      "specialist": "Urology",
+      "source": "https://www.cancer.gov/types/prostate/patient/prostate-treatment-pdq",
+      "keywords": [
+        "prostate",
+        "psa",
+        "urination",
+        "urine",
+        "male"
+      ]
+    },
+    {
+      "id": "cervical",
+      "name": "Cervix",
+      "region": "pelvis",
+      "overview": "Cervical screening and investigation of symptoms are different tasks. Abnormal findings may require a closer examination and tissue sampling.",
+      "symptoms": [
+        "Unusual vaginal bleeding",
+        "An unexplained change in discharge or pelvic symptoms"
+      ],
+      "investigations": [
+        "Clinical assessment and cervical examination",
+        "Colposcopy and biopsy when indicated"
+      ],
+      "treatment": [
+        "Local treatment or surgery in selected disease",
+        "Radiotherapy and systemic treatments according to the confirmed stage"
+      ],
+      "specialist": "Gynaecology / gynaecological oncology",
+      "source": "https://www.cancer.gov/types/cervical/treatment",
+      "symptomSource": "https://www.cancer.gov/types/cervical/symptoms",
+      "keywords": [
+        "cervix",
+        "cervical",
+        "hpv",
+        "pap",
+        "vaginal",
+        "bleeding"
+      ]
+    },
+    {
+      "id": "ovarian",
+      "name": "Ovary",
+      "region": "pelvis",
+      "overview": "Persistent abdominal or pelvic symptoms need clinical evaluation. No ordinary photograph or isolated blood marker can confirm ovarian cancer.",
+      "symptoms": [
+        "Persistent abdominal swelling or bloating",
+        "Pelvic or abdominal discomfort"
+      ],
+      "investigations": [
+        "Examination and appropriate pelvic imaging",
+        "Blood tests and tissue assessment as directed by the specialist"
+      ],
+      "treatment": [
+        "Surgery and chemotherapy are common approaches",
+        "Other options depend on the exact disease and biomarkers"
+      ],
+      "specialist": "Gynaecological oncology",
+      "source": "https://www.cancer.gov/types/ovarian/patient/ovarian-epithelial-treatment-pdq",
+      "keywords": [
+        "ovary",
+        "ovarian",
+        "bloating",
+        "pelvic",
+        "abdomen"
+      ]
+    },
+    {
+      "id": "pancreatic",
+      "name": "Pancreas",
+      "region": "abdomen",
+      "overview": "Pancreatic evaluation uses clinical findings and dedicated investigations. Treatment planning depends on extent, operability and the person’s health.",
+      "symptoms": [
+        "Yellowing of the skin or eyes",
+        "Persistent upper abdominal or back symptoms"
+      ],
+      "investigations": [
+        "Clinical assessment, blood tests and dedicated imaging",
+        "Endoscopic or tissue assessment when indicated"
+      ],
+      "treatment": [
+        "Surgery is considered when the disease can be removed",
+        "Systemic treatment and supportive care are tailored by the team"
+      ],
+      "specialist": "Hepatopancreatobiliary team",
+      "source": "https://www.cancer.gov/types/pancreatic/treatment",
+      "symptomSource": "https://www.cancer.gov/types/pancreatic/symptoms",
+      "keywords": [
+        "pancreas",
+        "pancreatic",
+        "jaundice",
+        "back",
+        "upper abdomen"
+      ]
+    },
+    {
+      "id": "liver",
+      "name": "Liver",
+      "region": "abdomen",
+      "overview": "Liver cancer assessment depends on clinical history and specialized imaging. The underlying health of the liver also affects treatment choices.",
+      "symptoms": [
+        "Unexplained upper abdominal symptoms",
+        "Swelling or yellowing of the skin or eyes"
+      ],
+      "investigations": [
+        "Liver assessment and appropriate imaging",
+        "Additional blood tests or tissue assessment as indicated"
+      ],
+      "treatment": [
+        "Local procedures, surgery or transplantation in selected cases",
+        "Systemic treatment and supportive care when appropriate"
+      ],
+      "specialist": "Hepatology / liver cancer team",
+      "source": "https://www.cancer.gov/types/liver/what-is-liver-cancer/treatment",
+      "symptomSource": "https://www.cancer.gov/types/liver/what-is-liver-cancer",
+      "keywords": [
+        "liver",
+        "hepatitis",
+        "cirrhosis",
+        "jaundice",
+        "hepatocellular"
+      ]
+    },
+    {
+      "id": "kidney",
+      "name": "Kidney",
+      "region": "abdomen",
+      "overview": "A kidney mass may be found during imaging. Examination and dedicated tests distinguish possible causes and establish the next step.",
+      "symptoms": [
+        "Blood in the urine",
+        "An unexplained abdominal lump or persistent side symptoms"
+      ],
+      "investigations": [
+        "Urine and blood tests with clinical assessment",
+        "Dedicated kidney imaging and tissue assessment when indicated"
+      ],
+      "treatment": [
+        "Surgery or other local approaches in selected cases",
+        "Systemic options according to the confirmed disease and extent"
+      ],
+      "specialist": "Urology / kidney cancer team",
+      "source": "https://www.cancer.gov/types/kidney/patient/kidney-treatment-pdq",
+      "keywords": [
+        "kidney",
+        "renal",
+        "flank",
+        "urine",
+        "haematuria",
+        "hematuria"
+      ]
+    },
+    {
+      "id": "brain",
+      "name": "Brain & central nervous system",
+      "region": "head",
+      "overview": "Neurological symptoms need clinical assessment. Brain tumors include different diseases; a full scan study and specialist interpretation are essential.",
+      "symptoms": [
+        "New neurological changes",
+        "Symptoms vary with the location and type of tumor"
+      ],
+      "investigations": [
+        "Neurological examination and appropriate MRI or CT",
+        "Specialist assessment and tissue diagnosis when feasible"
+      ],
+      "treatment": [
+        "Surgery or radiotherapy in selected tumors",
+        "Other treatment depends on pathology, molecular findings and location"
+      ],
+      "specialist": "Neurology / neurosurgery / neuro-oncology",
+      "source": "https://www.cancer.gov/types/brain/patient/adult-brain-treatment-pdq",
+      "keywords": [
+        "brain",
+        "headache",
+        "seizure",
+        "neurological",
+        "glioma",
+        "spinal"
+      ]
+    },
+    {
+      "id": "bladder",
+      "name": "Bladder",
+      "region": "pelvis",
+      "overview": "Blood in the urine has several possible causes and should be assessed. Bladder investigations may include direct inspection and tissue sampling.",
+      "symptoms": [
+        "Blood in the urine",
+        "Persistent changes in urination"
+      ],
+      "investigations": [
+        "Clinical assessment and urine tests",
+        "Cystoscopy, tissue sampling and imaging when indicated"
+      ],
+      "treatment": [
+        "Local procedures or surgery according to disease extent",
+        "Bladder-directed or systemic treatment in selected cases"
+      ],
+      "specialist": "Urology",
+      "source": "https://www.cancer.gov/types/bladder/treatment",
+      "symptomSource": "https://www.cancer.gov/types/bladder/symptoms",
+      "keywords": [
+        "bladder",
+        "urine",
+        "cystoscopy",
+        "haematuria",
+        "hematuria"
+      ]
+    },
+    {
+      "id": "thyroid",
+      "name": "Thyroid",
+      "region": "head",
+      "overview": "A neck or thyroid lump has several possible causes and should be evaluated when persistent. Ultrasound and selected tissue tests guide the assessment.",
+      "symptoms": [
+        "A swelling or lump in the neck",
+        "Persistent voice or swallowing changes"
+      ],
+      "investigations": [
+        "Neck examination and thyroid ultrasound",
+        "Needle sampling and other tests when indicated"
+      ],
+      "treatment": [
+        "Monitoring or surgery in selected situations",
+        "Further treatment depends on the specific thyroid cancer"
+      ],
+      "specialist": "Endocrinology / thyroid team",
+      "source": "https://www.cancer.gov/types/thyroid/patient/thyroid-treatment-pdq",
+      "keywords": [
+        "thyroid",
+        "neck",
+        "nodule",
+        "voice",
+        "swallowing"
+      ]
+    },
+    {
+      "id": "leukemia",
+      "name": "Leukaemia · AML reference",
+      "region": "systemic",
+      "overview": "Leukaemias are blood-forming tissue cancers with different subtypes. A skin or body photograph cannot establish the diagnosis.",
+      "symptoms": [
+        "Unexplained bruising or bleeding",
+        "Persistent fatigue, fever or infections"
+      ],
+      "investigations": [
+        "Full blood count and blood-film assessment",
+        "Bone-marrow and specialist laboratory tests when indicated"
+      ],
+      "treatment": [
+        "Treatment depends strongly on the leukaemia subtype",
+        "Systemic treatment and, in selected cases, stem-cell transplantation"
+      ],
+      "specialist": "Haematology",
+      "source": "https://www.cancer.gov/types/leukemia/patient/adult-aml-treatment-pdq",
+      "keywords": [
+        "leukemia",
+        "leukaemia",
+        "blood",
+        "bruising",
+        "marrow",
+        "fatigue"
+      ]
+    },
+    {
+      "id": "lymphoma",
+      "name": "Lymphoma · non-Hodgkin reference",
+      "region": "systemic",
+      "overview": "Lymphomas are a diverse group of lymph-system cancers. An enlarged lymph node has many possible causes and does not itself establish lymphoma.",
+      "symptoms": [
+        "Persistent enlarged lymph nodes",
+        "Unexplained fever, drenching night sweats or weight loss"
+      ],
+      "investigations": [
+        "History, examination and suitable blood tests",
+        "Lymph-node or tissue biopsy and staging investigations"
+      ],
+      "treatment": [
+        "Observation can be appropriate for some subtypes",
+        "Systemic treatment or radiotherapy depends on the exact subtype"
+      ],
+      "specialist": "Haematology / lymphoma team",
+      "source": "https://www.cancer.gov/types/lymphoma/patient/adult-nhl-treatment-pdq",
+      "keywords": [
+        "lymphoma",
+        "lymph",
+        "node",
+        "night sweat",
+        "weight loss"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "upload-image",
+      "title": "How to upload and analyze an image",
+      "kind": "application-help",
+      "text": "Choose Skin, Oral, Lung or Breast and select a matching input type. Use Upload an image or drag a JPEG or PNG into the image area. Sign in and confirm the input and local processing permission, then press Run research model. Only installed compatible models can run. Ordinary phone skin photos, mammograms and MRI do not currently have an installed classifier.",
+      "sources": []
+    },
+    {
+      "id": "understand-scores",
+      "title": "What an image-model score means",
+      "kind": "medical-reference",
+      "text": "The digital body is a reference visualization, not a medical scan. An experimental image-model score compares a supplied image with its learned categories. It is not a calibrated personal probability of cancer and cannot confirm or exclude disease. A clinician considers the history, examination, relevant imaging and tests; a biopsy is often needed to establish the diagnosis.",
+      "sources": [
+        "https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis"
+      ]
+    },
+    {
+      "id": "choose-treatment",
+      "title": "How cancer treatment is chosen",
+      "kind": "medical-reference",
+      "text": "Treatment depends on the confirmed cancer type and extent, relevant biomarkers, overall health and preferences. Options can include surgery, radiotherapy or systemic treatments. This information does not choose a medicine, dose or personal treatment plan. Discuss the appropriate options with the cancer care team.",
+      "sources": [
+        "https://www.cancer.gov/about-cancer/treatment/types"
+      ]
+    },
+    {
+      "id": "urgent-concerns",
+      "title": "When not to wait for an AI result",
+      "kind": "medical-reference",
+      "text": "Severe breathing difficulty, heavy bleeding that is not stopping, or coughing up more than a few streaks of blood need emergency care. Even small streaks of coughed-up blood need urgent medical advice. If these describe the current situation, seek medical help rather than waiting for image analysis.",
+      "sources": [
+        "https://www.nhs.uk/symptoms/shortness-of-breath/",
+        "https://www.nhs.uk/conditions/cuts-and-grazes/",
+        "https://www.nhs.uk/symptoms/coughing-up-blood/"
+      ]
+    }
+  ]
+}

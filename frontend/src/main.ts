@@ -6,5 +6,6 @@ import './eye/eye.css'
 import './eye/chat.css'
 import './eye/care.css'
 import './twin/twin.css'
+import './readability.css'
 
 createApp(App).mount('#app')

@@ -10,7 +10,7 @@ import type { MetricId, Observation, ObservationSide, TwinDocument } from './mod
 
 const document = defineModel<TwinDocument | null>('document', { required: true })
 defineProps<{ reducedMotion?: boolean }>()
-const emit = defineEmits<{ explore: [region: RegionId, side?: PatientSide] }>()
+const emit = defineEmits<{ explore: [region: RegionId, side?: PatientSide]; cancer: [] }>()
 const subject = ref('STUDY-001'), error = ref(''), notice = ref('')
 const pendingImport = ref<TwinDocument | null>(null)
 const activeKey = ref(''), metric = ref<MetricId>('resting_heart_rate'), value = ref<string | number>('')
@@ -134,7 +134,7 @@ const chart = computed(() => {
     <div v-if="pendingImport" class="twin-import-review"><strong>Review incoming research twin</strong><p>Subject <b>{{ pendingImport.subject_id }}</b> · {{ pendingImport.observations.length }} ledger events · {{ activeObservations(pendingImport).length }} active readings.</p><p>This replaces the in-memory workspace. Export the current record first if you need to keep it.</p><button class="button-primary" @click="acceptImport">Use this research twin</button><button class="button-secondary" @click="pendingImport = null">Cancel</button></div>
     <div class="twin-toolbar">
       <form class="twin-subject-form" @submit.prevent="start"><label for="twin-subject">Synthetic study subject ID</label><div><input id="twin-subject" v-model="subject" maxlength="64" required autocomplete="off"/><button class="button-secondary" type="submit">Start empty twin</button></div></form>
-      <div class="twin-actions"><button class="button-secondary" @click="example"><AppIcon name="sparkles" :size="16"/>Load synthetic example</button><label class="button-secondary twin-file">Import research JSON<input type="file" accept="application/json,.json" aria-label="Import research JSON" @change="importFile"/></label><button class="button-secondary" :disabled="!document" @click="download(false)"><AppIcon name="download" :size="16"/>Export record</button><button class="button-secondary" :disabled="!document" @click="download(true)">Export model analysis</button></div>
+      <div class="twin-actions"><button class="button-secondary" @click="emit('cancer')"><AppIcon name="scan" :size="16"/>Cancer research</button><button class="button-secondary" @click="example"><AppIcon name="sparkles" :size="16"/>Load synthetic example</button><label class="button-secondary twin-file">Import research JSON<input type="file" accept="application/json,.json" aria-label="Import research JSON" @change="importFile"/></label><button class="button-secondary" :disabled="!document" @click="download(false)"><AppIcon name="download" :size="16"/>Export record</button><button class="button-secondary" :disabled="!document" @click="download(true)">Export model analysis</button></div>
     </div>
     <div v-if="!document" class="twin-empty"><TwinHumanPreview :reduced-motion="reducedMotion" @explore="(id, patientSide) => emit('explore', id, patientSide)"/><AppIcon name="activity" :size="36"/><h2>A twin that changes with its subject</h2><p>Start a research subject or load the explicit synthetic example. Add observations over time to build an individual reference and inspect a model that updates with new data.</p><span>No measurements are inferred from the body model. Drafts stay in memory; export JSON to keep a record.</span></div>
     <template v-else>

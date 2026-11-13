@@ -1,0 +1,210 @@
+{
+  "corpus_version": "oncology-reference-2026-11-13",
+  "checked_at": "2026-11-13T19:29:43.933Z",
+  "method": "URL/title verification and page fingerprint; not clinical peer review or treatment-guideline approval",
+  "primary_sources": [
+    {
+      "url": "https://www.cancer.gov/types/skin/patient/skin-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/skin/patient/skin-treatment-pdq",
+      "status": 200,
+      "title": "Skin Cancer Treatment (PDQ®)–Patient Version",
+      "content_sha256": "0b6d6673ba51b434f01f6d344e581697696c1fb5e6bd19bf9ceaf2dc4f2cb5f0"
+    },
+    {
+      "url": "https://www.nhs.uk/conditions/melanoma-skin-cancer/symptoms/",
+      "resolved_url": "https://www.nhs.uk/conditions/melanoma-skin-cancer/symptoms/",
+      "status": 200,
+      "title": "Symptoms of melanoma skin cancer",
+      "content_sha256": "cde7dd268936fd6b981f7cddb101c015e9685fa95ac97cc798c11a3a34dcefe2"
+    },
+    {
+      "url": "https://www.cancer.gov/types/head-and-neck/patient/adult/lip-mouth-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/head-and-neck/patient/adult/lip-mouth-treatment-pdq",
+      "status": 200,
+      "title": "Lip and Oral Cavity Cancer Treatment (PDQ®)–Patient Version",
+      "content_sha256": "2ea54e6f18c4dca8e05910f88547171d124f8ef9c8d52d8ee13b524a5037ece4"
+    },
+    {
+      "url": "https://www.nhs.uk/conditions/mouth-cancer/symptoms/",
+      "resolved_url": "https://www.nhs.uk/conditions/mouth-cancer/symptoms/",
+      "status": 200,
+      "title": "Symptoms of mouth cancer",
+      "content_sha256": "436530e874a7c08a90be6fd2192d2fa52498dc0d82b345f0d823595360f50b5a"
+    },
+    {
+      "url": "https://www.cancer.gov/types/lung/patient/non-small-cell-lung-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/lung/patient/non-small-cell-lung-treatment-pdq",
+      "status": 200,
+      "title": "Non-Small Cell Lung Cancer Treatment  (PDQ®)–Patient Version",
+      "content_sha256": "0fce9be0830fab8045b2358dbc8d879c877424de85e552c6da47bf61f476f42b"
+    },
+    {
+      "url": "https://www.nhs.uk/conditions/lung-cancer/symptoms/",
+      "resolved_url": "https://www.nhs.uk/conditions/lung-cancer/symptoms/",
+      "status": 200,
+      "title": "Symptoms of lung cancer",
+      "content_sha256": "933f21a5ca3a489204b334cbb6eddbe8daae46139fe73a8d9f3f2de318c5ae41"
+    },
+    {
+      "url": "https://www.cancer.gov/types/breast/treatment",
+      "resolved_url": "https://www.cancer.gov/types/breast/treatment",
+      "status": 200,
+      "title": "Breast Cancer Treatment",
+      "content_sha256": "d168bb5ae3a21c0b202acd71be12bbf1a3e48512ce5437c72cfb95f29e7a96e5"
+    },
+    {
+      "url": "https://www.nhs.uk/conditions/breast-cancer-in-women/symptoms-of-breast-cancer-in-women/",
+      "resolved_url": "https://www.nhs.uk/conditions/breast-cancer-in-women/symptoms-of-breast-cancer-in-women/",
+      "status": 200,
+      "title": "Symptoms of breast cancer in women",
+      "content_sha256": "b5223d861d704c81cc4bad407d91646d55216881bc971624362f6d714052e904"
+    },
+    {
+      "url": "https://www.cancer.gov/types/colorectal/patient/colon-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/colorectal/patient/colon-treatment-pdq",
+      "status": 200,
+      "title": "Colon Cancer Treatment (PDQ®)–Patient Version",
+      "content_sha256": "1cd4a24c5071b31e59451d0998810220c3bcf11d9ac42029aa26fddc962eab2a"
+    },
+    {
+      "url": "https://www.cancer.gov/types/prostate/patient/prostate-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/prostate/patient/prostate-treatment-pdq",
+      "status": 200,
+      "title": "Prostate Cancer Treatment (PDQ®)–Patient Version",
+      "content_sha256": "8f051f4993b1268ad9194e5b1051720a149892eee49b2c66978a347b74915bd0"
+    },
+    {
+      "url": "https://www.cancer.gov/types/cervical/treatment",
+      "resolved_url": "https://www.cancer.gov/types/cervical/treatment",
+      "status": 200,
+      "title": "Cervical Cancer Treatment",
+      "content_sha256": "c999c4fff4cf7378857e6de15450e66bd2714e4b87beeb645a178604eb974312"
+    },
+    {
+      "url": "https://www.cancer.gov/types/cervical/symptoms",
+      "resolved_url": "https://www.cancer.gov/types/cervical/symptoms",
+      "status": 200,
+      "title": "Cervical Cancer Symptoms",
+      "content_sha256": "753e46fafd52cf18efdf257bc19067529f9783f6dc490ddb12638f44474004c1"
+    },
+    {
+      "url": "https://www.cancer.gov/types/ovarian/patient/ovarian-epithelial-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/ovarian/patient/ovarian-epithelial-treatment-pdq",
+      "status": 200,
+      "title": "Ovarian Epithelial, Fallopian Tube, and Primary Peritoneal Cancers Treatment (PDQ®)–Patient Version",
+      "content_sha256": "4786e7363475854411bfb848bd7443ed82578642910eb96dbb95f9d07c105255"
+    },
+    {
+      "url": "https://www.cancer.gov/types/pancreatic/treatment",
+      "resolved_url": "https://www.cancer.gov/types/pancreatic/treatment",
+      "status": 200,
+      "title": "Pancreatic Cancer Treatment",
+      "content_sha256": "6b358a771401dabc0014877f1ba1388aca3a7423d4a65b64013dabf90e9d84d7"
+    },
+    {
+      "url": "https://www.cancer.gov/types/pancreatic/symptoms",
+      "resolved_url": "https://www.cancer.gov/types/pancreatic/symptoms",
+      "status": 200,
+      "title": "Pancreatic Cancer Symptoms",
+      "content_sha256": "74cb03a418eb34f57b3033a1af4f70185c5a66aefbd64bc3c0441576669e6a03"
+    },
+    {
+      "url": "https://www.cancer.gov/types/liver/what-is-liver-cancer/treatment",
+      "resolved_url": "https://www.cancer.gov/types/liver/what-is-liver-cancer/treatment",
+      "status": 200,
+      "title": "Liver Cancer Treatment",
+      "content_sha256": "e00349ae152965b88c027ba124516818c6a70031586057e5d26b30fec7db7f2d"
+    },
+    {
+      "url": "https://www.cancer.gov/types/liver/what-is-liver-cancer",
+      "resolved_url": "https://www.cancer.gov/types/liver/what-is-liver-cancer",
+      "status": 200,
+      "title": "What Is Liver Cancer?",
+      "content_sha256": "7905c74ed871277c8f07bb6177a4319cccdce481d6b8231b1a35d43631bfff4d"
+    },
+    {
+      "url": "https://www.cancer.gov/types/kidney/patient/kidney-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/kidney/patient/kidney-treatment-pdq",
+      "status": 200,
+      "title": "Renal Cell Cancer Treatment (PDQ®)–Patient Version",
+      "content_sha256": "327d940d1c6102688667b80fe379ebbb234fed694ef258759adef7c6dca22daf"
+    },
+    {
+      "url": "https://www.cancer.gov/types/brain/patient/adult-brain-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/brain/patient/adult-brain-treatment-pdq",
+      "status": 200,
+      "title": "Adult Central Nervous System Tumors Treatment (PDQ®)–Patient Version",
+      "content_sha256": "fc094df36a26a514a8dd8503c465bb4bdccd4f6cee9054d1e8066bd01e95afac"
+    },
+    {
+      "url": "https://www.cancer.gov/types/bladder/treatment",
+      "resolved_url": "https://www.cancer.gov/types/bladder/treatment",
+      "status": 200,
+      "title": "Bladder Cancer Treatment",
+      "content_sha256": "8d7f33ec412e45794da671f0dbcbc2d302bacb987640f299e24b235bc1ae6f0e"
+    },
+    {
+      "url": "https://www.cancer.gov/types/bladder/symptoms",
+      "resolved_url": "https://www.cancer.gov/types/bladder/symptoms",
+      "status": 200,
+      "title": "Bladder Cancer Symptoms",
+      "content_sha256": "18f40812ab6e6c1e43efa2117f38b8367700cfa7a7572dbee7f2c4e9400c0208"
+    },
+    {
+      "url": "https://www.cancer.gov/types/thyroid/patient/thyroid-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/thyroid/patient/thyroid-treatment-pdq",
+      "status": 200,
+      "title": "Thyroid Cancer Treatment (PDQ®)–Patient Version",
+      "content_sha256": "8100e8291554ac07cf4ec0e2e8affc7d820ad268f16559d4c0c6cde0c76d4b87"
+    },
+    {
+      "url": "https://www.cancer.gov/types/leukemia/patient/adult-aml-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/leukemia/patient/adult-aml-treatment-pdq",
+      "status": 200,
+      "title": "Acute Myeloid Leukemia Treatment (PDQ®)–Patient Version",
+      "content_sha256": "5646fd01a068200b858b9c81c26bdf1b0e5d0dc3c751e9f89c853421cc60d1ee"
+    },
+    {
+      "url": "https://www.cancer.gov/types/lymphoma/patient/adult-nhl-treatment-pdq",
+      "resolved_url": "https://www.cancer.gov/types/lymphoma/patient/adult-nhl-treatment-pdq",
+      "status": 200,
+      "title": "Non-Hodgkin Lymphoma Treatment (PDQ®)–Patient Version",
+      "content_sha256": "165d1d0eb0f9bc9fd8bd0832b051d466807050aaabc2989e78e7c1abc897b12d"
+    },
+    {
+      "url": "https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis",
+      "resolved_url": "https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis",
+      "status": 200,
+      "title": "How Cancer Is Diagnosed",
+      "content_sha256": "a67d3ee52fc37319345493cf9b51008ea29503e0eb82a8dd1751d08331bd6e7c"
+    },
+    {
+      "url": "https://www.cancer.gov/about-cancer/treatment/types",
+      "resolved_url": "https://www.cancer.gov/about-cancer/treatment/types",
+      "status": 200,
+      "title": "Types of Cancer Treatment",
+      "content_sha256": "d1d5bbc09bcbaa2f52ba09585966f90d6e4b23a581225850e04a7a52ee4e7ed1"
+    },
+    {
+      "url": "https://www.nhs.uk/symptoms/shortness-of-breath/",
+      "resolved_url": "https://www.nhs.uk/symptoms/shortness-of-breath/",
+      "status": 200,
+      "title": "Shortness of breath",
+      "content_sha256": "e1e753afee2a0af3af7f353446794ee7a8e9a6ec322542a6d32481d9846801aa"
+    },
+    {
+      "url": "https://www.nhs.uk/conditions/cuts-and-grazes/",
+      "resolved_url": "https://www.nhs.uk/conditions/cuts-and-grazes/",
+      "status": 200,
+      "title": "Cuts and grazes",
+      "content_sha256": "dea34fb52800cfb73c11dbfa5f6a4fbfe99047ac2bee6beaa8ffb2c48e7e43b5"
+    },
+    {
+      "url": "https://www.nhs.uk/symptoms/coughing-up-blood/",
+      "resolved_url": "https://www.nhs.uk/symptoms/coughing-up-blood/",
+      "status": 200,
+      "title": "Coughing up blood (blood in phlegm)",
+      "content_sha256": "c832618b304eb4237526a9861c8b8b821fa3757c6ba0b9c7b41c60d34224a1de"
+    }
+  ]
+}
