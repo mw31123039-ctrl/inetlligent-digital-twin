@@ -1,0 +1,5 @@
+class,support,sensitivity,specificity,precision,f1,auc_one_vs_rest
+adenocarcinoma,40,1.0,0.9655,0.9524,0.9756,0.9806
+large.cell.carcinoma,22,0.9091,1.0,1.0,0.9524,0.9719
+normal,6,1.0,0.9891,0.8571,0.9231,0.9982
+squamous.cell.carcinoma,30,0.9667,1.0,1.0,0.9831,0.9882

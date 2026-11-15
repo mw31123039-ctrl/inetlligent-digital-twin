@@ -1,0 +1,4 @@
+class,support,sensitivity,specificity,precision,f1,auc_one_vs_rest
+benign,887,0.9177,0.435,0.773,0.8392,0.808
+malignant,423,0.435,0.9278,0.7419,0.5484,0.817
+normal,0,,0.9931,0.0,,

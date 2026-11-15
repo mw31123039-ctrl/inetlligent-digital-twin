@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import AppIcon from '../components/AppIcon.vue'
 import { cancerFaqs, cancerTopics, clinicalSources, searchTopics } from './knowledge'
 import type { CancerTrack } from './model'
 import { aiApi } from '../services/aiApi'
 import { acceptEvidenceAnswer, questionFingerprint } from './knowledgeAi'
 import type { EvidenceAnswer } from './knowledgeAi'
-const props = defineProps<{ signedIn: boolean }>()
+const props = defineProps<{ signedIn: boolean; topic?: string }>()
 const emit = defineEmits<{ analyze: [track: CancerTrack]; plan: [topic: string]; signIn: [] }>()
-const query = ref(''), region = ref('all'), topicId = ref('skin')
+const query = ref(''), region = ref('all'), topicId = ref(cancerTopics.some(item => item.id === props.topic) ? props.topic! : 'skin')
 const matches = computed(() => searchTopics(query.value, region.value))
 const active = computed(() => cancerTopics.find(item => item.id === topicId.value)!)
+watch(() => props.topic, async value => {
+  if (!value || !cancerTopics.some(item => item.id === value)) return
+  query.value = ''; region.value = 'all'; topicId.value = value
+  await nextTick(); (document.getElementById('care-topic-heading') as HTMLElement | null)?.focus()
+})
 watch(matches, values => { if (values.length && !values.some(item => item.id === topicId.value)) topicId.value = values[0]!.id })
 const question = ref(''), aiConsent = ref(false), aiReady = ref(false), aiChecking = ref(true), aiPending = ref(false), aiError = ref('')
 const answer = ref<EvidenceAnswer | null>(null), selectedEvidenceId = ref('')
@@ -57,7 +62,7 @@ function select(id: string) { topicId.value = id }
     <div class="care-knowledge-layout">
       <nav class="care-topic-list" aria-label="Cancer topics"><button v-for="topic in matches" :key="topic.id" :class="{ active: topicId === topic.id }" :aria-pressed="topicId === topic.id" @click="select(topic.id)"><span>{{ topic.name }}</span><small>{{ topic.modelTrack ? 'Image model + knowledge' : 'Knowledge guide' }}</small><AppIcon name="chevronRight" :size="18"/></button><p v-if="!matches.length" class="care-no-matches">No matching topic in this library. This is a selected reference collection, not a complete medical database.</p></nav>
       <article v-if="matches.length" class="care-topic-detail">
-        <span class="care-eyebrow">{{ active.modelTrack ? 'IMAGE REVIEW & CLINICAL KNOWLEDGE' : 'CLINICAL KNOWLEDGE · NO IMAGE MODEL INSTALLED' }}</span><h3>{{ active.name }}</h3><p class="care-topic-intro">{{ active.overview }}</p>
+        <span class="care-eyebrow">{{ active.modelTrack ? 'IMAGE REVIEW & CLINICAL KNOWLEDGE' : 'CLINICAL KNOWLEDGE · NO IMAGE MODEL INSTALLED' }}</span><h3 id="care-topic-heading" tabindex="-1">{{ active.name }}</h3><p class="care-topic-intro">{{ active.overview }}</p>
         <div class="care-topic-columns"><section><span class="care-topic-icon"><AppIcon name="activity" :size="22"/></span><h4>Changes to discuss</h4><ul><li v-for="item in active.symptoms" :key="item">{{ item }}</li></ul><p>These changes can also be caused by other conditions. Their absence does not rule out disease.</p></section><section><span class="care-topic-icon"><AppIcon name="clipboard" :size="22"/></span><h4>How clinicians investigate</h4><ul><li v-for="item in active.investigations" :key="item">{{ item }}</li></ul><p>Tests are chosen after a clinical assessment, not ordered by this app.</p></section></div>
         <section class="care-treatment-box"><div><span class="care-eyebrow">AFTER A CONFIRMED DIAGNOSIS</span><h4>Treatment approaches to discuss</h4></div><ul><li v-for="item in active.treatment" :key="item">{{ item }}</li></ul><p>The exact type, stage, biomarkers, overall health and personal preferences guide treatment. This overview does not choose a treatment or medicine for you.</p></section>
         <div class="care-topic-actions"><button v-if="active.modelTrack" class="care-primary" @click="emit('analyze', active.modelTrack)">Open image review<AppIcon name="arrowRight" :size="18"/></button><button class="care-secondary" @click="emit('plan', active.id)">Prepare a review plan<AppIcon name="clipboard" :size="18"/></button></div>

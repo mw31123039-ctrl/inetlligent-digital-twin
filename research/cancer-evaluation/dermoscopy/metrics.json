@@ -1,0 +1,566 @@
+{
+ "schema_version": "humantwin-cancer-evaluation-v1",
+ "generated": "2026-11-16",
+ "modality": "dermoscopy",
+ "track": "skin",
+ "model_version": "ham10000-vit-q8-25be9e61",
+ "weights_sha256": "85c5c07ec67e94d7b34c83624c36f6a729ef3c47747cf1465212c911db5badfa",
+ "labels": [
+  "benign_keratosis-like_lesions",
+  "basal_cell_carcinoma",
+  "actinic_keratoses",
+  "vascular_lesions",
+  "melanocytic_Nevi",
+  "melanoma",
+  "dermatofibroma"
+ ],
+ "data": "ISIC 2018 Task 3 (HAM10000 challenge; CC BY-NC 4.0, attribution: ISIC Archive, Tschandl et al. 2018, Codella et al. 2019): official validation set (193 images) for calibration and official test set (1,512 images) for metrics. The model was fine-tuned on HAM10000, i.e. the challenge training set; the validation and test images were released separately.",
+ "splits": {
+  "calibration_images": 193,
+  "test_images": 1512,
+  "test_groups": 1512,
+  "unreadable_images": 0,
+  "test_label_counts": {
+   "benign_keratosis-like_lesions": 217,
+   "basal_cell_carcinoma": 93,
+   "actinic_keratoses": 43,
+   "vascular_lesions": 35,
+   "melanocytic_Nevi": 909,
+   "melanoma": 171,
+   "dermatofibroma": 44
+  }
+ },
+ "pipeline": "browser-style JPEG preparation -> app.cancer.decode_image -> app.cancer_quality.check_image -> app.cancer.prepare_input -> installed ONNX model",
+ "test_metrics_uncalibrated": {
+  "images": 1512,
+  "accuracy": 0.6839,
+  "accuracy_95ci": [
+   0.66,
+   0.7068
+  ],
+  "balanced_accuracy": 0.4464,
+  "macro_f1": 0.4472,
+  "macro_auc_one_vs_rest": 0.909,
+  "confusion_matrix": {
+   "labels": [
+    "benign_keratosis-like_lesions",
+    "basal_cell_carcinoma",
+    "actinic_keratoses",
+    "vascular_lesions",
+    "melanocytic_Nevi",
+    "melanoma",
+    "dermatofibroma"
+   ],
+   "rows_actual_columns_predicted": [
+    [
+     37,
+     0,
+     20,
+     0,
+     58,
+     102,
+     0
+    ],
+    [
+     4,
+     13,
+     32,
+     0,
+     6,
+     38,
+     0
+    ],
+    [
+     1,
+     0,
+     25,
+     0,
+     0,
+     17,
+     0
+    ],
+    [
+     0,
+     1,
+     0,
+     14,
+     12,
+     7,
+     1
+    ],
+    [
+     4,
+     2,
+     8,
+     0,
+     817,
+     78,
+     0
+    ],
+    [
+     2,
+     0,
+     7,
+     2,
+     43,
+     117,
+     0
+    ],
+    [
+     1,
+     0,
+     3,
+     0,
+     18,
+     11,
+     11
+    ]
+   ]
+  },
+  "per_class": {
+   "benign_keratosis-like_lesions": {
+    "support": 217,
+    "precision": 0.7551,
+    "sensitivity_recall": 0.1705,
+    "sensitivity_95ci": [
+     0.1263,
+     0.2262
+    ],
+    "specificity": 0.9907,
+    "specificity_95ci": [
+     0.9839,
+     0.9947
+    ],
+    "f1": 0.2782,
+    "auc_one_vs_rest": 0.8506
+   },
+   "basal_cell_carcinoma": {
+    "support": 93,
+    "precision": 0.8125,
+    "sensitivity_recall": 0.1398,
+    "sensitivity_95ci": [
+     0.0835,
+     0.2246
+    ],
+    "specificity": 0.9979,
+    "specificity_95ci": [
+     0.9938,
+     0.9993
+    ],
+    "f1": 0.2385,
+    "auc_one_vs_rest": 0.939
+   },
+   "actinic_keratoses": {
+    "support": 43,
+    "precision": 0.2632,
+    "sensitivity_recall": 0.5814,
+    "sensitivity_95ci": [
+     0.4333,
+     0.7162
+    ],
+    "specificity": 0.9523,
+    "specificity_95ci": [
+     0.9402,
+     0.9621
+    ],
+    "f1": 0.3623,
+    "auc_one_vs_rest": 0.9438
+   },
+   "vascular_lesions": {
+    "support": 35,
+    "precision": 0.875,
+    "sensitivity_recall": 0.4,
+    "sensitivity_95ci": [
+     0.2555,
+     0.5643
+    ],
+    "specificity": 0.9986,
+    "specificity_95ci": [
+     0.9951,
+     0.9996
+    ],
+    "f1": 0.549,
+    "auc_one_vs_rest": 0.9426
+   },
+   "melanocytic_Nevi": {
+    "support": 909,
+    "precision": 0.8564,
+    "sensitivity_recall": 0.8988,
+    "sensitivity_95ci": [
+     0.8775,
+     0.9167
+    ],
+    "specificity": 0.7728,
+    "specificity_95ci": [
+     0.7377,
+     0.8045
+    ],
+    "f1": 0.8771,
+    "auc_one_vs_rest": 0.9256
+   },
+   "melanoma": {
+    "support": 171,
+    "precision": 0.3162,
+    "sensitivity_recall": 0.6842,
+    "sensitivity_95ci": [
+     0.6111,
+     0.7492
+    ],
+    "specificity": 0.8113,
+    "specificity_95ci": [
+     0.7895,
+     0.8314
+    ],
+    "f1": 0.4325,
+    "auc_one_vs_rest": 0.8498
+   },
+   "dermatofibroma": {
+    "support": 44,
+    "precision": 0.9167,
+    "sensitivity_recall": 0.25,
+    "sensitivity_95ci": [
+     0.1457,
+     0.3944
+    ],
+    "specificity": 0.9993,
+    "specificity_95ci": [
+     0.9962,
+     0.9999
+    ],
+    "f1": 0.3929,
+    "auc_one_vs_rest": 0.9117
+   }
+  },
+  "cancer_vs_not": {
+   "positive_classes": [
+    "melanoma",
+    "basal_cell_carcinoma",
+    "actinic_keratoses"
+   ],
+   "positives": 307,
+   "negatives": 1205,
+   "sensitivity": 0.8111,
+   "sensitivity_95ci": [
+    0.7635,
+    0.8509
+   ],
+   "specificity": 0.8075,
+   "specificity_95ci": [
+    0.7842,
+    0.8287
+   ],
+   "precision": 0.5177,
+   "f1": 0.632,
+   "auc": 0.8837,
+   "auc_95ci_bootstrap": [
+    0.865,
+    0.9012
+   ],
+   "confusion": {
+    "true_positive": 249,
+    "false_negative": 58,
+    "true_negative": 973,
+    "false_positive": 232
+   },
+   "decision_rule": "Predicted positive when the highest-scoring class is a cancer class."
+  },
+  "negative_log_likelihood": 1.5162,
+  "brier_score_multiclass": 0.5454,
+  "expected_calibration_error_15_bins": 0.255
+ },
+ "test_metrics_calibrated": {
+  "images": 1512,
+  "accuracy": 0.6839,
+  "accuracy_95ci": [
+   0.66,
+   0.7068
+  ],
+  "balanced_accuracy": 0.4464,
+  "macro_f1": 0.4472,
+  "macro_auc_one_vs_rest": 0.9149,
+  "confusion_matrix": {
+   "labels": [
+    "benign_keratosis-like_lesions",
+    "basal_cell_carcinoma",
+    "actinic_keratoses",
+    "vascular_lesions",
+    "melanocytic_Nevi",
+    "melanoma",
+    "dermatofibroma"
+   ],
+   "rows_actual_columns_predicted": [
+    [
+     37,
+     0,
+     20,
+     0,
+     58,
+     102,
+     0
+    ],
+    [
+     4,
+     13,
+     32,
+     0,
+     6,
+     38,
+     0
+    ],
+    [
+     1,
+     0,
+     25,
+     0,
+     0,
+     17,
+     0
+    ],
+    [
+     0,
+     1,
+     0,
+     14,
+     12,
+     7,
+     1
+    ],
+    [
+     4,
+     2,
+     8,
+     0,
+     817,
+     78,
+     0
+    ],
+    [
+     2,
+     0,
+     7,
+     2,
+     43,
+     117,
+     0
+    ],
+    [
+     1,
+     0,
+     3,
+     0,
+     18,
+     11,
+     11
+    ]
+   ]
+  },
+  "per_class": {
+   "benign_keratosis-like_lesions": {
+    "support": 217,
+    "precision": 0.7551,
+    "sensitivity_recall": 0.1705,
+    "sensitivity_95ci": [
+     0.1263,
+     0.2262
+    ],
+    "specificity": 0.9907,
+    "specificity_95ci": [
+     0.9839,
+     0.9947
+    ],
+    "f1": 0.2782,
+    "auc_one_vs_rest": 0.8616
+   },
+   "basal_cell_carcinoma": {
+    "support": 93,
+    "precision": 0.8125,
+    "sensitivity_recall": 0.1398,
+    "sensitivity_95ci": [
+     0.0835,
+     0.2246
+    ],
+    "specificity": 0.9979,
+    "specificity_95ci": [
+     0.9938,
+     0.9993
+    ],
+    "f1": 0.2385,
+    "auc_one_vs_rest": 0.9461
+   },
+   "actinic_keratoses": {
+    "support": 43,
+    "precision": 0.2632,
+    "sensitivity_recall": 0.5814,
+    "sensitivity_95ci": [
+     0.4333,
+     0.7162
+    ],
+    "specificity": 0.9523,
+    "specificity_95ci": [
+     0.9402,
+     0.9621
+    ],
+    "f1": 0.3623,
+    "auc_one_vs_rest": 0.9457
+   },
+   "vascular_lesions": {
+    "support": 35,
+    "precision": 0.875,
+    "sensitivity_recall": 0.4,
+    "sensitivity_95ci": [
+     0.2555,
+     0.5643
+    ],
+    "specificity": 0.9986,
+    "specificity_95ci": [
+     0.9951,
+     0.9996
+    ],
+    "f1": 0.549,
+    "auc_one_vs_rest": 0.9565
+   },
+   "melanocytic_Nevi": {
+    "support": 909,
+    "precision": 0.8564,
+    "sensitivity_recall": 0.8988,
+    "sensitivity_95ci": [
+     0.8775,
+     0.9167
+    ],
+    "specificity": 0.7728,
+    "specificity_95ci": [
+     0.7377,
+     0.8045
+    ],
+    "f1": 0.8771,
+    "auc_one_vs_rest": 0.9256
+   },
+   "melanoma": {
+    "support": 171,
+    "precision": 0.3162,
+    "sensitivity_recall": 0.6842,
+    "sensitivity_95ci": [
+     0.6111,
+     0.7492
+    ],
+    "specificity": 0.8113,
+    "specificity_95ci": [
+     0.7895,
+     0.8314
+    ],
+    "f1": 0.4325,
+    "auc_one_vs_rest": 0.854
+   },
+   "dermatofibroma": {
+    "support": 44,
+    "precision": 0.9167,
+    "sensitivity_recall": 0.25,
+    "sensitivity_95ci": [
+     0.1457,
+     0.3944
+    ],
+    "specificity": 0.9993,
+    "specificity_95ci": [
+     0.9962,
+     0.9999
+    ],
+    "f1": 0.3929,
+    "auc_one_vs_rest": 0.9148
+   }
+  },
+  "cancer_vs_not": {
+   "positive_classes": [
+    "melanoma",
+    "basal_cell_carcinoma",
+    "actinic_keratoses"
+   ],
+   "positives": 307,
+   "negatives": 1205,
+   "sensitivity": 0.8111,
+   "sensitivity_95ci": [
+    0.7635,
+    0.8509
+   ],
+   "specificity": 0.8075,
+   "specificity_95ci": [
+    0.7842,
+    0.8287
+   ],
+   "precision": 0.5177,
+   "f1": 0.632,
+   "auc": 0.8859,
+   "auc_95ci_bootstrap": [
+    0.8671,
+    0.9032
+   ],
+   "confusion": {
+    "true_positive": 249,
+    "false_negative": 58,
+    "true_negative": 973,
+    "false_positive": 232
+   },
+   "decision_rule": "Predicted positive when the highest-scoring class is a cancer class."
+  },
+  "negative_log_likelihood": 0.9326,
+  "brier_score_multiclass": 0.4419,
+  "expected_calibration_error_15_bins": 0.1283
+ },
+ "calibration": {
+  "method": "temperature scaling (NLL on calibration split)",
+  "temperature": 2.1881
+ },
+ "selective": {
+  "decision_threshold": 0.7,
+  "answered_fraction": 0.7407,
+  "inconclusive_fraction": 0.2593,
+  "accuracy_when_answered": 0.8063,
+  "accuracy_when_inconclusive": 0.3342
+ },
+ "input_checks": {
+  "test_rejected": 2,
+  "test_limited": 21
+ },
+ "familiarity": {
+  "available": true,
+  "method": "class-centroid-cosine",
+  "minimum_similarity": 0.6473,
+  "test_flagged_unfamiliar": 0.0516
+ },
+ "wrong_input": {
+  "images": 172,
+  "caught": 164,
+  "caught_fraction": 0.9535,
+  "would_report_finding": 8,
+  "by_source": {
+   "oral_photo": {
+    "images": 48,
+    "rejected_by_checks": 0,
+    "flagged_unfamiliar": 17,
+    "would_report_finding": 8
+   },
+   "lung_ct_slice": {
+    "images": 60,
+    "rejected_by_checks": 60,
+    "flagged_unfamiliar": 0,
+    "would_report_finding": 0
+   },
+   "breast_ultrasound": {
+    "images": 60,
+    "rejected_by_checks": 60,
+    "flagged_unfamiliar": 0,
+    "would_report_finding": 0
+   },
+   "synthetic": {
+    "images": 4,
+    "rejected_by_checks": 1,
+    "flagged_unfamiliar": 3,
+    "would_report_finding": 0
+   }
+  }
+ },
+ "charts": [
+  "confusion_matrix.png",
+  "roc.png",
+  "reliability.png"
+ ]
+}

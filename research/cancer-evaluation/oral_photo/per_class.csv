@@ -1,0 +1,3 @@
+class,support,sensitivity,specificity,precision,f1,auc_one_vs_rest
+benign_lesion,25,0.84,0.8696,0.875,0.8571,0.8939
+malignant_lesion,23,0.8696,0.84,0.8333,0.8511,0.8939

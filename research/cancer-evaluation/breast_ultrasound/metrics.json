@@ -1,0 +1,316 @@
+{
+ "schema_version": "humantwin-cancer-evaluation-v1",
+ "generated": "2026-11-16",
+ "modality": "breast_ultrasound",
+ "track": "breast",
+ "model_version": "busi-vit-257147b3-onnx",
+ "weights_sha256": "71cc8f91d8329332722c9406963c3270834435fc605b7c670f39c59d09570073",
+ "labels": [
+  "benign",
+  "malignant",
+  "normal"
+ ],
+ "data": "BUS-BRA (Gomez-Flores et al. 2024, Zenodo 10.5281/zenodo.8231412, CC BY 4.0): 1,875 biopsy-proven breast ultrasound images from 1,064 patients in Brazil, external to the model's training data (BUSI). Split by patient: 30% calibration, 70% test. BUS-BRA has no \"normal\" images, so the model's normal class is never correct here.",
+ "splits": {
+  "calibration_images": 565,
+  "test_images": 1310,
+  "test_groups": 752,
+  "unreadable_images": 0,
+  "test_label_counts": {
+   "benign": 887,
+   "malignant": 423,
+   "normal": 0
+  }
+ },
+ "pipeline": "browser-style JPEG preparation -> app.cancer.decode_image -> app.cancer_quality.check_image -> app.cancer.prepare_input -> installed ONNX model",
+ "test_metrics_uncalibrated": {
+  "images": 1310,
+  "accuracy": 0.7618,
+  "accuracy_95ci": [
+   0.738,
+   0.7841
+  ],
+  "balanced_accuracy": 0.6763,
+  "macro_f1": 0.6938,
+  "macro_auc_one_vs_rest": 0.8125,
+  "confusion_matrix": {
+   "labels": [
+    "benign",
+    "malignant",
+    "normal"
+   ],
+   "rows_actual_columns_predicted": [
+    [
+     814,
+     64,
+     9
+    ],
+    [
+     239,
+     184,
+     0
+    ],
+    [
+     0,
+     0,
+     0
+    ]
+   ]
+  },
+  "per_class": {
+   "benign": {
+    "support": 887,
+    "precision": 0.773,
+    "sensitivity_recall": 0.9177,
+    "sensitivity_95ci": [
+     0.8978,
+     0.934
+    ],
+    "specificity": 0.435,
+    "specificity_95ci": [
+     0.3885,
+     0.4826
+    ],
+    "f1": 0.8392,
+    "auc_one_vs_rest": 0.808
+   },
+   "malignant": {
+    "support": 423,
+    "precision": 0.7419,
+    "sensitivity_recall": 0.435,
+    "sensitivity_95ci": [
+     0.3885,
+     0.4826
+    ],
+    "specificity": 0.9278,
+    "specificity_95ci": [
+     0.9089,
+     0.9431
+    ],
+    "f1": 0.5484,
+    "auc_one_vs_rest": 0.817
+   },
+   "normal": {
+    "support": 0,
+    "precision": 0.0,
+    "sensitivity_recall": null,
+    "sensitivity_95ci": null,
+    "specificity": 0.9931,
+    "specificity_95ci": [
+     0.987,
+     0.9964
+    ],
+    "f1": null,
+    "auc_one_vs_rest": null
+   }
+  },
+  "cancer_vs_not": {
+   "positive_classes": [
+    "malignant"
+   ],
+   "positives": 423,
+   "negatives": 887,
+   "sensitivity": 0.435,
+   "sensitivity_95ci": [
+    0.3885,
+    0.4826
+   ],
+   "specificity": 0.9278,
+   "specificity_95ci": [
+    0.9089,
+    0.9431
+   ],
+   "precision": 0.7419,
+   "f1": 0.5484,
+   "auc": 0.817,
+   "auc_95ci_bootstrap": [
+    0.7934,
+    0.8395
+   ],
+   "confusion": {
+    "true_positive": 184,
+    "false_negative": 239,
+    "true_negative": 823,
+    "false_positive": 64
+   },
+   "decision_rule": "Predicted positive when the highest-scoring class is a cancer class."
+  },
+  "negative_log_likelihood": 0.5985,
+  "brier_score_multiclass": 0.3571,
+  "expected_calibration_error_15_bins": 0.1109
+ },
+ "test_metrics_calibrated": {
+  "images": 1310,
+  "accuracy": 0.7618,
+  "accuracy_95ci": [
+   0.738,
+   0.7841
+  ],
+  "balanced_accuracy": 0.6763,
+  "macro_f1": 0.6938,
+  "macro_auc_one_vs_rest": 0.8123,
+  "confusion_matrix": {
+   "labels": [
+    "benign",
+    "malignant",
+    "normal"
+   ],
+   "rows_actual_columns_predicted": [
+    [
+     814,
+     64,
+     9
+    ],
+    [
+     239,
+     184,
+     0
+    ],
+    [
+     0,
+     0,
+     0
+    ]
+   ]
+  },
+  "per_class": {
+   "benign": {
+    "support": 887,
+    "precision": 0.773,
+    "sensitivity_recall": 0.9177,
+    "sensitivity_95ci": [
+     0.8978,
+     0.934
+    ],
+    "specificity": 0.435,
+    "specificity_95ci": [
+     0.3885,
+     0.4826
+    ],
+    "f1": 0.8392,
+    "auc_one_vs_rest": 0.8076
+   },
+   "malignant": {
+    "support": 423,
+    "precision": 0.7419,
+    "sensitivity_recall": 0.435,
+    "sensitivity_95ci": [
+     0.3885,
+     0.4826
+    ],
+    "specificity": 0.9278,
+    "specificity_95ci": [
+     0.9089,
+     0.9431
+    ],
+    "f1": 0.5484,
+    "auc_one_vs_rest": 0.817
+   },
+   "normal": {
+    "support": 0,
+    "precision": 0.0,
+    "sensitivity_recall": null,
+    "sensitivity_95ci": null,
+    "specificity": 0.9931,
+    "specificity_95ci": [
+     0.987,
+     0.9964
+    ],
+    "f1": null,
+    "auc_one_vs_rest": null
+   }
+  },
+  "cancer_vs_not": {
+   "positive_classes": [
+    "malignant"
+   ],
+   "positives": 423,
+   "negatives": 887,
+   "sensitivity": 0.435,
+   "sensitivity_95ci": [
+    0.3885,
+    0.4826
+   ],
+   "specificity": 0.9278,
+   "specificity_95ci": [
+    0.9089,
+    0.9431
+   ],
+   "precision": 0.7419,
+   "f1": 0.5484,
+   "auc": 0.817,
+   "auc_95ci_bootstrap": [
+    0.7932,
+    0.8395
+   ],
+   "confusion": {
+    "true_positive": 184,
+    "false_negative": 239,
+    "true_negative": 823,
+    "false_positive": 64
+   },
+   "decision_rule": "Predicted positive when the highest-scoring class is a cancer class."
+  },
+  "negative_log_likelihood": 0.5637,
+  "brier_score_multiclass": 0.3389,
+  "expected_calibration_error_15_bins": 0.0573
+ },
+ "calibration": {
+  "method": "temperature scaling (NLL on calibration split)",
+  "temperature": 1.3082
+ },
+ "selective": {
+  "decision_threshold": 0.75,
+  "answered_fraction": 0.7511,
+  "inconclusive_fraction": 0.2489,
+  "accuracy_when_answered": 0.8283,
+  "accuracy_when_inconclusive": 0.5613
+ },
+ "input_checks": {
+  "test_rejected": 0,
+  "test_limited": 0
+ },
+ "familiarity": {
+  "available": true,
+  "method": "class-centroid-cosine",
+  "minimum_similarity": 0.5071,
+  "test_flagged_unfamiliar": 0.0206
+ },
+ "wrong_input": {
+  "images": 172,
+  "caught": 162,
+  "caught_fraction": 0.9419,
+  "would_report_finding": 10,
+  "by_source": {
+   "dermoscopy": {
+    "images": 60,
+    "rejected_by_checks": 56,
+    "flagged_unfamiliar": 4,
+    "would_report_finding": 0
+   },
+   "oral_photo": {
+    "images": 48,
+    "rejected_by_checks": 46,
+    "flagged_unfamiliar": 1,
+    "would_report_finding": 0
+   },
+   "lung_ct_slice": {
+    "images": 60,
+    "rejected_by_checks": 0,
+    "flagged_unfamiliar": 2,
+    "would_report_finding": 10
+   },
+   "synthetic": {
+    "images": 4,
+    "rejected_by_checks": 3,
+    "flagged_unfamiliar": 1,
+    "would_report_finding": 0
+   }
+  }
+ },
+ "charts": [
+  "confusion_matrix.png",
+  "roc.png",
+  "reliability.png"
+ ]
+}

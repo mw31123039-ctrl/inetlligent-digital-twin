@@ -5,6 +5,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js'
 import { buildHumanRig } from '../three/buildHumanRig'
+import { buildSurfaceRig } from '../three/buildSurfaceRig'
+import { loadAnatomyOverview } from '../three/anatomyOverview'
 import { disposeScene } from '../three/disposeScene'
 import { humanModelConfig, regionLabels, viewAngles, viewFromAngle, type HumanModelConfig, type HumanView } from '../three/humanViewerConfig'
 import type { RegionId } from '../types'
@@ -30,7 +32,7 @@ let renderer: THREE.WebGLRenderer | undefined
 let scene: THREE.Scene | undefined
 let camera: THREE.PerspectiveCamera | undefined
 let controls: OrbitControls | undefined
-let rig: ReturnType<typeof buildHumanRig> | undefined
+let rig: ReturnType<typeof buildHumanRig> | ReturnType<typeof buildSurfaceRig> | undefined
 let mixer: THREE.AnimationMixer | undefined
 let environment: THREE.WebGLRenderTarget | undefined
 let loadingManager: THREE.LoadingManager | undefined
@@ -39,6 +41,7 @@ let frame = 0
 let disposed = false
 let failed = false
 let active = true
+let needsRender = true
 let previousTime = 0
 let distance = 4.2
 let tween: { from: THREE.Spherical; to: THREE.Spherical; start: number } | undefined
@@ -63,6 +66,7 @@ function fail(message: string) {
 
 function projectLabel() {
   if (!rig || !camera || !host.value || !label.value || !props.selected) return
+  if (props.modelConfig.kind === 'anatomy' && props.selected === 'eyes') { label.value.style.visibility = 'hidden'; return }
   const point = rig.anchor(props.selected)
   const projected = point.clone().project(camera)
   const rect = host.value.getBoundingClientRect()
@@ -76,6 +80,7 @@ function projectLabel() {
 function render() {
   if (disposed || failed || !renderer || !scene || !camera) return
   renderer.render(scene, camera)
+  needsRender = false
   projectLabel()
 }
 
@@ -84,7 +89,9 @@ function animate(now: number) {
   const delta = previousTime ? Math.min((now - previousTime) / 1000, .05) : 0
   previousTime = now
   if ((active || focused) && !document.hidden) {
-    if (!props.paused && !reduceMotion()) mixer?.update(delta)
+    const animating = !!mixer && !props.paused && !reduceMotion()
+    const moving = !!focusTween || !!tween
+    if (animating) mixer?.update(delta)
     if (focusTween && camera && controls) {
       const t = reduceMotion() ? 1 : Math.min(1, (now - focusTween.start) / 620)
       const ease = t * t * t * (t * (t * 6 - 15) + 10)
@@ -103,8 +110,9 @@ function animate(now: number) {
       camera.position.copy(target).add(new THREE.Vector3().setFromSpherical(current))
       if (t === 1) tween = undefined
     }
-    controls?.update()
-    render()
+    const changed = controls?.update()
+    if (animating || moving || changed || needsRender) render()
+    else projectLabel()
   }
   frame = requestAnimationFrame(animate)
 }
@@ -135,7 +143,8 @@ function resize() {
   renderer.setSize(width, height)
   // Fit both height and width, including the arms, on narrow mobile canvases.
   const halfFov = THREE.MathUtils.degToRad(camera.fov / 2)
-  distance = Math.max(1.03 / Math.tan(halfFov), .68 / (Math.tan(halfFov) * camera.aspect))
+  const halfWidth = rig && 'framingHalfWidth' in rig.diagnostics() ? Number((rig.diagnostics() as { framingHalfWidth: number }).framingHalfWidth) : .68
+  distance = Math.max(1.03 / Math.tan(halfFov), Math.max(.68, halfWidth) / (Math.tan(halfFov) * camera.aspect))
   controls.minDistance = distance / 1.7
   controls.maxDistance = distance / .75
   tween = undefined
@@ -220,7 +229,7 @@ function focusPart(id: RegionId, side: PatientSide): Promise<void> {
 // Useful to embedding screens and browser verification; never exposes the scene for mutation.
 function getSnapshot() {
   return {
-    loaded: ready.value, animationTime: mixer?.time ?? 0,
+    loaded: ready.value, displayKind: props.modelConfig.kind ?? 'reference', renderedFrames: renderer?.info.render.frame ?? 0, animationTime: mixer?.time ?? 0,
     animated: !!mixer && !props.paused && !reduceMotion(),
     camera: camera?.position.toArray(), ...rig?.diagnostics(),
     regions: rig && camera && host.value ? Object.fromEntries((Object.keys(regionLabels) as RegionId[]).map(id => {
@@ -234,6 +243,7 @@ defineExpose({ reset, setView, focusPart, getSnapshot })
 onMounted(async () => {
   try {
     if (!host.value) return
+    Object.defineProperty(host.value, 'humanTwinSnapshot', { configurable: true, value: getSnapshot })
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75))
     renderer.outputColorSpace = THREE.SRGBColorSpace
@@ -292,6 +302,7 @@ onMounted(async () => {
     controls.minPolarAngle = Math.PI * .28
     controls.maxPolarAngle = Math.PI * .7
     controls.addEventListener('start', () => { tween = undefined })
+    controls.addEventListener('change', () => { needsRender = true })
     controls.addEventListener('end', reportCamera)
     observer = new ResizeObserver(resize)
     observer.observe(host.value)
@@ -306,17 +317,16 @@ onMounted(async () => {
     manager.onProgress = (_url, loaded, total) => { if (!disposed && !failed) emit('progress', Math.min(99, Math.round(loaded / total * 100))) }
     // A finite timeout also covers stalled external textures in replacement GLTFs.
     loadTimeout = window.setTimeout(() => fail('The human model took too long to load. Check your connection and retry 3D.'), 45_000)
-    const gltf = await new GLTFLoader(manager).loadAsync(props.modelConfig.url, progress => {
+    const gltf = props.modelConfig.kind === 'anatomy' ? { scene: await loadAnatomyOverview(manager), animations: [] } : await new GLTFLoader(manager).loadAsync(props.modelConfig.url, progress => {
       if (!disposed && !failed) emit('progress', progress.total ? Math.min(95, Math.round(progress.loaded / progress.total * 95)) : null)
     })
     window.clearTimeout(loadTimeout)
     if (disposed || failed) { disposeScene(gltf.scene); return }
     // Add before validation so partially configured replacement models are cleaned on failure.
     scene.add(gltf.scene)
-    rig = buildHumanRig(gltf.scene, gltf.animations, props.modelConfig)
-    mixer = new THREE.AnimationMixer(gltf.scene)
-    mixer.clipAction(rig.idle).play()
-    mixer.update(0)
+    rig = props.modelConfig.kind && props.modelConfig.kind !== 'reference' ? buildSurfaceRig(gltf.scene, props.modelConfig.kind === 'anatomy', props.modelConfig.facingRotation) : buildHumanRig(gltf.scene, gltf.animations, props.modelConfig)
+    if (rig.idle) { mixer = new THREE.AnimationMixer(gltf.scene); mixer.clipAction(rig.idle).play(); mixer.update(0) }
+    resize()
     rig.highlight(props.selected, props.side)
     ready.value = true
     emit('progress', 100)
@@ -367,7 +377,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div ref="host" class="body-canvas human-body-viewer" tabindex="0" role="application"
-    :aria-busy="!ready" :aria-label="`Animated 3D human body${selected ? `. Selected: ${regionLabels[selected]}` : ''}. Drag to rotate, pinch or scroll to zoom. Arrow keys rotate, plus and minus zoom. Use the region buttons for keyboard selection.`"
+    :data-body-kind="modelConfig.kind ?? 'reference'" :aria-busy="!ready" :aria-label="`${modelConfig.kind === 'anatomy' ? 'Reference organs and bones' : modelConfig.kind === 'personal' ? 'Personal 3D human model' : 'Animated 3D human body'}${selected ? `. Selected: ${regionLabels[selected]}` : ''}. Drag to rotate, pinch or scroll to zoom. Arrow keys rotate, plus and minus zoom. Use the region buttons for keyboard selection.`"
     @pointerdown="pointerDown" @pointermove="pointerMove" @pointerup="pointerUp" @pointercancel="pointerCancel" @keydown="handleKey">
     <div v-if="ready && selected" ref="label" class="human-region-label" aria-hidden="true"><span></span>{{ regionLabels[selected] }}</div>
   </div>

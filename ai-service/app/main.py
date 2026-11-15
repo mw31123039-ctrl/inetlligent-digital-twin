@@ -35,6 +35,7 @@ class Settings(BaseSettings):
     dental_learning_dir: str = 'training-data/app'
     cancer_model_dir: str = 'models/cancer'
     cancer_knowledge_model_dir: str = 'models/cancer-knowledge'
+    cancer_calibration_path: str = 'calibration/cancer-calibration.json'
 
 settings = Settings()
 configured = settings.ai_provider == 'openai' and bool(settings.openai_api_key and settings.openai_model and settings.allow_external_ai)
@@ -85,13 +86,15 @@ async def assess(request: AssessRequest):
 
 @app.get('/v1/cancer/status', dependencies=[Depends(authorize)])
 def cancer_model_status():
-    return cancer_status(Path(Settings().cancer_model_dir))
+    current = Settings()
+    return cancer_status(Path(current.cancer_model_dir), Path(current.cancer_calibration_path))
 
 
 @app.post('/v1/cancer/analyze', response_model=CancerResult, dependencies=[Depends(authorize)])
 def cancer_analyze(request: CancerRequest):
     try:
-        return infer_cancer(Path(Settings().cancer_model_dir), request)
+        current = Settings()
+        return infer_cancer(Path(current.cancer_model_dir), request, Path(current.cancer_calibration_path))
     except Exception:
         return JSONResponse(status_code=503, content={'detail': 'No research result was generated. Check the model installation and the supported JPEG input.'})
 

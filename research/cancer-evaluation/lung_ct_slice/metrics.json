@@ -1,0 +1,380 @@
+{
+ "schema_version": "humantwin-cancer-evaluation-v1",
+ "generated": "2026-11-16",
+ "modality": "lung_ct_slice",
+ "track": "lung",
+ "model_version": "lung-efficientnet-b0-506c398b-onnx",
+ "weights_sha256": "5a8f69cb8286e1321efc7f93086db81723371b8128512ebab02c7c2d9d8f72eb",
+ "labels": [
+  "adenocarcinoma",
+  "large.cell.carcinoma",
+  "normal",
+  "squamous.cell.carcinoma"
+ ],
+ "data": "LungCancer4Types (Kabil007, Apache-2.0): the model author's own 165-image held-out test split (data/splits/test_dev_split.csv at the pinned model revision; the model was trained on the other 659 de-duplicated images). Split here by near-duplicate cluster: 40% calibration, 60% test.",
+ "splits": {
+  "calibration_images": 67,
+  "test_images": 98,
+  "test_groups": 98,
+  "unreadable_images": 0,
+  "test_label_counts": {
+   "adenocarcinoma": 40,
+   "large.cell.carcinoma": 22,
+   "normal": 6,
+   "squamous.cell.carcinoma": 30
+  }
+ },
+ "pipeline": "browser-style JPEG preparation -> app.cancer.decode_image -> app.cancer_quality.check_image -> app.cancer.prepare_input -> installed ONNX model",
+ "test_metrics_uncalibrated": {
+  "images": 98,
+  "accuracy": 0.9694,
+  "accuracy_95ci": [
+   0.9138,
+   0.9895
+  ],
+  "balanced_accuracy": 0.9689,
+  "macro_f1": 0.9585,
+  "macro_auc_one_vs_rest": 0.9847,
+  "confusion_matrix": {
+   "labels": [
+    "adenocarcinoma",
+    "large.cell.carcinoma",
+    "normal",
+    "squamous.cell.carcinoma"
+   ],
+   "rows_actual_columns_predicted": [
+    [
+     40,
+     0,
+     0,
+     0
+    ],
+    [
+     2,
+     20,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     6,
+     0
+    ],
+    [
+     0,
+     0,
+     1,
+     29
+    ]
+   ]
+  },
+  "per_class": {
+   "adenocarcinoma": {
+    "support": 40,
+    "precision": 0.9524,
+    "sensitivity_recall": 1.0,
+    "sensitivity_95ci": [
+     0.9124,
+     1
+    ],
+    "specificity": 0.9655,
+    "specificity_95ci": [
+     0.8827,
+     0.9905
+    ],
+    "f1": 0.9756,
+    "auc_one_vs_rest": 0.9806
+   },
+   "large.cell.carcinoma": {
+    "support": 22,
+    "precision": 1.0,
+    "sensitivity_recall": 0.9091,
+    "sensitivity_95ci": [
+     0.7219,
+     0.9747
+    ],
+    "specificity": 1.0,
+    "specificity_95ci": [
+     0.9519,
+     1
+    ],
+    "f1": 0.9524,
+    "auc_one_vs_rest": 0.9719
+   },
+   "normal": {
+    "support": 6,
+    "precision": 0.8571,
+    "sensitivity_recall": 1.0,
+    "sensitivity_95ci": [
+     0.6097,
+     1
+    ],
+    "specificity": 0.9891,
+    "specificity_95ci": [
+     0.941,
+     0.9981
+    ],
+    "f1": 0.9231,
+    "auc_one_vs_rest": 0.9982
+   },
+   "squamous.cell.carcinoma": {
+    "support": 30,
+    "precision": 1.0,
+    "sensitivity_recall": 0.9667,
+    "sensitivity_95ci": [
+     0.8333,
+     0.9941
+    ],
+    "specificity": 1.0,
+    "specificity_95ci": [
+     0.9465,
+     1
+    ],
+    "f1": 0.9831,
+    "auc_one_vs_rest": 0.9882
+   }
+  },
+  "cancer_vs_not": {
+   "positive_classes": [
+    "adenocarcinoma",
+    "large.cell.carcinoma",
+    "squamous.cell.carcinoma"
+   ],
+   "positives": 92,
+   "negatives": 6,
+   "sensitivity": 0.9891,
+   "sensitivity_95ci": [
+    0.941,
+    0.9981
+   ],
+   "specificity": 1.0,
+   "specificity_95ci": [
+    0.6097,
+    1
+   ],
+   "precision": 1.0,
+   "f1": 0.9945,
+   "auc": 0.9982,
+   "auc_95ci_bootstrap": [
+    0.9896,
+    1.0
+   ],
+   "confusion": {
+    "true_positive": 91,
+    "false_negative": 1,
+    "true_negative": 6,
+    "false_positive": 0
+   },
+   "decision_rule": "Predicted positive when the highest-scoring class is a cancer class."
+  },
+  "negative_log_likelihood": 0.2445,
+  "brier_score_multiclass": 0.0997,
+  "expected_calibration_error_15_bins": 0.1031
+ },
+ "test_metrics_calibrated": {
+  "images": 98,
+  "accuracy": 0.9694,
+  "accuracy_95ci": [
+   0.9138,
+   0.9895
+  ],
+  "balanced_accuracy": 0.9689,
+  "macro_f1": 0.9585,
+  "macro_auc_one_vs_rest": 0.9848,
+  "confusion_matrix": {
+   "labels": [
+    "adenocarcinoma",
+    "large.cell.carcinoma",
+    "normal",
+    "squamous.cell.carcinoma"
+   ],
+   "rows_actual_columns_predicted": [
+    [
+     40,
+     0,
+     0,
+     0
+    ],
+    [
+     2,
+     20,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     6,
+     0
+    ],
+    [
+     0,
+     0,
+     1,
+     29
+    ]
+   ]
+  },
+  "per_class": {
+   "adenocarcinoma": {
+    "support": 40,
+    "precision": 0.9524,
+    "sensitivity_recall": 1.0,
+    "sensitivity_95ci": [
+     0.9124,
+     1
+    ],
+    "specificity": 0.9655,
+    "specificity_95ci": [
+     0.8827,
+     0.9905
+    ],
+    "f1": 0.9756,
+    "auc_one_vs_rest": 0.9802
+   },
+   "large.cell.carcinoma": {
+    "support": 22,
+    "precision": 1.0,
+    "sensitivity_recall": 0.9091,
+    "sensitivity_95ci": [
+     0.7219,
+     0.9747
+    ],
+    "specificity": 1.0,
+    "specificity_95ci": [
+     0.9519,
+     1
+    ],
+    "f1": 0.9524,
+    "auc_one_vs_rest": 0.9707
+   },
+   "normal": {
+    "support": 6,
+    "precision": 0.8571,
+    "sensitivity_recall": 1.0,
+    "sensitivity_95ci": [
+     0.6097,
+     1
+    ],
+    "specificity": 0.9891,
+    "specificity_95ci": [
+     0.941,
+     0.9981
+    ],
+    "f1": 0.9231,
+    "auc_one_vs_rest": 0.9982
+   },
+   "squamous.cell.carcinoma": {
+    "support": 30,
+    "precision": 1.0,
+    "sensitivity_recall": 0.9667,
+    "sensitivity_95ci": [
+     0.8333,
+     0.9941
+    ],
+    "specificity": 1.0,
+    "specificity_95ci": [
+     0.9465,
+     1
+    ],
+    "f1": 0.9831,
+    "auc_one_vs_rest": 0.9902
+   }
+  },
+  "cancer_vs_not": {
+   "positive_classes": [
+    "adenocarcinoma",
+    "large.cell.carcinoma",
+    "squamous.cell.carcinoma"
+   ],
+   "positives": 92,
+   "negatives": 6,
+   "sensitivity": 0.9891,
+   "sensitivity_95ci": [
+    0.941,
+    0.9981
+   ],
+   "specificity": 1.0,
+   "specificity_95ci": [
+    0.6097,
+    1
+   ],
+   "precision": 1.0,
+   "f1": 0.9945,
+   "auc": 0.9982,
+   "auc_95ci_bootstrap": [
+    0.9896,
+    1.0
+   ],
+   "confusion": {
+    "true_positive": 91,
+    "false_negative": 1,
+    "true_negative": 6,
+    "false_positive": 0
+   },
+   "decision_rule": "Predicted positive when the highest-scoring class is a cancer class."
+  },
+  "negative_log_likelihood": 0.2403,
+  "brier_score_multiclass": 0.0826,
+  "expected_calibration_error_15_bins": 0.0509
+ },
+ "calibration": {
+  "method": "temperature scaling (NLL on calibration split)",
+  "temperature": 0.6219
+ },
+ "selective": {
+  "decision_threshold": 0.85,
+  "answered_fraction": 0.898,
+  "inconclusive_fraction": 0.102,
+  "accuracy_when_answered": 0.9773,
+  "accuracy_when_inconclusive": 0.9
+ },
+ "input_checks": {
+  "test_rejected": 0,
+  "test_limited": 0
+ },
+ "familiarity": {
+  "available": true,
+  "method": "class-centroid-cosine",
+  "minimum_similarity": 0.4477,
+  "test_flagged_unfamiliar": 0.1122
+ },
+ "wrong_input": {
+  "images": 172,
+  "caught": 172,
+  "caught_fraction": 1.0,
+  "would_report_finding": 0,
+  "by_source": {
+   "dermoscopy": {
+    "images": 60,
+    "rejected_by_checks": 56,
+    "flagged_unfamiliar": 4,
+    "would_report_finding": 0
+   },
+   "oral_photo": {
+    "images": 48,
+    "rejected_by_checks": 46,
+    "flagged_unfamiliar": 2,
+    "would_report_finding": 0
+   },
+   "breast_ultrasound": {
+    "images": 60,
+    "rejected_by_checks": 0,
+    "flagged_unfamiliar": 60,
+    "would_report_finding": 0
+   },
+   "synthetic": {
+    "images": 4,
+    "rejected_by_checks": 3,
+    "flagged_unfamiliar": 1,
+    "would_report_finding": 0
+   }
+  }
+ },
+ "charts": [
+  "confusion_matrix.png",
+  "roc.png",
+  "reliability.png"
+ ]
+}

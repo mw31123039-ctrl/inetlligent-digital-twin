@@ -1,0 +1,124 @@
+/* HumanTwin design tokens, light/dark themes and shell refinements. Loaded last (main.ts).
+   Text pairs meet WCAG AA (≥4.5:1; checked: muted text 6.1–8.0:1, accent text ≥5.5:1);
+   input borders reach 3:1. Spacing follows an 8px grid; one radius is used for containers and controls. */
+:root {
+  --ht-font-sans: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --ht-font-serif: Georgia, 'Times New Roman', serif;
+  --ht-fs-xs: 13px; --ht-fs-sm: 15px; --ht-fs-md: 17px; --ht-fs-lg: 20px; --ht-fs-xl: 24px; --ht-fs-2xl: 32px;
+  --ht-space-1: 8px; --ht-space-2: 16px; --ht-space-3: 24px; --ht-space-4: 32px; --ht-space-5: 40px; --ht-space-6: 48px;
+  --ht-radius: 12px;
+  color-scheme: light;
+  --ht-bg: #f4f7f5; --ht-surface: #ffffff; --ht-surface-2: #eef4f0; --ht-ink: #14302d; --ht-muted: #4a5f58;
+  --ht-line: #d3dfd8; --ht-line-strong: #78908a; --ht-shadow: rgba(20, 48, 45, .12);
+  --ht-accent: #2f8a6a; --ht-accent-strong: #22705a; --ht-accent-hover: #1a5a48; --ht-accent-text: #1d6a52; --ht-accent-soft: #e3f0e8; --ht-on-accent: #ffffff;
+  --ht-focus: #2c7fb8;
+  --ht-warn-text: #7a4a0c; --ht-warn-bg: #fdf1dc; --ht-warn-line: #d39a3a;
+  --ht-danger-text: #9b2c1f; --ht-danger-bg: #fdecea; --ht-danger-line: #d0705f;
+  --ht-notice-text: #6b3412; --ht-notice-bg: #fff3e8;
+  --ht-figure-a: #cfe2d8; --ht-figure-b: #eef5ef; --ht-figure-line: #8fb3a3; --ht-figure-organ: #b6d4c4;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ht-bg: #0e1817; --ht-surface: #152321; --ht-surface-2: #1c2d2b; --ht-ink: #e5efeb; --ht-muted: #a7bbb4;
+  --ht-line: #2b3f3b; --ht-line-strong: #5f7b74; --ht-shadow: rgba(0, 0, 0, .45);
+  --ht-accent: #4fb18d; --ht-accent-strong: #5cc19c; --ht-accent-hover: #74d0ad; --ht-accent-text: #7fd3b1; --ht-accent-soft: #1d3a31; --ht-on-accent: #0b1a15;
+  --ht-focus: #7cc3f2;
+  --ht-warn-text: #f2c27a; --ht-warn-bg: #3a2c12; --ht-warn-line: #b8862f;
+  --ht-danger-text: #f4a59a; --ht-danger-bg: #3d1d19; --ht-danger-line: #b8584a;
+  --ht-notice-text: #f6c9a4; --ht-notice-bg: #3a2617;
+  --ht-figure-a: #2c4842; --ht-figure-b: #3b5d55; --ht-figure-line: #6e958a; --ht-figure-organ: #42675e;
+}
+
+/* Responsive navigation widths (readability.css fixes 248px; restore the rail and the drawer). */
+@media (min-width: 761px) and (max-width: 980px) {
+  :root { --nav-width: 88px }
+  .sidebar { width: var(--nav-width); padding-left: 12px; padding-right: 12px }
+  .main-content { margin-left: var(--nav-width) }
+  .nav-link { justify-content: center; padding: 12px }
+}
+@media (max-width: 760px) { :root { --nav-width: 0px } }
+/* The rail used a CSS label that duplicated the visible label in the mobile drawer. */
+.nav-link::after { content: none !important }
+
+/* Header: theme and text-size controls with visible labels. */
+.header-actions { gap: var(--ht-space-1) }
+.header-toggle { display: inline-flex; align-items: center; gap: var(--ht-space-1); min-height: 40px; padding: 4px 12px; border: 1px solid var(--ht-line); border-radius: var(--ht-radius); background: var(--ht-surface); color: var(--ht-ink); font-size: var(--ht-fs-sm); font-weight: 600 }
+.header-toggle[aria-pressed="true"] { border-color: var(--ht-accent); background: var(--ht-accent-soft) }
+.header-toggle .toggle-glyph { font-size: 16px; font-weight: 700 }
+@media (max-width: 1100px) { .header-toggle .toggle-label { display: none } .header-toggle { padding: 4px 10px } }
+
+/* Sidebar information card: readable sizes and an aligned bullet. */
+.demo-card strong { font-size: 16px; line-height: 1.4 }
+.demo-card p { font-size: 15px; line-height: 1.6; color: var(--ht-muted) }
+.local-note { display: flex; align-items: flex-start; gap: var(--ht-space-1); font-size: 14px; line-height: 1.5; white-space: normal; color: var(--ht-accent-text); margin-top: var(--ht-space-2) }
+.local-note i { flex: none; width: 8px; height: 8px; margin-top: calc(.75em - 4px); border-radius: 50%; background: var(--ht-accent) }
+.sidebar-eyebrow, .sidebar-version { color: var(--ht-muted) }
+
+/* Small labels on the shell that were below 4.5:1. */
+.breadcrumb, .breadcrumb span, .page-heading p, .page-footer, .page-footer span { color: var(--ht-muted) }
+.breadcrumb { font-size: 12px }
+
+/* Mobile bottom navigation. */
+.bottom-nav { display: none }
+@media (max-width: 760px) {
+  .bottom-nav { position: fixed; z-index: 28; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(5, 1fr); padding: 4px 4px calc(4px + env(safe-area-inset-bottom)); background: var(--ht-surface); border-top: 1px solid var(--ht-line); box-shadow: 0 -4px 16px var(--ht-shadow) }
+  .bottom-nav button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 56px; border-radius: var(--ht-radius); color: var(--ht-muted); font-size: 12px; font-weight: 600 }
+  .bottom-nav button[aria-current="page"] { color: var(--ht-accent-text); background: var(--ht-accent-soft) }
+  .main-content { padding-bottom: 88px }
+  .toast-message { bottom: 88px }
+  .sidebar { z-index: 29 }
+}
+
+/* Empty states. */
+.history-empty { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--ht-space-1); padding: var(--ht-space-5) var(--ht-space-3) }
+.history-empty h2 { font-size: var(--ht-fs-xl); font-weight: 650 }
+.history-empty p { max-width: 460px; color: var(--ht-muted); font-size: var(--ht-fs-sm) }
+
+/* Dark theme for the shell and the pages that support it. Body explorer, Dental studio and
+   Patient twin keep a light content area (their 3D scenes and illustrations are tuned for light). */
+:root[data-theme="dark"] body { background: var(--ht-bg); color: var(--ht-ink) }
+:root[data-theme="dark"] .app-shell { color: var(--ht-ink) }
+:root[data-theme="dark"] .topbar { background: var(--ht-surface); border-bottom-color: var(--ht-line) }
+:root[data-theme="dark"] :is(.brand, .product-title, .profile-button, .help-button, .mobile-menu) { color: var(--ht-ink) }
+:root[data-theme="dark"] .brand-twin { color: var(--ht-accent-text) }
+:root[data-theme="dark"] .header-divider { background: var(--ht-line) }
+:root[data-theme="dark"] .profile-avatar { background: var(--ht-surface-2); color: var(--ht-ink) }
+:root[data-theme="dark"] :is(.profile-dropdown, .app-dialog) { background: var(--ht-surface); border-color: var(--ht-line); color: var(--ht-ink) }
+:root[data-theme="dark"] :is(.profile-dropdown p, .dialog-content > p, .help-steps, .dialog-content p.dialog-muted) { color: var(--ht-muted); background: transparent }
+:root[data-theme="dark"] .profile-dropdown button { border-top-color: var(--ht-line) }
+:root[data-theme="dark"] .sidebar { background: var(--ht-surface); border-right-color: var(--ht-line) }
+:root[data-theme="dark"] .nav-link { color: var(--ht-muted) }
+:root[data-theme="dark"] .nav-link:hover { background: var(--ht-surface-2); color: var(--ht-accent-text) }
+:root[data-theme="dark"] .nav-link.active { background: var(--ht-accent-soft); color: var(--ht-accent-text) }
+:root[data-theme="dark"] .demo-card { background: var(--ht-surface-2); border-color: var(--ht-line) }
+:root[data-theme="dark"] .demo-symbol { background: var(--ht-accent-soft); border-color: var(--ht-line); color: var(--ht-accent-text) }
+:root[data-theme="dark"] .page-heading h1 { color: var(--ht-ink) }
+:root[data-theme="dark"] .text-size-button { background: var(--ht-surface); border-color: var(--ht-line); color: var(--ht-ink) }
+:root[data-theme="dark"] :is(.button-secondary, .icon-button) { background: var(--ht-surface); border-color: var(--ht-line-strong); color: var(--ht-ink) }
+:root[data-theme="dark"] .button-primary { background: var(--ht-accent-strong); border-color: var(--ht-accent-strong); color: var(--ht-on-accent) }
+:root[data-theme="dark"] .toast-message { background: var(--ht-surface); border-color: var(--ht-line); color: var(--ht-accent-text) }
+:root[data-theme="dark"] .app-dialog .icon-button { background: var(--ht-surface-2) }
+:root[data-theme="dark"] .ai-auth { background: var(--ht-surface-2); border-color: var(--ht-line) }
+:root[data-theme="dark"] .ai-auth label { color: var(--ht-muted) }
+:root[data-theme="dark"] .ai-auth input { background: var(--ht-surface); border-color: var(--ht-line-strong); color: var(--ht-ink) }
+:root[data-theme="dark"] .app-shell:not(.light-content) :is(.panel, .settings-panel, .saved-assessment, .area-card) { background: var(--ht-surface); border-color: var(--ht-line); color: var(--ht-ink); box-shadow: none }
+:root[data-theme="dark"] .app-shell:not(.light-content) .overview-hero { background: linear-gradient(120deg, var(--ht-surface) 20%, var(--ht-surface-2)) }
+:root[data-theme="dark"] .app-shell:not(.light-content) :is(.overview-hero p, .overview-stats span, .area-card > div > span, .setting-row p, .saved-main p, .saved-date, .saved-pain > span, .large-empty p, .text-muted, .section-heading > span, .ai-summary, .ai-history-record p) { color: var(--ht-muted) }
+:root[data-theme="dark"] .app-shell:not(.light-content) :is(.notice-banner, .storage-error) { background: var(--ht-surface-2); border-color: var(--ht-line); color: var(--ht-ink) }
+:root[data-theme="dark"] .app-shell:not(.light-content) :is(.empty-icon, .area-card-icon, .saved-icon) { background: var(--ht-accent-soft); color: var(--ht-accent-text) }
+:root[data-theme="dark"] .app-shell:not(.light-content) .text-input { background: var(--ht-surface); border-color: var(--ht-line-strong); color: var(--ht-ink) }
+:root[data-theme="dark"] .app-shell:not(.light-content) .setting-row { border-top-color: var(--ht-line) }
+:root[data-theme="dark"] .app-shell:not(.light-content) :is(.ai-summary h2, .ai-summary h3, .saved-main h2, .large-empty h2, .overview-hero h2) { color: var(--ht-ink) }
+:root[data-theme="dark"] .app-shell:not(.light-content) .segmented { background: var(--ht-surface-2); border-color: var(--ht-line) }
+:root[data-theme="dark"] .app-shell:not(.light-content) .ai-mode-bar { color: var(--ht-muted) }
+/* Light-only modules: keep a light canvas inside the dark shell. */
+:root[data-theme="dark"] .app-shell.light-content .main-content { color-scheme: light; background: #f4f7f5; color: #19393f; border-radius: var(--ht-radius) 0 0 0 }
+:root[data-theme="dark"] .app-shell.light-content .main-content .page-heading h1 { color: #183a40 }
+:root[data-theme="dark"] .app-shell.light-content .main-content :is(.breadcrumb, .breadcrumb span, .page-heading p, .page-footer, .page-footer span) { color: #4a5f58 }
+:root[data-theme="dark"] .app-shell.light-content .main-content .button-secondary { background: #fff; color: #315e54; border-color: #d4e1d8 }
+:root[data-theme="dark"] .app-shell.light-content .main-content .button-primary { background: #287d68; border-color: #287d68; color: #fff }
+:root[data-theme="dark"] .app-shell.light-content .main-content .icon-button { background: #fff; color: #6c7b91; border-color: #dfe5ed }
+:root[data-theme="dark"] .app-shell.light-content .main-content { --ht-bg: #f4f7f5; --ht-surface: #fff; --ht-surface-2: #eef4f0; --ht-ink: #14302d; --ht-muted: #4a5f58; --ht-line: #d3dfd8; --ht-line-strong: #78908a; --ht-accent-text: #1d6a52; --ht-accent-soft: #e3f0e8 }
+
+/* "A+" text size: scale the shared type tokens (the cancer page and History use them). */
+.app-shell.large-text { --ht-fs-xs: 15px; --ht-fs-sm: 17px; --ht-fs-md: 20px; --ht-fs-lg: 23px; --ht-fs-xl: 28px; --ht-fs-2xl: 36px }

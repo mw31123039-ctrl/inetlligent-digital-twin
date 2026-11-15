@@ -1,10 +1,133 @@
 {
   "$defs": {
-    "Explanation": {
+    "Confidence": {
+      "additionalProperties": false,
+      "description": "How strongly the model prefers its top category. Not a personal probability of cancer.",
+      "properties": {
+        "top_label": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Top Label",
+          "type": "string"
+        },
+        "probability": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Probability",
+          "type": "number"
+        },
+        "level": {
+          "enum": [
+            "high",
+            "moderate",
+            "low"
+          ],
+          "title": "Level",
+          "type": "string"
+        },
+        "calibration": {
+          "enum": [
+            "temperature-scaled",
+            "none"
+          ],
+          "title": "Calibration",
+          "type": "string"
+        },
+        "temperature": {
+          "anyOf": [
+            {
+              "maximum": 20,
+              "minimum": 0.05,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Temperature"
+        },
+        "decision_threshold": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Decision Threshold",
+          "type": "number"
+        },
+        "normalized_entropy": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Normalized Entropy",
+          "type": "number"
+        },
+        "margin": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Margin",
+          "type": "number"
+        },
+        "interpretation": {
+          "const": "model-confidence-not-personal-risk",
+          "title": "Interpretation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "top_label",
+        "probability",
+        "level",
+        "calibration",
+        "decision_threshold",
+        "normalized_entropy",
+        "margin",
+        "interpretation"
+      ],
+      "title": "Confidence",
+      "type": "object"
+    },
+    "Familiarity": {
+      "additionalProperties": false,
+      "description": "Similarity of the image embedding to embeddings of the model's own reference images.",
+      "properties": {
+        "method": {
+          "const": "class-centroid-cosine",
+          "title": "Method",
+          "type": "string"
+        },
+        "similarity": {
+          "maximum": 1,
+          "minimum": -1,
+          "title": "Similarity",
+          "type": "number"
+        },
+        "minimum_similarity": {
+          "maximum": 1,
+          "minimum": -1,
+          "title": "Minimum Similarity",
+          "type": "number"
+        },
+        "familiar": {
+          "title": "Familiar",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "method",
+        "similarity",
+        "minimum_similarity",
+        "familiar"
+      ],
+      "title": "Familiarity",
+      "type": "object"
+    },
+    "Heatmap": {
       "additionalProperties": false,
       "properties": {
         "method": {
-          "const": "occlusion-sensitivity",
+          "enum": [
+            "grad-cam",
+            "attention-rollout",
+            "occlusion-sensitivity"
+          ],
           "title": "Method",
           "type": "string"
         },
@@ -14,12 +137,20 @@
           "title": "Target Label",
           "type": "string"
         },
-        "grid_size": {
-          "enum": [
-            4,
-            6
-          ],
-          "title": "Grid Size",
+        "class_specific": {
+          "title": "Class Specific",
+          "type": "boolean"
+        },
+        "grid_width": {
+          "maximum": 32,
+          "minimum": 2,
+          "title": "Grid Width",
+          "type": "integer"
+        },
+        "grid_height": {
+          "maximum": 32,
+          "minimum": 2,
+          "title": "Grid Height",
           "type": "integer"
         },
         "values": {
@@ -28,13 +159,17 @@
             "minimum": 0,
             "type": "number"
           },
-          "maxItems": 36,
-          "minItems": 16,
+          "maxItems": 1024,
+          "minItems": 4,
           "title": "Values",
           "type": "array"
         },
         "meaning": {
-          "const": "score-drop-under-occlusion",
+          "enum": [
+            "regions-that-raised-the-score",
+            "patches-the-model-attended-to",
+            "score-drop-under-occlusion"
+          ],
           "title": "Meaning",
           "type": "string"
         },
@@ -42,24 +177,19 @@
           "const": false,
           "title": "Localization",
           "type": "boolean"
-        },
-        "max_score_drop": {
-          "maximum": 1,
-          "minimum": 0,
-          "title": "Max Score Drop",
-          "type": "number"
         }
       },
       "required": [
         "method",
         "target_label",
-        "grid_size",
+        "class_specific",
+        "grid_width",
+        "grid_height",
         "values",
         "meaning",
-        "localization",
-        "max_score_drop"
+        "localization"
       ],
-      "title": "Explanation",
+      "title": "Heatmap",
       "type": "object"
     },
     "ImageChecks": {
@@ -89,12 +219,38 @@
           "title": "Contrast",
           "type": "number"
         },
-        "warnings": {
+        "sharpness": {
+          "minimum": 0,
+          "title": "Sharpness",
+          "type": "number"
+        },
+        "colored_fraction": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Colored Fraction",
+          "type": "number"
+        },
+        "overexposed_fraction": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Overexposed Fraction",
+          "type": "number"
+        },
+        "decision": {
+          "enum": [
+            "accepted",
+            "accepted-with-warnings",
+            "rejected"
+          ],
+          "title": "Decision",
+          "type": "string"
+        },
+        "findings": {
           "items": {
-            "type": "string"
+            "$ref": "#/$defs/InputCheck"
           },
-          "maxItems": 8,
-          "title": "Warnings",
+          "maxItems": 12,
+          "title": "Findings",
           "type": "array"
         }
       },
@@ -103,9 +259,64 @@
         "height",
         "brightness",
         "contrast",
-        "warnings"
+        "sharpness",
+        "colored_fraction",
+        "overexposed_fraction",
+        "decision",
+        "findings"
       ],
       "title": "ImageChecks",
+      "type": "object"
+    },
+    "InputCheck": {
+      "additionalProperties": false,
+      "description": "One observation about the image. 'limiting' makes the finding inconclusive; 'reject' stops analysis.",
+      "properties": {
+        "code": {
+          "enum": [
+            "blank-image",
+            "low-contrast",
+            "overexposed",
+            "bright-areas",
+            "very-dark",
+            "dark",
+            "severe-blur",
+            "blur",
+            "unexpected-color",
+            "color-content",
+            "unexpected-grayscale",
+            "weak-color",
+            "small-image",
+            "elongated-image",
+            "face-detected",
+            "content-not-verified"
+          ],
+          "title": "Code",
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "info",
+            "warning",
+            "limiting",
+            "reject"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "message": {
+          "maxLength": 240,
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "severity",
+        "message"
+      ],
+      "title": "InputCheck",
       "type": "object"
     },
     "ModelInfo": {
@@ -172,41 +383,12 @@
       ],
       "title": "Score",
       "type": "object"
-    },
-    "Uncertainty": {
-      "additionalProperties": false,
-      "properties": {
-        "normalized_entropy": {
-          "maximum": 1,
-          "minimum": 0,
-          "title": "Normalized Entropy",
-          "type": "number"
-        },
-        "margin": {
-          "maximum": 1,
-          "minimum": 0,
-          "title": "Margin",
-          "type": "number"
-        },
-        "interpretation": {
-          "const": "research-only",
-          "title": "Interpretation",
-          "type": "string"
-        }
-      },
-      "required": [
-        "normalized_entropy",
-        "margin",
-        "interpretation"
-      ],
-      "title": "Uncertainty",
-      "type": "object"
     }
   },
   "additionalProperties": false,
   "properties": {
     "schema_version": {
-      "const": "humantwin-cancer-result-v1",
+      "const": "humantwin-cancer-result-v2",
       "title": "Schema Version",
       "type": "string"
     },
@@ -254,14 +436,86 @@
       "title": "Input Sha256",
       "type": "string"
     },
+    "outcome": {
+      "enum": [
+        "finding",
+        "inconclusive",
+        "input-rejected"
+      ],
+      "title": "Outcome",
+      "type": "string"
+    },
+    "outcome_reasons": {
+      "items": {
+        "enum": [
+          "input-rejected",
+          "input-quality",
+          "low-confidence",
+          "unfamiliar-image"
+        ],
+        "type": "string"
+      },
+      "maxItems": 4,
+      "title": "Outcome Reasons",
+      "type": "array"
+    },
+    "finding_label": {
+      "anyOf": [
+        {
+          "maxLength": 80,
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Finding Label"
+    },
     "scores": {
       "items": {
         "$ref": "#/$defs/Score"
       },
       "maxItems": 20,
-      "minItems": 2,
       "title": "Scores",
       "type": "array"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Confidence"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "familiarity": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Familiarity"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "heatmap": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Heatmap"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "image_checks": {
+      "$ref": "#/$defs/ImageChecks"
     },
     "clinical_validation": {
       "const": false,
@@ -312,39 +566,6 @@
       "default": null,
       "title": "Runtime"
     },
-    "uncertainty": {
-      "anyOf": [
-        {
-          "$ref": "#/$defs/Uncertainty"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "default": null
-    },
-    "explanation": {
-      "anyOf": [
-        {
-          "$ref": "#/$defs/Explanation"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "default": null
-    },
-    "image_checks": {
-      "anyOf": [
-        {
-          "$ref": "#/$defs/ImageChecks"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "default": null
-    },
     "model_info": {
       "anyOf": [
         {
@@ -365,7 +586,10 @@
     "target",
     "weights_sha256",
     "input_sha256",
+    "outcome",
+    "outcome_reasons",
     "scores",
+    "image_checks",
     "clinical_validation",
     "calibrated_cancer_probability",
     "scope",

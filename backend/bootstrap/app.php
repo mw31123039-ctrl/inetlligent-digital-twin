@@ -51,7 +51,7 @@ return Application::configure(basePath: dirname(__DIR__))
         });
         // Never log raw provider/HTTP exceptions containing health request data.
         $exceptions->dontReport([RequestException::class, ConnectionException::class]);
-        $exceptions->dontFlash(['password', 'password_confirmation', 'image_data_url', 'text', 'token', 'messages', 'assessment', 'payload', 'turns', 'reported', 'anatomy_explored', 'photo', 'photos', 'prompt', 'notes', 'question', 'reported_findings', 'subject_code', 'reviewer_code', 'crowns', 'visit_code', 'age_years', 'findings', 'classifications', 'review', 'rights_reference']);
+        $exceptions->dontFlash(['password', 'password_confirmation', 'image_data_url', 'text', 'token', 'messages', 'assessment', 'payload', 'turns', 'reported', 'anatomy_explored', 'photo', 'photos', 'prompt', 'notes', 'question', 'reported_findings', 'subject_code', 'reviewer_code', 'crowns', 'visit_code', 'age_years', 'findings', 'classifications', 'review', 'rights_reference', 'thumbnail_data_url', 'note']);
         $exceptions->shouldRenderJsonWhen(
             fn (Request $request) => $request->is('api/*') || $request->expectsJson(),
         );

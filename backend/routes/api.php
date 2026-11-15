@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CancerReportController;
 use App\Http\Controllers\CancerResearchController;
 use App\Http\Controllers\ConversationController;
 use App\Http\Controllers\DentalCoachController;
@@ -22,6 +23,10 @@ Route::post('/login', [SessionController::class, 'login'])->middleware('throttle
 Route::middleware(['auth:sanctum', 'throttle:private-api'])->group(function () {
     Route::post('/cancer/analyze', [CancerResearchController::class, 'analyze'])->middleware('throttle:ai-turns');
     Route::post('/cancer/knowledge', [CancerResearchController::class, 'knowledge'])->middleware('throttle:ai-turns');
+    Route::get('/cancer/reports', [CancerReportController::class, 'index']);
+    Route::post('/cancer/reports', [CancerReportController::class, 'store']);
+    Route::get('/cancer/reports/{id}', [CancerReportController::class, 'show'])->whereUuid('id');
+    Route::delete('/cancer/reports/{id}', [CancerReportController::class, 'destroy'])->whereUuid('id');
     Route::get('/dental/screening/cases', [DentalScreeningController::class, 'index']);
     Route::post('/dental/screening/cases', [DentalScreeningController::class, 'store'])->middleware('throttle:ai-turns');
     Route::get('/dental/screening/cases/{caseId}', [DentalScreeningController::class, 'show'])->where('caseId', '[a-f0-9]{64}');

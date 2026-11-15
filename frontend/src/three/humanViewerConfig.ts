@@ -4,6 +4,7 @@ export type HumanView = 'front' | 'back' | 'left' | 'right'
 
 export interface HumanModelConfig {
   url: string
+  kind?: 'reference' | 'anatomy' | 'personal'
   /** Rotation around Y applied before framing. The model should face +Z. */
   facingRotation?: number
   /** Optional source A-pose adjustment in radians; zero for an already relaxed rig. */

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\CancerResultContract;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\Rule;
 use Opis\JsonSchema\Validator;
@@ -25,7 +28,7 @@ class CancerResearchController extends Controller
         try {
             $response = Http::timeout(8)->connectTimeout(3)->withHeaders(['X-Service-Key' => config('ai.key')])
                 ->acceptJson()->get(config('ai.url').'/v1/cancer/status');
-            if ($response->successful() && strlen($response->body()) <= 20000 && $response->json('available') === true
+            if ($response->successful() && strlen($response->body()) <= 40000 && $response->json('available') === true
                 && $response->json('clinical_validation') === false && $response->json('external_requests') === false
                 && $response->json('scope') === 'single-2d-image' && is_array($response->json('pathways'))) {
                 $upstream = $response->json('pathways');
@@ -46,6 +49,15 @@ class CancerResearchController extends Controller
                     'state' => $configured ? 'configured-unvalidated' : ($upstream === null ? 'service-unavailable' : (($model['state'] ?? null) === 'invalid-artifacts' ? 'invalid-artifacts' : 'not-configured'))];
                 if ($configured) {
                     $item = [...$item, 'model_version' => $model['model_version'], 'target' => $model['target'], 'weights_sha256' => $model['weights_sha256']];
+                    $labels = $model['labels'] ?? null;
+                    if (is_array($labels) && count($labels) >= 2 && count($labels) <= 20
+                        && collect($labels)->every(fn ($label) => is_string($label) && strlen($label) >= 1 && strlen($label) <= 80)) {
+                        $item['labels'] = array_values($labels);
+                    }
+                    if (in_array($model['heatmap_method'] ?? null, ['grad-cam', 'attention-rollout', 'occlusion-sensitivity'], true)) {
+                        $item['heatmap_method'] = $model['heatmap_method'];
+                    }
+                    $item['calibration'] = ($model['calibration'] ?? null) === 'temperature-scaled' ? 'temperature-scaled' : 'none';
                 }
                 $models[] = $item;
             }
@@ -56,7 +68,7 @@ class CancerResearchController extends Controller
             'external_requests' => false, 'scope' => 'single-2d-image', 'pathways' => $pathways]);
     }
 
-    public function analyze(Request $request): JsonResponse
+    public function analyze(Request $request, CancerResultContract $contract): JsonResponse
     {
         $data = $request->validate([
             'track' => ['required', Rule::in(array_keys(self::MODALITIES))],
@@ -77,29 +89,26 @@ class CancerResearchController extends Controller
         try {
             $response = Http::timeout(45)->connectTimeout(3)->withHeaders(['X-Service-Key' => config('ai.key')])
                 ->acceptJson()->post(config('ai.url').'/v1/cancer/analyze', $data);
-            if (! $response->successful() || strlen($response->body()) > 20000) {
+            if (! $response->successful() || strlen($response->body()) > 60000) {
                 return response()->json(['message' => 'No research result was generated. Check that a compatible local model is installed.'], 503);
             }
-            $schema = json_decode(file_get_contents(base_path('../contracts/cancer-result.schema.json')));
-            if (! (new Validator)->validate(json_decode($response->body()), $schema)->isValid()) {
-                return response()->json(['message' => 'The model response failed validation. No result was accepted.'], 502);
+            $violation = $contract->violation($response->body(), $data, $raw);
+            if ($violation !== null) {
+                return response()->json(['message' => $violation], 502);
             }
             $result = $response->json();
-            if ($result['track'] !== $data['track'] || $result['modality'] !== $data['modality']
-                || $result['input_sha256'] !== hash('sha256', $raw)
-                || count(array_unique(array_column($result['scores'], 'label'))) !== count($result['scores'])
-                || abs(array_sum(array_column($result['scores'], 'value')) - 1) > .001) {
-                return response()->json(['message' => 'The result did not match this image or classifier contract. No result was accepted.'], 502);
-            }
-            if (isset($result['explanation']) && (count($result['explanation']['values']) !== $result['explanation']['grid_size'] ** 2
-                || ! in_array($result['explanation']['target_label'], array_column($result['scores'], 'label'), true))) {
-                return response()->json(['message' => 'The explanation did not match this classifier output. No result was accepted.'], 502);
-            }
+            // Kept briefly, encrypted, so the user can save exactly this output to their history.
+            Cache::put($this->resultCacheKey($request->user()->id, $result['input_sha256']), Crypt::encryptString(json_encode($result, JSON_THROW_ON_ERROR)), now()->addMinutes(30));
 
             return response()->json($result);
         } catch (Throwable) {
             return response()->json(['message' => 'The local research model is unavailable. No result was generated.'], 503);
         }
+    }
+
+    public static function resultCacheKey(int $userId, string $inputSha256): string
+    {
+        return 'cancer-result:'.$userId.':'.$inputSha256;
     }
 
     public function knowledgeStatus(): JsonResponse
