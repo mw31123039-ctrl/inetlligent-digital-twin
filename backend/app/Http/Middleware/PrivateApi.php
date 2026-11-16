@@ -19,6 +19,12 @@ class PrivateApi
         if ($request->isMethod('POST') && $request->path() === 'api/cancer/analyze') {
             $maxBytes = 1600000;
         }
+        if ($request->isMethod('POST') && $request->path() === 'api/clinical/documents') {
+            $maxBytes = 5400000;
+        }
+        if ($request->isMethod('POST') && str_starts_with($request->path(), 'api/clinical/sessions/')) {
+            $maxBytes = 480000; // encrypted conversation token plus one answer
+        }
         abort_if((int) $request->header('Content-Length', 0) > $maxBytes, 413, 'Request too large.');
         try {
             $response = $next($request);

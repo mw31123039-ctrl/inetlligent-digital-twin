@@ -1,0 +1,1217 @@
+{
+  "$defs": {
+    "AnatomyRef": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "side": {
+          "enum": [
+            "left",
+            "right",
+            "both",
+            "midline",
+            "unknown"
+          ],
+          "title": "Side",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "selected",
+            "reported",
+            "related",
+            "finding"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "relation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relation"
+        },
+        "relation_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relation Note"
+        },
+        "marker": {
+          "const": "illustrative_anatomy",
+          "title": "Marker",
+          "type": "string"
+        },
+        "fact_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        },
+        "explanation_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Explanation Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "side",
+        "role",
+        "marker",
+        "fact_ids",
+        "explanation_ids"
+      ],
+      "title": "AnatomyRef",
+      "type": "object"
+    },
+    "AnatomySelection": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 64,
+          "minLength": 3,
+          "pattern": "^[a-z0-9.\\-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "side": {
+          "default": "unknown",
+          "enum": [
+            "left",
+            "right",
+            "both",
+            "midline",
+            "unknown"
+          ],
+          "title": "Side",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "AnatomySelection",
+      "type": "object"
+    },
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "chunk_id": {
+          "title": "Chunk Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "publisher": {
+          "title": "Publisher",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "quote": {
+          "title": "Quote",
+          "type": "string"
+        },
+        "lead": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Lead"
+        },
+        "last_reviewed": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Last Reviewed"
+        },
+        "next_review_due": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Next Review Due"
+        },
+        "review_overdue": {
+          "title": "Review Overdue",
+          "type": "boolean"
+        },
+        "retrieved_at": {
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "licence": {
+          "title": "Licence",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_id",
+        "chunk_id",
+        "title",
+        "publisher",
+        "url",
+        "quote",
+        "lead",
+        "last_reviewed",
+        "next_review_due",
+        "review_overdue",
+        "retrieved_at",
+        "licence"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "ClinicianSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "headline": {
+          "title": "Headline",
+          "type": "string"
+        },
+        "patient_reported": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Patient Reported",
+          "type": "array"
+        },
+        "from_records": {
+          "items": {
+            "type": "string"
+          },
+          "title": "From Records",
+          "type": "array"
+        },
+        "observations_note": {
+          "title": "Observations Note",
+          "type": "string"
+        },
+        "interpretations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Interpretations",
+          "type": "array"
+        },
+        "urgency": {
+          "title": "Urgency",
+          "type": "string"
+        },
+        "missing": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing",
+          "type": "array"
+        },
+        "contradictions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Contradictions",
+          "type": "array"
+        },
+        "provenance_note": {
+          "title": "Provenance Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "headline",
+        "patient_reported",
+        "from_records",
+        "observations_note",
+        "interpretations",
+        "urgency",
+        "missing",
+        "contradictions",
+        "provenance_note"
+      ],
+      "title": "ClinicianSummary",
+      "type": "object"
+    },
+    "Contradiction": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "symptom_presence",
+            "attribute",
+            "laterality",
+            "memory"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "fact_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        },
+        "message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Message Ids",
+          "type": "array"
+        },
+        "resolved": {
+          "title": "Resolved",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "description",
+        "fact_ids",
+        "message_ids",
+        "resolved"
+      ],
+      "title": "Contradiction",
+      "type": "object"
+    },
+    "EvidenceItem": {
+      "additionalProperties": false,
+      "properties": {
+        "statement": {
+          "title": "Statement",
+          "type": "string"
+        },
+        "fact_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        },
+        "citation_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Citation Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "statement",
+        "fact_ids",
+        "citation_ids"
+      ],
+      "title": "EvidenceItem",
+      "type": "object"
+    },
+    "Explanation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "condition_id": {
+          "title": "Condition Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "fit": {
+          "enum": [
+            "fits",
+            "partly_fits"
+          ],
+          "title": "Fit",
+          "type": "string"
+        },
+        "plain_language": {
+          "title": "Plain Language",
+          "type": "string"
+        },
+        "supporting": {
+          "items": {
+            "$ref": "#/$defs/EvidenceItem"
+          },
+          "title": "Supporting",
+          "type": "array"
+        },
+        "conflicting": {
+          "items": {
+            "$ref": "#/$defs/EvidenceItem"
+          },
+          "title": "Conflicting",
+          "type": "array"
+        },
+        "missing": {
+          "items": {
+            "$ref": "#/$defs/MissingFeature"
+          },
+          "title": "Missing",
+          "type": "array"
+        },
+        "pathway": {
+          "title": "Pathway",
+          "type": "string"
+        },
+        "pathway_label": {
+          "title": "Pathway Label",
+          "type": "string"
+        },
+        "urgent_condition": {
+          "title": "Urgent Condition",
+          "type": "boolean"
+        },
+        "scope_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scope Note"
+        },
+        "anatomy_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Anatomy Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "condition_id",
+        "name",
+        "fit",
+        "plain_language",
+        "supporting",
+        "conflicting",
+        "missing",
+        "pathway",
+        "pathway_label",
+        "urgent_condition",
+        "scope_note",
+        "anatomy_ids"
+      ],
+      "title": "Explanation",
+      "type": "object"
+    },
+    "Fact": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "symptom",
+            "attribute",
+            "trigger",
+            "risk_factor",
+            "history",
+            "medication",
+            "allergy",
+            "screen"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        },
+        "numeric": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Numeric"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "present",
+            "absent",
+            "uncertain"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "temporal": {
+          "enum": [
+            "current",
+            "past"
+          ],
+          "title": "Temporal",
+          "type": "string"
+        },
+        "anatomy_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Anatomy Id"
+        },
+        "side": {
+          "anyOf": [
+            {
+              "enum": [
+                "left",
+                "right",
+                "both",
+                "midline",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Side"
+        },
+        "provenance": {
+          "enum": [
+            "patient_statement",
+            "patient_answer",
+            "patient_memory",
+            "document_extract",
+            "clinician_confirmed",
+            "ai_suggestion"
+          ],
+          "title": "Provenance",
+          "type": "string"
+        },
+        "extractor": {
+          "enum": [
+            "lexicon",
+            "structured_answer",
+            "language_model",
+            "memory",
+            "document",
+            "derived"
+          ],
+          "title": "Extractor",
+          "type": "string"
+        },
+        "spans": {
+          "items": {
+            "$ref": "#/$defs/Span"
+          },
+          "title": "Spans",
+          "type": "array"
+        },
+        "source_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Ref"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "key",
+        "value",
+        "label",
+        "status",
+        "temporal",
+        "provenance",
+        "extractor",
+        "spans"
+      ],
+      "title": "Fact",
+      "type": "object"
+    },
+    "MissingFeature": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "question_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Question Id"
+        }
+      },
+      "required": [
+        "key",
+        "label",
+        "question_id"
+      ],
+      "title": "MissingFeature",
+      "type": "object"
+    },
+    "MissingInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "priority": {
+          "enum": [
+            "safety",
+            "core",
+            "discriminating",
+            "history"
+          ],
+          "title": "Priority",
+          "type": "string"
+        }
+      },
+      "required": [
+        "key",
+        "label",
+        "reason",
+        "priority"
+      ],
+      "title": "MissingInfo",
+      "type": "object"
+    },
+    "Observation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "fact_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        },
+        "provenance": {
+          "enum": [
+            "patient_statement",
+            "patient_answer",
+            "patient_memory",
+            "document_extract",
+            "clinician_confirmed",
+            "ai_suggestion"
+          ],
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "fact_ids",
+        "provenance"
+      ],
+      "title": "Observation",
+      "type": "object"
+    },
+    "Option": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "label"
+      ],
+      "title": "Option",
+      "type": "object"
+    },
+    "Processing": {
+      "additionalProperties": false,
+      "properties": {
+        "engine_ms": {
+          "minimum": 0,
+          "title": "Engine Ms",
+          "type": "number"
+        },
+        "retrieval": {
+          "enum": [
+            "bm25-anatomy-tier-freshness",
+            "bm25+semantic-rerank"
+          ],
+          "title": "Retrieval",
+          "type": "string"
+        },
+        "language_model_used": {
+          "title": "Language Model Used",
+          "type": "boolean"
+        },
+        "external_requests": {
+          "title": "External Requests",
+          "type": "boolean"
+        },
+        "stages": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Stages",
+          "type": "array"
+        }
+      },
+      "required": [
+        "engine_ms",
+        "retrieval",
+        "language_model_used",
+        "external_requests",
+        "stages"
+      ],
+      "title": "Processing",
+      "type": "object"
+    },
+    "Question": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "complaint",
+            "safety",
+            "attribute",
+            "symptom",
+            "structure",
+            "side",
+            "clarify",
+            "history",
+            "memory",
+            "laterality",
+            "triggers"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "purpose": {
+          "title": "Purpose",
+          "type": "string"
+        },
+        "options": {
+          "items": {
+            "$ref": "#/$defs/Option"
+          },
+          "title": "Options",
+          "type": "array"
+        },
+        "multi_select": {
+          "title": "Multi Select",
+          "type": "boolean"
+        },
+        "free_text": {
+          "title": "Free Text",
+          "type": "boolean"
+        },
+        "discriminates": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Discriminates",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "text",
+        "purpose",
+        "options",
+        "multi_select",
+        "free_text",
+        "discriminates"
+      ],
+      "title": "Question",
+      "type": "object"
+    },
+    "Span": {
+      "additionalProperties": false,
+      "properties": {
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "minimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "quote": {
+          "maxLength": 2000,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message_id",
+        "start",
+        "end",
+        "quote"
+      ],
+      "title": "Span",
+      "type": "object"
+    },
+    "UrgencyReason": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "citation_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Citation Ids",
+          "type": "array"
+        },
+        "fact_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "rule_id",
+        "text",
+        "citation_ids",
+        "fact_ids"
+      ],
+      "title": "UrgencyReason",
+      "type": "object"
+    },
+    "UrgencyResult": {
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "enum": [
+            "not_established",
+            "routine",
+            "soon",
+            "same_day",
+            "emergency"
+          ],
+          "title": "Level",
+          "type": "string"
+        },
+        "pathway": {
+          "title": "Pathway",
+          "type": "string"
+        },
+        "pathway_label": {
+          "title": "Pathway Label",
+          "type": "string"
+        },
+        "action": {
+          "title": "Action",
+          "type": "string"
+        },
+        "reasons": {
+          "items": {
+            "$ref": "#/$defs/UrgencyReason"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "safety_screen_completed": {
+          "title": "Safety Screen Completed",
+          "type": "boolean"
+        },
+        "persisted_from_prior": {
+          "title": "Persisted From Prior",
+          "type": "boolean"
+        },
+        "rules_version": {
+          "title": "Rules Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "pathway",
+        "pathway_label",
+        "action",
+        "reasons",
+        "safety_screen_completed",
+        "persisted_from_prior",
+        "rules_version"
+      ],
+      "title": "UrgencyResult",
+      "type": "object"
+    },
+    "Versions": {
+      "additionalProperties": false,
+      "properties": {
+        "engine": {
+          "title": "Engine",
+          "type": "string"
+        },
+        "anatomy": {
+          "title": "Anatomy",
+          "type": "string"
+        },
+        "symptoms": {
+          "title": "Symptoms",
+          "type": "string"
+        },
+        "knowledge": {
+          "title": "Knowledge",
+          "type": "string"
+        },
+        "source_registry": {
+          "title": "Source Registry",
+          "type": "string"
+        },
+        "snapshot": {
+          "title": "Snapshot",
+          "type": "string"
+        },
+        "language_model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Language Model"
+        },
+        "prompt": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Prompt"
+        }
+      },
+      "required": [
+        "engine",
+        "anatomy",
+        "symptoms",
+        "knowledge",
+        "source_registry",
+        "snapshot",
+        "language_model",
+        "prompt"
+      ],
+      "title": "Versions",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "humantwin-clinical-assessment-v2",
+      "default": "humantwin-clinical-assessment-v2",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "locale": {
+      "enum": [
+        "en",
+        "ar",
+        "ckb"
+      ],
+      "title": "Locale",
+      "type": "string"
+    },
+    "direction": {
+      "enum": [
+        "ltr",
+        "rtl"
+      ],
+      "title": "Direction",
+      "type": "string"
+    },
+    "anatomy": {
+      "$ref": "#/$defs/AnatomySelection"
+    },
+    "phase": {
+      "enum": [
+        "complaint",
+        "safety_screen",
+        "collecting",
+        "summary",
+        "urgent",
+        "insufficient"
+      ],
+      "title": "Phase",
+      "type": "string"
+    },
+    "summary": {
+      "title": "Summary",
+      "type": "string"
+    },
+    "patient_facts": {
+      "items": {
+        "$ref": "#/$defs/Fact"
+      },
+      "title": "Patient Facts",
+      "type": "array"
+    },
+    "anatomical_references": {
+      "items": {
+        "$ref": "#/$defs/AnatomyRef"
+      },
+      "title": "Anatomical References",
+      "type": "array"
+    },
+    "observations": {
+      "items": {
+        "$ref": "#/$defs/Observation"
+      },
+      "title": "Observations",
+      "type": "array"
+    },
+    "possible_explanations": {
+      "items": {
+        "$ref": "#/$defs/Explanation"
+      },
+      "maxItems": 3,
+      "title": "Possible Explanations",
+      "type": "array"
+    },
+    "explanation_status": {
+      "enum": [
+        "supported",
+        "insufficient_information",
+        "no_supported_explanation",
+        "withheld_urgent",
+        "conflicting"
+      ],
+      "title": "Explanation Status",
+      "type": "string"
+    },
+    "missing_information": {
+      "items": {
+        "$ref": "#/$defs/MissingInfo"
+      },
+      "title": "Missing Information",
+      "type": "array"
+    },
+    "contradictions": {
+      "items": {
+        "$ref": "#/$defs/Contradiction"
+      },
+      "title": "Contradictions",
+      "type": "array"
+    },
+    "urgency": {
+      "$ref": "#/$defs/UrgencyResult"
+    },
+    "next_question": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Question"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "related_reading": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Reading",
+      "type": "array"
+    },
+    "citations": {
+      "items": {
+        "$ref": "#/$defs/Citation"
+      },
+      "title": "Citations",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "clinician_summary": {
+      "$ref": "#/$defs/ClinicianSummary"
+    },
+    "versions": {
+      "$ref": "#/$defs/Versions"
+    },
+    "processing": {
+      "$ref": "#/$defs/Processing"
+    },
+    "clinical_review_required": {
+      "const": true,
+      "default": true,
+      "title": "Clinical Review Required",
+      "type": "boolean"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "type": "string"
+    }
+  },
+  "required": [
+    "locale",
+    "direction",
+    "anatomy",
+    "phase",
+    "summary",
+    "patient_facts",
+    "anatomical_references",
+    "observations",
+    "possible_explanations",
+    "explanation_status",
+    "missing_information",
+    "contradictions",
+    "urgency",
+    "next_question",
+    "related_reading",
+    "citations",
+    "limitations",
+    "clinician_summary",
+    "versions",
+    "processing",
+    "disclaimer"
+  ],
+  "title": "Assessment",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

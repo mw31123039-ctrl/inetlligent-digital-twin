@@ -32,7 +32,8 @@
     "test:dental:photo": "vitest run dental-photo.test.ts",
     "test:dental:photo:browser": "node scripts/smoke-dental-photo.mjs",
     "test:dental:screening:browser": "node scripts/smoke-dental-screening.mjs",
-    "data:dental": "node scripts/fetch-dental-references.mjs"
+    "data:dental": "node scripts/fetch-dental-references.mjs",
+    "test:clinical:browser": "node scripts/smoke-clinical.mjs"
   },
   "dependencies": {
     "@lucide/vue": "^1.59.0",

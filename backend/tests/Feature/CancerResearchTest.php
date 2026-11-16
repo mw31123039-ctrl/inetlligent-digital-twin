@@ -172,6 +172,14 @@ class CancerResearchTest extends TestCase
         $this->postJson('/api/cancer/analyze', [...$this->payload(), 'explain' => true])->assertStatus(502);
     }
 
+    public function test_an_outdated_ai_service_is_named_instead_of_a_generic_validation_error(): void
+    {
+        $this->actingAs(User::factory()->create());
+        Http::fake([config('ai.url').'/v1/cancer/analyze' => Http::response([...$this->resultFixture(), 'schema_version' => 'humantwin-cancer-result-v1'])]);
+        $this->postJson('/api/cancer/analyze', $this->payload())->assertStatus(502)->assertJsonMissingPath('scores')
+            ->assertJsonPath('message', fn (string $message) => str_contains($message, 'older version'));
+    }
+
     public function test_rejected_inputs_and_inconclusive_results_reach_the_user_with_their_reasons(): void
     {
         $this->actingAs(User::factory()->create());

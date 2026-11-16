@@ -31,3 +31,7 @@ Review applicable jurisdiction, medical-device obligations, consent, access cont
 Production needs HTTPS, secure first-party cookies, trusted Sanctum domains, private Python networking, secret management and rotation, encrypted/access-controlled backups, request/concurrency limits, scheduled expiry pruning, incident response and independent security evaluation. Account recovery, email verification, MFA, explicit maximum retention and region-appropriate emergency pathways remain production work.
 
 Keep health content, tokens and provider request/response bodies out of reverse-proxy logs, analytics, crash reporting, APM and traces. The application suppresses them, but infrastructure can reintroduce exposure. Do not enable verbose SDK logging or Laravel inspection tools on health requests without reviewed redaction.
+
+## Clinical assistant v2
+
+The v2 assistant (`/#assistant`) adds 63 draft red-flag rules, 47 source-bound conditions and en/ar/ckb vocabulary, all unreviewed. Its synthetic evaluation, known gaps and the remaining production requirements are in [docs/clinical-ai/CAPABILITY_REPORT.md](docs/clinical-ai/CAPABILITY_REPORT.md). Reviewer accounts (`php artisan humantwin:reviewer`) record corrections; they do not certify anything.

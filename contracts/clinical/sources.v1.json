@@ -1,0 +1,109 @@
+{
+  "schema_version": "humantwin-source-registry-v1",
+  "version": "sources-2026-11-16.1",
+  "policy": {
+    "allowed_hosts": [
+      "www.nhs.uk",
+      "www.nei.nih.gov",
+      "www.nidcr.nih.gov"
+    ],
+    "selection": "Patient-information pages from national health services or government research institutes, chosen for each condition in knowledge.v1.json. Adding a source requires a clinical reviewer and a usage-rights check.",
+    "untrusted_content": "Fetched text is reference data only. Instructions inside it are never executed and cannot change application rules.",
+    "freshness": "A page past its publisher's next-review date is still retrievable but is shown as review overdue and ranked lower."
+  },
+  "publishers": {
+    "nhs": {
+      "name": "NHS website (NHS England)",
+      "tier": "A",
+      "usage_rights": {
+        "licence": "Open Government Licence v3.0",
+        "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "notes": "Text reuse with attribution. Images, logos and NHS branding are excluded. Re-check the NHS website terms before public redistribution."
+      }
+    },
+    "nei": {
+      "name": "National Eye Institute (NIH)",
+      "tier": "A",
+      "usage_rights": {
+        "licence": "US federal government work — public domain unless marked",
+        "url": "https://www.nei.nih.gov/about/website-policies",
+        "notes": "Attribution requested; third-party images excluded."
+      }
+    },
+    "nidcr": {
+      "name": "National Institute of Dental and Craniofacial Research (NIH)",
+      "tier": "A",
+      "usage_rights": {
+        "licence": "US federal government work — public domain unless marked",
+        "url": "https://www.nidcr.nih.gov/about-us/website-policies",
+        "notes": "Attribution requested; third-party images excluded."
+      }
+    }
+  },
+  "sources": [
+    {"id": "nhs-conjunctivitis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/conjunctivitis/", "anatomy": ["body.eyes"]},
+    {"id": "nhs-dry-eyes", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/dry-eyes/", "anatomy": ["body.eyes"]},
+    {"id": "nhs-blepharitis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/blepharitis/", "anatomy": ["body.eyes"]},
+    {"id": "nhs-stye", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/stye/", "anatomy": ["body.eyes"]},
+    {"id": "nhs-floaters", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/floaters-and-flashes-in-the-eyes/", "anatomy": ["body.eyes"]},
+    {"id": "nhs-detached-retina", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/detached-retina-retinal-detachment/", "anatomy": ["body.eyes"]},
+    {"id": "nhs-glaucoma", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/glaucoma/", "anatomy": ["body.eyes"]},
+    {"id": "nhs-cataracts", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/cataracts/", "anatomy": ["body.eyes"]},
+    {"id": "nhs-red-eye", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/red-eye/", "anatomy": ["body.eyes"]},
+    {"id": "nhs-vision-loss", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/vision-loss/", "anatomy": ["body.eyes"]},
+    {"id": "nhs-uveitis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/uveitis/", "anatomy": ["body.eyes"]},
+    {"id": "nei-retinal-detachment", "publisher": "nei", "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/retinal-detachment", "anatomy": ["body.eyes"]},
+    {"id": "nei-dry-eye", "publisher": "nei", "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/dry-eye", "anatomy": ["body.eyes"]},
+    {"id": "nhs-headaches", "publisher": "nhs", "url": "https://www.nhs.uk/symptoms/headaches/", "anatomy": ["body.head"]},
+    {"id": "nhs-tension-headache", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/tension-headaches/", "anatomy": ["body.head"]},
+    {"id": "nhs-migraine", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/migraine/", "anatomy": ["body.head"]},
+    {"id": "nhs-sinusitis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/sinusitis-sinus-infection/", "anatomy": ["body.head"]},
+    {"id": "nhs-tmd", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/temporomandibular-disorder-tmd/", "anatomy": ["body.head", "body.mouth"]},
+    {"id": "nhs-stroke-symptoms", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/stroke/symptoms/", "anatomy": ["body.head", "body.arms"]},
+    {"id": "nhs-meningitis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/meningitis/", "anatomy": ["body.head"]},
+    {"id": "nhs-toothache", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/toothache/", "anatomy": ["body.mouth"]},
+    {"id": "nhs-dental-abscess", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/dental-abscess/", "anatomy": ["body.mouth"]},
+    {"id": "nhs-gum-disease", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/gum-disease/", "anatomy": ["body.mouth"]},
+    {"id": "nhs-mouth-ulcers", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/mouth-ulcers/", "anatomy": ["body.mouth"]},
+    {"id": "nhs-mouth-cancer", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/mouth-cancer/symptoms/", "anatomy": ["body.mouth"]},
+    {"id": "nhs-orthodontics", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/orthodontics/", "anatomy": ["body.mouth"]},
+    {"id": "nhs-wisdom-teeth", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/wisdom-tooth-removal/", "anatomy": ["body.mouth"]},
+    {"id": "nhs-broken-tooth", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/chipped-broken-or-cracked-tooth/", "anatomy": ["body.mouth"]},
+    {"id": "nhs-knocked-out-tooth", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/knocked-out-tooth/", "anatomy": ["body.mouth"]},
+    {"id": "nidcr-gum-disease", "publisher": "nidcr", "url": "https://www.nidcr.nih.gov/health-info/gum-disease", "anatomy": ["body.mouth"]},
+    {"id": "nhs-ear-infections", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/ear-infections/", "anatomy": ["body.ears"]},
+    {"id": "nhs-sore-throat", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/sore-throat/", "anatomy": ["body.neck"]},
+    {"id": "nhs-tonsillitis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/tonsillitis/", "anatomy": ["body.neck"]},
+    {"id": "nhs-chest-pain", "publisher": "nhs", "url": "https://www.nhs.uk/symptoms/chest-pain/", "anatomy": ["body.chest"]},
+    {"id": "nhs-costochondritis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/costochondritis/", "anatomy": ["body.chest"]},
+    {"id": "nhs-heartburn", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/heartburn-and-acid-reflux/", "anatomy": ["body.chest", "body.abdomen"]},
+    {"id": "nhs-chest-infection", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/chest-infection/", "anatomy": ["body.chest"]},
+    {"id": "nhs-heart-attack", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/heart-attack/", "anatomy": ["body.chest"]},
+    {"id": "nhs-shortness-of-breath", "publisher": "nhs", "url": "https://www.nhs.uk/symptoms/shortness-of-breath/", "anatomy": ["body.chest"]},
+    {"id": "nhs-palpitations", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/heart-palpitations/", "anatomy": ["body.chest"]},
+    {"id": "nhs-pulmonary-embolism", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/pulmonary-embolism/", "anatomy": ["body.chest", "body.legs"]},
+    {"id": "nhs-stomach-ache", "publisher": "nhs", "url": "https://www.nhs.uk/symptoms/stomach-ache/", "anatomy": ["body.abdomen"]},
+    {"id": "nhs-indigestion", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/indigestion/", "anatomy": ["body.abdomen"]},
+    {"id": "nhs-constipation", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/constipation/", "anatomy": ["body.abdomen"]},
+    {"id": "nhs-diarrhoea-vomiting", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/diarrhoea-and-vomiting/", "anatomy": ["body.abdomen"]},
+    {"id": "nhs-appendicitis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/appendicitis/", "anatomy": ["body.abdomen"]},
+    {"id": "nhs-gallstones", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/gallstones/", "anatomy": ["body.abdomen"]},
+    {"id": "nhs-ibs", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/irritable-bowel-syndrome-ibs/symptoms/", "anatomy": ["body.abdomen"]},
+    {"id": "nhs-uti", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/urinary-tract-infections-utis/", "anatomy": ["body.abdomen"]},
+    {"id": "nhs-kidney-stones", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/kidney-stones/", "anatomy": ["body.abdomen", "body.back"]},
+    {"id": "nhs-back-pain", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/back-pain/", "anatomy": ["body.back"]},
+    {"id": "nhs-sciatica", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/sciatica/", "anatomy": ["body.back", "body.legs"]},
+    {"id": "nhs-sprains", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/sprains-and-strains/", "anatomy": ["body.arms", "body.legs"]},
+    {"id": "nhs-carpal-tunnel", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/carpal-tunnel-syndrome/", "anatomy": ["body.arms"]},
+    {"id": "nhs-tennis-elbow", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/tennis-elbow/", "anatomy": ["body.arms"]},
+    {"id": "nhs-frozen-shoulder", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/frozen-shoulder/", "anatomy": ["body.arms"]},
+    {"id": "nhs-leg-cramps", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/leg-cramps/", "anatomy": ["body.legs"]},
+    {"id": "nhs-knee-pain", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/knee-pain/", "anatomy": ["body.legs"]},
+    {"id": "nhs-dvt", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/deep-vein-thrombosis-dvt/", "anatomy": ["body.legs"]},
+    {"id": "nhs-plantar-fasciitis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/plantar-fasciitis/", "anatomy": ["body.legs"]},
+    {"id": "nhs-hives", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/hives/", "anatomy": ["body.skin"]},
+    {"id": "nhs-contact-dermatitis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/contact-dermatitis/", "anatomy": ["body.skin"]},
+    {"id": "nhs-anaphylaxis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/anaphylaxis/", "anatomy": ["body.neck", "body.skin"]},
+    {"id": "nhs-sepsis", "publisher": "nhs", "url": "https://www.nhs.uk/conditions/sepsis/", "anatomy": []}
+  ]
+}

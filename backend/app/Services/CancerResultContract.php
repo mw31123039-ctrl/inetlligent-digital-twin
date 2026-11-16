@@ -21,6 +21,10 @@ class CancerResultContract
     {
         $schema = json_decode(file_get_contents(base_path('../contracts/cancer-result.schema.json')));
         $decoded = json_decode($body);
+        if (is_object($decoded) && isset($decoded->schema_version) && is_string($decoded->schema_version)
+            && str_starts_with($decoded->schema_version, 'humantwin-cancer-result-') && $decoded->schema_version !== self::SCHEMA_VERSION) {
+            return 'The local AI service is running an older version. Restart it (scripts/start-ai-service.ps1) and analyse again. No result was accepted.';
+        }
         if (! is_object($decoded) || ! (new Validator)->validate($decoded, $schema)->isValid()) {
             return 'The model response failed validation. No result was accepted.';
         }

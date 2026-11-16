@@ -22,6 +22,14 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+    /**
+     * Reviewers are assigned with `php artisan humantwin:reviewer`; `role` is deliberately not fillable.
+     */
+    public function isReviewer(): bool
+    {
+        return $this->role === 'reviewer';
+    }
+
     protected function casts(): array
     {
         return [

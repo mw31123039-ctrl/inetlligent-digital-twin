@@ -1,0 +1,478 @@
+{
+ "schema_version": "humantwin-clinical-assessment-v2",
+ "locale": "en",
+ "direction": "ltr",
+ "anatomy": {
+  "id": "body.chest",
+  "side": "unknown"
+ },
+ "phase": "urgent",
+ "summary": "Chest: you reported Chest pain or pressure, Pain spreading to the arm, jaw, neck or back, Sweating or clammy skin. Suggested next step: Emergency care now.",
+ "patient_facts": [
+  {
+   "id": "symptom:chest_pain",
+   "kind": "symptom",
+   "key": "chest_pain",
+   "value": "present",
+   "numeric": null,
+   "label": "Chest pain or pressure",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": "body.chest",
+   "side": null,
+   "provenance": "patient_statement",
+   "extractor": "lexicon",
+   "spans": [
+    {
+     "message_id": "u-9",
+     "start": 9,
+     "end": 19,
+     "quote": "chest pain"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "symptom:pain",
+   "kind": "symptom",
+   "key": "pain",
+   "value": "present",
+   "numeric": null,
+   "label": "Pain or soreness",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": "body.chest",
+   "side": null,
+   "provenance": "patient_statement",
+   "extractor": "derived",
+   "spans": [
+    {
+     "message_id": "u-9",
+     "start": 9,
+     "end": 19,
+     "quote": "chest pain"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "symptom:radiating_pain",
+   "kind": "symptom",
+   "key": "radiating_pain",
+   "value": "present",
+   "numeric": null,
+   "label": "Pain spreading to the arm, jaw, neck or back",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": "body.arms",
+   "side": "unknown",
+   "provenance": "patient_statement",
+   "extractor": "lexicon",
+   "spans": [
+    {
+     "message_id": "u-9",
+     "start": 20,
+     "end": 44,
+     "quote": "spreading to my left arm"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "symptom:sweating",
+   "kind": "symptom",
+   "key": "sweating",
+   "value": "present",
+   "numeric": null,
+   "label": "Sweating or clammy skin",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": "body.arms",
+   "side": "unknown",
+   "provenance": "patient_statement",
+   "extractor": "lexicon",
+   "spans": [
+    {
+     "message_id": "u-9",
+     "start": 54,
+     "end": 62,
+     "quote": "sweating"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "attribute:character",
+   "kind": "attribute",
+   "key": "character",
+   "value": "pressure",
+   "numeric": null,
+   "label": "What it feels like: Pressing, tight or heavy",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": null,
+   "side": null,
+   "provenance": "patient_statement",
+   "extractor": "lexicon",
+   "spans": [
+    {
+     "message_id": "u-9",
+     "start": 0,
+     "end": 8,
+     "quote": "Crushing"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "attribute:course",
+   "kind": "attribute",
+   "key": "course",
+   "value": "worsening",
+   "numeric": null,
+   "label": "Change over time: Getting worse",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": null,
+   "side": null,
+   "provenance": "patient_statement",
+   "extractor": "lexicon",
+   "spans": [
+    {
+     "message_id": "u-9",
+     "start": 20,
+     "end": 29,
+     "quote": "spreading"
+    }
+   ],
+   "source_ref": null
+  }
+ ],
+ "anatomical_references": [
+  {
+   "id": "body.chest",
+   "label": "Chest",
+   "side": "midline",
+   "role": "selected",
+   "relation": null,
+   "relation_note": null,
+   "marker": "illustrative_anatomy",
+   "fact_ids": [
+    "symptom:chest_pain",
+    "symptom:pain"
+   ],
+   "explanation_ids": []
+  },
+  {
+   "id": "body.arms",
+   "label": "Arms & hands",
+   "side": "unknown",
+   "role": "reported",
+   "relation": null,
+   "relation_note": null,
+   "marker": "illustrative_anatomy",
+   "fact_ids": [
+    "symptom:radiating_pain",
+    "symptom:sweating"
+   ],
+   "explanation_ids": []
+  }
+ ],
+ "observations": [
+  {
+   "id": "observation:symptom:chest_pain",
+   "text": "Reported: Chest pain or pressure — “chest pain”",
+   "fact_ids": [
+    "symptom:chest_pain"
+   ],
+   "provenance": "patient_statement"
+  },
+  {
+   "id": "observation:symptom:radiating_pain",
+   "text": "Reported: Pain spreading to the arm, jaw, neck or back — “spreading to my left arm”",
+   "fact_ids": [
+    "symptom:radiating_pain"
+   ],
+   "provenance": "patient_statement"
+  },
+  {
+   "id": "observation:symptom:sweating",
+   "text": "Reported: Sweating or clammy skin — “sweating”",
+   "fact_ids": [
+    "symptom:sweating"
+   ],
+   "provenance": "patient_statement"
+  },
+  {
+   "id": "observation:attribute:character",
+   "text": "Reported: What it feels like: Pressing, tight or heavy — “Crushing”",
+   "fact_ids": [
+    "attribute:character"
+   ],
+   "provenance": "patient_statement"
+  },
+  {
+   "id": "observation:attribute:course",
+   "text": "Reported: Change over time: Getting worse — “spreading”",
+   "fact_ids": [
+    "attribute:course"
+   ],
+   "provenance": "patient_statement"
+  }
+ ],
+ "possible_explanations": [],
+ "explanation_status": "withheld_urgent",
+ "missing_information": [
+  {
+   "key": "safety:body.chest",
+   "label": "Safety check",
+   "reason": "Warning signs must be ruled out before anything else.",
+   "priority": "safety"
+  },
+  {
+   "key": "attr:onset",
+   "label": "Onset",
+   "reason": "Needed by any clinician to judge this.",
+   "priority": "core"
+  },
+  {
+   "key": "attr:severity",
+   "label": "How bad is it from 0 (none) to 10 (worst imaginable)?",
+   "reason": "Needed by any clinician to judge this.",
+   "priority": "core"
+  },
+  {
+   "key": "attr:pattern",
+   "label": "Pattern",
+   "reason": "Needed by any clinician to judge this.",
+   "priority": "core"
+  },
+  {
+   "key": "attr:duration",
+   "label": "How long have you had it?",
+   "reason": "Needed by any clinician to judge this.",
+   "priority": "core"
+  },
+  {
+   "key": "sym:tender_on_press",
+   "label": "Tender when pressed",
+   "reason": "Would help tell the possible explanations apart.",
+   "priority": "discriminating"
+  },
+  {
+   "key": "history:medications",
+   "label": "Are you taking any medicines, including anything new or recently changed?",
+   "reason": "Needed for safe advice and your clinician summary.",
+   "priority": "history"
+  },
+  {
+   "key": "history:allergies",
+   "label": "Do you have any allergies to medicines or other things?",
+   "reason": "Needed for safe advice and your clinician summary.",
+   "priority": "history"
+  }
+ ],
+ "contradictions": [],
+ "urgency": {
+  "level": "emergency",
+  "pathway": "emergency",
+  "pathway_label": "Emergency care now",
+  "action": "Call your local emergency number or go to the nearest emergency department now. Do not drive yourself. Do not wait for this chat.",
+  "reasons": [
+   {
+    "rule_id": "chest-pain-spreading",
+    "text": "Chest pain spreading to the arm, jaw, neck or back can be a heart attack.",
+    "citation_ids": [
+     "c1"
+    ],
+    "fact_ids": [
+     "symptom:chest_pain",
+     "symptom:radiating_pain"
+    ]
+   },
+   {
+    "rule_id": "chest-pain-with-symptoms",
+    "text": "Chest pain with sweating, sickness, light-headedness or breathlessness needs emergency care.",
+    "citation_ids": [
+     "c2"
+    ],
+    "fact_ids": [
+     "symptom:chest_pain",
+     "symptom:sweating"
+    ]
+   },
+   {
+    "rule_id": "chest-pressure",
+    "text": "Tight, heavy or squeezing chest pain can be a heart attack.",
+    "citation_ids": [
+     "c3"
+    ],
+    "fact_ids": [
+     "symptom:chest_pain",
+     "attribute:character"
+    ]
+   }
+  ],
+  "safety_screen_completed": false,
+  "persisted_from_prior": false,
+  "rules_version": "knowledge-2026-11-16.1"
+ },
+ "next_question": null,
+ "related_reading": [
+  "c4",
+  "c5",
+  "c6"
+ ],
+ "citations": [
+  {
+   "id": "c1",
+   "source_id": "nhs-chest-pain",
+   "chunk_id": "nhs-chest-pain#immediate-action-required-call-999-if",
+   "title": "Chest pain",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/symptoms/chest-pain/",
+   "quote": "you get pain that spreads to your left or right arm, or your neck, jaw, stomach or back",
+   "lead": null,
+   "last_reviewed": "2023-08-08",
+   "next_review_due": "2026-08-08",
+   "review_overdue": true,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c2",
+   "source_id": "nhs-chest-pain",
+   "chunk_id": "nhs-chest-pain#immediate-action-required-call-999-if",
+   "title": "Chest pain",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/symptoms/chest-pain/",
+   "quote": "you have chest pain and you feel sweaty, sick, light headed or short of breath",
+   "lead": null,
+   "last_reviewed": "2023-08-08",
+   "next_review_due": "2026-08-08",
+   "review_overdue": true,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c3",
+   "source_id": "nhs-heart-attack",
+   "chunk_id": "nhs-heart-attack#immediate-action-required-call-999-if",
+   "title": "Heart attack",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/conditions/heart-attack/",
+   "quote": "you have chest pain that feels tight or like squeezing on your chest",
+   "lead": null,
+   "last_reviewed": "2026-03-31",
+   "next_review_due": "2029-03-31",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c4",
+   "source_id": "nhs-heart-attack",
+   "chunk_id": "nhs-heart-attack#symptoms-of-a-heart-attack",
+   "title": "Heart attack",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/conditions/heart-attack/",
+   "quote": "chest pain which may feel like crushing or squeezing on your chest – the pain may also spread to your arm, neck and jaw",
+   "lead": "Symptoms of a heart attack may include:",
+   "last_reviewed": "2026-03-31",
+   "next_review_due": "2029-03-31",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c5",
+   "source_id": "nhs-costochondritis",
+   "chunk_id": "nhs-costochondritis#immediate-action-required-call-999-if-you-have",
+   "title": "Costochondritis",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/conditions/costochondritis/",
+   "quote": "chest pain that started suddenly, or spreads to your arm, neck or jaw, or your chest feels tight – this could be a heart attack",
+   "lead": null,
+   "last_reviewed": "2026-08-14",
+   "next_review_due": "2029-08-14",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c6",
+   "source_id": "nhs-shortness-of-breath",
+   "chunk_id": "nhs-shortness-of-breath#immediate-action-required-call-999-or-go-to-a-e-",
+   "title": "Shortness of breath",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/symptoms/shortness-of-breath/",
+   "quote": "you have pain that spreads to your arms, back, neck and jaw",
+   "lead": null,
+   "last_reviewed": "2024-01-30",
+   "next_review_due": "2027-01-30",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  }
+ ],
+ "limitations": [
+  "This assessment uses draft rules and source-linked knowledge that no clinician has reviewed yet. It cannot examine you, run tests or confirm a diagnosis.",
+  "The safety check has not been completed, so urgency cannot be judged yet.",
+  "Possible explanations are withheld so the urgent guidance stays clear. A clinician will assess the cause.",
+  "Symptoms are recognised with a fixed multilingual vocabulary; unusual wording can be missed. Use the answer buttons where possible and check the recorded facts.",
+  "At least one cited page is past its publisher’s planned review date.",
+  "The knowledge base covers 47 conditions with 64 approved sources; many problems are not covered."
+ ],
+ "clinician_summary": {
+  "headline": "Chest (unknown) — urgency emergency; rules knowledge-2026-11-16.1",
+  "patient_reported": [
+   "symptom: Chest pain or pressure [present; patient_statement] — patient words: “chest pain”",
+   "symptom: Pain spreading to the arm, jaw, neck or back [present; patient_statement] — patient words: “spreading to my left arm”",
+   "symptom: Sweating or clammy skin [present; patient_statement] — patient words: “sweating”",
+   "attribute: What it feels like: Pressing, tight or heavy [present; patient_statement] — patient words: “Crushing”",
+   "attribute: Change over time: Getting worse [present; patient_statement] — patient words: “spreading”"
+  ],
+  "from_records": [],
+  "observations_note": "No examination findings, vital signs or test results are available. Everything above is patient-reported unless labelled otherwise.",
+  "interpretations": [
+   "No AI interpretation offered."
+  ],
+  "urgency": "emergency via emergency: chest-pain-spreading; chest-pain-with-symptoms; chest-pressure",
+  "missing": [
+   "safety:body.chest",
+   "attr:onset",
+   "attr:severity",
+   "attr:pattern",
+   "attr:duration",
+   "sym:tender_on_press",
+   "history:medications",
+   "history:allergies"
+  ],
+  "contradictions": [],
+  "provenance_note": "patient_statement = free text; patient_answer = structured answer; patient_memory = consented saved history; document_extract = confirmed report extract; interpretations are AI-generated suggestions from source-bound rules, not diagnoses."
+ },
+ "versions": {
+  "engine": "clinical-engine-2026-11-16.1",
+  "anatomy": "anatomy-2026-11-16.1",
+  "symptoms": "symptoms-2026-11-16.1",
+  "knowledge": "knowledge-2026-11-16.1",
+  "source_registry": "sources-2026-11-16.1",
+  "snapshot": "clinical-knowledge-2026-11-16.141eaa10",
+  "language_model": null,
+  "prompt": null
+ },
+ "processing": {
+  "engine_ms": 16.34,
+  "retrieval": "bm25-anatomy-tier-freshness",
+  "language_model_used": false,
+  "external_requests": false,
+  "stages": [
+   "extracting",
+   "screening",
+   "reasoning",
+   "composing"
+  ]
+ },
+ "clinical_review_required": true,
+ "disclaimer": "Educational decision support, not a diagnosis. It does not replace a clinician’s examination."
+}

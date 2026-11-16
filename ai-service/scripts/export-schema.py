@@ -30,3 +30,13 @@ knowledge_schema = KnowledgeAnswer.model_json_schema()
 knowledge_schema['$schema'] = 'https://json-schema.org/draft/2020-12/schema'
 (root.parent / 'contracts/cancer-knowledge-result.schema.json').write_text(json.dumps(knowledge_schema, indent=2) + '\n', encoding='utf-8')
 print('Exported local cancer evidence search JSON Schema.')
+from app.clinical.schemas import Assessment as ClinicalAssessment
+clinical_schema = ClinicalAssessment.model_json_schema()
+clinical_schema['$schema'] = 'https://json-schema.org/draft/2020-12/schema'
+(root.parent / 'contracts/clinical/assessment.v2.schema.json').write_text(json.dumps(clinical_schema, indent=2) + '\n', encoding='utf-8')
+print('Exported clinical assessment v2 JSON Schema.')
+from app.clinical.documents import ExtractResult
+extract_schema = ExtractResult.model_json_schema()
+extract_schema['$schema'] = 'https://json-schema.org/draft/2020-12/schema'
+(root.parent / 'contracts/clinical/report-extraction.v1.schema.json').write_text(json.dumps(extract_schema, indent=2) + '\n', encoding='utf-8')
+print('Exported report-extraction JSON Schema.')

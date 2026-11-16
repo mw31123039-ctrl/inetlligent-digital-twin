@@ -1,0 +1,882 @@
+{
+ "schema_version": "humantwin-clinical-assessment-v2",
+ "locale": "en",
+ "direction": "ltr",
+ "anatomy": {
+  "id": "body.eyes",
+  "side": "left"
+ },
+ "phase": "collecting",
+ "summary": "Eyes (left): you reported Discharge or pus, Itching, Redness, for 1 day, Onset: Gradual. Suggested next step: Pharmacist advice.",
+ "patient_facts": [
+  {
+   "id": "screen:curtain-shadow",
+   "kind": "screen",
+   "key": "curtain-shadow",
+   "value": "present",
+   "numeric": null,
+   "label": "A dark curtain or shadow over your vision",
+   "status": "absent",
+   "temporal": "current",
+   "anatomy_id": null,
+   "side": null,
+   "provenance": "patient_answer",
+   "extractor": "structured_answer",
+   "spans": [
+    {
+     "message_id": "u-4",
+     "start": 0,
+     "end": 4,
+     "quote": "none"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "screen:eye-injury",
+   "kind": "screen",
+   "key": "eye-injury",
+   "value": "present",
+   "numeric": null,
+   "label": "Eye injury or chemical in the eye",
+   "status": "absent",
+   "temporal": "current",
+   "anatomy_id": null,
+   "side": null,
+   "provenance": "patient_answer",
+   "extractor": "structured_answer",
+   "spans": [
+    {
+     "message_id": "u-4",
+     "start": 0,
+     "end": 4,
+     "quote": "none"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "screen:eye-light-sensitivity",
+   "kind": "screen",
+   "key": "eye-light-sensitivity",
+   "value": "present",
+   "numeric": null,
+   "label": "Light hurts your eyes",
+   "status": "absent",
+   "temporal": "current",
+   "anatomy_id": null,
+   "side": null,
+   "provenance": "patient_answer",
+   "extractor": "structured_answer",
+   "spans": [
+    {
+     "message_id": "u-4",
+     "start": 0,
+     "end": 4,
+     "quote": "none"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "screen:new-floaters",
+   "kind": "screen",
+   "key": "new-floaters",
+   "value": "present",
+   "numeric": null,
+   "label": "New flashes of light or a sudden shower of floaters",
+   "status": "absent",
+   "temporal": "current",
+   "anatomy_id": null,
+   "side": null,
+   "provenance": "patient_answer",
+   "extractor": "structured_answer",
+   "spans": [
+    {
+     "message_id": "u-4",
+     "start": 0,
+     "end": 4,
+     "quote": "none"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "screen:sudden-severe-eye-pain",
+   "kind": "screen",
+   "key": "sudden-severe-eye-pain",
+   "value": "present",
+   "numeric": null,
+   "label": "Severe eye pain",
+   "status": "absent",
+   "temporal": "current",
+   "anatomy_id": null,
+   "side": null,
+   "provenance": "patient_answer",
+   "extractor": "structured_answer",
+   "spans": [
+    {
+     "message_id": "u-4",
+     "start": 0,
+     "end": 4,
+     "quote": "none"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "screen:vision-loss",
+   "kind": "screen",
+   "key": "vision-loss",
+   "value": "present",
+   "numeric": null,
+   "label": "Sudden loss of vision",
+   "status": "absent",
+   "temporal": "current",
+   "anatomy_id": null,
+   "side": null,
+   "provenance": "patient_answer",
+   "extractor": "structured_answer",
+   "spans": [
+    {
+     "message_id": "u-4",
+     "start": 0,
+     "end": 4,
+     "quote": "none"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "symptom:discharge",
+   "kind": "symptom",
+   "key": "discharge",
+   "value": "present",
+   "numeric": null,
+   "label": "Discharge or pus",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": "body.eyes",
+   "side": "left",
+   "provenance": "patient_statement",
+   "extractor": "lexicon",
+   "spans": [
+    {
+     "message_id": "u-2",
+     "start": 30,
+     "end": 36,
+     "quote": "sticky"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "symptom:itch",
+   "kind": "symptom",
+   "key": "itch",
+   "value": "present",
+   "numeric": null,
+   "label": "Itching",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": "body.eyes",
+   "side": "left",
+   "provenance": "patient_statement",
+   "extractor": "lexicon",
+   "spans": [
+    {
+     "message_id": "u-2",
+     "start": 20,
+     "end": 25,
+     "quote": "itchy"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "symptom:redness",
+   "kind": "symptom",
+   "key": "redness",
+   "value": "present",
+   "numeric": null,
+   "label": "Redness",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": "body.eyes",
+   "side": "left",
+   "provenance": "patient_statement",
+   "extractor": "lexicon",
+   "spans": [
+    {
+     "message_id": "u-2",
+     "start": 15,
+     "end": 18,
+     "quote": "red"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "attribute:duration",
+   "kind": "attribute",
+   "key": "duration",
+   "value": "24",
+   "numeric": 24.0,
+   "label": "for 1 day",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": null,
+   "side": null,
+   "provenance": "patient_statement",
+   "extractor": "lexicon",
+   "spans": [
+    {
+     "message_id": "u-2",
+     "start": 37,
+     "end": 52,
+     "quote": "since yesterday"
+    }
+   ],
+   "source_ref": null
+  },
+  {
+   "id": "attribute:onset",
+   "kind": "attribute",
+   "key": "onset",
+   "value": "gradual",
+   "numeric": null,
+   "label": "Onset: Gradual",
+   "status": "present",
+   "temporal": "current",
+   "anatomy_id": null,
+   "side": null,
+   "provenance": "patient_answer",
+   "extractor": "structured_answer",
+   "spans": [
+    {
+     "message_id": "u-6",
+     "start": 0,
+     "end": 13,
+     "quote": "onset:gradual"
+    }
+   ],
+   "source_ref": null
+  }
+ ],
+ "anatomical_references": [
+  {
+   "id": "body.eyes",
+   "label": "Eyes",
+   "side": "left",
+   "role": "selected",
+   "relation": null,
+   "relation_note": null,
+   "marker": "illustrative_anatomy",
+   "fact_ids": [
+    "symptom:discharge",
+    "symptom:itch",
+    "symptom:redness"
+   ],
+   "explanation_ids": [
+    "explanation:conjunctivitis",
+    "explanation:dry_eye",
+    "explanation:uveitis"
+   ]
+  },
+  {
+   "id": "eye.bulbar-conjunctiva",
+   "label": "Conjunctiva (white of the eye)",
+   "side": "left",
+   "role": "finding",
+   "relation": null,
+   "relation_note": null,
+   "marker": "illustrative_anatomy",
+   "fact_ids": [],
+   "explanation_ids": [
+    "explanation:conjunctivitis"
+   ]
+  },
+  {
+   "id": "eye.tear-film",
+   "label": "Tear film",
+   "side": "left",
+   "role": "finding",
+   "relation": null,
+   "relation_note": null,
+   "marker": "illustrative_anatomy",
+   "fact_ids": [],
+   "explanation_ids": [
+    "explanation:dry_eye"
+   ]
+  },
+  {
+   "id": "eye.cornea",
+   "label": "Cornea",
+   "side": "left",
+   "role": "finding",
+   "relation": null,
+   "relation_note": null,
+   "marker": "illustrative_anatomy",
+   "fact_ids": [],
+   "explanation_ids": [
+    "explanation:dry_eye"
+   ]
+  },
+  {
+   "id": "eye.iris",
+   "label": "Iris",
+   "side": "left",
+   "role": "finding",
+   "relation": null,
+   "relation_note": null,
+   "marker": "illustrative_anatomy",
+   "fact_ids": [],
+   "explanation_ids": [
+    "explanation:uveitis"
+   ]
+  }
+ ],
+ "observations": [
+  {
+   "id": "observation:symptom:discharge",
+   "text": "Reported: Discharge or pus — “sticky”",
+   "fact_ids": [
+    "symptom:discharge"
+   ],
+   "provenance": "patient_statement"
+  },
+  {
+   "id": "observation:symptom:itch",
+   "text": "Reported: Itching — “itchy”",
+   "fact_ids": [
+    "symptom:itch"
+   ],
+   "provenance": "patient_statement"
+  },
+  {
+   "id": "observation:symptom:redness",
+   "text": "Reported: Redness — “red”",
+   "fact_ids": [
+    "symptom:redness"
+   ],
+   "provenance": "patient_statement"
+  },
+  {
+   "id": "observation:attribute:duration",
+   "text": "Reported: for 1 day — “since yesterday”",
+   "fact_ids": [
+    "attribute:duration"
+   ],
+   "provenance": "patient_statement"
+  },
+  {
+   "id": "observation:attribute:onset",
+   "text": "Reported: Onset: Gradual",
+   "fact_ids": [
+    "attribute:onset"
+   ],
+   "provenance": "patient_answer"
+  }
+ ],
+ "possible_explanations": [
+  {
+   "id": "explanation:conjunctivitis",
+   "condition_id": "conjunctivitis",
+   "name": "Conjunctivitis",
+   "fit": "fits",
+   "plain_language": "Your answers match several features that NHS website (NHS England) describes for Conjunctivitis. This is a possibility to discuss with a clinician, not a diagnosis.",
+   "supporting": [
+    {
+     "statement": "You reported redness; NHS website (NHS England) lists this for Conjunctivitis.",
+     "fact_ids": [
+      "symptom:redness"
+     ],
+     "citation_ids": [
+      "c1"
+     ]
+    },
+    {
+     "statement": "You reported discharge or pus; NHS website (NHS England) lists this for Conjunctivitis.",
+     "fact_ids": [
+      "symptom:discharge"
+     ],
+     "citation_ids": [
+      "c2"
+     ]
+    },
+    {
+     "statement": "You reported itching; NHS website (NHS England) lists this for Conjunctivitis.",
+     "fact_ids": [
+      "symptom:itch"
+     ],
+     "citation_ids": [
+      "c3"
+     ]
+    }
+   ],
+   "conflicting": [],
+   "missing": [
+    {
+     "key": "sym:eye_dryness_grit",
+     "label": "Dry, gritty or burning eyes",
+     "question_id": "sym:eye_dryness_grit"
+    },
+    {
+     "key": "sym:watery_eyes",
+     "label": "Watery eyes",
+     "question_id": "sym:watery_eyes"
+    }
+   ],
+   "pathway": "pharmacist",
+   "pathway_label": "Pharmacist advice",
+   "urgent_condition": false,
+   "scope_note": null,
+   "anatomy_ids": [
+    "body.eyes",
+    "eye.bulbar-conjunctiva"
+   ]
+  },
+  {
+   "id": "explanation:dry_eye",
+   "condition_id": "dry_eye",
+   "name": "Dry eyes",
+   "fit": "partly_fits",
+   "plain_language": "Some of your answers match Dry eyes, but important features are missing or do not match. It remains one possibility among others.",
+   "supporting": [
+    {
+     "statement": "You reported itching; NHS website (NHS England) lists this for Dry eyes.",
+     "fact_ids": [
+      "symptom:itch"
+     ],
+     "citation_ids": [
+      "c4"
+     ]
+    },
+    {
+     "statement": "You reported redness; NHS website (NHS England) lists this for Dry eyes.",
+     "fact_ids": [
+      "symptom:redness"
+     ],
+     "citation_ids": [
+      "c5"
+     ]
+    }
+   ],
+   "conflicting": [],
+   "missing": [
+    {
+     "key": "sym:eye_dryness_grit",
+     "label": "Dry, gritty or burning eyes",
+     "question_id": "sym:eye_dryness_grit"
+    },
+    {
+     "key": "sym:contact_lens",
+     "label": "Wears contact lenses",
+     "question_id": "sym:contact_lens"
+    },
+    {
+     "key": "sym:screen_use",
+     "label": "Long periods of screen use",
+     "question_id": "sym:screen_use"
+    },
+    {
+     "key": "trig:screen",
+     "label": "Screens or reading",
+     "question_id": "triggers"
+    }
+   ],
+   "pathway": "pharmacist",
+   "pathway_label": "Pharmacist advice",
+   "urgent_condition": false,
+   "scope_note": null,
+   "anatomy_ids": [
+    "body.eyes",
+    "eye.tear-film",
+    "eye.cornea"
+   ]
+  },
+  {
+   "id": "explanation:uveitis",
+   "condition_id": "uveitis",
+   "name": "Uveitis (inflammation inside the eye)",
+   "fit": "partly_fits",
+   "plain_language": "Some of your answers match Uveitis (inflammation inside the eye), but important features are missing or do not match. It remains one possibility among others.",
+   "supporting": [
+    {
+     "statement": "You reported redness; NHS website (NHS England) lists this for Uveitis (inflammation inside the eye).",
+     "fact_ids": [
+      "symptom:redness"
+     ],
+     "citation_ids": [
+      "c6"
+     ]
+    },
+    {
+     "statement": "One side only matches how NHS website (NHS England) describes Uveitis (inflammation inside the eye).",
+     "fact_ids": [],
+     "citation_ids": [
+      "c7"
+     ]
+    }
+   ],
+   "conflicting": [],
+   "missing": [
+    {
+     "key": "sym:pain",
+     "label": "Pain or soreness",
+     "question_id": "sym:pain"
+    },
+    {
+     "key": "sym:blurred_vision",
+     "label": "Blurred or changed vision",
+     "question_id": "sym:blurred_vision"
+    },
+    {
+     "key": "sym:light_sensitivity",
+     "label": "Light sensitivity",
+     "question_id": "sym:light_sensitivity"
+    }
+   ],
+   "pathway": "eye_urgent",
+   "pathway_label": "Urgent eye assessment today",
+   "urgent_condition": true,
+   "scope_note": null,
+   "anatomy_ids": [
+    "eye.iris",
+    "body.eyes"
+   ]
+  }
+ ],
+ "explanation_status": "supported",
+ "missing_information": [
+  {
+   "key": "attr:course",
+   "label": "Change over time",
+   "reason": "Needed by any clinician to judge this.",
+   "priority": "core"
+  },
+  {
+   "key": "sym:eye_dryness_grit",
+   "label": "Dry, gritty or burning eyes",
+   "reason": "Would help tell the possible explanations apart.",
+   "priority": "discriminating"
+  },
+  {
+   "key": "sym:watery_eyes",
+   "label": "Watery eyes",
+   "reason": "Would help tell the possible explanations apart.",
+   "priority": "discriminating"
+  },
+  {
+   "key": "sym:contact_lens",
+   "label": "Wears contact lenses",
+   "reason": "Would help tell the possible explanations apart.",
+   "priority": "discriminating"
+  },
+  {
+   "key": "sym:screen_use",
+   "label": "Long periods of screen use",
+   "reason": "Would help tell the possible explanations apart.",
+   "priority": "discriminating"
+  },
+  {
+   "key": "sym:pain",
+   "label": "Pain or soreness",
+   "reason": "Would help tell the possible explanations apart.",
+   "priority": "discriminating"
+  },
+  {
+   "key": "sym:blurred_vision",
+   "label": "Blurred or changed vision",
+   "reason": "Would help tell the possible explanations apart.",
+   "priority": "discriminating"
+  },
+  {
+   "key": "sym:light_sensitivity",
+   "label": "Light sensitivity",
+   "reason": "Would help tell the possible explanations apart.",
+   "priority": "discriminating"
+  },
+  {
+   "key": "history:medications",
+   "label": "Are you taking any medicines, including anything new or recently changed?",
+   "reason": "Needed for safe advice and your clinician summary.",
+   "priority": "history"
+  },
+  {
+   "key": "history:allergies",
+   "label": "Do you have any allergies to medicines or other things?",
+   "reason": "Needed for safe advice and your clinician summary.",
+   "priority": "history"
+  }
+ ],
+ "contradictions": [],
+ "urgency": {
+  "level": "routine",
+  "pathway": "pharmacist",
+  "pathway_label": "Pharmacist advice",
+  "action": "A pharmacist can advise on self-care for this kind of problem. See a doctor if it does not improve or gets worse.",
+  "reasons": [
+   {
+    "rule_id": "safety-screen-clear",
+    "text": "None of the listed warning signs were reported in the safety check.",
+    "citation_ids": [],
+    "fact_ids": []
+   }
+  ],
+  "safety_screen_completed": true,
+  "persisted_from_prior": false,
+  "rules_version": "knowledge-2026-11-16.1"
+ },
+ "next_question": {
+  "id": "sym:contact_lens",
+  "kind": "symptom",
+  "text": "Have you also noticed this: Wears contact lenses?",
+  "purpose": "This helps tell apart Dry eyes and Conjunctivitis.",
+  "options": [
+   {
+    "code": "yes",
+    "label": "Yes"
+   },
+   {
+    "code": "no",
+    "label": "No"
+   },
+   {
+    "code": "unknown",
+    "label": "Not sure"
+   }
+  ],
+  "multi_select": false,
+  "free_text": true,
+  "discriminates": [
+   "dry_eye",
+   "conjunctivitis"
+  ]
+ },
+ "related_reading": [
+  "c8",
+  "c9",
+  "c10"
+ ],
+ "citations": [
+  {
+   "id": "c1",
+   "source_id": "nhs-conjunctivitis",
+   "chunk_id": "nhs-conjunctivitis#symptoms-of-conjunctivitis",
+   "title": "Conjunctivitis",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/conditions/conjunctivitis/",
+   "quote": "red",
+   "lead": "It usually affects both eyes and makes them:",
+   "last_reviewed": "2024-04-23",
+   "next_review_due": "2027-04-23",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c2",
+   "source_id": "nhs-conjunctivitis",
+   "chunk_id": "nhs-conjunctivitis#symptoms-of-conjunctivitis",
+   "title": "Conjunctivitis",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/conditions/conjunctivitis/",
+   "quote": "produce pus that sticks to lashes",
+   "lead": "It usually affects both eyes and makes them:",
+   "last_reviewed": "2024-04-23",
+   "next_review_due": "2027-04-23",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c3",
+   "source_id": "nhs-conjunctivitis",
+   "chunk_id": "nhs-conjunctivitis#symptoms-of-conjunctivitis",
+   "title": "Conjunctivitis",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/conditions/conjunctivitis/",
+   "quote": "itch",
+   "lead": "It usually affects both eyes and makes them:",
+   "last_reviewed": "2024-04-23",
+   "next_review_due": "2027-04-23",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c4",
+   "source_id": "nhs-dry-eyes",
+   "chunk_id": "nhs-dry-eyes#symptoms-of-dry-eyes",
+   "title": "Dry eyes",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/symptoms/dry-eyes/",
+   "quote": "itchy",
+   "lead": "You may have dry eyes if your eyes are:",
+   "last_reviewed": "2025-01-06",
+   "next_review_due": "2028-01-06",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c5",
+   "source_id": "nhs-dry-eyes",
+   "chunk_id": "nhs-dry-eyes#symptoms-of-dry-eyes",
+   "title": "Dry eyes",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/symptoms/dry-eyes/",
+   "quote": "red",
+   "lead": "You may have dry eyes if your eyes are:",
+   "last_reviewed": "2025-01-06",
+   "next_review_due": "2028-01-06",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c6",
+   "source_id": "nhs-uveitis",
+   "chunk_id": "nhs-uveitis#symptoms-of-uveitis",
+   "title": "Uveitis",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/conditions/uveitis/",
+   "quote": "red or watery eyes",
+   "lead": "Symptoms of uveitis can include:",
+   "last_reviewed": "2024-03-20",
+   "next_review_due": "2027-03-20",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c7",
+   "source_id": "nhs-uveitis",
+   "chunk_id": "nhs-uveitis#symptoms-of-uveitis",
+   "title": "Uveitis",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/conditions/uveitis/",
+   "quote": "Uveitis usually only affects one eye but can affect both.",
+   "lead": null,
+   "last_reviewed": "2024-03-20",
+   "next_review_due": "2027-03-20",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c8",
+   "source_id": "nhs-uveitis",
+   "chunk_id": "nhs-uveitis#overview",
+   "title": "Uveitis",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/conditions/uveitis/",
+   "quote": "Uveitis, also known as iritis, is a rare condition that causes inflammation inside part of your eye.",
+   "lead": null,
+   "last_reviewed": "2024-03-20",
+   "next_review_due": "2027-03-20",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c9",
+   "source_id": "nhs-red-eye",
+   "chunk_id": "nhs-red-eye#non-urgent-advice-see-a-gp-or-optician-if",
+   "title": "Red eye",
+   "publisher": "NHS website (NHS England)",
+   "url": "https://www.nhs.uk/symptoms/red-eye/",
+   "quote": "you have red eyes with a sticky discharge",
+   "lead": null,
+   "last_reviewed": "2025-10-27",
+   "next_review_due": "2028-10-27",
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "Open Government Licence v3.0"
+  },
+  {
+   "id": "c10",
+   "source_id": "nei-dry-eye",
+   "chunk_id": "nei-dry-eye#what-is-dry-eye",
+   "title": "Dry Eye",
+   "publisher": "National Eye Institute (NIH)",
+   "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/dry-eye",
+   "quote": "Dry eye happens when your eyes don’t make enough tears to stay wet, or when your tears don’t work correctly. This can make your eyes feel uncomfortable, and in some cases it can also cause vision problems.",
+   "lead": null,
+   "last_reviewed": "2025-08-06",
+   "next_review_due": null,
+   "review_overdue": false,
+   "retrieved_at": "2026-11-16T20:30:13+00:00",
+   "licence": "US federal government work — public domain unless marked"
+  }
+ ],
+ "limitations": [
+  "This assessment uses draft rules and source-linked knowledge that no clinician has reviewed yet. It cannot examine you, run tests or confirm a diagnosis.",
+  "Symptoms are recognised with a fixed multilingual vocabulary; unusual wording can be missed. Use the answer buttons where possible and check the recorded facts.",
+  "The knowledge base covers 47 conditions with 64 approved sources; many problems are not covered."
+ ],
+ "clinician_summary": {
+  "headline": "Eyes (left) — urgency routine; rules knowledge-2026-11-16.1",
+  "patient_reported": [
+   "screen: A dark curtain or shadow over your vision [absent; patient_answer] — patient words: “none”",
+   "screen: Eye injury or chemical in the eye [absent; patient_answer] — patient words: “none”",
+   "screen: Light hurts your eyes [absent; patient_answer] — patient words: “none”",
+   "screen: New flashes of light or a sudden shower of floaters [absent; patient_answer] — patient words: “none”",
+   "screen: Severe eye pain [absent; patient_answer] — patient words: “none”",
+   "screen: Sudden loss of vision [absent; patient_answer] — patient words: “none”",
+   "symptom: Discharge or pus [present; patient_statement] — patient words: “sticky”",
+   "symptom: Itching [present; patient_statement] — patient words: “itchy”",
+   "symptom: Redness [present; patient_statement] — patient words: “red”",
+   "attribute: for 1 day [present; patient_statement] — patient words: “since yesterday”",
+   "attribute: Onset: Gradual [present; patient_answer] — patient words: “onset:gradual”"
+  ],
+  "from_records": [],
+  "observations_note": "No examination findings, vital signs or test results are available. Everything above is patient-reported unless labelled otherwise.",
+  "interpretations": [
+   "Conjunctivitis — fits; 3 supporting, 0 conflicting, 2 missing features; sources: nhs-conjunctivitis",
+   "Dry eyes — partly fits; 2 supporting, 0 conflicting, 4 missing features; sources: nhs-dry-eyes",
+   "Uveitis (inflammation inside the eye) — partly fits; 2 supporting, 0 conflicting, 3 missing features; sources: nhs-uveitis"
+  ],
+  "urgency": "routine via pharmacist: safety-screen-clear",
+  "missing": [
+   "attr:course",
+   "sym:eye_dryness_grit",
+   "sym:watery_eyes",
+   "sym:contact_lens",
+   "sym:screen_use",
+   "sym:pain",
+   "sym:blurred_vision",
+   "sym:light_sensitivity",
+   "history:medications",
+   "history:allergies"
+  ],
+  "contradictions": [],
+  "provenance_note": "patient_statement = free text; patient_answer = structured answer; patient_memory = consented saved history; document_extract = confirmed report extract; interpretations are AI-generated suggestions from source-bound rules, not diagnoses."
+ },
+ "versions": {
+  "engine": "clinical-engine-2026-11-16.1",
+  "anatomy": "anatomy-2026-11-16.1",
+  "symptoms": "symptoms-2026-11-16.1",
+  "knowledge": "knowledge-2026-11-16.1",
+  "source_registry": "sources-2026-11-16.1",
+  "snapshot": "clinical-knowledge-2026-11-16.141eaa10",
+  "language_model": null,
+  "prompt": null
+ },
+ "processing": {
+  "engine_ms": 20.73,
+  "retrieval": "bm25-anatomy-tier-freshness",
+  "language_model_used": false,
+  "external_requests": false,
+  "stages": [
+   "extracting",
+   "screening",
+   "reasoning",
+   "retrieving",
+   "composing"
+  ]
+ },
+ "clinical_review_required": true,
+ "disclaimer": "Educational decision support, not a diagnosis. It does not replace a clinician’s examination."
+}

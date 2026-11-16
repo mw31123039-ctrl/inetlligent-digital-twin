@@ -1,0 +1,4171 @@
+{
+ "schema_version": "humantwin-anatomy-v1",
+ "version": "anatomy-2026-11-16.1",
+ "conventions": {
+  "side": "Always the patient's side. Lateral structures carry side separately from the ID.",
+  "teeth": "FDI two-digit notation; quadrants 1 and 4 are the patient's right.",
+  "anchors": "Illustrative marker positions on the bundled reference body (+x = patient left, faces +z). Not measured patient anatomy.",
+  "bones": [
+   "hips",
+   "spine",
+   "chest",
+   "neck",
+   "head",
+   "upperArm",
+   "forearm",
+   "hand",
+   "thigh",
+   "shin",
+   "foot"
+  ]
+ },
+ "clinical_review_status": "draft",
+ "translation_review_status": {
+  "en": "draft",
+  "ar": "draft — native medical review pending",
+  "ckb": "draft — native medical review pending"
+ },
+ "nodes": [
+  {
+   "id": "body.head",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Head",
+    "ar": "الرأس",
+    "ckb": "سەر"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.16,
+     0.09
+    ]
+   },
+   "legacy_region": "head",
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "head"
+    ],
+    "ar": [
+     "رأس",
+     "راس",
+     "راسي"
+    ],
+    "ckb": [
+     "سەر",
+     "سەرم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "body.eyes",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Eyes",
+    "ar": "العينان",
+    "ckb": "چاوەکان"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.099,
+     0.11
+    ]
+   },
+   "legacy_region": "eyes",
+   "internal": false,
+   "specialty": "ophthalmology",
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "eye",
+     "eyes"
+    ],
+    "ar": [
+     "عين",
+     "عيني",
+     "عيون",
+     "العين"
+    ],
+    "ckb": [
+     "چاو",
+     "چاوم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "body.ears",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Ears",
+    "ar": "الأذنان",
+    "ckb": "گوێیەکان"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.077,
+     0.085,
+     0
+    ]
+   },
+   "legacy_region": "head",
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "ear",
+     "ears"
+    ],
+    "ar": [
+     "أذن",
+     "اذن",
+     "اذني",
+     "أذني"
+    ],
+    "ckb": [
+     "گوێ",
+     "گوێم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "body.mouth",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Mouth & teeth",
+    "ar": "الفم والأسنان",
+    "ckb": "دەم و ددان"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.035,
+     0.105
+    ]
+   },
+   "legacy_region": "head",
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "mouth"
+    ],
+    "ar": [
+     "فم",
+     "الفم",
+     "حلك"
+    ],
+    "ckb": [
+     "دەمم",
+     "ناو دەم",
+     "دەممدا",
+     "دەمەوە"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "body.neck",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Neck & throat",
+    "ar": "الرقبة والحلق",
+    "ckb": "مل و گەروو"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "neck",
+    "offset": [
+     0,
+     0.03,
+     0.06
+    ]
+   },
+   "legacy_region": "head",
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "neck"
+    ],
+    "ar": [
+     "رقبة",
+     "رقبتي",
+     "الرقبة"
+    ],
+    "ckb": [
+     "مل",
+     "ملم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "body.chest",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Chest",
+    "ar": "الصدر",
+    "ckb": "سنگ"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "chest",
+    "offset": [
+     0,
+     0.075,
+     0.125
+    ]
+   },
+   "legacy_region": "chest",
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "chest"
+    ],
+    "ar": [
+     "صدر",
+     "صدري",
+     "الصدر"
+    ],
+    "ckb": [
+     "سنگ",
+     "سنگم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "body.abdomen",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Abdomen",
+    "ar": "البطن",
+    "ckb": "سک"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "spine",
+    "offset": [
+     0,
+     0.105,
+     0.125
+    ]
+   },
+   "legacy_region": "abdomen",
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "abdomen",
+     "stomach",
+     "belly",
+     "tummy"
+    ],
+    "ar": [
+     "بطن",
+     "بطني",
+     "معدة",
+     "معدتي",
+     "البطن"
+    ],
+    "ckb": [
+     "سک",
+     "سکم",
+     "گەدە"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "body.back",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Back",
+    "ar": "الظهر",
+    "ckb": "پشت"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "spine",
+    "offset": [
+     0,
+     0.1,
+     -0.12
+    ]
+   },
+   "legacy_region": "chest",
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "back"
+    ],
+    "ar": [
+     "ظهر",
+     "ظهري",
+     "الظهر"
+    ],
+    "ckb": [
+     "پشت",
+     "پشتم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "body.arms",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Arms & hands",
+    "ar": "الذراعان واليدان",
+    "ckb": "باڵ و دەست"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "upperArm",
+    "offset": [
+     0,
+     0,
+     0.02
+    ],
+    "to": "forearm",
+    "t": 0.5
+   },
+   "legacy_region": "arms",
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "arm",
+     "arms"
+    ],
+    "ar": [
+     "ذراع",
+     "ذراعي",
+     "يد",
+     "إيد",
+     "ايدي"
+    ],
+    "ckb": [
+     "باڵ",
+     "قۆڵ",
+     "دەست"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "body.legs",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Legs & feet",
+    "ar": "الساقان والقدمان",
+    "ckb": "لاق و پێ"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "thigh",
+    "offset": [
+     0,
+     0,
+     0.03
+    ],
+    "to": "shin",
+    "t": 0.5
+   },
+   "legacy_region": "legs",
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "leg",
+     "legs"
+    ],
+    "ar": [
+     "رجل",
+     "رجلي",
+     "ساق",
+     "ساقي"
+    ],
+    "ckb": [
+     "لاق",
+     "قاچ",
+     "لاقم",
+     "قاچم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "body.skin",
+   "parent": null,
+   "kind": "region",
+   "label": {
+    "en": "Skin",
+    "ar": "الجلد",
+    "ckb": "پێست"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": null,
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dermatology",
+   "photo_visible": true,
+   "related": [],
+   "terms": {
+    "en": [
+     "skin"
+    ],
+    "ar": [
+     "جلد",
+     "جلدي",
+     "بشرة"
+    ],
+    "ckb": [
+     "پێست"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "head.forehead",
+   "parent": "body.head",
+   "kind": "structure",
+   "label": {
+    "en": "Forehead",
+    "ar": "الجبهة",
+    "ckb": "ناوچەوان"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.165,
+     0.095
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "forehead"
+    ],
+    "ar": [
+     "جبهة",
+     "جبين",
+     "الجبهة"
+    ],
+    "ckb": [
+     "ناوچەوان"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "head.temple",
+   "parent": "body.head",
+   "kind": "structure",
+   "label": {
+    "en": "Temple",
+    "ar": "الصدغ",
+    "ckb": "لاجانگ"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.068,
+     0.13,
+     0.05
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "head.jaw-joint",
+     "relation": "adjacent",
+     "note": "Jaw-joint and chewing-muscle pain can be felt at the temple."
+    }
+   ],
+   "terms": {
+    "en": [
+     "temple",
+     "temples"
+    ],
+    "ar": [
+     "صدغ",
+     "الصدغ"
+    ],
+    "ckb": [
+     "لاجانگ"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "head.back-of-head",
+   "parent": "body.head",
+   "kind": "structure",
+   "label": {
+    "en": "Back of the head",
+    "ar": "مؤخرة الرأس",
+    "ckb": "پشتی سەر"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.12,
+     -0.09
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "body.neck",
+     "relation": "adjacent",
+     "note": "Neck muscle tension can be felt at the back of the head."
+    }
+   ],
+   "terms": {
+    "en": [
+     "back of my head",
+     "back of the head"
+    ],
+    "ar": [
+     "مؤخرة الرأس",
+     "ورا راسي",
+     "خلف الرأس"
+    ],
+    "ckb": [
+     "پشتی سەر",
+     "پشتەوەی سەر"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "head.sinuses",
+   "parent": "body.head",
+   "kind": "structure",
+   "label": {
+    "en": "Sinuses & cheeks",
+    "ar": "الجيوب الأنفية والخدان",
+    "ckb": "سینوس و ڕوومەت"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.085,
+     0.112
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "mouth.teeth",
+     "relation": "referred_pain",
+     "note": "Upper-sinus pressure can feel like upper back-tooth pain."
+    }
+   ],
+   "terms": {
+    "en": [
+     "sinus",
+     "sinuses",
+     "cheek",
+     "cheeks",
+     "nose"
+    ],
+    "ar": [
+     "جيوب",
+     "الجيوب الأنفية",
+     "خد",
+     "خدي",
+     "أنف",
+     "انف"
+    ],
+    "ckb": [
+     "سینوس",
+     "ڕوومەت",
+     "لووت"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "head.jaw-joint",
+   "parent": "body.head",
+   "kind": "structure",
+   "label": {
+    "en": "Jaw joint (TMJ)",
+    "ar": "مفصل الفك",
+    "ckb": "جومگەی شەویلگە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.062,
+     0.06,
+     0.03
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "mouth.bite",
+     "relation": "adjacent",
+     "note": "Bite and chewing load the jaw joint."
+    },
+    {
+     "target": "body.ears",
+     "relation": "referred_pain",
+     "note": "Jaw-joint pain is often felt in front of the ear."
+    }
+   ],
+   "terms": {
+    "en": [
+     "jaw",
+     "jaw joint",
+     "tmj"
+    ],
+    "ar": [
+     "فك",
+     "فكي",
+     "مفصل الفك",
+     "حنك"
+    ],
+    "ckb": [
+     "شەویلگە",
+     "چەناگە"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "head.brain",
+   "parent": "body.head",
+   "kind": "structure",
+   "label": {
+    "en": "Brain (internal)",
+    "ar": "الدماغ (داخلي)",
+    "ckb": "مێشک (ناوەکی)"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.14,
+     0
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "eye.optic-nerve",
+     "relation": "clinical_link",
+     "note": "Vision depends on the optic nerve and brain pathways."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.upper-eyelid",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Upper eyelid",
+    "ar": "الجفن العلوي",
+    "ckb": "پلکی سەرەوە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.112,
+     0.108
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "ophthalmology",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "eye.lower-eyelid",
+     "relation": "adjacent",
+     "note": "Both lids protect the eye surface."
+    }
+   ],
+   "terms": {
+    "en": [
+     "eyelid",
+     "eyelids",
+     "upper lid",
+     "eye lid",
+     "lids"
+    ],
+    "ar": [
+     "جفن",
+     "الجفن",
+     "جفوني"
+    ],
+    "ckb": [
+     "پێڵوو",
+     "پلک"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.lower-eyelid",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Lower eyelid",
+    "ar": "الجفن السفلي",
+    "ckb": "پلکی خوارەوە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.088,
+     0.108
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "ophthalmology",
+   "photo_visible": true,
+   "related": [],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.eyelid-margin",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Eyelid margins",
+    "ar": "حواف الجفون",
+    "ckb": "لێواری پلکەکان"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.106,
+     0.111
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "ophthalmology",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "eye.meibomian-glands",
+     "relation": "adjacent",
+     "note": "Oil glands open on the lid margin."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.meibomian-glands",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Meibomian glands",
+    "ar": "غدد ميبوميان",
+    "ckb": "ڕژێنەکانی میبۆمیان"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.104,
+     0.109
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "ophthalmology",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "eye.tear-film",
+     "relation": "clinical_link",
+     "note": "Gland oil stabilises the tear film."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.bulbar-conjunctiva",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Conjunctiva (white of the eye)",
+    "ar": "الملتحمة (بياض العين)",
+    "ckb": "پەردەی سپێی چاو"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.04,
+     0.099,
+     0.112
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "ophthalmology",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "eye.cornea",
+     "relation": "adjacent",
+     "note": "The conjunctiva surrounds the cornea at the limbus."
+    }
+   ],
+   "terms": {
+    "en": [
+     "white of the eye",
+     "conjunctiva"
+    ],
+    "ar": [
+     "بياض العين",
+     "الملتحمة"
+    ],
+    "ckb": [
+     "سپێنەی چاو"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.tear-film",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Tear film",
+    "ar": "طبقة الدمع",
+    "ckb": "چینی فرمێسک"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.099,
+     0.115
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "ophthalmology",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "eye.cornea",
+     "relation": "adjacent",
+     "note": "Tears cover and protect the cornea."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.lacrimal-gland",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Lacrimal gland",
+    "ar": "الغدة الدمعية",
+    "ckb": "ڕژێنی فرمێسک"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.052,
+     0.112,
+     0.095
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "ophthalmology",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "eye.tear-film",
+     "relation": "clinical_link",
+     "note": "Produces the watery part of tears."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.cornea",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Cornea",
+    "ar": "القرنية",
+    "ckb": "قەرنیە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.099,
+     0.116
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "ophthalmology",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "eye.iris",
+     "relation": "adjacent",
+     "note": "The iris sits behind the cornea."
+    }
+   ],
+   "terms": {
+    "en": [
+     "cornea"
+    ],
+    "ar": [
+     "قرنية",
+     "القرنية"
+    ],
+    "ckb": [
+     "قەرنیە"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.sclera",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Sclera",
+    "ar": "الصلبة",
+    "ckb": "سکلێرا"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.045,
+     0.099,
+     0.108
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": "ophthalmology",
+   "photo_visible": false,
+   "related": [],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.iris",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Iris",
+    "ar": "القزحية",
+    "ckb": "قازحیە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.099,
+     0.113
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": "ophthalmology",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "eye.pupil",
+     "relation": "adjacent",
+     "note": "The iris sets the pupil size."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.pupil",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Pupil opening",
+    "ar": "فتحة البؤبؤ",
+    "ckb": "کونی بیلبیلە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.099,
+     0.114
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": "ophthalmology",
+   "photo_visible": false,
+   "related": [],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.lens",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Lens",
+    "ar": "العدسة",
+    "ckb": "عەدەسە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.099,
+     0.108
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": "ophthalmology",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "eye.vitreous-body",
+     "relation": "adjacent",
+     "note": "The vitreous lies behind the lens."
+    }
+   ],
+   "terms": {
+    "en": [
+     "lens"
+    ],
+    "ar": [
+     "عدسة العين"
+    ],
+    "ckb": [
+     "هاوێنەی چاو"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.vitreous-body",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Vitreous body",
+    "ar": "الجسم الزجاجي",
+    "ckb": "جەستەی شووشەیی"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.099,
+     0.1
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": "ophthalmology",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "eye.retina",
+     "relation": "adjacent",
+     "note": "Vitreous traction can tear the retina."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.retina",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Retina",
+    "ar": "الشبكية",
+    "ckb": "تۆڕینە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.033,
+     0.099,
+     0.092
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": "ophthalmology",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "eye.macula",
+     "relation": "adjacent",
+     "note": "The macula is the central retina."
+    },
+    {
+     "target": "eye.optic-nerve",
+     "relation": "adjacent",
+     "note": "Retinal signals leave through the optic nerve."
+    }
+   ],
+   "terms": {
+    "en": [
+     "retina"
+    ],
+    "ar": [
+     "شبكية",
+     "الشبكية"
+    ],
+    "ckb": [
+     "تۆڕینە"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.macula",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Macula",
+    "ar": "البقعة الصفراء",
+    "ckb": "ماکولا"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.031,
+     0.099,
+     0.09
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": "ophthalmology",
+   "photo_visible": false,
+   "related": [],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "eye.optic-nerve",
+   "parent": "body.eyes",
+   "kind": "structure",
+   "label": {
+    "en": "Optic nerve",
+    "ar": "العصب البصري",
+    "ckb": "دەمارە بیناییەکە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.028,
+     0.099,
+     0.084
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": "ophthalmology",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "head.brain",
+     "relation": "clinical_link",
+     "note": "Carries visual signals to the brain."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "ear.outer",
+   "parent": "body.ears",
+   "kind": "structure",
+   "label": {
+    "en": "Outer ear & canal",
+    "ar": "الأذن الخارجية والقناة",
+    "ckb": "گوێی دەرەوە و جۆگە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.08,
+     0.085,
+     0.005
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": true,
+   "related": [],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "ear.middle",
+   "parent": "body.ears",
+   "kind": "structure",
+   "label": {
+    "en": "Middle ear (internal)",
+    "ar": "الأذن الوسطى (داخلية)",
+    "ckb": "گوێی ناوەڕاست (ناوەکی)"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.068,
+     0.085,
+     0.005
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "neck.throat",
+     "relation": "referred_pain",
+     "note": "Throat infection can cause ear pain."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "mouth.lips",
+   "parent": "body.mouth",
+   "kind": "structure",
+   "label": {
+    "en": "Lips",
+    "ar": "الشفتان",
+    "ckb": "لێوەکان"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.028,
+     0.118
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": true,
+   "related": [],
+   "terms": {
+    "en": [
+     "lip",
+     "lips"
+    ],
+    "ar": [
+     "شفة",
+     "شفايف",
+     "شفاه"
+    ],
+    "ckb": [
+     "لێو"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "mouth.gums",
+   "parent": "body.mouth",
+   "kind": "structure",
+   "label": {
+    "en": "Gums",
+    "ar": "اللثة",
+    "ckb": "پووک"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.05,
+     0.108
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.teeth",
+     "relation": "adjacent",
+     "note": "Gums support the teeth."
+    }
+   ],
+   "terms": {
+    "en": [
+     "gum",
+     "gums"
+    ],
+    "ar": [
+     "لثة",
+     "اللثة",
+     "لثتي"
+    ],
+    "ckb": [
+     "پووک",
+     "پووکم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "mouth.tongue",
+   "parent": "body.mouth",
+   "kind": "structure",
+   "label": {
+    "en": "Tongue",
+    "ar": "اللسان",
+    "ckb": "زمان"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.035,
+     0.095
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": true,
+   "related": [],
+   "terms": {
+    "en": [
+     "tongue"
+    ],
+    "ar": [
+     "لسان",
+     "لساني"
+    ],
+    "ckb": [
+     "زمان",
+     "زمانم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "mouth.oral-lining",
+   "parent": "body.mouth",
+   "kind": "structure",
+   "label": {
+    "en": "Inside of the mouth",
+    "ar": "بطانة الفم",
+    "ckb": "ناوەوەی دەم"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.025,
+     0.04,
+     0.095
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": true,
+   "related": [],
+   "terms": {
+    "en": [
+     "inside my mouth",
+     "inner cheek",
+     "inside my cheek",
+     "inside of my cheek"
+    ],
+    "ar": [
+     "داخل الفم",
+     "باطن الخد",
+     "داخل خدي"
+    ],
+    "ckb": [
+     "ناو دەمم",
+     "ناوەوەی ڕوومەتم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "mouth.teeth",
+   "parent": "body.mouth",
+   "kind": "group",
+   "label": {
+    "en": "Teeth",
+    "ar": "الأسنان",
+    "ckb": "ددانەکان"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.04,
+     0.11
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "head.sinuses",
+     "relation": "referred_pain",
+     "note": "Upper back-tooth pain can come from the sinuses."
+    }
+   ],
+   "terms": {
+    "en": [
+     "tooth",
+     "teeth",
+     "molar",
+     "molars"
+    ],
+    "ar": [
+     "سن",
+     "سني",
+     "أسنان",
+     "اسنان",
+     "ضرس",
+     "ضرسي",
+     "أضراس"
+    ],
+    "ckb": [
+     "ددان",
+     "ددانم",
+     "کاکیلە"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "mouth.bite",
+   "parent": "body.mouth",
+   "kind": "structure",
+   "label": {
+    "en": "Bite (how teeth meet)",
+    "ar": "العضة (تطابق الأسنان)",
+    "ckb": "گەستن (یەکگرتنی ددان)"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0,
+     0.04,
+     0.112
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "orthodontics",
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "head.jaw-joint",
+     "relation": "adjacent",
+     "note": "Bite relationships load the jaw joints."
+    }
+   ],
+   "terms": {
+    "en": [
+     "bite",
+     "overbite",
+     "underbite",
+     "crossbite",
+     "open bite"
+    ],
+    "ar": [
+     "العضة",
+     "عضة"
+    ],
+    "ckb": [
+     "گەستن"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.11",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Central incisor, upper right (FDI 11)",
+    "ar": "قاطع مركزي العلوي الأيمن (FDI 11)",
+    "ckb": "ددانی پێشەوەی ناوەڕاستی سەرەوەی ڕاست (FDI 11)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0045,
+     0.047,
+     0.112
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.12",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Lateral incisor, upper right (FDI 12)",
+    "ar": "قاطع جانبي العلوي الأيمن (FDI 12)",
+    "ckb": "ددانی پێشەوەی لاتەنیشتی سەرەوەی ڕاست (FDI 12)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0113,
+     0.047,
+     0.1088
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.13",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Canine, upper right (FDI 13)",
+    "ar": "ناب العلوي الأيمن (FDI 13)",
+    "ckb": "ددانی کەڵبەی سەرەوەی ڕاست (FDI 13)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0181,
+     0.047,
+     0.1041
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.14",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "First premolar, upper right (FDI 14)",
+    "ar": "ضاحك أول العلوي الأيمن (FDI 14)",
+    "ckb": "یەکەم پێش-کاکیلەی سەرەوەی ڕاست (FDI 14)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0249,
+     0.047,
+     0.0987
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.15",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Second premolar, upper right (FDI 15)",
+    "ar": "ضاحك ثانٍ العلوي الأيمن (FDI 15)",
+    "ckb": "دووەم پێش-کاکیلەی سەرەوەی ڕاست (FDI 15)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0317,
+     0.047,
+     0.0926
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.16",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "First molar, upper right (FDI 16)",
+    "ar": "رحى أولى العلوي الأيمن (FDI 16)",
+    "ckb": "یەکەم کاکیلەی سەرەوەی ڕاست (FDI 16)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0385,
+     0.047,
+     0.0861
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.17",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Second molar, upper right (FDI 17)",
+    "ar": "رحى ثانية العلوي الأيمن (FDI 17)",
+    "ckb": "دووەم کاکیلەی سەرەوەی ڕاست (FDI 17)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0453,
+     0.047,
+     0.0791
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.18",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Third molar (wisdom), upper right (FDI 18)",
+    "ar": "رحى ثالثة (ضرس العقل) العلوي الأيمن (FDI 18)",
+    "ckb": "سێیەم کاکیلە (ددانی عەقڵ)ی سەرەوەی ڕاست (FDI 18)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0521,
+     0.047,
+     0.0718
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.21",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Central incisor, upper left (FDI 21)",
+    "ar": "قاطع مركزي العلوي الأيسر (FDI 21)",
+    "ckb": "ددانی پێشەوەی ناوەڕاستی سەرەوەی چەپ (FDI 21)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0045,
+     0.047,
+     0.112
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.22",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Lateral incisor, upper left (FDI 22)",
+    "ar": "قاطع جانبي العلوي الأيسر (FDI 22)",
+    "ckb": "ددانی پێشەوەی لاتەنیشتی سەرەوەی چەپ (FDI 22)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0113,
+     0.047,
+     0.1088
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.23",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Canine, upper left (FDI 23)",
+    "ar": "ناب العلوي الأيسر (FDI 23)",
+    "ckb": "ددانی کەڵبەی سەرەوەی چەپ (FDI 23)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0181,
+     0.047,
+     0.1041
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.24",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "First premolar, upper left (FDI 24)",
+    "ar": "ضاحك أول العلوي الأيسر (FDI 24)",
+    "ckb": "یەکەم پێش-کاکیلەی سەرەوەی چەپ (FDI 24)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0249,
+     0.047,
+     0.0987
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.25",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Second premolar, upper left (FDI 25)",
+    "ar": "ضاحك ثانٍ العلوي الأيسر (FDI 25)",
+    "ckb": "دووەم پێش-کاکیلەی سەرەوەی چەپ (FDI 25)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0317,
+     0.047,
+     0.0926
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.26",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "First molar, upper left (FDI 26)",
+    "ar": "رحى أولى العلوي الأيسر (FDI 26)",
+    "ckb": "یەکەم کاکیلەی سەرەوەی چەپ (FDI 26)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0385,
+     0.047,
+     0.0861
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.27",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Second molar, upper left (FDI 27)",
+    "ar": "رحى ثانية العلوي الأيسر (FDI 27)",
+    "ckb": "دووەم کاکیلەی سەرەوەی چەپ (FDI 27)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0453,
+     0.047,
+     0.0791
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.28",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Third molar (wisdom), upper left (FDI 28)",
+    "ar": "رحى ثالثة (ضرس العقل) العلوي الأيسر (FDI 28)",
+    "ckb": "سێیەم کاکیلە (ددانی عەقڵ)ی سەرەوەی چەپ (FDI 28)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0521,
+     0.047,
+     0.0718
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.31",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Central incisor, lower left (FDI 31)",
+    "ar": "قاطع مركزي السفلي الأيسر (FDI 31)",
+    "ckb": "ددانی پێشەوەی ناوەڕاستی خوارەوەی چەپ (FDI 31)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0045,
+     0.031,
+     0.112
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.32",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Lateral incisor, lower left (FDI 32)",
+    "ar": "قاطع جانبي السفلي الأيسر (FDI 32)",
+    "ckb": "ددانی پێشەوەی لاتەنیشتی خوارەوەی چەپ (FDI 32)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0113,
+     0.031,
+     0.1088
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.33",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Canine, lower left (FDI 33)",
+    "ar": "ناب السفلي الأيسر (FDI 33)",
+    "ckb": "ددانی کەڵبەی خوارەوەی چەپ (FDI 33)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0181,
+     0.031,
+     0.1041
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.34",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "First premolar, lower left (FDI 34)",
+    "ar": "ضاحك أول السفلي الأيسر (FDI 34)",
+    "ckb": "یەکەم پێش-کاکیلەی خوارەوەی چەپ (FDI 34)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0249,
+     0.031,
+     0.0987
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.35",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Second premolar, lower left (FDI 35)",
+    "ar": "ضاحك ثانٍ السفلي الأيسر (FDI 35)",
+    "ckb": "دووەم پێش-کاکیلەی خوارەوەی چەپ (FDI 35)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0317,
+     0.031,
+     0.0926
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.36",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "First molar, lower left (FDI 36)",
+    "ar": "رحى أولى السفلي الأيسر (FDI 36)",
+    "ckb": "یەکەم کاکیلەی خوارەوەی چەپ (FDI 36)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0385,
+     0.031,
+     0.0861
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.37",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Second molar, lower left (FDI 37)",
+    "ar": "رحى ثانية السفلي الأيسر (FDI 37)",
+    "ckb": "دووەم کاکیلەی خوارەوەی چەپ (FDI 37)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0453,
+     0.031,
+     0.0791
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.38",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Third molar (wisdom), lower left (FDI 38)",
+    "ar": "رحى ثالثة (ضرس العقل) السفلي الأيسر (FDI 38)",
+    "ckb": "سێیەم کاکیلە (ددانی عەقڵ)ی خوارەوەی چەپ (FDI 38)"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     0.0521,
+     0.031,
+     0.0718
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.41",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Central incisor, lower right (FDI 41)",
+    "ar": "قاطع مركزي السفلي الأيمن (FDI 41)",
+    "ckb": "ددانی پێشەوەی ناوەڕاستی خوارەوەی ڕاست (FDI 41)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0045,
+     0.031,
+     0.112
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.42",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Lateral incisor, lower right (FDI 42)",
+    "ar": "قاطع جانبي السفلي الأيمن (FDI 42)",
+    "ckb": "ددانی پێشەوەی لاتەنیشتی خوارەوەی ڕاست (FDI 42)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0113,
+     0.031,
+     0.1088
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.43",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Canine, lower right (FDI 43)",
+    "ar": "ناب السفلي الأيمن (FDI 43)",
+    "ckb": "ددانی کەڵبەی خوارەوەی ڕاست (FDI 43)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0181,
+     0.031,
+     0.1041
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.44",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "First premolar, lower right (FDI 44)",
+    "ar": "ضاحك أول السفلي الأيمن (FDI 44)",
+    "ckb": "یەکەم پێش-کاکیلەی خوارەوەی ڕاست (FDI 44)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0249,
+     0.031,
+     0.0987
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.45",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Second premolar, lower right (FDI 45)",
+    "ar": "ضاحك ثانٍ السفلي الأيمن (FDI 45)",
+    "ckb": "دووەم پێش-کاکیلەی خوارەوەی ڕاست (FDI 45)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0317,
+     0.031,
+     0.0926
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.46",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "First molar, lower right (FDI 46)",
+    "ar": "رحى أولى السفلي الأيمن (FDI 46)",
+    "ckb": "یەکەم کاکیلەی خوارەوەی ڕاست (FDI 46)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0385,
+     0.031,
+     0.0861
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": true,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.47",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Second molar, lower right (FDI 47)",
+    "ar": "رحى ثانية السفلي الأيمن (FDI 47)",
+    "ckb": "دووەم کاکیلەی خوارەوەی ڕاست (FDI 47)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0453,
+     0.031,
+     0.0791
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "tooth.fdi.48",
+   "parent": "mouth.teeth",
+   "kind": "tooth",
+   "label": {
+    "en": "Third molar (wisdom), lower right (FDI 48)",
+    "ar": "رحى ثالثة (ضرس العقل) السفلي الأيمن (FDI 48)",
+    "ckb": "سێیەم کاکیلە (ددانی عەقڵ)ی خوارەوەی ڕاست (FDI 48)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "head",
+    "offset": [
+     -0.0521,
+     0.031,
+     0.0718
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": "dentistry",
+   "photo_visible": false,
+   "related": [
+    {
+     "target": "mouth.gums",
+     "relation": "adjacent",
+     "note": "Supported by the surrounding gum."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "neck.throat",
+   "parent": "body.neck",
+   "kind": "structure",
+   "label": {
+    "en": "Throat",
+    "ar": "الحلق",
+    "ckb": "گەروو"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "neck",
+    "offset": [
+     0,
+     0.045,
+     0.055
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "ear.middle",
+     "relation": "referred_pain",
+     "note": "Throat pain can be felt in the ear."
+    }
+   ],
+   "terms": {
+    "en": [
+     "throat"
+    ],
+    "ar": [
+     "حلق",
+     "حلقي",
+     "بلعوم",
+     "زردوم"
+    ],
+    "ckb": [
+     "گەروو",
+     "قوڕگ"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "neck.thyroid",
+   "parent": "body.neck",
+   "kind": "structure",
+   "label": {
+    "en": "Thyroid (front of neck)",
+    "ar": "الغدة الدرقية",
+    "ckb": "گلاندی دەرەقی"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "neck",
+    "offset": [
+     0,
+     0.0,
+     0.065
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "neck.lymph-nodes",
+   "parent": "body.neck",
+   "kind": "structure",
+   "label": {
+    "en": "Neck glands (lymph nodes)",
+    "ar": "الغدد اللمفاوية في الرقبة",
+    "ckb": "گرێ لیمفاوییەکانی مل"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "neck",
+    "offset": [
+     0.045,
+     0.04,
+     0.03
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "glands",
+     "lymph node"
+    ],
+    "ar": [
+     "غدد",
+     "الغدد"
+    ],
+    "ckb": [
+     "گرێ"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "chest.chest-wall",
+   "parent": "body.chest",
+   "kind": "structure",
+   "label": {
+    "en": "Chest wall & ribs",
+    "ar": "جدار الصدر والأضلاع",
+    "ckb": "دیواری سنگ و پەراسوو"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "chest",
+    "offset": [
+     0,
+     0.075,
+     0.135
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "rib",
+     "ribs",
+     "breastbone",
+     "sternum"
+    ],
+    "ar": [
+     "ضلع",
+     "أضلاع",
+     "اضلاع",
+     "عظم القص"
+    ],
+    "ckb": [
+     "پەراسوو",
+     "ئێسکی سنگ"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "chest.heart",
+   "parent": "body.chest",
+   "kind": "structure",
+   "label": {
+    "en": "Heart (internal)",
+    "ar": "القلب (داخلي)",
+    "ckb": "دڵ (ناوەکی)"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "chest",
+    "offset": [
+     0.035,
+     0.06,
+     0.1
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "body.arms",
+     "relation": "referred_pain",
+     "note": "Heart pain can spread to the arms, especially the left."
+    },
+    {
+     "target": "head.jaw-joint",
+     "relation": "referred_pain",
+     "note": "Heart pain can spread to the jaw."
+    },
+    {
+     "target": "back.upper",
+     "relation": "referred_pain",
+     "note": "Heart pain can spread to the back."
+    }
+   ],
+   "terms": {
+    "en": [
+     "heart"
+    ],
+    "ar": [
+     "قلب",
+     "قلبي"
+    ],
+    "ckb": [
+     "دڵ",
+     "دڵم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "chest.lungs",
+   "parent": "body.chest",
+   "kind": "structure",
+   "label": {
+    "en": "Lungs (internal)",
+    "ar": "الرئتان (داخلي)",
+    "ckb": "سییەکان (ناوەکی)"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "chest",
+    "offset": [
+     0.075,
+     0.09,
+     0.08
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "leg.calf",
+     "relation": "clinical_link",
+     "note": "A clot in a leg vein can travel to the lungs."
+    }
+   ],
+   "terms": {
+    "en": [
+     "lung",
+     "lungs"
+    ],
+    "ar": [
+     "رئة",
+     "رئتي",
+     "الرئة"
+    ],
+    "ckb": [
+     "سی",
+     "سییەکان"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "chest.breast",
+   "parent": "body.chest",
+   "kind": "structure",
+   "label": {
+    "en": "Breast",
+    "ar": "الثدي",
+    "ckb": "مەمک"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "chest",
+    "offset": [
+     0.085,
+     0.02,
+     0.135
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": false,
+   "related": [],
+   "terms": {
+    "en": [
+     "breast"
+    ],
+    "ar": [
+     "ثدي",
+     "الثدي"
+    ],
+    "ckb": [
+     "مەمک"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "chest.oesophagus",
+   "parent": "body.chest",
+   "kind": "structure",
+   "label": {
+    "en": "Food pipe (oesophagus)",
+    "ar": "المريء",
+    "ckb": "سورێنچک"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "chest",
+    "offset": [
+     0,
+     0.11,
+     0.06
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "abdomen.upper-central",
+     "relation": "adjacent",
+     "note": "Acid from the stomach can irritate the food pipe."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "abdomen.upper-central",
+   "parent": "body.abdomen",
+   "kind": "structure",
+   "label": {
+    "en": "Upper abdomen (below the breastbone)",
+    "ar": "أعلى البطن (تحت القص)",
+    "ckb": "سەرەوەی سک (ژێر ئێسکی سنگ)"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "spine",
+    "offset": [
+     0,
+     0.2,
+     0.125
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "upper stomach",
+     "upper abdomen",
+     "epigastric"
+    ],
+    "ar": [
+     "فم المعدة",
+     "أعلى البطن",
+     "اعلى البطن"
+    ],
+    "ckb": [
+     "سەرەوەی سک",
+     "دەمی گەدە"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "abdomen.right-upper",
+   "parent": "body.abdomen",
+   "kind": "structure",
+   "label": {
+    "en": "Upper right abdomen (liver, gallbladder)",
+    "ar": "أعلى يمين البطن (الكبد والمرارة)",
+    "ckb": "سەرەوەی لای ڕاستی سک (جگەر و زراو)"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "spine",
+    "offset": [
+     -0.075,
+     0.17,
+     0.115
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "back.upper",
+     "relation": "referred_pain",
+     "note": "Gallbladder pain can spread to the right shoulder blade."
+    }
+   ],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "abdomen.left-upper",
+   "parent": "body.abdomen",
+   "kind": "structure",
+   "label": {
+    "en": "Upper left abdomen",
+    "ar": "أعلى يسار البطن",
+    "ckb": "سەرەوەی لای چەپی سک"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "spine",
+    "offset": [
+     0.075,
+     0.17,
+     0.115
+    ]
+   },
+   "legacy_region": null,
+   "internal": true,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "abdomen.central",
+   "parent": "body.abdomen",
+   "kind": "structure",
+   "label": {
+    "en": "Around the belly button",
+    "ar": "حول السرة",
+    "ckb": "دەوری ناوک"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "spine",
+    "offset": [
+     0,
+     0.1,
+     0.13
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "abdomen.right-lower",
+     "relation": "clinical_link",
+     "note": "Appendix pain can start centrally and move to the lower right."
+    }
+   ],
+   "terms": {
+    "en": [
+     "belly button",
+     "navel"
+    ],
+    "ar": [
+     "السرة",
+     "سرة"
+    ],
+    "ckb": [
+     "ناوک"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "abdomen.right-lower",
+   "parent": "body.abdomen",
+   "kind": "structure",
+   "label": {
+    "en": "Lower right abdomen",
+    "ar": "أسفل يمين البطن",
+    "ckb": "خوارەوەی لای ڕاستی سک"
+   },
+   "lateral": false,
+   "fixed_side": "right",
+   "anchor": {
+    "bone": "spine",
+    "offset": [
+     -0.075,
+     0.02,
+     0.12
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "lower right"
+    ],
+    "ar": [
+     "أسفل اليمين",
+     "جهة اليمين تحت"
+    ],
+    "ckb": [
+     "خوارەوەی ڕاست"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "abdomen.left-lower",
+   "parent": "body.abdomen",
+   "kind": "structure",
+   "label": {
+    "en": "Lower left abdomen",
+    "ar": "أسفل يسار البطن",
+    "ckb": "خوارەوەی لای چەپی سک"
+   },
+   "lateral": false,
+   "fixed_side": "left",
+   "anchor": {
+    "bone": "spine",
+    "offset": [
+     0.075,
+     0.02,
+     0.12
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [],
+    "ar": [],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "abdomen.lower-central",
+   "parent": "body.abdomen",
+   "kind": "structure",
+   "label": {
+    "en": "Lower abdomen (bladder area)",
+    "ar": "أسفل البطن (منطقة المثانة)",
+    "ckb": "خوارەوەی سک (ناوچەی میزڵدان)"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "hips",
+    "offset": [
+     0,
+     0.06,
+     0.11
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "bladder",
+     "lower abdomen"
+    ],
+    "ar": [
+     "المثانة",
+     "أسفل البطن",
+     "اسفل البطن"
+    ],
+    "ckb": [
+     "میزڵدان",
+     "خوارەوەی سک"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "abdomen.flank",
+   "parent": "body.abdomen",
+   "kind": "structure",
+   "label": {
+    "en": "Side/flank (kidney area)",
+    "ar": "الخاصرة (منطقة الكلية)",
+    "ckb": "تەنیشت (ناوچەی گورچیلە)"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "spine",
+    "offset": [
+     0.1,
+     0.12,
+     -0.03
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "abdomen.lower-central",
+     "relation": "clinical_link",
+     "note": "Kidneys drain to the bladder."
+    }
+   ],
+   "terms": {
+    "en": [
+     "flank",
+     "kidney"
+    ],
+    "ar": [
+     "خاصرة",
+     "الخاصرة",
+     "كلية",
+     "الكلية"
+    ],
+    "ckb": [
+     "گورچیلە",
+     "تەنیشتم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "back.upper",
+   "parent": "body.back",
+   "kind": "structure",
+   "label": {
+    "en": "Upper back",
+    "ar": "أعلى الظهر",
+    "ckb": "سەرەوەی پشت"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "chest",
+    "offset": [
+     0,
+     0.08,
+     -0.11
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "upper back",
+     "shoulder blade"
+    ],
+    "ar": [
+     "أعلى الظهر",
+     "لوح الكتف"
+    ],
+    "ckb": [
+     "سەرەوەی پشت"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "back.lower",
+   "parent": "body.back",
+   "kind": "structure",
+   "label": {
+    "en": "Lower back",
+    "ar": "أسفل الظهر",
+    "ckb": "خوارەوەی پشت"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "spine",
+    "offset": [
+     0,
+     0.04,
+     -0.11
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "leg.thigh",
+     "relation": "referred_pain",
+     "note": "A trapped nerve in the lower back can cause pain down the leg (sciatica)."
+    }
+   ],
+   "terms": {
+    "en": [
+     "lower back"
+    ],
+    "ar": [
+     "أسفل الظهر",
+     "اسفل الظهر",
+     "الظهر السفلي"
+    ],
+    "ckb": [
+     "ناوقەد",
+     "خوارەوەی پشت"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "arm.shoulder",
+   "parent": "body.arms",
+   "kind": "structure",
+   "label": {
+    "en": "Shoulder",
+    "ar": "الكتف",
+    "ckb": "شان"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "upperArm",
+    "offset": [
+     0,
+     0.02,
+     0.0
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "body.neck",
+     "relation": "referred_pain",
+     "note": "Neck problems can cause shoulder and arm pain."
+    }
+   ],
+   "terms": {
+    "en": [
+     "shoulder"
+    ],
+    "ar": [
+     "كتف",
+     "كتفي"
+    ],
+    "ckb": [
+     "شان",
+     "شانم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "arm.upper-arm",
+   "parent": "body.arms",
+   "kind": "structure",
+   "label": {
+    "en": "Upper arm",
+    "ar": "العضد",
+    "ckb": "بازوو"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "upperArm",
+    "offset": [
+     0,
+     0,
+     0.02
+    ],
+    "to": "forearm",
+    "t": 0.5
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "upper arm",
+     "bicep"
+    ],
+    "ar": [
+     "العضد",
+     "زند"
+    ],
+    "ckb": [
+     "بازوو"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "arm.elbow",
+   "parent": "body.arms",
+   "kind": "structure",
+   "label": {
+    "en": "Elbow",
+    "ar": "المرفق",
+    "ckb": "ئانیشک"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "forearm",
+    "offset": [
+     0,
+     0,
+     0.0
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "elbow"
+    ],
+    "ar": [
+     "كوع",
+     "مرفق",
+     "الكوع"
+    ],
+    "ckb": [
+     "ئانیشک"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "arm.forearm",
+   "parent": "body.arms",
+   "kind": "structure",
+   "label": {
+    "en": "Forearm",
+    "ar": "الساعد",
+    "ckb": "باسک"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "forearm",
+    "offset": [
+     0,
+     0,
+     0.015
+    ],
+    "to": "hand",
+    "t": 0.5
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "forearm"
+    ],
+    "ar": [
+     "ساعد",
+     "الساعد"
+    ],
+    "ckb": []
+   },
+   "status": "active"
+  },
+  {
+   "id": "arm.wrist",
+   "parent": "body.arms",
+   "kind": "structure",
+   "label": {
+    "en": "Wrist",
+    "ar": "الرسغ",
+    "ckb": "مەچەک"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "hand",
+    "offset": [
+     0,
+     0.01,
+     0.01
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "arm.hand",
+     "relation": "clinical_link",
+     "note": "A compressed nerve at the wrist causes hand tingling (carpal tunnel)."
+    }
+   ],
+   "terms": {
+    "en": [
+     "wrist"
+    ],
+    "ar": [
+     "رسغ",
+     "معصم",
+     "الرسغ"
+    ],
+    "ckb": [
+     "مەچەک"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "arm.hand",
+   "parent": "body.arms",
+   "kind": "structure",
+   "label": {
+    "en": "Hand & fingers",
+    "ar": "اليد والأصابع",
+    "ckb": "دەست و پەنجە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "hand",
+    "offset": [
+     0,
+     -0.07,
+     0.015
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "hand",
+     "finger",
+     "fingers",
+     "thumb"
+    ],
+    "ar": [
+     "كف",
+     "أصابع",
+     "اصابع",
+     "إبهام"
+    ],
+    "ckb": [
+     "پەنجە",
+     "لەپ"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "leg.hip",
+   "parent": "body.legs",
+   "kind": "structure",
+   "label": {
+    "en": "Hip",
+    "ar": "الورك",
+    "ckb": "سمت"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "thigh",
+    "offset": [
+     0,
+     0.02,
+     0.02
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "hip"
+    ],
+    "ar": [
+     "ورك",
+     "وركي",
+     "حوض"
+    ],
+    "ckb": [
+     "سمت",
+     "کەفەڵ"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "leg.thigh",
+   "parent": "body.legs",
+   "kind": "structure",
+   "label": {
+    "en": "Thigh",
+    "ar": "الفخذ",
+    "ckb": "ران"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "thigh",
+    "offset": [
+     0,
+     0,
+     0.04
+    ],
+    "to": "shin",
+    "t": 0.5
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "thigh"
+    ],
+    "ar": [
+     "فخذ",
+     "فخذي"
+    ],
+    "ckb": [
+     "ران"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "leg.knee",
+   "parent": "body.legs",
+   "kind": "structure",
+   "label": {
+    "en": "Knee",
+    "ar": "الركبة",
+    "ckb": "ئەژنۆ"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "shin",
+    "offset": [
+     0,
+     0.01,
+     0.05
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "knee"
+    ],
+    "ar": [
+     "ركبة",
+     "ركبتي",
+     "الركبة"
+    ],
+    "ckb": [
+     "ئەژنۆ",
+     "ئەژنۆم"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "leg.calf",
+   "parent": "body.legs",
+   "kind": "structure",
+   "label": {
+    "en": "Calf & shin",
+    "ar": "ربلة الساق",
+    "ckb": "پشتی لاق"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "shin",
+    "offset": [
+     0,
+     0,
+     -0.02
+    ],
+    "to": "foot",
+    "t": 0.45
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [
+    {
+     "target": "chest.lungs",
+     "relation": "clinical_link",
+     "note": "A clot in a leg vein can travel to the lungs."
+    }
+   ],
+   "terms": {
+    "en": [
+     "calf",
+     "shin"
+    ],
+    "ar": [
+     "ربلة",
+     "سمانة",
+     "بطة الرجل",
+     "قصبة الساق"
+    ],
+    "ckb": [
+     "پشتی لاق"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "leg.ankle",
+   "parent": "body.legs",
+   "kind": "structure",
+   "label": {
+    "en": "Ankle",
+    "ar": "الكاحل",
+    "ckb": "گوێزینگ"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "foot",
+    "offset": [
+     0,
+     0.0,
+     0.02
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "ankle"
+    ],
+    "ar": [
+     "كاحل",
+     "الكاحل",
+     "كعب الرجل"
+    ],
+    "ckb": [
+     "گوێزینگ",
+     "قوڵەپێ"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "leg.foot",
+   "parent": "body.legs",
+   "kind": "structure",
+   "label": {
+    "en": "Foot & heel",
+    "ar": "القدم والكعب",
+    "ckb": "پێ و پاژنە"
+   },
+   "lateral": true,
+   "fixed_side": null,
+   "anchor": {
+    "bone": "foot",
+    "offset": [
+     0,
+     -0.04,
+     0.07
+    ]
+   },
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": null,
+   "related": [],
+   "terms": {
+    "en": [
+     "foot",
+     "heel",
+     "toe",
+     "toes"
+    ],
+    "ar": [
+     "قدم",
+     "كعب",
+     "أصابع القدم"
+    ],
+    "ckb": [
+     "پاژنە",
+     "پەنجەی پێ"
+    ]
+   },
+   "status": "active"
+  },
+  {
+   "id": "skin.general",
+   "parent": "body.skin",
+   "kind": "structure",
+   "label": {
+    "en": "Skin surface",
+    "ar": "سطح الجلد",
+    "ckb": "ڕووی پێست"
+   },
+   "lateral": false,
+   "fixed_side": null,
+   "anchor": null,
+   "legacy_region": null,
+   "internal": false,
+   "specialty": null,
+   "photo_visible": true,
+   "related": [],
+   "terms": {
+    "en": [
+     "rash",
+     "mole"
+    ],
+    "ar": [
+     "شامة",
+     "خال"
+    ],
+    "ckb": [
+     "خاڵ"
+    ]
+   },
+   "status": "active"
+  }
+ ]
+}

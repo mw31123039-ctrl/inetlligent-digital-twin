@@ -1,0 +1,3947 @@
+{
+ "schema_version": "humantwin-symptoms-v1",
+ "version": "symptoms-2026-11-16.1",
+ "generated_by": "ai-service/scripts/build-clinical-knowledge.py — edit the generator, not this file",
+ "clinical_review_status": "draft — no clinician has reviewed this content",
+ "translation_review_status": {
+  "en": "draft",
+  "ar": "draft — native medical review pending",
+  "ckb": "draft — native medical review pending"
+ },
+ "symptoms": [
+  {
+   "id": "pain",
+   "label": {
+    "en": "Pain or soreness",
+    "ar": "ألم",
+    "ckb": "ئازار"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(pain|painful|hurts?|hurting|ache|aches|aching|achy|sore|soreness|tender)\\b"
+    ],
+    "ar": [
+     "ألم",
+     "الم ",
+     "آلام",
+     "وجع",
+     "يوجع",
+     "توجع",
+     "يؤلم",
+     "تؤلم",
+     "موجوع"
+    ],
+    "ckb": [
+     "ئازار",
+     "ئێش",
+     "ژان",
+     "دێشێ",
+     "دەیەشێ",
+     "دەئێشێ"
+    ]
+   }
+  },
+  {
+   "id": "headache",
+   "label": {
+    "en": "Headache",
+    "ar": "صداع",
+    "ckb": "سەرئێشە"
+   },
+   "kind": "symptom",
+   "group": "head",
+   "scope": [],
+   "implies_anatomy": "body.head",
+   "terms": {
+    "en": [
+     "\\bhead ?aches?\\b",
+     "\\bmy head (hurts|is pounding|aches|is killing me)\\b"
+    ],
+    "ar": [
+     "صداع",
+     "وجع راس",
+     "وجع رأس",
+     "ألم في الرأس",
+     "الم في الراس",
+     "راسي يوجع",
+     "رأسي يؤلم"
+    ],
+    "ckb": [
+     "سەرئێشە",
+     "سەر ئێشە",
+     "ژانەسەر",
+     "سەرم دێشێ",
+     "سەرم دەیەشێ"
+    ]
+   }
+  },
+  {
+   "id": "fever",
+   "label": {
+    "en": "High temperature (fever)",
+    "ar": "حرارة مرتفعة (حمى)",
+    "ckb": "پلەی گەرمی بەرز (تا)"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(fever|feverish|high temperature|temperature of 3[89]|hot and cold|shivery|shivering|chills)\\b"
+    ],
+    "ar": [
+     "حمى",
+     "حمّى",
+     "حرارة",
+     "سخونة",
+     "سخونيه",
+     "رجفة"
+    ],
+    "ckb": [
+     "تام هەیە",
+     "تای هەیە",
+     "تاو لەرز",
+     "گەرمی لەش",
+     "پلەی گەرمی",
+     "لەرز"
+    ]
+   }
+  },
+  {
+   "id": "nausea",
+   "label": {
+    "en": "Feeling sick (nausea)",
+    "ar": "غثيان",
+    "ckb": "هێڵنج"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(nause\\w*|feel(ing)? sick|queasy)\\b"
+    ],
+    "ar": [
+     "غثيان",
+     "لعيان",
+     "نفسي تلعب",
+     "دوار المعدة"
+    ],
+    "ckb": [
+     "هێڵنج",
+     "دڵتێکچوون",
+     "دڵم تێکدەچێ"
+    ]
+   }
+  },
+  {
+   "id": "vomiting",
+   "label": {
+    "en": "Vomiting",
+    "ar": "تقيؤ",
+    "ckb": "ڕشانەوە"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(vomit\\w*|being sick|throwing up|threw up|thrown up)\\b"
+    ],
+    "ar": [
+     "استفراغ",
+     "تقيؤ",
+     "تقيّؤ",
+     "ترجيع",
+     "قيء",
+     "أستفرغ",
+     "استفرغ",
+     "يزوع",
+     "زواع"
+    ],
+    "ckb": [
+     "ڕشانەوە",
+     "دەڕشێمەوە",
+     "ڕشامەوە"
+    ]
+   }
+  },
+  {
+   "id": "shortness_of_breath",
+   "label": {
+    "en": "Shortness of breath",
+    "ar": "ضيق في التنفس",
+    "ckb": "هەناسەتەنگی"
+   },
+   "kind": "symptom",
+   "group": "chest",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(short(ness)? of breath|breathless\\w*|out of breath|difficulty breathing|hard to breathe|trouble breathing|wheez\\w*)\\b"
+    ],
+    "ar": [
+     "ضيق تنفس",
+     "ضيق النفس",
+     "ضيق في التنفس",
+     "ضيق بالتنفس",
+     "صعوبة في التنفس",
+     "صعوبة التنفس",
+     "نهجان",
+     "لهاث",
+     "صفير"
+    ],
+    "ckb": [
+     "هەناسەتەنگی",
+     "هەناسە تەنگی",
+     "هەناسەدان قورس",
+     "هەناسەم سوار"
+    ]
+   }
+  },
+  {
+   "id": "breathing_severe",
+   "label": {
+    "en": "Severe difficulty breathing",
+    "ar": "صعوبة شديدة في التنفس",
+    "ckb": "هەناسەدانی زۆر قورس"
+   },
+   "kind": "symptom",
+   "group": "chest",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(can'?t breathe|cannot breathe|unable to breathe|struggling to breathe|gasping|choking)\\b"
+    ],
+    "ar": [
+     "ما اكدر اتنفس",
+     "ما أكدر أتنفس",
+     "لا أستطيع التنفس",
+     "لا استطيع التنفس",
+     "اختناق",
+     "أختنق",
+     "اختنق"
+    ],
+    "ckb": [
+     "ناتوانم هەناسە بدەم",
+     "خنکان",
+     "دەخنکێم"
+    ]
+   }
+  },
+  {
+   "id": "chest_pain",
+   "label": {
+    "en": "Chest pain or pressure",
+    "ar": "ألم أو ضغط في الصدر",
+    "ckb": "ئازار یان گوشاری سنگ"
+   },
+   "kind": "symptom",
+   "group": "chest",
+   "scope": [],
+   "implies_anatomy": "body.chest",
+   "terms": {
+    "en": [
+     "\\bchest (pain|pressure|tightness|discomfort|hurts?|is tight|feels (tight|heavy))\\b",
+     "\\b(pain|pressure|tightness|heaviness|discomfort|ache)\\b.{0,12}\\bin (my |the )?chest\\b",
+     "\\bmy chest (hurts|is tight|feels tight|feels heavy)\\b"
+    ],
+    "ar": [
+     "(ألم|الم|وجع|ضغط|ثقل|ضيق).{0,15}(الصدر|صدري|بالصدر)",
+     "ألم في الصدر",
+     "الم في الصدر",
+     "ألم بالصدر",
+     "وجع صدر",
+     "وجع بالصدر",
+     "وجع في الصدر",
+     "صدري يوجع",
+     "ضيق في الصدر",
+     "ثقل في الصدر",
+     "ضغط على الصدر"
+    ],
+    "ckb": [
+     "(ئازار|ژان|گوشار|قورسی|تەنگی).{0,18}سنگ",
+     "سنگم.{0,12}(دێشێ|دەیەشێ|قورسە|تەنگە|گوشار)",
+     "ئازاری سنگ",
+     "ژانی سنگ"
+    ]
+   }
+  },
+  {
+   "id": "radiating_pain",
+   "label": {
+    "en": "Pain spreading to the arm, jaw, neck or back",
+    "ar": "ألم ينتشر إلى الذراع أو الفك أو الرقبة أو الظهر",
+    "ckb": "ئازار بڵاو دەبێتەوە بۆ باڵ، شەویلگە، مل یان پشت"
+   },
+   "kind": "symptom",
+   "group": "chest",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(spread\\w*|radiat\\w*|goes|going|moves|moving|shoot\\w*|travel\\w*)\\b.{0,15}\\b(to|into|towards?|up)\\b.{0,12}\\b(arm|arms|jaw|neck|back|shoulder)\\b(?!\\s+of\\s+(my|the)\\s+(left |right )?(leg|thigh|knee|foot|calf))"
+    ],
+    "ar": [
+     "ينتشر.{0,20}(الذراع|ذراعي|الفك|فكي|الرقبة|رقبتي|الكتف|كتفي|ايدي|إيدي|الظهر)",
+     "يمتد.{0,20}(الذراع|الفك|الرقبة|الكتف|الظهر)",
+     "ينزل.{0,15}(ايدي|إيدي|ذراعي)"
+    ],
+    "ckb": [
+     "بڵاو دەبێتەوە.{0,20}(باڵ|شەویلگە|مل|شان|دەست|پشت)",
+     "دەچێتە.{0,10}(باڵ|شەویلگە|مل|شان|دەست)"
+    ]
+   }
+  },
+  {
+   "id": "sweating",
+   "label": {
+    "en": "Sweating or clammy skin",
+    "ar": "تعرّق",
+    "ckb": "ئارەقکردنەوە"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(sweat\\w*|clammy)\\b"
+    ],
+    "ar": [
+     "تعرق",
+     "تعرّق",
+     "عرق بارد",
+     "يعرق",
+     "أعرق",
+     "اعرق"
+    ],
+    "ckb": [
+     "ئارەق"
+    ]
+   }
+  },
+  {
+   "id": "palpitations",
+   "label": {
+    "en": "Racing, pounding or fluttering heartbeat",
+    "ar": "خفقان",
+    "ckb": "دڵەکوتێ"
+   },
+   "kind": "symptom",
+   "group": "chest",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(palpitations?|racing heart|fluttering)\\b",
+     "\\bheart (is )?(racing|pounding|fluttering|thumping|beating (very |really )?fast|flutters|races|pounds|skips)\\b"
+    ],
+    "ar": [
+     "خفقان",
+     "قلبي يدق",
+     "دقات القلب",
+     "دقات قلب سريعة",
+     "نبض سريع",
+     "ضربات القلب"
+    ],
+    "ckb": [
+     "دڵەکوتێ",
+     "دڵەکوتە",
+     "لێدانی خێرای دڵ",
+     "دڵم خێرا لێدەدات",
+     "دڵم توند لێدەدات"
+    ]
+   }
+  },
+  {
+   "id": "cough",
+   "label": {
+    "en": "Cough",
+    "ar": "سعال",
+    "ckb": "کۆکە"
+   },
+   "kind": "symptom",
+   "group": "chest",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bcough\\w*\\b"
+    ],
+    "ar": [
+     "سعال",
+     "كحة",
+     "كحه",
+     "گحة",
+     "قحة",
+     "أكح",
+     "اكح",
+     "يكح"
+    ],
+    "ckb": [
+     "کۆکە",
+     "دەکۆکم"
+    ]
+   }
+  },
+  {
+   "id": "coughing_blood",
+   "label": {
+    "en": "Coughing up blood",
+    "ar": "سعال مع دم",
+    "ckb": "کۆکەی خوێناوی"
+   },
+   "kind": "symptom",
+   "group": "chest",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bcough\\w* (up )?blood\\b",
+     "\\bblood(y)? (in )?(my )?(phlegm|sputum|mucus)\\b"
+    ],
+    "ar": [
+     "سعال دموي",
+     "دم مع السعال",
+     "اكح دم",
+     "أكح دم",
+     "بلغم فيه دم",
+     "بلغم بيه دم"
+    ],
+    "ckb": [
+     "کۆکەی خوێناوی",
+     "خوێن لەگەڵ کۆکە",
+     "بە کۆکە خوێن"
+    ]
+   }
+  },
+  {
+   "id": "faint",
+   "label": {
+    "en": "Fainting or passing out",
+    "ar": "إغماء",
+    "ckb": "بووران"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(faint\\w*|passed out|pass out|blacked out|black out|collaps\\w*|lost consciousness)\\b"
+    ],
+    "ar": [
+     "إغماء",
+     "اغماء",
+     "أغمي",
+     "اغمى",
+     "غشي",
+     "غشيان",
+     "فقدان الوعي",
+     "فقدت الوعي"
+    ],
+    "ckb": [
+     "بووران",
+     "بوورامەوە",
+     "لە هۆش چووم",
+     "بێهۆش"
+    ]
+   }
+  },
+  {
+   "id": "confusion",
+   "label": {
+    "en": "New confusion or drowsiness",
+    "ar": "تشوش ذهني أو نعاس جديد",
+    "ckb": "سەرلێشێواوی یان خەواڵوویی نوێ"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(confus\\w*|disorient\\w*|drowsy)\\b"
+    ],
+    "ar": [
+     "ارتباك",
+     "تشوش ذهني",
+     "مشوش",
+     "نعاس شديد",
+     "مو صاحي"
+    ],
+    "ckb": [
+     "سەرلێشێواو",
+     "خەواڵوو",
+     "تێکچوونی هۆش"
+    ]
+   }
+  },
+  {
+   "id": "face_droop",
+   "label": {
+    "en": "Face drooping on one side",
+    "ar": "تدلّي جانب من الوجه",
+    "ckb": "لاربوونی لایەکی دەموچاو"
+   },
+   "kind": "symptom",
+   "group": "neuro",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(face|mouth|smile) (is )?(droop\\w*|fall\\w*|drop\\w*|lopsided)\\b",
+     "\\bdroop\\w* (face|mouth)\\b"
+    ],
+    "ar": [
+     "ميلان الوجه",
+     "ارتخاء الوجه",
+     "تدلي الوجه",
+     "فمي مايل",
+     "وجهي مايل",
+     "وجهي معوج"
+    ],
+    "ckb": [
+     "لاربوونی دەموچاو",
+     "دەموچاوم لار",
+     "دەمم لار"
+    ]
+   }
+  },
+  {
+   "id": "speech_problem",
+   "label": {
+    "en": "Slurred or difficult speech",
+    "ar": "كلام متلعثم أو صعب",
+    "ckb": "قسەکردنی تێکچوو یان قورس"
+   },
+   "kind": "symptom",
+   "group": "neuro",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(slurr\\w*|trouble speaking|difficulty speaking|hard to speak|can'?t speak|cannot speak|can'?t get (my )?words out)\\b",
+     "\\bspeech (is )?(slurred|strange|difficult)\\b"
+    ],
+    "ar": [
+     "تلعثم",
+     "ثقل في اللسان",
+     "ثقل باللسان",
+     "صعوبة في الكلام",
+     "صعوبة الكلام",
+     "ما اكدر احچي",
+     "ما أكدر أحچي",
+     "لا أستطيع الكلام",
+     "كلامي ثقيل"
+    ],
+    "ckb": [
+     "قسەکردنم قورس",
+     "زمانم گیرا",
+     "زمانم قورس",
+     "ناتوانم قسە بکەم"
+    ]
+   }
+  },
+  {
+   "id": "weakness",
+   "label": {
+    "en": "Weakness",
+    "ar": "ضعف",
+    "ckb": "لاوازی"
+   },
+   "kind": "symptom",
+   "group": "neuro",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(weak|weakness)\\b",
+     "\\b(can'?t|cannot) (lift|move|grip|raise)\\b"
+    ],
+    "ar": [
+     "ضعف",
+     "ضعيف",
+     "ما اكدر ارفع",
+     "ما أكدر أحرك",
+     "لا أستطيع تحريك",
+     "ثقل في يدي",
+     "ثقل في رجلي"
+    ],
+    "ckb": [
+     "لاوازی",
+     "بێهێزی",
+     "بێهێز",
+     "ناتوانم بەرزی بکەمەوە",
+     "ناتوانم بیجوڵێنم"
+    ]
+   }
+  },
+  {
+   "id": "numbness_tingling",
+   "label": {
+    "en": "Numbness or tingling",
+    "ar": "خدر أو تنميل",
+    "ckb": "سڕبوون یان مێروولە"
+   },
+   "kind": "symptom",
+   "group": "neuro",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(numb\\w*|tingl\\w*|pins and needles|loss of feeling|no feeling)\\b"
+    ],
+    "ar": [
+     "تنميل",
+     "خدر",
+     "خدران",
+     "نمنمة",
+     "تخدير",
+     "فقدان الإحساس",
+     "فقدان الاحساس"
+    ],
+    "ckb": [
+     "سڕبوون",
+     "سڕ بووە",
+     "سڕە",
+     "مێروولە",
+     "هەستی نەماوە"
+    ]
+   }
+  },
+  {
+   "id": "swelling",
+   "label": {
+    "en": "Swelling",
+    "ar": "تورّم",
+    "ckb": "ئاوسان"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(swell\\w*|swollen|puffy|puffiness)\\b"
+    ],
+    "ar": [
+     "تورم",
+     "تورّم",
+     "متورم",
+     "منتفخ",
+     "ورم",
+     "وارم"
+    ],
+    "ckb": [
+     "ئاوسان",
+     "ئاوساو",
+     "هەڵئاوساو",
+     "پەنەمان"
+    ]
+   }
+  },
+  {
+   "id": "redness",
+   "label": {
+    "en": "Redness",
+    "ar": "احمرار",
+    "ckb": "سووربوونەوە"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(red|redness|reddish|bloodshot|pink eye|inflamed)\\b"
+    ],
+    "ar": [
+     "احمرار",
+     "حمرة",
+     "أحمر",
+     "احمر",
+     "محمر",
+     "محمرة",
+     "حمراء"
+    ],
+    "ckb": [
+     "سوور",
+     "سووربوونەوە",
+     "سووربۆتەوە"
+    ]
+   }
+  },
+  {
+   "id": "itch",
+   "label": {
+    "en": "Itching",
+    "ar": "حكّة",
+    "ckb": "خوران"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bitch\\w*\\b"
+    ],
+    "ar": [
+     "حكة",
+     "حكه",
+     "يحك",
+     "يحكني",
+     "تحكني",
+     "تحك"
+    ],
+    "ckb": [
+     "خوران",
+     "دەخورێ",
+     "خورشت"
+    ]
+   }
+  },
+  {
+   "id": "discharge",
+   "label": {
+    "en": "Discharge or pus",
+    "ar": "إفرازات أو قيح",
+    "ckb": "دەردراو یان کێم"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(discharge|pus|sticky|gunk|oozing|mucus)\\b"
+    ],
+    "ar": [
+     "إفرازات",
+     "افرازات",
+     "إفراز",
+     "قيح",
+     "صديد",
+     "رمص",
+     "عماص",
+     "لزج",
+     "مخاط"
+    ],
+    "ckb": [
+     "کێم",
+     "چڵک",
+     "دەردراو",
+     "لینج"
+    ]
+   }
+  },
+  {
+   "id": "watery_eyes",
+   "label": {
+    "en": "Watery eyes",
+    "ar": "دموع زائدة",
+    "ckb": "فرمێسکڕشتن"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [
+    "body.eyes"
+   ],
+   "implies_anatomy": "body.eyes",
+   "terms": {
+    "en": [
+     "\\b(watery|watering|teary|tearing up)\\b"
+    ],
+    "ar": [
+     "دموع",
+     "تدمع",
+     "تدميع",
+     "دمعان"
+    ],
+    "ckb": [
+     "فرمێسک",
+     "ئاو دەڕێژێ",
+     "ئاوی لێدێت"
+    ]
+   }
+  },
+  {
+   "id": "eye_dryness_grit",
+   "label": {
+    "en": "Dry, gritty or burning eyes",
+    "ar": "جفاف أو حرقة أو إحساس بالرمل في العين",
+    "ckb": "وشکی، سووتان یان هەستی لم لە چاو"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [
+    "body.eyes"
+   ],
+   "implies_anatomy": "body.eyes",
+   "terms": {
+    "en": [
+     "\\b(dry|dryness|gritty|sandy|scratchy|burning|stinging)\\b",
+     "\\bsomething in my eye\\b"
+    ],
+    "ar": [
+     "جفاف",
+     "ناشفة",
+     "جافة",
+     "رمل",
+     "حرقان",
+     "حرقة",
+     "كأن شي بعيني",
+     "لسع"
+    ],
+    "ckb": [
+     "وشکی",
+     "وشکە",
+     "سووتان",
+     "دەسووتێ",
+     "هەستی لم"
+    ]
+   }
+  },
+  {
+   "id": "blurred_vision",
+   "label": {
+    "en": "Blurred or changed vision",
+    "ar": "رؤية ضبابية أو متغيرة",
+    "ckb": "بینینی لێڵ یان گۆڕاو"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [],
+   "implies_anatomy": "body.eyes",
+   "terms": {
+    "en": [
+     "\\b(blur\\w*|blurry|cloudy vision|hazy vision|fuzzy vision|wavy lines|distorted)\\b",
+     "\\b(can'?t|cannot) see (clearly|properly|well)\\b",
+     "\\bvision (is )?(worse|changed|different|cloudy|getting worse)\\b"
+    ],
+    "ar": [
+     "رؤية ضبابية",
+     "ضبابية",
+     "تشوش الرؤية",
+     "تشوش في الرؤية",
+     "زغللة",
+     "غباش",
+     "غشاوة",
+     "نظري ضعف",
+     "ما أشوف زين",
+     "ما اشوف زين"
+    ],
+    "ckb": [
+     "لێڵ",
+     "تەماوی",
+     "بینینم کز",
+     "باش نابینم",
+     "چاوم لێڵ"
+    ]
+   }
+  },
+  {
+   "id": "vision_loss",
+   "label": {
+    "en": "Loss of vision",
+    "ar": "فقدان البصر",
+    "ckb": "لەدەستدانی بینین"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [],
+   "implies_anatomy": "body.eyes",
+   "terms": {
+    "en": [
+     "\\b(lost (my |the )?(vision|sight)|loss of (vision|sight)|went blind|gone blind|blindness|no vision)\\b",
+     "\\b(can'?t|cannot) see\\b(?! (clearly|properly|well))"
+    ],
+    "ar": [
+     "فقدان البصر",
+     "فقدت النظر",
+     "فقدت البصر",
+     "ما اشوف(?! زين)",
+     "ما أشوف(?! زين)",
+     "لا أرى",
+     "عمى",
+     "انطفى نظري"
+    ],
+    "ckb": [
+     "بینینم نەما",
+     "ناتوانم ببینم",
+     "کوێر بووم",
+     "هیچ نابینم"
+    ]
+   }
+  },
+  {
+   "id": "curtain_shadow",
+   "label": {
+    "en": "A dark curtain or shadow over vision",
+    "ar": "ستارة أو ظل داكن على الرؤية",
+    "ckb": "پەردە یان سێبەرێکی تاریک بەسەر بینیندا"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [
+    "body.eyes"
+   ],
+   "implies_anatomy": "body.eyes",
+   "terms": {
+    "en": [
+     "\\b(curtain|shadow|veil)\\b"
+    ],
+    "ar": [
+     "ستارة",
+     "ظل",
+     "غشاء أسود"
+    ],
+    "ckb": [
+     "پەردە",
+     "سێبەر"
+    ]
+   }
+  },
+  {
+   "id": "flashes_floaters",
+   "label": {
+    "en": "Flashes or floaters",
+    "ar": "ومضات أو أجسام عائمة",
+    "ckb": "بریسکە یان پەڵەی سەرچاو"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [
+    "body.eyes"
+   ],
+   "implies_anatomy": "body.eyes",
+   "terms": {
+    "en": [
+     "\\b(flash\\w*|floater\\w*|cobweb\\w*|squiggl\\w*)\\b",
+     "\\b(dots|spots|specks)\\b.{0,25}\\b(in|across|through) (my )?(vision|sight)\\b",
+     "\\bfloating (dots|spots|specks)\\b"
+    ],
+    "ar": [
+     "ومضات",
+     "ومضة",
+     "برق",
+     "ذباب طائر",
+     "أجسام عائمة",
+     "نقاط سوداء",
+     "خيوط سوداء"
+    ],
+    "ckb": [
+     "بریسکە",
+     "پەڵەی ڕەش",
+     "مێشی فڕیو",
+     "تیشکی ڕووناکی"
+    ]
+   }
+  },
+  {
+   "id": "light_sensitivity",
+   "label": {
+    "en": "Light sensitivity",
+    "ar": "حساسية للضوء",
+    "ckb": "هەستیاری بە ڕووناکی"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(light sensitiv\\w*|sensitiv\\w* to (the )?(bright )?light|photophobia)\\b",
+     "\\b(light|bright lights?) (hurts?|bothers?)\\b",
+     "\\bhurts to look at (the )?light\\b"
+    ],
+    "ar": [
+     "حساسية للضوء",
+     "حساسية من الضوء",
+     "الضوء يزعج",
+     "الضوء يؤلم",
+     "ما أتحمل الضوء",
+     "ما اتحمل الضوء"
+    ],
+    "ckb": [
+     "هەستیاری بە ڕووناکی",
+     "ڕووناکی ئازارم دەدات",
+     "ڕووناکی بێزارم دەکات"
+    ]
+   }
+  },
+  {
+   "id": "double_vision",
+   "label": {
+    "en": "Double vision",
+    "ar": "ازدواج الرؤية",
+    "ckb": "دووانەبینی"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [],
+   "implies_anatomy": "body.eyes",
+   "terms": {
+    "en": [
+     "\\b(double vision|seeing double|see double)\\b"
+    ],
+    "ar": [
+     "ازدواج الرؤية",
+     "رؤية مزدوجة",
+     "أشوف شيئين",
+     "اشوف شيئين",
+     "أشوف دبل",
+     "اشوف دبل"
+    ],
+    "ckb": [
+     "دووانەبینی",
+     "دووانە دەبینم",
+     "دوو دەبینم"
+    ]
+   }
+  },
+  {
+   "id": "halos",
+   "label": {
+    "en": "Rainbow rings around lights",
+    "ar": "هالات ملوّنة حول الأضواء",
+    "ckb": "بازنەی ڕەنگاوڕەنگ لە دەوری ڕووناکی"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [
+    "body.eyes"
+   ],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(halos?|rainbow\\w*)\\b"
+    ],
+    "ar": [
+     "هالات",
+     "هالة",
+     "ألوان حول الضوء"
+    ],
+    "ckb": [
+     "بازنەی ڕەنگاوڕەنگ",
+     "ئەڵقەی ڕەنگاوڕەنگ"
+    ]
+   }
+  },
+  {
+   "id": "eyelid_lump",
+   "label": {
+    "en": "Lump on the eyelid",
+    "ar": "كتلة على الجفن",
+    "ckb": "گرێ لەسەر پێڵوو"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [
+    "body.eyes"
+   ],
+   "implies_anatomy": "eye.upper-eyelid",
+   "terms": {
+    "en": [
+     "\\b(lump|bump|spot|swelling)\\b.{0,22}\\b(eye)?lids?\\b",
+     "\\beyelid (lump|bump)\\b",
+     "\\bstye\\b"
+    ],
+    "ar": [
+     "شحاذ",
+     "شحاذة",
+     "جليجل",
+     "كتلة في الجفن",
+     "حبة بالجفن",
+     "حبة على الجفن",
+     "دملة بالجفن"
+    ],
+    "ckb": [
+     "گرێی پێڵوو",
+     "گرێ لە پێڵوو",
+     "دەنکە لە پلک",
+     "دانەوێڵە"
+    ]
+   }
+  },
+  {
+   "id": "eyelid_crusting",
+   "label": {
+    "en": "Crusts or flakes on the eyelids",
+    "ar": "قشور على الجفون",
+    "ckb": "توێکڵ لەسەر پێڵوو"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [
+    "body.eyes"
+   ],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(crust\\w*|flak\\w*)\\b",
+     "\\b(eye)?lids? (are )?stick\\w*\\b"
+    ],
+    "ar": [
+     "قشور",
+     "قشرة",
+     "الجفون ملتصقة",
+     "جفوني تلتصق"
+    ],
+    "ckb": [
+     "توێکڵ",
+     "پێڵووەکانم دەنووسێن"
+    ]
+   }
+  },
+  {
+   "id": "uneven_pupils",
+   "label": {
+    "en": "One pupil larger than the other",
+    "ar": "بؤبؤ أكبر من الآخر",
+    "ckb": "بیلبیلەیەک گەورەترە"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [
+    "body.eyes"
+   ],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bpupils? (are |is )?(different|uneven|unequal)\\b",
+     "\\bone pupil (is )?(bigger|larger)\\b"
+    ],
+    "ar": [
+     "بؤبؤ أكبر",
+     "حدقة غير متساوية",
+     "البؤبؤ مو متساوي"
+    ],
+    "ckb": [
+     "بیلبیلەی چاو جیاوازە",
+     "بیلبیلەیەک گەورەترە"
+    ]
+   }
+  },
+  {
+   "id": "contact_lens",
+   "label": {
+    "en": "Wears contact lenses",
+    "ar": "يستخدم عدسات لاصقة",
+    "ckb": "لێنزی چاو بەکاردەهێنێت"
+   },
+   "kind": "risk_factor",
+   "group": "eye",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bcontact lens\\w*\\b",
+     "\\b(wear|use) contacts\\b"
+    ],
+    "ar": [
+     "عدسات لاصقة",
+     "عدسة لاصقة",
+     "لينزات",
+     "لنزات"
+    ],
+    "ckb": [
+     "لێنز",
+     "عەدەسەی لکاو"
+    ]
+   }
+  },
+  {
+   "id": "screen_use",
+   "label": {
+    "en": "Long periods of screen use",
+    "ar": "استخدام الشاشات لفترات طويلة",
+    "ckb": "بەکارهێنانی شاشە بۆ ماوەی درێژ"
+   },
+   "kind": "risk_factor",
+   "group": "eye",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(screens?|computer|phone|laptop|reading)\\b"
+    ],
+    "ar": [
+     "شاشة",
+     "الشاشة",
+     "الكمبيوتر",
+     "الموبايل",
+     "الحاسوب",
+     "القراءة"
+    ],
+    "ckb": [
+     "شاشە",
+     "کۆمپیوتەر",
+     "مۆبایل",
+     "خوێندنەوە"
+    ]
+   }
+  },
+  {
+   "id": "injury",
+   "label": {
+    "en": "Injury, fall or blow",
+    "ar": "إصابة أو سقوط أو ضربة",
+    "ckb": "برین، کەوتن یان زەبر"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(injur\\w*|fell|fall|fallen|accident|twist\\w*|sprain\\w*|blow to|crash|got hit|was hit|hit my)\\b"
+    ],
+    "ar": [
+     "إصابة",
+     "اصابة",
+     "سقطت",
+     "وقعت",
+     "طحت",
+     "حادث",
+     "التواء",
+     "التوى",
+     "ضربة",
+     "انضربت"
+    ],
+    "ckb": [
+     "کەوتم",
+     "کەوتمە",
+     "زەبر",
+     "ڕووداو",
+     "بادان",
+     "بادرا",
+     "بریندار"
+    ]
+   }
+  },
+  {
+   "id": "chemical_exposure",
+   "label": {
+    "en": "Chemical splash or exposure",
+    "ar": "تعرّض لمادة كيميائية",
+    "ckb": "بەرکەوتنی ماددەی کیمیایی"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(chemical|bleach|acid|alkali|cleaning product|splash\\w*)\\b"
+    ],
+    "ar": [
+     "مادة كيميائية",
+     "مواد كيميائية",
+     "كلور",
+     "قاصر",
+     "حامض",
+     "أسيد",
+     "تيزاب"
+    ],
+    "ckb": [
+     "ماددەی کیمیایی",
+     "کلۆر",
+     "ترشەڵۆک"
+    ]
+   }
+  },
+  {
+   "id": "toothache",
+   "label": {
+    "en": "Toothache",
+    "ar": "ألم الأسنان",
+    "ckb": "ددانئێشە"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": "mouth.teeth",
+   "terms": {
+    "en": [
+     "\\btooth ?ache\\b",
+     "\\b(tooth|teeth|molar) (pain|hurts?|aches?)\\b",
+     "\\bpain in (my |a |the )?(tooth|teeth|molar|gum)\\b"
+    ],
+    "ar": [
+     "ألم الأسنان",
+     "ألم في السن",
+     "ألم في الضرس",
+     "الم في الضرس",
+     "وجع سن",
+     "وجع ضرس",
+     "وجع أسنان",
+     "وجع اسنان",
+     "سني يوجع",
+     "ضرسي يوجع",
+     "ضرس يوجع"
+    ],
+    "ckb": [
+     "ددانئێشە",
+     "ددان ئێشە",
+     "ئازاری ددان",
+     "ددانم دێشێ",
+     "ددانم دەیەشێ",
+     "کاکیلەم دێشێ"
+    ]
+   }
+  },
+  {
+   "id": "tooth_sensitivity",
+   "label": {
+    "en": "Sensitivity to hot, cold or sweet",
+    "ar": "حساسية للحار أو البارد أو الحلو",
+    "ckb": "هەستیاری بە گەرم، سارد یان شیرین"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bsensitiv\\w* (to )?(hot|cold|sweet)\\b",
+     "\\b(hot|cold|sweet) (food|drinks?|things?) (hurts?|causes? pain|makes? it hurt)\\b",
+     "\\bsensitive (teeth|tooth)\\b"
+    ],
+    "ar": [
+     "حساسية الأسنان",
+     "حساسية للبارد",
+     "حساسية للحار",
+     "يوجع مع البارد",
+     "البارد يوجع",
+     "الحار يوجع"
+    ],
+    "ckb": [
+     "هەستیاری ددان",
+     "هەستیارە بە سارد",
+     "سارد دەیئێشێنێ"
+    ]
+   }
+  },
+  {
+   "id": "pain_on_biting",
+   "label": {
+    "en": "Pain when biting or chewing",
+    "ar": "ألم عند العض أو المضغ",
+    "ckb": "ئازار لە کاتی گەستن یان جووین"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(pain|hurts?) (when|while|on) (biting|chewing|i bite|i chew|eating)\\b",
+     "\\bbite down\\b"
+    ],
+    "ar": [
+     "ألم عند العض",
+     "ألم عند المضغ",
+     "يوجع لما أعض",
+     "يوجع لما اعض",
+     "يوجع وكت المضغ"
+    ],
+    "ckb": [
+     "ئازار لە کاتی جووین",
+     "کە دەیجووم دێشێ",
+     "کە دەگەزم دێشێ"
+    ]
+   }
+  },
+  {
+   "id": "gum_bleeding",
+   "label": {
+    "en": "Bleeding gums",
+    "ar": "نزيف اللثة",
+    "ckb": "خوێنبەربوونی پووک"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": "mouth.gums",
+   "terms": {
+    "en": [
+     "\\bgums? (bleed\\w*|are bleeding)\\b",
+     "\\bbleeding gums?\\b",
+     "\\bblood when (i )?(brush|floss)\\w*\\b"
+    ],
+    "ar": [
+     "نزيف اللثة",
+     "اللثة تنزف",
+     "لثتي تنزف",
+     "دم من اللثة",
+     "دم وكت التفريش",
+     "دم عند التفريش",
+     "دم عند تنظيف الأسنان"
+    ],
+    "ckb": [
+     "خوێنبەربوونی پووک",
+     "پووکم خوێن",
+     "خوێن لە پووک"
+    ]
+   }
+  },
+  {
+   "id": "bad_taste_breath",
+   "label": {
+    "en": "Bad taste or bad breath",
+    "ar": "طعم سيئ أو رائحة فم كريهة",
+    "ckb": "تامی ناخۆش یان بۆنی ناخۆشی دەم"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(bad|foul|sour|unpleasant) (taste|breath)\\b",
+     "\\bhalitosis\\b"
+    ],
+    "ar": [
+     "رائحة كريهة",
+     "طعم سيء",
+     "طعم سيئ",
+     "طعم مر",
+     "ريحة الفم",
+     "نفس كريه",
+     "طعم حامض"
+    ],
+    "ckb": [
+     "بۆنی ناخۆشی دەم",
+     "تامی ناخۆش",
+     "تامی ترش"
+    ]
+   }
+  },
+  {
+   "id": "loose_tooth",
+   "label": {
+    "en": "Loose tooth",
+    "ar": "سن متحرك",
+    "ckb": "ددانی لەق"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": "mouth.teeth",
+   "terms": {
+    "en": [
+     "\\b(loose|wobbly|moving) (tooth|teeth)\\b",
+     "\\b(tooth|teeth) (is |are |feels? )?(loose|wobbly)\\b"
+    ],
+    "ar": [
+     "سن متحرك",
+     "ضرس متحرك",
+     "أسنان متحركة",
+     "سني يتحرك",
+     "سن مخلخل"
+    ],
+    "ckb": [
+     "ددانی لەق",
+     "ددانم لەقە",
+     "ددانەکانم دەلەقن"
+    ]
+   }
+  },
+  {
+   "id": "broken_tooth",
+   "label": {
+    "en": "Chipped, cracked or broken tooth",
+    "ar": "سن مكسور أو متشقق",
+    "ckb": "ددانی شکاو یان درزبردوو"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": "mouth.teeth",
+   "terms": {
+    "en": [
+     "\\b(broken|chipped|cracked|fractured) (my )?(tooth|teeth|molar)\\b",
+     "\\b(tooth|teeth) (is |got )?(broke|broken|chipped|cracked)\\b"
+    ],
+    "ar": [
+     "سن مكسور",
+     "انكسر سني",
+     "انكسر ضرسي",
+     "سن مشقوق",
+     "ضرس مكسور"
+    ],
+    "ckb": [
+     "ددانم شکا",
+     "ددانی شکاو",
+     "ددانم درزی بردووە"
+    ]
+   }
+  },
+  {
+   "id": "knocked_out_tooth",
+   "label": {
+    "en": "Knocked-out tooth",
+    "ar": "سقوط سن بسبب ضربة",
+    "ckb": "ددانی دەرهاتوو بە زەبر"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": "mouth.teeth",
+   "terms": {
+    "en": [
+     "\\bknocked (out )?(a |my |the )?(\\w+ )?(tooth|teeth)( out)?\\b",
+     "\\b(tooth|teeth) (was |got )?knocked out\\b"
+    ],
+    "ar": [
+     "سقط سني",
+     "طاح سني",
+     "طلع سني من الضربة",
+     "انقلع سني"
+    ],
+    "ckb": [
+     "ددانم کەوت",
+     "ددانم دەرهات"
+    ]
+   }
+  },
+  {
+   "id": "mouth_ulcer",
+   "label": {
+    "en": "Mouth ulcer or sore",
+    "ar": "قرحة في الفم",
+    "ckb": "برینی دەم"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": "mouth.oral-lining",
+   "terms": {
+    "en": [
+     "\\b(ulcers?|canker)\\b",
+     "\\b(mouth|tongue|lip) sores?\\b",
+     "\\bsores? (in|inside|on) (my |the )?(mouth|tongue|lip)\\b"
+    ],
+    "ar": [
+     "قرحة",
+     "تقرح",
+     "تقرحات",
+     "حبة بالفم",
+     "حبة في الفم",
+     "قلاع",
+     "جرح في الفم"
+    ],
+    "ckb": [
+     "برینی دەم",
+     "برین لە دەم",
+     "زامی دەم",
+     "برینی زمان"
+    ]
+   }
+  },
+  {
+   "id": "mouth_patch",
+   "label": {
+    "en": "Red or white patch in the mouth",
+    "ar": "بقعة حمراء أو بيضاء في الفم",
+    "ckb": "پەڵەی سوور یان سپی لە دەم"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [
+    "body.mouth"
+   ],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(white|red) (patch\\w*|spots?|areas?)\\b"
+    ],
+    "ar": [
+     "بقعة بيضاء",
+     "بقعة حمراء",
+     "بقع بيضاء",
+     "بقع حمراء"
+    ],
+    "ckb": [
+     "پەڵەی سپی",
+     "پەڵەی سوور"
+    ]
+   }
+  },
+  {
+   "id": "lump",
+   "label": {
+    "en": "Lump",
+    "ar": "كتلة",
+    "ckb": "گرێ"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(lump|lumps|mass|growth|bump)\\b"
+    ],
+    "ar": [
+     "كتلة",
+     "درنة",
+     "عقدة",
+     "نتوء"
+    ],
+    "ckb": [
+     "گرێ",
+     "لووە",
+     "بەرزایی"
+    ]
+   }
+  },
+  {
+   "id": "swallowing_difficulty",
+   "label": {
+    "en": "Difficulty or pain swallowing",
+    "ar": "صعوبة أو ألم في البلع",
+    "ckb": "قووتدانی قورس یان بە ئازار"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(difficult\\w* swallow\\w*|hard to swallow|can'?t swallow|cannot swallow|trouble swallowing|struggling to swallow|dysphagia)\\b",
+     "\\b(pain(ful)?|hurts?) (when |on |to )?swallow\\w*\\b"
+    ],
+    "ar": [
+     "صعوبة البلع",
+     "صعوبة في البلع",
+     "ما اكدر ابلع",
+     "ما أكدر أبلع",
+     "لا أستطيع البلع",
+     "ألم عند البلع",
+     "يوجع لما ابلع",
+     "يوجع لما أبلع"
+    ],
+    "ckb": [
+     "قووتدان قورس",
+     "ناتوانم قووت بدەم",
+     "ئازار لە کاتی قووتدان"
+    ]
+   }
+  },
+  {
+   "id": "sore_throat",
+   "label": {
+    "en": "Sore throat",
+    "ar": "ألم الحلق",
+    "ckb": "گەروو ئێشە"
+   },
+   "kind": "symptom",
+   "group": "ent",
+   "scope": [],
+   "implies_anatomy": "neck.throat",
+   "terms": {
+    "en": [
+     "\\bsore throat\\b",
+     "\\bthroat (pain|hurts?|is sore|is scratchy)\\b",
+     "\\bscratchy throat\\b"
+    ],
+    "ar": [
+     "التهاب الحلق",
+     "ألم الحلق",
+     "ألم في الحلق",
+     "وجع حلق",
+     "وجع بالحلق",
+     "حلقي يوجع",
+     "بلعومي يوجع"
+    ],
+    "ckb": [
+     "گەروو ئێشە",
+     "قوڕگ ئێشە",
+     "گەرووم دێشێ",
+     "قوڕگم دێشێ"
+    ]
+   }
+  },
+  {
+   "id": "ear_pain",
+   "label": {
+    "en": "Earache",
+    "ar": "ألم الأذن",
+    "ckb": "گوێ ئێشە"
+   },
+   "kind": "symptom",
+   "group": "ent",
+   "scope": [],
+   "implies_anatomy": "body.ears",
+   "terms": {
+    "en": [
+     "\\bear ?aches?\\b",
+     "\\bear (pain|hurts?)\\b",
+     "\\bpain in (my |the )?ear\\b"
+    ],
+    "ar": [
+     "ألم الأذن",
+     "ألم في الأذن",
+     "وجع اذن",
+     "وجع أذن",
+     "أذني توجع",
+     "اذني توجع"
+    ],
+    "ckb": [
+     "گوێ ئێشە",
+     "گوێم دێشێ",
+     "ئازاری گوێ"
+    ]
+   }
+  },
+  {
+   "id": "hearing_change",
+   "label": {
+    "en": "Change in hearing",
+    "ar": "تغير في السمع",
+    "ckb": "گۆڕانی بیستن"
+   },
+   "kind": "symptom",
+   "group": "ent",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(hearing (loss|change|problem)|can'?t hear|muffled|deaf\\w*|ringing in)\\b"
+    ],
+    "ar": [
+     "ضعف السمع",
+     "ما أسمع",
+     "ما اسمع",
+     "طنين",
+     "صمم"
+    ],
+    "ckb": [
+     "کەمبوونی بیستن",
+     "نابیستم",
+     "زرینگانەوە"
+    ]
+   }
+  },
+  {
+   "id": "nasal_congestion",
+   "label": {
+    "en": "Blocked or runny nose",
+    "ar": "انسداد أو سيلان الأنف",
+    "ckb": "لووتگیران یان لووتی ئاوی"
+   },
+   "kind": "symptom",
+   "group": "ent",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(blocked|stuffy|runny|congested) nose\\b",
+     "\\bnasal congestion\\b"
+    ],
+    "ar": [
+     "انسداد الأنف",
+     "انسداد الانف",
+     "خشمي مسدود",
+     "رشح",
+     "سيلان الأنف",
+     "زكام"
+    ],
+    "ckb": [
+     "لووتم گیراوە",
+     "لووت گیران",
+     "هەڵامەت",
+     "لووتم ئاو دەکات"
+    ]
+   }
+  },
+  {
+   "id": "reduced_smell",
+   "label": {
+    "en": "Reduced sense of smell",
+    "ar": "ضعف حاسة الشم",
+    "ckb": "کەمبوونی هەستی بۆنکردن"
+   },
+   "kind": "symptom",
+   "group": "ent",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(loss of smell|can'?t smell|reduced (sense of )?smell)\\b"
+    ],
+    "ar": [
+     "فقدان الشم",
+     "ما أشم",
+     "ما اشم",
+     "ضعف الشم"
+    ],
+    "ckb": [
+     "بۆن ناکەم",
+     "هەستی بۆنکردنم نەماوە"
+    ]
+   }
+  },
+  {
+   "id": "jaw_clicking",
+   "label": {
+    "en": "Jaw clicking, popping or locking",
+    "ar": "طقطقة أو قفل في الفك",
+    "ckb": "تەقەتەق یان گیرانی شەویلگە"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": "head.jaw-joint",
+   "terms": {
+    "en": [
+     "\\b(click\\w*|pop\\w*|grind\\w*|lock\\w*)\\b.{0,20}\\bjaw\\b",
+     "\\bjaw\\b.{0,20}\\b(click\\w*|pop\\w*|lock\\w*)\\b"
+    ],
+    "ar": [
+     "طقطقة الفك",
+     "صوت في الفك",
+     "الفك يطق",
+     "قفل الفك",
+     "فكي يطقطق"
+    ],
+    "ckb": [
+     "شەویلگەم دەتەقێ",
+     "دەنگی شەویلگە",
+     "شەویلگەم گیر دەخوات"
+    ]
+   }
+  },
+  {
+   "id": "difficulty_opening_mouth",
+   "label": {
+    "en": "Difficulty opening the mouth",
+    "ar": "صعوبة فتح الفم",
+    "ckb": "قورسی کردنەوەی دەم"
+   },
+   "kind": "symptom",
+   "group": "dental",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(can'?t|cannot|difficult\\w* to|hard to|trouble|struggling to) open\\w* (my )?mouth\\b"
+    ],
+    "ar": [
+     "صعوبة فتح الفم",
+     "ما اكدر افتح حلكي",
+     "ما أكدر أفتح حلكي",
+     "لا أستطيع فتح فمي"
+    ],
+    "ckb": [
+     "ناتوانم دەمم بکەمەوە",
+     "دەمم ناکرێتەوە"
+    ]
+   }
+  },
+  {
+   "id": "crowding",
+   "label": {
+    "en": "Crowded or crooked teeth",
+    "ar": "ازدحام أو اعوجاج الأسنان",
+    "ckb": "ددانی قەرەباڵغ یان خوار"
+   },
+   "kind": "symptom",
+   "group": "ortho",
+   "scope": [],
+   "implies_anatomy": "mouth.bite",
+   "terms": {
+    "en": [
+     "\\b(crowd\\w*|crooked|overlapping|twisted|rotated) (teeth|tooth)\\b",
+     "\\b(teeth|tooth) (are |is )?(crowded|crooked|overlapping)\\b",
+     "\\bteeth (are )?too close\\b"
+    ],
+    "ar": [
+     "ازدحام الأسنان",
+     "أسنان متزاحمة",
+     "أسنان معوجة",
+     "اسنان عوجة",
+     "تراكب الأسنان",
+     "اسناني عوجة"
+    ],
+    "ckb": [
+     "ددانی خوار",
+     "قەرەباڵغی ددان",
+     "ددانەکانم خوارن"
+    ]
+   }
+  },
+  {
+   "id": "spacing",
+   "label": {
+    "en": "Gaps between teeth",
+    "ar": "فراغات بين الأسنان",
+    "ckb": "بۆشایی نێوان ددانەکان"
+   },
+   "kind": "symptom",
+   "group": "ortho",
+   "scope": [],
+   "implies_anatomy": "mouth.bite",
+   "terms": {
+    "en": [
+     "\\b(gaps?|spaces?|spacing|diastema)\\b.{0,20}\\b(teeth|tooth)\\b",
+     "\\bgap.?toothed\\b"
+    ],
+    "ar": [
+     "فراغات بين الأسنان",
+     "فراغ بين الأسنان",
+     "تباعد الأسنان",
+     "فلجة"
+    ],
+    "ckb": [
+     "بۆشایی نێوان ددان",
+     "ددانی لێک دوور"
+    ]
+   }
+  },
+  {
+   "id": "bite_problem",
+   "label": {
+    "en": "Bite that does not meet properly",
+    "ar": "عضة غير متطابقة",
+    "ckb": "گەستنی ناڕێک"
+   },
+   "kind": "symptom",
+   "group": "ortho",
+   "scope": [],
+   "implies_anatomy": "mouth.bite",
+   "terms": {
+    "en": [
+     "\\b(overbite|underbite|crossbite|open bite|deep bite|buck teeth)\\b",
+     "\\bbite (is |feels )?(off|wrong|uneven)\\b",
+     "\\bteeth (don'?t|do not) meet\\b",
+     "\\b(teeth|tooth) (stick|sticks|sticking) out\\b",
+     "\\bprotruding (front )?teeth\\b"
+    ],
+    "ar": [
+     "مشكلة في العضة",
+     "عضة غير متساوية",
+     "بروز الأسنان",
+     "أسنان بارزة",
+     "الأسنان ما تتطابق",
+     "اسنان بارزة"
+    ],
+    "ckb": [
+     "گەستنی ناڕێک",
+     "ددانی پێشەوە دەرچووە",
+     "ددانەکان یەک ناگرنەوە"
+    ]
+   }
+  },
+  {
+   "id": "missing_tooth",
+   "label": {
+    "en": "Missing tooth",
+    "ar": "سن مفقود",
+    "ckb": "ددانی ونبوو"
+   },
+   "kind": "symptom",
+   "group": "ortho",
+   "scope": [],
+   "implies_anatomy": "mouth.teeth",
+   "terms": {
+    "en": [
+     "\\b(missing|lost) (a |one |two |some )?(tooth|teeth)\\b",
+     "\\b(tooth|teeth) (is |are )?missing\\b"
+    ],
+    "ar": [
+     "سن مفقود",
+     "أسنان مفقودة",
+     "ناقص سن",
+     "سن مقلوع",
+     "ضرس مقلوع"
+    ],
+    "ckb": [
+     "ددانی کەم",
+     "ددانێکم نیە",
+     "ددانی هەڵکێشراو"
+    ]
+   }
+  },
+  {
+   "id": "braces_problem",
+   "label": {
+    "en": "Problem with braces",
+    "ar": "مشكلة في تقويم الأسنان",
+    "ckb": "کێشەی ئامرازی ڕاستکردنەوەی ددان"
+   },
+   "kind": "symptom",
+   "group": "ortho",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(braces?|bracket|wire|aligner)\\b.{0,30}\\b(broken|loose|poking|hurt\\w*|pain\\w*|digging)\\b"
+    ],
+    "ar": [
+     "التقويم مكسور",
+     "سلك التقويم",
+     "تقويم يوجع",
+     "التقويم يجرح"
+    ],
+    "ckb": [
+     "تەلی ددان شکاوە",
+     "ئامرازی ددان ئازار دەدات"
+    ]
+   }
+  },
+  {
+   "id": "heartburn",
+   "label": {
+    "en": "Heartburn or acid reflux",
+    "ar": "حرقة أو ارتجاع حمضي",
+    "ckb": "سووتانەوەی گەدە یان ترشێتی"
+   },
+   "kind": "symptom",
+   "group": "gi",
+   "scope": [],
+   "implies_anatomy": "chest.oesophagus",
+   "terms": {
+    "en": [
+     "\\b(heartburn|acid reflux|reflux|indigestion|sour taste)\\b",
+     "\\bburning (in|behind) (my )?(chest|throat)\\b"
+    ],
+    "ar": [
+     "حرقة(?! (البول|بالبول|في البول|عند التبول))",
+     "حموضة",
+     "حرقان المعدة",
+     "ارتجاع",
+     "عسر هضم",
+     "عسر الهضم"
+    ],
+    "ckb": [
+     "ترشێتی",
+     "سووتانەوەی گەدە",
+     "سووتانەوەی سنگ",
+     "هەرسنەکردن"
+    ]
+   }
+  },
+  {
+   "id": "bloating",
+   "label": {
+    "en": "Bloating",
+    "ar": "انتفاخ",
+    "ckb": "پڕبوونی سک"
+   },
+   "kind": "symptom",
+   "group": "gi",
+   "scope": [
+    "body.abdomen"
+   ],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(bloat\\w*|gassy|distended)\\b"
+    ],
+    "ar": [
+     "انتفاخ",
+     "نفخة",
+     "غازات",
+     "امتلاء"
+    ],
+    "ckb": [
+     "پڕبوونی سک",
+     "بای سک",
+     "گاز"
+    ]
+   }
+  },
+  {
+   "id": "constipation",
+   "label": {
+    "en": "Constipation",
+    "ar": "إمساك",
+    "ckb": "قەبزی"
+   },
+   "kind": "symptom",
+   "group": "gi",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(constipat\\w*|hard (stools?|poo)|straining)\\b",
+     "\\b(can'?t|haven'?t|not) (had a )?poo\\w*\\b"
+    ],
+    "ar": [
+     "إمساك",
+     "امساك",
+     "قبض"
+    ],
+    "ckb": [
+     "قەبزی",
+     "قەبز"
+    ]
+   }
+  },
+  {
+   "id": "diarrhoea",
+   "label": {
+    "en": "Diarrhoea",
+    "ar": "إسهال",
+    "ckb": "سکچوون"
+   },
+   "kind": "symptom",
+   "group": "gi",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(diarrh\\w*|loose (stools?|poo)|runny poo|watery (stools?|poo))\\b"
+    ],
+    "ar": [
+     "إسهال",
+     "اسهال",
+     "إسهالات"
+    ],
+    "ckb": [
+     "سکچوون",
+     "ڕیخۆڵەچوون"
+    ]
+   }
+  },
+  {
+   "id": "gi_bleeding",
+   "label": {
+    "en": "Vomiting blood, black stools or blood in poo",
+    "ar": "تقيؤ دم أو براز أسود أو دم في البراز",
+    "ckb": "ڕشانەوەی خوێن، پیسایی ڕەش یان خوێن لە پیسایی"
+   },
+   "kind": "symptom",
+   "group": "gi",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(vomit\\w* blood|throwing up blood|blood in (my )?(vomit|poo|stool)|black (tarry )?(stools?|poo)|bloody (diarrh\\w*|stools?|poo)|rectal bleeding|bleeding from (my )?bottom)\\b"
+    ],
+    "ar": [
+     "دم في البراز",
+     "دم بالبراز",
+     "براز أسود",
+     "خروج أسود",
+     "استفراغ دم",
+     "تقيؤ دم",
+     "قيء دموي"
+    ],
+    "ckb": [
+     "خوێن لە پیسایی",
+     "پیسایی ڕەش",
+     "ڕشانەوەی خوێن"
+    ]
+   }
+  },
+  {
+   "id": "pain_moves_right_lower",
+   "label": {
+    "en": "Pain moving to the lower right abdomen",
+    "ar": "ألم انتقل إلى أسفل يمين البطن",
+    "ckb": "ئازار گواسترایەوە بۆ خوارەوەی لای ڕاستی سک"
+   },
+   "kind": "symptom",
+   "group": "gi",
+   "scope": [
+    "body.abdomen"
+   ],
+   "implies_anatomy": "abdomen.right-lower",
+   "terms": {
+    "en": [
+     "\\b(mov\\w*|shift\\w*|went|moved)\\b.{0,25}\\b(lower right|right side|bottom right)\\b"
+    ],
+    "ar": [
+     "انتقل.{0,40}(اليمين|الجهة اليمنى)",
+     "نزل.{0,40}(اليمين|الجهة اليمنى)"
+    ],
+    "ckb": [
+     "گواسترایەوە.{0,40}ڕاست",
+     "چووە.{0,40}لای ڕاست"
+    ]
+   }
+  },
+  {
+   "id": "yellow_skin_eyes",
+   "label": {
+    "en": "Yellow skin or whites of the eyes",
+    "ar": "اصفرار الجلد أو بياض العين",
+    "ckb": "زەردبوونی پێست یان سپێنەی چاو"
+   },
+   "kind": "symptom",
+   "group": "gi",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(yellow (skin|eyes|whites)|jaundice\\w*|skin (is |looks |turned )?yellow|eyes (are |look |turned )?yellow)\\b"
+    ],
+    "ar": [
+     "اصفرار",
+     "يرقان",
+     "صفار",
+     "أبو صفار"
+    ],
+    "ckb": [
+     "زەردوویی",
+     "زەردبوونی چاو",
+     "پێستم زەرد"
+    ]
+   }
+  },
+  {
+   "id": "urinary_burning",
+   "label": {
+    "en": "Pain or burning when peeing",
+    "ar": "حرقة أو ألم عند التبول",
+    "ckb": "سووتانەوە یان ئازار لە کاتی میزکردن"
+   },
+   "kind": "symptom",
+   "group": "urinary",
+   "scope": [],
+   "implies_anatomy": "abdomen.lower-central",
+   "terms": {
+    "en": [
+     "\\b(burn\\w*|sting\\w*|pain(ful)?|hurts?) (when|while|on) (i )?(pee|urinat\\w*)\\b",
+     "\\bdysuria\\b"
+    ],
+    "ar": [
+     "حرقة البول",
+     "حرقة بالبول",
+     "حرقة عند التبول",
+     "ألم عند التبول",
+     "ألم أثناء التبول",
+     "يحرقني البول"
+    ],
+    "ckb": [
+     "سووتانەوەی میز",
+     "ئازار لە کاتی میزکردن",
+     "میزەکەم دەسووتێنێ"
+    ]
+   }
+  },
+  {
+   "id": "urinary_frequency",
+   "label": {
+    "en": "Needing to pee more often",
+    "ar": "كثرة التبول",
+    "ckb": "زۆر میزکردن"
+   },
+   "kind": "symptom",
+   "group": "urinary",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(peeing|urinating|pee|urinate) (more|a lot|often|frequently)\\b",
+     "\\bfrequent urination\\b",
+     "\\bneed(ing)? to pee (often|all the time|urgently)\\b"
+    ],
+    "ar": [
+     "كثرة التبول",
+     "تبول متكرر",
+     "أبول كثير",
+     "ابول هواية"
+    ],
+    "ckb": [
+     "زۆر میز دەکەم",
+     "زۆر میزکردن"
+    ]
+   }
+  },
+  {
+   "id": "blood_in_urine",
+   "label": {
+    "en": "Blood in pee",
+    "ar": "دم في البول",
+    "ckb": "خوێن لە میز"
+   },
+   "kind": "symptom",
+   "group": "urinary",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(blood in (my )?(pee|urine)|haematuria|hematuria|red urine)\\b"
+    ],
+    "ar": [
+     "دم في البول",
+     "دم بالبول"
+    ],
+    "ckb": [
+     "خوێن لە میز"
+    ]
+   }
+  },
+  {
+   "id": "stiffness",
+   "label": {
+    "en": "Stiffness",
+    "ar": "تيبّس",
+    "ckb": "ڕەقی"
+   },
+   "kind": "symptom",
+   "group": "msk",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bstiff\\w*\\b"
+    ],
+    "ar": [
+     "تيبس",
+     "تيبّس",
+     "تصلب",
+     "متيبس",
+     "يابس"
+    ],
+    "ckb": [
+     "ڕەقی",
+     "ڕەق بووە",
+     "ڕەقە"
+    ]
+   }
+  },
+  {
+   "id": "stiff_neck",
+   "label": {
+    "en": "Stiff neck",
+    "ar": "تيبّس الرقبة",
+    "ckb": "ڕەقبوونی مل"
+   },
+   "kind": "symptom",
+   "group": "neuro",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bstiff neck\\b",
+     "\\bneck (is |feels )?stiff\\b"
+    ],
+    "ar": [
+     "تيبس الرقبة",
+     "تصلب الرقبة",
+     "رقبتي متيبسة",
+     "رقبتي يابسة"
+    ],
+    "ckb": [
+     "ڕەقبوونی مل",
+     "ملم ڕەق"
+    ]
+   }
+  },
+  {
+   "id": "rash",
+   "label": {
+    "en": "Rash",
+    "ar": "طفح جلدي",
+    "ckb": "پەڵەی پێست"
+   },
+   "kind": "symptom",
+   "group": "skin",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(rash\\w*|hives|welts?|blotch\\w*)\\b"
+    ],
+    "ar": [
+     "طفح",
+     "حبوب",
+     "بثور",
+     "شرى",
+     "حساسية جلد"
+    ],
+    "ckb": [
+     "پەڵەی پێست",
+     "زیپکە",
+     "خورشتی پێست",
+     "پەڵە"
+    ]
+   }
+  },
+  {
+   "id": "non_blanching_rash",
+   "label": {
+    "en": "Rash that does not fade when pressed",
+    "ar": "طفح لا يختفي عند الضغط",
+    "ckb": "پەڵەیەک کە بە گوشار ون نابێت"
+   },
+   "kind": "symptom",
+   "group": "skin",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\brash (that )?(does not|doesn'?t|won'?t) fade\\b",
+     "\\bnon.?blanching\\b",
+     "\\bglass test\\b"
+    ],
+    "ar": [
+     "طفح لا يختفي",
+     "طفح ما يروح بالضغط"
+    ],
+    "ckb": [
+     "پەڵە بە گوشار ون نابێت"
+    ]
+   }
+  },
+  {
+   "id": "face_lip_tongue_swelling",
+   "label": {
+    "en": "Swelling of the lips, tongue, face or throat",
+    "ar": "تورم الشفاه أو اللسان أو الوجه أو الحلق",
+    "ckb": "ئاوسانی لێو، زمان، دەموچاو یان گەروو"
+   },
+   "kind": "symptom",
+   "group": "allergy",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(lips?|tongue|throat|face) (is |are |feels? |looks? )?(swell\\w*|swollen|puff\\w*)\\b",
+     "\\bswell\\w* (of |in )?(my )?(lips?|tongue|throat|face)\\b"
+    ],
+    "ar": [
+     "تورم الشفايف",
+     "تورم الشفاه",
+     "تورم اللسان",
+     "تورم الحلق",
+     "تورم الوجه",
+     "لساني متورم",
+     "شفايفي متورمة",
+     "وجهي متورم"
+    ],
+    "ckb": [
+     "ئاوسانی لێو",
+     "ئاوسانی زمان",
+     "زمانم ئاوساوە",
+     "لێوم ئاوساوە",
+     "دەموچاوم ئاوساوە"
+    ]
+   }
+  },
+  {
+   "id": "throat_tight",
+   "label": {
+    "en": "Tight throat or struggling to swallow",
+    "ar": "ضيق في الحلق",
+    "ckb": "تەنگبوونی گەروو"
+   },
+   "kind": "symptom",
+   "group": "allergy",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bthroat (feels? |is )?(tight|closing)\\b",
+     "\\btight throat\\b"
+    ],
+    "ar": [
+     "ضيق في الحلق",
+     "حلقي ضايق",
+     "الحلق يتسكر"
+    ],
+    "ckb": [
+     "تەنگبوونی گەروو",
+     "گەرووم تەنگ"
+    ]
+   }
+  },
+  {
+   "id": "cramp",
+   "label": {
+    "en": "Cramp or spasm",
+    "ar": "شد عضلي",
+    "ckb": "گرژبوون"
+   },
+   "kind": "symptom",
+   "group": "msk",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(cramp\\w*|spasm\\w*)\\b"
+    ],
+    "ar": [
+     "شد عضلي",
+     "تشنج عضلي",
+     "شدة عضلية",
+     "شد في"
+    ],
+    "ckb": [
+     "گرژبوون",
+     "گرژی",
+     "ماسولکەم گرژ"
+    ]
+   }
+  },
+  {
+   "id": "joint_locking",
+   "label": {
+    "en": "Joint locking or giving way",
+    "ar": "انقفال المفصل أو خذلانه",
+    "ckb": "گیرانی جومگە یان چەمانەوەی لەناکاو"
+   },
+   "kind": "symptom",
+   "group": "msk",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(locks?|locking|gives? way|giving way|buckl\\w*|unstable)\\b"
+    ],
+    "ar": [
+     "ينقفل",
+     "تنقفل",
+     "يخون",
+     "يرتخي فجأة"
+    ],
+    "ckb": [
+     "گیر دەخوات",
+     "دەچەمێتەوە"
+    ]
+   }
+  },
+  {
+   "id": "cannot_bear_weight",
+   "label": {
+    "en": "Cannot put weight on it or walk",
+    "ar": "لا يستطيع الوقوف أو المشي عليها",
+    "ckb": "ناتوانێت بڕوات یان قورسایی بخاتە سەری"
+   },
+   "kind": "symptom",
+   "group": "msk",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(can'?t|cannot|unable to) (put (any )?weight|walk|stand)\\b"
+    ],
+    "ar": [
+     "ما اكدر امشي",
+     "ما أكدر أمشي",
+     "لا أستطيع المشي",
+     "ما أكدر أوكف",
+     "لا أستطيع الوقوف"
+    ],
+    "ckb": [
+     "ناتوانم بڕۆم",
+     "ناتوانم پێی لێ بنێم",
+     "ناتوانم بوەستم"
+    ]
+   }
+  },
+  {
+   "id": "deformity",
+   "label": {
+    "en": "Looks deformed or out of place",
+    "ar": "تشوّه أو خروج من المكان",
+    "ckb": "شێوە گۆڕاو یان لە جێی خۆی دەرچوو"
+   },
+   "kind": "symptom",
+   "group": "msk",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(deform\\w*|out of place|changed shape|pointing the wrong way|bone (is )?(sticking|poking) out)\\b"
+    ],
+    "ar": [
+     "تشوه",
+     "معوج بعد",
+     "العظم طالع",
+     "تغير شكله"
+    ],
+    "ckb": [
+     "شێوەی گۆڕاوە",
+     "ئێسکەکە دەرچووە"
+    ]
+   }
+  },
+  {
+   "id": "crack_sound",
+   "label": {
+    "en": "Heard a crack at the time of injury",
+    "ar": "سماع صوت طقة عند الإصابة",
+    "ckb": "بیستنی دەنگی شکان لە کاتی برین"
+   },
+   "kind": "symptom",
+   "group": "msk",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(heard|felt) a (crack|snap)\\b"
+    ],
+    "ar": [
+     "سمعت صوت طقة",
+     "سمعت طقة",
+     "صوت كسر"
+    ],
+    "ckb": [
+     "دەنگی شکان",
+     "دەنگی تەقە بیست"
+    ]
+   }
+  },
+  {
+   "id": "saddle_bladder",
+   "label": {
+    "en": "Numbness around the genitals or new bladder/bowel control problems",
+    "ar": "خدر حول الأعضاء التناسلية أو مشاكل جديدة في التحكم بالبول أو البراز",
+    "ckb": "سڕبوون لە دەوری ئەندامی زاوزێ یان کێشەی نوێی کۆنترۆڵی میز/پیسایی"
+   },
+   "kind": "symptom",
+   "group": "neuro",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bnumb\\w* (around|between) (my )?(genitals|bottom|anus|buttocks|groin|private)\\b",
+     "\\bsaddle (numbness|anaesthesia)\\b",
+     "\\b(can'?t|cannot) (control|hold|start) (my )?(pee|peeing|urine|bladder|bowels?|poo)\\b",
+     "\\bincontinen\\w*\\b"
+    ],
+    "ar": [
+     "خدر حول الأعضاء التناسلية",
+     "ما أسيطر على البول",
+     "سلس",
+     "ما اكدر امسك البول",
+     "ما أكدر أمسك البول"
+    ],
+    "ckb": [
+     "سڕبوونی دەوری ئەندامی زاوزێ",
+     "ناتوانم میزەکەم بگرم"
+    ]
+   }
+  },
+  {
+   "id": "dizziness",
+   "label": {
+    "en": "Dizziness",
+    "ar": "دوخة",
+    "ckb": "سەرسووڕان"
+   },
+   "kind": "symptom",
+   "group": "neuro",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(dizz\\w*|lightheaded|light.headed|vertigo|room (is )?spinning|unsteady)\\b"
+    ],
+    "ar": [
+     "دوخة",
+     "دوار",
+     "دايخ",
+     "الدنيا تدور"
+    ],
+    "ckb": [
+     "سەرسووڕان",
+     "گێژبوون",
+     "گێژ",
+     "سەرم دەسووڕێ"
+    ]
+   }
+  },
+  {
+   "id": "seizure",
+   "label": {
+    "en": "Seizure (fit)",
+    "ar": "نوبة تشنج",
+    "ckb": "فێ"
+   },
+   "kind": "symptom",
+   "group": "neuro",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(seizures?|convuls\\w*|had a fit|having a fit)\\b"
+    ],
+    "ar": [
+     "نوبة تشنج",
+     "تشنجات",
+     "صرع",
+     "اختلاج"
+    ],
+    "ckb": [
+     "فێ",
+     "گرژبوونی لەش"
+    ]
+   }
+  },
+  {
+   "id": "jaw_pain_eating",
+   "label": {
+    "en": "Jaw pain when eating",
+    "ar": "ألم الفك عند الأكل",
+    "ckb": "ئازاری شەویلگە لە کاتی خواردن"
+   },
+   "kind": "symptom",
+   "group": "neuro",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bjaw (pain|ache|aches|hurts?) (when|while) (eating|chewing)\\b"
+    ],
+    "ar": [
+     "ألم الفك عند الأكل",
+     "فكي يوجع لما آكل",
+     "فكي يوجع وكت الأكل"
+    ],
+    "ckb": [
+     "ئازاری شەویلگە لە کاتی خواردن",
+     "کە دەخۆم شەویلگەم دێشێ"
+    ]
+   }
+  },
+  {
+   "id": "tender_on_press",
+   "label": {
+    "en": "Tender when pressed",
+    "ar": "مؤلم عند الضغط",
+    "ckb": "بە گوشار دەئێشێت"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\btender\\w*\\b",
+     "\\b(hurts?|sore|painful) (when|if) (i )?(press|touch|push)\\w*\\b",
+     "\\bsore to (the )?touch\\b"
+    ],
+    "ar": [
+     "يؤلم عند الضغط",
+     "يوجع لما أضغط",
+     "يوجع لما اضغط",
+     "يوجع باللمس"
+    ],
+    "ckb": [
+     "بە گوشار دەئێشێت",
+     "کە دەستی لێ دەدەم دێشێ"
+    ]
+   }
+  },
+  {
+   "id": "weight_loss",
+   "label": {
+    "en": "Weight loss without trying",
+    "ar": "فقدان الوزن دون سبب",
+    "ckb": "دابەزینی کێش بەبێ هۆ"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(lost (a lot of )?weight|weight loss|losing weight)\\b"
+    ],
+    "ar": [
+     "نقص الوزن",
+     "نزل وزني",
+     "خسرت وزن",
+     "نقص وزني"
+    ],
+    "ckb": [
+     "کێشم دابەزیوە",
+     "کێشم کەم بۆتەوە"
+    ]
+   }
+  },
+  {
+   "id": "pale_blue_skin",
+   "label": {
+    "en": "Blue, grey or very pale lips or skin",
+    "ar": "زرقة أو شحوب شديد في الشفاه أو الجلد",
+    "ckb": "لێو یان پێستی شین، خۆڵەمێشی یان زۆر زەرد"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(blue|grey|gray|very pale) (lips|skin|face|tongue)\\b",
+     "\\b(lips|skin|face|tongue) (turn\\w*|are|is|look\\w*) (blue|grey|gray|very pale)\\b"
+    ],
+    "ar": [
+     "شفايف زرقاء",
+     "شفايفي زرق",
+     "زرقة",
+     "شحوب شديد"
+    ],
+    "ckb": [
+     "لێوی شین",
+     "لێوم شین",
+     "پێستی شین"
+    ]
+   }
+  },
+  {
+   "id": "hoarse_voice",
+   "label": {
+    "en": "Hoarse voice",
+    "ar": "بحّة في الصوت",
+    "ckb": "گیرانی دەنگ"
+   },
+   "kind": "symptom",
+   "group": "ent",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bhoarse\\w*\\b"
+    ],
+    "ar": [
+     "بحة",
+     "بحّة",
+     "صوتي مبحوح"
+    ],
+    "ckb": [
+     "دەنگم گیراوە",
+     "گیرانی دەنگ"
+    ]
+   }
+  },
+  {
+   "id": "drooling",
+   "label": {
+    "en": "Drooling / unable to swallow saliva",
+    "ar": "سيلان اللعاب",
+    "ckb": "لیکڕشتن"
+   },
+   "kind": "symptom",
+   "group": "ent",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\bdrool\\w*\\b"
+    ],
+    "ar": [
+     "سيلان اللعاب",
+     "لعاب يسيل",
+     "ريالة"
+    ],
+    "ckb": [
+     "لیک دەڕژێت",
+     "لیکڕشتن"
+    ]
+   }
+  },
+  {
+   "id": "night_vision_difficulty",
+   "label": {
+    "en": "Difficulty seeing at night",
+    "ar": "صعوبة الرؤية ليلاً",
+    "ckb": "قورسی بینین بە شەو"
+   },
+   "kind": "symptom",
+   "group": "eye",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(night vision|difficulty seeing at night|(can'?t|cannot) see (well )?at night|trouble seeing at night)\\b"
+    ],
+    "ar": [
+     "ضعف الرؤية الليلية",
+     "ما أشوف بالليل",
+     "ما اشوف بالليل"
+    ],
+    "ckb": [
+     "شەوان باش نابینم"
+    ]
+   }
+  },
+  {
+   "id": "bleeding",
+   "label": {
+    "en": "Heavy bleeding that will not stop",
+    "ar": "نزيف شديد لا يتوقف",
+    "ckb": "خوێنبەربوونی زۆر کە ناوەستێت"
+   },
+   "kind": "symptom",
+   "group": "general",
+   "scope": [],
+   "implies_anatomy": null,
+   "terms": {
+    "en": [
+     "\\b(won'?t stop bleeding|bleeding (that )?(won'?t|will not|does not|doesn'?t) stop|heavy bleeding|uncontrolled bleeding)\\b"
+    ],
+    "ar": [
+     "نزيف شديد",
+     "نزيف ما يوقف",
+     "الدم ما يوقف"
+    ],
+    "ckb": [
+     "خوێنبەربوون ناوەستێت",
+     "خوێنی زۆر"
+    ]
+   }
+  }
+ ],
+ "attributes": {
+  "onset": {
+   "label": {
+    "en": "Onset",
+    "ar": "طريقة البدء",
+    "ckb": "شێوەی دەستپێکردن"
+   },
+   "values": {
+    "sudden": {
+     "label": {
+      "en": "Sudden",
+      "ar": "مفاجئ",
+      "ckb": "لەناکاو"
+     },
+     "terms": {
+      "en": [
+       "\\b(sudden\\w*|all of a sudden|abrupt\\w*|out of nowhere|came on (quickly|fast)|instantly|in seconds)\\b"
+      ],
+      "ar": [
+       "فجأة",
+       "فجاة",
+       "فجأه",
+       "مفاجئ",
+       "بلحظة",
+       "فد مرة"
+      ],
+      "ckb": [
+       "لەناکاو",
+       "کتوپڕ",
+       "بەیەکجار",
+       "لە پڕ"
+      ]
+     }
+    },
+    "gradual": {
+     "label": {
+      "en": "Gradual",
+      "ar": "تدريجي",
+      "ckb": "وردە وردە"
+     },
+     "terms": {
+      "en": [
+       "\\b(gradual\\w*|slowly|over (time|weeks|months|days)|bit by bit|crept up|creeping)\\b"
+      ],
+      "ar": [
+       "تدريجي",
+       "تدريجيا",
+       "تدريجياً",
+       "شوي شوي",
+       "شيئا فشيئا",
+       "بالتدريج"
+      ],
+      "ckb": [
+       "وردە وردە",
+       "هێدی هێدی",
+       "بەرەبەرە",
+       "بە هێواشی"
+      ]
+     }
+    }
+   }
+  },
+  "course": {
+   "label": {
+    "en": "Change over time",
+    "ar": "التغير مع الوقت",
+    "ckb": "گۆڕان بە تێپەڕبوونی کات"
+   },
+   "values": {
+    "worsening": {
+     "label": {
+      "en": "Getting worse",
+      "ar": "يزداد سوءاً",
+      "ckb": "خراپتر دەبێت"
+     },
+     "terms": {
+      "en": [
+       "\\b(worse|worsening|getting worse|increasing|spreading)\\b"
+      ],
+      "ar": [
+       "يزداد",
+       "أسوأ",
+       "اسوأ",
+       "صار أسوأ",
+       "يسوء",
+       "زاد",
+       "ينتشر",
+       "دا يزيد"
+      ],
+      "ckb": [
+       "خراپتر",
+       "زیاد دەکات",
+       "زیاتر دەبێت",
+       "بڵاو دەبێتەوە"
+      ]
+     }
+    },
+    "improving": {
+     "label": {
+      "en": "Getting better",
+      "ar": "يتحسن",
+      "ckb": "باشتر دەبێت"
+     },
+     "terms": {
+      "en": [
+       "\\b(better|improv\\w*|easing|settling|going away)\\b"
+      ],
+      "ar": [
+       "أحسن",
+       "احسن",
+       "يتحسن",
+       "خف",
+       "دا يخف",
+       "قل"
+      ],
+      "ckb": [
+       "باشتر",
+       "کەم دەبێتەوە",
+       "سووکتر"
+      ]
+     }
+    },
+    "stable": {
+     "label": {
+      "en": "About the same",
+      "ar": "كما هو تقريباً",
+      "ckb": "نزیکەی وەک خۆی"
+     },
+     "terms": {
+      "en": [
+       "\\b(the same|unchanged|no change|stable|not changing)\\b"
+      ],
+      "ar": [
+       "نفس الشي",
+       "نفس الشيء",
+       "ما تغير",
+       "ثابت",
+       "نفسه"
+      ],
+      "ckb": [
+       "وەک خۆیەتی",
+       "نەگۆڕاوە",
+       "هەمان شت"
+      ]
+     }
+    }
+   }
+  },
+  "pattern": {
+   "label": {
+    "en": "Pattern",
+    "ar": "النمط",
+    "ckb": "شێواز"
+   },
+   "values": {
+    "constant": {
+     "label": {
+      "en": "Constant",
+      "ar": "مستمر",
+      "ckb": "بەردەوام"
+     },
+     "terms": {
+      "en": [
+       "\\b(constant\\w*|all the time|continuous\\w*|non.?stop|persistent|always there)\\b"
+      ],
+      "ar": [
+       "مستمر",
+       "طول الوقت",
+       "دائم",
+       "دايم",
+       "على طول",
+       "بدون توقف"
+      ],
+      "ckb": [
+       "بەردەوام",
+       "هەمیشە",
+       "هەموو کات"
+      ]
+     }
+    },
+    "intermittent": {
+     "label": {
+      "en": "Comes and goes",
+      "ar": "يأتي ويذهب",
+      "ckb": "دێت و دەڕوات"
+     },
+     "terms": {
+      "en": [
+       "\\b(comes and goes|come and go|on and off|off and on|intermittent\\w*|sometimes|episodes?|attacks?|now and then)\\b"
+      ],
+      "ar": [
+       "يروح ويجي",
+       "يجي ويروح",
+       "أحيانا",
+       "احيانا",
+       "أحياناً",
+       "متقطع",
+       "نوبات",
+       "بعض الأوقات"
+      ],
+      "ckb": [
+       "جار جار",
+       "هەندێک جار",
+       "دێت و دەڕوات",
+       "ناوە ناوە"
+      ]
+     }
+    }
+   }
+  },
+  "character": {
+   "label": {
+    "en": "What it feels like",
+    "ar": "كيف يبدو",
+    "ckb": "هەستەکەی چۆنە"
+   },
+   "values": {
+    "pressure": {
+     "label": {
+      "en": "Pressing, tight or heavy",
+      "ar": "ضاغط أو ثقيل",
+      "ckb": "گوشار، تەنگ یان قورس"
+     },
+     "terms": {
+      "en": [
+       "\\b(tight|tightness|heavy|heaviness|pressure|pressing|crushing|squeez\\w*|band around)\\b"
+      ],
+      "ar": [
+       "ضغط",
+       "ثقل",
+       "عصر",
+       "ضاغط",
+       "كأن شي ثقيل"
+      ],
+      "ckb": [
+       "گوشار",
+       "قورسی",
+       "تەنگی",
+       "گوشین"
+      ]
+     }
+    },
+    "throbbing": {
+     "label": {
+      "en": "Throbbing or pulsing",
+      "ar": "نابض",
+      "ckb": "ترپەدار"
+     },
+     "terms": {
+      "en": [
+       "\\b(throb\\w*|pounding|pulsing|pulsating)\\b"
+      ],
+      "ar": [
+       "نابض",
+       "ينبض",
+       "يدق",
+       "نبض"
+      ],
+      "ckb": [
+       "ترپە",
+       "ترپەدار",
+       "لێدان"
+      ]
+     }
+    },
+    "sharp": {
+     "label": {
+      "en": "Sharp or stabbing",
+      "ar": "حاد أو طاعن",
+      "ckb": "تیژ یان وەک چەقۆ"
+     },
+     "terms": {
+      "en": [
+       "\\b(sharp|stabbing|shooting|knife.?like)\\b"
+      ],
+      "ar": [
+       "حاد",
+       "طعن",
+       "كالسكين",
+       "نغزة",
+       "نغز"
+      ],
+      "ckb": [
+       "تیژ",
+       "وەک چەقۆ",
+       "چەقۆیی"
+      ]
+     }
+    },
+    "burning": {
+     "label": {
+      "en": "Burning",
+      "ar": "حارق",
+      "ckb": "سووتێنەر"
+     },
+     "terms": {
+      "en": [
+       "\\bburn\\w*\\b"
+      ],
+      "ar": [
+       "حارق",
+       "يحرق",
+       "حرقان"
+      ],
+      "ckb": [
+       "سووتان",
+       "دەسووتێ",
+       "سووتێنەر"
+      ]
+     }
+    }
+   }
+  },
+  "side": {
+   "label": {
+    "en": "Side",
+    "ar": "الجهة",
+    "ckb": "لا"
+   },
+   "values": {
+    "left": {
+     "label": {
+      "en": "Left",
+      "ar": "اليسار",
+      "ckb": "چەپ"
+     },
+     "terms": {
+      "en": [
+       "\\bleft\\b(?! (alone|over|behind|out|it))"
+      ],
+      "ar": [
+       "يسار",
+       "اليسار",
+       "اليسرى",
+       "الأيسر",
+       "الايسر",
+       "يسرى",
+       "اليسره"
+      ],
+      "ckb": [
+       "ی چەپ",
+       "لای چەپ",
+       "چەپم",
+       "چەپ"
+      ]
+     }
+    },
+    "right": {
+     "label": {
+      "en": "Right",
+      "ar": "اليمين",
+      "ckb": "ڕاست"
+     },
+     "terms": {
+      "en": [
+       "(?<!all )\\bright\\b(?! (now|away|after|before|there|here|back|then|thing))"
+      ],
+      "ar": [
+       "يمين",
+       "اليمين",
+       "اليمنى",
+       "الأيمن",
+       "الايمن",
+       "يمنى"
+      ],
+      "ckb": [
+       "ی ڕاست",
+       "لای ڕاست",
+       "ڕاستم"
+      ]
+     }
+    },
+    "both": {
+     "label": {
+      "en": "Both sides",
+      "ar": "كلا الجهتين",
+      "ckb": "هەردوو لا"
+     },
+     "terms": {
+      "en": [
+       "\\b(both|either side|each side)\\b"
+      ],
+      "ar": [
+       "كلتا",
+       "كلا ",
+       "الاثنين",
+       "الثنتين",
+       "الجهتين",
+       "الطرفين",
+       "الثنين"
+      ],
+      "ckb": [
+       "هەردوو",
+       "هەردووک",
+       "هەر دوو"
+      ]
+     }
+    }
+   }
+  }
+ },
+ "triggers": {
+  "exertion": {
+   "label": {
+    "en": "Exercise or exertion",
+    "ar": "الجهد أو الرياضة",
+    "ckb": "هەوڵ یان وەرزش"
+   },
+   "terms": {
+    "en": [
+     "\\b(exercis\\w*|exertion|walking|running|stairs|climbing|effort)\\b"
+    ],
+    "ar": [
+     "الجهد",
+     "المشي",
+     "الركض",
+     "الرياضة",
+     "الدرج"
+    ],
+    "ckb": [
+     "وەرزش",
+     "ڕۆیشتن",
+     "ڕاکردن",
+     "پلیکانە"
+    ]
+   }
+  },
+  "eating": {
+   "label": {
+    "en": "Eating or drinking",
+    "ar": "الأكل أو الشرب",
+    "ckb": "خواردن یان خواردنەوە"
+   },
+   "terms": {
+    "en": [
+     "\\b(eat\\w*|meals?|food|drink\\w*)\\b"
+    ],
+    "ar": [
+     "الأكل",
+     "الاكل",
+     "الطعام",
+     "الشرب",
+     "بعد الأكل"
+    ],
+    "ckb": [
+     "خواردن",
+     "دوای خواردن",
+     "خواردنەوە"
+    ]
+   }
+  },
+  "temperature": {
+   "label": {
+    "en": "Hot or cold food and drinks",
+    "ar": "الأطعمة والمشروبات الحارة أو الباردة",
+    "ckb": "خواردنی گەرم یان سارد"
+   },
+   "terms": {
+    "en": [
+     "\\b(cold|hot|ice|sweet)\\b"
+    ],
+    "ar": [
+     "البارد",
+     "بارد",
+     "الحار",
+     "حار",
+     "الحلو",
+     "الثلج"
+    ],
+    "ckb": [
+     "سارد",
+     "گەرم",
+     "شیرین",
+     "سەهۆڵ"
+    ]
+   }
+  },
+  "chewing": {
+   "label": {
+    "en": "Chewing or biting",
+    "ar": "المضغ أو العض",
+    "ckb": "جووین یان گەستن"
+   },
+   "terms": {
+    "en": [
+     "\\b(chew\\w*|bit(e|ing))\\b"
+    ],
+    "ar": [
+     "المضغ",
+     "مضغ",
+     "العض",
+     "أعض",
+     "اعض"
+    ],
+    "ckb": [
+     "جووین",
+     "گەستن",
+     "دەیجووم"
+    ]
+   }
+  },
+  "screen": {
+   "label": {
+    "en": "Screens or reading",
+    "ar": "الشاشات أو القراءة",
+    "ckb": "شاشە یان خوێندنەوە"
+   },
+   "terms": {
+    "en": [
+     "\\b(screens?|computer|phone|reading|laptop)\\b"
+    ],
+    "ar": [
+     "الشاشة",
+     "الموبايل",
+     "الكمبيوتر",
+     "القراءة"
+    ],
+    "ckb": [
+     "شاشە",
+     "مۆبایل",
+     "کۆمپیوتەر",
+     "خوێندنەوە"
+    ]
+   }
+  },
+  "lying_down": {
+   "label": {
+    "en": "Lying down or bending",
+    "ar": "الاستلقاء أو الانحناء",
+    "ckb": "ڕاکشان یان چەمانەوە"
+   },
+   "terms": {
+    "en": [
+     "\\b(lying down|lie down|bending|bend over|at bed ?time)\\b"
+    ],
+    "ar": [
+     "الاستلقاء",
+     "لما أنام",
+     "لما انام",
+     "الانحناء"
+    ],
+    "ckb": [
+     "ڕاکشان",
+     "کە پاڵ دەکەوم",
+     "چەمانەوە"
+    ]
+   }
+  },
+  "movement": {
+   "label": {
+    "en": "Moving or using it",
+    "ar": "الحركة أو الاستخدام",
+    "ckb": "جووڵە یان بەکارهێنان"
+   },
+   "terms": {
+    "en": [
+     "\\b(mov\\w*|lifting|bending|twisting|gripping|using it)\\b"
+    ],
+    "ar": [
+     "الحركة",
+     "أتحرك",
+     "اتحرك",
+     "الرفع",
+     "الإمساك"
+    ],
+    "ckb": [
+     "جووڵە",
+     "دەجووڵێم",
+     "هەڵگرتن",
+     "گرتن"
+    ]
+   }
+  },
+  "breathing": {
+   "label": {
+    "en": "Breathing in deeply or coughing",
+    "ar": "التنفس العميق أو السعال",
+    "ckb": "هەناسەی قووڵ یان کۆکە"
+   },
+   "terms": {
+    "en": [
+     "\\b(deep breath\\w*|breath\\w* in|when i breathe|cough\\w*)\\b"
+    ],
+    "ar": [
+     "التنفس العميق",
+     "أتنفس",
+     "اتنفس",
+     "السعال",
+     "الكحة"
+    ],
+    "ckb": [
+     "هەناسەی قووڵ",
+     "هەناسەدان",
+     "کۆکە"
+    ]
+   }
+  },
+  "light": {
+   "label": {
+    "en": "Bright light",
+    "ar": "الضوء الساطع",
+    "ckb": "ڕووناکی بەهێز"
+   },
+   "terms": {
+    "en": [
+     "\\b(bright )?lights?\\b"
+    ],
+    "ar": [
+     "الضوء",
+     "الضو"
+    ],
+    "ckb": [
+     "ڕووناکی"
+    ]
+   }
+  },
+  "stress": {
+   "label": {
+    "en": "Stress or tiredness",
+    "ar": "التوتر أو التعب",
+    "ckb": "فشار یان ماندوویی"
+   },
+   "terms": {
+    "en": [
+     "\\b(stress\\w*|tired\\w*|anxi\\w*|lack of sleep)\\b"
+    ],
+    "ar": [
+     "التوتر",
+     "الضغط النفسي",
+     "التعب",
+     "قلة النوم"
+    ],
+    "ckb": [
+     "فشار",
+     "ماندوویی",
+     "نیگەرانی",
+     "کەمخەوی"
+    ]
+   }
+  },
+  "night": {
+   "label": {
+    "en": "At night",
+    "ar": "في الليل",
+    "ckb": "بە شەو"
+   },
+   "terms": {
+    "en": [
+     "\\b(at night|night ?time|wakes? me( up)?)\\b"
+    ],
+    "ar": [
+     "بالليل",
+     "في الليل",
+     "يصحيني"
+    ],
+    "ckb": [
+     "بە شەو",
+     "شەوان",
+     "لە خەو هەڵمدەستێنێ"
+    ]
+   }
+  },
+  "morning": {
+   "label": {
+    "en": "First thing in the morning",
+    "ar": "أول الصباح",
+    "ckb": "سەرەتای بەیانی"
+   },
+   "terms": {
+    "en": [
+     "\\b(in the morning|first steps?|when i get up|after rest\\w*)\\b"
+    ],
+    "ar": [
+     "الصبح",
+     "الصباح",
+     "لما أكعد من النوم",
+     "أول خطوات"
+    ],
+    "ckb": [
+     "بەیانیان",
+     "بەیانی",
+     "کە هەڵدەستم"
+    ]
+   }
+  },
+  "pressing": {
+   "label": {
+    "en": "Pressing on it",
+    "ar": "الضغط عليه",
+    "ckb": "گوشار لەسەری"
+   },
+   "terms": {
+    "en": [
+     "\\b(press\\w*|touch\\w*)\\b"
+    ],
+    "ar": [
+     "الضغط",
+     "اللمس"
+    ],
+    "ckb": [
+     "گوشار",
+     "دەستلێدان"
+    ]
+   }
+  },
+  "swallowing": {
+   "label": {
+    "en": "Swallowing",
+    "ar": "البلع",
+    "ckb": "قووتدان"
+   },
+   "terms": {
+    "en": [
+     "\\bswallow\\w*\\b"
+    ],
+    "ar": [
+     "البلع",
+     "أبلع",
+     "ابلع"
+    ],
+    "ckb": [
+     "قووتدان"
+    ]
+   }
+  }
+ },
+ "trigger_cues": {
+  "en": "\\b(when|while|after|with|during|if|on|by|from|whenever|worse)\\b",
+  "ar": "(لما|عند|بعد|وقت|وكت|مع|أثناء|اثناء|من)",
+  "ckb": "(کاتێک|کە|دوای|لەگەڵ|لە کاتی|بە)"
+ },
+ "severity_words": {
+  "en": [
+   [
+    "\\bworst\\b.{0,25}\\b(ever|of my life|i have (ever )?had)\\b|\\bthe worst (pain|headache)\\b",
+    10
+   ],
+   [
+    "\\b(unbearable|excruciating|agoni\\w*|extreme\\w*)\\b",
+    9
+   ],
+   [
+    "\\b(severe\\w*|intense\\w*|terrible|very bad|really bad|horrible)\\b",
+    8
+   ],
+   [
+    "\\b(moderate\\w*|medium|quite bad|fairly bad)\\b",
+    5
+   ],
+   [
+    "\\b(mild\\w*|slight\\w*|a little|minor|not bad)\\b",
+    2
+   ]
+  ],
+  "ar": [
+   [
+    "أسوأ (ألم|صداع)|أشد ألم|اسوأ (الم|صداع)",
+    10
+   ],
+   [
+    "ما يتحمل|لا يطاق|فظيع",
+    9
+   ],
+   [
+    "شديد|قوي|كلش|هواية",
+    8
+   ],
+   [
+    "متوسط",
+    5
+   ],
+   [
+    "خفيف|بسيط|شوية",
+    2
+   ]
+  ],
+  "ckb": [
+   [
+    "خراپترین",
+    10
+   ],
+   [
+    "بەرگەناگیرێ|تاقەتپڕووکێن",
+    9
+   ],
+   [
+    "زۆر توند|(?<![؀-ۿ])توند|بەهێز|زۆر خراپ",
+    8
+   ],
+   [
+    "مامناوەند",
+    5
+   ],
+   [
+    "(?<![؀-ۿ])(سووک|کەمێک|کەم)(?![؀-ۿ])",
+    2
+   ]
+  ]
+ },
+ "negation": {
+  "en": {
+   "before": "\\b(no|not|without|denies|deny|never|don'?t have|do not have|haven'?t (had|noticed|got)|have not (had|noticed)|nor|none|neither|free of)\\b[^.,;:!?]{0,30}$",
+   "after": "^[^.,;:!?]{0,12}\\b(is|are|has|have)? ?(gone|absent|resolved)\\b"
+  },
+  "ar": {
+   "before": "(^|\\s)(لا|ما|ماكو|مو|مش|بدون|ليس|ليست|غير|لم|ولا|ما عندي|ماعندي|ما كو|ما بي|ما بيه)\\s[^.,;:!?،؟]{0,25}$",
+   "after": "^[^.,;:!?،؟]{0,10}(?<![\\u0600-\\u06FF])(ماكو|لا يوجد|ما موجود|غير موجود|ما عندي|اختفى|راح)(?![\\u0600-\\u06FF])"
+  },
+  "ckb": {
+   "before": "(^|\\s)(نەخێر|هیچ|بێ|بەبێ)\\s[^.,;:!?،؟]{0,25}$",
+   "after": "^[^.,;:!?،؟]{0,14}(?<![\\u0600-\\u06FF])(نیە|نییە|نەبووە|نیم|نیمە|نەبوو|نەماوە|نیه)(?![\\u0600-\\u06FF])"
+  }
+ },
+ "uncertain": {
+  "en": "\\b(not sure|unsure|don'?t know|do not know|maybe|i think|possibly|might be)\\b",
+  "ar": "(مو متأكد|مش متأكد|غير متأكد|ما أدري|ما ادري|ما اعرف|ما أعرف|يمكن|ربما)",
+  "ckb": "(دڵنیا نیم|نازانم|لەوانەیە|ڕەنگە)"
+ },
+ "historical": {
+  "en": "\\b(years? ago|last year|used to|in the past|as a child|previously had|months ago)\\b",
+  "ar": "(قبل سنين|قبل سنة|سابقا|سابقاً|من زمان|كان عندي|بالماضي)",
+  "ckb": "(ساڵانێک لەمەوبەر|پار|جاران|پێشتر هەبوو|لە ڕابردوودا)"
+ },
+ "yes": {
+  "en": "^\\s*(yes|yeah|yep|yup|correct|true|sure|i do(?! not)(?!n'?t)|i have(?! not| no)(?!n'?t))\\b",
+  "ar": "^\\s*(نعم|اي|إي|ايه|أيوه|بلى|صح|عندي)",
+  "ckb": "^\\s*(بەڵێ|ئا|ئەری|هەیە|هەمە|ڕاستە)"
+ },
+ "no": {
+  "en": "^\\s*(no|nope|nah|none|i don'?t|not really|never)\\b",
+  "ar": "^\\s*(لا|كلا|ماكو|ما عندي|أبد|ابد)",
+  "ckb": "^\\s*(نەخێر|نا|نیە|نییە|هیچ)"
+ },
+ "number_words": {
+  "en": {
+   "a": 1,
+   "an": 1,
+   "one": 1,
+   "two": 2,
+   "three": 3,
+   "four": 4,
+   "five": 5,
+   "six": 6,
+   "seven": 7,
+   "eight": 8,
+   "nine": 9,
+   "ten": 10,
+   "few": 3,
+   "couple of": 2,
+   "several": 4
+  },
+  "ar": {
+   "واحد": 1,
+   "اثنين": 2,
+   "ثنين": 2,
+   "ثلاث": 3,
+   "ثلاثة": 3,
+   "تلاث": 3,
+   "اربع": 4,
+   "أربع": 4,
+   "اربعة": 4,
+   "خمس": 5,
+   "خمسة": 5,
+   "ست": 6,
+   "ستة": 6,
+   "سبع": 7,
+   "سبعة": 7,
+   "ثمان": 8,
+   "ثمانية": 8,
+   "تسع": 9,
+   "تسعة": 9,
+   "عشر": 10,
+   "عشرة": 10,
+   "كم": 3,
+   "عدة": 4
+  },
+  "ckb": {
+   "یەک": 1,
+   "دوو": 2,
+   "سێ": 3,
+   "چوار": 4,
+   "پێنج": 5,
+   "شەش": 6,
+   "حەوت": 7,
+   "هەشت": 8,
+   "نۆ": 9,
+   "دە": 10,
+   "چەند": 3
+  }
+ },
+ "duration_units": {
+  "en": [
+   [
+    "min(ute)?s?",
+    0.016666666666666666
+   ],
+   [
+    "h(ou)?rs?",
+    1
+   ],
+   [
+    "days?",
+    24
+   ],
+   [
+    "w(ee)?ks?",
+    168
+   ],
+   [
+    "months?",
+    720
+   ],
+   [
+    "y(ea)?rs?",
+    8760
+   ]
+  ],
+  "ar": [
+   [
+    "دقيقة|دقائق|دقايق",
+    0.016666666666666666
+   ],
+   [
+    "ساعة|ساعات|ساعه",
+    1
+   ],
+   [
+    "يوم|أيام|ايام",
+    24
+   ],
+   [
+    "أسبوع|اسبوع|أسابيع|اسابيع|اسبوعين|أسبوعين",
+    168
+   ],
+   [
+    "شهر|أشهر|اشهر|شهور",
+    720
+   ],
+   [
+    "سنة|سنوات|سنين|سنه",
+    8760
+   ]
+  ],
+  "ckb": [
+   [
+    "خولەک|دەقیقە",
+    0.016666666666666666
+   ],
+   [
+    "کاتژمێر|سەعات",
+    1
+   ],
+   [
+    "ڕۆژ",
+    24
+   ],
+   [
+    "هەفتە|حەفتە",
+    168
+   ],
+   [
+    "مانگ",
+    720
+   ],
+   [
+    "ساڵ",
+    8760
+   ]
+  ]
+ },
+ "duration_special": {
+  "en": [
+   [
+    "\\bsince (yesterday|last night)\\b",
+    24
+   ],
+   [
+    "\\b(this morning|since this morning|today|earlier today)\\b",
+    6
+   ],
+   [
+    "\\b(just now|a few minutes ago)\\b",
+    0.2
+   ],
+   [
+    "\\bsince last week\\b",
+    168
+   ],
+   [
+    "\\bsince last month\\b",
+    720
+   ]
+  ],
+  "ar": [
+   [
+    "من البارحة|من امس|من أمس|من البارحه",
+    24
+   ],
+   [
+    "من الصبح|اليوم|هذا الصباح",
+    6
+   ],
+   [
+    "يومين",
+    48
+   ],
+   [
+    "ساعتين",
+    2
+   ],
+   [
+    "اسبوعين|أسبوعين",
+    336
+   ],
+   [
+    "شهرين",
+    1440
+   ],
+   [
+    "سنتين",
+    17520
+   ]
+  ],
+  "ckb": [
+   [
+    "لە دوێنێوە|دوێنێ",
+    24
+   ],
+   [
+    "لە بەیانییەوە|ئەمڕۆ",
+    6
+   ],
+   [
+    "هەفتەی پێشوو",
+    168
+   ],
+   [
+    "مانگی پێشوو",
+    720
+   ]
+  ]
+ }
+}

@@ -1,0 +1,5292 @@
+{
+ "schema_version": "humantwin-clinical-knowledge-v1",
+ "version": "knowledge-2026-11-16.1",
+ "generated_by": "ai-service/scripts/build-clinical-knowledge.py — edit the generator, not this file",
+ "clinical_review_status": "draft — no clinician has reviewed this content",
+ "translation_review_status": {
+  "en": "draft",
+  "ar": "draft — native medical review pending",
+  "ckb": "draft — native medical review pending"
+ },
+ "weights": {
+  "typical": 3,
+  "common": 2,
+  "possible": 1,
+  "strong": -4,
+  "moderate": -2,
+  "note": "Ordering weights, not probabilities."
+ },
+ "questions": {
+  "onset": {
+   "text": {
+    "en": "Did it start suddenly (within seconds to minutes) or gradually?",
+    "ar": "هل بدأ فجأة (خلال ثوانٍ أو دقائق) أم تدريجياً؟",
+    "ckb": "لەناکاو دەستی پێکرد (لە چەند چرکە یان خولەکێکدا) یان وردە وردە؟"
+   },
+   "purpose": {
+    "en": "Sudden versus gradual onset changes how urgent this may be.",
+    "ar": "البدء المفاجئ أو التدريجي يغيّر مدى الاستعجال.",
+    "ckb": "دەستپێکردنی لەناکاو یان وردە وردە پلەی پەلەکردن دەگۆڕێت."
+   },
+   "options": [
+    [
+     "onset:sudden",
+     {
+      "en": "Suddenly",
+      "ar": "فجأة",
+      "ckb": "لەناکاو"
+     }
+    ],
+    [
+     "onset:gradual",
+     {
+      "en": "Gradually",
+      "ar": "تدريجياً",
+      "ckb": "وردە وردە"
+     }
+    ],
+    [
+     "unknown",
+     {
+      "en": "Not sure",
+      "ar": "لست متأكداً",
+      "ckb": "دڵنیا نیم"
+     }
+    ]
+   ]
+  },
+  "duration": {
+   "text": {
+    "en": "How long have you had it?",
+    "ar": "منذ متى لديك هذا؟",
+    "ckb": "چەندە ئەم کێشەیەت هەیە؟"
+   },
+   "purpose": {
+    "en": "How long it has lasted affects which explanations fit and when to get checked.",
+    "ar": "المدة تؤثر على التفسيرات المناسبة وموعد الفحص.",
+    "ckb": "ماوەکەی کاریگەری لەسەر ڕوونکردنەوەکان و کاتی پشکنین هەیە."
+   },
+   "options": [
+    [
+     "duration:12",
+     {
+      "en": "Less than a day",
+      "ar": "أقل من يوم",
+      "ckb": "کەمتر لە ڕۆژێک"
+     }
+    ],
+    [
+     "duration:96",
+     {
+      "en": "1–7 days",
+      "ar": "١–٧ أيام",
+      "ckb": "١–٧ ڕۆژ"
+     }
+    ],
+    [
+     "duration:336",
+     {
+      "en": "1–3 weeks",
+      "ar": "١–٣ أسابيع",
+      "ckb": "١–٣ هەفتە"
+     }
+    ],
+    [
+     "duration:1080",
+     {
+      "en": "More than 3 weeks",
+      "ar": "أكثر من ٣ أسابيع",
+      "ckb": "زیاتر لە ٣ هەفتە"
+     }
+    ],
+    [
+     "unknown",
+     {
+      "en": "Not sure",
+      "ar": "لست متأكداً",
+      "ckb": "دڵنیا نیم"
+     }
+    ]
+   ]
+  },
+  "severity": {
+   "text": {
+    "en": "How bad is it from 0 (none) to 10 (worst imaginable)?",
+    "ar": "ما شدّته من 0 (لا شيء) إلى 10 (أسوأ ما يمكن تخيله)؟",
+    "ckb": "توندییەکەی لە 0 (هیچ) تا 10 (خراپترین شێوە) چەندە؟"
+   },
+   "purpose": {
+    "en": "Severity helps set urgency and is recorded for your clinician.",
+    "ar": "الشدة تساعد في تحديد الاستعجال وتُسجّل لطبيبك.",
+    "ckb": "توندی یارمەتی دیاریکردنی پەلە دەدات و بۆ پزیشکەکەت تۆمار دەکرێت."
+   },
+   "options": [
+    [
+     "severity:2",
+     {
+      "en": "Mild (0–3)",
+      "ar": "خفيف (0–3)",
+      "ckb": "سووک (0–3)"
+     }
+    ],
+    [
+     "severity:5",
+     {
+      "en": "Moderate (4–6)",
+      "ar": "متوسط (4–6)",
+      "ckb": "مامناوەند (4–6)"
+     }
+    ],
+    [
+     "severity:8",
+     {
+      "en": "Severe (7–10)",
+      "ar": "شديد (7–10)",
+      "ckb": "توند (7–10)"
+     }
+    ]
+   ]
+  },
+  "pattern": {
+   "text": {
+    "en": "Is it there all the time, or does it come and go?",
+    "ar": "هل هو موجود طوال الوقت أم يأتي ويذهب؟",
+    "ckb": "هەمیشە هەیە یان دێت و دەڕوات؟"
+   },
+   "purpose": {
+    "en": "Constant versus coming-and-going symptoms point to different causes.",
+    "ar": "الأعراض المستمرة أو المتقطعة تشير إلى أسباب مختلفة.",
+    "ckb": "نیشانەی بەردەوام یان ناوە ناوە ئاماژە بە هۆکاری جیاواز دەکەن."
+   },
+   "options": [
+    [
+     "pattern:constant",
+     {
+      "en": "All the time",
+      "ar": "طوال الوقت",
+      "ckb": "هەموو کات"
+     }
+    ],
+    [
+     "pattern:intermittent",
+     {
+      "en": "Comes and goes",
+      "ar": "يأتي ويذهب",
+      "ckb": "دێت و دەڕوات"
+     }
+    ],
+    [
+     "unknown",
+     {
+      "en": "Not sure",
+      "ar": "لست متأكداً",
+      "ckb": "دڵنیا نیم"
+     }
+    ]
+   ]
+  },
+  "course": {
+   "text": {
+    "en": "Since it started, is it getting better, worse, or staying the same?",
+    "ar": "منذ أن بدأ، هل يتحسن أم يسوء أم يبقى كما هو؟",
+    "ckb": "لەو کاتەوەی دەستی پێکردووە، باشتر دەبێت، خراپتر دەبێت یان وەک خۆیەتی؟"
+   },
+   "purpose": {
+    "en": "A worsening course can change the recommended care.",
+    "ar": "تفاقم الحالة قد يغيّر الرعاية الموصى بها.",
+    "ckb": "خراپتربوون دەتوانێت چاودێری پێشنیارکراو بگۆڕێت."
+   },
+   "options": [
+    [
+     "course:worsening",
+     {
+      "en": "Worse",
+      "ar": "يسوء",
+      "ckb": "خراپتر"
+     }
+    ],
+    [
+     "course:improving",
+     {
+      "en": "Better",
+      "ar": "يتحسن",
+      "ckb": "باشتر"
+     }
+    ],
+    [
+     "course:stable",
+     {
+      "en": "About the same",
+      "ar": "كما هو",
+      "ckb": "وەک خۆی"
+     }
+    ]
+   ]
+  },
+  "character": {
+   "text": {
+    "en": "What does it feel like?",
+    "ar": "كيف تشعر به؟",
+    "ckb": "هەستەکەی چۆنە؟"
+   },
+   "purpose": {
+    "en": "The quality of the pain helps separate possible causes.",
+    "ar": "طبيعة الألم تساعد في التفريق بين الأسباب المحتملة.",
+    "ckb": "جۆری ئازارەکە یارمەتی جیاکردنەوەی هۆکارەکان دەدات."
+   },
+   "options": [
+    [
+     "character:pressure",
+     {
+      "en": "Pressing, tight or heavy",
+      "ar": "ضاغط أو ثقيل",
+      "ckb": "گوشار یان قورس"
+     }
+    ],
+    [
+     "character:throbbing",
+     {
+      "en": "Throbbing",
+      "ar": "نابض",
+      "ckb": "ترپەدار"
+     }
+    ],
+    [
+     "character:sharp",
+     {
+      "en": "Sharp or stabbing",
+      "ar": "حاد",
+      "ckb": "تیژ"
+     }
+    ],
+    [
+     "character:burning",
+     {
+      "en": "Burning",
+      "ar": "حارق",
+      "ckb": "سووتێنەر"
+     }
+    ],
+    [
+     "unknown",
+     {
+      "en": "Hard to describe",
+      "ar": "يصعب وصفه",
+      "ckb": "قورسە وەسفی بکەم"
+     }
+    ]
+   ]
+  },
+  "side": {
+   "text": {
+    "en": "Which side is affected?",
+    "ar": "أي جهة متأثرة؟",
+    "ckb": "کام لا تووش بووە؟"
+   },
+   "purpose": {
+    "en": "Knowing the exact side keeps your record and the 3D view accurate.",
+    "ar": "معرفة الجهة بدقة تحافظ على دقة سجلك والعرض ثلاثي الأبعاد.",
+    "ckb": "زانینی لای دروست تۆمار و پیشاندانی سێ ڕەهەندی ورد دەهێڵێتەوە."
+   },
+   "options": [
+    [
+     "side:left",
+     {
+      "en": "Left",
+      "ar": "اليسار",
+      "ckb": "چەپ"
+     }
+    ],
+    [
+     "side:right",
+     {
+      "en": "Right",
+      "ar": "اليمين",
+      "ckb": "ڕاست"
+     }
+    ],
+    [
+     "side:both",
+     {
+      "en": "Both",
+      "ar": "كلاهما",
+      "ckb": "هەردووک"
+     }
+    ]
+   ]
+  },
+  "structure": {
+   "text": {
+    "en": "Which part exactly?",
+    "ar": "أي جزء بالتحديد؟",
+    "ckb": "بە وردی کام بەش؟"
+   },
+   "purpose": {
+    "en": "Pinpointing the structure narrows down what applies.",
+    "ar": "تحديد الجزء بدقة يضيّق الاحتمالات.",
+    "ckb": "دیاریکردنی بەشەکە ئەگەرەکان کەم دەکاتەوە."
+   },
+   "options": []
+  },
+  "triggers": {
+   "text": {
+    "en": "Does anything bring it on or make it worse?",
+    "ar": "هل هناك شيء يسببه أو يزيده سوءاً؟",
+    "ckb": "هیچ شتێک هەیە بیهێنێت یان خراپتری بکات؟"
+   },
+   "purpose": {
+    "en": "What brings it on helps distinguish between causes.",
+    "ar": "معرفة ما يسببه تساعد على التمييز بين الأسباب.",
+    "ckb": "زانینی هۆکاری هێنانی یارمەتی جیاکردنەوەی هۆکارەکان دەدات."
+   },
+   "options": []
+  },
+  "medications": {
+   "text": {
+    "en": "Are you taking any medicines, including anything new or recently changed?",
+    "ar": "هل تتناول أي أدوية، بما فيها دواء جديد أو تغيّر مؤخراً؟",
+    "ckb": "هیچ دەرمانێک بەکاردەهێنیت، لەوانە دەرمانی نوێ یان گۆڕاو؟"
+   },
+   "purpose": {
+    "en": "Medicines can cause or change symptoms and matter for safe advice.",
+    "ar": "الأدوية قد تسبب الأعراض أو تغيّرها وهي مهمة لنصيحة آمنة.",
+    "ckb": "دەرمان دەتوانێت نیشانە دروست بکات یان بیگۆڕێت و بۆ ئامۆژگاری سەلامەت گرنگە."
+   },
+   "options": [
+    [
+     "none",
+     {
+      "en": "None",
+      "ar": "لا شيء",
+      "ckb": "هیچ"
+     }
+    ],
+    [
+     "unknown",
+     {
+      "en": "Not sure",
+      "ar": "لست متأكداً",
+      "ckb": "دڵنیا نیم"
+     }
+    ]
+   ]
+  },
+  "allergies": {
+   "text": {
+    "en": "Do you have any allergies to medicines or other things?",
+    "ar": "هل لديك حساسية من أدوية أو أشياء أخرى؟",
+    "ckb": "هەستیاریت هەیە بەرامبەر دەرمان یان شتی تر؟"
+   },
+   "purpose": {
+    "en": "Allergies matter for safe treatment and can explain some symptoms.",
+    "ar": "الحساسية مهمة لعلاج آمن وقد تفسر بعض الأعراض.",
+    "ckb": "هەستیاری بۆ چارەسەری سەلامەت گرنگە و دەتوانێت هەندێک نیشانە ڕوون بکاتەوە."
+   },
+   "options": [
+    [
+     "none",
+     {
+      "en": "No known allergies",
+      "ar": "لا توجد حساسية معروفة",
+      "ckb": "هیچ هەستیارییەکی ناسراو نیە"
+     }
+    ],
+    [
+     "unknown",
+     {
+      "en": "Not sure",
+      "ar": "لست متأكداً",
+      "ckb": "دڵنیا نیم"
+     }
+    ]
+   ]
+  },
+  "history": {
+   "text": {
+    "en": "Do you have any long-term conditions or past problems that might be related?",
+    "ar": "هل لديك أمراض مزمنة أو مشاكل سابقة قد تكون ذات صلة؟",
+    "ckb": "هیچ نەخۆشییەکی درێژخایەن یان کێشەیەکی پێشووت هەیە کە پەیوەندیدار بێت؟"
+   },
+   "purpose": {
+    "en": "Relevant history changes which explanations and warning signs apply.",
+    "ar": "التاريخ المرضي يغيّر التفسيرات وعلامات الخطر المنطبقة.",
+    "ckb": "مێژووی نەخۆشی ڕوونکردنەوە و نیشانەی مەترسیدار دەگۆڕێت."
+   },
+   "options": [
+    [
+     "none",
+     {
+      "en": "None",
+      "ar": "لا شيء",
+      "ckb": "هیچ"
+     }
+    ],
+    [
+     "unknown",
+     {
+      "en": "Not sure",
+      "ar": "لست متأكداً",
+      "ckb": "دڵنیا نیم"
+     }
+    ]
+   ]
+  },
+  "safety": {
+   "text": {
+    "en": "Before we continue — do you have any of these right now?",
+    "ar": "قبل أن نكمل — هل لديك أيٌّ من هذه الآن؟",
+    "ckb": "پێش ئەوەی بەردەوام بین — ئێستا هیچ کام لەمانەت هەیە؟"
+   },
+   "purpose": {
+    "en": "Safety first: these signs need urgent care, so they are checked before anything else.",
+    "ar": "السلامة أولاً: هذه العلامات تحتاج رعاية عاجلة لذا تُفحص قبل أي شيء.",
+    "ckb": "سەلامەتی یەکەم: ئەم نیشانانە پێویستیان بە چاودێری خێرا هەیە، بۆیە پێش هەموو شتێک دەپشکنرێن."
+   },
+   "options": []
+  },
+  "symptom": {
+   "text": {
+    "en": "Have you also noticed this: {label}?",
+    "ar": "هل لاحظت هذا أيضاً: {label}؟",
+    "ckb": "ئایا ئەمەشت هەستپێکردووە: {label}؟"
+   },
+   "purpose": {
+    "en": "This helps tell apart {a} and {b}.",
+    "ar": "يساعد هذا على التمييز بين {a} و{b}.",
+    "ckb": "ئەمە یارمەتی جیاکردنەوەی {a} و {b} دەدات."
+   },
+   "purpose_single": {
+    "en": "This checks a typical feature of {a}.",
+    "ar": "يتحقق هذا من علامة نموذجية لـ{a}.",
+    "ckb": "ئەمە نیشانەیەکی ئاسایی {a} دەپشکنێت."
+   },
+   "options": [
+    [
+     "yes",
+     {
+      "en": "Yes",
+      "ar": "نعم",
+      "ckb": "بەڵێ"
+     }
+    ],
+    [
+     "no",
+     {
+      "en": "No",
+      "ar": "لا",
+      "ckb": "نەخێر"
+     }
+    ],
+    [
+     "unknown",
+     {
+      "en": "Not sure",
+      "ar": "لست متأكداً",
+      "ckb": "دڵنیا نیم"
+     }
+    ]
+   ]
+  },
+  "clarify": {
+   "text": {
+    "en": "Earlier you said “{a}”, and later “{b}”. Which is correct now?",
+    "ar": "ذكرتَ سابقاً «{a}» ثم «{b}». أيهما صحيح الآن؟",
+    "ckb": "پێشتر وتت «{a}» و دواتر «{b}». ئێستا کامیان ڕاستە؟"
+   },
+   "purpose": {
+    "en": "Your answers disagree; I need to know which is correct before relying on them.",
+    "ar": "إجاباتك متعارضة؛ أحتاج معرفة الصحيح قبل الاعتماد عليها.",
+    "ckb": "وەڵامەکانت پێچەوانەی یەکن؛ پێویستە بزانم کامیان ڕاستە."
+   },
+   "options": [
+    [
+     "first",
+     {
+      "en": "The first answer",
+      "ar": "الإجابة الأولى",
+      "ckb": "وەڵامی یەکەم"
+     }
+    ],
+    [
+     "second",
+     {
+      "en": "The later answer",
+      "ar": "الإجابة اللاحقة",
+      "ckb": "وەڵامی دواتر"
+     }
+    ]
+   ]
+  },
+  "laterality": {
+   "text": {
+    "en": "You selected the {selected} side but mentioned the {said} side. Which side is affected?",
+    "ar": "اخترت الجهة {selected} لكنك ذكرت الجهة {said}. أي جهة متأثرة؟",
+    "ckb": "لای {selected}ت هەڵبژارد بەڵام باسی لای {said}ت کرد. کام لا تووش بووە؟"
+   },
+   "purpose": {
+    "en": "Left/right must be consistent before the record and 3D view are updated.",
+    "ar": "يجب أن تتطابق الجهة قبل تحديث السجل والعرض ثلاثي الأبعاد.",
+    "ckb": "چەپ/ڕاست دەبێت یەکبگرنەوە پێش نوێکردنەوەی تۆمار و پیشاندانی سێ ڕەهەندی."
+   },
+   "options": [
+    [
+     "side:left",
+     {
+      "en": "Left",
+      "ar": "اليسار",
+      "ckb": "چەپ"
+     }
+    ],
+    [
+     "side:right",
+     {
+      "en": "Right",
+      "ar": "اليمين",
+      "ckb": "ڕاست"
+     }
+    ],
+    [
+     "side:both",
+     {
+      "en": "Both",
+      "ar": "كلاهما",
+      "ckb": "هەردووک"
+     }
+    ]
+   ]
+  },
+  "memory": {
+   "text": {
+    "en": "Your saved history lists “{item}”. Is that still current?",
+    "ar": "يذكر سجلك المحفوظ «{item}». هل ما زال ذلك صحيحاً؟",
+    "ckb": "مێژووە پاشەکەوتکراوەکەت «{item}» تێدایە. هێشتا ڕاستە؟"
+   },
+   "purpose": {
+    "en": "Saved history can be out of date; confirming avoids relying on old information.",
+    "ar": "قد يكون السجل المحفوظ قديماً؛ التأكيد يمنع الاعتماد على معلومات قديمة.",
+    "ckb": "مێژووی پاشەکەوتکراو لەوانەیە کۆن بێت؛ دڵنیاکردنەوە ڕێگری لە پشتبەستن بە زانیاری کۆن دەکات."
+   },
+   "options": [
+    [
+     "yes",
+     {
+      "en": "Yes, still current",
+      "ar": "نعم، ما زال صحيحاً",
+      "ckb": "بەڵێ، هێشتا ڕاستە"
+     }
+    ],
+    [
+     "no",
+     {
+      "en": "No longer",
+      "ar": "لم يعد كذلك",
+      "ckb": "نەخێر، چیتر نا"
+     }
+    ]
+   ]
+  }
+ },
+ "pathways": {
+  "emergency": {
+   "urgency": "emergency",
+   "label": {
+    "en": "Emergency care now",
+    "ar": "رعاية طارئة الآن",
+    "ckb": "فریاکەوتنی خێرا ئێستا"
+   },
+   "action": {
+    "en": "Call your local emergency number or go to the nearest emergency department now. Do not drive yourself. Do not wait for this chat.",
+    "ar": "اتصل برقم الطوارئ المحلي أو اذهب إلى أقرب قسم طوارئ الآن. لا تقد السيارة بنفسك. لا تنتظر هذه المحادثة.",
+    "ckb": "ئێستا پەیوەندی بە ژمارەی فریاکەوتنی ناوخۆوە بکە یان بچۆ بۆ نزیکترین بەشی فریاکەوتن. خۆت ئۆتۆمبێل لێمەخوڕە. چاوەڕێی ئەم گفتوگۆیە مەکە."
+   }
+  },
+  "eye_emergency": {
+   "urgency": "emergency",
+   "label": {
+    "en": "Emergency eye care now",
+    "ar": "رعاية طارئة للعين الآن",
+    "ckb": "فریاکەوتنی خێرای چاو ئێستا"
+   },
+   "action": {
+    "en": "Go to an emergency department or emergency eye service now. Do not drive yourself.",
+    "ar": "اذهب إلى قسم الطوارئ أو خدمة طوارئ العيون الآن. لا تقد السيارة بنفسك.",
+    "ckb": "ئێستا بچۆ بۆ بەشی فریاکەوتن یان خزمەتگوزاری فریاکەوتنی چاو. خۆت ئۆتۆمبێل لێمەخوڕە."
+   }
+  },
+  "urgent_same_day": {
+   "urgency": "same_day",
+   "label": {
+    "en": "Urgent medical assessment today",
+    "ar": "تقييم طبي عاجل اليوم",
+    "ckb": "هەڵسەنگاندنی پزیشکی بەپەلە ئەمڕۆ"
+   },
+   "action": {
+    "en": "Get an urgent appointment with a doctor or urgent-care service today. Use emergency services if it gets worse quickly.",
+    "ar": "احصل على موعد عاجل مع طبيب أو خدمة رعاية عاجلة اليوم. استخدم الطوارئ إذا ساءت الحالة بسرعة.",
+    "ckb": "ئەمڕۆ کاتێکی بەپەلە لەگەڵ پزیشک یان خزمەتگوزاری بەپەلە وەربگرە. ئەگەر بە خێرایی خراپتر بوو فریاکەوتن بەکاربهێنە."
+   }
+  },
+  "eye_urgent": {
+   "urgency": "same_day",
+   "label": {
+    "en": "Urgent eye assessment today",
+    "ar": "فحص عاجل للعين اليوم",
+    "ckb": "پشکنینی بەپەلەی چاو ئەمڕۆ"
+   },
+   "action": {
+    "en": "Get your eye checked today by an eye casualty service, urgent optometrist or doctor.",
+    "ar": "افحص عينك اليوم في طوارئ العيون أو لدى أخصائي بصريات أو طبيب بشكل عاجل.",
+    "ckb": "ئەمڕۆ چاوت لە فریاکەوتنی چاو یان لای چاوساز یان پزیشک بە پەلە بپشکنە."
+   }
+  },
+  "dentist_urgent": {
+   "urgency": "same_day",
+   "label": {
+    "en": "Urgent dental appointment",
+    "ar": "موعد عاجل لدى طبيب الأسنان",
+    "ckb": "کاتی بەپەلەی ددانساز"
+   },
+   "action": {
+    "en": "Contact a dentist for an urgent appointment today. Go to emergency care if swelling affects breathing, swallowing, speaking or your eye.",
+    "ar": "تواصل مع طبيب أسنان لموعد عاجل اليوم. اذهب للطوارئ إذا أثّر التورم على التنفس أو البلع أو الكلام أو العين.",
+    "ckb": "ئەمڕۆ پەیوەندی بە ددانسازێکەوە بکە بۆ کاتی بەپەلە. ئەگەر ئاوسان کاریگەری لەسەر هەناسەدان، قووتدان، قسەکردن یان چاو هەبوو بچۆ بۆ فریاکەوتن."
+   }
+  },
+  "gp_soon": {
+   "urgency": "soon",
+   "label": {
+    "en": "See a doctor within a few days",
+    "ar": "راجع طبيباً خلال أيام قليلة",
+    "ckb": "لە ماوەی چەند ڕۆژێکدا سەردانی پزیشک بکە"
+   },
+   "action": {
+    "en": "Book an appointment with a doctor within a few days. Seek urgent help if it gets worse or warning signs appear.",
+    "ar": "احجز موعداً مع طبيب خلال أيام قليلة. اطلب مساعدة عاجلة إذا ساءت الحالة أو ظهرت علامات خطر.",
+    "ckb": "لە ماوەی چەند ڕۆژێکدا کاتێک لەگەڵ پزیشک دابنێ. ئەگەر خراپتر بوو یان نیشانەی مەترسی دەرکەوت داوای یارمەتی بەپەلە بکە."
+   }
+  },
+  "dentist_soon": {
+   "urgency": "soon",
+   "label": {
+    "en": "See a dentist soon",
+    "ar": "راجع طبيب الأسنان قريباً",
+    "ckb": "بەم زووانە سەردانی ددانساز بکە"
+   },
+   "action": {
+    "en": "Book a dental appointment soon. A dentist can examine the mouth and take X-rays if needed.",
+    "ar": "احجز موعداً لدى طبيب الأسنان قريباً. يمكنه فحص الفم وأخذ أشعة عند الحاجة.",
+    "ckb": "بەم زووانە کاتێک لای ددانساز دابنێ. دەتوانێت دەم بپشکنێت و ئەگەر پێویست بوو تیشک بگرێت."
+   }
+  },
+  "optometrist": {
+   "urgency": "routine",
+   "label": {
+    "en": "Eye examination by an optometrist",
+    "ar": "فحص العين لدى أخصائي البصريات",
+    "ckb": "پشکنینی چاو لای چاوساز"
+   },
+   "action": {
+    "en": "Arrange an eye examination with an optometrist (optician) or eye doctor.",
+    "ar": "رتّب فحصاً للعين لدى أخصائي بصريات أو طبيب عيون.",
+    "ckb": "پشکنینێکی چاو لای چاوساز یان پزیشکی چاو ڕێک بخە."
+   }
+  },
+  "gp_routine": {
+   "urgency": "routine",
+   "label": {
+    "en": "Routine doctor appointment if it persists",
+    "ar": "موعد اعتيادي مع الطبيب إذا استمر",
+    "ckb": "سەردانی ئاسایی پزیشک ئەگەر بەردەوام بوو"
+   },
+   "action": {
+    "en": "If it does not improve, book a routine appointment with a doctor. Seek help sooner if it worsens.",
+    "ar": "إذا لم يتحسن، احجز موعداً اعتيادياً مع طبيب. اطلب المساعدة أبكر إذا ساء.",
+    "ckb": "ئەگەر باشتر نەبوو، کاتێکی ئاسایی لەگەڵ پزیشک دابنێ. ئەگەر خراپتر بوو زووتر داوای یارمەتی بکە."
+   }
+  },
+  "pharmacist": {
+   "urgency": "routine",
+   "label": {
+    "en": "Pharmacist advice",
+    "ar": "استشارة الصيدلي",
+    "ckb": "ئامۆژگاری دەرمانساز"
+   },
+   "action": {
+    "en": "A pharmacist can advise on self-care for this kind of problem. See a doctor if it does not improve or gets worse.",
+    "ar": "يمكن للصيدلي تقديم النصح حول الرعاية الذاتية لهذا النوع من المشاكل. راجع طبيباً إذا لم يتحسن أو ساء.",
+    "ckb": "دەرمانساز دەتوانێت ئامۆژگاری چاودێری خۆیی بدات. ئەگەر باشتر نەبوو یان خراپتر بوو سەردانی پزیشک بکە."
+   }
+  },
+  "dentist_routine": {
+   "urgency": "routine",
+   "label": {
+    "en": "Routine dental appointment",
+    "ar": "موعد أسنان اعتيادي",
+    "ckb": "کاتی ئاسایی ددانساز"
+   },
+   "action": {
+    "en": "Book a routine dental check-up.",
+    "ar": "احجز فحصاً اعتيادياً للأسنان.",
+    "ckb": "پشکنینێکی ئاسایی ددان دابنێ."
+   }
+  },
+  "orthodontist": {
+   "urgency": "routine",
+   "label": {
+    "en": "Orthodontic assessment",
+    "ar": "تقييم تقويم الأسنان",
+    "ckb": "هەڵسەنگاندنی ڕاستکردنەوەی ددان"
+   },
+   "action": {
+    "en": "Ask a dentist about an orthodontic assessment. Any treatment plan, tooth movement or extraction decision needs an orthodontist’s examination and clinical records (X-rays, photographs, scans).",
+    "ar": "اسأل طبيب الأسنان عن تقييم لتقويم الأسنان. أي خطة علاج أو تحريك للأسنان أو قرار خلع يحتاج فحص أخصائي تقويم وسجلات سريرية (أشعة وصور ومسح).",
+    "ckb": "لە ددانساز بپرسە دەربارەی هەڵسەنگاندنی ڕاستکردنەوەی ددان. هەر پلانێکی چارەسەر، جووڵاندنی ددان یان بڕیاری هەڵکێشان پێویستی بە پشکنینی پسپۆڕی ڕاستکردنەوە و تۆماری کلینیکی هەیە (تیشک، وێنە، سکان)."
+   }
+  }
+ },
+ "conditions": [
+  {
+   "id": "conjunctivitis",
+   "name": {
+    "en": "Conjunctivitis",
+    "ar": "التهاب الملتحمة",
+    "ckb": "هەوکردنی پەردەی چاو"
+   },
+   "anatomy": [
+    "body.eyes",
+    "eye.bulbar-conjunctiva"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-conjunctivitis"
+   ],
+   "features": [
+    {
+     "match": "sym:redness",
+     "weight": "typical",
+     "source": "nhs-conjunctivitis",
+     "ev": "^red$"
+    },
+    {
+     "match": "sym:discharge",
+     "weight": "typical",
+     "source": "nhs-conjunctivitis",
+     "ev": "produce pus that sticks"
+    },
+    {
+     "match": "sym:eye_dryness_grit",
+     "weight": "common",
+     "source": "nhs-conjunctivitis",
+     "ev": "burn or feel gritty"
+    },
+    {
+     "match": "sym:itch",
+     "weight": "common",
+     "source": "nhs-conjunctivitis",
+     "ev": "^itch$"
+    },
+    {
+     "match": "sym:watery_eyes",
+     "weight": "common",
+     "source": "nhs-conjunctivitis",
+     "ev": "^water$"
+    },
+    {
+     "match": "attr:side=both",
+     "weight": "common",
+     "source": "nhs-conjunctivitis",
+     "ev": "usually affects both eyes"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:blurred_vision",
+     "strength": "strong",
+     "source": "nhs-conjunctivitis",
+     "ev": "changes in your vision",
+     "why": {
+      "en": "Changes in vision are listed as a sign of a more serious eye problem.",
+      "ar": "تغيّر الرؤية مذكور كعلامة على مشكلة أخطر في العين.",
+      "ckb": "گۆڕانی بینین وەک نیشانەی کێشەیەکی جددیتری چاو ناوبراوە."
+     }
+    },
+    {
+     "match": "sym:vision_loss",
+     "strength": "strong",
+     "source": "nhs-conjunctivitis",
+     "ev": "changes in your vision",
+     "why": {
+      "en": "Changes in vision are listed as a sign of a more serious eye problem.",
+      "ar": "تغيّر الرؤية مذكور كعلامة على مشكلة أخطر في العين.",
+      "ckb": "گۆڕانی بینین وەک نیشانەی کێشەیەکی جددیتری چاو ناوبراوە."
+     }
+    },
+    {
+     "match": "sym:pain",
+     "strength": "moderate",
+     "source": "nhs-conjunctivitis",
+     "ev": "^pain in your eyes$",
+     "why": {
+      "en": "Eye pain is listed as a sign of a more serious eye problem.",
+      "ar": "ألم العين مذكور كعلامة على مشكلة أخطر.",
+      "ckb": "ئازاری چاو وەک نیشانەی کێشەیەکی جددیتر ناوبراوە."
+     }
+    },
+    {
+     "match": "sym:light_sensitivity",
+     "strength": "moderate",
+     "source": "nhs-conjunctivitis",
+     "ev": "^sensitivity to light$",
+     "why": {
+      "en": "Light sensitivity is listed as a sign of a more serious eye problem.",
+      "ar": "الحساسية للضوء مذكورة كعلامة على مشكلة أخطر.",
+      "ckb": "هەستیاری بە ڕووناکی وەک نیشانەی کێشەیەکی جددیتر ناوبراوە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "dry_eye",
+   "name": {
+    "en": "Dry eyes",
+    "ar": "جفاف العين",
+    "ckb": "وشکی چاو"
+   },
+   "anatomy": [
+    "body.eyes",
+    "eye.tear-film",
+    "eye.cornea"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-dry-eyes",
+    "nei-dry-eye"
+   ],
+   "features": [
+    {
+     "match": "sym:eye_dryness_grit",
+     "weight": "typical",
+     "source": "nhs-dry-eyes",
+     "ev": "^gritty$"
+    },
+    {
+     "match": "sym:itch",
+     "weight": "common",
+     "source": "nhs-dry-eyes",
+     "ev": "^itchy$"
+    },
+    {
+     "match": "sym:redness",
+     "weight": "common",
+     "source": "nhs-dry-eyes",
+     "ev": "^red$"
+    },
+    {
+     "match": "sym:pain",
+     "weight": "possible",
+     "source": "nhs-dry-eyes",
+     "ev": "^sore$"
+    },
+    {
+     "match": "sym:blurred_vision",
+     "weight": "possible",
+     "source": "nhs-dry-eyes",
+     "ev": "^blurry$"
+    },
+    {
+     "match": "sym:watery_eyes",
+     "weight": "possible",
+     "source": "nhs-dry-eyes",
+     "ev": "more watery than normal"
+    },
+    {
+     "match": "sym:light_sensitivity",
+     "weight": "possible",
+     "source": "nhs-dry-eyes",
+     "ev": "^sensitive to light$"
+    },
+    {
+     "match": "sym:contact_lens",
+     "weight": "common",
+     "source": "nhs-dry-eyes",
+     "ev": "^you wear contact lenses$"
+    },
+    {
+     "match": "sym:screen_use",
+     "weight": "common",
+     "source": "nhs-dry-eyes",
+     "ev": "computer screens"
+    },
+    {
+     "match": "trig:screen",
+     "weight": "common",
+     "source": "nhs-dry-eyes",
+     "ev": "computer screens"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:vision_loss",
+     "strength": "strong",
+     "source": "nhs-dry-eyes",
+     "ev": "changes to your sight",
+     "why": {
+      "en": "Changes in vision are listed as a sign of a more serious eye problem.",
+      "ar": "تغيّر الرؤية مذكور كعلامة على مشكلة أخطر في العين.",
+      "ckb": "گۆڕانی بینین وەک نیشانەی کێشەیەکی جددیتری چاو ناوبراوە."
+     }
+    },
+    {
+     "match": "sym:curtain_shadow",
+     "strength": "strong",
+     "source": "nhs-dry-eyes",
+     "ev": "changes to your sight",
+     "why": {
+      "en": "Changes in vision are listed as a sign of a more serious eye problem.",
+      "ar": "تغيّر الرؤية مذكور كعلامة على مشكلة أخطر في العين.",
+      "ckb": "گۆڕانی بینین وەک نیشانەی کێشەیەکی جددیتری چاو ناوبراوە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "blepharitis",
+   "name": {
+    "en": "Blepharitis (inflamed eyelids)",
+    "ar": "التهاب الجفن",
+    "ckb": "هەوکردنی پێڵوو"
+   },
+   "anatomy": [
+    "eye.eyelid-margin",
+    "eye.upper-eyelid",
+    "eye.lower-eyelid",
+    "body.eyes"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-blepharitis"
+   ],
+   "features": [
+    {
+     "match": "sym:eyelid_crusting",
+     "weight": "typical",
+     "source": "nhs-blepharitis",
+     "ev": "flakes or crusts"
+    },
+    {
+     "match": "sym:pain",
+     "weight": "common",
+     "source": "nhs-blepharitis",
+     "ev": "^sore eyelids$"
+    },
+    {
+     "match": "sym:itch",
+     "weight": "common",
+     "source": "nhs-blepharitis",
+     "ev": "^itchy eyes$"
+    },
+    {
+     "match": "sym:eye_dryness_grit",
+     "weight": "common",
+     "source": "nhs-blepharitis",
+     "ev": "gritty feeling"
+    },
+    {
+     "match": "attr:pattern=intermittent",
+     "weight": "common",
+     "source": "nhs-blepharitis",
+     "ev": "often come and go"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:blurred_vision",
+     "strength": "strong",
+     "source": "nhs-blepharitis",
+     "ev": "changes to your vision",
+     "why": {
+      "en": "Changes in vision are listed as a sign of a more serious eye problem.",
+      "ar": "تغيّر الرؤية مذكور كعلامة على مشكلة أخطر في العين.",
+      "ckb": "گۆڕانی بینین وەک نیشانەی کێشەیەکی جددیتری چاو ناوبراوە."
+     }
+    },
+    {
+     "match": "sym:vision_loss",
+     "strength": "strong",
+     "source": "nhs-blepharitis",
+     "ev": "changes to your vision",
+     "why": {
+      "en": "Changes in vision are listed as a sign of a more serious eye problem.",
+      "ar": "تغيّر الرؤية مذكور كعلامة على مشكلة أخطر في العين.",
+      "ckb": "گۆڕانی بینین وەک نیشانەی کێشەیەکی جددیتری چاو ناوبراوە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "stye",
+   "name": {
+    "en": "Stye",
+    "ar": "شحاذ العين",
+    "ckb": "دانەوێڵەی چاو"
+   },
+   "anatomy": [
+    "eye.upper-eyelid",
+    "eye.lower-eyelid",
+    "eye.eyelid-margin"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-stye"
+   ],
+   "features": [
+    {
+     "match": "sym:eyelid_lump",
+     "weight": "typical",
+     "source": "nhs-stye",
+     "ev": "small, painful lump on the eyelid"
+    },
+    {
+     "match": "sym:pain",
+     "weight": "common",
+     "source": "nhs-stye",
+     "ev": "small, painful lump"
+    },
+    {
+     "match": "attr:side=one",
+     "weight": "common",
+     "source": "nhs-stye",
+     "ev": "usually only affects 1 eye"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:blurred_vision",
+     "strength": "strong",
+     "source": "nhs-stye",
+     "ev": "it affects your vision",
+     "why": {
+      "en": "A stye affecting vision needs urgent review.",
+      "ar": "الشحاذ الذي يؤثر على الرؤية يحتاج مراجعة عاجلة.",
+      "ckb": "دانەوێڵەیەک کە کاریگەری لەسەر بینین هەبێت پێویستی بە پشکنینی بەپەلە هەیە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "floaters",
+   "name": {
+    "en": "Floaters and flashes (often harmless)",
+    "ar": "الأجسام العائمة والومضات (غالباً غير ضارة)",
+    "ckb": "پەڵەی سەرچاو و بریسکە (زۆرجار بێزیانن)"
+   },
+   "anatomy": [
+    "eye.vitreous-body",
+    "body.eyes"
+   ],
+   "pathway": "optometrist",
+   "sources": [
+    "nhs-floaters"
+   ],
+   "features": [
+    {
+     "match": "sym:flashes_floaters",
+     "weight": "typical",
+     "source": "nhs-floaters",
+     "ev": "^small dark dots$"
+    },
+    {
+     "match": "attr:duration>=720",
+     "weight": "common",
+     "source": "nhs-floaters",
+     "ev": "had them for a long time"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:curtain_shadow",
+     "strength": "strong",
+     "source": "nhs-floaters",
+     "ev": "dark \"curtain\" or shadow moving",
+     "why": {
+      "en": "A shadow or curtain can mean the retina is detaching.",
+      "ar": "الظل أو الستارة قد يعني انفصال الشبكية.",
+      "ckb": "سێبەر یان پەردە لەوانەیە مانای جیابوونەوەی تۆڕینە بێت."
+     }
+    },
+    {
+     "match": "attr:onset=sudden",
+     "strength": "moderate",
+     "source": "nhs-floaters",
+     "ev": "suddenly get floaters or flashes",
+     "why": {
+      "en": "New or sudden floaters need an urgent check.",
+      "ar": "الأجسام العائمة الجديدة أو المفاجئة تحتاج فحصاً عاجلاً.",
+      "ckb": "پەڵەی نوێ یان لەناکاو پێویستی بە پشکنینی بەپەلە هەیە."
+     }
+    },
+    {
+     "match": "sym:blurred_vision",
+     "strength": "moderate",
+     "source": "nhs-floaters",
+     "ev": "you also have blurred vision",
+     "why": {
+      "en": "Changes in vision are listed as a sign of a more serious eye problem.",
+      "ar": "تغيّر الرؤية مذكور كعلامة على مشكلة أخطر في العين.",
+      "ckb": "گۆڕانی بینین وەک نیشانەی کێشەیەکی جددیتری چاو ناوبراوە."
+     }
+    },
+    {
+     "match": "sym:pain",
+     "strength": "moderate",
+     "source": "nhs-floaters",
+     "ev": "you also have eye pain",
+     "why": {
+      "en": "Eye pain is listed as a sign of a more serious eye problem.",
+      "ar": "ألم العين مذكور كعلامة على مشكلة أخطر.",
+      "ckb": "ئازاری چاو وەک نیشانەی کێشەیەکی جددیتر ناوبراوە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "retinal_detachment",
+   "name": {
+    "en": "Detached retina (needs urgent care)",
+    "ar": "انفصال الشبكية (يحتاج رعاية عاجلة)",
+    "ckb": "جیابوونەوەی تۆڕینە (پێویستی بە چاودێری بەپەلە هەیە)"
+   },
+   "anatomy": [
+    "eye.retina",
+    "eye.vitreous-body"
+   ],
+   "pathway": "eye_urgent",
+   "sources": [
+    "nhs-detached-retina",
+    "nei-retinal-detachment"
+   ],
+   "features": [
+    {
+     "match": "sym:flashes_floaters",
+     "weight": "typical",
+     "source": "nhs-detached-retina",
+     "ev": "floaters \\(dots and lines\\) or flashes of light in your eye"
+    },
+    {
+     "match": "sym:curtain_shadow",
+     "weight": "typical",
+     "source": "nhs-detached-retina",
+     "ev": "^a dark \"curtain\" or shadow in your vision$"
+    },
+    {
+     "match": "sym:blurred_vision",
+     "weight": "common",
+     "source": "nhs-detached-retina",
+     "ev": "such as blurred vision"
+    },
+    {
+     "match": "attr:onset=sudden",
+     "weight": "common",
+     "source": "nei-retinal-detachment",
+     "ev": "often come on quickly"
+    }
+   ],
+   "against": [],
+   "urgent_condition": true,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "acute_glaucoma",
+   "name": {
+    "en": "Sudden (acute) glaucoma — an emergency",
+    "ar": "الزرق الحاد المفاجئ — حالة طارئة",
+    "ckb": "گلۆکۆمای لەناکاو — حاڵەتی فریاکەوتن"
+   },
+   "anatomy": [
+    "body.eyes",
+    "eye.iris",
+    "eye.optic-nerve"
+   ],
+   "pathway": "eye_emergency",
+   "sources": [
+    "nhs-glaucoma"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-glaucoma",
+     "ev": "^intense eye pain$"
+    },
+    {
+     "match": "sym:halos",
+     "weight": "typical",
+     "source": "nhs-glaucoma",
+     "ev": "rainbow-coloured circles"
+    },
+    {
+     "match": "sym:redness",
+     "weight": "common",
+     "source": "nhs-glaucoma",
+     "ev": "^a red eye$"
+    },
+    {
+     "match": "sym:blurred_vision",
+     "weight": "common",
+     "source": "nhs-glaucoma",
+     "ev": "^blurred vision$"
+    },
+    {
+     "match": "sym:headache",
+     "weight": "possible",
+     "source": "nhs-glaucoma",
+     "ev": "^a headache$"
+    },
+    {
+     "match": "sym:nausea",
+     "weight": "possible",
+     "source": "nhs-glaucoma",
+     "ev": "feeling sick \\(nausea\\)"
+    },
+    {
+     "match": "attr:onset=sudden",
+     "weight": "typical",
+     "source": "nhs-glaucoma",
+     "ev": "can develop suddenly"
+    }
+   ],
+   "against": [],
+   "urgent_condition": true,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "cataract",
+   "name": {
+    "en": "Cataracts",
+    "ar": "إعتام عدسة العين (الماء الأبيض)",
+    "ckb": "ئاوی سپی چاو (کاتاراکت)"
+   },
+   "anatomy": [
+    "eye.lens"
+   ],
+   "pathway": "optometrist",
+   "sources": [
+    "nhs-cataracts"
+   ],
+   "features": [
+    {
+     "match": "sym:blurred_vision",
+     "weight": "typical",
+     "source": "nhs-cataracts",
+     "ev": "^blurred vision$"
+    },
+    {
+     "match": "sym:night_vision_difficulty",
+     "weight": "common",
+     "source": "nhs-cataracts",
+     "ev": "difficulty seeing at night"
+    },
+    {
+     "match": "sym:light_sensitivity",
+     "weight": "possible",
+     "source": "nhs-cataracts",
+     "ev": "sensitive to, light"
+    },
+    {
+     "match": "sym:double_vision",
+     "weight": "possible",
+     "source": "nhs-cataracts",
+     "ev": "double vision"
+    },
+    {
+     "match": "attr:onset=gradual",
+     "weight": "typical",
+     "source": "nhs-cataracts",
+     "ev": "usually develop slowly"
+    }
+   ],
+   "against": [
+    {
+     "match": "attr:onset=sudden",
+     "strength": "moderate",
+     "source": "nhs-cataracts",
+     "ev": "usually develop slowly",
+     "why": {
+      "en": "Cataract symptoms usually develop slowly, not suddenly.",
+      "ar": "أعراض الماء الأبيض تتطور عادة ببطء وليس فجأة.",
+      "ckb": "نیشانەکانی ئاوی سپی زۆرجار هێواش پەرە دەسێنن نەک لەناکاو."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "uveitis",
+   "name": {
+    "en": "Uveitis (inflammation inside the eye)",
+    "ar": "التهاب العنبية",
+    "ckb": "هەوکردنی ناوەوەی چاو (یووڤیایتس)"
+   },
+   "anatomy": [
+    "eye.iris",
+    "body.eyes"
+   ],
+   "pathway": "eye_urgent",
+   "sources": [
+    "nhs-uveitis"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-uveitis",
+     "ev": "eye pain, which may feel worse"
+    },
+    {
+     "match": "sym:redness",
+     "weight": "common",
+     "source": "nhs-uveitis",
+     "ev": "red or watery eyes"
+    },
+    {
+     "match": "sym:blurred_vision",
+     "weight": "common",
+     "source": "nhs-uveitis",
+     "ev": "reduced or blurred vision"
+    },
+    {
+     "match": "sym:light_sensitivity",
+     "weight": "common",
+     "source": "nhs-uveitis",
+     "ev": "^sensitivity to light$"
+    },
+    {
+     "match": "attr:side=one",
+     "weight": "common",
+     "source": "nhs-uveitis",
+     "ev": "usually only affects one eye"
+    },
+    {
+     "match": "sym:flashes_floaters",
+     "weight": "possible",
+     "source": "nhs-uveitis",
+     "ev": "dark spots"
+    }
+   ],
+   "against": [],
+   "urgent_condition": true,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "tension_headache",
+   "name": {
+    "en": "Tension-type headache",
+    "ar": "صداع التوتر",
+    "ckb": "سەرئێشەی فشار"
+   },
+   "anatomy": [
+    "body.head",
+    "head.forehead",
+    "head.temple",
+    "head.back-of-head"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-tension-headache"
+   ],
+   "features": [
+    {
+     "match": "sym:headache",
+     "weight": "typical",
+     "source": "nhs-tension-headache",
+     "ev": "pain on both sides of your head"
+    },
+    {
+     "match": "attr:side=both",
+     "weight": "common",
+     "source": "nhs-tension-headache",
+     "ev": "pain on both sides of your head"
+    },
+    {
+     "match": "attr:character=pressure",
+     "weight": "typical",
+     "source": "nhs-tension-headache",
+     "ev": "pressing on your head"
+    },
+    {
+     "match": "sym:tender_on_press",
+     "weight": "possible",
+     "source": "nhs-tension-headache",
+     "ev": "may feel tender"
+    },
+    {
+     "match": "trig:stress",
+     "weight": "common",
+     "source": "nhs-tension-headache",
+     "ev": "^stress$"
+    }
+   ],
+   "against": [
+    {
+     "match": "attr:character=throbbing",
+     "strength": "moderate",
+     "source": "nhs-tension-headache",
+     "ev": "throbbing pain at the front, or on 1 side",
+     "why": {
+      "en": "A throbbing, one-sided headache suggests a different type, such as migraine.",
+      "ar": "الصداع النابض في جهة واحدة يشير إلى نوع آخر مثل الشقيقة.",
+      "ckb": "سەرئێشەی ترپەداری یەک لایەنە ئاماژە بە جۆرێکی تر دەکات وەک شەقیقە."
+     }
+    },
+    {
+     "match": "sym:vomiting",
+     "strength": "moderate",
+     "source": "nhs-tension-headache",
+     "ev": "feel sick, vomit and find light or noise painful",
+     "why": {
+      "en": "Sickness and light sensitivity suggest a different type of headache.",
+      "ar": "الغثيان والحساسية للضوء يشيران لنوع آخر من الصداع.",
+      "ckb": "هێڵنج و هەستیاری بە ڕووناکی ئاماژە بە جۆرێکی تری سەرئێشە دەکەن."
+     }
+    },
+    {
+     "match": "sym:light_sensitivity",
+     "strength": "moderate",
+     "source": "nhs-tension-headache",
+     "ev": "feel sick, vomit and find light or noise painful",
+     "why": {
+      "en": "Light sensitivity suggests a different type of headache.",
+      "ar": "الحساسية للضوء تشير إلى نوع آخر من الصداع.",
+      "ckb": "هەستیاری بە ڕووناکی ئاماژە بە جۆرێکی تری سەرئێشە دەکات."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "migraine",
+   "name": {
+    "en": "Migraine",
+    "ar": "الشقيقة (الصداع النصفي)",
+    "ckb": "شەقیقە"
+   },
+   "anatomy": [
+    "body.head",
+    "head.temple",
+    "head.forehead"
+   ],
+   "pathway": "gp_routine",
+   "sources": [
+    "nhs-migraine"
+   ],
+   "features": [
+    {
+     "match": "sym:headache",
+     "weight": "typical",
+     "source": "nhs-migraine",
+     "ev": "a throbbing headache"
+    },
+    {
+     "match": "attr:character=throbbing",
+     "weight": "typical",
+     "source": "nhs-migraine",
+     "ev": "a throbbing headache"
+    },
+    {
+     "match": "attr:side=one",
+     "weight": "common",
+     "source": "nhs-migraine",
+     "ev": "often on 1 side"
+    },
+    {
+     "match": "sym:nausea",
+     "weight": "common",
+     "source": "nhs-migraine",
+     "ev": "feeling or being sick"
+    },
+    {
+     "match": "sym:vomiting",
+     "weight": "common",
+     "source": "nhs-migraine",
+     "ev": "feeling or being sick"
+    },
+    {
+     "match": "sym:light_sensitivity",
+     "weight": "common",
+     "source": "nhs-migraine",
+     "ev": "sensitive to light and sounds"
+    },
+    {
+     "match": "attr:pattern=intermittent",
+     "weight": "common",
+     "source": "nhs-migraine",
+     "ev": "migraine attacks more than once a week"
+    },
+    {
+     "match": "trig:stress",
+     "weight": "possible",
+     "source": "nhs-migraine",
+     "ev": "stress and tiredness"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "sinusitis",
+   "name": {
+    "en": "Sinusitis",
+    "ar": "التهاب الجيوب الأنفية",
+    "ckb": "هەوکردنی سینوس"
+   },
+   "anatomy": [
+    "head.sinuses",
+    "head.forehead"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-sinusitis"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-sinusitis",
+     "ev": "pain, swelling and tenderness around your cheeks"
+    },
+    {
+     "match": "sym:nasal_congestion",
+     "weight": "typical",
+     "source": "nhs-sinusitis",
+     "ev": "blocked or runny nose"
+    },
+    {
+     "match": "sym:reduced_smell",
+     "weight": "common",
+     "source": "nhs-sinusitis",
+     "ev": "reduced sense of smell"
+    },
+    {
+     "match": "sym:discharge",
+     "weight": "common",
+     "source": "nhs-sinusitis",
+     "ev": "green or yellow mucus"
+    },
+    {
+     "match": "sym:fever",
+     "weight": "possible",
+     "source": "nhs-sinusitis",
+     "ev": "^a high temperature$"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "tmd",
+   "name": {
+    "en": "Jaw joint disorder (TMD)",
+    "ar": "اضطراب مفصل الفك",
+    "ckb": "تێکچوونی جومگەی شەویلگە"
+   },
+   "anatomy": [
+    "head.jaw-joint",
+    "head.temple",
+    "mouth.bite"
+   ],
+   "pathway": "dentist_routine",
+   "sources": [
+    "nhs-tmd"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-tmd",
+     "ev": "pain around your jaw, ear and temple"
+    },
+    {
+     "match": "sym:jaw_clicking",
+     "weight": "typical",
+     "source": "nhs-tmd",
+     "ev": "clicking, popping or grinding noises"
+    },
+    {
+     "match": "sym:headache",
+     "weight": "common",
+     "source": "nhs-tmd",
+     "ev": "headache around your temples"
+    },
+    {
+     "match": "sym:difficulty_opening_mouth",
+     "weight": "common",
+     "source": "nhs-tmd",
+     "ev": "difficulty opening your mouth fully"
+    },
+    {
+     "match": "trig:chewing",
+     "weight": "common",
+     "source": "nhs-tmd",
+     "ev": "worse when chewing"
+    },
+    {
+     "match": "trig:stress",
+     "weight": "possible",
+     "source": "nhs-tmd",
+     "ev": "worse when chewing and when you feel stressed"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "ear_infection",
+   "name": {
+    "en": "Ear infection",
+    "ar": "التهاب الأذن",
+    "ckb": "هەوکردنی گوێ"
+   },
+   "anatomy": [
+    "ear.outer",
+    "ear.middle",
+    "body.ears"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-ear-infections"
+   ],
+   "features": [
+    {
+     "match": "sym:ear_pain",
+     "weight": "typical",
+     "source": "nhs-ear-infections",
+     "ev": "pain inside the ear"
+    },
+    {
+     "match": "sym:fever",
+     "weight": "common",
+     "source": "nhs-ear-infections",
+     "ev": "^a high temperature$"
+    },
+    {
+     "match": "sym:hearing_change",
+     "weight": "common",
+     "source": "nhs-ear-infections",
+     "ev": "difficulty hearing"
+    },
+    {
+     "match": "sym:discharge",
+     "weight": "common",
+     "source": "nhs-ear-infections",
+     "ev": "discharge running out of the ear"
+    },
+    {
+     "match": "sym:itch",
+     "weight": "possible",
+     "source": "nhs-ear-infections",
+     "ev": "itching and irritation"
+    },
+    {
+     "match": "attr:onset=sudden",
+     "weight": "common",
+     "source": "nhs-ear-infections",
+     "ev": "usually start quickly"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "sore_throat",
+   "name": {
+    "en": "Sore throat (usually viral)",
+    "ar": "التهاب الحلق (غالباً فيروسي)",
+    "ckb": "گەروو ئێشە (زۆرجار ڤایرۆسی)"
+   },
+   "anatomy": [
+    "neck.throat"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-sore-throat"
+   ],
+   "features": [
+    {
+     "match": "sym:sore_throat",
+     "weight": "typical",
+     "source": "nhs-sore-throat",
+     "ev": "painful throat, especially when swallowing"
+    },
+    {
+     "match": "sym:swallowing_difficulty",
+     "weight": "common",
+     "source": "nhs-sore-throat",
+     "ev": "painful throat, especially when swallowing"
+    },
+    {
+     "match": "sym:cough",
+     "weight": "possible",
+     "source": "nhs-sore-throat",
+     "ev": "^a mild cough$"
+    },
+    {
+     "match": "sym:swelling",
+     "weight": "possible",
+     "source": "nhs-sore-throat",
+     "ev": "swollen neck glands"
+    },
+    {
+     "match": "sym:bad_taste_breath",
+     "weight": "possible",
+     "source": "nhs-sore-throat",
+     "ev": "^bad breath$"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:drooling",
+     "strength": "strong",
+     "source": "nhs-sore-throat",
+     "ev": "drooling",
+     "why": {
+      "en": "Drooling can mean you cannot swallow — an emergency sign.",
+      "ar": "سيلان اللعاب قد يعني عدم القدرة على البلع — علامة طارئة.",
+      "ckb": "لیکڕشتن لەوانەیە مانای نەتوانینی قووتدان بێت — نیشانەی فریاکەوتن."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "tonsillitis",
+   "name": {
+    "en": "Tonsillitis",
+    "ar": "التهاب اللوزتين",
+    "ckb": "هەوکردنی لەوزە"
+   },
+   "anatomy": [
+    "neck.throat"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-tonsillitis"
+   ],
+   "features": [
+    {
+     "match": "sym:sore_throat",
+     "weight": "typical",
+     "source": "nhs-tonsillitis",
+     "ev": "^a sore throat$"
+    },
+    {
+     "match": "sym:swallowing_difficulty",
+     "weight": "common",
+     "source": "nhs-tonsillitis",
+     "ev": "^problems swallowing$"
+    },
+    {
+     "match": "sym:fever",
+     "weight": "common",
+     "source": "nhs-tonsillitis",
+     "ev": "^a high temperature$"
+    },
+    {
+     "match": "sym:cough",
+     "weight": "possible",
+     "source": "nhs-tonsillitis",
+     "ev": "^coughing$"
+    },
+    {
+     "match": "sym:headache",
+     "weight": "possible",
+     "source": "nhs-tonsillitis",
+     "ev": "^a headache$"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "tooth_problem",
+   "name": {
+    "en": "Toothache from a tooth problem (e.g. decay, crack or filling)",
+    "ar": "ألم أسنان بسبب مشكلة في السن (تسوس أو كسر أو حشوة)",
+    "ckb": "ددانئێشە بەهۆی کێشەی ددان (کرمخواردن، درز یان پڕکردنەوە)"
+   },
+   "anatomy": [
+    "mouth.teeth"
+   ],
+   "pathway": "dentist_soon",
+   "sources": [
+    "nhs-toothache"
+   ],
+   "features": [
+    {
+     "match": "sym:toothache",
+     "weight": "typical",
+     "source": "nhs-toothache",
+     "ev": "^tooth decay$"
+    },
+    {
+     "match": "sym:tooth_sensitivity",
+     "weight": "common",
+     "source": "nhs-toothache",
+     "ev": "having sensitive teeth"
+    },
+    {
+     "match": "sym:broken_tooth",
+     "weight": "common",
+     "source": "nhs-toothache",
+     "ev": "cracked or damaged tooth"
+    },
+    {
+     "match": "sym:pain_on_biting",
+     "weight": "common",
+     "source": "nhs-toothache",
+     "ev": "pain when you bite"
+    },
+    {
+     "match": "attr:duration>=48",
+     "weight": "possible",
+     "source": "nhs-toothache",
+     "ev": "^that lasts more than 2 days$"
+    },
+    {
+     "match": "trig:temperature",
+     "weight": "common",
+     "source": "nhs-toothache",
+     "ev": "very hot or very cold"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "dental_abscess",
+   "name": {
+    "en": "Dental abscess (needs an urgent dentist)",
+    "ar": "خراج سني (يحتاج طبيب أسنان عاجلاً)",
+    "ckb": "کێمی ددان (پێویستی بە ددانسازی بەپەلە هەیە)"
+   },
+   "anatomy": [
+    "mouth.teeth",
+    "mouth.gums"
+   ],
+   "pathway": "dentist_urgent",
+   "sources": [
+    "nhs-dental-abscess"
+   ],
+   "features": [
+    {
+     "match": "sym:toothache",
+     "weight": "typical",
+     "source": "nhs-dental-abscess",
+     "ev": "intense toothache or pain in your gums"
+    },
+    {
+     "match": "sym:swelling",
+     "weight": "typical",
+     "source": "nhs-dental-abscess",
+     "ev": "a swollen face or jaw"
+    },
+    {
+     "match": "sym:tooth_sensitivity",
+     "weight": "common",
+     "source": "nhs-dental-abscess",
+     "ev": "sensitivity to hot or cold food"
+    },
+    {
+     "match": "sym:bad_taste_breath",
+     "weight": "common",
+     "source": "nhs-dental-abscess",
+     "ev": "a bad taste in your mouth"
+    },
+    {
+     "match": "sym:difficulty_opening_mouth",
+     "weight": "common",
+     "source": "nhs-dental-abscess",
+     "ev": "difficulty opening your mouth and chewing"
+    },
+    {
+     "match": "sym:redness",
+     "weight": "possible",
+     "source": "nhs-dental-abscess",
+     "ev": "redness inside the mouth"
+    },
+    {
+     "match": "trig:temperature",
+     "weight": "possible",
+     "source": "nhs-dental-abscess",
+     "ev": "sensitivity to hot or cold food"
+    }
+   ],
+   "against": [],
+   "urgent_condition": true,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "gum_disease",
+   "name": {
+    "en": "Gum disease",
+    "ar": "أمراض اللثة",
+    "ckb": "نەخۆشی پووک"
+   },
+   "anatomy": [
+    "mouth.gums"
+   ],
+   "pathway": "dentist_routine",
+   "sources": [
+    "nhs-gum-disease",
+    "nidcr-gum-disease"
+   ],
+   "features": [
+    {
+     "match": "sym:gum_bleeding",
+     "weight": "typical",
+     "source": "nhs-gum-disease",
+     "ev": "your gums bleeding when you brush"
+    },
+    {
+     "match": "sym:swelling",
+     "weight": "common",
+     "source": "nhs-gum-disease",
+     "ev": "gums becoming swollen, red and sore"
+    },
+    {
+     "match": "sym:redness",
+     "weight": "common",
+     "source": "nhs-gum-disease",
+     "ev": "gums becoming swollen, red and sore"
+    },
+    {
+     "match": "sym:bad_taste_breath",
+     "weight": "common",
+     "source": "nhs-gum-disease",
+     "ev": "bad breath and a bad taste"
+    },
+    {
+     "match": "sym:loose_tooth",
+     "weight": "possible",
+     "source": "nhs-gum-disease",
+     "ev": "teeth becoming loose or falling out"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "mouth_ulcer",
+   "name": {
+    "en": "Mouth ulcer",
+    "ar": "قرحة الفم",
+    "ckb": "برینی دەم"
+   },
+   "anatomy": [
+    "mouth.oral-lining",
+    "mouth.tongue",
+    "mouth.lips"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-mouth-ulcers"
+   ],
+   "features": [
+    {
+     "match": "sym:mouth_ulcer",
+     "weight": "typical",
+     "source": "nhs-mouth-ulcers",
+     "ev": "more than 1 ulcer at a time"
+    },
+    {
+     "match": "trig:chewing",
+     "weight": "possible",
+     "source": "nhs-mouth-ulcers",
+     "ev": "biting the inside of your cheek"
+    }
+   ],
+   "against": [
+    {
+     "match": "attr:duration>=504",
+     "strength": "strong",
+     "source": "nhs-mouth-ulcers",
+     "ev": "^lasts longer than 3 weeks$",
+     "why": {
+      "en": "An ulcer lasting more than 3 weeks needs to be checked by a dentist or doctor.",
+      "ar": "القرحة التي تستمر أكثر من 3 أسابيع تحتاج فحصاً من طبيب أسنان أو طبيب.",
+      "ckb": "برینێک کە زیاتر لە ٣ هەفتە بمێنێتەوە پێویستی بە پشکنینی ددانساز یان پزیشک هەیە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "broken_tooth",
+   "name": {
+    "en": "Chipped or cracked tooth",
+    "ar": "سن مكسور أو متشقق",
+    "ckb": "ددانی شکاو یان درزبردوو"
+   },
+   "anatomy": [
+    "mouth.teeth"
+   ],
+   "pathway": "dentist_soon",
+   "sources": [
+    "nhs-broken-tooth"
+   ],
+   "features": [
+    {
+     "match": "sym:broken_tooth",
+     "weight": "typical",
+     "source": "nhs-broken-tooth",
+     "ev": "chipped, cracked or broken a tooth"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "wisdom_tooth",
+   "name": {
+    "en": "Wisdom tooth problem",
+    "ar": "مشكلة في ضرس العقل",
+    "ckb": "کێشەی ددانی عەقڵ"
+   },
+   "anatomy": [
+    "tooth.fdi.18",
+    "tooth.fdi.28",
+    "tooth.fdi.38",
+    "tooth.fdi.48",
+    "mouth.gums"
+   ],
+   "pathway": "dentist_soon",
+   "sources": [
+    "nhs-wisdom-teeth"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-wisdom-teeth",
+     "ev": "^pain and swelling$"
+    },
+    {
+     "match": "sym:swelling",
+     "weight": "common",
+     "source": "nhs-wisdom-teeth",
+     "ev": "^pain and swelling$"
+    },
+    {
+     "match": "sym:toothache",
+     "weight": "common",
+     "source": "nhs-wisdom-teeth",
+     "ev": "^pain and swelling$"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": true,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "orthodontic",
+   "name": {
+    "en": "Tooth alignment or bite concern (orthodontic)",
+    "ar": "مشكلة في اصطفاف الأسنان أو العضة (تقويم)",
+    "ckb": "کێشەی ڕیزبوونی ددان یان گەستن (ڕاستکردنەوە)"
+   },
+   "anatomy": [
+    "mouth.bite",
+    "mouth.teeth"
+   ],
+   "pathway": "orthodontist",
+   "sources": [
+    "nhs-orthodontics"
+   ],
+   "features": [
+    {
+     "match": "sym:crowding",
+     "weight": "typical",
+     "source": "nhs-orthodontics",
+     "ev": "growing too close together or they stick out"
+    },
+    {
+     "match": "sym:bite_problem",
+     "weight": "typical",
+     "source": "nhs-orthodontics",
+     "ev": "do not meet properly"
+    },
+    {
+     "match": "sym:spacing",
+     "weight": "typical",
+     "source": "nhs-orthodontics",
+     "ev": "large gaps between your teeth"
+    },
+    {
+     "match": "sym:braces_problem",
+     "weight": "common",
+     "source": "nhs-orthodontics",
+     "ev": "your braces are broken"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": {
+    "en": "Educational only. Tooth movement, forces, extractions and treatment plans need an orthodontist and clinical records.",
+    "ar": "تعليمي فقط. تحريك الأسنان والقوى والخلع وخطط العلاج تحتاج أخصائي تقويم وسجلات سريرية.",
+    "ckb": "تەنها فێرکاری. جووڵاندنی ددان، هێز، هەڵکێشان و پلانی چارەسەر پێویستیان بە پسپۆڕی ڕاستکردنەوە و تۆماری کلینیکی هەیە."
+   },
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "costochondritis",
+   "name": {
+    "en": "Costochondritis (chest-wall inflammation)",
+    "ar": "التهاب الغضروف الضلعي",
+    "ckb": "هەوکردنی کڕکڕاگەی پەراسوو"
+   },
+   "anatomy": [
+    "chest.chest-wall"
+   ],
+   "pathway": "gp_soon",
+   "sources": [
+    "nhs-costochondritis"
+   ],
+   "features": [
+    {
+     "match": "sym:chest_pain",
+     "weight": "typical",
+     "source": "nhs-costochondritis",
+     "ev": "sharp pain in the front or side"
+    },
+    {
+     "match": "attr:character=sharp",
+     "weight": "common",
+     "source": "nhs-costochondritis",
+     "ev": "sharp pain in the front"
+    },
+    {
+     "match": "sym:tender_on_press",
+     "weight": "typical",
+     "source": "nhs-costochondritis",
+     "ev": "press the middle of your chest"
+    },
+    {
+     "match": "trig:movement",
+     "weight": "common",
+     "source": "nhs-costochondritis",
+     "ev": "moving your upper body"
+    },
+    {
+     "match": "trig:breathing",
+     "weight": "common",
+     "source": "nhs-costochondritis",
+     "ev": "^breathing deeply$"
+    },
+    {
+     "match": "trig:lying_down",
+     "weight": "possible",
+     "source": "nhs-costochondritis",
+     "ev": "^lying down$"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": {
+    "en": "Chest pain always needs a clinician to rule out heart and lung causes.",
+    "ar": "ألم الصدر يحتاج دائماً إلى طبيب لاستبعاد أسباب القلب والرئة.",
+    "ckb": "ئازاری سنگ هەمیشە پێویستی بە پزیشک هەیە بۆ دوورخستنەوەی هۆکاری دڵ و سی."
+   },
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "acid_reflux",
+   "name": {
+    "en": "Heartburn / acid reflux",
+    "ar": "الحرقة / الارتجاع الحمضي",
+    "ckb": "ترشێتی / گەڕانەوەی ترشی گەدە"
+   },
+   "anatomy": [
+    "chest.oesophagus",
+    "abdomen.upper-central"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-heartburn"
+   ],
+   "features": [
+    {
+     "match": "sym:heartburn",
+     "weight": "typical",
+     "source": "nhs-heartburn",
+     "ev": "heartburn – a burning sensation"
+    },
+    {
+     "match": "attr:character=burning",
+     "weight": "typical",
+     "source": "nhs-heartburn",
+     "ev": "heartburn – a burning sensation"
+    },
+    {
+     "match": "sym:bad_taste_breath",
+     "weight": "common",
+     "source": "nhs-heartburn",
+     "ev": "unpleasant sour taste"
+    },
+    {
+     "match": "sym:cough",
+     "weight": "possible",
+     "source": "nhs-heartburn",
+     "ev": "cough or hiccups"
+    },
+    {
+     "match": "sym:hoarse_voice",
+     "weight": "possible",
+     "source": "nhs-heartburn",
+     "ev": "^a hoarse voice$"
+    },
+    {
+     "match": "sym:bloating",
+     "weight": "possible",
+     "source": "nhs-heartburn",
+     "ev": "bloating and feeling sick"
+    },
+    {
+     "match": "trig:eating",
+     "weight": "common",
+     "source": "nhs-heartburn",
+     "ev": "worse after eating"
+    },
+    {
+     "match": "trig:lying_down",
+     "weight": "common",
+     "source": "nhs-heartburn",
+     "ev": "when lying down"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "chest_infection",
+   "name": {
+    "en": "Chest infection",
+    "ar": "التهاب الصدر",
+    "ckb": "هەوکردنی سنگ"
+   },
+   "anatomy": [
+    "chest.lungs"
+   ],
+   "pathway": "gp_soon",
+   "sources": [
+    "nhs-chest-infection"
+   ],
+   "features": [
+    {
+     "match": "sym:cough",
+     "weight": "typical",
+     "source": "nhs-chest-infection",
+     "ev": "a chesty cough"
+    },
+    {
+     "match": "sym:shortness_of_breath",
+     "weight": "common",
+     "source": "nhs-chest-infection",
+     "ev": "wheezing and shortness of breath"
+    },
+    {
+     "match": "sym:chest_pain",
+     "weight": "common",
+     "source": "nhs-chest-infection",
+     "ev": "chest pain or discomfort"
+    },
+    {
+     "match": "sym:fever",
+     "weight": "common",
+     "source": "nhs-chest-infection",
+     "ev": "^a high temperature$"
+    },
+    {
+     "match": "sym:headache",
+     "weight": "possible",
+     "source": "nhs-chest-infection",
+     "ev": "^a headache$"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "palpitations",
+   "name": {
+    "en": "Heart palpitations (often harmless)",
+    "ar": "خفقان القلب (غالباً غير ضار)",
+    "ckb": "دڵەکوتێ (زۆرجار بێزیان)"
+   },
+   "anatomy": [
+    "chest.heart"
+   ],
+   "pathway": "gp_routine",
+   "sources": [
+    "nhs-palpitations"
+   ],
+   "features": [
+    {
+     "match": "sym:palpitations",
+     "weight": "typical",
+     "source": "nhs-palpitations",
+     "ev": "^racing or beating very fast$"
+    },
+    {
+     "match": "attr:pattern=intermittent",
+     "weight": "common",
+     "source": "nhs-palpitations",
+     "ev": "can last seconds, minutes or longer"
+    },
+    {
+     "match": "trig:stress",
+     "weight": "common",
+     "source": "nhs-palpitations",
+     "ev": "^stress and anxiety$"
+    },
+    {
+     "match": "trig:exertion",
+     "weight": "common",
+     "source": "nhs-palpitations",
+     "ev": "^strenuous exercise$"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:chest_pain",
+     "strength": "strong",
+     "source": "nhs-palpitations",
+     "ev": "^chest pain$",
+     "why": {
+      "en": "Palpitations with chest pain need emergency care.",
+      "ar": "الخفقان مع ألم الصدر يحتاج رعاية طارئة.",
+      "ckb": "دڵەکوتێ لەگەڵ ئازاری سنگ پێویستی بە فریاکەوتن هەیە."
+     }
+    },
+    {
+     "match": "sym:shortness_of_breath",
+     "strength": "strong",
+     "source": "nhs-palpitations",
+     "ev": "^shortness of breath$",
+     "why": {
+      "en": "Palpitations with breathlessness need emergency care.",
+      "ar": "الخفقان مع ضيق التنفس يحتاج رعاية طارئة.",
+      "ckb": "دڵەکوتێ لەگەڵ هەناسەتەنگی پێویستی بە فریاکەوتن هەیە."
+     }
+    },
+    {
+     "match": "sym:faint",
+     "strength": "strong",
+     "source": "nhs-palpitations",
+     "ev": "feeling faint or fainting",
+     "why": {
+      "en": "Palpitations with fainting need emergency care.",
+      "ar": "الخفقان مع الإغماء يحتاج رعاية طارئة.",
+      "ckb": "دڵەکوتێ لەگەڵ بووران پێویستی بە فریاکەوتن هەیە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "indigestion",
+   "name": {
+    "en": "Indigestion",
+    "ar": "عسر الهضم",
+    "ckb": "هەرسنەکردن"
+   },
+   "anatomy": [
+    "abdomen.upper-central",
+    "chest.oesophagus"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-indigestion"
+   ],
+   "features": [
+    {
+     "match": "sym:heartburn",
+     "weight": "typical",
+     "source": "nhs-indigestion",
+     "ev": "heartburn – a painful burning"
+    },
+    {
+     "match": "sym:bloating",
+     "weight": "common",
+     "source": "nhs-indigestion",
+     "ev": "feeling full and bloated"
+    },
+    {
+     "match": "sym:nausea",
+     "weight": "common",
+     "source": "nhs-indigestion",
+     "ev": "^feeling sick$"
+    },
+    {
+     "match": "trig:eating",
+     "weight": "typical",
+     "source": "nhs-indigestion",
+     "ev": "after eating or drinking"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:gi_bleeding",
+     "strength": "strong",
+     "source": "nhs-indigestion",
+     "ev": "bloody vomit or poo",
+     "why": {
+      "en": "Blood in vomit or poo needs urgent assessment.",
+      "ar": "الدم في القيء أو البراز يحتاج تقييماً عاجلاً.",
+      "ckb": "خوێن لە ڕشانەوە یان پیسایی پێویستی بە هەڵسەنگاندنی بەپەلە هەیە."
+     }
+    },
+    {
+     "match": "sym:weight_loss",
+     "strength": "moderate",
+     "source": "nhs-indigestion",
+     "ev": "lost a lot of weight",
+     "why": {
+      "en": "Unexplained weight loss needs a doctor’s assessment.",
+      "ar": "فقدان الوزن غير المبرر يحتاج تقييم طبيب.",
+      "ckb": "دابەزینی کێشی بێهۆ پێویستی بە هەڵسەنگاندنی پزیشک هەیە."
+     }
+    },
+    {
+     "match": "sym:swallowing_difficulty",
+     "strength": "moderate",
+     "source": "nhs-indigestion",
+     "ev": "difficulty swallowing",
+     "why": {
+      "en": "Difficulty swallowing needs a doctor’s assessment.",
+      "ar": "صعوبة البلع تحتاج تقييم طبيب.",
+      "ckb": "قورسی قووتدان پێویستی بە هەڵسەنگاندنی پزیشک هەیە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "constipation",
+   "name": {
+    "en": "Constipation",
+    "ar": "الإمساك",
+    "ckb": "قەبزی"
+   },
+   "anatomy": [
+    "abdomen.lower-central",
+    "abdomen.left-lower",
+    "abdomen.central",
+    "body.abdomen"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-constipation"
+   ],
+   "features": [
+    {
+     "match": "sym:constipation",
+     "weight": "typical",
+     "source": "nhs-constipation",
+     "ev": "not had a poo at least 3 times"
+    },
+    {
+     "match": "sym:bloating",
+     "weight": "common",
+     "source": "nhs-constipation",
+     "ev": "stomach ache and feel bloated"
+    },
+    {
+     "match": "sym:pain",
+     "weight": "possible",
+     "source": "nhs-constipation",
+     "ev": "stomach ache and feel bloated"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:gi_bleeding",
+     "strength": "strong",
+     "source": "nhs-constipation",
+     "ev": "have blood in your poo",
+     "why": {
+      "en": "Blood in poo needs a doctor’s assessment.",
+      "ar": "الدم في البراز يحتاج تقييم طبيب.",
+      "ckb": "خوێن لە پیسایی پێویستی بە هەڵسەنگاندنی پزیشک هەیە."
+     }
+    },
+    {
+     "match": "sym:weight_loss",
+     "strength": "moderate",
+     "source": "nhs-constipation",
+     "ev": "lost weight without trying",
+     "why": {
+      "en": "Unexplained weight loss needs a doctor’s assessment.",
+      "ar": "فقدان الوزن غير المبرر يحتاج تقييم طبيب.",
+      "ckb": "دابەزینی کێشی بێهۆ پێویستی بە هەڵسەنگاندنی پزیشک هەیە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "gastroenteritis",
+   "name": {
+    "en": "Stomach bug (diarrhoea and vomiting)",
+    "ar": "التهاب المعدة والأمعاء (إسهال وتقيؤ)",
+    "ckb": "هەوکردنی گەدە و ڕیخۆڵە (سکچوون و ڕشانەوە)"
+   },
+   "anatomy": [
+    "body.abdomen",
+    "abdomen.central"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-diarrhoea-vomiting"
+   ],
+   "features": [
+    {
+     "match": "sym:diarrhoea",
+     "weight": "typical",
+     "source": "nhs-diarrhoea-vomiting",
+     "ev": "^a stomach bug$"
+    },
+    {
+     "match": "sym:vomiting",
+     "weight": "typical",
+     "source": "nhs-diarrhoea-vomiting",
+     "ev": "^a stomach bug$"
+    },
+    {
+     "match": "sym:nausea",
+     "weight": "common",
+     "source": "nhs-diarrhoea-vomiting",
+     "ev": "^food poisoning$"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:gi_bleeding",
+     "strength": "strong",
+     "source": "nhs-diarrhoea-vomiting",
+     "ev": "bloody diarrhoea",
+     "why": {
+      "en": "Bloody diarrhoea needs urgent advice.",
+      "ar": "الإسهال الدموي يحتاج نصيحة عاجلة.",
+      "ckb": "سکچوونی خوێناوی پێویستی بە ئامۆژگاری بەپەلە هەیە."
+     }
+    },
+    {
+     "match": "attr:duration>=168",
+     "strength": "moderate",
+     "source": "nhs-diarrhoea-vomiting",
+     "ev": "diarrhoea for more than 7 days",
+     "why": {
+      "en": "Diarrhoea lasting more than 7 days needs medical advice.",
+      "ar": "الإسهال لأكثر من 7 أيام يحتاج نصيحة طبية.",
+      "ckb": "سکچوونی زیاتر لە ٧ ڕۆژ پێویستی بە ئامۆژگاری پزیشکی هەیە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "appendicitis",
+   "name": {
+    "en": "Appendicitis (needs urgent assessment)",
+    "ar": "التهاب الزائدة الدودية (يحتاج تقييماً عاجلاً)",
+    "ckb": "هەوکردنی ڕیخۆڵەکوێرە (پێویستی بە هەڵسەنگاندنی بەپەلە هەیە)"
+   },
+   "anatomy": [
+    "abdomen.right-lower",
+    "abdomen.central"
+   ],
+   "pathway": "urgent_same_day",
+   "sources": [
+    "nhs-appendicitis"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-appendicitis",
+     "ev": "start with pain in the middle"
+    },
+    {
+     "match": "sym:pain_moves_right_lower",
+     "weight": "typical",
+     "source": "nhs-appendicitis",
+     "ev": "moves to the lower right side"
+    },
+    {
+     "match": "trig:movement",
+     "weight": "common",
+     "source": "nhs-appendicitis",
+     "ev": "worse when you move, cough"
+    },
+    {
+     "match": "sym:nausea",
+     "weight": "common",
+     "source": "nhs-appendicitis",
+     "ev": "feeling or being sick, or loss of appetite"
+    },
+    {
+     "match": "sym:fever",
+     "weight": "common",
+     "source": "nhs-appendicitis",
+     "ev": "^a high temperature$"
+    },
+    {
+     "match": "attr:course=worsening",
+     "weight": "common",
+     "source": "nhs-appendicitis",
+     "ev": "gradually getting worse"
+    }
+   ],
+   "against": [],
+   "urgent_condition": true,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "gallstones",
+   "name": {
+    "en": "Gallstone pain (biliary colic)",
+    "ar": "ألم حصى المرارة",
+    "ckb": "ئازاری بەردی زراو"
+   },
+   "anatomy": [
+    "abdomen.right-upper",
+    "abdomen.upper-central"
+   ],
+   "pathway": "gp_soon",
+   "sources": [
+    "nhs-gallstones"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-gallstones",
+     "ev": "just under your ribs on the right"
+    },
+    {
+     "match": "attr:severity>=7",
+     "weight": "common",
+     "source": "nhs-gallstones",
+     "ev": "^feel severe$"
+    },
+    {
+     "match": "attr:pattern=constant",
+     "weight": "common",
+     "source": "nhs-gallstones",
+     "ev": "^be constant$"
+    },
+    {
+     "match": "attr:duration>=0.5",
+     "weight": "common",
+     "source": "nhs-gallstones",
+     "ev": "longer than 30 minutes, and up to several hours"
+    },
+    {
+     "match": "sym:nausea",
+     "weight": "common",
+     "source": "nhs-gallstones",
+     "ev": "make you feel sick or vomit"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "ibs",
+   "name": {
+    "en": "Irritable bowel syndrome (IBS)",
+    "ar": "متلازمة القولون العصبي",
+    "ckb": "سیندرۆمی ڕیخۆڵەی هەستیار"
+   },
+   "anatomy": [
+    "body.abdomen",
+    "abdomen.central",
+    "abdomen.left-lower"
+   ],
+   "pathway": "gp_routine",
+   "sources": [
+    "nhs-ibs"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-ibs",
+     "ev": "stomach pain or cramps"
+    },
+    {
+     "match": "sym:bloating",
+     "weight": "typical",
+     "source": "nhs-ibs",
+     "ev": "^bloating –"
+    },
+    {
+     "match": "sym:diarrhoea",
+     "weight": "common",
+     "source": "nhs-ibs",
+     "ev": "^diarrhoea –"
+    },
+    {
+     "match": "sym:constipation",
+     "weight": "common",
+     "source": "nhs-ibs",
+     "ev": "^constipation –"
+    },
+    {
+     "match": "attr:pattern=intermittent",
+     "weight": "common",
+     "source": "nhs-ibs",
+     "ev": "days when your symptoms are better"
+    },
+    {
+     "match": "trig:eating",
+     "weight": "common",
+     "source": "nhs-ibs",
+     "ev": "usually worse after eating"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:gi_bleeding",
+     "strength": "strong",
+     "source": "nhs-ibs",
+     "ev": "bloody diarrhoea",
+     "why": {
+      "en": "Bleeding is not explained by IBS and needs urgent review.",
+      "ar": "النزيف لا يفسّره القولون العصبي ويحتاج مراجعة عاجلة.",
+      "ckb": "خوێنبەربوون بە IBS ڕوون ناکرێتەوە و پێویستی بە پشکنینی بەپەلە هەیە."
+     }
+    },
+    {
+     "match": "sym:weight_loss",
+     "strength": "strong",
+     "source": "nhs-ibs",
+     "ev": "lost a lot of weight for no reason",
+     "why": {
+      "en": "Unexplained weight loss needs urgent review.",
+      "ar": "فقدان الوزن غير المبرر يحتاج مراجعة عاجلة.",
+      "ckb": "دابەزینی کێشی بێهۆ پێویستی بە پشکنینی بەپەلە هەیە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "uti",
+   "name": {
+    "en": "Urinary tract infection (UTI)",
+    "ar": "التهاب المسالك البولية",
+    "ckb": "هەوکردنی ڕێڕەوی میز"
+   },
+   "anatomy": [
+    "abdomen.lower-central"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-uti"
+   ],
+   "features": [
+    {
+     "match": "sym:urinary_burning",
+     "weight": "typical",
+     "source": "nhs-uti",
+     "ev": "burning sensation when peeing"
+    },
+    {
+     "match": "sym:urinary_frequency",
+     "weight": "common",
+     "source": "nhs-uti",
+     "ev": "^needing to pee more often than usual$"
+    },
+    {
+     "match": "sym:pain",
+     "weight": "common",
+     "source": "nhs-uti",
+     "ev": "lower tummy pain"
+    },
+    {
+     "match": "sym:blood_in_urine",
+     "weight": "possible",
+     "source": "nhs-uti",
+     "ev": "^blood in your pee$"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:fever",
+     "strength": "moderate",
+     "source": "nhs-uti",
+     "ev": "very high or low temperature",
+     "why": {
+      "en": "A high temperature with urinary symptoms needs an urgent doctor’s review.",
+      "ar": "الحرارة المرتفعة مع أعراض بولية تحتاج مراجعة طبية عاجلة.",
+      "ckb": "پلەی گەرمی بەرز لەگەڵ نیشانەی میز پێویستی بە پشکنینی بەپەلەی پزیشک هەیە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "kidney_stones",
+   "name": {
+    "en": "Kidney stones",
+    "ar": "حصى الكلى",
+    "ckb": "بەردی گورچیلە"
+   },
+   "anatomy": [
+    "abdomen.flank",
+    "back.lower"
+   ],
+   "pathway": "gp_soon",
+   "sources": [
+    "nhs-kidney-stones"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-kidney-stones",
+     "ev": "starts in the side of your tummy"
+    },
+    {
+     "match": "attr:severity>=7",
+     "weight": "common",
+     "source": "nhs-kidney-stones",
+     "ev": "can cause severe pain"
+    },
+    {
+     "match": "attr:pattern=intermittent",
+     "weight": "common",
+     "source": "nhs-kidney-stones",
+     "ev": "may come and go"
+    },
+    {
+     "match": "sym:nausea",
+     "weight": "possible",
+     "source": "nhs-kidney-stones",
+     "ev": "feeling sick \\(nausea\\)"
+    },
+    {
+     "match": "sym:urinary_frequency",
+     "weight": "possible",
+     "source": "nhs-kidney-stones",
+     "ev": "^needing to pee often$"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "back_pain",
+   "name": {
+    "en": "Back pain (often a strain)",
+    "ar": "ألم الظهر (غالباً شدّ عضلي)",
+    "ckb": "پشت ئێشە (زۆرجار ماسولکە)"
+   },
+   "anatomy": [
+    "back.lower",
+    "back.upper"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-back-pain"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-back-pain",
+     "ev": "injury like a pulled muscle"
+    },
+    {
+     "match": "sym:injury",
+     "weight": "common",
+     "source": "nhs-back-pain",
+     "ev": "injury like a pulled muscle"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:weight_loss",
+     "strength": "strong",
+     "source": "nhs-back-pain",
+     "ev": "you've lost weight without trying",
+     "why": {
+      "en": "Weight loss with back pain needs a doctor’s review.",
+      "ar": "فقدان الوزن مع ألم الظهر يحتاج مراجعة طبيب.",
+      "ckb": "دابەزینی کێش لەگەڵ پشت ئێشە پێویستی بە پشکنینی پزیشک هەیە."
+     }
+    },
+    {
+     "match": "sym:fever",
+     "strength": "moderate",
+     "source": "nhs-back-pain",
+     "ev": "hot, cold, shivery or generally unwell",
+     "why": {
+      "en": "Feeling feverish with back pain needs urgent advice.",
+      "ar": "الحمى مع ألم الظهر تحتاج نصيحة عاجلة.",
+      "ckb": "تا لەگەڵ پشت ئێشە پێویستی بە ئامۆژگاری بەپەلە هەیە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "sciatica",
+   "name": {
+    "en": "Sciatica",
+    "ar": "عرق النسا",
+    "ckb": "دەماری ساتیک (عێرق النسا)"
+   },
+   "anatomy": [
+    "back.lower",
+    "leg.thigh",
+    "leg.calf"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-sciatica"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-sciatica",
+     "ev": "sharp, burning pain down the back of the leg"
+    },
+    {
+     "match": "sym:numbness_tingling",
+     "weight": "common",
+     "source": "nhs-sciatica",
+     "ev": "tingling – like pins and needles"
+    },
+    {
+     "match": "sym:weakness",
+     "weight": "possible",
+     "source": "nhs-sciatica",
+     "ev": "^weakness$"
+    },
+    {
+     "match": "attr:character=sharp",
+     "weight": "common",
+     "source": "nhs-sciatica",
+     "ev": "sharp, burning pain"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "sprain",
+   "name": {
+    "en": "Sprain or strain",
+    "ar": "التواء أو شدّ عضلي",
+    "ckb": "بادان یان کشانی ماسولکە"
+   },
+   "anatomy": [
+    "arm.wrist",
+    "arm.hand",
+    "leg.ankle",
+    "leg.knee",
+    "arm.elbow",
+    "arm.shoulder",
+    "leg.foot"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-sprains"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-sprains",
+     "ev": "pain, tenderness or weakness"
+    },
+    {
+     "match": "sym:swelling",
+     "weight": "common",
+     "source": "nhs-sprains",
+     "ev": "swollen or bruised"
+    },
+    {
+     "match": "sym:injury",
+     "weight": "typical",
+     "source": "nhs-sprains",
+     "ev": "Torn or twisted ligament"
+    },
+    {
+     "match": "sym:cannot_bear_weight",
+     "weight": "possible",
+     "source": "nhs-sprains",
+     "ev": "cannot put weight on the injury"
+    },
+    {
+     "match": "sym:cramp",
+     "weight": "possible",
+     "source": "nhs-sprains",
+     "ev": "muscle spasms or cramping"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:deformity",
+     "strength": "strong",
+     "source": "nhs-sprains",
+     "ev": "changed shape or is pointing",
+     "why": {
+      "en": "A changed shape can mean a broken bone that needs an X-ray.",
+      "ar": "تغيّر الشكل قد يعني كسراً يحتاج أشعة.",
+      "ckb": "گۆڕانی شێوە لەوانەیە مانای شکانی ئێسک بێت کە پێویستی بە تیشک هەیە."
+     }
+    },
+    {
+     "match": "sym:crack_sound",
+     "strength": "strong",
+     "source": "nhs-sprains",
+     "ev": "heard a crack",
+     "why": {
+      "en": "Hearing a crack can mean a broken bone.",
+      "ar": "سماع طقة قد يعني كسراً في العظم.",
+      "ckb": "بیستنی دەنگی شکان لەوانەیە مانای شکانی ئێسک بێت."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "carpal_tunnel",
+   "name": {
+    "en": "Carpal tunnel syndrome",
+    "ar": "متلازمة النفق الرسغي",
+    "ckb": "سیندرۆمی تونێلی مەچەک"
+   },
+   "anatomy": [
+    "arm.wrist",
+    "arm.hand"
+   ],
+   "pathway": "gp_routine",
+   "sources": [
+    "nhs-carpal-tunnel"
+   ],
+   "features": [
+    {
+     "match": "sym:numbness_tingling",
+     "weight": "typical",
+     "source": "nhs-carpal-tunnel",
+     "ev": "tingling or pins and needles"
+    },
+    {
+     "match": "sym:pain",
+     "weight": "common",
+     "source": "nhs-carpal-tunnel",
+     "ev": "ache or pain in your fingers, hand or arm"
+    },
+    {
+     "match": "sym:weakness",
+     "weight": "common",
+     "source": "nhs-carpal-tunnel",
+     "ev": "weak thumb or difficulty gripping"
+    },
+    {
+     "match": "attr:pattern=intermittent",
+     "weight": "common",
+     "source": "nhs-carpal-tunnel",
+     "ev": "start slowly and come and go"
+    },
+    {
+     "match": "attr:onset=gradual",
+     "weight": "common",
+     "source": "nhs-carpal-tunnel",
+     "ev": "start slowly and come and go"
+    },
+    {
+     "match": "trig:night",
+     "weight": "common",
+     "source": "nhs-carpal-tunnel",
+     "ev": "usually worse at night"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "tennis_elbow",
+   "name": {
+    "en": "Tennis elbow",
+    "ar": "مرفق التنس",
+    "ckb": "ئانیشکی تێنس"
+   },
+   "anatomy": [
+    "arm.elbow",
+    "arm.forearm"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-tennis-elbow"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-tennis-elbow",
+     "ev": "pain on the outside of"
+    },
+    {
+     "match": "trig:movement",
+     "weight": "common",
+     "source": "nhs-tennis-elbow",
+     "ev": "^gripping objects$"
+    },
+    {
+     "match": "sym:swelling",
+     "weight": "possible",
+     "source": "nhs-tennis-elbow",
+     "ev": "tenderness or swelling"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "frozen_shoulder",
+   "name": {
+    "en": "Frozen shoulder",
+    "ar": "الكتف المتجمد",
+    "ckb": "شانی بەستوو"
+   },
+   "anatomy": [
+    "arm.shoulder"
+   ],
+   "pathway": "gp_routine",
+   "sources": [
+    "nhs-frozen-shoulder"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-frozen-shoulder",
+     "ev": "pain in your shoulder which can be worse at night"
+    },
+    {
+     "match": "sym:stiffness",
+     "weight": "typical",
+     "source": "nhs-frozen-shoulder",
+     "ev": "stiffness in your shoulder"
+    },
+    {
+     "match": "trig:night",
+     "weight": "common",
+     "source": "nhs-frozen-shoulder",
+     "ev": "worse at night"
+    },
+    {
+     "match": "attr:onset=gradual",
+     "weight": "possible",
+     "source": "nhs-frozen-shoulder",
+     "ev": "months or years to get better"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "leg_cramps",
+   "name": {
+    "en": "Leg cramps",
+    "ar": "تشنجات الساق",
+    "ckb": "گرژبوونی لاق"
+   },
+   "anatomy": [
+    "leg.calf",
+    "leg.foot",
+    "leg.thigh"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-leg-cramps"
+   ],
+   "features": [
+    {
+     "match": "sym:cramp",
+     "weight": "typical",
+     "source": "nhs-leg-cramps",
+     "ev": "muscle in the leg tightens"
+    },
+    {
+     "match": "sym:pain",
+     "weight": "common",
+     "source": "nhs-leg-cramps",
+     "ev": "muscle in the leg tightens"
+    },
+    {
+     "match": "attr:duration<=0.17",
+     "weight": "common",
+     "source": "nhs-leg-cramps",
+     "ev": "few seconds to 10 minutes"
+    },
+    {
+     "match": "trig:night",
+     "weight": "possible",
+     "source": "nhs-leg-cramps",
+     "ev": "disturbing your sleep"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:swelling",
+     "strength": "moderate",
+     "source": "nhs-leg-cramps",
+     "ev": "numbness or swelling in your legs",
+     "why": {
+      "en": "Swelling is not typical of simple cramps and needs a doctor’s review.",
+      "ar": "التورم غير معتاد في التشنج البسيط ويحتاج مراجعة طبيب.",
+      "ckb": "ئاوسان لە گرژبوونی سادەدا ئاسایی نیە و پێویستی بە پشکنینی پزیشک هەیە."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "knee_injury",
+   "name": {
+    "en": "Knee strain or ligament injury",
+    "ar": "إصابة أربطة أو شدّ في الركبة",
+    "ckb": "برینی بەستەر یان کشانی ئەژنۆ"
+   },
+   "anatomy": [
+    "leg.knee"
+   ],
+   "pathway": "gp_routine",
+   "sources": [
+    "nhs-knee-pain"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-knee-pain",
+     "ev": "Pain after overstretching, overusing or twisting"
+    },
+    {
+     "match": "sym:injury",
+     "weight": "common",
+     "source": "nhs-knee-pain",
+     "ev": "Pain after overstretching, overusing or twisting"
+    },
+    {
+     "match": "sym:joint_locking",
+     "weight": "common",
+     "source": "nhs-knee-pain",
+     "ev": "Unstable, gives way"
+    },
+    {
+     "match": "sym:swelling",
+     "weight": "possible",
+     "source": "nhs-knee-pain",
+     "ev": "badly swollen"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "plantar_fasciitis",
+   "name": {
+    "en": "Plantar fasciitis (heel pain)",
+    "ar": "التهاب اللفافة الأخمصية (ألم الكعب)",
+    "ckb": "هەوکردنی پەردەی بنی پێ (ئازاری پاژنە)"
+   },
+   "anatomy": [
+    "leg.foot"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-plantar-fasciitis"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-plantar-fasciitis",
+     "ev": "pain on the bottom of your foot"
+    },
+    {
+     "match": "trig:morning",
+     "weight": "typical",
+     "source": "nhs-plantar-fasciitis",
+     "ev": "first start walking after"
+    },
+    {
+     "match": "attr:course=improving",
+     "weight": "possible",
+     "source": "nhs-plantar-fasciitis",
+     "ev": "gradually gets better when you start moving"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "dvt",
+   "name": {
+    "en": "Deep vein thrombosis (DVT) — needs urgent assessment",
+    "ar": "تجلط الأوردة العميقة — يحتاج تقييماً عاجلاً",
+    "ckb": "خوێنمەیینی دەماری قووڵ — پێویستی بە هەڵسەنگاندنی بەپەلە هەیە"
+   },
+   "anatomy": [
+    "leg.calf",
+    "leg.thigh"
+   ],
+   "pathway": "urgent_same_day",
+   "sources": [
+    "nhs-dvt"
+   ],
+   "features": [
+    {
+     "match": "sym:pain",
+     "weight": "typical",
+     "source": "nhs-dvt",
+     "ev": "throbbing pain in 1 leg"
+    },
+    {
+     "match": "sym:swelling",
+     "weight": "typical",
+     "source": "nhs-dvt",
+     "ev": "^swelling in 1 leg"
+    },
+    {
+     "match": "sym:redness",
+     "weight": "common",
+     "source": "nhs-dvt",
+     "ev": "red, blue or darkened skin"
+    },
+    {
+     "match": "attr:side=one",
+     "weight": "typical",
+     "source": "nhs-dvt",
+     "ev": "rarely both legs"
+    }
+   ],
+   "against": [],
+   "urgent_condition": true,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "hives",
+   "name": {
+    "en": "Hives (urticaria)",
+    "ar": "الشرى (الأرتيكاريا)",
+    "ckb": "خورشتی پێست (هایڤز)"
+   },
+   "anatomy": [
+    "skin.general",
+    "body.skin"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-hives"
+   ],
+   "features": [
+    {
+     "match": "sym:rash",
+     "weight": "typical",
+     "source": "nhs-hives",
+     "ev": "main symptom of hives is an itchy rash"
+    },
+    {
+     "match": "sym:itch",
+     "weight": "typical",
+     "source": "nhs-hives",
+     "ev": "main symptom of hives is an itchy rash"
+    }
+   ],
+   "against": [
+    {
+     "match": "sym:face_lip_tongue_swelling",
+     "strength": "strong",
+     "source": "nhs-hives",
+     "ev": "lips, mouth, throat or tongue suddenly become swollen",
+     "why": {
+      "en": "Swelling of the lips, tongue or throat can be anaphylaxis — an emergency.",
+      "ar": "تورم الشفاه أو اللسان أو الحلق قد يكون صدمة تحسسية — حالة طارئة.",
+      "ckb": "ئاوسانی لێو، زمان یان گەروو لەوانەیە شۆکی هەستیاری بێت — فریاکەوتن."
+     }
+    }
+   ],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "contact_dermatitis",
+   "name": {
+    "en": "Contact dermatitis",
+    "ar": "التهاب الجلد التماسي",
+    "ckb": "هەوکردنی پێستی بەرکەوتن"
+   },
+   "anatomy": [
+    "skin.general",
+    "arm.hand",
+    "body.skin"
+   ],
+   "pathway": "pharmacist",
+   "sources": [
+    "nhs-contact-dermatitis"
+   ],
+   "features": [
+    {
+     "match": "sym:rash",
+     "weight": "typical",
+     "source": "nhs-contact-dermatitis",
+     "ev": "skin to become itchy, bliste"
+    },
+    {
+     "match": "sym:itch",
+     "weight": "typical",
+     "source": "nhs-contact-dermatitis",
+     "ev": "skin to become itchy, bliste"
+    },
+    {
+     "match": "sym:redness",
+     "weight": "common",
+     "source": "nhs-contact-dermatitis",
+     "ev": "Lighter skin can become red"
+    }
+   ],
+   "against": [],
+   "urgent_condition": false,
+   "scope_note": null,
+   "requires_anatomy": false,
+   "review_status": "draft — clinician review pending"
+  }
+ ],
+ "red_flags": [
+  {
+   "id": "chest-pain-spreading",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:chest_pain",
+    "sym:radiating_pain"
+   ],
+   "scope": [],
+   "source": "nhs-chest-pain",
+   "ev": "pain that spreads to your left or right arm",
+   "reason": {
+    "en": "Chest pain spreading to the arm, jaw, neck or back can be a heart attack.",
+    "ar": "ألم الصدر الذي ينتشر إلى الذراع أو الفك أو الرقبة أو الظهر قد يكون نوبة قلبية.",
+    "ckb": "ئازاری سنگ کە بڵاو دەبێتەوە بۆ باڵ، شەویلگە، مل یان پشت لەوانەیە جەڵتەی دڵ بێت."
+   },
+   "screen_label": {
+    "en": "Chest pain spreading to the arm, jaw, neck or back",
+    "ar": "ألم صدر ينتشر إلى الذراع أو الفك أو الرقبة",
+    "ckb": "ئازاری سنگ بڵاو دەبێتەوە بۆ باڵ یان شەویلگە یان مل"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "chest-pain-with-symptoms",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:chest_pain",
+    "sym:sweating|sym:nausea|sym:vomiting|sym:shortness_of_breath|sym:dizziness"
+   ],
+   "scope": [],
+   "source": "nhs-chest-pain",
+   "ev": "feel sweaty, sick, light",
+   "reason": {
+    "en": "Chest pain with sweating, sickness, light-headedness or breathlessness needs emergency care.",
+    "ar": "ألم الصدر مع التعرق أو الغثيان أو الدوخة أو ضيق التنفس يحتاج رعاية طارئة.",
+    "ckb": "ئازاری سنگ لەگەڵ ئارەقکردنەوە، هێڵنج، سەرسووڕان یان هەناسەتەنگی پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": {
+    "en": "Chest pain with sweating, feeling sick or breathless",
+    "ar": "ألم صدر مع تعرق أو غثيان أو ضيق تنفس",
+    "ckb": "ئازاری سنگ لەگەڵ ئارەق، هێڵنج یان هەناسەتەنگی"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "chest-pain-sudden",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:chest_pain",
+    "attr:onset=sudden"
+   ],
+   "scope": [],
+   "source": "nhs-chest-pain",
+   "ev": "sudden pain or discomfort in your chest",
+   "reason": {
+    "en": "Sudden chest pain needs emergency assessment.",
+    "ar": "ألم الصدر المفاجئ يحتاج تقييماً طارئاً.",
+    "ckb": "ئازاری لەناکاوی سنگ پێویستی بە هەڵسەنگاندنی فریاکەوتن هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "chest-pressure",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:chest_pain",
+    "attr:character=pressure"
+   ],
+   "scope": [],
+   "source": "nhs-heart-attack",
+   "ev": "chest pain that feels tight or like squeezing",
+   "reason": {
+    "en": "Tight, heavy or squeezing chest pain can be a heart attack.",
+    "ar": "ألم الصدر الضاغط أو الثقيل قد يكون نوبة قلبية.",
+    "ckb": "ئازاری گوشاری یان قورسی سنگ لەوانەیە جەڵتەی دڵ بێت."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "severe-breathing",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:breathing_severe"
+   ],
+   "scope": [],
+   "source": "nhs-shortness-of-breath",
+   "ev": "severe difficulty breathing",
+   "reason": {
+    "en": "Severe difficulty breathing is an emergency.",
+    "ar": "صعوبة التنفس الشديدة حالة طارئة.",
+    "ckb": "هەناسەدانی زۆر قورس فریاکەوتنە."
+   },
+   "screen_label": {
+    "en": "Severe difficulty breathing",
+    "ar": "صعوبة شديدة في التنفس",
+    "ckb": "هەناسەدانی زۆر قورس"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "sudden-breathlessness",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:shortness_of_breath",
+    "attr:onset=sudden"
+   ],
+   "scope": [],
+   "source": "nhs-pulmonary-embolism",
+   "ev": "difficulty breathing which comes on suddenly",
+   "reason": {
+    "en": "Breathlessness that comes on suddenly can be a blood clot in the lungs.",
+    "ar": "ضيق التنفس المفاجئ قد يكون جلطة في الرئة.",
+    "ckb": "هەناسەتەنگی لەناکاو لەوانەیە خوێنمەیین لە سی بێت."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "blue-lips",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:pale_blue_skin"
+   ],
+   "scope": [],
+   "source": "nhs-shortness-of-breath",
+   "ev": "lips or skin are turning very pale",
+   "reason": {
+    "en": "Blue, grey or very pale lips or skin is an emergency sign.",
+    "ar": "زرقة أو شحوب شديد في الشفاه أو الجلد علامة طارئة.",
+    "ckb": "لێو یان پێستی شین یان زۆر زەرد نیشانەی فریاکەوتنە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "stroke-face-speech",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:face_droop|sym:speech_problem"
+   ],
+   "scope": [],
+   "source": "nhs-stroke-symptoms",
+   "ev": "face weakness",
+   "reason": {
+    "en": "Face drooping or speech problems can be a stroke. Call emergency services now (FAST).",
+    "ar": "تدلّي الوجه أو مشاكل الكلام قد تكون جلطة دماغية. اتصل بالطوارئ الآن.",
+    "ckb": "لاربوونی دەموچاو یان کێشەی قسەکردن لەوانەیە جەڵتەی مێشک بێت. ئێستا پەیوەندی بە فریاکەوتنەوە بکە."
+   },
+   "screen_label": {
+    "en": "Face drooping, slurred speech or new arm weakness",
+    "ar": "تدلّي الوجه أو تلعثم أو ضعف جديد في الذراع",
+    "ckb": "لاربوونی دەموچاو، تێکچوونی قسە یان لاوازی نوێی باڵ"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "stroke-sudden-weakness",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:weakness|sym:numbness_tingling",
+    "attr:onset=sudden"
+   ],
+   "scope": [],
+   "source": "nhs-stroke-symptoms",
+   "ev": "weakness or numbness down 1 side",
+   "reason": {
+    "en": "Sudden weakness or numbness can be a stroke.",
+    "ar": "الضعف أو الخدر المفاجئ قد يكون جلطة دماغية.",
+    "ckb": "لاوازی یان سڕبوونی لەناکاو لەوانەیە جەڵتەی مێشک بێت."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "thunderclap-headache",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:headache",
+    "attr:onset=sudden",
+    "attr:severity>=8"
+   ],
+   "scope": [],
+   "source": "nhs-headaches",
+   "ev": "started suddenly and is extremely painful",
+   "reason": {
+    "en": "A sudden, extremely painful headache needs emergency care.",
+    "ar": "الصداع المفاجئ الشديد جداً يحتاج رعاية طارئة.",
+    "ckb": "سەرئێشەی لەناکاوی زۆر توند پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": {
+    "en": "Sudden, extremely severe headache",
+    "ar": "صداع مفاجئ وشديد جداً",
+    "ckb": "سەرئێشەی لەناکاو و زۆر توند"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "worst-headache",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:headache",
+    "attr:severity>=10"
+   ],
+   "scope": [],
+   "source": "nhs-headaches",
+   "ev": "started suddenly and is extremely painful",
+   "reason": {
+    "en": "A worst-ever headache needs emergency care.",
+    "ar": "أسوأ صداع في حياتك يحتاج رعاية طارئة.",
+    "ckb": "خراپترین سەرئێشەی ژیانت پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "headache-neuro",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:headache",
+    "sym:weakness|sym:numbness_tingling|sym:confusion|sym:seizure|sym:vision_loss|sym:speech_problem"
+   ],
+   "scope": [],
+   "source": "nhs-headaches",
+   "ev": "numbness or weakness in the body or face",
+   "reason": {
+    "en": "A headache with weakness, numbness, confusion, seizure, speech or vision loss needs emergency care.",
+    "ar": "الصداع مع ضعف أو خدر أو تشوش أو نوبة أو فقدان كلام أو بصر يحتاج رعاية طارئة.",
+    "ckb": "سەرئێشە لەگەڵ لاوازی، سڕبوون، سەرلێشێواوی، فێ یان لەدەستدانی قسە یان بینین پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "headache-head-injury",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:headache",
+    "sym:injury"
+   ],
+   "scope": [],
+   "source": "nhs-headaches",
+   "ev": "head injury within the last 3 months",
+   "reason": {
+    "en": "A headache after a head injury needs emergency assessment.",
+    "ar": "الصداع بعد إصابة في الرأس يحتاج تقييماً طارئاً.",
+    "ckb": "سەرئێشە دوای برینی سەر پێویستی بە هەڵسەنگاندنی فریاکەوتن هەیە."
+   },
+   "screen_label": {
+    "en": "A recent head injury",
+    "ar": "إصابة حديثة في الرأس",
+    "ckb": "برینێکی نوێی سەر"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "meningitis-signs",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:stiff_neck",
+    "sym:headache|sym:fever|sym:light_sensitivity"
+   ],
+   "scope": [],
+   "source": "nhs-meningitis",
+   "ev": "stiff neck and cannot look at bright lights",
+   "reason": {
+    "en": "A stiff neck with headache, fever or light sensitivity can be meningitis.",
+    "ar": "تيبّس الرقبة مع صداع أو حمى أو حساسية للضوء قد يكون التهاب السحايا.",
+    "ckb": "ڕەقبوونی مل لەگەڵ سەرئێشە، تا یان هەستیاری بە ڕووناکی لەوانەیە مەنەنجایتس بێت."
+   },
+   "screen_label": {
+    "en": "Stiff neck with fever or a rash that does not fade",
+    "ar": "تيبّس الرقبة مع حمى أو طفح لا يختفي",
+    "ckb": "ڕەقبوونی مل لەگەڵ تا یان پەڵەیەک کە ون نابێت"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "non-blanching-rash",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:non_blanching_rash"
+   ],
+   "scope": [],
+   "source": "nhs-meningitis",
+   "ev": "rash that does not fade when you press",
+   "reason": {
+    "en": "A rash that does not fade when pressed can be a sign of serious infection.",
+    "ar": "الطفح الذي لا يختفي عند الضغط قد يكون علامة عدوى خطيرة.",
+    "ckb": "پەڵەیەک کە بە گوشار ون نابێت لەوانەیە نیشانەی هەوکردنێکی مەترسیدار بێت."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "seizure",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:seizure"
+   ],
+   "scope": [],
+   "source": "nhs-meningitis",
+   "ev": "seizure \\(fit\\) for the first time",
+   "reason": {
+    "en": "A first seizure needs emergency care.",
+    "ar": "النوبة التشنجية الأولى تحتاج رعاية طارئة.",
+    "ckb": "یەکەم فێ پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "confusion",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:confusion"
+   ],
+   "scope": [],
+   "source": "nhs-uti",
+   "ev": "confused, drowsy",
+   "reason": {
+    "en": "New confusion or drowsiness needs emergency care.",
+    "ar": "التشوش أو النعاس الجديد يحتاج رعاية طارئة.",
+    "ckb": "سەرلێشێواوی یان خەواڵوویی نوێ پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "sepsis-signs",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:fever",
+    "sym:confusion|sym:breathing_severe|sym:pale_blue_skin|sym:non_blanching_rash"
+   ],
+   "scope": [],
+   "source": "nhs-sepsis",
+   "ev": "confusion or slurred speech",
+   "reason": {
+    "en": "Fever with confusion, breathing difficulty, discoloured skin or a non-fading rash can be sepsis.",
+    "ar": "الحمى مع تشوش أو صعوبة تنفس أو تغير لون الجلد أو طفح لا يختفي قد تكون إنتاناً.",
+    "ckb": "تا لەگەڵ سەرلێشێواوی، هەناسەتەنگی، گۆڕانی ڕەنگی پێست یان پەڵەی ون نەبوو لەوانەیە سێپسیس بێت."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "vision-loss",
+   "urgency": "emergency",
+   "pathway": "eye_emergency",
+   "when": [
+    "sym:vision_loss"
+   ],
+   "scope": [],
+   "source": "nhs-vision-loss",
+   "ev": "suddenly cannot see from 1 or both eyes",
+   "reason": {
+    "en": "Loss of vision needs emergency eye care.",
+    "ar": "فقدان البصر يحتاج رعاية طارئة للعين.",
+    "ckb": "لەدەستدانی بینین پێویستی بە فریاکەوتنی چاو هەیە."
+   },
+   "screen_label": {
+    "en": "Sudden loss of vision",
+    "ar": "فقدان مفاجئ للبصر",
+    "ckb": "لەدەستدانی لەناکاوی بینین"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "sudden-severe-eye-pain",
+   "urgency": "emergency",
+   "pathway": "eye_emergency",
+   "when": [
+    "sym:pain@body.eyes",
+    "attr:severity>=7"
+   ],
+   "scope": [],
+   "source": "nhs-vision-loss",
+   "ev": "suddenly have severe eye pain",
+   "reason": {
+    "en": "Severe eye pain needs emergency eye care.",
+    "ar": "ألم العين الشديد يحتاج رعاية طارئة للعين.",
+    "ckb": "ئازاری توندی چاو پێویستی بە فریاکەوتنی چاو هەیە."
+   },
+   "screen_label": {
+    "en": "Severe eye pain",
+    "ar": "ألم شديد في العين",
+    "ckb": "ئازاری توندی چاو"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "red-eye-danger",
+   "urgency": "emergency",
+   "pathway": "eye_emergency",
+   "when": [
+    "sym:redness@body.eyes",
+    "sym:light_sensitivity|sym:blurred_vision|sym:halos|sym:uneven_pupils"
+   ],
+   "scope": [],
+   "source": "nhs-red-eye",
+   "ev": "hurts to look at light",
+   "reason": {
+    "en": "A red eye with vision changes, light sensitivity, haloes or unequal pupils needs emergency care.",
+    "ar": "احمرار العين مع تغير الرؤية أو الحساسية للضوء أو الهالات أو اختلاف البؤبؤ يحتاج رعاية طارئة.",
+    "ckb": "سووربوونەوەی چاو لەگەڵ گۆڕانی بینین، هەستیاری بە ڕووناکی، بازنەی ڕەنگاوڕەنگ یان جیاوازی بیلبیلە پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "red-eye-headache-sick",
+   "urgency": "emergency",
+   "pathway": "eye_emergency",
+   "when": [
+    "sym:redness@body.eyes",
+    "sym:headache",
+    "sym:nausea|sym:vomiting"
+   ],
+   "scope": [],
+   "source": "nhs-red-eye",
+   "ev": "severe headache and feel sick",
+   "reason": {
+    "en": "A red eye with a severe headache and sickness can be sudden glaucoma.",
+    "ar": "احمرار العين مع صداع شديد وغثيان قد يكون زرقاً حاداً.",
+    "ckb": "سووربوونەوەی چاو لەگەڵ سەرئێشەی توند و هێڵنج لەوانەیە گلۆکۆمای لەناکاو بێت."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "eye-injury",
+   "urgency": "emergency",
+   "pathway": "eye_emergency",
+   "when": [
+    "sym:injury@body.eyes|sym:chemical_exposure@body.eyes"
+   ],
+   "scope": [],
+   "source": "nhs-red-eye",
+   "ev": "injured your eye, or something is stuck",
+   "reason": {
+    "en": "An eye injury or chemical in the eye needs emergency care. Rinse chemicals with clean water while getting help.",
+    "ar": "إصابة العين أو دخول مادة كيميائية فيها يحتاج رعاية طارئة. اغسل المادة بماء نظيف أثناء طلب المساعدة.",
+    "ckb": "برینی چاو یان چوونی ماددەی کیمیایی بۆ ناو چاو پێویستی بە فریاکەوتن هەیە. لە کاتی داوای یارمەتیدا بە ئاوی پاک بیشۆ."
+   },
+   "screen_label": {
+    "en": "Eye injury or chemical in the eye",
+    "ar": "إصابة في العين أو مادة كيميائية فيها",
+    "ckb": "برینی چاو یان ماددەی کیمیایی لە چاو"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "curtain-shadow",
+   "urgency": "same_day",
+   "pathway": "eye_urgent",
+   "when": [
+    "sym:curtain_shadow"
+   ],
+   "scope": [],
+   "source": "nhs-floaters",
+   "ev": "dark \"curtain\" or shadow moving",
+   "reason": {
+    "en": "A dark curtain or shadow across vision can mean the retina is detaching. Get checked today.",
+    "ar": "الستارة أو الظل الداكن على الرؤية قد يعني انفصال الشبكية. افحص اليوم.",
+    "ckb": "پەردە یان سێبەری تاریک لەسەر بینین لەوانەیە جیابوونەوەی تۆڕینە بێت. ئەمڕۆ بپشکنە."
+   },
+   "screen_label": {
+    "en": "A dark curtain or shadow over your vision",
+    "ar": "ستارة أو ظل داكن على الرؤية",
+    "ckb": "پەردە یان سێبەرێکی تاریک بەسەر بینینتدا"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "new-floaters",
+   "urgency": "same_day",
+   "pathway": "eye_urgent",
+   "when": [
+    "sym:flashes_floaters",
+    "attr:onset=sudden"
+   ],
+   "scope": [],
+   "source": "nhs-floaters",
+   "ev": "suddenly get floaters or flashes",
+   "reason": {
+    "en": "New or sudden floaters or flashes need an urgent eye check today.",
+    "ar": "الأجسام العائمة أو الومضات الجديدة أو المفاجئة تحتاج فحصاً عاجلاً اليوم.",
+    "ckb": "پەڵە یان بریسکەی نوێ یان لەناکاو پێویستی بە پشکنینی بەپەلەی چاو هەیە ئەمڕۆ."
+   },
+   "screen_label": {
+    "en": "New flashes of light or a sudden shower of floaters",
+    "ar": "ومضات جديدة أو أجسام عائمة مفاجئة",
+    "ckb": "بریسکەی نوێ یان پەڵەی لەناکاو"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "eye-pain",
+   "urgency": "same_day",
+   "pathway": "eye_urgent",
+   "when": [
+    "sym:pain@body.eyes!eyelid"
+   ],
+   "scope": [],
+   "source": "nhs-conjunctivitis",
+   "ev": "^pain in your eyes$",
+   "reason": {
+    "en": "Eye pain can be a sign of a more serious eye problem and needs an urgent check.",
+    "ar": "ألم العين قد يكون علامة على مشكلة أخطر ويحتاج فحصاً عاجلاً.",
+    "ckb": "ئازاری چاو لەوانەیە نیشانەی کێشەیەکی جددیتر بێت و پێویستی بە پشکنینی بەپەلە هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "eyelid-very-painful",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:pain@body.eyes",
+    "attr:severity>=7"
+   ],
+   "scope": [],
+   "source": "nhs-stye",
+   "ev": "a stye is very painful or swollen",
+   "reason": {
+    "en": "A very painful or swollen eyelid needs an urgent doctor’s review today.",
+    "ar": "الجفن شديد الألم أو التورم يحتاج مراجعة طبية عاجلة اليوم.",
+    "ckb": "پێڵووی زۆر بە ئازار یان ئاوساو پێویستی بە پشکنینی بەپەلەی پزیشک هەیە ئەمڕۆ."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "eye-light-sensitivity",
+   "urgency": "same_day",
+   "pathway": "eye_urgent",
+   "when": [
+    "sym:light_sensitivity"
+   ],
+   "scope": [
+    "body.eyes"
+   ],
+   "source": "nhs-conjunctivitis",
+   "ev": "^sensitivity to light$",
+   "reason": {
+    "en": "Sensitivity to light can be a sign of a more serious eye problem.",
+    "ar": "الحساسية للضوء قد تكون علامة على مشكلة أخطر في العين.",
+    "ckb": "هەستیاری بە ڕووناکی لەوانەیە نیشانەی کێشەیەکی جددیتری چاو بێت."
+   },
+   "screen_label": {
+    "en": "Light hurts your eyes",
+    "ar": "الضوء يؤلم عينيك",
+    "ckb": "ڕووناکی ئازاری چاوت دەدات"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "eye-vision-change",
+   "urgency": "same_day",
+   "pathway": "eye_urgent",
+   "when": [
+    "sym:blurred_vision|sym:double_vision"
+   ],
+   "scope": [],
+   "source": "nhs-conjunctivitis",
+   "ev": "changes in your vision",
+   "reason": {
+    "en": "A change in vision needs an urgent eye check.",
+    "ar": "تغيّر الرؤية يحتاج فحصاً عاجلاً للعين.",
+    "ckb": "گۆڕانی بینین پێویستی بە پشکنینی بەپەلەی چاو هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "red-eye-contact-lens",
+   "urgency": "same_day",
+   "pathway": "eye_urgent",
+   "when": [
+    "sym:redness@body.eyes",
+    "sym:contact_lens"
+   ],
+   "scope": [],
+   "source": "nhs-red-eye",
+   "ev": "wear contact lenses",
+   "reason": {
+    "en": "A red eye in a contact-lens wearer can be a corneal infection and needs an urgent check.",
+    "ar": "احمرار العين لدى مستخدم العدسات اللاصقة قد يكون عدوى في القرنية ويحتاج فحصاً عاجلاً.",
+    "ckb": "سووربوونەوەی چاو لای بەکارهێنەری لێنز لەوانەیە هەوکردنی قەرنیە بێت و پێویستی بە پشکنینی بەپەلە هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "dental-airway",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:swelling|sym:toothache|sym:pain@body.mouth",
+    "sym:breathing_severe|sym:shortness_of_breath|sym:swallowing_difficulty|sym:speech_problem"
+   ],
+   "scope": [
+    "body.mouth"
+   ],
+   "source": "nhs-dental-abscess",
+   "ev": "hard to breathe, speak or swallow",
+   "reason": {
+    "en": "Mouth or face swelling affecting breathing, swallowing or speaking is an emergency.",
+    "ar": "تورم الفم أو الوجه الذي يؤثر على التنفس أو البلع أو الكلام حالة طارئة.",
+    "ckb": "ئاوسانی دەم یان دەموچاو کە کاریگەری لەسەر هەناسەدان، قووتدان یان قسەکردن هەبێت فریاکەوتنە."
+   },
+   "screen_label": {
+    "en": "Difficulty breathing, swallowing or speaking",
+    "ar": "صعوبة في التنفس أو البلع أو الكلام",
+    "ckb": "قورسی هەناسەدان، قووتدان یان قسەکردن"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "dental-mouth-opening",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:difficulty_opening_mouth",
+    "sym:swelling|sym:toothache|sym:pain"
+   ],
+   "scope": [
+    "body.mouth"
+   ],
+   "source": "nhs-dental-abscess",
+   "ev": "finding it hard to open your mouth",
+   "reason": {
+    "en": "Difficulty opening the mouth with swelling or tooth pain needs emergency care.",
+    "ar": "صعوبة فتح الفم مع تورم أو ألم أسنان تحتاج رعاية طارئة.",
+    "ckb": "قورسی کردنەوەی دەم لەگەڵ ئاوسان یان ددانئێشە پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": {
+    "en": "A lot of swelling or difficulty opening your mouth",
+    "ar": "تورم كبير أو صعوبة فتح الفم",
+    "ckb": "ئاوسانی زۆر یان قورسی کردنەوەی دەم"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "dental-swelling",
+   "urgency": "same_day",
+   "pathway": "dentist_urgent",
+   "when": [
+    "sym:swelling",
+    "sym:toothache|sym:pain|sym:fever|sym:bad_taste_breath"
+   ],
+   "scope": [
+    "body.mouth"
+   ],
+   "source": "nhs-dental-abscess",
+   "ev": "think you have a dental abscess",
+   "reason": {
+    "en": "Tooth or gum pain with swelling can be a dental abscess and needs an urgent dentist.",
+    "ar": "ألم السن أو اللثة مع تورم قد يكون خراجاً ويحتاج طبيب أسنان عاجلاً.",
+    "ckb": "ددانئێشە یان ئازاری پووک لەگەڵ ئاوسان لەوانەیە کێم بێت و پێویستی بە ددانسازی بەپەلە هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "knocked-out-tooth",
+   "urgency": "same_day",
+   "pathway": "dentist_urgent",
+   "when": [
+    "sym:knocked_out_tooth"
+   ],
+   "scope": [],
+   "source": "nhs-knocked-out-tooth",
+   "ev": "knocked out a tooth, even if you cannot find it",
+   "reason": {
+    "en": "A knocked-out adult tooth needs an emergency dental appointment — time matters.",
+    "ar": "السن البالغ الذي سقط بسبب ضربة يحتاج موعد أسنان طارئ — الوقت مهم.",
+    "ckb": "ددانی گەورەی دەرهاتوو بە زەبر پێویستی بە کاتی فریاکەوتنی ددان هەیە — کات گرنگە."
+   },
+   "screen_label": {
+    "en": "A knocked-out tooth",
+    "ar": "سن سقط بسبب ضربة",
+    "ckb": "ددانێکی دەرهاتوو بە زەبر"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "mouth-ulcer-3-weeks",
+   "urgency": "soon",
+   "pathway": "dentist_soon",
+   "when": [
+    "sym:mouth_ulcer",
+    "attr:duration>=504"
+   ],
+   "scope": [],
+   "source": "nhs-mouth-cancer",
+   "ev": "mouth ulcer that has lasted more than 3 weeks",
+   "reason": {
+    "en": "A mouth ulcer lasting more than 3 weeks should be examined by a dentist or doctor. Most have harmless causes; a chat or photo cannot confirm or rule out cancer.",
+    "ar": "قرحة الفم التي تستمر أكثر من 3 أسابيع يجب أن يفحصها طبيب أسنان أو طبيب. معظمها لأسباب غير ضارة؛ المحادثة أو الصورة لا تؤكد السرطان ولا تنفيه.",
+    "ckb": "برینی دەم کە زیاتر لە ٣ هەفتە بمێنێتەوە دەبێت ددانساز یان پزیشک بیپشکنێت. زۆربەیان هۆکاری بێزیانیان هەیە؛ گفتوگۆ یان وێنە ناتوانێت شێرپەنجە دووپات یان ڕەت بکاتەوە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "mouth-patch-lump",
+   "urgency": "soon",
+   "pathway": "dentist_soon",
+   "when": [
+    "sym:mouth_patch|sym:lump"
+   ],
+   "scope": [
+    "body.mouth"
+   ],
+   "source": "nhs-mouth-cancer",
+   "ev": "lump in your mouth, on your lip",
+   "reason": {
+    "en": "A red or white patch or a lump in the mouth should be examined by a dentist or doctor. A chat or photo cannot confirm or rule out cancer.",
+    "ar": "البقعة الحمراء أو البيضاء أو الكتلة في الفم يجب أن يفحصها طبيب أسنان أو طبيب. المحادثة أو الصورة لا تؤكد السرطان ولا تنفيه.",
+    "ckb": "پەڵەی سوور یان سپی یان گرێ لە دەم دەبێت ددانساز یان پزیشک بیپشکنێت. گفتوگۆ یان وێنە ناتوانێت شێرپەنجە دووپات یان ڕەت بکاتەوە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "abdominal-sudden-severe",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:pain@body.abdomen",
+    "attr:onset=sudden",
+    "attr:severity>=7"
+   ],
+   "scope": [],
+   "source": "nhs-stomach-ache",
+   "ev": "started suddenly and is severe",
+   "reason": {
+    "en": "Sudden, severe abdominal pain needs emergency care.",
+    "ar": "ألم البطن المفاجئ الشديد يحتاج رعاية طارئة.",
+    "ckb": "ئازاری لەناکاو و توندی سک پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": {
+    "en": "Sudden, severe tummy pain",
+    "ar": "ألم بطن مفاجئ وشديد",
+    "ckb": "ئازاری لەناکاو و توندی سک"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "gi-bleeding",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:gi_bleeding"
+   ],
+   "scope": [],
+   "source": "nhs-stomach-ache",
+   "ev": "vomiting blood or your vomit looks green",
+   "reason": {
+    "en": "Vomiting blood or passing black or bloody stools needs emergency care.",
+    "ar": "تقيؤ الدم أو البراز الأسود أو الدموي يحتاج رعاية طارئة.",
+    "ckb": "ڕشانەوەی خوێن یان پیسایی ڕەش یان خوێناوی پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": {
+    "en": "Vomiting blood, or black or bloody poo",
+    "ar": "تقيؤ دم أو براز أسود أو دموي",
+    "ckb": "ڕشانەوەی خوێن یان پیسایی ڕەش یان خوێناوی"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "jaundice-pain",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:yellow_skin_eyes",
+    "sym:pain"
+   ],
+   "scope": [],
+   "source": "nhs-gallstones",
+   "ev": "white part of your eyes looks yellow",
+   "reason": {
+    "en": "Yellow skin or eyes with tummy pain needs emergency care.",
+    "ar": "اصفرار الجلد أو العينين مع ألم البطن يحتاج رعاية طارئة.",
+    "ckb": "زەردبوونی پێست یان چاو لەگەڵ ئازاری سک پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": {
+    "en": "Yellow skin or eyes",
+    "ar": "اصفرار الجلد أو العينين",
+    "ckb": "زەردبوونی پێست یان چاو"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "jaundice",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:yellow_skin_eyes"
+   ],
+   "scope": [],
+   "source": "nhs-gallstones",
+   "ev": "white part of your eyes looks yellow",
+   "reason": {
+    "en": "Yellow skin or eyes needs to be checked by a doctor today.",
+    "ar": "اصفرار الجلد أو العينين يحتاج فحصاً طبياً اليوم.",
+    "ckb": "زەردبوونی پێست یان چاو پێویستی بە پشکنینی پزیشک هەیە ئەمڕۆ."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "appendicitis-pattern",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:pain_moves_right_lower"
+   ],
+   "scope": [],
+   "source": "nhs-appendicitis",
+   "ev": "moves to the lower right side",
+   "reason": {
+    "en": "Pain moving to the lower right of the tummy can be appendicitis.",
+    "ar": "الألم الذي ينتقل إلى أسفل يمين البطن قد يكون التهاب الزائدة.",
+    "ckb": "ئازارێک کە دەگوازرێتەوە بۆ خوارەوەی ڕاستی سک لەوانەیە ڕیخۆڵەکوێرە بێت."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "abdominal-pain-fever",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:pain@body.abdomen",
+    "sym:fever"
+   ],
+   "scope": [],
+   "source": "nhs-appendicitis",
+   "ev": "^a high temperature$",
+   "reason": {
+    "en": "Tummy pain with a high temperature needs an urgent assessment.",
+    "ar": "ألم البطن مع حرارة مرتفعة يحتاج تقييماً عاجلاً.",
+    "ckb": "ئازاری سک لەگەڵ پلەی گەرمی بەرز پێویستی بە هەڵسەنگاندنی بەپەلە هەیە."
+   },
+   "screen_label": {
+    "en": "High temperature with tummy pain",
+    "ar": "حرارة مرتفعة مع ألم البطن",
+    "ckb": "پلەی گەرمی بەرز لەگەڵ ئازاری سک"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "cauda-equina",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:saddle_bladder"
+   ],
+   "scope": [],
+   "source": "nhs-back-pain",
+   "ev": "loss of feeling around your genitals",
+   "reason": {
+    "en": "Numbness around the genitals or new bladder or bowel problems with back pain is an emergency.",
+    "ar": "الخدر حول الأعضاء التناسلية أو مشاكل جديدة في البول أو البراز مع ألم الظهر حالة طارئة.",
+    "ckb": "سڕبوون لە دەوری ئەندامی زاوزێ یان کێشەی نوێی میز یان پیسایی لەگەڵ پشت ئێشە فریاکەوتنە."
+   },
+   "screen_label": {
+    "en": "Numbness around the genitals or new bladder/bowel problems",
+    "ar": "خدر حول الأعضاء التناسلية أو مشاكل جديدة في البول أو البراز",
+    "ckb": "سڕبوونی دەوری ئەندامی زاوزێ یان کێشەی نوێی میز/پیسایی"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "back-both-legs",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:numbness_tingling|sym:weakness",
+    "attr:side=both"
+   ],
+   "scope": [
+    "body.back",
+    "body.legs"
+   ],
+   "source": "nhs-back-pain",
+   "ev": "tingling, weakness or numbness in both legs",
+   "reason": {
+    "en": "Back pain with numbness or weakness in both legs is an emergency.",
+    "ar": "ألم الظهر مع خدر أو ضعف في الساقين كلتيهما حالة طارئة.",
+    "ckb": "پشت ئێشە لەگەڵ سڕبوون یان لاوازی لە هەردوو لاق فریاکەوتنە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "dvt-breathing",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:pain|sym:swelling",
+    "sym:shortness_of_breath|sym:chest_pain"
+   ],
+   "scope": [
+    "body.legs"
+   ],
+   "source": "nhs-dvt",
+   "ev": "feel short of breath",
+   "reason": {
+    "en": "Leg pain or swelling with breathlessness or chest pain can be a clot that has reached the lungs.",
+    "ar": "ألم أو تورم الساق مع ضيق تنفس أو ألم صدر قد يكون جلطة وصلت إلى الرئة.",
+    "ckb": "ئازار یان ئاوسانی لاق لەگەڵ هەناسەتەنگی یان ئازاری سنگ لەوانەیە خوێنمەیینێک بێت کە گەیشتۆتە سی."
+   },
+   "screen_label": {
+    "en": "Breathlessness or chest pain",
+    "ar": "ضيق تنفس أو ألم في الصدر",
+    "ckb": "هەناسەتەنگی یان ئازاری سنگ"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "dvt-one-leg",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:swelling",
+    "sym:pain",
+    "attr:side=one",
+    "!sym:injury"
+   ],
+   "scope": [
+    "body.legs"
+   ],
+   "source": "nhs-dvt",
+   "ev": "you think you have DVT",
+   "reason": {
+    "en": "Pain and swelling in one leg can be a blood clot (DVT) and needs urgent assessment today.",
+    "ar": "الألم والتورم في ساق واحدة قد يكون جلطة ويحتاج تقييماً عاجلاً اليوم.",
+    "ckb": "ئازار و ئاوسان لە یەک لاق لەوانەیە خوێنمەیین بێت و پێویستی بە هەڵسەنگاندنی بەپەلە هەیە ئەمڕۆ."
+   },
+   "screen_label": {
+    "en": "One leg swollen and painful",
+    "ar": "ساق واحدة متورمة ومؤلمة",
+    "ckb": "یەک لاق ئاوساو و بە ئازار"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "anaphylaxis",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:face_lip_tongue_swelling|sym:throat_tight"
+   ],
+   "scope": [],
+   "source": "nhs-anaphylaxis",
+   "ev": "lips, mouth, throat or tongue suddenly become swollen",
+   "reason": {
+    "en": "Swelling of the lips, tongue or throat, or a tight throat, can be anaphylaxis. Use an adrenaline auto-injector if you have one and call emergency services.",
+    "ar": "تورم الشفاه أو اللسان أو الحلق أو ضيق الحلق قد يكون صدمة تحسسية. استخدم حقنة الأدرينالين إن وجدت واتصل بالطوارئ.",
+    "ckb": "ئاوسانی لێو، زمان یان گەروو، یان تەنگبوونی گەروو لەوانەیە شۆکی هەستیاری بێت. ئەگەر دەرزی ئەدرینالینت هەیە بەکاری بهێنە و پەیوەندی بە فریاکەوتنەوە بکە."
+   },
+   "screen_label": {
+    "en": "Swelling of the lips, tongue or throat",
+    "ar": "تورم الشفاه أو اللسان أو الحلق",
+    "ckb": "ئاوسانی لێو، زمان یان گەروو"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "fracture-signs",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:deformity|sym:crack_sound"
+   ],
+   "scope": [],
+   "source": "nhs-sprains",
+   "ev": "heard a crack when you had your injury",
+   "reason": {
+    "en": "A crack at the time of injury or a changed shape can mean a broken bone that needs an X-ray.",
+    "ar": "سماع طقة عند الإصابة أو تغيّر الشكل قد يعني كسراً يحتاج أشعة.",
+    "ckb": "دەنگی شکان لە کاتی برین یان گۆڕانی شێوە لەوانەیە مانای شکانی ئێسک بێت کە پێویستی بە تیشک هەیە."
+   },
+   "screen_label": {
+    "en": "Heard a crack, or it looks deformed",
+    "ar": "سماع طقة أو تشوّه ظاهر",
+    "ckb": "دەنگی شکان بیسترا یان شێوەی گۆڕاوە"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "injury-numb",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:injury",
+    "sym:numbness_tingling"
+   ],
+   "scope": [
+    "body.arms",
+    "body.legs"
+   ],
+   "source": "nhs-sprains",
+   "ev": "numb, tingling or has pins and needles",
+   "reason": {
+    "en": "An injured area that is numb or tingling needs emergency assessment.",
+    "ar": "المنطقة المصابة التي فيها خدر أو تنميل تحتاج تقييماً طارئاً.",
+    "ckb": "شوێنی بریندار کە سڕ بووە یان مێروولەی تێدایە پێویستی بە هەڵسەنگاندنی فریاکەوتن هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "cannot-bear-weight",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:cannot_bear_weight"
+   ],
+   "scope": [
+    "body.legs"
+   ],
+   "source": "nhs-sprains",
+   "ev": "cannot put any weight on it",
+   "reason": {
+    "en": "Not being able to put weight on an injury needs an urgent assessment.",
+    "ar": "عدم القدرة على تحميل الوزن على الإصابة يحتاج تقييماً عاجلاً.",
+    "ckb": "نەتوانینی خستنە سەری قورسایی لەسەر برین پێویستی بە هەڵسەنگاندنی بەپەلە هەیە."
+   },
+   "screen_label": {
+    "en": "Cannot put any weight on it",
+    "ar": "لا تستطيع تحميل الوزن عليها",
+    "ckb": "ناتوانیت قورسایی بخەیتە سەری"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "palpitations-red",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:palpitations",
+    "sym:chest_pain|sym:shortness_of_breath|sym:faint|sym:dizziness"
+   ],
+   "scope": [],
+   "source": "nhs-palpitations",
+   "ev": "feeling faint or fainting",
+   "reason": {
+    "en": "Palpitations with chest pain, breathlessness or fainting need emergency care.",
+    "ar": "الخفقان مع ألم الصدر أو ضيق التنفس أو الإغماء يحتاج رعاية طارئة.",
+    "ckb": "دڵەکوتێ لەگەڵ ئازاری سنگ، هەناسەتەنگی یان بووران پێویستی بە فریاکەوتن هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "fainting",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:faint"
+   ],
+   "scope": [],
+   "source": "nhs-palpitations",
+   "ev": "feeling faint or fainting",
+   "reason": {
+    "en": "Fainting needs to be assessed by a doctor today; call emergency services if it happens with chest pain, palpitations or breathlessness.",
+    "ar": "الإغماء يحتاج تقييم طبيب اليوم؛ اتصل بالطوارئ إذا حدث مع ألم صدر أو خفقان أو ضيق تنفس.",
+    "ckb": "بووران پێویستی بە هەڵسەنگاندنی پزیشک هەیە ئەمڕۆ؛ ئەگەر لەگەڵ ئازاری سنگ، دڵەکوتێ یان هەناسەتەنگی بوو پەیوەندی بە فریاکەوتنەوە بکە."
+   },
+   "screen_label": {
+    "en": "Fainting or passing out",
+    "ar": "إغماء أو فقدان الوعي",
+    "ckb": "بووران یان لە هۆش چوون"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "coughing-blood",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:coughing_blood"
+   ],
+   "scope": [],
+   "source": "nhs-pulmonary-embolism",
+   "ev": "you're coughing up blood",
+   "reason": {
+    "en": "Coughing up blood needs an urgent assessment today.",
+    "ar": "السعال المصحوب بالدم يحتاج تقييماً عاجلاً اليوم.",
+    "ckb": "کۆکەی خوێناوی پێویستی بە هەڵسەنگاندنی بەپەلە هەیە ئەمڕۆ."
+   },
+   "screen_label": {
+    "en": "Coughing up blood",
+    "ar": "سعال مع دم",
+    "ckb": "کۆکەی خوێناوی"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "cough-3-weeks",
+   "urgency": "soon",
+   "pathway": "gp_soon",
+   "when": [
+    "sym:cough",
+    "attr:duration>=504"
+   ],
+   "scope": [],
+   "source": "nhs-chest-infection",
+   "ev": "cough for more than 3 weeks",
+   "reason": {
+    "en": "A cough lasting more than 3 weeks should be checked by a doctor.",
+    "ar": "السعال الذي يستمر أكثر من 3 أسابيع يجب أن يفحصه طبيب.",
+    "ckb": "کۆکەیەک کە زیاتر لە ٣ هەفتە بمێنێتەوە دەبێت پزیشک بیپشکنێت."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "weight-loss",
+   "urgency": "soon",
+   "pathway": "gp_soon",
+   "when": [
+    "sym:weight_loss"
+   ],
+   "scope": [],
+   "source": "nhs-back-pain",
+   "ev": "you've lost weight without trying",
+   "reason": {
+    "en": "Unexplained weight loss should be checked by a doctor.",
+    "ar": "فقدان الوزن غير المبرر يجب أن يفحصه طبيب.",
+    "ckb": "دابەزینی کێشی بێهۆ دەبێت پزیشک بیپشکنێت."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "throat-airway",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:drooling|sym:breathing_severe"
+   ],
+   "scope": [
+    "body.neck"
+   ],
+   "source": "nhs-sore-throat",
+   "ev": "have difficulty breathing or are unable to swallow",
+   "reason": {
+    "en": "Difficulty breathing, drooling or being unable to swallow with a sore throat is an emergency.",
+    "ar": "صعوبة التنفس أو سيلان اللعاب أو عدم القدرة على البلع مع التهاب الحلق حالة طارئة.",
+    "ckb": "قورسی هەناسەدان، لیکڕشتن یان نەتوانینی قووتدان لەگەڵ گەروو ئێشە فریاکەوتنە."
+   },
+   "screen_label": {
+    "en": "Difficulty breathing, drooling or cannot swallow",
+    "ar": "صعوبة تنفس أو سيلان لعاب أو عدم القدرة على البلع",
+    "ckb": "قورسی هەناسە، لیکڕشتن یان نەتوانینی قووتدان"
+   },
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "uti-upper",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:urinary_burning|sym:urinary_frequency",
+    "sym:fever"
+   ],
+   "scope": [],
+   "source": "nhs-uti",
+   "ev": "very high or low temperature",
+   "reason": {
+    "en": "Urinary symptoms with a high temperature need an urgent doctor’s review today.",
+    "ar": "الأعراض البولية مع حرارة مرتفعة تحتاج مراجعة طبية عاجلة اليوم.",
+    "ckb": "نیشانەی میز لەگەڵ پلەی گەرمی بەرز پێویستی بە پشکنینی بەپەلەی پزیشک هەیە ئەمڕۆ."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "kidney-stone-fever",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:pain@abdomen.flank|sym:pain@back.lower",
+    "sym:fever"
+   ],
+   "scope": [],
+   "source": "nhs-kidney-stones",
+   "ev": "you have a high temperature, or you feel hot, cold or shiv",
+   "reason": {
+    "en": "Flank or back pain with a high temperature needs an urgent doctor’s review today.",
+    "ar": "ألم الخاصرة أو الظهر مع حرارة مرتفعة يحتاج مراجعة طبية عاجلة اليوم.",
+    "ckb": "ئازاری تەنیشت یان پشت لەگەڵ پلەی گەرمی بەرز پێویستی بە پشکنینی بەپەلەی پزیشک هەیە ئەمڕۆ."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "knee-locked",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:joint_locking@leg.knee|sym:deformity@leg.knee"
+   ],
+   "scope": [],
+   "source": "nhs-knee-pain",
+   "ev": "your knee locks, gives way or painfully clicks",
+   "reason": {
+    "en": "A knee that locks, gives way or has changed shape needs an urgent assessment.",
+    "ar": "الركبة التي تنقفل أو تخون أو تغيّر شكلها تحتاج تقييماً عاجلاً.",
+    "ckb": "ئەژنۆیەک کە گیر دەخوات، دەچەمێتەوە یان شێوەی گۆڕاوە پێویستی بە هەڵسەنگاندنی بەپەلە هەیە."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "headache-jaw-eating",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:headache",
+    "sym:jaw_pain_eating"
+   ],
+   "scope": [],
+   "source": "nhs-headaches",
+   "ev": "jaw pain when eating",
+   "reason": {
+    "en": "A headache with jaw pain when eating needs an urgent doctor’s review today.",
+    "ar": "الصداع مع ألم الفك عند الأكل يحتاج مراجعة طبية عاجلة اليوم.",
+    "ckb": "سەرئێشە لەگەڵ ئازاری شەویلگە لە کاتی خواردن پێویستی بە پشکنینی بەپەلەی پزیشک هەیە ئەمڕۆ."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "headache-vomiting",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:headache",
+    "sym:vomiting"
+   ],
+   "scope": [],
+   "source": "nhs-headaches",
+   "ev": "is being sick \\(vomiting\\)",
+   "reason": {
+    "en": "A headache with vomiting needs an urgent doctor’s review today.",
+    "ar": "الصداع مع التقيؤ يحتاج مراجعة طبية عاجلة اليوم.",
+    "ckb": "سەرئێشە لەگەڵ ڕشانەوە پێویستی بە پشکنینی بەپەلەی پزیشک هەیە ئەمڕۆ."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "headache-vision",
+   "urgency": "same_day",
+   "pathway": "urgent_same_day",
+   "when": [
+    "sym:headache",
+    "sym:blurred_vision|sym:double_vision"
+   ],
+   "scope": [],
+   "source": "nhs-headaches",
+   "ev": "headache and vision or eye problems",
+   "reason": {
+    "en": "A headache with vision problems needs an urgent doctor’s review today.",
+    "ar": "الصداع مع مشاكل في الرؤية يحتاج مراجعة طبية عاجلة اليوم.",
+    "ckb": "سەرئێشە لەگەڵ کێشەی بینین پێویستی بە پشکنینی بەپەلەی پزیشک هەیە ئەمڕۆ."
+   },
+   "screen_label": null,
+   "review_status": "draft — clinician review pending"
+  },
+  {
+   "id": "severe-bleeding",
+   "urgency": "emergency",
+   "pathway": "emergency",
+   "when": [
+    "sym:bleeding"
+   ],
+   "scope": [],
+   "source": "nhs-wisdom-teeth",
+   "ev": "bleeding that does not stop",
+   "reason": {
+    "en": "Heavy bleeding that will not stop needs urgent help now.",
+    "ar": "النزيف الشديد الذي لا يتوقف يحتاج مساعدة عاجلة الآن.",
+    "ckb": "خوێنبەربوونی زۆر کە ناوەستێت پێویستی بە یارمەتی بەپەلە هەیە ئێستا."
+   },
+   "screen_label": {
+    "en": "Bleeding that will not stop",
+    "ar": "نزيف لا يتوقف",
+    "ckb": "خوێنبەربوون کە ناوەستێت"
+   },
+   "review_status": "draft — clinician review pending"
+  }
+ ],
+ "screens": {
+  "body.eyes": [
+   "vision-loss",
+   "sudden-severe-eye-pain",
+   "curtain-shadow",
+   "new-floaters",
+   "eye-injury",
+   "eye-light-sensitivity"
+  ],
+  "body.head": [
+   "thunderclap-headache",
+   "stroke-face-speech",
+   "meningitis-signs",
+   "headache-head-injury",
+   "fainting"
+  ],
+  "body.mouth": [
+   "dental-airway",
+   "dental-mouth-opening",
+   "knocked-out-tooth",
+   "severe-bleeding"
+  ],
+  "body.neck": [
+   "throat-airway",
+   "anaphylaxis",
+   "severe-breathing"
+  ],
+  "body.ears": [
+   "stroke-face-speech",
+   "meningitis-signs",
+   "fainting"
+  ],
+  "body.chest": [
+   "chest-pain-spreading",
+   "chest-pain-with-symptoms",
+   "severe-breathing",
+   "coughing-blood",
+   "fainting"
+  ],
+  "body.abdomen": [
+   "abdominal-sudden-severe",
+   "gi-bleeding",
+   "jaundice-pain",
+   "abdominal-pain-fever"
+  ],
+  "body.back": [
+   "cauda-equina",
+   "chest-pain-spreading",
+   "fracture-signs"
+  ],
+  "body.arms": [
+   "stroke-face-speech",
+   "chest-pain-spreading",
+   "fracture-signs"
+  ],
+  "body.legs": [
+   "dvt-one-leg",
+   "dvt-breathing",
+   "fracture-signs",
+   "cannot-bear-weight"
+  ],
+  "body.skin": [
+   "anaphylaxis",
+   "meningitis-signs",
+   "severe-breathing"
+  ]
+ },
+ "screen_facts": {
+  "vision-loss": [
+   "sym:vision_loss",
+   "attr:onset=sudden"
+  ],
+  "sudden-severe-eye-pain": [
+   "sym:pain",
+   "attr:severity=8"
+  ],
+  "curtain-shadow": [
+   "sym:curtain_shadow"
+  ],
+  "new-floaters": [
+   "sym:flashes_floaters",
+   "attr:onset=sudden"
+  ],
+  "eye-injury": [
+   "sym:injury"
+  ],
+  "eye-light-sensitivity": [
+   "sym:light_sensitivity"
+  ],
+  "thunderclap-headache": [
+   "sym:headache",
+   "attr:onset=sudden",
+   "attr:severity=10"
+  ],
+  "stroke-face-speech": [
+   "sym:face_droop"
+  ],
+  "meningitis-signs": [
+   "sym:stiff_neck",
+   "sym:fever"
+  ],
+  "headache-head-injury": [
+   "sym:injury"
+  ],
+  "fainting": [
+   "sym:faint"
+  ],
+  "dental-airway": [
+   "sym:swallowing_difficulty"
+  ],
+  "dental-mouth-opening": [
+   "sym:difficulty_opening_mouth",
+   "sym:swelling"
+  ],
+  "knocked-out-tooth": [
+   "sym:knocked_out_tooth"
+  ],
+  "severe-bleeding": [
+   "sym:bleeding"
+  ],
+  "throat-airway": [
+   "sym:drooling"
+  ],
+  "anaphylaxis": [
+   "sym:face_lip_tongue_swelling"
+  ],
+  "severe-breathing": [
+   "sym:breathing_severe"
+  ],
+  "chest-pain-spreading": [
+   "sym:chest_pain",
+   "sym:radiating_pain"
+  ],
+  "chest-pain-with-symptoms": [
+   "sym:chest_pain",
+   "sym:sweating"
+  ],
+  "coughing-blood": [
+   "sym:coughing_blood"
+  ],
+  "abdominal-sudden-severe": [
+   "sym:pain",
+   "attr:onset=sudden",
+   "attr:severity=8"
+  ],
+  "gi-bleeding": [
+   "sym:gi_bleeding"
+  ],
+  "jaundice-pain": [
+   "sym:yellow_skin_eyes",
+   "sym:pain"
+  ],
+  "abdominal-pain-fever": [
+   "sym:pain",
+   "sym:fever"
+  ],
+  "cauda-equina": [
+   "sym:saddle_bladder"
+  ],
+  "fracture-signs": [
+   "sym:deformity"
+  ],
+  "dvt-one-leg": [
+   "sym:swelling",
+   "sym:pain",
+   "attr:side=one"
+  ],
+  "dvt-breathing": [
+   "sym:shortness_of_breath"
+  ],
+  "cannot-bear-weight": [
+   "sym:cannot_bear_weight"
+  ]
+ },
+ "region_profiles": {
+  "body.eyes": {
+   "attributes": [
+    "side",
+    "onset",
+    "duration",
+    "course"
+   ],
+   "triggers": [
+    "screen",
+    "light"
+   ],
+   "history": [
+    "contact_lens"
+   ]
+  },
+  "body.head": {
+   "attributes": [
+    "onset",
+    "severity",
+    "character",
+    "side",
+    "pattern",
+    "duration"
+   ],
+   "triggers": [
+    "stress",
+    "light",
+    "chewing"
+   ],
+   "history": []
+  },
+  "body.ears": {
+   "attributes": [
+    "side",
+    "onset",
+    "duration",
+    "severity"
+   ],
+   "triggers": [],
+   "history": []
+  },
+  "body.mouth": {
+   "attributes": [
+    "severity",
+    "duration",
+    "pattern"
+   ],
+   "triggers": [
+    "temperature",
+    "chewing"
+   ],
+   "history": []
+  },
+  "body.neck": {
+   "attributes": [
+    "onset",
+    "duration",
+    "severity"
+   ],
+   "triggers": [
+    "swallowing"
+   ],
+   "history": []
+  },
+  "body.chest": {
+   "attributes": [
+    "onset",
+    "character",
+    "severity",
+    "pattern",
+    "duration"
+   ],
+   "triggers": [
+    "exertion",
+    "breathing",
+    "movement",
+    "eating",
+    "lying_down"
+   ],
+   "history": []
+  },
+  "body.abdomen": {
+   "attributes": [
+    "onset",
+    "severity",
+    "pattern",
+    "duration",
+    "course"
+   ],
+   "triggers": [
+    "eating",
+    "movement"
+   ],
+   "history": []
+  },
+  "body.back": {
+   "attributes": [
+    "onset",
+    "severity",
+    "duration",
+    "course"
+   ],
+   "triggers": [
+    "movement",
+    "night"
+   ],
+   "history": []
+  },
+  "body.arms": {
+   "attributes": [
+    "side",
+    "onset",
+    "severity",
+    "duration"
+   ],
+   "triggers": [
+    "movement",
+    "night"
+   ],
+   "history": []
+  },
+  "body.legs": {
+   "attributes": [
+    "side",
+    "onset",
+    "severity",
+    "duration"
+   ],
+   "triggers": [
+    "movement",
+    "morning",
+    "night"
+   ],
+   "history": []
+  },
+  "body.skin": {
+   "attributes": [
+    "onset",
+    "duration",
+    "course"
+   ],
+   "triggers": [],
+   "history": []
+  }
+ },
+ "imaging_scope": {
+  "body.eyes": {
+   "photo_can_show": {
+    "en": "Eyelids, lashes, visible redness of the white of the eye, discharge, obvious lumps and large differences in pupil size.",
+    "ar": "الجفون والرموش واحمرار بياض العين الظاهر والإفرازات والكتل الواضحة والاختلافات الكبيرة في حجم البؤبؤ.",
+    "ckb": "پێڵوو، برژانگ، سووربوونەوەی دیاری سپێنەی چاو، دەردراو، گرێی ڕوون و جیاوازیی گەورەی قەبارەی بیلبیلە."
+   },
+   "needs_examination": {
+    "en": "Vision, eye pressure, the cornea in detail, the lens, retina, macula and optic nerve need an eye examination with specialised equipment (for example a slit lamp, ophthalmoscope, tonometry or OCT).",
+    "ar": "الرؤية وضغط العين وتفاصيل القرنية والعدسة والشبكية والبقعة والعصب البصري تحتاج فحصاً بأجهزة متخصصة (مثل المصباح الشقي ومنظار العين وقياس الضغط وOCT).",
+    "ckb": "بینین، فشاری چاو، وردەکاری قەرنیە، هاوێنە، تۆڕینە، ماکولا و دەماری بینین پێویستیان بە پشکنین بە ئامێری تایبەت هەیە (وەک لامپی درزی، ئۆفتالمۆسکۆپ، پێوانی فشار یان OCT)."
+   }
+  },
+  "body.mouth": {
+   "photo_can_show": {
+    "en": "Visible tooth surfaces, gum colour and swelling, obvious crowding, gaps, missing teeth and — when biting together — some bite relationships.",
+    "ar": "أسطح الأسنان الظاهرة ولون اللثة وتورمها والازدحام الواضح والفراغات والأسنان المفقودة وبعض علاقات العضة عند الإطباق.",
+    "ckb": "ڕووی دیاری ددان، ڕەنگ و ئاوسانی پووک، قەرەباڵغی ڕوون، بۆشایی، ددانی ونبوو و هەندێک پەیوەندیی گەستن کاتێک ددانەکان یەکدەگرنەوە."
+   },
+   "needs_examination": {
+    "en": "Decay between teeth, roots, bone levels, infection spread, jaw growth and whether teeth can be moved need a dental examination and X-rays; orthodontic planning also needs study models or scans and cephalometric records.",
+    "ar": "التسوس بين الأسنان والجذور ومستوى العظم وانتشار العدوى ونمو الفك وإمكانية تحريك الأسنان تحتاج فحص أسنان وأشعة؛ وتخطيط التقويم يحتاج أيضاً نماذج أو مسحاً وسجلات سيفالومترية.",
+    "ckb": "کرمخواردنی نێوان ددان، ڕەگ، ئاستی ئێسک، بڵاوبوونەوەی هەوکردن، گەشەی شەویلگە و توانای جووڵاندنی ددان پێویستیان بە پشکنینی ددان و تیشک هەیە؛ پلاندانانی ڕاستکردنەوەش پێویستی بە مۆدێل یان سکان و تۆماری سێفالۆمێتری هەیە."
+   }
+  },
+  "body.skin": {
+   "photo_can_show": {
+    "en": "Colour, shape, size relative to a reference and visible surface changes over time when photographed the same way.",
+    "ar": "اللون والشكل والحجم مقارنة بمرجع والتغيرات السطحية الظاهرة مع الوقت عند التصوير بالطريقة نفسها.",
+    "ckb": "ڕەنگ، شێوە، قەبارە بەراورد بە پێوەرێک و گۆڕانی دیاری ڕووکار بە تێپەڕبوونی کات کاتێک بە هەمان شێوە وێنە دەگیرێت."
+   },
+   "needs_examination": {
+    "en": "Whether a skin lesion is cancer cannot be confirmed or excluded from a photograph; dermoscopy, examination and sometimes biopsy are needed.",
+    "ar": "لا يمكن تأكيد أو استبعاد كون الآفة الجلدية سرطاناً من صورة؛ يلزم فحص بالمنظار الجلدي وفحص سريري وأحياناً خزعة.",
+    "ckb": "ناتوانرێت لە وێنەیەکەوە دووپات یان ڕەت بکرێتەوە کە ئایا برینێکی پێست شێرپەنجەیە؛ پێویستی بە دێرمۆسکۆپی، پشکنین و هەندێک جار نموونەوەرگرتن هەیە."
+   }
+  }
+ },
+ "coverage_gaps": [
+  "Children and babies (age-specific warning signs and thresholds are not modelled).",
+  "Pregnancy and postpartum presentations.",
+  "Mental health, self-harm and crisis pathways (no screening content yet).",
+  "Ear wax, nosebleeds, eye strain, tooth erosion, cold sores and many other common problems.",
+  "Long-term condition management (diabetes, heart failure, asthma control).",
+  "Medication interactions, dosing and prescribing (deliberately out of scope).",
+  "Region-specific emergency numbers and services outside the UK-derived source wording."
+ ]
+}

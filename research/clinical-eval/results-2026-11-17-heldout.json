@@ -1,0 +1,626 @@
+{
+ "generated_on": "2026-11-17",
+ "engine_version": "clinical-engine-2026-11-16.1",
+ "knowledge_version": "knowledge-2026-11-16.1",
+ "snapshot_version": "clinical-knowledge-2026-11-16.141eaa10",
+ "cases_version": "clinical-eval-heldout-2026-11-17.1",
+ "sample_sizes": {
+  "profiles": 24,
+  "profile_runs_including_translations": 24,
+  "special_cases": 0,
+  "documents": 0,
+  "engine_turns": 150
+ },
+ "interpretation": "Synthetic developer-authored regression cases. Not clinical accuracy. Intended-condition agreement is partly circular (same author as the knowledge base).",
+ "v2": {
+  "urgent_detected": {
+   "rate": 1.0,
+   "successes": 11,
+   "n": 11,
+   "wilson95": [
+    0.741,
+    1
+   ]
+  },
+  "emergency_detected": {
+   "rate": 1.0,
+   "successes": 3,
+   "n": 3,
+   "wilson95": [
+    0.438,
+    1
+   ]
+  },
+  "urgent_from_first_message": {
+   "rate": null,
+   "successes": 0,
+   "n": 0,
+   "wilson95": null
+  },
+  "non_safety_questions_after_urgent": 0,
+  "over_escalation": {
+   "rate": 0.0,
+   "successes": 0,
+   "n": 13,
+   "wilson95": [
+    0,
+    0.228
+   ]
+  },
+  "intended_condition_top1": {
+   "rate": 0.667,
+   "successes": 8,
+   "n": 12,
+   "wilson95": [
+    0.391,
+    0.862
+   ]
+  },
+  "intended_condition_top3": {
+   "rate": 0.667,
+   "successes": 8,
+   "n": 12,
+   "wilson95": [
+    0.391,
+    0.862
+   ]
+  },
+  "abstains_on_vague_input": {
+   "rate": null,
+   "successes": 0,
+   "n": 0,
+   "wilson95": null
+  },
+  "repeated_questions": 0,
+  "safety_screen_first": {
+   "rate": 1.0,
+   "successes": 24,
+   "n": 24,
+   "wilson95": [
+    0.862,
+    1
+   ]
+  },
+  "questions_per_conversation": {
+   "mean": 8.23,
+   "max": 13,
+   "n": 13
+  },
+  "questions_with_purpose": {
+   "rate": 1.0,
+   "successes": 126,
+   "n": 126,
+   "wilson95": [
+    0.97,
+    1
+   ]
+  },
+  "citations_verbatim": {
+   "rate": 1.0,
+   "successes": 125,
+   "n": 125,
+   "wilson95": [
+    0.97,
+    1
+   ]
+  },
+  "supporting_statements_with_citation": {
+   "rate": 1.0,
+   "successes": 38,
+   "n": 38,
+   "wilson95": [
+    0.908,
+    1.0
+   ]
+  },
+  "citations_on_allowlisted_hosts": {
+   "rate": 1.0,
+   "successes": 125,
+   "n": 125,
+   "wilson95": [
+    0.97,
+    1
+   ]
+  },
+  "probability_or_diagnosis_claims": 0,
+  "fits_despite_strong_conflict": 0,
+  "multilingual_same_urgency": {
+   "rate": null,
+   "successes": 0,
+   "n": 0,
+   "wilson95": null
+  },
+  "multilingual_same_top_explanation": {
+   "rate": null,
+   "successes": 0,
+   "n": 0,
+   "wilson95": null
+  },
+  "multilingual_same_red_flags": {
+   "rate": null,
+   "successes": 0,
+   "n": 0,
+   "wilson95": null
+  },
+  "special_cases": {},
+  "documents": {
+   "rate": null,
+   "successes": 0,
+   "n": 0,
+   "wilson95": null
+  },
+  "latency_ms_per_turn": {
+   "p50": 15.4,
+   "p95": 29.04,
+   "max": 46.99,
+   "turns": 150
+  },
+  "external_requests": 0,
+  "inference_cost_usd": 0.0
+ },
+ "v1_baseline": {
+  "note": "v1 = existing /v1/assess with no external provider (the repository default). English complaint text; fixed question order; urgency from English regex rules plus a positive warning-screen answer.",
+  "urgent_detected": {
+   "rate": 0.455,
+   "successes": 5,
+   "n": 11,
+   "wilson95": [
+    0.213,
+    0.72
+   ]
+  },
+  "emergency_detected": {
+   "rate": 0.0,
+   "successes": 0,
+   "n": 3,
+   "wilson95": [
+    0,
+    0.562
+   ]
+  },
+  "over_escalation": {
+   "rate": 0.0,
+   "successes": 0,
+   "n": 13,
+   "wilson95": [
+    0,
+    0.228
+   ]
+  },
+  "explanations_offered": {
+   "rate": 0.0,
+   "successes": 0,
+   "n": 24,
+   "wilson95": [
+    0,
+    0.138
+   ]
+  },
+  "citations": 0,
+  "multilingual": "not supported (English-only rules)",
+  "laterality_checks": "region-level side only",
+  "patient_memory": "not supported",
+  "questions_per_conversation": 6.46
+ },
+ "failures": [
+  {
+   "check": "intended_top1",
+   "case": "h-head-stress",
+   "locale": "en",
+   "detail": "no_supported_explanation"
+  },
+  {
+   "check": "intended_top1",
+   "case": "h-mouth-sensitive-ar",
+   "locale": "ar",
+   "detail": "no_supported_explanation"
+  },
+  {
+   "check": "intended_top1",
+   "case": "h-mouth-bleeding-gums",
+   "locale": "en",
+   "detail": "no_supported_explanation"
+  },
+  {
+   "check": "intended_top1",
+   "case": "h-chest-heartburn-ckb",
+   "locale": "ckb",
+   "detail": "no_supported_explanation"
+  }
+ ],
+ "special_results": [],
+ "documents": [],
+ "per_case": [
+  {
+   "id": "h-eye-allergic",
+   "locale": "en",
+   "urgency": "routine",
+   "phase": "summary",
+   "top": [
+    "conjunctivitis",
+    "dry_eye"
+   ],
+   "status": "supported",
+   "questions": [
+    "complaint",
+    "safety:body.eyes",
+    "sym:blurred_vision",
+    "sym:contact_lens",
+    "sym:halos",
+    "sym:light_sensitivity",
+    "attr:onset",
+    "attr:duration",
+    "structure",
+    "sym:discharge",
+    "triggers",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-eye-new-floaters-ar",
+   "locale": "ar",
+   "urgency": "same_day",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint",
+    "safety:body.eyes"
+   ]
+  },
+  {
+   "id": "h-eye-gritty-ckb",
+   "locale": "ckb",
+   "urgency": "routine",
+   "phase": "summary",
+   "top": [
+    "dry_eye",
+    "conjunctivitis"
+   ],
+   "status": "supported",
+   "questions": [
+    "complaint",
+    "safety:body.eyes",
+    "attr:onset",
+    "attr:duration",
+    "structure",
+    "sym:discharge",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-eye-painful-red-photophobia",
+   "locale": "en",
+   "urgency": "same_day",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint",
+    "safety:body.eyes"
+   ]
+  },
+  {
+   "id": "h-head-migraine-aura",
+   "locale": "en",
+   "urgency": "same_day",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint",
+    "safety:body.head"
+   ]
+  },
+  {
+   "id": "h-head-sudden-ckb",
+   "locale": "ckb",
+   "urgency": "emergency",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint"
+   ]
+  },
+  {
+   "id": "h-head-stress",
+   "locale": "en",
+   "urgency": "not_established",
+   "phase": "summary",
+   "top": [],
+   "status": "no_supported_explanation",
+   "questions": [
+    "complaint",
+    "safety:body.head",
+    "attr:onset",
+    "attr:severity",
+    "attr:duration",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-mouth-sensitive-ar",
+   "locale": "ar",
+   "urgency": "not_established",
+   "phase": "summary",
+   "top": [],
+   "status": "no_supported_explanation",
+   "questions": [
+    "complaint",
+    "safety:body.mouth",
+    "attr:severity",
+    "attr:duration",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-mouth-swollen-face-ckb",
+   "locale": "ckb",
+   "urgency": "emergency",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint"
+   ]
+  },
+  {
+   "id": "h-mouth-bleeding-gums",
+   "locale": "en",
+   "urgency": "not_established",
+   "phase": "summary",
+   "top": [],
+   "status": "no_supported_explanation",
+   "questions": [
+    "complaint",
+    "safety:body.mouth",
+    "attr:severity",
+    "attr:duration",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-mouth-white-patch",
+   "locale": "en",
+   "urgency": "soon",
+   "phase": "summary",
+   "top": [],
+   "status": "no_supported_explanation",
+   "questions": [
+    "complaint",
+    "safety:body.mouth",
+    "attr:severity"
+   ]
+  },
+  {
+   "id": "h-ortho-gaps",
+   "locale": "en",
+   "urgency": "routine",
+   "phase": "summary",
+   "top": [
+    "orthodontic"
+   ],
+   "status": "supported",
+   "questions": [
+    "complaint",
+    "safety:body.mouth",
+    "attr:severity",
+    "attr:duration",
+    "sym:crowding",
+    "sym:bite_problem",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-chest-angina-ar",
+   "locale": "ar",
+   "urgency": "emergency",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint"
+   ]
+  },
+  {
+   "id": "h-chest-cough-blood",
+   "locale": "en",
+   "urgency": "same_day",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint",
+    "safety:body.chest"
+   ]
+  },
+  {
+   "id": "h-chest-heartburn-ckb",
+   "locale": "ckb",
+   "urgency": "not_established",
+   "phase": "summary",
+   "top": [],
+   "status": "no_supported_explanation",
+   "questions": [
+    "complaint",
+    "safety:body.chest",
+    "attr:onset",
+    "attr:severity",
+    "attr:duration",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-abd-black-stool",
+   "locale": "en",
+   "urgency": "emergency",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint",
+    "safety:body.abdomen"
+   ]
+  },
+  {
+   "id": "h-abd-ibs",
+   "locale": "en",
+   "urgency": "routine",
+   "phase": "summary",
+   "top": [
+    "ibs",
+    "constipation",
+    "gallstones"
+   ],
+   "status": "supported",
+   "questions": [
+    "complaint",
+    "safety:body.abdomen",
+    "attr:onset",
+    "attr:severity",
+    "attr:duration",
+    "sym:cough",
+    "structure",
+    "attr:pattern",
+    "sym:pain",
+    "sym:fever",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-abd-flank-fever-ar",
+   "locale": "ar",
+   "urgency": "same_day",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint",
+    "safety:body.abdomen"
+   ]
+  },
+  {
+   "id": "h-back-strain",
+   "locale": "en",
+   "urgency": "routine",
+   "phase": "summary",
+   "top": [
+    "back_pain",
+    "kidney_stones",
+    "sciatica"
+   ],
+   "status": "supported",
+   "questions": [
+    "complaint",
+    "safety:body.back",
+    "sym:fever",
+    "attr:onset",
+    "sym:numbness_tingling",
+    "sym:weakness",
+    "attr:severity",
+    "attr:duration",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-leg-clot-ckb",
+   "locale": "ckb",
+   "urgency": "emergency",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint",
+    "safety:body.legs"
+   ]
+  },
+  {
+   "id": "h-leg-knee-giveway",
+   "locale": "en",
+   "urgency": "same_day",
+   "phase": "urgent",
+   "top": [],
+   "status": "withheld_urgent",
+   "questions": [
+    "complaint",
+    "safety:body.legs"
+   ]
+  },
+  {
+   "id": "h-arm-tennis-elbow",
+   "locale": "en",
+   "urgency": "routine",
+   "phase": "summary",
+   "top": [
+    "tennis_elbow"
+   ],
+   "status": "supported",
+   "questions": [
+    "complaint",
+    "safety:body.arms",
+    "sym:swelling",
+    "attr:onset",
+    "attr:severity",
+    "attr:duration",
+    "sym:injury",
+    "triggers",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-skin-hives-ar",
+   "locale": "ar",
+   "urgency": "routine",
+   "phase": "summary",
+   "top": [
+    "contact_dermatitis",
+    "hives"
+   ],
+   "status": "supported",
+   "questions": [
+    "complaint",
+    "safety:body.skin",
+    "attr:onset",
+    "attr:duration",
+    "history:medications",
+    "history:allergies"
+   ]
+  },
+  {
+   "id": "h-mixed-language",
+   "locale": "en",
+   "urgency": "routine",
+   "phase": "summary",
+   "top": [
+    "conjunctivitis",
+    "dry_eye",
+    "uveitis"
+   ],
+   "status": "supported",
+   "questions": [
+    "complaint",
+    "safety:body.eyes",
+    "sym:blurred_vision",
+    "sym:contact_lens",
+    "sym:halos",
+    "sym:light_sensitivity",
+    "attr:onset",
+    "attr:duration",
+    "structure",
+    "history:medications",
+    "history:allergies"
+   ]
+  }
+ ]
+}

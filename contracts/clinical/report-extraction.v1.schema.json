@@ -1,0 +1,159 @@
+{
+  "$defs": {
+    "ExtractedItem": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/$defs/Location"
+        },
+        "certainty": {
+          "title": "Certainty",
+          "type": "string"
+        },
+        "status": {
+          "default": "pending_confirmation",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "label",
+        "value",
+        "text",
+        "location",
+        "certainty"
+      ],
+      "title": "ExtractedItem",
+      "type": "object"
+    },
+    "Location": {
+      "additionalProperties": false,
+      "properties": {
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "minimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "line": {
+          "minimum": 1,
+          "title": "Line",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "page",
+        "start",
+        "end",
+        "line"
+      ],
+      "title": "Location",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "humantwin-report-extraction-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "document_sha256": {
+      "title": "Document Sha256",
+      "type": "string"
+    },
+    "pages": {
+      "title": "Pages",
+      "type": "integer"
+    },
+    "characters": {
+      "title": "Characters",
+      "type": "integer"
+    },
+    "items": {
+      "items": {
+        "$ref": "#/$defs/ExtractedItem"
+      },
+      "title": "Items",
+      "type": "array"
+    },
+    "injection_flags": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Injection Flags",
+      "type": "array"
+    },
+    "unsupported_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Unsupported Reason"
+    },
+    "method": {
+      "title": "Method",
+      "type": "string"
+    },
+    "clinical_validation": {
+      "default": false,
+      "title": "Clinical Validation",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "document_sha256",
+    "pages",
+    "characters",
+    "items",
+    "injection_flags",
+    "unsupported_reason",
+    "method"
+  ],
+  "title": "ExtractResult",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,139 @@
+{
+ "schema_version": "humantwin-clinical-assessment-v2",
+ "locale": "en",
+ "direction": "ltr",
+ "anatomy": {
+  "id": "body.eyes",
+  "side": "left"
+ },
+ "phase": "complaint",
+ "summary": "Eyes (left): no symptoms recorded yet. Suggested next step: Urgency not yet established.",
+ "patient_facts": [],
+ "anatomical_references": [
+  {
+   "id": "body.eyes",
+   "label": "Eyes",
+   "side": "left",
+   "role": "selected",
+   "relation": null,
+   "relation_note": null,
+   "marker": "illustrative_anatomy",
+   "fact_ids": [],
+   "explanation_ids": []
+  }
+ ],
+ "observations": [],
+ "possible_explanations": [],
+ "explanation_status": "insufficient_information",
+ "missing_information": [
+  {
+   "key": "safety:body.eyes",
+   "label": "Safety check",
+   "reason": "Warning signs must be ruled out before anything else.",
+   "priority": "safety"
+  },
+  {
+   "key": "attr:onset",
+   "label": "Onset",
+   "reason": "Needed by any clinician to judge this.",
+   "priority": "core"
+  },
+  {
+   "key": "attr:duration",
+   "label": "How long have you had it?",
+   "reason": "Needed by any clinician to judge this.",
+   "priority": "core"
+  },
+  {
+   "key": "attr:course",
+   "label": "Change over time",
+   "reason": "Needed by any clinician to judge this.",
+   "priority": "core"
+  },
+  {
+   "key": "history:medications",
+   "label": "Are you taking any medicines, including anything new or recently changed?",
+   "reason": "Needed for safe advice and your clinician summary.",
+   "priority": "history"
+  },
+  {
+   "key": "history:allergies",
+   "label": "Do you have any allergies to medicines or other things?",
+   "reason": "Needed for safe advice and your clinician summary.",
+   "priority": "history"
+  }
+ ],
+ "contradictions": [],
+ "urgency": {
+  "level": "not_established",
+  "pathway": "not_established",
+  "pathway_label": "Urgency not yet established",
+  "action": "There is not enough information yet to judge urgency. Answer the next question, or contact a clinician. Get urgent help for severe, sudden or rapidly worsening symptoms.",
+  "reasons": [],
+  "safety_screen_completed": false,
+  "persisted_from_prior": false,
+  "rules_version": "knowledge-2026-11-16.1"
+ },
+ "next_question": {
+  "id": "complaint",
+  "kind": "complaint",
+  "text": "In your own words, what is bothering you about your Eyes?",
+  "purpose": "Your own description guides every later question.",
+  "options": [],
+  "multi_select": false,
+  "free_text": true,
+  "discriminates": []
+ },
+ "related_reading": [],
+ "citations": [],
+ "limitations": [
+  "This assessment uses draft rules and source-linked knowledge that no clinician has reviewed yet. It cannot examine you, run tests or confirm a diagnosis.",
+  "The safety check has not been completed, so urgency cannot be judged yet.",
+  "Symptoms are recognised with a fixed multilingual vocabulary; unusual wording can be missed. Use the answer buttons where possible and check the recorded facts.",
+  "The knowledge base covers 47 conditions with 64 approved sources; many problems are not covered."
+ ],
+ "clinician_summary": {
+  "headline": "Eyes (left) — urgency not_established; rules knowledge-2026-11-16.1",
+  "patient_reported": [],
+  "from_records": [],
+  "observations_note": "No examination findings, vital signs or test results are available. Everything above is patient-reported unless labelled otherwise.",
+  "interpretations": [
+   "No AI interpretation offered."
+  ],
+  "urgency": "not_established via not_established: ",
+  "missing": [
+   "safety:body.eyes",
+   "attr:onset",
+   "attr:duration",
+   "attr:course",
+   "history:medications",
+   "history:allergies"
+  ],
+  "contradictions": [],
+  "provenance_note": "patient_statement = free text; patient_answer = structured answer; patient_memory = consented saved history; document_extract = confirmed report extract; interpretations are AI-generated suggestions from source-bound rules, not diagnoses."
+ },
+ "versions": {
+  "engine": "clinical-engine-2026-11-16.1",
+  "anatomy": "anatomy-2026-11-16.1",
+  "symptoms": "symptoms-2026-11-16.1",
+  "knowledge": "knowledge-2026-11-16.1",
+  "source_registry": "sources-2026-11-16.1",
+  "snapshot": "clinical-knowledge-2026-11-16.141eaa10",
+  "language_model": null,
+  "prompt": null
+ },
+ "processing": {
+  "engine_ms": 123.11,
+  "retrieval": "bm25-anatomy-tier-freshness",
+  "language_model_used": false,
+  "external_requests": false,
+  "stages": [
+   "extracting",
+   "screening",
+   "reasoning",
+   "composing"
+  ]
+ },
+ "clinical_review_required": true,
+ "disclaimer": "Educational decision support, not a diagnosis. It does not replace a clinician’s examination."
+}

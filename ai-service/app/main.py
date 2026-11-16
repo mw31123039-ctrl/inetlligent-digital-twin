@@ -20,6 +20,8 @@ from .dental_screening import ScreeningRecord
 from .dental_screening_store import list_screening_cases, save_screening_case, read_screening_case, remove_screening_case
 from .cancer import CancerRequest, CancerResult, cancer_status, infer_cancer
 from .cancer_knowledge import KnowledgeQuestion, KnowledgeAnswer, knowledge_status, retrieve_knowledge
+from .clinical import api as clinical_api
+from .clinical.language_model import DisabledLanguageModel, OpenAIExtractionModel
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file='.env', extra='ignore')
@@ -36,18 +38,27 @@ class Settings(BaseSettings):
     cancer_model_dir: str = 'models/cancer'
     cancer_knowledge_model_dir: str = 'models/cancer-knowledge'
     cancer_calibration_path: str = 'calibration/cancer-calibration.json'
+    # Clinical v2 runs fully locally by default. An external model is only used for closed-vocabulary
+    # symptom extraction, and only when every one of these is set.
+    clinical_lm_provider: str = 'disabled'
+    clinical_lm_model: str = ''
 
 settings = Settings()
 configured = settings.ai_provider == 'openai' and bool(settings.openai_api_key and settings.openai_model and settings.allow_external_ai)
 provider = OpenAIProvider(settings.openai_api_key, settings.openai_model, settings.ai_timeout_seconds) if configured else DisabledProvider()
 engine = AssessmentEngine(provider, EvidenceRetriever(settings.retrieval_timeout_seconds), settings.ai_timeout_seconds)
 learning = LocalDentalLearning(Path(settings.dental_learning_dir))
+clinical_lm_configured = settings.clinical_lm_provider == 'openai' and bool(settings.openai_api_key and settings.clinical_lm_model and settings.allow_external_ai)
+clinical_language_model = OpenAIExtractionModel(settings.openai_api_key, settings.clinical_lm_model, settings.ai_timeout_seconds) if clinical_lm_configured else DisabledLanguageModel()
+clinical_api.configure(clinical_language_model)
 
 @asynccontextmanager
 async def lifespan(_app):
     yield
     if isinstance(provider, OpenAIProvider):
         await provider.client.close()
+    if isinstance(clinical_language_model, OpenAIExtractionModel):
+        await clinical_language_model.client.close()
 
 app = FastAPI(title='HumanTwin private AI service', docs_url=None, redoc_url=None, openapi_url=None, lifespan=lifespan)
 # Suppress HTTP/provider debug logs even if a parent process enables DEBUG.
@@ -77,7 +88,10 @@ async def private_response(request, call_next):
 
 @app.get('/health', dependencies=[Depends(authorize)])
 def health():
-    return {'available': True, 'provider_configured': configured, 'clinical_review_required': True}
+    return {'available': True, 'provider_configured': configured, 'clinical_review_required': True,
+            'clinical_v2': True, 'clinical_language_model_configured': clinical_lm_configured}
+
+app.include_router(clinical_api.router, dependencies=[Depends(authorize)])
 
 @app.post('/v1/assess', response_model=Assessment, dependencies=[Depends(authorize)])
 async def assess(request: AssessRequest):
